@@ -6,6 +6,7 @@ BET
 Resources
 *********
 
--  `BoostrapZero <https://www.bootstrapzero.com/>`_
+-  `Boostrap Zero <https://www.bootstrapzero.com/>`_
+-  `Boostrap Hero <http://bootstraphero.com/>`_
 
  
