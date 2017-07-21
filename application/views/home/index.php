@@ -112,107 +112,110 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="col-md-3">
 								<h2>Cupon</h2>
 								<form>
-									<div class="form-group label-floating has-success">
-										<label class="control-label">Cantidad</label>
-										<input type="number" value="0" class="form-control" minlength="1000" />
-										<span class="form-control-feedback">
-											<i class="fa fa-money fa-2x" aria-hidden="true"></i>
-											</span
-										</div>
-										<div class="form-group">
-											<input type="text" value="" placeholder="Cantidad" class="form-control" readonly />
-										</div>
-									</form>
+									<div class="col-md-6">
+										<div class="form-group label-floating">
+											<label class="control-label">Cantidad</label>
+											<input type="number" class="form-control">
+										</div>	
+									</div>	
+									<div class="col-md-6">
+										<div class="form-group label-floating">
+											<label class="control-label">Ganancia</label>
+											<input type="number" class="form-control" readonly>
+										</div>	
+									</div>	
+									<button class="btn btn-success col-md-12">JUGAR</button>
+								</form>
 
-								</div>
-							</div>
-						</div>
-						<footer class="footer footer-transparent">
-							<div class="container">
-								<nav class="pull-left">
-									<ul>
-										<li>
-											<a href="http://www.creative-tim.com">
-												Creative Tim
-											</a>
-										</li>
-										<li>
-											<a href="http://presentation.creative-tim.com">
-												About Us
-											</a>
-										</li>
-										<li>
-											<a href="http://blog.creative-tim.com">
-												Blog
-											</a>
-										</li>
-										<li>
-											<a href="http://www.creative-tim.com/license">
-												Licenses
-											</a>
-										</li>
-									</ul>
-								</nav>
-								<div class="social-area pull-right">
-									<a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/CreativeTim">
-										<i class="fa fa-twitter"></i>
-									</a>
-									<a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/CreativeTim">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/+CreativetimPage">
-										<i class="fa fa-google-plus"></i>
-									</a>
-								</div>
-								<div class="copyright">
-									&copy; 2016 Creative Tim, made with love
-								</div>
-							</div>
-						</footer>
-
-					</div>
-
-					<!-- Modal Core -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-									<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-								</div>
-								<div class="modal-body">
-									Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-info btn-simple">Save</button>
-								</div>
 							</div>
 						</div>
 					</div>
-				</body>
-				<?php $this->load->view('overall/footer'); ?>
-				<script>
-					for (var i = 0; i < 40; i++) {
-						$("#bets > tbody").append('<tr> \
-							<td class="text-center">19:00</td> \
-							<td class="text-center">Botafogo PB</td> \
-							<td class="text-center">Fortaleza</td> \
-							<td class="text-center">2.00</td> \
-							<td class="text-center"3.15</td> \
-								<td class="text-center">3.30</td> \
-								<td class="text-center">2.05</td> \
-								<td class="text-center">1.58</td> \
-								<td class="text-center">2.30</td> \
-								<td class="text-center">1.98</td> \
-								<td class="text-center">3.60</td> \
-								<td class="text-center">1.21</td> \
-								<td class="text-center">1.32</td> \
-								<td class="text-center">1.59</td> \
-								<td class="text-center">11.00</td> \
-								<td class="text-center">7.60</td> \
-							</tr>');
-					}
+					<footer class="footer footer-transparent">
+						<div class="container">
+							<nav class="pull-left">
+								<ul>
+									<li>
+										<a href="http://www.creative-tim.com">
+											Creative Tim
+										</a>
+									</li>
+									<li>
+										<a href="http://presentation.creative-tim.com">
+											About Us
+										</a>
+									</li>
+									<li>
+										<a href="http://blog.creative-tim.com">
+											Blog
+										</a>
+									</li>
+									<li>
+										<a href="http://www.creative-tim.com/license">
+											Licenses
+										</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="social-area pull-right">
+								<a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/CreativeTim">
+									<i class="fa fa-twitter"></i>
+								</a>
+								<a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/CreativeTim">
+									<i class="fa fa-facebook-square"></i>
+								</a>
+								<a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/+CreativetimPage">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</div>
+							<div class="copyright">
+								&copy; 2016 Creative Tim, made with love
+							</div>
+						</div>
+					</footer>
 
-				</script>
-				</html>
+				</div>
+
+				<!-- Modal Core -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+							</div>
+							<div class="modal-body">
+								Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-info btn-simple">Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</body>
+			<?php $this->load->view('overall/footer'); ?>
+			<script>
+				for (var i = 0; i < 40; i++) {
+					$("#bets > tbody").append('<tr> \
+						<td class="text-center">19:00</td> \
+						<td class="text-center">Botafogo PB</td> \
+						<td class="text-center">Fortaleza</td> \
+						<td class="text-center">2.00</td> \
+						<td class="text-center"3.15</td> \
+							<td class="text-center">3.30</td> \
+							<td class="text-center">2.05</td> \
+							<td class="text-center">1.58</td> \
+							<td class="text-center">2.30</td> \
+							<td class="text-center">1.98</td> \
+							<td class="text-center">3.60</td> \
+							<td class="text-center">1.21</td> \
+							<td class="text-center">1.32</td> \
+							<td class="text-center">1.59</td> \
+							<td class="text-center">11.00</td> \
+							<td class="text-center">7.60</td> \
+						</tr>');
+				}
+
+			</script>
+			</html>
