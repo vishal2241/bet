@@ -109,7 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 							</div>
 							<div class="col-md-3">
-								<div class="panel panel-default">
+								<div class="panel panel-default fixed-section">
 									<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
 									<div class="panel-body">
 										<div class="col-md-12">
@@ -136,7 +136,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 															</span>
 														</td>
 													</tr>
-													 
+
 
 
 												</tbody>
@@ -159,9 +159,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</form>
 									</div>
 								</div>
-
-								
-
 							</div>
 						</div>
 					</div>
@@ -251,6 +248,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<td class="text-center">7.60</td> \
 						</tr>');
 				}
+
+
+				var header_height;
+				var fixed_section;
+				var floating = false;
+
+				$().ready(function(){
+					suggestions_distance = $("#suggestions").offset();
+					pay_height = $('.fixed-section').outerHeight();
+
+					$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+					
+				});
 
 			</script>
 			</html>
