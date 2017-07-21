@@ -13,9 +13,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="row">
 					<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 						<div class="card card-signup">
-							<form class="form" method="" action="<?= base_url()?>login/form">
-								<div class="header header-primary text-center">
-									<h4>Bet<b>365</b></h4>
+							<?=  form_open('login/form', 'class="form"');  ?>
+							<div class="header header-primary text-center">
+								<h4>Bet<b>365</b></h4>
 									<!--<div class="social-line">
 										<a href="#pablo" class="btn btn-simple btn-just-icon">
 											<i class="fa fa-facebook-square"></i>
@@ -48,17 +48,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<input type="submit" class="btn btn-primary btn-block btn-flat" name="" value="Ingresar">									</div>
 										<br>
 									</div>
-								</form>
+									<?=   form_close(); ?>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 
-		</div>
 
+		</body>
 
-	</body>
-
-	<?php $this->load->view('overall/footer'); ?>
-	</html>
+		<?php $this->load->view('overall/footer'); ?>
+		</html>
