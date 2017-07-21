@@ -8,8 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body class="components-page">
 
-	<!--<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">-->
-	<nav class="navbar navbar-transparent navbar-fixed-top  " role="navigation">
+	<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -110,22 +109,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 							</div>
 							<div class="col-md-3">
-								<h2>Cupon</h2>
-								<form>
-									<div class="col-md-6">
-										<div class="form-group label-floating">
-											<label class="control-label">Cantidad</label>
-											<input type="number" class="form-control">
+								<div class="panel panel-default">
+									<div class="panel-heading">Tiquete</div>
+									<div class="panel-body">
+										<div class="col-md-12">
+											<table class="table table-condensed" >
+												<thead class="tiquete">
+													<tr>
+														<th class="text-success">Partido</th>
+														<th class="text-success" colspan="2">Cuota</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															Tolima vs Nacional
+															<span class="text-primary text-bold bet">Gana Tolima</span>
+														</td>
+														<td>
+															2.00
+														</td>
+														<td valign="middle">
+															<span class="text-danger">
+																<i class="fa fa-window-close " aria-hidden="true"></i> 
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
 										</div>	
-									</div>	
-									<div class="col-md-6">
-										<div class="form-group label-floating">
-											<label class="control-label">Ganancia</label>
-											<input type="number" class="form-control" readonly>
-										</div>	
-									</div>	
-									<button class="btn btn-success col-md-12">JUGAR</button>
-								</form>
+										<form>
+											<div class="col-md-6">
+												<div class="form-group label-floating">
+													<label class="control-label">Cantidad</label>
+													<input type="number" class="form-control">
+												</div>	
+											</div>	
+											<div class="col-md-6">
+												<div class="form-group label-floating">
+													<label class="control-label">Ganancia</label>
+													<input type="number" class="form-control" readonly>
+												</div>	
+											</div>	
+											<button class="btn btn-success col-md-12 "><b>JUGAR</b></button>
+										</form>
+									</div>
+								</div>
+
+								
 
 							</div>
 						</div>
