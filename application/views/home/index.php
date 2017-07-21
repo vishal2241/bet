@@ -6,87 +6,213 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php $this->load->view('overall/header'); ?>
 </head>
 
-<body class="signup-page inverse" >
+<body class="components-page">
 
-	<nav class="navbar navbar-info">
-		<div class="container-fluid">
+	<!--<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">-->
+	<nav class="navbar navbar-transparent navbar-fixed-top  " role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>                        
+				<button id="menu-toggle" type="button" class="navbar-toggle" data-target="#navigation-doc">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar bar1"></span>
+					<span class="icon-bar bar2"></span>
+					<span class="icon-bar bar3"></span>
 				</button>
-				<a class="navbar-brand" href="#">Logo</a>
+				<!--<a href="">
+					<div class="logo-container">
+						<div class="logo">
+							 <img src="assets/img/logo.png" alt="Creative Tim Logo"> 
+						</div>
+						<div class="brand">
+							Creative Tim
+						</div>
+					</div>
+				</a>-->
 			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Contact</a></li>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navigation-doc">
+				<ul  class="nav navbar-nav navbar-right">
+					<li>
+						<a href="index.html">Back to Kit</a>
+					</li>
+					<li>
+						<a href="https://github.com/timcreative/material-kit/issues">Have an issue?</a>
+					</li>
+					<li>
+						<a href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
+							<i class="material-icons">unarchive</i> Upgrade to PRO
+						</a>
+					</li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-				</ul>
-			</div>
-		</div>
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
 	</nav>
 
-	<div class="container-fluid text-center">    
-		<div class="row content">
-
-			<div class="col-sm-8 text-left col-sm-offset-1"> 
-				<table class="table">
-					<thead>
-						<tr>
-							<th class="text-center">#</th>
-							<th>Name</th>
-							<th>Job Position</th>
-							<th>Since</th>
-							<th class="text-right">Salary</th>
-							<th class="text-right">Actions</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="text-center">1</td>
-							<td>Andrew Mike</td>
-							<td>Develop</td>
-							<td>2013</td>
-							<td class="text-right">&euro; 99,225</td>
-							<td class="td-actions text-right">
-								<button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-									<i class="fa fa-user"></i>
-								</button>
-								<button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-									<i class="fa fa-edit"></i>
-								</button>
-								<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-									<i class="fa fa-times"></i>
-								</button>
-							</td>
-						</tr>
-						
-					</tbody>
-				</table>
-
-			</div>
-			<div class="col-sm-3 sidenav">
-				<div class="">
-					<form>
-						<div class="form-group">
-							<input type="text" value="" placeholder="Regular" class="form-control" />
-						</div>
-						<div class="form-group">
-							<input type="text" value="" placeholder="Regular" class="form-control" />
-						</div>
-					</form>
-
-				</div>
-			</div>
+	<div class="wrapper">
+		<div class="header header-filter" style="background-image: url('<?= base_url(); ?>public/img/header.jpg');">
+			<!--<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<h1 class="title text-center">Components Documentation</h1>
+					</div>
+				</div> 
+			</div>-->
 		</div>
-	</div>
 
-</body>
-<?php $this->load->view('overall/footer'); ?>
-</html>
+		<div class="main main-raised">
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-9">
+							<div class="tim-container">
+								<!-- tables row -->
+								<div class="tim-row" id="tables-row">					 
+									<div class="table-responsive">
+										<table class="table" id="bets">
+											<thead>
+												<tr>
+													<th colspan="16" class="text-left" >
+														<h4>
+															<img src="<?= base_url(); ?>public/img/banderas/48/Colombia.png"> 
+															<b>Colombia: </b> Liga Aguila
+														</h4>
+													</th>
+												</tr>
+												<tr>
+													<th class="text-center">Hora</th>
+													<th class="text-center">Local</th>
+													<th class="text-center">Visitante</th>
+													<th class="text-center">1</th>
+													<th class="text-center"x</th>
+														<th class="text-center">2</th>
+														<th class="text-center">Over</th>
+														<th class="text-center">Under</th>
+														<th class="text-center">1-1st</th>
+														<th class="text-center">x-1st</th>
+														<th class="text-center">2-1st</th>
+														<th class="text-center">1x</th>
+														<th class="text-center">1-2</th>
+														<th class="text-center">2x</th>
+														<th class="text-center">GG</th>
+														<th class="text-center">NG</th>
+													</tr>
+												</thead>
+												<tbody>
+
+												</tbody>
+											</table>
+										</div>
+										<!-- end container -->
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<h2>Cupon</h2>
+								<form>
+									<div class="form-group label-floating has-success">
+										<label class="control-label">Cantidad</label>
+										<input type="number" value="0" class="form-control" minlength="1000" />
+										<span class="form-control-feedback">
+											<i class="fa fa-money fa-2x" aria-hidden="true"></i>
+											</span
+										</div>
+										<div class="form-group">
+											<input type="text" value="" placeholder="Cantidad" class="form-control" readonly />
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+						<footer class="footer footer-transparent">
+							<div class="container">
+								<nav class="pull-left">
+									<ul>
+										<li>
+											<a href="http://www.creative-tim.com">
+												Creative Tim
+											</a>
+										</li>
+										<li>
+											<a href="http://presentation.creative-tim.com">
+												About Us
+											</a>
+										</li>
+										<li>
+											<a href="http://blog.creative-tim.com">
+												Blog
+											</a>
+										</li>
+										<li>
+											<a href="http://www.creative-tim.com/license">
+												Licenses
+											</a>
+										</li>
+									</ul>
+								</nav>
+								<div class="social-area pull-right">
+									<a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/CreativeTim">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/CreativeTim">
+										<i class="fa fa-facebook-square"></i>
+									</a>
+									<a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/+CreativetimPage">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</div>
+								<div class="copyright">
+									&copy; 2016 Creative Tim, made with love
+								</div>
+							</div>
+						</footer>
+
+					</div>
+
+					<!-- Modal Core -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+								</div>
+								<div class="modal-body">
+									Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-info btn-simple">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</body>
+				<?php $this->load->view('overall/footer'); ?>
+				<script>
+					for (var i = 0; i < 40; i++) {
+						$("#bets > tbody").append('<tr> \
+							<td class="text-center">19:00</td> \
+							<td class="text-center">Botafogo PB</td> \
+							<td class="text-center">Fortaleza</td> \
+							<td class="text-center">2.00</td> \
+							<td class="text-center"3.15</td> \
+								<td class="text-center">3.30</td> \
+								<td class="text-center">2.05</td> \
+								<td class="text-center">1.58</td> \
+								<td class="text-center">2.30</td> \
+								<td class="text-center">1.98</td> \
+								<td class="text-center">3.60</td> \
+								<td class="text-center">1.21</td> \
+								<td class="text-center">1.32</td> \
+								<td class="text-center">1.59</td> \
+								<td class="text-center">11.00</td> \
+								<td class="text-center">7.60</td> \
+							</tr>');
+					}
+
+				</script>
+				</html>

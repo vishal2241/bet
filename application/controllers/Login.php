@@ -15,12 +15,12 @@ class Login extends CI_Controller {
 
 	public function form()
 	{
-		echo $inputUser  = $this->input->post('EMAIL');
+		$inputUser  = $this->input->post('EMAIL');
 		$inputPass  = $this->input->post('PASS');
 
 		$this->load->model('user');
 		$fila=$this->user->getUser($inputUser);
-	 
+		
 		if ($fila!=null) {
 			if ($fila->CLAVE == $inputPass ) {
 				$data = array (
