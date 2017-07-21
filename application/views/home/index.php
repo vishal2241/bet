@@ -110,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 							<div class="col-md-3">
 								<div class="panel panel-default">
-									<div class="panel-heading">Tiquete</div>
+									<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
 									<div class="panel-body">
 										<div class="col-md-12">
 											<table class="table table-condensed" >
@@ -124,17 +124,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<tr>
 														<td>
 															Tolima vs Nacional
-															<span class="text-primary text-bold bet">Gana Tolima</span>
+															<br>
+															<b><span class="text-info text-bold bet">Gana Tolima</span></b>
 														</td>
 														<td>
 															2.00
 														</td>
 														<td valign="middle">
 															<span class="text-danger">
-																<i class="fa fa-window-close " aria-hidden="true"></i> 
+																<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>
 															</span>
 														</td>
 													</tr>
+													 
+
+
 												</tbody>
 											</table>
 										</div>	
@@ -151,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<input type="number" class="form-control" readonly>
 												</div>	
 											</div>	
-											<button class="btn btn-success col-md-12 "><b>JUGAR</b></button>
+											<button class="btn btn-primary col-md-12"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
 										</form>
 									</div>
 								</div>

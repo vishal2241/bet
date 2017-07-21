@@ -10,5 +10,10 @@ table {
 }
 
 .bet {
-	font-size: 5px;
+	font-size: 11px;
+	float: center;
+}
+
+.panel-body { 
+	padding: 0px;
 }
