@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body class="signup-page">
 	<div class="wrapper">
-		<div class="header header-filter" style="background-image: url('<?= base_url(); ?>public/img/city.jpg'); background-size: cover; background-position: top center;">
+		<div class="header header-filter" style="background-image: url('<?= base_url(); ?>public/img/colombia.jpg'); background-size: cover; background-position: top center;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
@@ -56,9 +56,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 
 			</div>
-
-
+			
+			
+			
 		</body>
+		<!--   Core JS Files   -->
+		<script src="<?= base_url(); ?>public/js/jquery.min.js" type="text/javascript"></script>
+		<script src="<?= base_url(); ?>public/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="<?= base_url(); ?>public/js/material.min.js"></script>
 
-		<?php $this->load->view('overall/footer'); ?>
+		<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+		<script src="<?= base_url(); ?>public/js/bootstrap-datepicker.js" type="text/javascript"></script>
+		<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+		<script src="<?= base_url(); ?>public/js/material-kit.js" type="text/javascript"></script>
+		<script src="<?= base_url(); ?>public/js/moment.js"></script> 	
+		<script src="<?= base_url(); ?>public/js/moment-with-locales.min.js"></script> 	
+
+
+		
+
 		</html>
