@@ -1,14 +1,14 @@
 
-	<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button id="menu-toggle" type="button" class="navbar-toggle" data-target="#navigation-doc">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar bar1"></span>
-					<span class="icon-bar bar2"></span>
-					<span class="icon-bar bar3"></span>
-				</button>
+<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button id="menu-toggle" type="button" class="navbar-toggle" data-target="#navigation-doc">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar bar1"></span>
+				<span class="icon-bar bar2"></span>
+				<span class="icon-bar bar3"></span>
+			</button>
 				<!--<a href="">
 					<div class="logo-container">
 						<div class="logo">
@@ -29,7 +29,7 @@
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="<?= base_url(); ?>paises">Listar</a></li>
 							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>paises/agregar">Agregar</a></li>
+							<li><a href="<?= base_url(); ?>paises/agregar#form">Agregar</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -74,3 +74,13 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+		<div class="wrapper">
+			<div class="header header-filter" style="background-image: url('<?= base_url(); ?>public/img/header.jpg');">
+			<!--<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<h1 class="title text-center">Components Documentation</h1>
+					</div>
+				</div> 
+			</div>-->
+		</div>

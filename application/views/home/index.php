@@ -7,219 +7,144 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body class="components-page">
-
-<?php $this->load->view('overall/nav'); ?>
-	<div class="wrapper">
-		<div class="header header-filter" style="background-image: url('<?= base_url(); ?>public/img/header.jpg');">
-			<!--<div class="container">
+	<?php $this->load->view('overall/nav'); ?>
+	<div class="main main-raised">
+		<div class="section">
+			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<h1 class="title text-center">Components Documentation</h1>
-					</div>
-				</div> 
-			</div>-->
-		</div>
-
-		<div class="main main-raised">
-			<div class="section">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-9">
-							<div class="tim-container">
-								<!-- tables row -->
-								<div class="tim-row" id="tables-row">					 
-									<div class="table-responsive">
-										<table class="table" id="bets">
-											<thead>
-												<tr>
-													<th colspan="16" class="text-left" >
-														<h4>
-															<img src="<?= base_url(); ?>public/img/banderas/48/Colombia.png"> 
-															<b>Colombia: </b> Liga Aguila
-														</h4>
-													</th>
+					<div class="col-md-9">
+						<div class="tim-container">
+							<!-- tables row -->
+							<div class="tim-row" id="tables-row">					 
+								<div class="table-responsive">
+									<table class="table" id="bets">
+										<thead>
+											<tr>
+												<th colspan="16" class="text-left" >
+													<h4>
+														<img src="<?= base_url(); ?>public/img/banderas/48/Colombia.png"> 
+														<b>Colombia: </b> Liga Aguila
+													</h4>
+												</th>
+											</tr>
+											<tr>
+												<th class="text-center">Hora</th>
+												<th class="text-center">Local</th>
+												<th class="text-center">Visitante</th>
+												<th class="text-center">1</th>
+												<th class="text-center"x</th>
+													<th class="text-center">2</th>
+													<th class="text-center">Over</th>
+													<th class="text-center">Under</th>
+													<th class="text-center">1-1st</th>
+													<th class="text-center">x-1st</th>
+													<th class="text-center">2-1st</th>
+													<th class="text-center">1x</th>
+													<th class="text-center">1-2</th>
+													<th class="text-center">2x</th>
+													<th class="text-center">GG</th>
+													<th class="text-center">NG</th>
 												</tr>
+											</thead>
+											<tbody>
+
+											</tbody>
+										</table>
+									</div>
+									<!-- end container -->
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="panel panel-default">
+								<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
+								<div class="panel-body">
+									<div class="col-md-12">
+										<table class="table table-condensed" >
+											<thead class="tiquete">
 												<tr>
-													<th class="text-center">Hora</th>
-													<th class="text-center">Local</th>
-													<th class="text-center">Visitante</th>
-													<th class="text-center">1</th>
-													<th class="text-center"x</th>
-														<th class="text-center">2</th>
-														<th class="text-center">Over</th>
-														<th class="text-center">Under</th>
-														<th class="text-center">1-1st</th>
-														<th class="text-center">x-1st</th>
-														<th class="text-center">2-1st</th>
-														<th class="text-center">1x</th>
-														<th class="text-center">1-2</th>
-														<th class="text-center">2x</th>
-														<th class="text-center">GG</th>
-														<th class="text-center">NG</th>
-													</tr>
-												</thead>
-												<tbody>
-
-												</tbody>
-											</table>
-										</div>
-										<!-- end container -->
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
-									<div class="panel-body">
-										<div class="col-md-12">
-											<table class="table table-condensed" >
-												<thead class="tiquete">
-													<tr>
-														<th class="text-success">Partido</th>
-														<th class="text-success" colspan="2">Cuota</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>
-															Tolima vs Nacional
-															<br>
-															<b><span class="text-info text-bold bet">Gana Tolima</span></b>
-														</td>
-														<td>
-															2.00
-														</td>
-														<td valign="middle">
-															<span class="text-danger">
-																<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>
-															</span>
-														</td>
-													</tr>
+													<th class="text-success">Partido</th>
+													<th class="text-success" colspan="2">Cuota</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														Tolima vs Nacional
+														<br>
+														<b><span class="text-info text-bold bet">Gana Tolima</span></b>
+													</td>
+													<td>
+														2.00
+													</td>
+													<td valign="middle">
+														<span class="text-danger">
+															<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>
+														</span>
+													</td>
+												</tr>
 
 
 
-												</tbody>
-											</table>
+											</tbody>
+										</table>
+									</div>	
+									<form>
+										<div class="col-md-6">
+											<div class="form-group label-floating">
+												<label class="control-label">Cantidad</label>
+												<input type="number" class="form-control">
+											</div>	
 										</div>	
-										<form>
-											<div class="col-md-6">
-												<div class="form-group label-floating">
-													<label class="control-label">Cantidad</label>
-													<input type="number" class="form-control">
-												</div>	
+										<div class="col-md-6">
+											<div class="form-group label-floating">
+												<label class="control-label">Ganancia</label>
+												<input type="number" class="form-control" readonly>
 											</div>	
-											<div class="col-md-6">
-												<div class="form-group label-floating">
-													<label class="control-label">Ganancia</label>
-													<input type="number" class="form-control" readonly>
-												</div>	
-											</div>	
-											<button class="btn btn-primary col-md-12"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
-										</form>
-									</div>
+										</div>	
+										<button class="btn btn-primary col-md-12"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
+									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-					<footer class="footer footer-transparent">
-						<div class="container">
-							<nav class="pull-left">
-								<ul>
-									<li>
-										<a href="http://www.creative-tim.com">
-											Creative Tim
-										</a>
-									</li>
-									<li>
-										<a href="http://presentation.creative-tim.com">
-											About Us
-										</a>
-									</li>
-									<li>
-										<a href="http://blog.creative-tim.com">
-											Blog
-										</a>
-									</li>
-									<li>
-										<a href="http://www.creative-tim.com/license">
-											Licenses
-										</a>
-									</li>
-								</ul>
-							</nav>
-							<div class="social-area pull-right">
-								<a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/CreativeTim">
-									<i class="fa fa-twitter"></i>
-								</a>
-								<a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/CreativeTim">
-									<i class="fa fa-facebook-square"></i>
-								</a>
-								<a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/+CreativetimPage">
-									<i class="fa fa-google-plus"></i>
-								</a>
-							</div>
-							<div class="copyright">
-								&copy; 2016 Creative Tim, made with love
-							</div>
-						</div>
-					</footer>
-
 				</div>
 
-				<!-- Modal Core -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-								<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-							</div>
-							<div class="modal-body">
-								Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-info btn-simple">Save</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</body>
-			<?php $this->load->view('overall/footer'); ?>
-			<script>
-				for (var i = 0; i < 40; i++) {
-					$("#bets > tbody").append('<tr> \
-						<td class="text-center">19:00</td> \
-						<td class="text-center">Botafogo PB</td> \
-						<td class="text-center">Fortaleza</td> \
-						<td class="text-center">2.00</td> \
-						<td class="text-center"3.15</td> \
-							<td class="text-center">3.30</td> \
-							<td class="text-center">2.05</td> \
-							<td class="text-center">1.58</td> \
-							<td class="text-center">2.30</td> \
-							<td class="text-center">1.98</td> \
-							<td class="text-center">3.60</td> \
-							<td class="text-center">1.21</td> \
-							<td class="text-center">1.32</td> \
-							<td class="text-center">1.59</td> \
-							<td class="text-center">11.00</td> \
-							<td class="text-center">7.60</td> \
-						</tr>');
-				}
+				<?php $this->load->view('overall/footer'); ?>
+				<script>
+					for (var i = 0; i < 40; i++) {
+						$("#bets > tbody").append('<tr> \
+							<td class="text-center">19:00</td> \
+							<td class="text-center">Botafogo PB</td> \
+							<td class="text-center">Fortaleza</td> \
+							<td class="text-center">2.00</td> \
+							<td class="text-center"3.15</td> \
+								<td class="text-center">3.30</td> \
+								<td class="text-center">2.05</td> \
+								<td class="text-center">1.58</td> \
+								<td class="text-center">2.30</td> \
+								<td class="text-center">1.98</td> \
+								<td class="text-center">3.60</td> \
+								<td class="text-center">1.21</td> \
+								<td class="text-center">1.32</td> \
+								<td class="text-center">1.59</td> \
+								<td class="text-center">11.00</td> \
+								<td class="text-center">7.60</td> \
+							</tr>');
+					}
 
 
-				var header_height;
-				var fixed_section;
-				var floating = false;
+					var header_height;
+					var fixed_section;
+					var floating = false;
 
-				$().ready(function(){
-					suggestions_distance = $("#suggestions").offset();
-					pay_height = $('.fixed-section').outerHeight();
+					$().ready(function(){
+						suggestions_distance = $("#suggestions").offset();
+						pay_height = $('.fixed-section').outerHeight();
 
-					$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+						$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
 
-				});
+					});
 
-			</script>
-			</html>
+				</script>
+				</html>
