@@ -15,7 +15,8 @@ Resources
 *********
 Request
 *********
--  `API <https://apifootball.com/documentation/l>`_
+-  `Api Sportmonks <https://sportmonks.com/soccer/documentation/v2.0/items/teams/21l>`_
+-  `ApiFootball  <https://apifootball.com/documentation/l>`_
 -  `PHPRequest <http://requests.ryanmccue.info/>`_
 
 
