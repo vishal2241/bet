@@ -61,32 +61,58 @@ class Home extends CI_Controller {
 		$request = Requests::get('https://apifootball.com/api/?action=get_events&from='.$from.'&to='.$to.'&APIkey='.$APIkey.'');
 		$request->body=json_decode($request->body);
 		#print_r($request->body); exit;
+		echo '
+		<style type="text/css">
+			table {border-collapse:collapse}
+			td {border:1px solid black; padding:2px}
+			body {font-family: Calibri}
+		</style>
+		';
+		echo '<table border=1>';
+		echo '<tr>';
+		echo '<td><b>#</b></td>';
+		echo '<td><b>Liga</b></td>';
+		echo '<td><b>Estado</b></td>';
+		echo '<td><b>Local</b></td>';
+		echo '<td><b>Visitante</b></td>';
+		echo '<td><b>Visitante</b></td>';
+		echo '<td><b>Fecha UTC+2</b></td>';
+		echo '<td><b>Hora UTC+2</b></td>';
+		echo '<td><b>Hora COL</b></td>';
+		echo '<td><b>Hora COL</b></td>';
+		echo '</tr>';
+		$i=1;
 		foreach ($request->body as $key => $value) {
-			$data = array(
-				'ID_PARTIDO'      => $value->match_id,
-				'ID_COMPETENCIA'  => $value->league_id,
-				'FECHA'           => $value->match_date,
-				'HORARIO'         => $value->match_time,
-				'ESTADO'          => $value->match_status,
-				'LOCAL'           => $value->match_hometeam_name,
-				'VISITANTE'       => $value->match_awayteam_name,
-				'GOLES_LOCAL'     => $value->match_hometeam_score,
-				'GOLES_VISITANTE' => $value->match_awayteam_score
-				);
-			#Funcion Horario Colombia / Resta 7 horas UTC+2
-			$fecha=strtotime($value->match_date.' '.$value->match_time);
-			$fecha = date("Y-m-d h:i", $fecha);
-			$fecha = new DateTime($fecha);
-			$fecha->sub(new DateInterval('PT7H'));
-			 #$fecha->format('Y-m-d h:i')
+			if ($value->match_status!='Canc.') {
 
-			if ($fecha->format('Y-m-d')==date("Y-m-d")) {
-				echo $fecha->format('Y-m-d'). ' '.$fecha->format('h:i').' '. $value->match_hometeam_name.' ['.$value->match_hometeam_score.'] vs. '. $value->match_awayteam_name.'['.$value->match_awayteam_score.']<br>';
+ #Funcion Horario Colombia / Resta 7 horas UTC+2
+				$fecha=strtotime($value->match_date.' '.$value->match_time);
+				$fecha = date("Y-m-d H:i", $fecha);
+				$fecha = new DateTime($fecha);
+				$fecha->sub(new DateInterval('PT7H'));
+			#	echo ' -> '.$fecha->format('Y-m-d h:i').' '.$value->match_hometeam_name.' vs '. $value->match_awayteam_name.'<br>';  
 
-			 
+				if ($fecha->format('Y-m-d')==date('Y-m-d') ) {
+					echo '<tr>';
+					echo '<td>'.$i.'</td>';
+					echo '<td><b>'.$value->country_name.'</b>:'.$value->league_name.'</td>';
+					echo '<td>'.$value->match_status.'</td>';
+					echo '<td>'.$value->match_hometeam_name.'</td>';
+					echo '<td>'.$value->match_awayteam_name.'</td>';
+					echo '<td>'.$value->match_hometeam_score.' - '.$value->match_awayteam_score.'</td>';
+					echo '<td>'.$value->match_date.'</td>';
+					echo '<td>'.$value->match_time.'</td>';
+					echo '<td>'.$fecha->format('H:i').'</td>';
+					echo '<td>'.$fecha->format('Y-m-d').'</td>';
+ 
+					echo '</tr>'; 
+					$i++;
+				}
+
+				
 			}
-
 		}
+		echo '</table>';
 	}
 
 
