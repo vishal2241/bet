@@ -53,10 +53,12 @@ class Home extends CI_Controller {
 
 	public function Partidos(){
 		#$this->load->view('home/index');
-	 
+		$from='2017-07-24';
+		$to='2017-07-25';
+
 		$this->load->library('PHPRequests');
 		$APIkey='0eb345c0e50dc4877ba93e9429d95b29b902788120cbe9b16c0d607e711a945a';
-		$request = Requests::get('https://apifootball.com/api/?action=get_events&from=2017-07-24&to=2017-07-25&APIkey='.$APIkey.'');
+		$request = Requests::get('https://apifootball.com/api/?action=get_events&from='.$from.'&to='.$to.'&APIkey='.$APIkey.'');
 		$request->body=json_decode($request->body);
 		#print_r($request->body); exit;
 		foreach ($request->body as $key => $value) {
@@ -71,9 +73,19 @@ class Home extends CI_Controller {
 				'GOLES_LOCAL'     => $value->match_hometeam_score,
 				'GOLES_VISITANTE' => $value->match_awayteam_score
 				);
-			#$this->Partido->add($data);
+			#Funcion Horario Colombia / Resta 7 horas UTC+2
+			$fecha=strtotime($value->match_date.' '.$value->match_time);
+			$fecha = date("Y-m-d h:i", $fecha);
+			$fecha = new DateTime($fecha);
+			$fecha->sub(new DateInterval('PT7H'));
+			 #$fecha->format('Y-m-d h:i')
 
-			echo $value->match_date. ' '.$value->match_time.' '. $value->match_hometeam_name.' ['.$value->match_hometeam_score.'] vs. '. $value->match_awayteam_name.'['.$value->match_awayteam_score.']<br>';
+			if ($fecha->format('Y-m-d')==date("Y-m-d")) {
+				echo $fecha->format('Y-m-d'). ' '.$fecha->format('h:i').' '. $value->match_hometeam_name.' ['.$value->match_hometeam_score.'] vs. '. $value->match_awayteam_name.'['.$value->match_awayteam_score.']<br>';
+
+			 
+			}
+
 		}
 	}
 
