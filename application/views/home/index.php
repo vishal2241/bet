@@ -47,7 +47,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</tr>
 											</thead>
 											<tbody>
-
+												<?php 
+print_r($partidos); exit();
+												foreach ($partidos as $key => $row): ?>
+													<tr>
+														<td><?= $row['ID_PARTIDO'] ?></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												<?php endforeach ?>
 											</tbody>
 										</table>
 									</div>
@@ -112,7 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<?php $this->load->view('overall/footer'); ?>
 				<script>
-					for (var i = 0; i < 40; i++) {
+					/*for (var i = 0; i < 40; i++) {
 						$("#bets > tbody").append('<tr> \
 							<td class="text-center">19:00</td> \
 							<td class="text-center">Botafogo PB</td> \
@@ -131,20 +152,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<td class="text-center">11.00</td> \
 								<td class="text-center">7.60</td> \
 							</tr>');
-					}
+						} */
 
 
-					var header_height;
-					var fixed_section;
-					var floating = false;
+						var header_height;
+						var fixed_section;
+						var floating = false;
 
-					$().ready(function(){
-						suggestions_distance = $("#suggestions").offset();
-						pay_height = $('.fixed-section').outerHeight();
+						$().ready(function(){
+							suggestions_distance = $("#suggestions").offset();
+							pay_height = $('.fixed-section').outerHeight();
 
-						$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+							$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
 
-					});
+						});
 
-				</script>
-				</html>
+					</script>
+					</html>
