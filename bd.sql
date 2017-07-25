@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-07-2017 a las 14:43:54
+-- Tiempo de generación: 25-07-2017 a las 22:16:51
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -1167,10 +1167,44 @@ INSERT INTO `competencia` (`ID_COMPETENCIA`, `ID_PAIS`, `NOMBRE`) VALUES
 
 CREATE TABLE `cuota` (
   `ID_CUOTA` int(11) NOT NULL,
-  `ID_TIPO` int(11) NOT NULL,
   `ID_PARTIDO` int(11) NOT NULL,
-  `VALOR` decimal(10,0) DEFAULT NULL
+  `FECHA_CUOTA` timestamp NULL DEFAULT NULL,
+  `_1` varchar(10) NOT NULL DEFAULT '0',
+  `_X` varchar(10) NOT NULL DEFAULT '0',
+  `_2` varchar(10) NOT NULL DEFAULT '0',
+  `_1X` varchar(10) NOT NULL DEFAULT '0',
+  `_2X` varchar(10) NOT NULL DEFAULT '0',
+  `_12` varchar(10) NOT NULL DEFAULT '0',
+  `NG` varchar(10) NOT NULL DEFAULT '0',
+  `GG` varchar(10) NOT NULL DEFAULT '0',
+  `OVER_25` varchar(10) NOT NULL DEFAULT '0',
+  `UNDER_25` varchar(10) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cuota`
+--
+
+INSERT INTO `cuota` (`ID_CUOTA`, `ID_PARTIDO`, `FECHA_CUOTA`, `_1`, `_X`, `_2`, `_1X`, `_2X`, `_12`, `NG`, `GG`, `OVER_25`, `UNDER_25`) VALUES
+(657, 190711, '2017-07-24 10:09:20', '2.86', '3.30', '2.33', '2.86', '2.33', '3.30', '', '', '', ''),
+(658, 193004, '2017-07-24 10:14:52', '1.26', '5.20', '7.60', '1.26', '7.60', '5.20', '', '', '', ''),
+(659, 193346, '2017-07-24 10:20:47', '1.83', '3.80', '3.70', '1.83', '3.70', '3.80', '', '', '', ''),
+(688, 193367, '2017-07-24 11:13:25', '1.40', '4.60', '6.50', '1.40', '6.50', '4.60', '', '', '', ''),
+(717, 193376, '2017-07-24 19:14:50', '3.60', '3.60', '1.83', '3.60', '1.83', '3.60', '', '', '', ''),
+(850, 199535, '2017-07-23 10:17:15', '2.08', '3.16', '3.41', '2.08', '3.41', '3.16', '', '', '', ''),
+(917, 193233, '2017-07-24 02:06:25', '1.58', '3.51', '5.48', '1.58', '5.48', '3.51', '', '', '', ''),
+(952, 193352, '2017-07-24 02:10:32', '8.00', '5.50', '1.25', '8.00', '1.25', '5.50', '', '', '1.45', '2.55'),
+(983, 196799, '2017-07-24 10:06:24', '1.62', '3.40', '5.00', '1.62', '5.00', '3.40', '', '', '', ''),
+(984, 198034, '2017-07-24 10:06:55', '1.67', '3.36', '4.90', '1.67', '4.90', '3.36', '1.81', '1.90', '1.98', '1.80'),
+(751, 193378, '2017-07-24 19:21:54', '2.05', '3.50', '3.10', '2.05', '3.10', '3.50', '', '', '', ''),
+(773, 196358, '2017-07-24 19:24:03', '1.90', '3.70', '3.20', '1.90', '3.20', '3.70', '', '', '', ''),
+(817, 197957, '2017-07-22 21:03:59', '2.77', '2.92', '2.52', '2.77', '2.52', '2.92', '', '', '', ''),
+(844, 198049, '2017-07-23 10:16:54', '2.75', '3.00', '2.40', '2.75', '2.40', '3.00', '', '', '', ''),
+(896, 192854, '2017-07-26 02:52:46', '1.38', '4.30', '7.20', '1.38', '7.20', '4.30', '', '', '2.03', '1.85'),
+(913, 193184, '2017-07-23 03:44:03', '2.36', '3.20', '2.90', '2.36', '2.90', '3.20', '', '', '', ''),
+(921, 193234, '2017-07-24 02:06:56', '1.37', '4.21', '7.59', '1.37', '7.59', '4.21', '', '', '', ''),
+(947, 193335, '2017-07-24 02:08:54', '2.00', '3.00', '3.60', '2.00', '3.60', '3.00', '', '', '', ''),
+(954, 195512, '2017-07-23 03:49:03', '4.60', '4.50', '1.67', '4.60', '1.67', '4.50', '2.35', '3.50', '', '');
 
 -- --------------------------------------------------------
 
@@ -1196,6 +1230,225 @@ CREATE TABLE `goles` (
   `MARCADOR_PARCIAL` varchar(10) NOT NULL,
   `JUGADOR` varchar(40) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `goles`
+--
+
+INSERT INTO `goles` (`ID_GOL`, `ID_PARTIDO`, `TIEMPO`, `MARCADOR_PARCIAL`, `JUGADOR`) VALUES
+(636, 190711, '85', '2 - 3', 'M.  Michy Batshuayi'),
+(635, 190711, '45', '1 - 3', 'M.  Marcos Alonso'),
+(634, 190711, '27', '0 - 3', 'T.  Thomas Mueller'),
+(633, 190711, '12', '0 - 2', 'T.  Thomas Mueller'),
+(632, 190711, '6', '0 - 1', 'Rafinha'),
+(645, 193264, '38', '1 - 1', 'M.  Mantas Kuklys'),
+(644, 193264, '11', '1 - 0', 'M.  Mario Duque'),
+(712, 193378, '45', '1 - 1', 'S.  Shahril Ishak'),
+(711, 193378, '12', '1 - 0', 'I.  Irfan Ahmad'),
+(765, 201747, '52', '2 - 0', 'C.  Christian Santos'),
+(766, 201747, '90', '3 - 0', 'C.  Christian Santos'),
+(769, 201749, '42', '2 - 1', 'C.  Cas Peters'),
+(768, 201749, '26', '2 - 0', 'T.  Tim Matavz'),
+(767, 201749, '5', '1 - 0', 'T.  Tim Matavz'),
+(772, 201750, '80', '2 - 1', 'T.  Tunahan Nazli'),
+(771, 201750, '60', '1 - 1', 'A.  Ahmet Dereli'),
+(770, 201750, '58', '1 - 0', 'R.  Ridvan  Simsek'),
+(788, 201755, '90', '1 - 3', 'Dallago'),
+(781, 201753, '7', '1 - 0', 'E.  Emil Forsberg'),
+(640, 193004, '47', '2 - 2', 'S.  Stina Blackstenius'),
+(681, 193363, '83', '2 - 3', 'S.  Steven Thomson'),
+(694, 193368, '74', '3 - 4', 'R.  Rakish Bingham'),
+(698, 193371, '55', '1 - 2', 'D.  Dean Cairns'),
+(703, 193372, '61', '2 - 3', 'N.  Nikolay Todorov'),
+(708, 193375, '50', '4 - 0', 'M.  Myles Hippolyte'),
+(718, 193410, '79', '1 - 5', '&nbsp;'),
+(717, 193410, '66', '1 - 4', ''),
+(716, 193410, '38', '0 - 4', '&nbsp;'),
+(715, 193410, '29', '0 - 3', '&nbsp;'),
+(714, 193410, '12', '0 - 2', '&nbsp;'),
+(723, 193411, '90', '4 - 1', ''),
+(722, 193411, '77', '3 - 1', ''),
+(721, 193411, '69', '2 - 1', ''),
+(725, 193412, '25', '0 - 2', '&nbsp;'),
+(724, 193412, '23', '0 - 1', '&nbsp;'),
+(727, 196358, '43', '2 - 0', 'D.  Daniel Majdancevic'),
+(726, 196358, '30', '1 - 0', 'M.  Markus Einsiedler'),
+(728, 196359, '70', '1 - 0', 'J.  Julian Guenther-Schmidt'),
+(734, 196360, '84', '1 - 4', 'N.  Nicolas Jann'),
+(733, 196360, '77', '1 - 3', 'A.  Alexander Nollenberger'),
+(732, 196360, '61', '1 - 2', 'S.  Sebastian Schaller'),
+(740, 196361, '64', '4 - 2', 'M.  Muriz Salemovic'),
+(739, 196361, '36', '3 - 2', 'F.  Fotios  Katidis'),
+(738, 196361, '34', '3 - 1', 'F.  Furkan Kircicek'),
+(737, 196361, '29', '2 - 1', 'F.  Fabian Krogler'),
+(736, 196361, '18', '1 - 1', 'M.  Muriz Salemovic'),
+(741, 196362, '50', '0 - 1', 'S.  Steffen Krautschneider'),
+(743, 196363, '39', '1 - 0', 'J.  Jonas Hofmann'),
+(748, 196897, '89', '1 - 2', '&nbsp;'),
+(747, 196897, '79', '1 - 1', ''),
+(746, 196897, '57', '0 - 1', '&nbsp;'),
+(749, 197957, '45', '0 - 1', 'A.  Alan Dzagoev'),
+(750, 197957, '56', '0 - 2', 'P.  Pontus Wernbloom'),
+(754, 197960, '61', '2 - 2', 'F.  Felipe Teixeira'),
+(753, 197960, '53', '1 - 2', 'J.  Jan Kopic'),
+(752, 197960, '37', '1 - 1', 'C.  Constantin Budescu'),
+(755, 199826, '20', '1 - 0', 'M.  Milan Skoda'),
+(760, 199828, '90', '1 - 3', 'E.  Emmanuel Emenike'),
+(774, 201751, '90', '1 - 1', 'Y.  Yasir Al Shahrani'),
+(780, 201752, '71', '6 - 0', 'A.  Alejandro Rodriguez'),
+(779, 201752, '69', '5 - 0', 'V.  Valter Birsa'),
+(784, 201754, '53', '2 - 1', 'P.  Pablo Mazza'),
+(783, 201754, '24', '2 - 0', 'E.  Emre Akbaba'),
+(782, 201754, '6', '1 - 0', 'M.  Mbilla Etame'),
+(787, 201755, '24', '0 - 3', 'P. M.  Pablo Martin Batalla'),
+(785, 201755, '6', '0 - 1', 'B.  Bogdan Stancu'),
+(789, 201757, '28', '0 - 1', 'R.  Rick van Drongelen'),
+(794, 201759, '56', '1 - 3', 'D.  Darwin Machis'),
+(793, 201759, '54', '1 - 2', 'R.  Reuven Niemeijer'),
+(792, 201759, '21', '0 - 2', 'L.  Luis  Joselu'),
+(795, 201760, '18', '0 - 1', 'P.  Petar Skuletic'),
+(799, 201761, '85', '2 - 1', 'F.  Florent Stevance'),
+(798, 201761, '60', '1 - 1', 'A.  Alassane Toure'),
+(797, 201761, '3', '0 - 1', 'C.  Clement Tainmont'),
+(806, 201764, '82', '0 - 5', 'B.  Bruno  Gama'),
+(805, 201764, '79', '0 - 4', 'B.  Borja Valle'),
+(809, 201765, '51', '2 - 1', 'L.  Louis Dodds'),
+(812, 201766, '73', '0 - 3', 'L.  Leo  Baptistao'),
+(841, 201778, '90', '2 - 1', 'D.  David Brooks'),
+(641, 193004, '85', '2 - 3', 'C.  Cristiana Girelli'),
+(639, 193004, '37', '1 - 2', 'D.  Daniela Sabatino'),
+(638, 193004, '14', '1 - 1', 'L.  Lotta Schelin'),
+(637, 193004, '4', '0 - 1', 'D.  Daniela Sabatino'),
+(642, 193007, '10', '0 - 1', 'B.  Babett Peter'),
+(650, 193346, '82', '3 - 2', 'P.  Paul Willis'),
+(649, 193346, '79', '2 - 2', 'T.  Thomas Reilly'),
+(648, 193346, '66', '2 - 1', 'M.  Mark Docherty'),
+(647, 193346, '57', '1 - 1', 'C.  Chris Duggan'),
+(646, 193346, '49', '0 - 1', 'T.  Thomas Reilly'),
+(652, 193347, '17', '1 - 1', 'K.  Kyle Lafferty'),
+(651, 193347, '6', '1 - 0', 'J.  Jason Brown'),
+(660, 193351, '86', '1 - 6', 'R.  Ross Matthews'),
+(659, 193351, '69', '1 - 5', 'L.  Liam Buchanan'),
+(658, 193351, '65', '1 - 4', 'L.  Liam Buchanan'),
+(657, 193351, '45', '1 - 3', 'L.  Lewis  Vaughan'),
+(656, 193351, '41', '1 - 2', 'G.  Greig Spence'),
+(655, 193351, '27', '1 - 1', 'J.  John McLeod'),
+(654, 193351, '14', '0 - 1', 'L.  Lewis  Vaughan'),
+(667, 193355, '90', '6 - 1', 'S.  Simon Murray'),
+(666, 193355, '88', '5 - 1', 'R.  Ryan  Porteous'),
+(665, 193355, '53', '4 - 1', 'J.  John McGinn'),
+(664, 193355, '51', '3 - 1', 'S.  Simon Murray'),
+(663, 193355, '45', '2 - 1', 'R.  Ryan  Porteous'),
+(662, 193355, '38', '1 - 1', 'S.  Steven Doris'),
+(661, 193355, '18', '1 - 0', 'S.  Simon Murray'),
+(669, 193356, '50', '2 - 0', 'I.  Iain Campbell'),
+(668, 193356, '21', '1 - 0', 'K.  Kerr Hay'),
+(675, 193359, '64', '4 - 1', 'C.  Craig Moore'),
+(674, 193359, '53', '3 - 1', 'M.  Michael Moffat'),
+(673, 193359, '30', '2 - 1', 'C.  Craig Moore'),
+(672, 193359, '20', '1 - 1', 'R.  Robbie Crawford'),
+(680, 193363, '39', '1 - 3', 'D.  David Galt'),
+(679, 193363, '33', '1 - 2', 'A.  Anthony Brady'),
+(678, 193363, '9', '1 - 1', 'R.  Ross Millen'),
+(677, 193363, '1', '1 - 0', 'G.  Greg Rutherford'),
+(684, 193364, '89', '1 - 2', 'E.  Elliott Frear'),
+(683, 193364, '74', '1 - 1', 'C.  Christopher Cadden'),
+(682, 193364, '69', '1 - 0', 'A.  Ashley Grimes'),
+(687, 193367, '63', '1 - 2', 'S.  Sean Winter'),
+(686, 193367, '50', '1 - 1', 'J.  Jamie Longworth'),
+(685, 193367, '47', '0 - 1', 'S.  Sean Winter'),
+(693, 193368, '64', '3 - 3', 'A.  Alan Trouten'),
+(692, 193368, '58', '2 - 3', 'S.  Shaun Want'),
+(691, 193368, '53', '2 - 2', 'A.  Alan Trouten'),
+(690, 193368, '45', '1 - 2', 'S.  Shaun Want'),
+(689, 193368, '38', '1 - 1', 'M.  Massimo Donati'),
+(697, 193371, '40', '0 - 2', 'B.  Blair Spittal'),
+(696, 193371, '10', '0 - 1', 'K.  Kris Doolan'),
+(704, 193372, '80', '2 - 4', 'S.  Scott Robinson'),
+(702, 193372, '33', '2 - 2', 'S.  Scott Agnew'),
+(701, 193372, '32', '1 - 2', 'D.  Dale  Carrick'),
+(700, 193372, '10', '1 - 1', 'S.  Scott Robertson'),
+(699, 193372, '5', '1 - 0', 'M.  Morgyn Neill'),
+(707, 193375, '38', '3 - 0', 'M.  Myles Hippolyte'),
+(706, 193375, '29', '2 - 0', 'N.  Nathan Austin'),
+(710, 193376, '90', '2 - 0', 'L.  Liam Caddis'),
+(713, 193410, '10', '0 - 1', '&nbsp;'),
+(720, 193411, '46', '1 - 1', '&nbsp;'),
+(729, 196359, '77', '2 - 0', 'S.  Shawn  Parker'),
+(731, 196360, '41', '1 - 1', 'S.  Sasha Marinkovic'),
+(735, 196361, '8', '0 - 1', 'R.  Raffael  Kobrowski'),
+(742, 196362, '90', '0 - 2', 'A.  Adam Jabiri'),
+(744, 196363, '71', '1 - 1', 'M.  Michael  Panknin'),
+(751, 197960, '23', '0 - 1', 'M.  Michael Krmencik'),
+(756, 199827, '65', '1 - 0', 'J.  Jonathan Balotelli'),
+(758, 199828, '10', '1 - 1', 'L.  Leandre Tawamba Kana'),
+(757, 199828, '6', '0 - 1', 'E. F.  El Fardou Ben Nabouhane'),
+(762, 199865, '38', '1 - 1', 'G. S.  Gudmundur Steinn Hafsteinsson'),
+(764, 201747, '41', '1 - 0', 'I.  Ibai Gomez'),
+(773, 201751, '55', '1 - 0', 'M.  Massimo Coda'),
+(778, 201752, '54', '4 - 0', 'V.  Valter Birsa'),
+(777, 201752, '36', '3 - 0', 'B.  Bostjan Cesar'),
+(776, 201752, '28', '2 - 0', 'V.  Valter Birsa'),
+(775, 201752, '11', '1 - 0', 'S.  Sergio Pellissier'),
+(786, 201755, '19', '0 - 2', 'D.  Deniz Yilmaz'),
+(790, 201757, '77', '1 - 1', 'B.  Bakery Jatta'),
+(791, 201759, '4', '0 - 1', 'L.  Luis  Joselu'),
+(796, 201760, '39', '1 - 1', 'R.  Raul Navas'),
+(804, 201764, '53', '0 - 3', 'Z.  Zakaria Bakkali'),
+(803, 201764, '36', '0 - 2', 'Z.  Zakaria Bakkali'),
+(802, 201764, '11', '0 - 1', 'F. N.  Federico Nicolas Cartabia'),
+(808, 201765, '50', '1 - 1', 'S.  Shaun Whalley'),
+(811, 201766, '63', '0 - 2', 'L.  Leo  Baptistao'),
+(815, 201767, '55', '1 - 1', 'M.  Mustafa Pektemek'),
+(818, 201768, '57', '0 - 1', 'J.  Joe Garner'),
+(822, 201770, '56', '2 - 2', 'O.  Ollie Watkins'),
+(821, 201770, '28', '2 - 1', 'R.  Ryan Seager'),
+(820, 201770, '21', '1 - 1', 'N.  Neal Maupay'),
+(819, 201770, '6', '1 - 0', 'R.  Ryan Seager'),
+(824, 201771, '71', '0 - 1', 'A.  Austin  Samuels'),
+(826, 201772, '89', '0 - 2', 'I.  Ike Ugbo'),
+(825, 201772, '67', '0 - 1', 'I.  Ike Ugbo'),
+(828, 201773, '55', '0 - 2', 'S.  Steven Naismith'),
+(827, 201773, '34', '0 - 1', 'Y.  Yannick Wildschut'),
+(831, 201774, '66', '0 - 3', 'G.  Gustav Engvall'),
+(830, 201774, '52', '0 - 2', 'B.  Bobby Reid'),
+(829, 201774, '48', '0 - 1', 'G.  Gustav Engvall'),
+(832, 201775, '18', '1 - 0', 'M.  Marc Richards'),
+(834, 201776, '65', '1 - 1', 'A.  Apostolos Vellios'),
+(833, 201776, '40', '0 - 1', 'Andres'),
+(838, 201777, '66', '1 - 2', 'S.  Sean  Maguire'),
+(837, 201777, '53', '0 - 2', 'K.  Kevin Long'),
+(840, 201778, '36', '1 - 1', 'X.  Xherdan Shaqiri'),
+(839, 201778, '10', '1 - 0', 'B.  Billy Sharp'),
+(844, 201779, '44', '0 - 3', 'G.  Glenn Murray'),
+(843, 201779, '41', '0 - 2', 'S.  Solly March'),
+(842, 201779, '34', '0 - 1', 'S.  Solly March'),
+(643, 193007, '56', '0 - 2', 'D.  Dzenifer Marozsan'),
+(653, 193347, '90', '2 - 1', 'R.  Rory McAllister'),
+(670, 193356, '82', '2 - 1', 'I.  Iain Flannigan'),
+(671, 193359, '12', '0 - 1', 'D.  David Goodwillie'),
+(688, 193368, '9', '1 - 0', 'A.  Alan Trouten'),
+(705, 193375, '8', '1 - 0', 'M.  Myles Hippolyte'),
+(709, 193376, '40', '1 - 0', 'P.  Peter MacDonald'),
+(719, 193411, '12', '1 - 0', ''),
+(730, 196360, '34', '0 - 1', 'M.  Marvin  Weiss'),
+(759, 199828, '56', '1 - 2', 'E. F.  El Fardou Ben Nabouhane'),
+(763, 199865, '49', '1 - 2', 'P.  Patrick Pedersen'),
+(761, 199865, '24', '0 - 1', 'G. P.  Gudjon Petur Lydsson'),
+(800, 201763, '73', '1 - 0', 'E.  Enca Fati'),
+(807, 201765, '45', '0 - 1', 'N.  Nathanial Mendez-Laing'),
+(810, 201766, '38', '0 - 1', 'E.  Esteban Granero'),
+(816, 201767, '77', '1 - 2', 'O.  Oguzhan Ozyakup'),
+(814, 201767, '4', '1 - 0', 'J.  Jaime Mata'),
+(823, 201770, '76', '2 - 3', 'F.  Florian Jozefzoon'),
+(835, 201776, '68', '2 - 1', 'A.  Apostolos Vellios'),
+(836, 201777, '21', '0 - 1', 'T.  Thomas Anderson'),
+(676, 193359, '75', '5 - 1', 'D.  Declan McDaid'),
+(695, 193368, '90', '4 - 4', 'R.  Ross Davidson'),
+(745, 196363, '89', '2 - 1', 'E.  Erik Engelhardt'),
+(801, 201763, '87', '2 - 0', 'Koffi'),
+(813, 201766, '90', '0 - 4', 'Puado'),
+(817, 201767, '81', '2 - 2', 'Miguel');
 
 -- --------------------------------------------------------
 
@@ -1331,16 +1584,209 @@ CREATE TABLE `partido` (
   `EN_VIVO` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `partido`
+--
+
+INSERT INTO `partido` (`ID_PARTIDO`, `ID_COMPETENCIA`, `FECHA`, `HORARIO`, `ESTADO`, `LOCAL`, `VISITANTE`, `GOLES_LOCAL`, `GOLES_VISITANTE`, `EN_VIVO`) VALUES
+(190711, 1157, '2017-07-25', '06:35:00', 'FT', 'Chelsea', 'Bayern Munich', 2, 3, '1'),
+(192854, 513, '2017-07-25', '19:30:00', '', 'Internacional', 'Oeste FC', 0, 0, '0'),
+(193004, 891, '2017-07-25', '13:45:00', 'FT', 'Sweden', 'Italy', 2, 3, '1'),
+(193007, 891, '2017-07-25', '13:45:00', 'FT', 'Russia', 'Germany', 0, 2, '1'),
+(193012, 892, '2017-07-26', '13:45:00', '', 'Switzerland', 'France', 0, 0, '0'),
+(193015, 892, '2017-07-26', '13:45:00', '', 'Iceland', 'Austria', 0, 0, '0'),
+(193184, 41, '2017-07-25', '19:00:00', '', 'Tottenham Hotspur', 'Roma', 0, 0, '0'),
+(193233, 656, '2017-07-26', '05:30:00', '', 'FC Tokyo', 'Sanfrecce Hiroshima', 0, 0, '0'),
+(193234, 656, '2017-07-26', '05:00:00', '', 'Cerezo Osaka', 'Consadole Sapporo', 0, 0, '0'),
+(193242, 679, '2017-07-26', '07:00:00', '', 'Akzhaiyk Uralsk', 'Aktobe', 0, 0, '0'),
+(193243, 679, '2017-07-26', '07:00:00', '', 'Atyrau', 'Okzhetpes Kokshetau', 0, 0, '0'),
+(193264, 444, '2017-07-25', '10:00:00', 'FT', 'FK Kauno Zalgiris', 'Zalgiris Vilnius', 1, 1, '1'),
+(193266, 444, '2017-07-26', '10:00:00', '', 'FK Utenis Utena', 'Atlantas Klaipeda', 0, 0, '0'),
+(193267, 445, '2017-07-26', '13:00:00', '', 'Zalgiris Vilnius B', 'Koralas', 0, 0, '0'),
+(193274, 768, '2017-07-26', '08:00:00', '', 'Felda United FC', 'Selangor', 0, 0, '0'),
+(193275, 768, '2017-07-26', '08:00:00', '', 'Johor Darul Ta\'zim FC', 'Perak', 0, 0, '0'),
+(193276, 768, '2017-07-26', '08:00:00', '', 'Kedah', 'Kelantan', 0, 0, '0'),
+(193277, 768, '2017-07-26', '08:00:00', '', 'Melaka United', 'Sarawak FA', 0, 0, '0'),
+(193278, 768, '2017-07-26', '08:00:00', '', 'Pulau Pinang', 'Pahang', 0, 0, '0'),
+(193279, 768, '2017-07-26', '08:00:00', '', 'Selangor Pkns FC', 'PBDKT T-Team FC', 0, 0, '0'),
+(193286, 769, '2017-07-25', '03:45:00', 'FT', 'MISC-MIFA', 'Kuantan FA', 6, 3, '1'),
+(193287, 769, '2017-07-25', '03:45:00', 'FT', 'UiTM', 'ATM FA', 2, 1, '1'),
+(193288, 769, '2017-07-25', '07:15:00', 'FT', 'Sabah FA', 'Johor Darul Ta\'zim II', 1, 1, '1'),
+(193289, 769, '2017-07-25', '08:00:00', 'FT', 'PDRM', 'Kuala Lumpur FA', 0, 3, '1'),
+(193290, 769, '2017-07-25', '08:00:00', 'FT', 'PKNP FC', 'Perlis', 2, 0, '1'),
+(193291, 769, '2017-07-25', '08:00:00', 'FT', 'Terengganu', 'Negeri Sembilan', 2, 2, '1'),
+(193334, 470, '2017-07-26', '07:00:00', '', 'Avangard Kursk', 'Spartak Moscow II', 0, 0, '0'),
+(193335, 470, '2017-07-26', '07:00:00', '', 'Baltika', 'FC Tambov', 0, 0, '0'),
+(193336, 470, '2017-07-26', '07:00:00', '', 'FC Rotor Volgograd', 'Dinamo St Petersburg', 0, 0, '0'),
+(193337, 470, '2017-07-26', '07:00:00', '', 'FC Volgar', 'Luch Energiya Vladivostok', 0, 0, '0'),
+(193338, 470, '2017-07-26', '07:00:00', '', 'FC Yenisey Krasnoyarsk', 'FC Orenburg', 0, 0, '0'),
+(193339, 470, '2017-07-26', '07:00:00', '', 'Fakel', 'Tyumen', 0, 0, '0'),
+(193340, 470, '2017-07-26', '07:00:00', '', 'Krylya Sovetov Samara', 'Tom Tomsk', 0, 0, '0'),
+(193341, 470, '2017-07-26', '07:00:00', '', 'Kuban Krasnodar', 'Shinnik Yaroslavl', 0, 0, '0'),
+(193342, 470, '2017-07-26', '07:00:00', '', 'Olimpiec Nizhny', 'Khimki', 0, 0, '0'),
+(193343, 470, '2017-07-26', '07:00:00', '', 'Zenit St. Petersburg 2', 'Sibir Novosibirsk', 0, 0, '0'),
+(193346, 1149, '2017-07-25', '13:45:00', 'FT', 'East Fife', 'Elgin City', 3, 2, '1'),
+(193347, 1149, '2017-07-25', '14:00:00', 'FT', 'Peterhead', 'Hearts', 2, 1, '1'),
+(193351, 1150, '2017-07-25', '14:00:00', 'FT', 'Buckie Thistle', 'Raith Rovers', 1, 6, '1'),
+(193352, 1150, '2017-07-26', '13:45:00', '', 'Cowdenbeath', 'Dundee FC', 0, 0, '0'),
+(193355, 1151, '2017-07-25', '13:45:00', 'FT', 'Hibernian', 'Arbroath', 6, 1, '1'),
+(193356, 1151, '2017-07-25', '13:45:00', 'FT', 'Montrose', 'Alloa Athletic', 2, 1, '1'),
+(193359, 1152, '2017-07-25', '13:45:00', 'FT', 'Ayr United', 'Clyde', 5, 1, '1'),
+(193360, 1152, '2017-07-25', '13:45:00', 'AP', 'Dumbarton', 'Annan Athletic', 0, 0, '1'),
+(193363, 1153, '2017-07-25', '13:45:00', 'FT', 'Berwick Rangers', 'Queen\'s Park', 2, 3, '1'),
+(193364, 1153, '2017-07-25', '13:45:00', 'FT', 'Edinburgh City', 'Motherwell', 1, 2, '1'),
+(193367, 1154, '2017-07-25', '13:30:00', 'FT', 'Stenhousemuir', 'East Kilbride', 1, 2, '1'),
+(193368, 1154, '2017-07-25', '13:45:00', 'AP', 'Albion Rovers', 'Hamilton Academical', 4, 4, '1'),
+(193371, 1155, '2017-07-25', '13:45:00', 'FT', 'Airdrieonians', 'Partick Thistle', 1, 2, '1'),
+(193372, 1155, '2017-07-25', '13:45:00', 'FT', 'Stranraer', 'Livingston', 2, 4, '1'),
+(193375, 1148, '2017-07-25', '13:45:00', 'FT', 'Falkirk', 'Forfar Athletic', 4, 0, '1'),
+(193376, 1148, '2017-07-25', '13:45:00', 'FT', 'Stirling Albion', 'Brechin City', 2, 0, '1'),
+(193378, 660, '2017-07-25', '06:30:00', 'FT', 'Home United FC', 'Warriors FC', 1, 1, '1'),
+(193379, 660, '2017-07-26', '06:30:00', '', 'Albirex Niigata FC', 'Balestier Khalsa FC', 0, 0, '0'),
+(193385, 1051, '2017-07-25', '17:15:00', '', 'Chapecoense AF', 'Defensa y Justicia', 0, 0, '0'),
+(193386, 1051, '2017-07-25', '19:45:00', '', 'Santa Fe', 'Fuerza Amarilla SC', 0, 0, '0'),
+(193389, 366, '2017-07-25', '11:00:00', 'FT', 'Vasteras U21', 'Atvidaberg U21', 0, 6, '1'),
+(193390, 367, '2017-07-25', '09:00:00', '', 'Falkenberg U21', 'Landskrona U21', 0, 0, '0'),
+(193391, 367, '2017-07-25', '10:00:00', 'FT', 'Trelleborg U21', 'Varnamo U21', 1, 0, '1'),
+(193392, 367, '2017-07-25', '10:00:00', 'FT', 'Varbergs U21', 'GAIS U21', 1, 3, '1'),
+(193410, 354, '2017-07-25', '05:00:00', 'FT', 'IFK Haessleholm', 'Hittarps IK', 1, 5, '1'),
+(193411, 354, '2017-07-25', '12:00:00', 'FT', 'Kvibille BK', 'Skrea IF', 4, 1, '1'),
+(193412, 354, '2017-07-25', '12:30:00', 'FT', 'Soedertaelje FK', 'Assyriska IF Norrkoeping', 0, 2, '1'),
+(193413, 354, '2017-07-26', '12:00:00', '', 'Bollnaes GIF FF', 'IFK Timraa', 0, 0, '0'),
+(193416, 364, '2017-07-25', '09:00:00', 'FT', 'Brommapojkarna U21', 'Hammarby U21', 1, 2, '1'),
+(193418, 365, '2017-07-25', '10:00:00', 'FT', 'Hacken U21', 'Elfsborg U21', 0, 0, '1'),
+(193419, 365, '2017-07-26', '09:00:00', '', 'Malmo FF U21', 'Jonkopings Sodra U21', 0, 0, '0'),
+(193866, 694, '2017-07-25', '04:30:00', '', 'Wellington Phoenix', 'Western Sydney Wanderers FC', 0, 0, '0'),
+(194476, 558, '2017-07-26', '15:00:00', '', 'Atletico Huila', 'Atletico Nacional', 0, 0, '0'),
+(194642, 445, '2017-07-26', '11:00:00', '', 'FK Palanga', 'Dainava Alytus', 0, 0, '0'),
+(195072, 599, '2017-07-25', '20:00:00', '', 'Dorados', 'Leones Negros', 0, 0, '0'),
+(195074, 601, '2017-07-25', '21:00:00', '', 'Atlas', 'U.A. Estado de Mexico', 0, 0, '0'),
+(195075, 602, '2017-07-25', '19:00:00', '', 'Puebla', 'Atlante', 0, 0, '0'),
+(195077, 604, '2017-07-25', '21:00:00', '', 'Leon', 'Alebrijes Oaxaca', 0, 0, '0'),
+(195079, 1164, '2017-07-25', '19:00:00', '', 'Queretaro FC', 'Cimarrones de Sonora', 0, 0, '0'),
+(195080, 1165, '2017-07-25', '19:00:00', '', 'Monarcas Morelia', 'Mineros de Zacatecas', 0, 0, '0'),
+(195510, 694, '2017-07-26', '05:30:00', '', 'Sorrento', 'Canberra Olympic', 0, 0, '0'),
+(195511, 694, '2017-07-26', '05:00:00', '', 'Bankstown Berries', 'North Eastern Metro Stars', 0, 0, '0'),
+(195512, 694, '2017-07-26', '05:00:00', '', 'Hills Brumbies', 'Hakoah Sydney City East', 0, 0, '0'),
+(195513, 694, '2017-07-26', '05:00:00', '', 'South Melbourne', 'Edgeworth Eagles', 0, 0, '0'),
+(196358, 120, '2017-07-25', '12:00:00', 'FT', '1860 Rosenheim', 'SV Schalding-Heining', 2, 0, '1'),
+(196359, 120, '2017-07-25', '12:00:00', 'FT', 'Augsburg II', 'FC Unterfoehring', 2, 0, '1'),
+(196360, 120, '2017-07-25', '12:00:00', 'FT', 'Burghausen', 'FV Illertissen', 1, 4, '1'),
+(196361, 120, '2017-07-25', '12:00:00', 'FT', 'FC Memmingen', 'SV Seligenporten', 4, 2, '1'),
+(196362, 120, '2017-07-25', '12:00:00', 'FT', 'FC Pipinsried', 'FC Schweinfurt', 0, 2, '1'),
+(196363, 120, '2017-07-25', '12:00:00', 'FT', 'Nuernberg II', 'VfB Eichstatt', 2, 1, '1'),
+(196364, 120, '2017-07-26', '12:00:00', '', 'TSV Buchbach', '1860 Muenchen', 0, 0, '0'),
+(196799, 470, '2017-07-26', '07:00:00', '', 'Dinamo St Petersburg', 'FC Rotor Volgograd', 0, 0, '0'),
+(196897, 354, '2017-07-25', '12:00:00', 'FT', 'Saevedalens IF', 'Tvaaaakers IF', 1, 2, '1'),
+(197913, 513, '2017-07-25', '17:15:00', '', 'ABC', 'Brasil de Pelotas', 0, 0, '0'),
+(197957, 790, '2017-07-25', '13:00:00', 'FT', 'AEK Athens', 'CSKA Moscow', 0, 2, '1'),
+(197960, 790, '2017-07-25', '13:00:00', 'FT', 'FC FCSB', 'Viktoria Plzen', 2, 2, '1'),
+(197961, 790, '2017-07-25', '13:00:00', '', 'FC Viitorul Constanta', 'APOEL Nicosia/F91 Dudelange', 0, 0, '0'),
+(197962, 790, '2017-07-25', '13:00:00', '', 'FK Spartaks/FC Astana', 'IFK Mariehamn/Legia Warszawa', 0, 0, '0'),
+(197963, 790, '2017-07-25', '13:00:00', '', 'Hapoel Beer Sheva/Budapest Honved', 'Zalgiris Vilnius/Ludogorets Razgrad', 0, 0, '0'),
+(197964, 790, '2017-07-25', '13:00:00', '', 'Hibernians/Salzburg', 'Rijeka/TNS', 0, 0, '0'),
+(197965, 790, '2017-07-25', '13:00:00', '', 'Linfield/Celtic', 'Dundalk/Rosenborg', 0, 0, '0'),
+(197967, 790, '2017-07-25', '13:00:00', '', 'Partizan Beograd/Buducnost Podgorica', 'Olympiacos', 0, 0, '0'),
+(197968, 790, '2017-07-25', '13:00:00', '', 'Qarabag FK/Samtredia', 'FC Sheriff/Kukesi', 0, 0, '0'),
+(197969, 790, '2017-07-25', '13:00:00', '', 'Slavia Prague', 'BATE Borisov/Alashkert FC', 0, 0, '0'),
+(197970, 790, '2017-07-25', '13:00:00', '', 'Zilina/FC Koebenhavn', 'Malmoe FF/FK Vardar Skopje', 0, 0, '0'),
+(197971, 790, '2017-07-25', '13:00:00', '', 'Zrinjski Mostar/Maribor', 'FH Hafnarfjordur/Vikingur', 0, 0, '0'),
+(198034, 557, '2017-07-25', '19:45:00', '', 'Deportivo Pereira', 'Real Santander', 0, 0, '0'),
+(198382, 422, '2017-07-25', '10:00:00', 'AET', 'Sillamae Kalev', 'Levadia', 1, 2, '1'),
+(198383, 422, '2017-07-25', '11:00:00', 'FT', 'Anija JK', 'Lihula JK', 5, 1, '1'),
+(198384, 422, '2017-07-25', '11:00:00', 'FT', 'Elva', 'Ararat', 8, 0, '1'),
+(198385, 422, '2017-07-25', '11:00:00', 'FT', 'FC Flora Paie', 'Jogeva SK Noorus 96', 7, 3, '1'),
+(198386, 422, '2017-07-25', '11:00:00', 'FT', 'FC Zenit Tallinn', 'Otepaa FC', 5, 2, '1'),
+(198387, 422, '2017-07-25', '11:00:00', 'FT', 'Jarva-Jaani', 'Pohja Tallin', 1, 4, '1'),
+(198388, 422, '2017-07-25', '11:00:00', 'FT', 'Tallinna FC Levadia III', 'Tallinna JK Legion', 3, 0, '1'),
+(198389, 422, '2017-07-25', '12:30:00', 'FT', 'Tallinna Kalev III', 'Tartu FC', 1, 5, '1'),
+(198390, 422, '2017-07-26', '10:00:00', '', 'Narva United', 'Parnu JK Vaprus', 0, 0, '0'),
+(198391, 422, '2017-07-26', '11:00:00', '', 'Ambla Vallameeskond', 'Laanemaa JK Haapsalu', 0, 0, '0'),
+(198392, 422, '2017-07-26', '11:00:00', '', 'JK Poseidon', 'Joker', 0, 0, '0'),
+(198393, 422, '2017-07-26', '11:30:00', '', 'Tartu Santos', 'Paide Linnameeskond III', 0, 0, '0'),
+(198394, 422, '2017-07-26', '12:00:00', '', 'Rumori Calcio', 'FC Molycorp Silmet', 0, 0, '0'),
+(198395, 422, '2017-07-26', '12:00:00', '', 'Trans', 'Suure-Jaani United', 0, 0, '0'),
+(198952, 470, '2017-07-26', '07:00:00', '', 'Zenit St. Petersburg II', 'Sibir Novosibirsk', 0, 0, '0'),
+(199825, 790, '2017-07-25', '12:00:00', 'FT', 'Qarabag FK', 'FC Sheriff', 0, 0, '1'),
+(199826, 790, '2017-07-25', '12:00:00', 'FT', 'Slavia Prague', 'BATE Borisov', 1, 0, '1'),
+(199827, 790, '2017-07-25', '13:00:00', 'FT', 'FK Vardar Skopje', 'FC Koebenhavn', 1, 0, '1'),
+(199828, 790, '2017-07-25', '13:45:00', 'FT', 'Partizan Beograd', 'Olympiacos', 1, 3, '1'),
+(199829, 790, '2017-07-26', '09:00:00', '', 'FC Astana', 'Legia Warszawa', 0, 0, '0'),
+(199830, 790, '2017-07-26', '11:30:00', '', 'Dynamo Kyiv', 'Young Boys', 0, 0, '0'),
+(199831, 790, '2017-07-26', '11:45:00', '', 'Salzburg', 'Rijeka', 0, 0, '0'),
+(199832, 790, '2017-07-26', '12:00:00', '', 'Hapoel Beer Sheva', 'Ludogorets Razgrad', 0, 0, '0'),
+(199833, 790, '2017-07-26', '13:00:00', '', 'FC Viitorul Constanta', 'APOEL Nicosia', 0, 0, '0'),
+(199834, 790, '2017-07-26', '13:20:00', '', 'Maribor', 'FH Hafnarfjordur', 0, 0, '0'),
+(199835, 790, '2017-07-26', '13:45:00', '', 'Celtic', 'Rosenborg', 0, 0, '0'),
+(199836, 790, '2017-07-26', '13:45:00', '', 'Nice', 'Ajax', 0, 0, '0'),
+(199837, 790, '2017-07-26', '14:00:00', '', 'Club Brugge', 'Istanbul Basaksehir', 0, 0, '0'),
+(199865, 325, '2017-07-25', '14:15:00', 'FT', 'Vikingur Olafsvik', 'Valur', 1, 2, '1'),
+(199866, 457, '2017-07-26', '10:30:00', '', 'Warta Sieradz', 'Sandecja Nowy Sacz', 0, 0, '0'),
+(199867, 457, '2017-07-26', '12:00:00', '', 'Energetyk ROW Rybnik', 'Gornik Zabrze', 0, 0, '0'),
+(201610, 417, '2017-07-25', '10:00:00', 'FT', 'Vysoke Myto', 'Pardubice', 1, 2, '1'),
+(201611, 422, '2017-07-26', '11:00:00', '', 'Koeru JK', 'Nomme JK Kalju', 0, 0, '0'),
+(201702, 46, '2017-07-26', '05:00:00', '', 'Al-Sadd', 'Goztepe', 0, 0, '0'),
+(201747, 46, '2017-07-25', '04:00:00', 'FT', 'Alaves', 'Mirandes', 3, 0, '1'),
+(201749, 46, '2017-07-25', '07:30:00', 'FT', 'Vitesse', 'FC Emmen', 2, 1, '1'),
+(201750, 46, '2017-07-25', '09:00:00', 'FT', 'Sivasspor', 'Adanaspor', 2, 1, '1'),
+(201751, 46, '2017-07-25', '10:00:00', 'FT', 'Benevento', 'Al Hilal', 1, 1, '1'),
+(201752, 46, '2017-07-25', '10:30:00', 'FT', 'ChievoVerona', 'Ciliverghe Mazzano', 6, 0, '1'),
+(201753, 46, '2017-07-25', '10:30:00', 'FT', 'RasenBallsport Leipzig', 'Konyaspor', 1, 0, '1'),
+(201754, 46, '2017-07-25', '11:00:00', 'FT', 'Alanyaspor', 'Asteras Tripolis', 2, 1, '1'),
+(201755, 46, '2017-07-25', '11:00:00', 'FT', 'Sudtirol', 'Bursaspor', 1, 3, '1'),
+(201757, 46, '2017-07-25', '11:30:00', 'FT', 'Hamburger SV', 'Sparta Rotterdam', 1, 1, '1'),
+(201759, 46, '2017-07-25', '12:00:00', 'FT', 'Heracles', 'Granada', 1, 3, '1'),
+(201760, 46, '2017-07-25', '12:00:00', 'FT', 'Real Sociedad', 'Genclerbirligi', 1, 1, '1'),
+(201761, 46, '2017-07-25', '12:00:00', 'FT', 'Tubize', 'Sporting Charleroi', 2, 1, '1'),
+(201762, 46, '2017-07-25', '12:00:00', 'FT', 'Wolfsberger AC', 'Hannover 96', 0, 0, '1'),
+(201763, 46, '2017-07-25', '12:30:00', 'FT', 'Moreirense', 'Uniao da Madeira', 2, 0, '1'),
+(201764, 46, '2017-07-25', '13:00:00', 'FT', 'Pontevedra', 'Deportivo La Coruna', 0, 5, '1'),
+(201765, 46, '2017-07-25', '13:00:00', 'FT', 'Shrewsbury Town', 'Cardiff City', 2, 1, '1'),
+(201766, 46, '2017-07-25', '13:00:00', 'FT', 'UE Olot', 'Espanyol', 0, 4, '1'),
+(201767, 46, '2017-07-25', '13:00:00', 'FT', 'Valladolid', 'Besiktas', 2, 2, '1'),
+(201768, 46, '2017-07-25', '13:30:00', 'FT', 'Colchester United', 'Ipswich Town', 0, 1, '1'),
+(201769, 46, '2017-07-25', '13:30:00', 'FT', 'Hull City', 'Nantes', 0, 0, '1'),
+(201770, 46, '2017-07-25', '13:30:00', 'FT', 'Milton Keynes Dons', 'Brentford', 2, 3, '1'),
+(201771, 46, '2017-07-25', '13:30:00', 'FT', 'Peterborough United', 'Wolverhampton Wanderers', 0, 1, '1'),
+(201772, 46, '2017-07-25', '13:30:00', 'FT', 'Rochdale', 'Barnsley', 0, 2, '1'),
+(201773, 46, '2017-07-25', '13:45:00', 'FT', 'Charlton Athletic', 'Norwich City', 0, 2, '1'),
+(201774, 46, '2017-07-25', '13:45:00', 'FT', 'Cheltenham Town', 'Bristol City', 0, 3, '1'),
+(201775, 46, '2017-07-25', '13:45:00', 'FT', 'Northampton Town', 'Derby County', 1, 0, '1'),
+(201776, 46, '2017-07-25', '13:45:00', 'FT', 'Nottingham Forest', 'Girona', 2, 1, '1'),
+(201777, 46, '2017-07-25', '13:45:00', 'FT', 'Preston North End', 'Burnley', 1, 2, '1'),
+(201778, 46, '2017-07-25', '13:45:00', 'FT', 'Sheffield United', 'Stoke City', 2, 1, '1'),
+(201779, 46, '2017-07-25', '13:45:00', 'FT', 'Southend United', 'Brighton &amp; Hove Albion', 0, 3, '1'),
+(201780, 46, '2017-07-25', '13:45:00', 'FT', 'Stevenage', 'Millwall', 0, 0, '1'),
+(201781, 46, '2017-07-25', '13:45:00', 'FT', 'Stockport', 'Bolton Wanderers', 0, 0, '1'),
+(201782, 46, '2017-07-25', '20:00:00', '', 'Toluca', 'Atletico Madrid', 0, 0, '0'),
+(201828, 445, '2017-07-25', '11:30:00', 'FT', 'Vilnius Vytis', 'Stumbras Kaunas B', 1, 0, '1');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tipo`
+-- Estructura de tabla para la tabla `tipo_cuota`
 --
 
-CREATE TABLE `tipo` (
+CREATE TABLE `tipo_cuota` (
   `ID_TIPO` int(11) NOT NULL,
   `NOMBRE` varchar(30) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipo_cuota`
+--
+
+INSERT INTO `tipo_cuota` (`ID_TIPO`, `NOMBRE`) VALUES
+(1, '1'),
+(2, '2'),
+(3, 'X'),
+(4, 'GG'),
+(5, 'NG'),
+(6, '1X'),
+(7, '2X'),
+(8, '12'),
+(9, 'OVER 2.5'),
+(10, 'UNDER 2.5');
 
 -- --------------------------------------------------------
 
@@ -1393,8 +1839,7 @@ ALTER TABLE `competencia`
 --
 ALTER TABLE `cuota`
   ADD PRIMARY KEY (`ID_CUOTA`),
-  ADD KEY `FK_EQUIVALE` (`ID_PARTIDO`),
-  ADD KEY `FK_SE_CLASIFICA` (`ID_TIPO`);
+  ADD KEY `FK_EQUIVALE` (`ID_PARTIDO`);
 
 --
 -- Indices de la tabla `cuota_apuesta`
@@ -1402,6 +1847,12 @@ ALTER TABLE `cuota`
 ALTER TABLE `cuota_apuesta`
   ADD PRIMARY KEY (`ID_CUOTA`,`ID_APUESTA`),
   ADD KEY `FK_CONTIENE2` (`ID_APUESTA`);
+
+--
+-- Indices de la tabla `goles`
+--
+ALTER TABLE `goles`
+  ADD PRIMARY KEY (`ID_GOL`);
 
 --
 -- Indices de la tabla `pais`
@@ -1417,9 +1868,9 @@ ALTER TABLE `partido`
   ADD KEY `FK_TIENE` (`ID_COMPETENCIA`);
 
 --
--- Indices de la tabla `tipo`
+-- Indices de la tabla `tipo_cuota`
 --
-ALTER TABLE `tipo`
+ALTER TABLE `tipo_cuota`
   ADD PRIMARY KEY (`ID_TIPO`);
 
 --
@@ -1428,6 +1879,25 @@ ALTER TABLE `tipo`
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`CEDULA`);
 
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `cuota`
+--
+ALTER TABLE `cuota`
+  MODIFY `ID_CUOTA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=985;
+--
+-- AUTO_INCREMENT de la tabla `goles`
+--
+ALTER TABLE `goles`
+  MODIFY `ID_GOL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=845;
+--
+-- AUTO_INCREMENT de la tabla `tipo_cuota`
+--
+ALTER TABLE `tipo_cuota`
+  MODIFY `ID_TIPO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Restricciones para tablas volcadas
 --
