@@ -62,25 +62,19 @@ class Api extends CI_Model
 
 	public function getCuotas(){
 		$request = Requests::get('https://apifootball.com/api/?action=get_odds&from='.$this->FROM.'&to='.$this->TO.'&APIkey='.$this->KEY.'');
-		$request->body=json_decode($request->body);
-
+		$request->body=json_decode($request->body,true);
 		foreach ($request->body as $key => $value) {
-
-					$data[]= array(
-						'match_id'             => $value->match_id,
-						'league_id'            => $value->league_id,
-						'match_date'           => $fecha->format('Y-m-d'),
-						'match_status'         => $value->match_status,
-						'match_time'           => $fecha->format('H:i'),
-						'match_hometeam_name'  => $value->match_hometeam_name,
-						'match_hometeam_score' => $value->match_hometeam_score,
-						'match_awayteam_name'  => $value->match_awayteam_name,
-						'match_awayteam_score' => $value->match_awayteam_score,
-						'match_live'           => $value->match_live,
-						'goalscorer'           => $value->goalscorer,
-						);
-				exit;
-	 
+			$data[]= array(
+				'match_id'       => $value['match_id'],
+				'odd_bookmakers' => $value['odd_bookmakers'],
+				'odd_date'       => $value['odd_date'],
+				'odd_1'          => $value['odd_1'],
+				'odd_x'          => $value['odd_2'],
+				'bts_no'         => $value['bts_no'],
+				'bts_yes'        => $value['bts_yes'],
+				'o+2.5'          => $value['o+2.5'],
+				'u+2.5'          => $value['u+2.5'],
+				);
 		}
 		return $data;
 	}

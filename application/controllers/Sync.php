@@ -111,10 +111,11 @@ class Sync extends CI_Controller {
 		$this->Api->FROM = date("Y-m-d");
 		$this->Api->TO   = $to->format('Y-m-d');
 
-		$partidos=$this->Api->getCuotas();
+		$cuotas=$this->Api->getCuotas();
+		print_r($cuotas);
 		exit;
-		if ($partidos!=null) {
-			foreach ($partidos as $key => $value) {
+		if ($cuotas!=null) {
+			foreach ($cuotas as $key => $value) {
 				$this->Partido->ID_PARTIDO      = $value['match_id'];
 				$this->Partido->ID_COMPETENCIA  = $value['league_id'];
 				$this->Partido->FECHA           = $value['match_date'];
