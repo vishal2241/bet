@@ -37,7 +37,7 @@ class Sync extends CI_Controller {
 				$this->Competicion->NOMBRE  = $value->league_name;
 
 				$competencia=$this->Competicion->getCompeticion();
- 
+
 				if ($competencia==null) {
 					echo "<b>add</b> ".$value->league_name."<br>";
 					$this->Competicion->add();
@@ -50,6 +50,92 @@ class Sync extends CI_Controller {
 	} // End syncCompeticiones
 
 
+
+	public function syncPartidos(){
+		$to = new DateTime(date("Y-m-d"));
+		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
+
+		$this->Api->FROM = date("Y-m-d");
+		$this->Api->TO   = $to->format('Y-m-d');
+
+		$partidos=$this->Api->getPartidos();
+		echo count($partidos). ' Partidos<br>';
+		if ($partidos!=null) {
+			foreach ($partidos as $key => $value) {
+
+
+				$this->Partido->ID_PARTIDO      = $value['match_id'];
+				$this->Partido->ID_COMPETENCIA  = $value['league_id'];
+				$this->Partido->FECHA           = $value['match_date'];
+				$this->Partido->HORARIO         = $value['match_time'];
+				$this->Partido->ESTADO          = $value['match_status'];
+				$this->Partido->LOCAL           = $value['match_hometeam_name'];
+				$this->Partido->VISITANTE       = $value['match_awayteam_name'];
+				$this->Partido->GOLES_LOCAL     = $value['match_hometeam_score'];
+				$this->Partido->GOLES_VISITANTE = $value['match_awayteam_score'];
+				$this->Partido->EN_VIVO         = $value['match_live'];
+				$patido=$this->Partido->getPartido();
+
+				if ($patido==null) {
+					echo "<b>add</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";					$this->Partido->add();
+				} else {
+					echo "<b>update</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";
+					$this->Partido->update();
+					#Borramos los goles
+					$this->Gol->ID_PARTIDO = $value['match_id'];
+					$patido=$this->Gol->delete();
+					$goles=$value['goalscorer'];
+					#print_r($goles);
+					foreach ($goles as $keyGol => $gol) {
+						$this->Gol->ID_PARTIDO       = $value['match_id'];
+						$gol->time=str_replace('\'', '', $gol->time);
+						$this->Gol->TIEMPO           = $gol->time;
+						$this->Gol->MARCADOR_PARCIAL = $gol->score;
+						if ($gol->home_scorer==null) {
+							$this->Gol->JUGADOR          = $gol->away_scorer;
+						} else {
+							$this->Gol->JUGADOR          = $gol->home_scorer;
+						}
+						$patido=$this->Gol->add(); 
+					}
+				}
+			}
+		}
+	} // End syncPartidos
+
+
+	public function syncCuotas(){
+		$to = new DateTime(date("Y-m-d"));
+		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
+
+		$this->Api->FROM = date("Y-m-d");
+		$this->Api->TO   = $to->format('Y-m-d');
+
+		$partidos=$this->Api->getCuotas();
+		exit;
+		if ($partidos!=null) {
+			foreach ($partidos as $key => $value) {
+				$this->Partido->ID_PARTIDO      = $value['match_id'];
+				$this->Partido->ID_COMPETENCIA  = $value['league_id'];
+				$this->Partido->FECHA           = $value['match_date'];
+				$this->Partido->HORARIO         = $value['match_time'];
+				$this->Partido->ESTADO          = $value['match_status'];
+				$this->Partido->LOCAL           = $value['match_hometeam_name'];
+				$this->Partido->VISITANTE       = $value['match_awayteam_name'];
+				$this->Partido->GOLES_LOCAL     = $value['match_hometeam_score'];
+				$this->Partido->GOLES_VISITANTE = $value['match_awayteam_score'];
+				$this->Partido->EN_VIVO         = $value['match_live'];
+				$patido=$this->Partido->getPartido();
+
+				if ($patido==null) {
+					echo "<b>add</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";					$this->Partido->add();
+				} else {
+					echo "<b>update</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";
+					$this->Partido->update();
+				}
+			}
+		}
+	} // End syncCuotas
 
 
 }

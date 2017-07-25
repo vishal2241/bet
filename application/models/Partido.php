@@ -12,56 +12,49 @@ class Partido extends CI_Model
 	public $VISITANTE;
 	public $GOLES_LOCAL;
 	public $GOLES_VISITANTE;
+	public $EN_VIVO;
 
-
-	public function index()
+	public function __construct()
 	{
-		$query = $this->db->query('SELECT * FROM partido'); 
-		return $query->result();
-	} 
+		parent::__construct();
+		$this->ID_PARTIDO=null;
+		$this->ID_COMPETENCIA=null;
+		$this->FECHA=null;
+		$this->HORARIO=null;
+		$this->ESTADO=null;
+		$this->LOCAL=null;
+		$this->VISITANTE=null;
+		$this->GOLES_LOCAL=null;
+		$this->GOLES_VISITANTE=null;
+		$this->EN_VIVO=null;
+	}
 
 	
-	public function add($data=null)
+	public function getPartido()
 	{
-		if ($data!=null) {
-			$this->ID_PARTIDO      = $data['ID_PARTIDO'];
-			$this->ID_COMPETENCIA  = $data['ID_COMPETENCIA'];
-			$this->FECHA           = $data['FECHA'];
-			$this->HORARIO         = $data['HORARIO'];
-			$this->ESTADO          = $data['ESTADO'];
-			$this->LOCAL           = $data['LOCAL'];
-			$this->VISITANTE       = $data['VISITANTE'];
-			$this->GOLES_LOCAL     = $data['GOLES_LOCAL'];
-			$this->GOLES_VISITANTE = $data['GOLES_VISITANTE'];
-			$this->db->insert('partido', $this);
-		}
-	}
+		$query = $this->db->query('SELECT ID_PARTIDO FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
 
-	public function update($pais=null)
+	} 
+
+	public function add()
 	{
 
-		if ($pais!=null) {
-			$this->ID_COMPETENCIA  = $data['ID_COMPETENCIA'];
-			$this->FECHA           = $data['FECHA'];
-			$this->HORARIO         = $data['HORARIO'];
-			$this->ESTADO          = $data['ESTADO'];
-			$this->LOCAL           = $data['LOCAL'];
-			$this->VISITANTE       = $data['VISITANTE'];
-			$this->GOLES_LOCAL     = $data['GOLES_LOCAL'];
-			$this->GOLES_VISITANTE = $data['GOLES_VISITANTE'];
-			$this->db->where('ID_PARTIDO', $this->ID_PARTIDO); 
-			$this->db->update('partido', $this);
-		}
+		$this->db->insert('partido', $this);
 	}
 
-	public function delete($id='')
+	public function update()
 	{
-		if ($id!='') {
-			$this->ID_PAIS = $id;
-			$this->db->where('ID_PARTIDO', $this->ID_PARTIDO);
-			$this->db->delete('partido');
-		}
+		$this->db->where('ID_PARTIDO', $this->ID_PARTIDO); 
+		$this->db->update('partido', $this);
 	}
+
+
 
 
 

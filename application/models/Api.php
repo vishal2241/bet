@@ -2,10 +2,8 @@
 
 class Api extends CI_Model
 {
-	
-	public $ID_COMPETENCIA;
-	public $ID_PAIS;
-	public $NOMBRE;
+	public $FROM;
+	public $TO;
 	public $KEY;
 
 
@@ -27,6 +25,64 @@ class Api extends CI_Model
 		$request = Requests::get('https://apifootball.com/api/?action=get_leagues&APIkey='.$this->KEY.'');
 		$request->body=json_decode($request->body);
 		return $request->body; 
+	}
+
+	public function getPartidos(){
+		$request = Requests::get('https://apifootball.com/api/?action=get_events&from='.$this->FROM.'&to='.$this->TO.'&APIkey='.$this->KEY.'');
+		$request->body=json_decode($request->body);
+
+		foreach ($request->body as $key => $value) {
+			if ($value->match_status!='Canc.') {
+				#Funcion Horario Colombia / Resta 7 horas UTC+2
+				$fecha=strtotime($value->match_date.' '.$value->match_time);
+				$fecha = date("Y-m-d H:i", $fecha);
+				$fecha = new DateTime($fecha);
+				$fecha->sub(new DateInterval('PT7H'));
+				#Dejamos solo los partidos del rango de fechas indicado en el controlador
+				if ($fecha->format('Y-m-d')>=$this->FROM  and  $fecha->format('Y-m-d')<=$this->TO  ) {
+					$data[]= array(
+						'match_id'             => $value->match_id,
+						'league_id'            => $value->league_id,
+						'match_date'           => $fecha->format('Y-m-d'),
+						'match_status'         => $value->match_status,
+						'match_time'           => $fecha->format('H:i'),
+						'match_hometeam_name'  => $value->match_hometeam_name,
+						'match_hometeam_score' => $value->match_hometeam_score,
+						'match_awayteam_name'  => $value->match_awayteam_name,
+						'match_awayteam_score' => $value->match_awayteam_score,
+						'match_live'           => $value->match_live,
+						'goalscorer'           => $value->goalscorer,
+						);
+				}
+			}
+		}
+		return $data;
+	}
+
+
+	public function getCuotas(){
+		$request = Requests::get('https://apifootball.com/api/?action=get_odds&from='.$this->FROM.'&to='.$this->TO.'&APIkey='.$this->KEY.'');
+		$request->body=json_decode($request->body);
+
+		foreach ($request->body as $key => $value) {
+
+					$data[]= array(
+						'match_id'             => $value->match_id,
+						'league_id'            => $value->league_id,
+						'match_date'           => $fecha->format('Y-m-d'),
+						'match_status'         => $value->match_status,
+						'match_time'           => $fecha->format('H:i'),
+						'match_hometeam_name'  => $value->match_hometeam_name,
+						'match_hometeam_score' => $value->match_hometeam_score,
+						'match_awayteam_name'  => $value->match_awayteam_name,
+						'match_awayteam_score' => $value->match_awayteam_score,
+						'match_live'           => $value->match_live,
+						'goalscorer'           => $value->goalscorer,
+						);
+				exit;
+	 
+		}
+		return $data;
 	}
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-07-2017 a las 13:14:32
+-- Tiempo de generación: 25-07-2017 a las 14:43:54
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -53,7 +53,6 @@ CREATE TABLE `competencia` (
 --
 
 INSERT INTO `competencia` (`ID_COMPETENCIA`, `ID_PAIS`, `NOMBRE`) VALUES
-(41, 169, 'Amistoso '),
 (62, 169, 'Premier League'),
 (63, 169, 'Championship'),
 (64, 169, 'League 1'),
@@ -1157,7 +1156,8 @@ INSERT INTO `competencia` (`ID_COMPETENCIA`, `ID_PAIS`, `NOMBRE`) VALUES
 (1165, 231, 'Copa Mx Apertura Group 9'),
 (1166, 223, 'Primera Division'),
 (1167, 228, 'Primera Division Intermedio Pl'),
-(1168, 176, 'League Cup Qualification');
+(1168, 176, 'League Cup Qualification'),
+(1169, 216, '1 League');
 
 -- --------------------------------------------------------
 
@@ -1327,7 +1327,8 @@ CREATE TABLE `partido` (
   `LOCAL` varchar(40) NOT NULL,
   `VISITANTE` varchar(40) NOT NULL,
   `GOLES_LOCAL` int(3) NOT NULL,
-  `GOLES_VISITANTE` int(3) NOT NULL
+  `GOLES_VISITANTE` int(3) NOT NULL,
+  `EN_VIVO` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
