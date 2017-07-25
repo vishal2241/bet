@@ -68,12 +68,16 @@ class Api extends CI_Model
 				'match_id'       => $value['match_id'],
 				'odd_bookmakers' => $value['odd_bookmakers'],
 				'odd_date'       => $value['odd_date'],
-				'odd_1'          => $value['odd_1'],
-				'odd_x'          => $value['odd_2'],
-				'bts_no'         => $value['bts_no'],
-				'bts_yes'        => $value['bts_yes'],
-				'o+2.5'          => $value['o+2.5'],
-				'u+2.5'          => $value['u+2.5'],
+				'_1'              => $value['odd_1'],
+				'_X'              => $value['odd_x'],
+				'_2'              => $value['odd_2'],
+				'_1X'              => $value['odd_1'],
+				'_12'              => $value['odd_x'],
+				'_2X'              => $value['odd_2'],
+				'NG'             => $value['bts_no'],
+				'GG'             => $value['bts_yes'],
+				'OVER_25'       => $value['o+2.5'],
+				'UNDER_25'      => $value['u+2.5'],
 				);
 		}
 		return $data;

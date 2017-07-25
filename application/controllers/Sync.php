@@ -77,7 +77,8 @@ class Sync extends CI_Controller {
 				$patido=$this->Partido->getPartido();
 
 				if ($patido==null) {
-					echo "<b>add</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";					$this->Partido->add();
+					echo "<b>add</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";					
+					$this->Partido->add();
 				} else {
 					echo "<b>update</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";
 					$this->Partido->update();
@@ -112,28 +113,26 @@ class Sync extends CI_Controller {
 		$this->Api->TO   = $to->format('Y-m-d');
 
 		$cuotas=$this->Api->getCuotas();
-		print_r($cuotas);
-		exit;
+
 		if ($cuotas!=null) {
 			foreach ($cuotas as $key => $value) {
-				$this->Partido->ID_PARTIDO      = $value['match_id'];
-				$this->Partido->ID_COMPETENCIA  = $value['league_id'];
-				$this->Partido->FECHA           = $value['match_date'];
-				$this->Partido->HORARIO         = $value['match_time'];
-				$this->Partido->ESTADO          = $value['match_status'];
-				$this->Partido->LOCAL           = $value['match_hometeam_name'];
-				$this->Partido->VISITANTE       = $value['match_awayteam_name'];
-				$this->Partido->GOLES_LOCAL     = $value['match_hometeam_score'];
-				$this->Partido->GOLES_VISITANTE = $value['match_awayteam_score'];
-				$this->Partido->EN_VIVO         = $value['match_live'];
-				$patido=$this->Partido->getPartido();
 
-				if ($patido==null) {
-					echo "<b>add</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";					$this->Partido->add();
-				} else {
-					echo "<b>update</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";
-					$this->Partido->update();
-				}
+				$this->Cuota->ID_PARTIDO  = $value['match_id'];
+				$this->Cuota->FECHA_CUOTA = $value['odd_date'];
+				$this->Cuota->_1          = $value['_1'];
+				$this->Cuota->_X          = $value['_X'];
+				$this->Cuota->_2          = $value['_2'];
+				$this->Cuota->_1X         = $value['_1X'];
+				$this->Cuota->_2X         = $value['_2X'];
+				$this->Cuota->_12         = $value['_12'];
+				$this->Cuota->NG          = $value['NG'];
+				$this->Cuota->GG          = $value['GG'];
+				$this->Cuota->OVER_25     = $value['OVER_25'];
+				$this->Cuota->UNDER_25    = $value['UNDER_25'];
+
+				$this->Cuota->delete();
+				$this->Cuota->add(); 
+
 			}
 		}
 	} // End syncCuotas
