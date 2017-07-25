@@ -9,14 +9,14 @@ Resources
 -  `Boostrap Zero <https://www.bootstrapzero.com>`_
 -  `Boostrap Hero <http://bootstraphero.com>`_
 -  `Github <https://github.com/creativetimofficial>`_
--  `API <https://apifootball.com/documentation/l>`_
 
 
 *********
 Request
 *********
 -  `Api Sportmonks <https://sportmonks.com/soccer/documentation/v2.0/items/teams/21l>`_
--  `ApiFootball  <https://apifootball.com/documentation/l>`_
+-  `ApiFootball  <https://apifootball.com/documentation/>`_
+-  `totalcorner  <http://www.totalcorner.com>`_
 -  `PHPRequest <http://requests.ryanmccue.info/>`_
 
 
