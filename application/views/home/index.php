@@ -48,91 +48,81 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</thead>
 											<tbody>
 												<?php 
-print_r($partidos); exit();
-												foreach ($partidos as $key => $row): ?>
-													<tr>
-														<td><?= $row['ID_PARTIDO'] ?></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td></td>
-													</tr>
-												<?php endforeach ?>
-											</tbody>
-										</table>
-									</div>
-									<!-- end container -->
+												#print_r($partidos);  
+												foreach ($partidos as $key => $row):
+													print_r($row);
+												?>
+												<tr>
+													<td><?= $row['HORARIO'] ?></td>
+													<td><?= $row['LOCAL'] ?></td>
+													<td><?= $row['VISITANTE'] ?></td>
+													
+												</tr>
+											<?php endforeach ?>
+										</tbody>
+									</table>
 								</div>
+								<!-- end container -->
 							</div>
 						</div>
-						<div class="col-md-3">
-							<div class="panel panel-default">
-								<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
-								<div class="panel-body">
-									<div class="col-md-12">
-										<table class="table table-condensed" >
-											<thead class="tiquete">
-												<tr>
-													<th class="text-success">Partido</th>
-													<th class="text-success" colspan="2">Cuota</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>
-														Tolima vs Nacional
-														<br>
-														<b><span class="text-info text-bold bet">Gana Tolima</span></b>
-													</td>
-													<td>
-														2.00
-													</td>
-													<td valign="middle">
-														<span class="text-danger">
-															<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>
-														</span>
-													</td>
-												</tr>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-default">
+							<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
+							<div class="panel-body">
+								<div class="col-md-12">
+									<table class="table table-condensed" >
+										<thead class="tiquete">
+											<tr>
+												<th class="text-success">Partido</th>
+												<th class="text-success" colspan="2">Cuota</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													Tolima vs Nacional
+													<br>
+													<b><span class="text-info text-bold bet">Gana Tolima</span></b>
+												</td>
+												<td>
+													2.00
+												</td>
+												<td valign="middle">
+													<span class="text-danger">
+														<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>
+													</span>
+												</td>
+											</tr>
 
 
 
-											</tbody>
-										</table>
+										</tbody>
+									</table>
+								</div>	
+								<form>
+									<div class="col-md-6">
+										<div class="form-group label-floating">
+											<label class="control-label">Cantidad</label>
+											<input type="number" class="form-control">
+										</div>	
 									</div>	
-									<form>
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label">Cantidad</label>
-												<input type="number" class="form-control">
-											</div>	
+									<div class="col-md-6">
+										<div class="form-group label-floating">
+											<label class="control-label">Ganancia</label>
+											<input type="number" class="form-control" readonly>
 										</div>	
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label">Ganancia</label>
-												<input type="number" class="form-control" readonly>
-											</div>	
-										</div>	
-										<button class="btn btn-primary col-md-12"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
-									</form>
-								</div>
+									</div>	
+									<button class="btn btn-primary col-md-12"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<?php $this->load->view('overall/footer'); ?>
-				<script>
+			<?php $this->load->view('overall/footer'); ?>
+			<script>
 					/*for (var i = 0; i < 40; i++) {
 						$("#bets > tbody").append('<tr> \
 							<td class="text-center">19:00</td> \

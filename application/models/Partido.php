@@ -13,6 +13,8 @@ class Partido extends CI_Model
 	public $GOLES_LOCAL;
 	public $GOLES_VISITANTE;
 	public $EN_VIVO;
+	#public $FROM;
+	#public $TO;
 
 	public function __construct()
 	{
@@ -29,11 +31,20 @@ class Partido extends CI_Model
 		$this->EN_VIVO=null;
 	}
 
-	
+	public function index($from, $to)
+	{
+		$query = $this->db->query("SELECT * FROM partido p   WHERE  p.HORARIO>='".$this->HORARIO."' AND  p.FECHA BETWEEN '".$from."' AND '".$to."' ORDER BY p.FECHA ASC, p.HORARIO ASC"); 
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+	} 
+
+
 	public function getPartido()
 	{
 		$query = $this->db->query('SELECT ID_PARTIDO FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
-		
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {

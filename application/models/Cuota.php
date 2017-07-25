@@ -48,6 +48,8 @@ class Cuota extends CI_Model
 
 	} 
 
+	
+
 	public function add()
 	{
 		$this->db->insert('cuota', $this);

@@ -80,7 +80,7 @@ class Sync extends CI_Controller {
 					echo "<b>add</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";					
 					$this->Partido->add();
 				} else {
-					echo "<b>update</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";
+					echo "<b>update ".$value['match_id']."</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";
 					$this->Partido->update();
 					#Borramos los goles
 					$this->Gol->ID_PARTIDO = $value['match_id'];
@@ -113,7 +113,7 @@ class Sync extends CI_Controller {
 		$this->Api->TO   = $to->format('Y-m-d');
 
 		$cuotas=$this->Api->getCuotas();
-
+		print_r($cuotas); exit;
 		if ($cuotas!=null) {
 			foreach ($cuotas as $key => $value) {
 
