@@ -7,41 +7,38 @@ class Pais extends CI_Model
 	public $NOMBRE;
 
 
-	public function index()
+	public function __construct()
 	{
-		$query = $this->db->query('SELECT * FROM pais ORDER BY pais ASC'); 
-		return $query->result();
+		parent::__construct();
+		$this->ID_PAIS=null;
+		$this->NOMBRE=null;
+	}
+
+	public function getPais()
+	{
+		$query = $this->db->query('SELECT * FROM pais WHERE ID_PAIS='.$this->ID_PAIS.' '); 
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
 	} 
 
-	
-	public function add($pais=null)
+	public function add()
 	{
-		if ($pais!=null) {
-			$this->ID_PAIS = $pais['ID_PAIS'];
-			$this->NOMBRE     = $pais['NOMBRE'];
+
 			$this->db->insert('pais', $this);
-		}
 	}
 
-	public function update($pais=null)
+	public function update()
 	{
-
-		if ($pais!=null) {
-			$this->ID_PAIS = $pais['ID_PAIS'];
-			$this->NOMBRE     = $pais['NOMBRE'];
 			$this->db->where('ID_PAIS', $this->ID_PAIS); 
 			$this->db->update('pais', $this);
-		}
 	}
 
-	public function delete($id='')
-	{
-		if ($id!='') {
-			$this->ID_PAIS = $id;
-			$this->db->where('ID_PAIS', $this->ID_PAIS);
-			$this->db->delete('pais');
-		}
-	}
+
 
 
 

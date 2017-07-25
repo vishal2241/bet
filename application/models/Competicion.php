@@ -8,43 +8,38 @@ class Competicion extends CI_Model
 	public $NOMBRE;
 
 
-	public function index()
+	public function __construct()
 	{
-		$query = $this->db->query('SELECT * FROM competencia  '); 
-		return $query->result();
-	} 
+		parent::__construct();
+		$this->ID_COMPETENCIA=null;
+		$this->ID_PAIS=null;
+		$this->NOMBRE=null;
+	}
 
-	
-	public function add($data=null)
+	public function getCompeticion()
 	{
-		if ($data!=null) {
-			$this->ID_COMPETENCIA = $data['ID_COMPETENCIA'];
-			$this->ID_PAIS = $data['ID_PAIS'];
-			$this->NOMBRE     = $data['NOMBRE'];
+		$query = $this->db->query('SELECT * FROM competencia WHERE ID_COMPETENCIA='.$this->ID_COMPETENCIA.' '); 
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	} 
+	
+	public function add()
+	{
 			$this->db->insert('competencia', $this);
-		}
 	}
 
 	public function update($pais=null)
 	{
-
-		if ($pais!=null) {
-			$this->ID_COMPETENCIA = $data['ID_COMPETENCIA'];
-			$this->ID_PAIS = $data['ID_PAIS'];
-			$this->NOMBRE     = $data['NOMBRE'];
-			$this->db->where('ID_COMPETENCIA', $this->ID_PAIS); 
+			$this->db->where('ID_COMPETENCIA', $this->ID_COMPETENCIA); 
 			$this->db->update('competencia', $this);
-		}
 	}
 
-	public function delete($id='')
-	{
-		if ($id!='') {
-			$this->ID_PAIS = $id;
-			$this->db->where('ID_COMPETENCIA', $this->ID_PAIS);
-			$this->db->delete('competencia');
-		}
-	}
+
 
 
 
