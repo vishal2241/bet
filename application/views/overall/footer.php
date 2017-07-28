@@ -65,7 +65,7 @@
 </body>
 <!--   Core JS Files   -->
 <script src="<?= base_url(); ?>public/js/jquery.min.js" type="text/javascript"></script>
-<script src="<?= base_url(); ?>public/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="<?= base_url(); ?>public/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="<?= base_url(); ?>public/js/material.min.js"></script>
 
 <!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->

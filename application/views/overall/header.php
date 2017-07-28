@@ -9,12 +9,11 @@
 <!--     Fonts and icons     -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link rel="stylesheet" href="<?= base_url(); ?>public/css/fontawesome/css/font-awesome.min.css">
 
 <!-- CSS Files -->
-<link href="<?= base_url(); ?>public/css/bootstrap.min.css" rel="stylesheet" />
+<link href="<?= base_url(); ?>public/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="<?= base_url(); ?>public/css/material-kit.css" rel="stylesheet"/>
-<link rel="stylesheet" href="<?= base_url(); ?>public/css/fontawesome/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/plugins/datatables/css/dataTables.bootstrap.css">
 <link href="<?= base_url(); ?>public/css/style.css" rel="stylesheet" />
 <link href="<?= base_url(); ?>public/css/template.css" rel="stylesheet" />

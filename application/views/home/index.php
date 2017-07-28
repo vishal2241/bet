@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 														<small><?= $row['PAIS'] ?></small>
 														
 													</td>
-													<td class="text-center">button<?= $row['LOCAL'] ?></td>
+													<td class="text-center"><?= $row['LOCAL'] ?></td>
 													<td class="text-center"><?= $row['VISITANTE'] ?></td>
 													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_1'] ?></button></td>
 													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_X'] ?></button></td>
