@@ -26,7 +26,7 @@
           <tbody > 
             <?php foreach ($partidos as $key => $row): ?>
               <tr>
-                <td><b><?= $row->LOCAL .' vs. '. $row->VISITANTE . '</b><br>'. $row->PAIS . ' - '.  $row->TORNEO ?></td>
+                <td><b><?= $row->LOCAL .' ['.$row->GOLES_LOCAL.' vs. '. $row->GOLES_VISITANTE.'] ' .$row->VISITANTE . '</b><br>'. $row->PAIS . ' - '.  $row->TORNEO ?></td>
                 <td><?= $row->ESTADO  ?></td>
                 <td><?= $row->FECHA  ?></td>
                 <td><?= $row->HORARIO  ?></td>
