@@ -31,9 +31,9 @@ class Partido extends CI_Model
 		$this->EN_VIVO=null;
 	}
 
-	public function index($from, $to)
+	public function index()
 	{
-		$query = $this->db->query("SELECT * FROM partido p   WHERE  p.HORARIO>='".$this->HORARIO."' AND  p.FECHA BETWEEN '".$from."' AND '".$to."' ORDER BY p.FECHA ASC, p.HORARIO ASC"); 
+		$query = $this->db->query("SELECT * FROM partido p   WHERE  p.HORARIO>='".$this->HORARIO."' AND  p.FECHA BETWEEN '".$this->FROM."' AND '".$this->TO."' ORDER BY p.FECHA ASC, p.HORARIO ASC"); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -55,7 +55,7 @@ class Partido extends CI_Model
 
 	public function add()
 	{
-
+ 
 		$this->db->insert('partido', $this);
 	}
 

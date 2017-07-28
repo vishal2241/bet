@@ -10,16 +10,15 @@ class Home extends CI_Controller {
 	}
 
 	public function index(){
-		$this->Partido->FROM = date("Y-m-d");
-		$this->Partido->TO   = date("Y-m-d");
-		$this->Partido->HORARIO   = date("H:i"); 
-		$this->Partido->HORARIO   = date("H:i"); 
+		$from = date("Y-m-d");
+		$to   = date("Y-m-d");
 
-		$partidos = $this->Partido->index();
-		foreach ($partidos as $key => $value) {
+		$cuotas=$this->Cuota->index($from, $to);
+
+	/*	foreach ($partidos as $key => $value) {
 			#cuotas
 			$this->Cuota->ID_PARTIDO  = $value->ID_PARTIDO; 
-			$cuotas=$this->Cuota->getPartido();
+
 			print_r($cuotas); exit;
 			$data[] = array(
 				'ID_PARTIDO' =>  $value->ID_PARTIDO, 
@@ -28,16 +27,16 @@ class Home extends CI_Controller {
 				'VISITANTE' =>  $value->VISITANTE, 
 				);
 
+			}*/
+
+
+			$this->load->view('home/index', $data);
 		}
 
-		#$data['partidos'] 
-		$this->load->view('home/index', $data);
+
+
+
 	}
-
-
-
-
-}
 
 
 

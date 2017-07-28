@@ -1,4 +1,7 @@
- 
-RewriteEngine on
-RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml|public)
+php_value max_execution_time 600 
+
+RewriteEngine on
+
+RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml|public)
+
 RewriteRule ^(.*)$ index.php?/$1 [QSA,L]

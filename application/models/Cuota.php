@@ -16,6 +16,7 @@ class Cuota extends CI_Model
 	public $OVER_25;
 	public $UNDER_25;
 	public $FECHA_CUOTA;
+	public $BOOKMARKER;
 
 	public function __construct()
 	{
@@ -33,7 +34,21 @@ class Cuota extends CI_Model
 		$this->UNDER_25=0;
 		$this->ID_PARTIDO=null;
 		$this->FECHA_CUOTA=null;
+		$this->BOOKMARKER=null;
 	}
+
+
+	public function index($from, $to)
+	{
+		$query = $this->db->query('SELECT p.LOCAL, p.VISITANTE, co.NOMBRE, pa.NOMBRE, c.* FROM cuota c LEFT JOIN partido p ON (c.ID_PARTIDO=p.ID_PARTIDO) LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) WHERE p.FECHA BETWEEN  '.$from.' AND '.$to.'  '); 
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	} 
 
 	
 	public function getPartido()

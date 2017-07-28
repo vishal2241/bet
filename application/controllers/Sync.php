@@ -111,9 +111,8 @@ class Sync extends CI_Controller {
 
 		$this->Api->FROM = date("Y-m-d");
 		$this->Api->TO   = $to->format('Y-m-d');
-
 		$cuotas=$this->Api->getCuotas();
-		print_r($cuotas); exit;
+ 
 		if ($cuotas!=null) {
 			foreach ($cuotas as $key => $value) {
 
@@ -129,6 +128,7 @@ class Sync extends CI_Controller {
 				$this->Cuota->GG          = $value['GG'];
 				$this->Cuota->OVER_25     = $value['OVER_25'];
 				$this->Cuota->UNDER_25    = $value['UNDER_25'];
+				$this->Cuota->BOOKMARKER  = $value['BOOKMARKER'];
 
 				$this->Cuota->delete();
 				$this->Cuota->add(); 
