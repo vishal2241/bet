@@ -110,7 +110,8 @@ class Sync extends CI_Controller {
 		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
 
 		$this->Api->FROM = date("Y-m-d");
-		$this->Api->TO   = $to->format('Y-m-d');
+		$this->Api->TO = date("Y-m-d");
+		#$this->Api->TO   = $to->format('Y-m-d');
 		$cuotas=$this->Api->getCuotas();
  
 		if ($cuotas!=null) {
@@ -128,7 +129,7 @@ class Sync extends CI_Controller {
 				$this->Cuota->GG          = $value['GG'];
 				$this->Cuota->OVER_25     = $value['OVER_25'];
 				$this->Cuota->UNDER_25    = $value['UNDER_25'];
-				$this->Cuota->BOOKMARKER  = $value['BOOKMARKER'];
+				$this->Cuota->BOOKMARKER  = $value['odd_bookmakers'];
 
 				$this->Cuota->delete();
 				$this->Cuota->add(); 

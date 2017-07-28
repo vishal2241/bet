@@ -81,7 +81,6 @@ class Api extends CI_Model
 				'GG'             => $value['bts_yes'],
 				'OVER_25'        => $value['o+2.5'],
 				'UNDER_25'       => $value['u+2.5'],
-				'BOOKMARKER'     => $value['odd_bookmakers'],
 				);
 		}
 		return $data;

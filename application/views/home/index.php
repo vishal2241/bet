@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="es">
 <head>
 	<?php $this->load->view('overall/header'); ?>
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/plugins/datatables/css/dataTables.bootstrap.css">
 </head>
 
 <body class="components-page">
@@ -34,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<th class="text-center">Visitante</th>
 												<th class="text-center">1</th>
 												<th class="text-center">X</th>
-													<th class="text-center">2</th>
+												<th class="text-center">2</th>
 												<!--	<th class="text-center">Over</th>
 													<th class="text-center">Under</th>
 													<th class="text-center">1-1st</th>
@@ -54,15 +55,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<tr>
 													<td><?= $row['HORARIO'] ?></td>
 													<td align="center">
-													<?= $row['TORNEO'] ?><br>
-													<small><?= $row['PAIS'] ?></small>
+														<?= $row['TORNEO'] ?><br>
+														<small><?= $row['PAIS'] ?></small>
 														
 													</td>
-													<td class="text-center"><?= $row['LOCAL'] ?></td>
+													<td class="text-center">button<?= $row['LOCAL'] ?></td>
 													<td class="text-center"><?= $row['VISITANTE'] ?></td>
-													<td class="text-center"><?= $row['_1'] ?></td>
-													<td class="text-center"><?= $row['_X'] ?></td>
-													<td class="text-center"><?= $row['_2'] ?></td>
+													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_1'] ?></button></td>
+													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_X'] ?></button></td>
+													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_2'] ?></button></td>
 													
 												</tr>
 											<?php endforeach ?>
@@ -129,40 +130,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 
 			<?php $this->load->view('overall/footer'); ?>
-			<script>
-					/*for (var i = 0; i < 40; i++) {
-						$("#bets > tbody").append('<tr> \
-							<td class="text-center">19:00</td> \
-							<td class="text-center">Botafogo PB</td> \
-							<td class="text-center">Fortaleza</td> \
-							<td class="text-center">2.00</td> \
-							<td class="text-center"3.15</td> \
-								<td class="text-center">3.30</td> \
-								<td class="text-center">2.05</td> \
-								<td class="text-center">1.58</td> \
-								<td class="text-center">2.30</td> \
-								<td class="text-center">1.98</td> \
-								<td class="text-center">3.60</td> \
-								<td class="text-center">1.21</td> \
-								<td class="text-center">1.32</td> \
-								<td class="text-center">1.59</td> \
-								<td class="text-center">11.00</td> \
-								<td class="text-center">7.60</td> \
-							</tr>');
-						} */
 
 
-						var header_height;
-						var fixed_section;
-						var floating = false;
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#bets').DataTable({
+						"iDisplayLength": -1,
+					});
+				} );
 
-						$().ready(function(){
-							suggestions_distance = $("#suggestions").offset();
-							pay_height = $('.fixed-section').outerHeight();
 
-							$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+				/*for (var i = 0; i < 40; i++) {
+				$("#bets > tbody").append('<tr> \
+				<td class="text-center">19:00</td> \
+				<td class="text-center">Botafogo PB</td> \
+				<td class="text-center">Fortaleza</td> \
+				<td class="text-center">2.00</td> \
+				<td class="text-center"3.15</td> \
+					<td class="text-center">3.30</td> \
+					<td class="text-center">2.05</td> \
+					<td class="text-center">1.58</td> \
+					<td class="text-center">2.30</td> \
+					<td class="text-center">1.98</td> \
+					<td class="text-center">3.60</td> \
+					<td class="text-center">1.21</td> \
+					<td class="text-center">1.32</td> \
+					<td class="text-center">1.59</td> \
+					<td class="text-center">11.00</td> \
+					<td class="text-center">7.60</td> \
+				</tr>');
+			} */
 
-						});
 
-					</script>
-					</html>
+			var header_height;
+			var fixed_section;
+			var floating = false;
+
+			$().ready(function(){
+				suggestions_distance = $("#suggestions").offset();
+				pay_height = $('.fixed-section').outerHeight();
+
+				$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+
+			});
+
+		</script>
+		</html>
