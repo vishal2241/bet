@@ -62,7 +62,7 @@ class Api extends CI_Model
 
 	public function getCuotas(){
 		ini_set('memory_limit','1600M');
-		set_time_limit(300);
+		set_time_limit(3000);
 
 		$request = Requests::get('https://apifootball.com/api/?action=get_odds&from='.$this->FROM.'&to='.$this->TO.'&APIkey='.$this->KEY.'');
 		$request->body=json_decode($request->body,true);

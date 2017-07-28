@@ -8,6 +8,14 @@ class Sync extends CI_Controller {
 		$this->User->check();
 	}
 
+
+
+	public function index(){
+
+		$this->load->view('sync/index');
+	}
+
+
 	public function syncPaises(){
 		$paises=$this->Api->getPaises();
 		if ($paises!=null) {
@@ -77,10 +85,10 @@ class Sync extends CI_Controller {
 				$patido=$this->Partido->getPartido();
 
 				if ($patido==null) {
-					echo "<b>add</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";					
+					echo "<b>add  ".$value['match_date']." ".$value['match_time']." </b>".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";					
 					$this->Partido->add();
 				} else {
-					echo "<b>update ".$value['match_id']."</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";
+					echo "<b>update ".$value['match_date']." ".$value['match_time']."</b> ".$value['match_hometeam_name']." vs ".$value['match_awayteam_name']."<br>";
 					$this->Partido->update();
 					#Borramos los goles
 					$this->Gol->ID_PARTIDO = $value['match_id'];
@@ -102,6 +110,7 @@ class Sync extends CI_Controller {
 				}
 			}
 		}
+		echo "Termine";
 	} // End syncPartidos
 
 
@@ -109,9 +118,9 @@ class Sync extends CI_Controller {
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
 
-		$this->Api->FROM =$to->format('Y-m-d');
-		$this->Api->TO = $to->format('Y-m-d');
-		#$this->Api->TO   = $to->format('Y-m-d');
+		$this->Api->FROM =date("Y-m-d");
+		#$this->Api->TO = $to->format('Y-m-d');
+		$this->Api->TO   = $to->format('Y-m-d');
 		$cuotas=$this->Api->getCuotas();
 
 		if ($cuotas!=null) {
@@ -131,11 +140,12 @@ class Sync extends CI_Controller {
 				$this->Cuota->UNDER_25    = $value['UNDER_25'];
 				$this->Cuota->BOOKMARKER  = $value['odd_bookmakers'];
 
-				$this->Cuota->delete();
+				#$this->Cuota->delete();
 				$this->Cuota->add(); 
-sleep(2);
+
 			}
 		}
+		echo "Termine";
 	} // End syncCuotas
 
 

@@ -18,55 +18,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<div class="tim-row" id="tables-row">					 
 								<div class="table-responsive">
-									<table class="table" id="bets">
-										<thead>
+								<h2>API</h2>
+									<table class="table">
+										<tbody>
 											<tr>
-												<th colspan="16" class="text-left" >
-													<h4>
-														<img src="<?= base_url(); ?>public/img/banderas/48/Colombia.png"> 
-														<b>Colombia: </b> Liga Aguila
-													</h4>
-												</th>
+												<td>
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncPaises">Sincronizar Paises <i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+												<td>
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncCompeticiones">Sincronizar Torneos <i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+												<td>
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncPartidos">Sincronizar Partidos <i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+												<td>
+												<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncCuotas">Sincronizar Cuotas <i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
 											</tr>
-											<tr>
-												<th class="text-center">Hora</th>
-												<th class="text-center">Torneo</th>
-												<th class="text-center">Local</th>
-												<th class="text-center">Visitante</th>
-												<!--<th class="text-center">1</th>
-												<th class="text-center">X</th>
-												<th class="text-center">2</th>-->
-												<!--	<th class="text-center">Over</th>
-													<th class="text-center">Under</th>
-													<th class="text-center">1-1st</th>
-													<th class="text-center">x-1st</th>
-													<th class="text-center">2-1st</th>
-													<th class="text-center">1x</th>
-													<th class="text-center">1-2</th>
-													<th class="text-center">2x</th>
-													<th class="text-center">GG</th>
-													<th class="text-center">NG</th>-->
-												</tr>
-											</thead>
-											<tbody>
-												<?php 
-												#print_r($partidos);  
-												foreach ($partidos as $key => $row): ?>
-												<tr>
-													<td><?= $row['HORARIO'] ?></td>
-													<td align="center">
-														<?= $row['TORNEO'] ?><br>
-														<small><?= $row['PAIS'] ?></small>
-														
-													</td>
-													<td class="text-center"><?= $row['LOCAL'] ?></td>
-													<td class="text-center"><?= $row['VISITANTE'] ?></td>
-													<!--<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_1'] ?></button></td>
-													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_X'] ?></button></td>
-													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_2'] ?></button></td>-->
-													
-												</tr>
-											<?php endforeach ?>
 										</tbody>
 									</table>
 								</div>
