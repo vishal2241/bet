@@ -14,29 +14,29 @@ class Home extends CI_Controller {
 		$to   = date("Y-m-d");
 
 		$cuotas=$this->Cuota->index($from, $to);
-
-	/*	foreach ($partidos as $key => $value) {
-			#cuotas
-			$this->Cuota->ID_PARTIDO  = $value->ID_PARTIDO; 
-
-			print_r($cuotas); exit;
-			$data[] = array(
+		
+		foreach ($cuotas as $key => $value) {
+			$array[] = array(
 				'ID_PARTIDO' =>  $value->ID_PARTIDO, 
 				'HORARIO' =>  $value->HORARIO, 
 				'LOCAL' =>  $value->LOCAL, 
 				'VISITANTE' =>  $value->VISITANTE, 
+				'TORNEO' =>  $value->TORNEO, 
+				'PAIS' =>  $value->PAIS, 
+				'_1' =>  $value->_1, 
+				'_2' =>  $value->_2, 
+				'_X' =>  $value->_X, 
 				);
 
-			}*/
-
-
-			$this->load->view('home/index', $data);
-		}
-
-
-
-
+		} 
+		$data['partidos']= $array;
+		$this->load->view('home/index', $data);
 	}
+
+
+
+
+}
 
 
 

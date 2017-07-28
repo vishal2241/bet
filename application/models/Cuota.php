@@ -40,7 +40,7 @@ class Cuota extends CI_Model
 
 	public function index($from, $to)
 	{
-		$query = $this->db->query('SELECT p.LOCAL, p.VISITANTE, co.NOMBRE, pa.NOMBRE, c.* FROM cuota c LEFT JOIN partido p ON (c.ID_PARTIDO=p.ID_PARTIDO) LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) WHERE p.FECHA BETWEEN  '.$from.' AND '.$to.'  '); 
+		$query = $this->db->query('SELECT p.LOCAL, p.HORARIO, p.VISITANTE, co.NOMBRE as TORNEO, pa.NOMBRE as PAIS, c.* FROM cuota c LEFT JOIN partido p ON (c.ID_PARTIDO=p.ID_PARTIDO) LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) WHERE p.FECHA BETWEEN "'.$from.'" AND "'.$to.'"  '); 
 		
 		if ($query->num_rows() > 0) {
 			return $query->result();

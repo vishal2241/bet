@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<th class="text-center">Local</th>
 												<th class="text-center">Visitante</th>
 												<th class="text-center">1</th>
-												<th class="text-center"x</th>
+												<th class="text-center">X</th>
 													<th class="text-center">2</th>
 													<th class="text-center">Over</th>
 													<th class="text-center">Under</th>
@@ -49,13 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<tbody>
 												<?php 
 												#print_r($partidos);  
-												foreach ($partidos as $key => $row):
-													print_r($row);
-												?>
+												foreach ($partidos as $key => $row): ?>
 												<tr>
 													<td><?= $row['HORARIO'] ?></td>
 													<td><?= $row['LOCAL'] ?></td>
 													<td><?= $row['VISITANTE'] ?></td>
+													<td><?= $row['_1'] ?></td>
+													<td><?= $row['_X'] ?></td>
+													<td><?= $row['_2'] ?></td>
 													
 												</tr>
 											<?php endforeach ?>
