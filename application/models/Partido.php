@@ -35,7 +35,10 @@ class Partido extends CI_Model
 
 	public function all()
 	{
-		$query = $this->db->query("SELECT * FROM partido p    ORDER BY p.FECHA DESC, p.HORARIO ASC"); 
+		$query = $this->db->query("SELECT p.*, co.NOMBRE AS TORNEO, pa.NOMBRE as PAIS FROM partido p
+			LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
+			LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
+			ORDER BY p.FECHA DESC, p.HORARIO ASC"); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {

@@ -13,41 +13,32 @@
         <table class="table table-striped table-hover dataTable" id="">
           <thead>
             <tr>
-              <th colspan="3" class="text-center info">CONCEPTOS</th>
+              <th colspan="5" class="text-center info">Partidos</th>
             </tr>
             <tr>
-              <th width="40%">Concepto</th>
-              <th width="30%">Tipo</i></th>
-              <th width="30%"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>
+              <th width="50%">Partido</th>
+              <th width="%">Estado</th>
+              <th width="%">Fecha</th>
+              <th width="%">Hora</th>
+              <th width="%"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>
             </tr>
           </thead>
-          <tbody style="font-size: 14px"> 
+          <tbody > 
+            <?php foreach ($partidos as $key => $row): ?>
+              <tr>
+                <td><b><?= $row->LOCAL .' vs. '. $row->VISITANTE . '</b><br>'. $row->PAIS . ' - '.  $row->TORNEO ?></td>
+                <td><?= $row->ESTADO  ?></td>
+                <td><?= $row->FECHA  ?></td>
+                <td><?= $row->HORARIO  ?></td>
+                <td>
+                  <a  class="btn btn-warning btn-sm" href="<?php echo base_url(); ?>conceptos/editar/<?php echo $row->ID_PARTIDO; ?>"><i class="fa fa-cog" aria-hidden="true"></i></a> 
+                  <a  class="btn btn-danger btn-sm" onclick="DeleteItem('¿Está seguro de eliminar este concepto?', '<?php echo base_url(); ?>conceptos/eliminar/<?php echo $row->ID_PARTIDO ?>')" >
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </a> 
+                </td>
+              </tr>
+            <?php endforeach ?>
 
-            <?php 
-            /*foreach ($conceptos as $key => $row) 
-            {  
-              switch ($row->TIPO) {
-                case 'G':
-                $row->TIPO='<span class="text-danger bold">GASTO <i class="fa fa-money" aria-hidden="true"></i></span>';
-                break;
-                case 'I':
-                $row->TIPO='<span class="text-success bold">INGRESO <i class="fa fa-money" aria-hidden="true"></i></span>';
-                break;
-              }
-              echo '<tr>';
-              echo '<td class="text-default"><b>'. (mb_strtoupper($row->CONCEPTO)).'</b></td>';
-              echo '<td>'. mb_strtoupper($row->TIPO).'</td>';
-              ?>
-              <td>
-                <a  class="btn btn-warning" href="<?php echo base_url(); ?>conceptos/editar/<?php echo $row->ID_CONCEPTO; ?>"><i class="fa fa-cog" aria-hidden="true"></i></a> 
-                <a  class="btn btn-danger" onclick="DeleteItem('¿Está seguro de eliminar este concepto?', '<?php echo base_url(); ?>conceptos/eliminar/<?php echo $row->ID_CONCEPTO ?>')" >
-                  <i class="fa fa-trash" aria-hidden="true"></i>
-                </a> 
-              </td>
-              <?php
-              echo '</tr>';
-            }   */
-            ?>
 
           </tbody>
         </table>
@@ -62,12 +53,8 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('.dataTable').DataTable({
-        "iDisplayLength": -1,
-        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-        "autoWidth": true,           
-        "sPaginationType": "full_numbers",
-        "order": [[ 1, 'desc' ], [ 0, 'asc' ]]
-      });
+        "order": [[ 2, 'desc' ], [ 3, 'desc' ]]
+     });
     } );
   </script>
 </body>

@@ -109,11 +109,11 @@ class Sync extends CI_Controller {
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
 
-		$this->Api->FROM = date("Y-m-d");
-		$this->Api->TO = date("Y-m-d");
+		$this->Api->FROM =$to->format('Y-m-d');
+		$this->Api->TO = $to->format('Y-m-d');
 		#$this->Api->TO   = $to->format('Y-m-d');
 		$cuotas=$this->Api->getCuotas();
- 
+
 		if ($cuotas!=null) {
 			foreach ($cuotas as $key => $value) {
 
@@ -133,7 +133,7 @@ class Sync extends CI_Controller {
 
 				$this->Cuota->delete();
 				$this->Cuota->add(); 
-
+sleep(2);
 			}
 		}
 	} // End syncCuotas
