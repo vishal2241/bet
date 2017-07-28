@@ -29,12 +29,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</tr>
 											<tr>
 												<th class="text-center">Hora</th>
+												<th class="text-center">Torneo</th>
 												<th class="text-center">Local</th>
 												<th class="text-center">Visitante</th>
 												<th class="text-center">1</th>
 												<th class="text-center">X</th>
 													<th class="text-center">2</th>
-													<th class="text-center">Over</th>
+												<!--	<th class="text-center">Over</th>
 													<th class="text-center">Under</th>
 													<th class="text-center">1-1st</th>
 													<th class="text-center">x-1st</th>
@@ -43,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<th class="text-center">1-2</th>
 													<th class="text-center">2x</th>
 													<th class="text-center">GG</th>
-													<th class="text-center">NG</th>
+													<th class="text-center">NG</th>-->
 												</tr>
 											</thead>
 											<tbody>
@@ -52,11 +53,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												foreach ($partidos as $key => $row): ?>
 												<tr>
 													<td><?= $row['HORARIO'] ?></td>
-													<td><?= $row['LOCAL'] ?></td>
-													<td><?= $row['VISITANTE'] ?></td>
-													<td><?= $row['_1'] ?></td>
-													<td><?= $row['_X'] ?></td>
-													<td><?= $row['_2'] ?></td>
+													<td align="center">
+													<?= $row['TORNEO'] ?><br>
+													<small><?= $row['PAIS'] ?></small>
+														
+													</td>
+													<td class="text-center"><?= $row['LOCAL'] ?></td>
+													<td class="text-center"><?= $row['VISITANTE'] ?></td>
+													<td class="text-center"><?= $row['_1'] ?></td>
+													<td class="text-center"><?= $row['_X'] ?></td>
+													<td class="text-center"><?= $row['_2'] ?></td>
 													
 												</tr>
 											<?php endforeach ?>
