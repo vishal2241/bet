@@ -12,12 +12,8 @@
         <table border="0" cellspacing="5" cellpadding="5">
           <tbody>
             <tr>
-              <td>De:</td>
-              <td><input type="text" id="from" name="from" value="<?= date('Y-m-d') ?>"></td>
-            </tr>
-            <tr>
-              <td>Hasta:</td>
-              <td><input type="text" id="to" name="to" value="<?= date('Y-m-d') ?>"></td>
+              <td>Fecha:</td>
+              <td><input type="text" id="date" name="date" value="<?= date('Y-m-d') ?>"></td>
             </tr>
           </tbody>
         </table>
@@ -63,17 +59,12 @@
   <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
   <script type="text/javascript">
 //https://datatables.net/examples/plug-ins/range_filtering.html
-    $.fn.dataTable.ext.search.push(
-      function( settings, data, dataIndex ) {
-        var min = parseInt( $('#from').val(), 10 );
-        var max = parseInt( $('#to').val(), 10 );
-        var age = parseFloat( data[2] ) || 0; // use data for the age column
-
-        if ( ( isNaN( min ) && isNaN( max ) ) ||
-         ( isNaN( min ) && age <= max ) ||
-         ( min <= age   && isNaN( max ) ) ||
-         ( min <= age   && age <= max ) )
-        {
+$.fn.dataTable.ext.search.push(
+  function( settings, data, dataIndex ) {
+    var min = parseInt( $('#date').val() );
+        var date = parseFloat( data[2] ); // use data for the date column
+        console.log(date);
+        if ( ( isNaN( min ) ) || min == date)         {
           return true;
         }
         return false;
@@ -81,18 +72,18 @@
       );
 
 
-    $(document).ready(function() {
-     var table =   $('.dataTable').DataTable({
-      "bPaginate": true,
-      "bLengthChange": false,
-      "bFilter": true,
-      "bInfo": true,
-      "bAutoWidth": false,
-      "order": [[ 2, 'desc' ], [ 3, 'desc' ]]
-    });
+$(document).ready(function() {
+ var table =   $('.dataTable').DataTable({
+  "bPaginate": true,
+  "bLengthChange": false,
+  "bFilter": true,
+  "bInfo": true,
+  "bAutoWidth": false,
+  "order": [[ 2, 'desc' ], [ 3, 'desc' ]]
+});
 
     // Event listener to the two range filtering inputs to redraw on input
-    $('#from, #to').keyup( function() {
+    $('#date').keyup( function() {
       table.draw();
     } );
 
