@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="card card-signup">
 							<?=  form_open('login/form', 'class="form"');  ?>
 							<div class="header header-primary text-center">
-								<h4>Bet<b>365</b></h4>
+								<h4 style="color:white">Bet<b>365</b></h4>
 									<!--<div class="social-line">
 										<a href="#pablo" class="btn btn-simple btn-just-icon">
 											<i class="fa fa-facebook-square"></i>
