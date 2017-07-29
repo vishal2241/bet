@@ -68,24 +68,50 @@ class Api extends CI_Model
 		$request->body=json_decode($request->body,true);
 
 		if (!isset($request->body['error'])) {
-			print_r($request->body); exit;
+			$_1       = 0;
+			$_X       = 0;
+			$_2       = 0;
+			$_1X      = 0;
+			$_12      = 0;
+			$_2X      = 0;
+			$NG       = 0;
+			$GG       = 0;
+			$OVER_25  = 0;
+			$UNDER_25 = 0;
+			$n=count($request->body);
+			//sumamos todas las cuotas para luego sacar promedio
 			foreach ($request->body as $key => $value) {
-				$data[]= array(
-					'match_id'       => $value['match_id'],
-					'odd_bookmakers' => $value['odd_bookmakers'],
-					'odd_date'       => $value['odd_date'],
-					'_1'             => $value['odd_1'],
-					'_X'             => $value['odd_x'],
-					'_2'             => $value['odd_2'],
-					'_1X'            => $value['odd_1'],
-					'_12'            => $value['odd_x'],
-					'_2X'            => $value['odd_2'],
-					'NG'             => $value['bts_no'],
-					'GG'             => $value['bts_yes'],
-					'OVER_25'        => $value['o+2.5'],
-					'UNDER_25'       => $value['u+2.5'],
-					);
+				$id         = $value['match_id'];
+				$bookmakers = $value['odd_bookmakers'];
+				$date       = $value['odd_date'];
+				$_1         = $_1+$value['odd_1'];
+				$_X         = $_X+$value['odd_x'];
+				$_2         = $_2+$value['odd_2'];
+				$_1X        = $_1X+$value['odd_1'];
+				$_12        = $_12+$value['odd_x'];
+				$_2X        = $_2X+$value['odd_2'];
+				$NG         = $NG+$value['bts_no'];
+				$GG         = $GG+$value['bts_yes'];
+				$OVER_25    = $OVER_25+$value['o+2.5'];
+				$UNDER_25   = $UNDER_25+$value['u+2.5'];
 			}
+
+			$data[]= array(
+				'match_id'       => $id,
+				'odd_bookmakers' => $bookmakers,
+				'odd_date'       => $date,
+				'_1'             => round($_1/$n,2),
+				'_X'             => round($_X/$n,2),
+				'_2'             => round($_2/$n,2),
+				'_1X'            => round($_1X/$n,2),
+				'_12'            => round($_12/$n,2),
+				'_2X'            => round($_2X/$n,2),
+				'NG'             => round($NG/$n,2),
+				'GG'             => round($GG/$n,2),
+				'OVER_25'        => round($OVER_25/$n,2),
+				'UNDER_25'       => round($UNDER_25/$n,2),
+				);
+
 		} else {
 			$data=null;
 		}
