@@ -9,33 +9,7 @@ class Home extends CI_Controller {
 		$this->User->check();
 	}
 
-
 	public function index(){
-		$this->Partido->FROM = date("Y-m-d");
-		$this->Partido->TO = date("Y-m-d");
-
-		$partidos=$this->Partido->index();
-		
-		foreach ($partidos as $key => $value) {
-			$array[] = array(
-				'ID_PARTIDO' =>  $value->ID_PARTIDO, 
-				'HORARIO' =>  $value->HORARIO, 
-				'LOCAL' =>  $value->LOCAL, 
-				'VISITANTE' =>  $value->VISITANTE, 
-				'TORNEO' =>  $value->TORNEO, 
-				'PAIS' =>  $value->PAIS, 
-			/*	'_1' =>  $value->_1, 
-				'_2' =>  $value->_2, 
-				'_X' =>  $value->_X, */
-				);
-
-		} 
-		$data['partidos']= $array;
-		$this->load->view('home/index', $data);
-	} 
-
-
-	/*public function index(){
 		$from = date("Y-m-d");
 		$to   = date("Y-m-d");
 
@@ -57,7 +31,7 @@ class Home extends CI_Controller {
 		} 
 		$data['partidos']= $array;
 		$this->load->view('home/index', $data);
-	} */
+	}
 
 
 

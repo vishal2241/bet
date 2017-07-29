@@ -41,12 +41,19 @@ class Cuota extends CI_Model
 	public function index($from, $to)
 	{
 		$query = $this->db->query('SELECT 
+			p.ID_PARTIDO,
 			p.LOCAL,
 			p.HORARIO,
 			p.VISITANTE,
 			co.NOMBRE as TORNEO,
 			pa.NOMBRE as PAIS,
-			c.* 
+			Round(SUM(c._1)/count(*),2) AS _1,
+			Round(SUM(c._X)/count(*),2) AS _X,
+			Round(SUM(c._2)/count(*),2) AS _2,
+			Round(SUM(c.GG)/count(*),2) AS GG,
+			Round(SUM(c.NG)/count(*),2) AS NG,
+			Round(SUM(c.OVER_25)/count(*),2) AS OVER_25,
+			Round(SUM(c.UNDER_25)/count(*),2) AS UNDER_25
 			FROM cuota c 
 			LEFT JOIN partido p ON (c.ID_PARTIDO=p.ID_PARTIDO) 
 			LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
