@@ -116,13 +116,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							');
 						var compe = item.ID;
 						$.getJSON('<?= base_url(); ?>ajax/json_match', {fecha: fecha, compe:compe}, function(match) {
-							$.each(match, function(a, row) {});
+							$.each(match, function(a, row) {
+								$("#bets > tbody ").append('\
+									<tr id='+ row.ID+'>\
+										<td class="" >'+ row.HORARIO+'</td>\
+										<td class="" >'+ row.LOCAL+'</td>\
+										<td class="" >'+ row.VISITANTE+'</td>\
+										<td class="" >'+ row._1+'</td>\
+										<td class="" >'+ row._X+'</td>\
+										<td class="" >'+ row._2+'</td>\
+										<td class="" >'+ row._1X+'</td>\
+										<td class="" >'+ row._12+'</td>\
+										<td class="" >'+ row._2X+'</td>\
+										<td class="" >'+ row._UNDER_25+'</td>\
+										<td class="" >'+ row._OVER_25+'</td>\
+										<td class="" >'+ row._1+'</td>\
+										<td class="" >'+ row._1+'</td>\
+										<td class="" >'+ row._1+'</td>\
+										<td class="" >'+ row._1+'</td>\
+										<td class="" >'+ row._1+'</td>\
+									</tr>\
+									');
+							});
 						});
 
 					});
 
 				});
-				
+
 
 
 

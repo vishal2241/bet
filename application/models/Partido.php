@@ -32,6 +32,32 @@ class Partido extends CI_Model
 	}
 
 
+	public function getPartido($date, $hour)
+	{
+		$query = $this->db->query("SELECT 
+			p.ID_PARTIDO AS ID,
+			p.ID_COMPETENCIA AS COMPE,
+			p.FECHA,
+			p.HORARIO,
+			p.LOCAL,
+			p.VISITANTE,
+			c._1,
+			c._X,
+			c._2,
+			c._1X,
+			c._12,
+			c._2X,
+			c.GG,
+			c.NG,
+			c.OVER_25,
+			c.UNDER_25
+			FROM partido p LEFT JOIN cuota c ON (p.ID_PARTIDO=c.ID_PARTIDO) where p.FECHA = '2017-07-29' AND p.HORARIO>'12:00' GROUP BY p.ID_PARTIDO ORDER BY p.HORARIO ASC"); 
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+	}
 
 	public function all()
 	{

@@ -34,6 +34,19 @@ class Ajax extends CI_Controller {
 	}
 
 
+	public function json_match(){
+		if (isset($_GET['fecha']) and $_GET['fecha']!='') {
+			$date=$_GET['fecha'];
+			$hour='12:00';
+			#$hour=date("H:i");
+			$data = $this->Partido->getPartido($date, $hour);
+			echo json_encode($data);
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
+
+
 
 
 }
