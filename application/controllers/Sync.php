@@ -132,7 +132,7 @@ class Sync extends CI_Controller {
 
 		//Ciclo de partidos en la BD
 		$partidos=$this->Partido->index();
-
+//SELECT p.ID_PARTIDO, p.FECHA, p.HORARIO, p.LOCAL, p.VISITANTE, c.* FROM partido p LEFT JOIN cuota c ON (p.ID_PARTIDO=c.ID_PARTIDO) where p.FECHA = '2017-07-29'
 		foreach ($partidos as $key => $row) {
 			$this->Api->MATCH_ID = $row->ID_PARTIDO;
 			$cuotas              = $this->Api->getCuotas();
