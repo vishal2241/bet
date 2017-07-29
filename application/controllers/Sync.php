@@ -152,6 +152,7 @@ class Sync extends CI_Controller {
 					$this->Cuota->OVER_25     = $value['OVER_25'];
 					$this->Cuota->UNDER_25    = $value['UNDER_25'];
 					$this->Cuota->BOOKMARKER  = $value['odd_bookmakers'];
+					$this->Cuota->delete(); 
 					$this->Cuota->add(); 
 					$ok++;
 					echo $row->ID_PARTIDO.' '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:green">OK</b><br>';

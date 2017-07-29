@@ -40,7 +40,7 @@ class Ajax extends CI_Controller {
 			$compe=$_GET['compe'];
 			$hour='12:00';
 			#$hour=date("H:i");
-			$data = $this->Partido->getPartido($date, $hour, $compe);
+			$data = $this->Partido->getPartidoByCompe($date, $hour, $compe);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());
