@@ -17,27 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="tim-container">
 							<!-- tables row -->
 							<div class="table-responsive">
-								<table class="table" id="bets">
-									<thead>
-										<tr>
-											<th class="text-center">Hora</th>
-											<th class="text-center">Local</th>
-											<th class="text-center">Visitante</th>
-											<th class="text-center">1</th>
-											<th class="text-center">X</th>
-											<th class="text-center">2</th> 
-											<th class="text-center">Over</th>
-											<th class="text-center">Under</th>
-											<th class="text-center">1-1st</th>
-											<th class="text-center">x-1st</th>
-											<th class="text-center">2-1st</th>
-											<th class="text-center">1x</th>
-											<th class="text-center">1-2</th>
-											<th class="text-center">2x</th>
-											<th class="text-center">GG</th>
-											<th class="text-center">NG</th>
-										</tr>
-									</thead>
+								<table class="table" id="bets">								
 									<tbody>
 										
 										
@@ -45,7 +25,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</table>
 							</div>
 							<!-- end container -->
-
 						</div>
 					</div>
 					<div class="col-md-3">
@@ -110,58 +89,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script type="text/javascript">
 
+				var header_height;
+				var fixed_section;
+				var floating = false;
 
+				$().ready(function(){
+					suggestions_distance = $("#suggestions").offset();
+					pay_height = $('.fixed-section').outerHeight();
 
-				/*for (var i = 0; i < 40; i++) {
-				$("#bets > tbody").append('<tr> \
-				<td class="text-center">19:00</td> \
-				<td class="text-center">Botafogo PB</td> \
-				<td class="text-center">Fortaleza</td> \
-				<td class="text-center">2.00</td> \
-				<td class="text-center"3.15</td> \
-					<td class="text-center">3.30</td> \
-					<td class="text-center">2.05</td> \
-					<td class="text-center">1.58</td> \
-					<td class="text-center">2.30</td> \
-					<td class="text-center">1.98</td> \
-					<td class="text-center">3.60</td> \
-					<td class="text-center">1.21</td> \
-					<td class="text-center">1.32</td> \
-					<td class="text-center">1.59</td> \
-					<td class="text-center">11.00</td> \
-					<td class="text-center">7.60</td> \
-				</tr>');
-			} */
+					$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
 
-
-			var header_height;
-			var fixed_section;
-			var floating = false;
-
-			$().ready(function(){
-				suggestions_distance = $("#suggestions").offset();
-				pay_height = $('.fixed-section').outerHeight();
-
-				$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
-
-			});
-
-			var fecha='2017-07-29';
-			$.getJSON('<?= base_url(); ?>ajax/json_compe', {fecha: fecha}, function(resp) {
-				$.each(resp, function(i, item) {
-					$("#bets > tbody").append('\
-						<tr id='+ item.ID+'>\
-							<td colspan="16" class="text-left" >\
-								<h4>\
-									<img src="<?= base_url(); ?>public/img/banderas/48/Colombia.png"> \
-									<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
-								</h4>\
-							</td>\
-						</tr>\
-						');
 				});
-			});
+
+				var fecha='2017-07-29';
+				$.getJSON('<?= base_url(); ?>ajax/json_compe', {fecha: fecha}, function(resp) {
+					$.each(resp, function(i, item) {
+						$("#bets > tbody").append('\
+							<tr id='+ item.ID+'>\
+								<td colspan="16" class="text-left" >\
+									<h4>\
+										<img width="24" src="<?= base_url(); ?>public/img/logos/country/'+item.IMG+'.png"> \
+										<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
+									</h4>\
+								</td>\
+							</tr>\
+							');
+						var compe = item.ID;
+						$.getJSON('<?= base_url(); ?>ajax/json_match', {fecha: fecha, compe:compe}, function(match) {
+							$.each(match, function(a, row) {});
+						});
+
+					});
+
+				});
+				
 
 
-		</script>
-		</html>
+
+			</script>
+			</html>

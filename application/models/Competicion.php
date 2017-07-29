@@ -21,7 +21,8 @@ class Competicion extends CI_Model
 		$query = $this->db->query('SELECT
 			c.ID_COMPETENCIA as ID,
 			c.NOMBRE AS COMPE,
-			pa.NOMBRE AS PAIS 
+			pa.NOMBRE AS PAIS,
+			pa.IMG  
 			FROM competencia c  
 			LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
 			LEFT JOIN pais pa ON (c.ID_PAIS=pa.ID_PAIS)  
