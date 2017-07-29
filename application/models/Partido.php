@@ -52,7 +52,7 @@ class Partido extends CI_Model
 			SELECT p.*, co.NOMBRE AS TORNEO, pa.NOMBRE as PAIS FROM partido p
 			LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
 			LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
-			WHERE 
+			WHERE
 			p.HORARIO>='".$this->HORARIO."' 
 			AND  p.FECHA BETWEEN '".$this->FROM."' AND '".$this->TO."' 
 			ORDER BY p.FECHA ASC, p.HORARIO ASC"); 
@@ -62,18 +62,6 @@ class Partido extends CI_Model
 		} else {
 			return null;
 		} 
-	} 
-
-
-	public function getPartido()
-	{
-		$query = $this->db->query('SELECT ID_PARTIDO FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
-		if ($query->num_rows() > 0) {
-			return $query->result();
-		} else {
-			return null;
-		} 
-
 	} 
 
 	public function add()

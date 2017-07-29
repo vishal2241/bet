@@ -47,10 +47,10 @@ class Sync extends CI_Controller {
 				$competencia=$this->Competicion->getCompeticion();
 
 				if ($competencia==null) {
-					echo "<b>add</b> ".$value->league_name."<br>";
+					echo "<b>add</b> ".$value->country_name.' '.$value->league_name."<br>";
 					$this->Competicion->add();
 				} else {
-					echo "<b>update</b> ".$value->league_name."<br>";
+					echo "<b>update</b> ".$value->country_name.' '.$value->league_name."<br>";
 					$this->Competicion->update();
 				}
 			}
@@ -61,17 +61,18 @@ class Sync extends CI_Controller {
 
 	public function syncPartidos(){
 		$to = new DateTime(date("Y-m-d"));
-		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
+		$to->add(new DateInterval('P2D')); // sumamos un día por zona horaria
 
-		$this->Api->FROM = date("Y-m-d");
+		$from = new DateTime(date("Y-m-d"));
+		$from->sub(new DateInterval('P1D')); // restamos un día por zona horaria
+
+		$this->Api->FROM = $from->format('Y-m-d');
 		$this->Api->TO   = $to->format('Y-m-d');
 
 		$partidos=$this->Api->getPartidos();
-		echo count($partidos). ' Partidos<br>';
+		echo count($partidos). ' Partidos<br> De: '. $from->format('Y-m-d') . ' a '. $to->format('Y-m-d') . '<br><br>' ;
 		if ($partidos!=null) {
 			foreach ($partidos as $key => $value) {
-
-
 				$this->Partido->ID_PARTIDO      = $value['match_id'];
 				$this->Partido->ID_COMPETENCIA  = $value['league_id'];
 				$this->Partido->FECHA           = $value['match_date'];
@@ -109,18 +110,68 @@ class Sync extends CI_Controller {
 					}
 				}
 			}
+		} else {
+			echo "No hay partidos";
 		}
-		echo "Termine";
+		echo "<h1>Termine</h1>";
 	} // End syncPartidos
 
 
-	public function syncCuotas(){
-		$to = new DateTime(date("Y-m-d"));
-		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
 
-		$this->Api->FROM =date("Y-m-d");
-		#$this->Api->TO = $to->format('Y-m-d');
+	public function syncCuota(){
+		$to = new DateTime(date("Y-m-d"));
+		$to->add(new DateInterval('P2D')); // sumamos un día por zona horaria
+		$from = new DateTime(date("Y-m-d"));
+		$from->sub(new DateInterval('P1D')); // restamos un día por zona horaria
+
+		$this->Api->FROM     = $from->format('Y-m-d');
+		$this->Api->TO       = $to->format('Y-m-d');
+
+		$this->Partido->FROM = date("Y-m-d");
+		$this->Partido->TO   = date("Y-m-d");
+
+		//Ciclo de partidos en la BD
+		$partidos=$this->Partido->index();
+
+		foreach ($partidos as $key => $row) {
+			$this->Api->MATCH_ID = $row->ID_PARTIDO;
+			$cuotas              = $this->Api->getCuotas();
+			if ($cuotas!=null) {
+				foreach ($cuotas as $key => $value) {
+					$this->Cuota->ID_PARTIDO  = $value['match_id'];
+					$this->Cuota->FECHA_CUOTA = $value['odd_date'];
+					$this->Cuota->_1          = $value['_1'];
+					$this->Cuota->_X          = $value['_X'];
+					$this->Cuota->_2          = $value['_2'];
+					$this->Cuota->_1X         = $value['_1X'];
+					$this->Cuota->_2X         = $value['_2X'];
+					$this->Cuota->_12         = $value['_12'];
+					$this->Cuota->NG          = $value['NG'];
+					$this->Cuota->GG          = $value['GG'];
+					$this->Cuota->OVER_25     = $value['OVER_25'];
+					$this->Cuota->UNDER_25    = $value['UNDER_25'];
+					$this->Cuota->BOOKMARKER  = $value['odd_bookmakers'];
+					$this->Cuota->add(); 
+					echo $row->ID_PARTIDO.' '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:green">OK</b><br>';
+				}
+			} else {
+				echo $row->ID_PARTIDO.' '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:red">No tiene cuotas</b><br>';
+			} 
+
+		}
+		echo "<h1>Termine</h1>";
+	} // End syncCuotas
+
+	public function syncAllCuotas(){
+		$to = new DateTime(date("Y-m-d"));
+		$to->add(new DateInterval('P2D')); // sumamos un día por zona horaria
+
+		$from = new DateTime(date("Y-m-d"));
+		$from->sub(new DateInterval('P1D')); // restamos un día por zona horaria
+
+		$this->Api->FROM = $from->format('Y-m-d');
 		$this->Api->TO   = $to->format('Y-m-d');
+
 		$cuotas=$this->Api->getCuotas();
 
 		if ($cuotas!=null) {

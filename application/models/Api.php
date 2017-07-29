@@ -5,6 +5,7 @@ class Api extends CI_Model
 	public $FROM;
 	public $TO;
 	public $KEY;
+	public $MATCH_ID;
 
 
 
@@ -63,25 +64,30 @@ class Api extends CI_Model
 	public function getCuotas(){
 		ini_set('memory_limit','1600M');
 		set_time_limit(3000);
-
-		$request = Requests::get('https://apifootball.com/api/?action=get_odds&from='.$this->FROM.'&to='.$this->TO.'&APIkey='.$this->KEY.'');
+		$request = Requests::get('https://apifootball.com/api/?action=get_odds&from='.$this->FROM.'&to='.$this->TO.'&match_id='.$this->MATCH_ID.'&APIkey='.$this->KEY.'');
 		$request->body=json_decode($request->body,true);
-		foreach ($request->body as $key => $value) {
-			$data[]= array(
-				'match_id'       => $value['match_id'],
-				'odd_bookmakers' => $value['odd_bookmakers'],
-				'odd_date'       => $value['odd_date'],
-				'_1'             => $value['odd_1'],
-				'_X'             => $value['odd_x'],
-				'_2'             => $value['odd_2'],
-				'_1X'            => $value['odd_1'],
-				'_12'            => $value['odd_x'],
-				'_2X'            => $value['odd_2'],
-				'NG'             => $value['bts_no'],
-				'GG'             => $value['bts_yes'],
-				'OVER_25'        => $value['o+2.5'],
-				'UNDER_25'       => $value['u+2.5'],
-				);
+
+		if (!isset($request->body['error'])) {
+			print_r($request->body); exit;
+			foreach ($request->body as $key => $value) {
+				$data[]= array(
+					'match_id'       => $value['match_id'],
+					'odd_bookmakers' => $value['odd_bookmakers'],
+					'odd_date'       => $value['odd_date'],
+					'_1'             => $value['odd_1'],
+					'_X'             => $value['odd_x'],
+					'_2'             => $value['odd_2'],
+					'_1X'            => $value['odd_1'],
+					'_12'            => $value['odd_x'],
+					'_2X'            => $value['odd_2'],
+					'NG'             => $value['bts_no'],
+					'GG'             => $value['bts_yes'],
+					'OVER_25'        => $value['o+2.5'],
+					'UNDER_25'       => $value['u+2.5'],
+					);
+			}
+		} else {
+			$data=null;
 		}
 		return $data;
 	}

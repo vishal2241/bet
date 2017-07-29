@@ -53,6 +53,22 @@
 						</ul>
 					</li>
 				</ul>
+				<ul class="nav navbar-nav">
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> PARTIDOS <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="<?= base_url(); ?>partidos">Listar</a></li>
+							<li class="divider"></li>
+							<li><a href="<?= base_url(); ?>partidos/agregar">Agregar</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav">
+					<li><a href="<?= base_url(); ?>sync">Sync</a></li> 
+				</ul>
+				<ul class="nav navbar-nav">
+					<li><a href="<?= base_url(); ?>widget">Widget</a></li> 
+				</ul>
 				<ul  class="nav navbar-nav navbar-right">
 					<ul class="nav navbar-nav">
 						<li><a href="<?= base_url(); ?>home/deudas">Mis Apuestas</a></li> 
