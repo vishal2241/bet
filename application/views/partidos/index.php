@@ -9,7 +9,18 @@
     <div class="">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-
+        <table border="0" cellspacing="5" cellpadding="5">
+          <tbody>
+            <tr>
+              <td>De:</td>
+              <td><input type="text" id="from" name="from" value="<?= date('Y-m-d') ?>"></td>
+            </tr>
+            <tr>
+              <td>Hasta:</td>
+              <td><input type="text" id="to" name="to" value="<?= date('Y-m-d') ?>"></td>
+            </tr>
+          </tbody>
+        </table>
         <table class="table table-striped table-hover dataTable" id="">
           <thead>
             <tr>
@@ -51,11 +62,41 @@
   <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
   <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
   <script type="text/javascript">
+//https://datatables.net/examples/plug-ins/range_filtering.html
+    $.fn.dataTable.ext.search.push(
+      function( settings, data, dataIndex ) {
+        var min = parseInt( $('#from').val(), 10 );
+        var max = parseInt( $('#to').val(), 10 );
+        var age = parseFloat( data[2] ) || 0; // use data for the age column
+
+        if ( ( isNaN( min ) && isNaN( max ) ) ||
+         ( isNaN( min ) && age <= max ) ||
+         ( min <= age   && isNaN( max ) ) ||
+         ( min <= age   && age <= max ) )
+        {
+          return true;
+        }
+        return false;
+      }
+      );
+
+
     $(document).ready(function() {
-      $('.dataTable').DataTable({
-        "order": [[ 2, 'desc' ], [ 3, 'desc' ]]
-     });
+     var table =   $('.dataTable').DataTable({
+      "bPaginate": true,
+      "bLengthChange": false,
+      "bFilter": true,
+      "bInfo": true,
+      "bAutoWidth": false,
+      "order": [[ 2, 'desc' ], [ 3, 'desc' ]]
+    });
+
+    // Event listener to the two range filtering inputs to redraw on input
+    $('#from, #to').keyup( function() {
+      table.draw();
     } );
-  </script>
+
+  } );
+</script>
 </body>
 </html>   
