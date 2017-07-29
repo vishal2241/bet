@@ -18,7 +18,17 @@ class Competicion extends CI_Model
 
 	public function getCompeticion()
 	{
-		$query = $this->db->query('SELECT ID_COMPETENCIA FROM competencia WHERE ID_COMPETENCIA='.$this->ID_COMPETENCIA.' '); 
+		$query = $this->db->query('SELECT
+			c.ID_COMPETENCIA as ID,
+			c.NOMBRE AS COMPE,
+			pa.NOMBRE AS PAIS 
+			FROM competencia c  
+			LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
+			LEFT JOIN pais pa ON (c.ID_PAIS=pa.ID_PAIS)  
+			WHERE p.FECHA='2017-07-29' 
+			AND p.HORARIO>'12:16' 
+			GROUP BY c.ID_COMPETENCIA 
+			ORDER BY pa.NOMBRE ASC, c.NOMBRE AS'); 
 		
 		if ($query->num_rows() > 0) {
 			return $query->result();
@@ -30,17 +40,14 @@ class Competicion extends CI_Model
 	
 	public function add()
 	{
-			$this->db->insert('competencia', $this);
+		$this->db->insert('competencia', $this);
 	}
 
 	public function update($pais=null)
 	{
-			$this->db->where('ID_COMPETENCIA', $this->ID_COMPETENCIA); 
-			$this->db->update('competencia', $this);
+		$this->db->where('ID_COMPETENCIA', $this->ID_COMPETENCIA); 
+		$this->db->update('competencia', $this);
 	}
-
-
-
 
 
 }

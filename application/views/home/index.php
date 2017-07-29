@@ -30,43 +30,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</tr>
 											<tr>
 												<th class="text-center">Hora</th>
-												<th class="text-center">Torneo</th>
 												<th class="text-center">Local</th>
 												<th class="text-center">Visitante</th>
-												<!--<th class="text-center">1</th>
+												<th class="text-center">1</th>
 												<th class="text-center">X</th>
-												<th class="text-center">2</th>-->
-												<!--	<th class="text-center">Over</th>
-													<th class="text-center">Under</th>
-													<th class="text-center">1-1st</th>
-													<th class="text-center">x-1st</th>
-													<th class="text-center">2-1st</th>
-													<th class="text-center">1x</th>
-													<th class="text-center">1-2</th>
-													<th class="text-center">2x</th>
-													<th class="text-center">GG</th>
-													<th class="text-center">NG</th>-->
-												</tr>
-											</thead>
-											<tbody>
-												<?php 
-												#print_r($partidos);  
-												foreach ($partidos as $key => $row): ?>
-												<tr>
-													<td><?= $row['HORARIO'] ?></td>
-													<td align="center">
-														<?= $row['TORNEO'] ?><br>
-														<small><?= $row['PAIS'] ?></small>
-														
-													</td>
-													<td class="text-center"><?= $row['LOCAL'] ?></td>
-													<td class="text-center"><?= $row['VISITANTE'] ?></td>
-													<!--<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_1'] ?></button></td>
-													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_X'] ?></button></td>
-													<td class="text-center"><button class="btn btn-primary btn-sm"><?= $row['_2'] ?></button></td>-->
-													
-												</tr>
-											<?php endforeach ?>
+												<th class="text-center">2</th> 
+												<th class="text-center">Over</th>
+												<th class="text-center">Under</th>
+												<th class="text-center">1-1st</th>
+												<th class="text-center">x-1st</th>
+												<th class="text-center">2-1st</th>
+												<th class="text-center">1x</th>
+												<th class="text-center">1-2</th>
+												<th class="text-center">2x</th>
+												<th class="text-center">GG</th>
+												<th class="text-center">NG</th>
+											</tr>
+										</thead>
+										<tbody>
+
 										</tbody>
 									</table>
 								</div>
@@ -140,10 +122,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						"bPaginate": false,
 						"bLengthChange": false,
 						"bFilter": true,
-						"bInfo": true,
+						"bInfo": false,
 						"bAutoWidth": false,
+						"ordering": false
 					//	"order": [[ 2, 'desc' ], [ 3, 'desc' ]]
-					});
+				});
 				} );
 
 
@@ -180,6 +163,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
 
 			});
+
+
+			$.getJSON('<?= base_url(); ?>ajax/json_compe', {fecha: fecha}, function(resp) {
+				console.log(resp);
+				$.each(resp, function(i, item) {
+
+				});
+			});
+
 
 		</script>
 		</html>
