@@ -136,6 +136,7 @@ class Sync extends CI_Controller {
 		foreach ($partidos as $key => $row) {
 			$this->Api->MATCH_ID = $row->ID_PARTIDO;
 			$cuotas              = $this->Api->getCuotas();
+			$ok=0;
 			if ($cuotas!=null) {
 				foreach ($cuotas as $key => $value) {
 					$this->Cuota->ID_PARTIDO  = $value['match_id'];
@@ -152,6 +153,7 @@ class Sync extends CI_Controller {
 					$this->Cuota->UNDER_25    = $value['UNDER_25'];
 					$this->Cuota->BOOKMARKER  = $value['odd_bookmakers'];
 					$this->Cuota->add(); 
+					$ok++;
 					echo $row->ID_PARTIDO.' '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:green">OK</b><br>';
 				}
 			} else {
@@ -159,8 +161,9 @@ class Sync extends CI_Controller {
 			} 
 
 		}
-		echo "<h1>Termine</h1>";
+		echo "<h1>Termine [".$ok."]</h1>";
 	} // End syncCuotas
+
 
 	public function syncAllCuotas(){
 		$to = new DateTime(date("Y-m-d"));
