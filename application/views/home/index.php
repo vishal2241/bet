@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="col-md-9">
 						<div class="tim-container">
 							<!-- tables row -->
-							<div class="tim-row" id="tables-row">					 
+							<div class="" id="tables-row">					 
 								<div class="table-responsive">
 									<table class="table" id="bets">
 										<thead>
@@ -137,7 +137,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript">
 				$(document).ready(function() {
 					$('#bets').DataTable({
-						"iDisplayLength": -1,
+						"bPaginate": false,
+						"bLengthChange": false,
+						"bFilter": true,
+						"bInfo": true,
+						"bAutoWidth": false,
+					//	"order": [[ 2, 'desc' ], [ 3, 'desc' ]]
 					});
 				} );
 
