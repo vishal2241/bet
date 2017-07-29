@@ -24,7 +24,8 @@ class Ajax extends CI_Controller {
 	public function json_compe(){
 		if (isset($_GET['fecha']) and $_GET['fecha']!='') {
 			$date=$_GET['fecha'];
-			$hour=date("H:i");
+			$hour='12:00';
+			#$hour=date("H:i");
 			$data = $this->Competicion->getCompeticion($date, $hour);
 			echo json_encode($data);
 		} else {

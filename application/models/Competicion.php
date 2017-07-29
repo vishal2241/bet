@@ -16,7 +16,7 @@ class Competicion extends CI_Model
 		$this->NOMBRE=null;
 	}
 
-	public function getCompeticion()
+	public function getCompeticion($date, $hour)
 	{
 		$query = $this->db->query('SELECT
 			c.ID_COMPETENCIA as ID,
@@ -25,10 +25,10 @@ class Competicion extends CI_Model
 			FROM competencia c  
 			LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
 			LEFT JOIN pais pa ON (c.ID_PAIS=pa.ID_PAIS)  
-			WHERE p.FECHA='2017-07-29' 
-			AND p.HORARIO>'12:16' 
+			WHERE p.FECHA="'.$date.'" 
+			AND p.HORARIO>"'.$hour.'" 
 			GROUP BY c.ID_COMPETENCIA 
-			ORDER BY pa.NOMBRE ASC, c.NOMBRE AS'); 
+			ORDER BY pa.NOMBRE ASC, c.NOMBRE ASC'); 
 		
 		if ($query->num_rows() > 0) {
 			return $query->result();

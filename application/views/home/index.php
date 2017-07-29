@@ -16,44 +16,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="col-md-9">
 						<div class="tim-container">
 							<!-- tables row -->
-							<div class="" id="tables-row">					 
-								<div class="table-responsive">
-									<table class="table" id="bets">
-										<thead>
-											<tr>
-												<th colspan="16" class="text-left" >
-													<h4>
-														<img src="<?= base_url(); ?>public/img/banderas/48/Colombia.png"> 
-														<b>Colombia: </b> Liga Aguila
-													</h4>
-												</th>
-											</tr>
-											<tr>
-												<th class="text-center">Hora</th>
-												<th class="text-center">Local</th>
-												<th class="text-center">Visitante</th>
-												<th class="text-center">1</th>
-												<th class="text-center">X</th>
-												<th class="text-center">2</th> 
-												<th class="text-center">Over</th>
-												<th class="text-center">Under</th>
-												<th class="text-center">1-1st</th>
-												<th class="text-center">x-1st</th>
-												<th class="text-center">2-1st</th>
-												<th class="text-center">1x</th>
-												<th class="text-center">1-2</th>
-												<th class="text-center">2x</th>
-												<th class="text-center">GG</th>
-												<th class="text-center">NG</th>
-											</tr>
-										</thead>
-										<tbody>
-
-										</tbody>
-									</table>
-								</div>
-								<!-- end container -->
+							<div class="table-responsive">
+								<table class="table" id="bets">
+									<thead>
+										<tr>
+											<th class="text-center">Hora</th>
+											<th class="text-center">Local</th>
+											<th class="text-center">Visitante</th>
+											<th class="text-center">1</th>
+											<th class="text-center">X</th>
+											<th class="text-center">2</th> 
+											<th class="text-center">Over</th>
+											<th class="text-center">Under</th>
+											<th class="text-center">1-1st</th>
+											<th class="text-center">x-1st</th>
+											<th class="text-center">2-1st</th>
+											<th class="text-center">1x</th>
+											<th class="text-center">1-2</th>
+											<th class="text-center">2x</th>
+											<th class="text-center">GG</th>
+											<th class="text-center">NG</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										
+									</tbody>
+								</table>
 							</div>
+							<!-- end container -->
+
 						</div>
 					</div>
 					<div class="col-md-3">
@@ -117,17 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script type="text/javascript">
-				$(document).ready(function() {
-					$('#bets').DataTable({
-						"bPaginate": false,
-						"bLengthChange": false,
-						"bFilter": true,
-						"bInfo": false,
-						"bAutoWidth": false,
-						"ordering": false
-					//	"order": [[ 2, 'desc' ], [ 3, 'desc' ]]
-				});
-				} );
+
 
 
 				/*for (var i = 0; i < 40; i++) {
@@ -164,11 +146,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			});
 
-
+			var fecha='2017-07-29';
 			$.getJSON('<?= base_url(); ?>ajax/json_compe', {fecha: fecha}, function(resp) {
-				console.log(resp);
 				$.each(resp, function(i, item) {
-
+					$("#bets > tbody").append('\
+						<tr id='+ item.ID+'>\
+							<td colspan="16" class="text-left" >\
+								<h4>\
+									<img src="<?= base_url(); ?>public/img/banderas/48/Colombia.png"> \
+									<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
+								</h4>\
+							</td>\
+						</tr>\
+						');
 				});
 			});
 
