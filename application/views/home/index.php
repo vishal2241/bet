@@ -101,12 +101,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				});
 
+
+				function isEmpty(val){
+					return (val === undefined || val == null || val.length <= 0) ? '0' : val;
+				}
+
 				var fecha='2017-07-29';
 				$.getJSON('<?= base_url(); ?>ajax/json_compe', {fecha: fecha}, function(resp) {
 					$.each(resp, function(i, item) {
 						$("#bets > tbody").append('\
 							<tr id='+ item.ID+'>\
-								<td colspan="16" class="text-left" >\
+								<td colspan="13" class="text-left" >\
 									<h4>\
 										<img width="24" src="<?= base_url(); ?>public/img/logos/country/'+item.IMG+'.png"> \
 										<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
@@ -117,24 +122,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						var compe = item.ID;
 						$.getJSON('<?= base_url(); ?>ajax/json_match', {fecha: fecha, compe:compe}, function(match) {
 							$.each(match, function(a, row) {
-								$("#bets > tbody ").append('\
+								$("#bets > tbody #"+compe+"").after('\
 									<tr id='+ row.ID+'>\
 										<td class="" >'+ row.HORARIO+'</td>\
 										<td class="" >'+ row.LOCAL+'</td>\
 										<td class="" >'+ row.VISITANTE+'</td>\
-										<td class="" >'+ row._1+'</td>\
-										<td class="" >'+ row._X+'</td>\
-										<td class="" >'+ row._2+'</td>\
-										<td class="" >'+ row._1X+'</td>\
-										<td class="" >'+ row._12+'</td>\
-										<td class="" >'+ row._2X+'</td>\
-										<td class="" >'+ row._UNDER_25+'</td>\
-										<td class="" >'+ row._OVER_25+'</td>\
-										<td class="" >'+ row._1+'</td>\
-										<td class="" >'+ row._1+'</td>\
-										<td class="" >'+ row._1+'</td>\
-										<td class="" >'+ row._1+'</td>\
-										<td class="" >'+ row._1+'</td>\
+										<td class="" >'+ isEmpty(row._1)+'</td>\
+										<td class="" >'+ isEmpty(row._X)+'</td>\
+										<td class="" >'+ isEmpty(row._2)+'</td>\
+										<td class="" >'+ isEmpty(row._1X)+'</td>\
+										<td class="" >'+ isEmpty(row._12)+'</td>\
+										<td class="" >'+ isEmpty(row._2X)+'</td>\
+										<td class="" >'+ isEmpty(row.UNDER_25)+'</td>\
+										<td class="" >'+ isEmpty(row.OVER_25)+'</td>\
+										<td class="" >'+ isEmpty(row.GG)+'</td>\
+										<td class="" >'+ isEmpty(row.NG)+'</td>\
 									</tr>\
 									');
 							});

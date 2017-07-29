@@ -35,11 +35,12 @@ class Ajax extends CI_Controller {
 
 
 	public function json_match(){
-		if (isset($_GET['fecha']) and $_GET['fecha']!='') {
+		if (isset($_GET['fecha']) and $_GET['fecha']!='' and isset($_GET['compe']) and $_GET['compe']!='') {
 			$date=$_GET['fecha'];
+			$compe=$_GET['compe'];
 			$hour='12:00';
 			#$hour=date("H:i");
-			$data = $this->Partido->getPartido($date, $hour);
+			$data = $this->Partido->getPartido($date, $hour, $compe);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());
