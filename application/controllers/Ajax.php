@@ -24,8 +24,7 @@ class Ajax extends CI_Controller {
 	public function json_compe(){
 		if (isset($_GET['fecha']) and $_GET['fecha']!='') {
 			$date=$_GET['fecha'];
-			$hour='12:00';
-			#$hour=date("H:i");
+			$hour=date("H:i");
 			$data = $this->Competicion->getByDate($date, $hour);
 			echo json_encode($data);
 		} else {
@@ -38,8 +37,7 @@ class Ajax extends CI_Controller {
 		if (isset($_GET['fecha']) and $_GET['fecha']!='' and isset($_GET['compe']) and $_GET['compe']!='') {
 			$date=$_GET['fecha'];
 			$compe=$_GET['compe'];
-			$hour='12:00';
-			#$hour=date("H:i");
+			$hour=date("H:i");
 			$data = $this->Partido->getPartidoByCompe($date, $hour, $compe);
 			echo json_encode($data);
 		} else {

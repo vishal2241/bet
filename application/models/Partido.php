@@ -68,6 +68,10 @@ class Partido extends CI_Model
 			p.FECHA = '".$date."'  
 			AND p.HORARIO>'".$hour."' 
 			AND p.ID_COMPETENCIA='".$compe."' 
+			AND p.ESTADO!='FT' 
+			AND p.ESTADO!='Aband.' 
+			AND p.ESTADO!='Canc.' 
+			AND p.AUTORIZADO='SI' 
 			GROUP BY p.ID_PARTIDO 
 			ORDER BY p.HORARIO DESC"); 
 		if ($query->num_rows() > 0) {
@@ -98,6 +102,7 @@ class Partido extends CI_Model
 			LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
 			WHERE
 			p.HORARIO>='".$this->HORARIO."' 
+			AND p.ESTADO='' 
 			AND  p.FECHA BETWEEN '".$this->FROM."' AND '".$this->TO."' 
 			ORDER BY p.FECHA ASC, p.HORARIO ASC"); 
 

@@ -64,7 +64,7 @@ class Sync extends CI_Controller {
 		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
 
 		$from = new DateTime(date("Y-m-d"));
-		$from->sub(new DateInterval('P1D')); // restamos un día por zona horaria
+		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
 
 		$this->Api->FROM = $from->format('Y-m-d');
 		$this->Api->TO   = $to->format('Y-m-d');
@@ -122,7 +122,7 @@ class Sync extends CI_Controller {
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
 		$from = new DateTime(date("Y-m-d"));
-		$from->sub(new DateInterval('P1D')); // restamos un día por zona horaria
+		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
 
 		$this->Api->FROM     = $from->format('Y-m-d');
 		$this->Api->TO       = $to->format('Y-m-d');
@@ -132,7 +132,6 @@ class Sync extends CI_Controller {
 
 		//Ciclo de partidos en la BD
 		$partidos=$this->Partido->index();
-//SELECT p.ID_PARTIDO, p.FECHA, p.HORARIO, p.LOCAL, p.VISITANTE, c.* FROM partido p LEFT JOIN cuota c ON (p.ID_PARTIDO=c.ID_PARTIDO) where p.FECHA = '2017-07-29'
 		$ok=0;
 		foreach ($partidos as $key => $row) {
 			$this->Api->MATCH_ID = $row->ID_PARTIDO;
@@ -172,7 +171,7 @@ class Sync extends CI_Controller {
 		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
 
 		$from = new DateTime(date("Y-m-d"));
-		$from->sub(new DateInterval('P1D')); // restamos un día por zona horaria
+		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
 
 		$this->Api->FROM = $from->format('Y-m-d');
 		$this->Api->TO   = $to->format('Y-m-d');

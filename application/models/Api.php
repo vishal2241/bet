@@ -55,6 +55,20 @@ class Api extends CI_Model
 						'goalscorer'           => $value->goalscorer,
 						);
 				}
+			} else {
+				$data[]= array(
+					'match_id'             => $value->match_id,
+					'league_id'            => $value->league_id,
+					'match_date'           => $value->match_date,
+					'match_status'         => $value->match_status,
+					'match_time'           => $value->match_time,
+					'match_hometeam_name'  => $value->match_hometeam_name,
+					'match_hometeam_score' => $value->match_hometeam_score,
+					'match_awayteam_name'  => $value->match_awayteam_name,
+					'match_awayteam_score' => $value->match_awayteam_score,
+					'match_live'           => $value->match_live,
+					'goalscorer'           => $value->goalscorer,
+					);
 			}
 		}
 		return $data;
