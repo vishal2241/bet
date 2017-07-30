@@ -74,6 +74,7 @@
 <script src="<?= base_url(); ?>public/js/material-kit.js" type="text/javascript"></script>
 <script src="<?= base_url(); ?>public/js/moment.js"></script> 	
 <script src="<?= base_url(); ?>public/js/moment-with-locales.min.js"></script> 	
+<script src="<?= base_url(); ?>public/js/general.js"></script> 	
 
 
 <script>

@@ -78,43 +78,55 @@ class Api extends CI_Model
 			$GG       = 0;
 			$OVER_25  = 0;
 			$UNDER_25 = 0;
-			$n=count($request->body);
+			$n=0;
 			//sumamos todas las cuotas para luego sacar promedio
 			foreach ($request->body as $key => $value) {
-				$id         = $value['match_id'];
-				$bookmakers = $value['odd_bookmakers'];
-				$date       = $value['odd_date'];
-				$_1         = $_1+$value['odd_1'];
-				$_X         = $_X+$value['odd_x'];
-				$_2         = $_2+$value['odd_2'];
-				$_1X        = $_1X+$value['odd_1'];
-				$_12        = $_12+$value['odd_x'];
-				$_2X        = $_2X+$value['odd_2'];
-				$NG         = $NG+$value['bts_no'];
-				$GG         = $GG+$value['bts_yes'];
-				$OVER_25    = $OVER_25+$value['o+2.5'];
-				$UNDER_25   = $UNDER_25+$value['u+2.5'];
+
+				if ($value['o+2.5']>0 and $value['u+2.5']>0 and $value['bts_yes']>0 and $value['bts_no']>0) {
+					$id         = $value['match_id'];
+					$bookmakers = $value['odd_bookmakers'];
+					$date       = $value['odd_date'];
+					$_1         = $_1+$value['odd_1'];
+					$_X         = $_X+$value['odd_x'];
+					$_2         = $_2+$value['odd_2'];
+					$_1X        = $_1X+$value['odd_1'];
+					$_12        = $_12+$value['odd_x'];
+					$_2X        = $_2X+$value['odd_2'];
+					$NG         = $NG+$value['bts_no'];
+					$GG         = $GG+$value['bts_yes'];
+					$OVER_25    = $OVER_25+$value['o+2.5'];
+					$UNDER_25   = $UNDER_25+$value['u+2.5'];
+					$n++;
+				}
 			}
 
-			$data[]= array(
-				'match_id'       => $id,
-				'odd_bookmakers' => $bookmakers,
-				'odd_date'       => $date,
-				'_1'             => round($_1/$n,2),
-				'_X'             => round($_X/$n,2),
-				'_2'             => round($_2/$n,2),
-				'_1X'            => round($_1X/$n,2),
-				'_12'            => round($_12/$n,2),
-				'_2X'            => round($_2X/$n,2),
-				'NG'             => round($NG/$n,2),
-				'GG'             => round($GG/$n,2),
-				'OVER_25'        => round($OVER_25/$n,2),
-				'UNDER_25'       => round($UNDER_25/$n,2),
-				);
+			if (isset($id)) {
+				$data[]= array(
+					'match_id'       => $id,
+					'odd_bookmakers' => $bookmakers,
+					'odd_date'       => $date,
+					'_1'             => round($_1/$n,2),
+					'_X'             => round($_X/$n,2),
+					'_2'             => round($_2/$n,2),
+					'_1X'            => round($_1X/$n,2),
+					'_12'            => round($_12/$n,2),
+					'_2X'            => round($_2X/$n,2),
+					'NG'             => round($NG/$n,2),
+					'GG'             => round($GG/$n,2),
+					'OVER_25'        => round($OVER_25/$n,2),
+					'UNDER_25'       => round($UNDER_25/$n,2),
+					);
+			}
+			else {
+				$data=null;
+			}
+
+
 
 		} else {
 			$data=null;
 		}
+
 		return $data;
 	}
 
