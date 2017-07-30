@@ -26,7 +26,7 @@ class Ajax extends CI_Controller {
 			$date=$_GET['fecha'];
 			$hour='12:00';
 			#$hour=date("H:i");
-			$data = $this->Competicion->getCompeticion($date, $hour);
+			$data = $this->Competicion->getByDate($date, $hour);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());

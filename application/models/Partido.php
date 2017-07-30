@@ -50,7 +50,7 @@ class Partido extends CI_Model
 			p.ID_PARTIDO AS ID,
 			p.ID_COMPETENCIA AS COMPE,
 			p.FECHA,
-			p.HORARIO,
+			SUBSTR(p.HORARIO, 1, 5) AS HORARIO,
 			p.LOCAL,
 			p.VISITANTE,
 			c._1,
@@ -69,7 +69,7 @@ class Partido extends CI_Model
 			AND p.HORARIO>'".$hour."' 
 			AND p.ID_COMPETENCIA='".$compe."' 
 			GROUP BY p.ID_PARTIDO 
-			ORDER BY p.HORARIO ASC"); 
+			ORDER BY p.HORARIO DESC"); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {

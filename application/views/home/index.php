@@ -17,7 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="tim-container">
 							<!-- tables row -->
 							<div class="table-responsive">
-								<table class="table" id="bets">								
+								<table class="table" id="bets">
+									
 									<tbody>
 										
 										
@@ -106,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					return (val === undefined || val == null || val.length <= 0) ? '0' : val;
 				}
 
-				var fecha='2017-07-29';
+				var fecha='2017-07-30';
 				$.getJSON('<?= base_url(); ?>ajax/json_compe', {fecha: fecha}, function(resp) {
 					$.each(resp, function(i, item) {
 						$("#bets > tbody").append('\
@@ -119,7 +120,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</td>\
 							</tr>\
 							');
+
+						
 						var compe = item.ID;
+						
 						$.getJSON('<?= base_url(); ?>ajax/json_match', {fecha: fecha, compe:compe}, function(match) {
 							$.each(match, function(a, row) {
 								$("#bets > tbody #"+compe+"").after('\
@@ -140,6 +144,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</tr>\
 									');
 							});
+							$("#bets > tbody #"+compe+"").after('\
+								<tr>\
+									<th>Hora</th>\
+									<th>Local</th>\
+									<th>Visitante</th>\
+									<th>1</th>\
+									<th>X</th>\
+									<th>2</th>\
+									<th>1X</th>\
+									<th>12</th>\
+									<th>2X</th>\
+									<th>OVER</th>\
+									<th>UNDER</th>\
+									<th>GG</th>\
+									<th>NG</th>\
+								</tr>\
+								');
+
 						});
 
 					});

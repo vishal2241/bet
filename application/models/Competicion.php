@@ -16,7 +16,19 @@ class Competicion extends CI_Model
 		$this->NOMBRE=null;
 	}
 
-	public function getCompeticion($date, $hour)
+
+	public function getCompeticion()
+	{
+		$query = $this->db->query('SELECT ID_COMPETENCIA FROM competencia WHERE ID_COMPETENCIA='.$this->ID_COMPETENCIA.' ');
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	}
+
+	public function getByDate($date, $hour)
 	{
 		$query = $this->db->query('SELECT
 			c.ID_COMPETENCIA as ID,
