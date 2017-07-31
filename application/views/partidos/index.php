@@ -9,7 +9,7 @@
     <div class="">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-      <table class="">
+        <table class="">
           <tr>
             <td>
               <div class="form-group">
@@ -21,6 +21,11 @@
               <div class="form-group">
                 <label for="fecha">Fin : </label>
                 <input type="date" class="form-control" id="to" value="<?= date ('Y-m-d')?>">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <button class="btn btn-Primary" id="go">Go</button>
               </div>
             </td>
           </tr>
@@ -59,6 +64,8 @@
         "bInfo": true,
         "bAutoWidth": false,
         "order": [[ 0, 'desc' ], [ 1, 'asc' ]],
+        "lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
+        "iDisplayLength": 100
       });
 
       function get_partidos (from, to) {
@@ -86,7 +93,9 @@
       get_partidos(from, to);
 
 
-
+      $( "#go" ).click(function() {
+        get_partidos($('#from').val(), $('#to').val());
+      });
 
 
 
