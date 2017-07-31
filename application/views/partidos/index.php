@@ -9,12 +9,12 @@
     <div class="">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <table class="table table-striped table-hover dataTable" id="">
+        <table class="table table-striped table-hover dataTable" id="match">
           <thead>
             <tr>
               <th>
                 <div class="form-group">
-                <label for="fecha">Fecha:</label>
+                  <label for="fecha">Fecha:</label>
                   <input type="date" class="form-control" id="fecha">
                 </div>
               </th>
@@ -44,29 +44,24 @@
   <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
+      var from='2017-07-31';
+      var to='2017-07-31';
 
-
-      $.getJSON(''+url+'ajax/json_match_all', {fecha: fecha}, function(match) {
+      $.getJSON('<?= base_url(); ?>ajax/json_match_all', {from: from, to:to}, function(match) {
         $.each(match, function(a, row) {
-          $("#bets > tbody #"+compe+"").after('\
-            <tr id='+ row.ID+'>\
-              <td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
-              <td  class="text-left" width="12%" >'+ row.LOCAL+'</td>\
-              <td  class="text-left" width="12%" >'+ row.VISITANTE+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row._1)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row._X)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row._2)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row._1X)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row._12)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row._2X)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row.UNDER_25)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row.OVER_25)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row.GG)+'</td>\
-              <td  class="text-center" width="7%" >'+ isEmpty(row.NG)+'</td>\
-            </tr>\
-            ');
+          $("#match tbody ").append('\
+            <tr id='+ row.ID_PARTIDO+'>\
+              <td  class="text-left"   >'
+                + row.LOCAL+ ' '+ row.VISITANTE+
+                '</td>\
+                <td  class="text-center"   >'+ row.ID_PARTIDO+'</td>\
+                <td  class="text-center"   >'+ row.ID_PARTIDO+'</td>\
+                <td  class="text-center"   >'+ row.ID_PARTIDO+'</td>\
+                <td  class="text-center"   >'+ row.ID_PARTIDO+'</td>\
+              </tr>\
+              ');
         });
-       
+
 
       });
 

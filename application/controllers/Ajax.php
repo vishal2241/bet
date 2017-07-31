@@ -47,10 +47,10 @@ class Ajax extends CI_Controller {
 
 
 	public function json_match_all(){
-		if (isset($_GET['fecha']) and $_GET['fecha']!='') {
-			$date=$_GET['fecha'];
-			$hour=date("H:i");
-			$data = $this->Partido->all($date);
+		if (isset($_GET['from']) and $_GET['from']!='' and isset($_GET['to']) and $_GET['to']!='') {
+			$from=$_GET['from'];
+			$to=$_GET['to'];
+			$data = $this->Partido->all($from, $to);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());

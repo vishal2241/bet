@@ -79,16 +79,19 @@ class Partido extends CI_Model
 		} 
 	}
 
-	public function all($date)
+	public function all($from, $to)
 	{
 		$query = $this->db->query("
 			SELECT 
-			p.*,
+			p.ID_PARTIDO,
+			p.LOCAL,
+			p.VISITANTE,
 			co.NOMBRE AS TORNEO,
 			pa.NOMBRE as PAIS 
 			FROM partido p
 			LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
 			LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
+			WHERE p.FECHA BETWEEN '".$from."'   AND '".$to."'
 			ORDER BY p.FECHA DESC, p.HORARIO ASC"); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
