@@ -50,7 +50,8 @@ class Ajax extends CI_Controller {
 		if (isset($_GET['from']) and $_GET['from']!='' and isset($_GET['to']) and $_GET['to']!='') {
 			$from=$_GET['from'];
 			$to=$_GET['to'];
-			$data = $this->Partido->all($from, $to);
+			$filtro=$_GET['filtro'];
+			$data = $this->Partido->all($from, $to, $filtro);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());

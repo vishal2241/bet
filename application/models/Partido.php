@@ -80,24 +80,39 @@ class Partido extends CI_Model
 		} 
 	}
 
-	public function all($from, $to)
+	public function all($from, $to, $filtro)
 	{
-		$query = $this->db->query("
-			SELECT 
-			p.ID_PARTIDO,
-			p.LOCAL,
-			p.VISITANTE,
-			p.ESTADO,
-			p.FECHA,
-			p.HORARIO,
-			p.AUTORIZADO,
-			co.NOMBRE AS TORNEO,
-			pa.NOMBRE as PAIS 
-			FROM partido p
-			LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
-			LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
-			WHERE p.FECHA BETWEEN '".$from."'   AND '".$to."'
-			ORDER BY p.FECHA DESC, p.HORARIO ASC"); 
+		$sql="SELECT 
+		p.ID_PARTIDO,
+		p.LOCAL,
+		p.VISITANTE,
+		p.ESTADO,
+		p.FECHA,
+		p.HORARIO,
+		p.AUTORIZADO,
+		co.NOMBRE AS TORNEO,
+		pa.NOMBRE as PAIS 
+		FROM partido p
+		LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
+		LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
+		WHERE ";
+
+		switch ($filtro) {
+			case 'Autorizados':
+			$sql.="  p.AUTORIZADO='SI' AND";
+			break;
+			case 'NoAutorizados':
+			$sql.="  p.AUTORIZADO='NO' AND";
+			break;
+			case 'Cancelados':
+			$sql.="  p.ESTADO='Canc.' AND";
+			break;
+		}
+		$sql.="
+		p.FECHA BETWEEN '".$from."'   AND '".$to."'
+		ORDER BY p.FECHA DESC, p.HORARIO ASC";
+
+		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {

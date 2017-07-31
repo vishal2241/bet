@@ -25,6 +25,17 @@
             </td>
             <td>
               <div class="form-group">
+                <label for="fecha">Filtro : </label>
+                <select class="form-control" id="filtro">
+                  <option value="Autorizados">Autorizados</option>
+                  <option value="NoAutorizados">No autorizados</option>
+                  <option  value="Todos" selected>Todos</option>
+                  <option value="Cancelados">Cancelados</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
                 <button class="btn btn-Primary" id="go">Go</button>
               </div>
             </td>
@@ -68,8 +79,8 @@
         "iDisplayLength": 100
       });
 
-      function get_partidos (from, to) {
-        $.getJSON('<?= base_url(); ?>ajax/json_match_all', {from: from, to:to}, function(match) {
+      function get_partidos (from, to, filtro) {
+        $.getJSON('<?= base_url(); ?>ajax/json_match_all', {from: from, to:to, filtro:filtro}, function(match) {
           $.each(match, function(a, row) {
             var rowNode=   table.row.add( [ 
               ''+row.FECHA+'' , 
@@ -90,11 +101,14 @@
       var from = $("#from").val();
       var to   = $("#to").val();
 
-      get_partidos(from, to);
+      get_partidos(from, to, 'Todos');
 
 
       $( "#go" ).click(function() {
-        get_partidos($('#from').val(), $('#to').val());
+        table
+        .clear()
+        .draw();
+        get_partidos($('#from').val(), $('#to').val(), $( "#filtro option:selected" ).text());
       });
 
 
