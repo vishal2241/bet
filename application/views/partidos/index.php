@@ -81,7 +81,8 @@
 
       function get_partidos (from, to, filtro) {
         $.getJSON('<?= base_url(); ?>ajax/json_match_all', {from: from, to:to, filtro:filtro}, function(match) {
-          $.each(match, function(a, row) {
+         if (match!=null) {
+           $.each(match, function(a, row) {
             var rowNode=   table.row.add( [ 
               ''+row.FECHA+'' , 
               ''+row.HORARIO+'' , 
@@ -95,7 +96,8 @@
             .draw()
             .node();
           });
-        });
+         }
+       });
 
       }
       var from = $("#from").val();
