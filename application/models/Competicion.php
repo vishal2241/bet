@@ -39,7 +39,9 @@ class Competicion extends CI_Model
 			LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
 			LEFT JOIN pais pa ON (c.ID_PAIS=pa.ID_PAIS)  
 			WHERE p.FECHA="'.$date.'" 
-			AND p.HORARIO>"'.$hour.'" 
+			AND p.HORARIO>"'.$hour.'"
+			AND p.ESTADO="" 
+			AND p.AUTORIZADO="SI"  
 			GROUP BY c.ID_COMPETENCIA 
 			ORDER BY pa.NOMBRE ASC, c.NOMBRE ASC'); 
 		

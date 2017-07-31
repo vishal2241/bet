@@ -11,8 +11,7 @@ class Partidos extends CI_Controller {
 
 	public function index()
 	{
-		$data['partidos']  = $this->Partido->all();
-		$this->load->view('partidos/index', $data);	 
+		$this->load->view('partidos/index');	 
 	}
 
 	public function agregar()

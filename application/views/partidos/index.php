@@ -9,16 +9,17 @@
     <div class="">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <table border="0" cellspacing="5" cellpadding="5">
-          <tbody>
-            <tr>
-              <td>Fecha:</td>
-              <td><input type="text" id="date" name="date" value="<?= date('Y-m-d') ?>"></td>
-            </tr>
-          </tbody>
-        </table>
         <table class="table table-striped table-hover dataTable" id="">
           <thead>
+            <tr>
+              <th>
+                <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                  <input type="date" class="form-control" id="fecha">
+                </div>
+              </th>
+              <th colspan="4" ></th>
+            </tr> 
             <tr>
               <th colspan="5" class="text-center info">Partidos</th>
             </tr>
@@ -31,22 +32,6 @@
             </tr>
           </thead>
           <tbody > 
-            <?php foreach ($partidos as $key => $row): ?>
-              <tr>
-                <td><b><?= $row->LOCAL .' ['.$row->GOLES_LOCAL.' vs. '. $row->GOLES_VISITANTE.'] ' .$row->VISITANTE . '</b><br>'. $row->PAIS . ' - '.  $row->TORNEO ?></td>
-                <td><?= $row->ESTADO  ?></td>
-                <td><?= $row->FECHA  ?></td>
-                <td><?= $row->HORARIO  ?></td>
-                <td>
-                  <a  class="btn btn-warning btn-sm" href="<?php echo base_url(); ?>conceptos/editar/<?php echo $row->ID_PARTIDO; ?>"><i class="fa fa-cog" aria-hidden="true"></i></a> 
-                  <a  class="btn btn-danger btn-sm" onclick="DeleteItem('¿Está seguro de eliminar este concepto?', '<?php echo base_url(); ?>conceptos/eliminar/<?php echo $row->ID_PARTIDO ?>')" >
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </a> 
-                </td>
-              </tr>
-            <?php endforeach ?>
-
-
           </tbody>
         </table>
 
@@ -58,36 +43,51 @@
   <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
   <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
   <script type="text/javascript">
-//https://datatables.net/examples/plug-ins/range_filtering.html
-$.fn.dataTable.ext.search.push(
-  function( settings, data, dataIndex ) {
-    var min = parseInt( $('#date').val() );
-        var date = parseFloat( data[2] ); // use data for the date column
-        console.log(date);
-        if ( ( isNaN( min ) ) || min == date)         {
-          return true;
-        }
-        return false;
-      }
-      );
+    $(document).ready(function() {
 
 
-$(document).ready(function() {
- var table =   $('.dataTable').DataTable({
-  "bPaginate": true,
-  "bLengthChange": false,
-  "bFilter": true,
-  "bInfo": true,
-  "bAutoWidth": false,
-  "order": [[ 2, 'desc' ], [ 3, 'desc' ]]
-});
+      $.getJSON(''+url+'ajax/json_match_all', {fecha: fecha}, function(match) {
+        $.each(match, function(a, row) {
+          $("#bets > tbody #"+compe+"").after('\
+            <tr id='+ row.ID+'>\
+              <td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
+              <td  class="text-left" width="12%" >'+ row.LOCAL+'</td>\
+              <td  class="text-left" width="12%" >'+ row.VISITANTE+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row._1)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row._X)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row._2)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row._1X)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row._12)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row._2X)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row.UNDER_25)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row.OVER_25)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row.GG)+'</td>\
+              <td  class="text-center" width="7%" >'+ isEmpty(row.NG)+'</td>\
+            </tr>\
+            ');
+        });
+       
 
-    // Event listener to the two range filtering inputs to redraw on input
-    $('#date').keyup( function() {
-      table.draw();
+      });
+
+
+
+
+
+
+
+
+
+      var table =   $('.dataTable').DataTable({
+        "bPaginate": true,
+        "bLengthChange": false,
+        "bFilter": true,
+        "bInfo": true,
+        "bAutoWidth": false,
+        "order": [[ 2, 'desc' ], [ 3, 'desc' ]]
+      });
+
     } );
-
-  } );
-</script>
+  </script>
 </body>
 </html>   

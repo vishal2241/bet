@@ -68,9 +68,7 @@ class Partido extends CI_Model
 			p.FECHA = '".$date."'  
 			AND p.HORARIO>'".$hour."' 
 			AND p.ID_COMPETENCIA='".$compe."' 
-			AND p.ESTADO!='FT' 
-			AND p.ESTADO!='Aband.' 
-			AND p.ESTADO!='Canc.' 
+			AND p.ESTADO='' 
 			AND p.AUTORIZADO='SI' 
 			GROUP BY p.ID_PARTIDO 
 			ORDER BY p.HORARIO DESC"); 
@@ -81,9 +79,14 @@ class Partido extends CI_Model
 		} 
 	}
 
-	public function all()
+	public function all($date)
 	{
-		$query = $this->db->query("SELECT p.*, co.NOMBRE AS TORNEO, pa.NOMBRE as PAIS FROM partido p
+		$query = $this->db->query("
+			SELECT 
+			p.*,
+			co.NOMBRE AS TORNEO,
+			pa.NOMBRE as PAIS 
+			FROM partido p
 			LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
 			LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
 			ORDER BY p.FECHA DESC, p.HORARIO ASC"); 

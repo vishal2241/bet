@@ -19,10 +19,22 @@
 						</div>
 					</div>
 				</a>-->
+				<a class="navbar-brand" style="font-size: 17px" href="<?= base_url(); ?>"><b>Bet</b>365  <b></b></a>
+
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navigation-doc">
+				<ul class="nav navbar-nav">
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> PARTIDOS <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="<?= base_url(); ?>partidos/index">Autorizados</a></li>
+							<li class="divider"></li>
+							<li><a href="<?= base_url(); ?>partidos/pendientes">Pendientes</a></li>
+						</ul>
+					</li>
+				</ul>
 				<ul class="nav navbar-nav">
 					<li class="dropdown ">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> PAISES <span class="caret"></span></a>
@@ -53,16 +65,7 @@
 						</ul>
 					</li>
 				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown ">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> PARTIDOS <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="<?= base_url(); ?>partidos">Listar</a></li>
-							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>partidos/agregar">Agregar</a></li>
-						</ul>
-					</li>
-				</ul>
+				
 				<ul class="nav navbar-nav">
 					<li><a href="<?= base_url(); ?>sync">Sync</a></li> 
 				</ul>
