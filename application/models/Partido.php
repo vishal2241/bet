@@ -50,6 +50,7 @@ class Partido extends CI_Model
 			p.ID_PARTIDO AS ID,
 			p.ID_COMPETENCIA AS COMPE,
 			p.FECHA,
+			p.ESTADO,
 			SUBSTR(p.HORARIO, 1, 5) AS HORARIO,
 			p.LOCAL,
 			p.VISITANTE,
@@ -86,6 +87,10 @@ class Partido extends CI_Model
 			p.ID_PARTIDO,
 			p.LOCAL,
 			p.VISITANTE,
+			p.ESTADO,
+			p.FECHA,
+			p.HORARIO,
+			p.AUTORIZADO,
 			co.NOMBRE AS TORNEO,
 			pa.NOMBRE as PAIS 
 			FROM partido p

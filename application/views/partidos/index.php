@@ -9,29 +9,36 @@
     <div class="">
       <div class="col-md-2"></div>
       <div class="col-md-8">
+      <table class="">
+          <tr>
+            <td>
+              <div class="form-group">
+                <label for="fecha">Inicio : </label>
+                <input type="date" class="form-control" id="from" value="<?= date ('Y-m-d')?>">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="fecha">Fin : </label>
+                <input type="date" class="form-control" id="to" value="<?= date ('Y-m-d')?>">
+              </div>
+            </td>
+          </tr>
+        </table>
         <table class="table table-striped table-hover dataTable" id="match">
           <thead>
             <tr>
-              <th>
-                <div class="form-group">
-                  <label for="fecha">Fecha:</label>
-                  <input type="date" class="form-control" id="fecha">
-                </div>
-              </th>
-              <th colspan="4" ></th>
-            </tr> 
-            <tr>
-              <th colspan="5" class="text-center info">Partidos</th>
+              <th colspan="5" class="text-center success">Partidos</th>
             </tr>
             <tr>
-              <th width="50%">Partido</th>
-              <th width="%">Estado</th>
-              <th width="%">Fecha</th>
-              <th width="%">Hora</th>
-              <th width="%"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>
+              <th width="12%">Fecha</th>
+              <th width="5%">Hora</th>
+              <th width="43%">Partido</th>
+              <th width="20%">Estado</th>
+              <th width="20%">Editar/Eliminar <i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>
             </tr>
           </thead>
-          <tbody > 
+          <tbody> 
           </tbody>
         </table>
 
@@ -44,34 +51,6 @@
   <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      var from='2017-07-31';
-      var to='2017-07-31';
-
-      $.getJSON('<?= base_url(); ?>ajax/json_match_all', {from: from, to:to}, function(match) {
-        $.each(match, function(a, row) {
-          $("#match tbody ").append('\
-            <tr id='+ row.ID_PARTIDO+'>\
-              <td  class="text-left"   >'
-                + row.LOCAL+ ' '+ row.VISITANTE+
-                '</td>\
-                <td  class="text-center"   >'+ row.ID_PARTIDO+'</td>\
-                <td  class="text-center"   >'+ row.ID_PARTIDO+'</td>\
-                <td  class="text-center"   >'+ row.ID_PARTIDO+'</td>\
-                <td  class="text-center"   >'+ row.ID_PARTIDO+'</td>\
-              </tr>\
-              ');
-        });
-
-
-      });
-
-
-
-
-
-
-
-
 
       var table =   $('.dataTable').DataTable({
         "bPaginate": true,
@@ -79,8 +58,39 @@
         "bFilter": true,
         "bInfo": true,
         "bAutoWidth": false,
-        "order": [[ 2, 'desc' ], [ 3, 'desc' ]]
+        "order": [[ 0, 'desc' ], [ 1, 'asc' ]],
       });
+
+      function get_partidos (from, to) {
+        $.getJSON('<?= base_url(); ?>ajax/json_match_all', {from: from, to:to}, function(match) {
+          $.each(match, function(a, row) {
+            var rowNode=   table.row.add( [ 
+              ''+row.FECHA+'' , 
+              ''+row.HORARIO+'' , 
+              row.LOCAL+' VS. '+row.VISITANTE+'<br><small>'+row.PAIS + ' - ' + row.TORNEO + '</small>', 
+              ''+row.ESTADO+'' , 
+              '<a  class="btn btn-warning btn-sm" href="<?=  base_url() ?>partidos/editar/'+row.ID_PARTIDO+'"><i class="fa fa-cog" aria-hidden="true"></i></a> \
+              <a  class="btn btn-danger btn-sm" onclick="DeleteItem(\'<?= base_url() ?>partidos/editar/'+row.ID_PARTIDO+'\')" >\
+                <i class="fa fa-trash" aria-hidden="true"></i>\
+              </a> ' 
+              ] )
+            .draw()
+            .node();
+          });
+        });
+
+      }
+      var from = $("#from").val();
+      var to   = $("#to").val();
+
+      get_partidos(from, to);
+
+
+
+
+
+
+
 
     } );
   </script>
