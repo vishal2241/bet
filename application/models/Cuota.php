@@ -37,6 +37,18 @@ class Cuota extends CI_Model
 		$this->BOOKMARKER=null;
 	}
 
+	
+	public function getCuota()
+	{
+		$query = $this->db->query('SELECT * FROM cuota WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	} 
+
 
 	public function index($from, $to)
 	{
@@ -70,18 +82,6 @@ class Cuota extends CI_Model
 
 	} 
 
-	
-	public function getPartido()
-	{
-		$query = $this->db->query('SELECT ID_PARTIDO FROM cuota WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
-		
-		if ($query->num_rows() > 0) {
-			return $query->result();
-		} else {
-			return null;
-		} 
-
-	} 
 
 	
 

@@ -31,7 +31,7 @@ function get_bets (fecha, url) {
 					</tr>\
 					');
 				var compe = item.ID;
-				$.getJSON(''+url+'ajax/json_match', {fecha: fecha, compe:compe}, function(match) {
+				$.getJSON(''+url+'ajax/json_match', {fecha: fecha, compe:compe}, function(match) {console.log("a")
 					$.each(match, function(a, row) {
 						$("#bets > tbody #"+compe+"").after('\
 							<tr id='+ row.ID+'>\

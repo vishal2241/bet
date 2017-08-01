@@ -33,7 +33,7 @@ class Partido extends CI_Model
 
 	public function getPartido()
 	{
-		$query = $this->db->query('SELECT ID_PARTIDO FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
+		$query = $this->db->query('SELECT * FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
 
 		if ($query->num_rows() > 0) {
 			return $query->result();
@@ -70,7 +70,7 @@ class Partido extends CI_Model
 		p.FECHA = '".$date."'";
 		#Si la fecha es mayor a la de hoy no se condiciona la hora
 		if (date("Y-m-d")==$date ) {
-			$sql.="p.HORARIO > '".$hour."'";
+			$sql.=" AND p.HORARIO > '".$hour."' ";
 		}
 
 		$sql.="
@@ -81,7 +81,7 @@ class Partido extends CI_Model
 		GROUP BY p.ID_PARTIDO 
 		ORDER BY p.HORARIO DESC
 		";
-		$query = $this->db->query(); 
+		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -129,7 +129,7 @@ class Partido extends CI_Model
 		} 
 	}
 
-	public function index()
+	/*public function index()
 	{
 		$query = $this->db->query("
 			SELECT p.*, co.NOMBRE AS TORNEO, pa.NOMBRE as PAIS FROM partido p
@@ -146,7 +146,7 @@ class Partido extends CI_Model
 		} else {
 			return null;
 		} 
-	} 
+	} */
 
 	public function add()
 	{

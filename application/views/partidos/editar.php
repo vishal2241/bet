@@ -2,58 +2,63 @@
 <body>
 	<?php $this->load->view('overall/nav'); ?>
 	<div class="container">
-		<h2 align="center"> <?php echo $concepto[0]->CONCEPTO;  ?> </h2>
+		<h3 align="center">
+			<img width="48" src="<?= base_url() ?>/public/img/logos/country/<?= $pais[0]->IMG ?>.png">
+			<?= $partido[0]->LOCAL .' vs. '. $partido[0]->VISITANTE ?>
+		</h3>
 		<br>
 		<div class="">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
-				<?=  form_open_multipart('conceptos/editar/'.$concepto[0]->ID_CONCEPTO.' ', 'class="form-horizontal"');  ?>
-				<fieldset>
-					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Nombre</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control" name="NOMBRE" id="NOMBRE" value="<?php echo $concepto[0]->CONCEPTO;  ?>">
-						</div>
-					</div>   
-					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Tipo</label>
-						<div class="col-md-9">
-							<select  class="form-control" name="TIPO" id="TIPO">
-								<option value="G">Gasto</option>
-								<option value="I">Ingreso</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Día Vencimiento</label>
-						<div class="col-md-9">
-							<input type="number" maxlength="2" class="form-control" name="FECHA_VEN" id="FECHA_VEN" value="<?php echo $concepto[0]->FECHA_VEN;  ?>">
-						</div>
-					</div>       
-					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Mensual</label>
-						<div class="col-md-9">
-							<div class="radio">
-								<label><input type="radio" name="MENSUAL" value="S" <?php echo ($concepto[0]->MENSUAL=='S' ? 'checked': null ) ?> >SI</label>
-								<label><input type="radio" name="MENSUAL" value="N" <?php echo ($concepto[0]->MENSUAL=='N' ? 'checked': null ) ?>>NO</label>
-							</div>
-						</div>
-					</div>   
-					<div class="form-group" align="center">
-						<div class="col-lg-10 col-lg-offset-2">
-							<button type="submit" class="btn btn-success">Guardar</button>
-						</div>
-					</div>
-				</fieldset>
+			<div class="col-md-12">
+				<?=  form_open_multipart('partidos/editar/'.$partido[0]->LOCAL.' ', 'class="form-horizontal"');  ?>
+				<table class="table table-striped table-hover" >
+					<thead>
+						<tr>
+							<th >Fecha</th>
+							<th>Hora</th>
+							<th>Competencia</th>
+							<th>Estado</th>
+							<th>Autorizado</th>
+							<th>Verificado</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->FECHA ?>"></td>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->HORARIO ?>"></td>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->ID_COMPETENCIA ?>"></td>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->ESTADO ?>"></td>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->AUTORIZADO ?>"></td>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->VERIFICADO ?>"></td>
+
+						</tr>
+						<tr>
+
+							<th>1 HT</th>
+							<th>2 HT</th>
+							<th>1 FINAL</th>
+							<th>2 FINAL</th>
+						</tr>
+						<tr>
+							
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->LOCAL_HT ?>"></td>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->VISITANTE_HT ?>"></td>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->GOLES_LOCAL ?>"></td>
+							<td> <input type="text" class="form-control" id="" value="<?= $partido[0]->GOLES_VISITANTE ?>"></td>
+
+						</tr>
+					</tbody>
+				</table>
+
+
 				<?=   form_close(); ?>
 			</div>
-			<div class="col-md-2"></div>
 		</div>  
 	</div>
 	<?php $this->load->view('overall/footer'); ?>
 
 	<script>
-		$("#TIPO").val("<?php echo $concepto[0]->TIPO;  ?>");
+		$("#TIPO").val("<?php echo $partido[0]->LOCAL;  ?>");
 	</script>
 
 
