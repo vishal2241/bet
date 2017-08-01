@@ -46,33 +46,42 @@ class Partido extends CI_Model
 
 	public function getPartidoByCompe($date, $hour, $compe)
 	{
-		$query = $this->db->query("SELECT 
-			p.ID_PARTIDO AS ID,
-			p.ID_COMPETENCIA AS COMPE,
-			p.FECHA,
-			p.ESTADO,
-			SUBSTR(p.HORARIO, 1, 5) AS HORARIO,
-			p.LOCAL,
-			p.VISITANTE,
-			c._1,
-			c._X,
-			c._2,
-			c._1X,
-			c._12,
-			c._2X,
-			c.GG,
-			c.NG,
-			c.OVER_25,
-			c.UNDER_25
-			FROM partido p LEFT JOIN cuota c ON (p.ID_PARTIDO=c.ID_PARTIDO)
-			WHERE
-			p.FECHA = '".$date."'  
-			AND p.HORARIO>'".$hour."' 
-			AND p.ID_COMPETENCIA='".$compe."' 
-			AND p.ESTADO='' 
-			AND p.AUTORIZADO='SI' 
-			GROUP BY p.ID_PARTIDO 
-			ORDER BY p.HORARIO DESC"); 
+		$sql="
+		SELECT 
+		p.ID_PARTIDO AS ID,
+		p.ID_COMPETENCIA AS COMPE,
+		p.FECHA,
+		p.ESTADO,
+		SUBSTR(p.HORARIO, 1, 5) AS HORARIO,
+		p.LOCAL,
+		p.VISITANTE,
+		c._1,
+		c._X,
+		c._2,
+		c._1X,
+		c._12,
+		c._2X,
+		c.GG,
+		c.NG,
+		c.OVER_25,
+		c.UNDER_25
+		FROM partido p LEFT JOIN cuota c ON (p.ID_PARTIDO=c.ID_PARTIDO)
+		WHERE
+		p.FECHA = '".$date."'";
+		#Si la fecha es mayor a la de hoy no se condiciona la hora
+		if (date("Y-m-d")==$date ) {
+			$sql.="p.HORARIO > '".$hour."'";
+		}
+
+		$sql.="
+		AND p.ID_COMPETENCIA='".$compe."' 
+		AND p.ESTADO!='FT' 
+		AND p.ESTADO!='Canc.' 
+		AND p.AUTORIZADO='SI' 
+		GROUP BY p.ID_PARTIDO 
+		ORDER BY p.HORARIO DESC
+		";
+		$query = $this->db->query(); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {

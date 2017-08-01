@@ -101,9 +101,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$( document ).ready(function() {
 					moment.locale('es');
 					var url= '<?= base_url(); ?>';
-					var fecha='2017-07-30';	
+					var fecha=moment().format('YYYY-MM-DD');  
 					$("#titulo").empty();
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+		 
 					get_bets(fecha, url);
 
 

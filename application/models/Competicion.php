@@ -30,21 +30,26 @@ class Competicion extends CI_Model
 
 	public function getByDate($date, $hour)
 	{
-		$query = $this->db->query('SELECT
-			c.ID_COMPETENCIA as ID,
-			c.NOMBRE AS COMPE,
-			pa.NOMBRE AS PAIS,
-			pa.IMG  
-			FROM competencia c  
-			LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
-			LEFT JOIN pais pa ON (c.ID_PAIS=pa.ID_PAIS)  
-			WHERE p.FECHA="'.$date.'" 
-			AND p.HORARIO>"'.$hour.'"
-			AND p.ESTADO="" 
-			AND p.AUTORIZADO="SI"  
-			GROUP BY c.ID_COMPETENCIA 
-			ORDER BY pa.NOMBRE ASC, c.NOMBRE ASC'); 
-		
+		$sql='SELECT
+		c.ID_COMPETENCIA as ID,
+		c.NOMBRE AS COMPE,
+		pa.NOMBRE AS PAIS,
+		pa.IMG  
+		FROM competencia c  
+		LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
+		LEFT JOIN pais pa ON (c.ID_PAIS=pa.ID_PAIS)  
+		WHERE p.FECHA="'.$date.'" ';
+		#Si la fecha es mayor a la de hoy no se condiciona la hora
+		if (date("Y-m-d")==$date ) {
+			$sql.=' AND p.HORARIO > "'.$hour.'" ';
+		}
+
+		$sql.='AND p.ESTADO="" 
+		AND p.AUTORIZADO="SI"  
+		GROUP BY c.ID_COMPETENCIA 
+		ORDER BY pa.NOMBRE ASC, c.NOMBRE ASC';
+		$query = $this->db->query($sql); 
+
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -52,7 +57,7 @@ class Competicion extends CI_Model
 		} 
 
 	} 
-	
+
 	public function add()
 	{
 		$this->db->insert('competencia', $this);
