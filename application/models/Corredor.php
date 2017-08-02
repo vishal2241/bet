@@ -1,5 +1,5 @@
 <?php 
-
+// Solo para Betting Api
 class Corredor extends CI_Model
 {
 	

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-08-2017 a las 22:30:18
+-- Tiempo de generación: 02-08-2017 a las 22:34:23
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -4178,6 +4178,17 @@ INSERT INTO `goles` (`ID_GOL`, `ID_PARTIDO`, `TIEMPO`, `MARCADOR_PARCIAL`, `JUGA
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `liga`
+--
+
+CREATE TABLE `liga` (
+  `ID_LIGA` int(11) NOT NULL,
+  `NOMBRE` varchar(60) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='Solo betting api';
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `pais`
 --
 
@@ -6601,6 +6612,12 @@ ALTER TABLE `cuota_apuesta`
 --
 ALTER TABLE `goles`
   ADD PRIMARY KEY (`ID_GOL`);
+
+--
+-- Indices de la tabla `liga`
+--
+ALTER TABLE `liga`
+  ADD PRIMARY KEY (`ID_LIGA`);
 
 --
 -- Indices de la tabla `pais`

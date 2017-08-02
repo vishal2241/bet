@@ -223,28 +223,29 @@ class Sync extends CI_Controller {
 				}
 			}
 		}
-		header("Location:" . base_url(). "home");
+		header("Location:" . base_url(). "sync");
 	} // End syncBookmakers
 
 
 	public function syncLigas(){
-		$competiciones=$this->BettingOddsApi->getLeagues();
-		if ($competiciones!=null) {
-			foreach ($competiciones as $key => $value) {
-				$this->Competicion->ID_LIGA = $key;
-				$this->Competicion->NOMBRE  = $value->name;
+		$ligas=$this->BettingOddsApi->getLigas();
+		if ($ligas!=null) {
+			foreach ($ligas as $key => $value) {
+				$this->Liga->ID_LIGA = $key;
+				$this->Liga->NOMBRE  = $value->name;
 
-				$competencia=$this->Competicion->getCompeticion();
+				$liga=$this->Liga->getLiga();
 
-				if ($competencia==null) {
-					echo "<b>add</b> ".$value->country_name.' '.$value->league_name."<br>";
-					$this->Competicion->add();
+				if ($liga==null) {
+					echo "<b>add</b> ".$value->name."<br>";
+					$this->Liga->add();
 				} else {
-					echo "<b>update</b> ".$value->country_name.' '.$value->league_name."<br>";
-					$this->Competicion->update();
+					echo "<b>update</b> ".$value->name."<br>";
+					$this->Liga->update();
 				}
 			}
 		}
+		header("Location:" . base_url(). "sync");
 	} // End syncLeagues
 
 
