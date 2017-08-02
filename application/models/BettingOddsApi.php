@@ -16,14 +16,9 @@ class BettingOddsApi extends CI_Model
 		$this->load->library('PHPRequests');
 	}
 
-	public function getPaises(){
-		$request = Requests::get('https://apifootball.com/api/?action=get_countries&APIkey=');
-		$request->body=json_decode($request->body);
-		return $request->body; 
-	}
 
 
-	public function getBookmakers(){
+	public function getCorredores(){
 		$request = Requests::get('https://bettingodds-bettingoddsapi-v1.p.mashape.com/bookmakers',
 			array(
 				"X-Mashape-Key" => $this->KEY,
@@ -32,7 +27,19 @@ class BettingOddsApi extends CI_Model
 			);
 		$request->body=json_decode($request->body);
 		return $request->body; 
+	}
 
+
+	public function getLigas(){
+		$request = Requests::get('https://bettingodds-bettingoddsapi-v1.p.mashape.com/leagues',
+			array(
+				"X-Mashape-Key" => $this->KEY,
+				"Accept" => "application/json"
+				)
+			);
+		$request->body=json_decode($request->body);
+		print_r($request->body); 
+		exit;
 	}
 
 

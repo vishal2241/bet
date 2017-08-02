@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-08-2017 a las 22:13:25
+-- Tiempo de generación: 02-08-2017 a las 22:30:18
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -35,43 +35,6 @@ CREATE TABLE `apuesta` (
   `ESTADO` char(10) DEFAULT NULL,
   `TOTAL_CREDITOS` decimal(10,0) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `bookmaker`
---
-
-CREATE TABLE `bookmaker` (
-  `ID_BOOKMAKER` int(11) NOT NULL,
-  `BOOKMAKER` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Solo para BettingOddsApi';
-
---
--- Volcado de datos para la tabla `bookmaker`
---
-
-INSERT INTO `bookmaker` (`ID_BOOKMAKER`, `BOOKMAKER`) VALUES
-(2, 'Mybet'),
-(5, 'Interwetten'),
-(19, 'Bet365'),
-(20, 'Expekt'),
-(25, 'Pinnacle'),
-(31, '10bet'),
-(35, '1xbet'),
-(36, 'Beteast'),
-(37, 'Tipbet'),
-(38, 'William Hill'),
-(39, 'Coral'),
-(40, 'Boylesports'),
-(41, 'Marathonbet'),
-(42, 'Skybet'),
-(43, 'Betfred'),
-(44, 'Betclic'),
-(45, 'Ladbrokes'),
-(46, 'Unibet'),
-(47, 'LSBet'),
-(48, '188Bet');
 
 -- --------------------------------------------------------
 
@@ -1209,6 +1172,43 @@ INSERT INTO `competencia` (`ID_COMPETENCIA`, `ID_PAIS`, `NOMBRE`) VALUES
 (1181, 203, 'Juniorska Liga Cfl'),
 (1182, 203, 'Juniorska Liga Msfl'),
 (1183, 168, 'Audi Cup');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `corredor`
+--
+
+CREATE TABLE `corredor` (
+  `ID_CORREDOR` int(11) NOT NULL,
+  `NOMBRE` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Solo para BettingOddsApi';
+
+--
+-- Volcado de datos para la tabla `corredor`
+--
+
+INSERT INTO `corredor` (`ID_CORREDOR`, `NOMBRE`) VALUES
+(2, 'Mybet'),
+(5, 'Interwetten'),
+(19, 'Bet365'),
+(20, 'Expekt'),
+(25, 'Pinnacle'),
+(31, '10bet'),
+(35, '1xbet'),
+(36, 'Beteast'),
+(37, 'Tipbet'),
+(38, 'William Hill'),
+(39, 'Coral'),
+(40, 'Boylesports'),
+(41, 'Marathonbet'),
+(42, 'Skybet'),
+(43, 'Betfred'),
+(44, 'Betclic'),
+(45, 'Ladbrokes'),
+(46, 'Unibet'),
+(47, 'LSBet'),
+(48, '188Bet');
 
 -- --------------------------------------------------------
 
@@ -6570,17 +6570,17 @@ ALTER TABLE `apuesta`
   ADD KEY `FK_REALIZA` (`CEDULA`);
 
 --
--- Indices de la tabla `bookmaker`
---
-ALTER TABLE `bookmaker`
-  ADD PRIMARY KEY (`ID_BOOKMAKER`);
-
---
 -- Indices de la tabla `competencia`
 --
 ALTER TABLE `competencia`
   ADD PRIMARY KEY (`ID_COMPETENCIA`),
   ADD KEY `ID_PAIS` (`ID_PAIS`);
+
+--
+-- Indices de la tabla `corredor`
+--
+ALTER TABLE `corredor`
+  ADD PRIMARY KEY (`ID_CORREDOR`);
 
 --
 -- Indices de la tabla `cuota`
@@ -6632,10 +6632,10 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de la tabla `bookmaker`
+-- AUTO_INCREMENT de la tabla `corredor`
 --
-ALTER TABLE `bookmaker`
-  MODIFY `ID_BOOKMAKER` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+ALTER TABLE `corredor`
+  MODIFY `ID_CORREDOR` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT de la tabla `cuota`
 --

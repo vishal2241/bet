@@ -202,30 +202,50 @@ class Sync extends CI_Controller {
 
 
 	/*******************************************************/
-	/*                  BETTIN ODDS API                    */
+	/*                  BETTING ODDS API                   */
 	/*******************************************************/
 
 
-	public function syncBookmakers(){
-		$bookmakers=$this->BettingOddsApi->getBookmakers();
-		if ($bookmakers!=null) {
-			foreach ($bookmakers as $key => $value) {
-				$this->Bookmaker->ID_BOOKMAKER = $key;
-				$this->Bookmaker->BOOKMAKER  = $value->name;
+	public function syncCorredores(){
+		$Corredores=$this->BettingOddsApi->getCorredores();
+		if ($Corredores!=null) {
+			foreach ($Corredores as $key => $value) {
+				$this->Corredor->ID_CORREDOR = $key;
+				$this->Corredor->NOMBRE  = $value->name;
 
-				$pais=$this->Bookmaker->getBookmaker();
+				$pais=$this->Corredor->getCorredor();
 				if ($pais==null) {
 					echo "<b>add</b> ".$value->name."<br>";
-					$this->Bookmaker->add();
+					$this->Corredor->add();
 				} else {
 					echo "<b>update</b> ".$value->name."<br>";
-					$this->Bookmaker->update();
+					$this->Corredor->update();
 				}
 			}
 		}
 		header("Location:" . base_url(). "home");
-	} // End syncPaises
+	} // End syncBookmakers
 
+
+	public function syncLigas(){
+		$competiciones=$this->BettingOddsApi->getLeagues();
+		if ($competiciones!=null) {
+			foreach ($competiciones as $key => $value) {
+				$this->Competicion->ID_LIGA = $key;
+				$this->Competicion->NOMBRE  = $value->name;
+
+				$competencia=$this->Competicion->getCompeticion();
+
+				if ($competencia==null) {
+					echo "<b>add</b> ".$value->country_name.' '.$value->league_name."<br>";
+					$this->Competicion->add();
+				} else {
+					echo "<b>update</b> ".$value->country_name.' '.$value->league_name."<br>";
+					$this->Competicion->update();
+				}
+			}
+		}
+	} // End syncLeagues
 
 
 
