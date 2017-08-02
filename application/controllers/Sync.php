@@ -17,7 +17,7 @@ class Sync extends CI_Controller {
 
 
 	public function syncPaises(){
-		$paises=$this->Api->getPaises();
+		$paises=$this->ApiFootball->getPaises();
 		if ($paises!=null) {
 			foreach ($paises as $key => $value) {
 				$this->Pais->ID_PAIS = $value->country_id;
@@ -37,7 +37,7 @@ class Sync extends CI_Controller {
 
 
 	public function syncCompeticiones(){
-		$competiciones=$this->Api->getCompeticiones();
+		$competiciones=$this->ApiFootball->getCompeticiones();
 		if ($competiciones!=null) {
 			foreach ($competiciones as $key => $value) {
 				$this->Competicion->ID_COMPETENCIA = $value->league_id;
@@ -66,10 +66,10 @@ class Sync extends CI_Controller {
 		$from = new DateTime(date("Y-m-d"));
 		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
 
-		$this->Api->FROM = $from->format('Y-m-d');
-		$this->Api->TO   = $to->format('Y-m-d');
+		$this->ApiFootball->FROM = $from->format('Y-m-d');
+		$this->ApiFootball->TO   = $to->format('Y-m-d');
 
-		$partidos=$this->Api->getPartidos();
+		$partidos=$this->ApiFootball->getPartidos();
 		echo count($partidos). ' Partidos<br> De: '. $from->format('Y-m-d') . ' a '. $to->format('Y-m-d') . '<br><br>' ;
 		if ($partidos!=null) {
 			foreach ($partidos as $key => $value) {
@@ -124,18 +124,17 @@ class Sync extends CI_Controller {
 		$from = new DateTime(date("Y-m-d"));
 		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
 
-		$this->Api->FROM     = $from->format('Y-m-d');
-		$this->Api->TO       = $to->format('Y-m-d');
+		$this->ApiFootball->FROM     = $from->format('Y-m-d');
+		$this->ApiFootball->TO       = $to->format('Y-m-d');
 
-		$this->Partido->FROM = date("Y-m-d");
-		$this->Partido->TO   = date("Y-m-d");
+ 
 
 		//Ciclo de partidos en la BD
-		$partidos=$this->Partido->index();
+		$partidos=$this->Partido->all($from->format('Y-m-d'),$to->format('Y-m-d'), 'Todos' );
 		$ok=0;
 		foreach ($partidos as $key => $row) {
-			$this->Api->MATCH_ID = $row->ID_PARTIDO;
-			$cuotas              = $this->Api->getCuotas();
+			$this->ApiFootball->MATCH_ID = $row->ID_PARTIDO;
+			$cuotas                      = $this->ApiFootball->getCuotas();
 			
 			if ($cuotas!=null) {
 				foreach ($cuotas as $key => $value) {
@@ -173,14 +172,13 @@ class Sync extends CI_Controller {
 		$from = new DateTime(date("Y-m-d"));
 		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
 
-		$this->Api->FROM = $from->format('Y-m-d');
-		$this->Api->TO   = $to->format('Y-m-d');
+		$this->ApiFootball->FROM = $from->format('Y-m-d');
+		$this->ApiFootball->TO   = $to->format('Y-m-d');
 
-		$cuotas=$this->Api->getCuotas();
+		$cuotas=$this->ApiFootball->getCuotas();
 
 		if ($cuotas!=null) {
 			foreach ($cuotas as $key => $value) {
-
 				$this->Cuota->ID_PARTIDO  = $value['match_id'];
 				$this->Cuota->FECHA_CUOTA = $value['odd_date'];
 				$this->Cuota->_1          = $value['_1'];
@@ -194,10 +192,8 @@ class Sync extends CI_Controller {
 				$this->Cuota->OVER_25     = $value['OVER_25'];
 				$this->Cuota->UNDER_25    = $value['UNDER_25'];
 				$this->Cuota->BOOKMARKER  = $value['odd_bookmakers'];
-
 				#$this->Cuota->delete();
 				$this->Cuota->add(); 
-
 			}
 		}
 		echo "Termine";

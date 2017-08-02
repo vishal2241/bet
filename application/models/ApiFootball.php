@@ -1,6 +1,6 @@
 <?php 
 
-class Api extends CI_Model
+class ApiFootball extends CI_Model
 {
 	public $FROM;
 	public $TO;
