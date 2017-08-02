@@ -249,6 +249,27 @@ class Sync extends CI_Controller {
 	} // End syncLeagues
 
 
+	public function syncTipos(){
+		$tipos=$this->BettingOddsApi->getMercados();
+		if ($tipos!=null) {
+
+			foreach ($tipos as $key => $value) {
+				$this->TipoCuota->ID_TIPO = $key;
+				$this->TipoCuota->NOMBRE  = $value->name;
+
+				$liga=$this->TipoCuota->getTipo();
+
+				if ($liga==null) {
+					echo "<b>add</b> ".$value->name."<br>";
+					$this->TipoCuota->add();
+				} else {
+					echo "<b>update</b> ".$value->name."<br>";
+					$this->TipoCuota->update();
+				}
+			}
+		}
+		header("Location:" . base_url(). "sync");
+	} // End syncLeagues
 
 }
 

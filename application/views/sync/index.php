@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncLigas">Sincronizar Ligas <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncMercados">Sincronizar Mercados <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncTipos">Sincronizar Tipos Cuota <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
 													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/BettingCuota">Sincronizar Cuotas <i class="fa fa-cog" aria-hidden="true"></i></a> 
