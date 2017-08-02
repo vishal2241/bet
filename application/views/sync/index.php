@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<div class="tim-row" id="tables-row">					 
 								<div class="table-responsive">
-								<h2>API</h2>
+									<h2>Api Football</h2>
 									<table class="table">
 										<tbody>
 											<tr>
@@ -32,7 +32,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncPartidos">Sincronizar Partidos <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-												<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncCuota">Sincronizar Cuotas <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncCuota">Sincronizar Cuotas <i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<h2>Betting Odds Api</h2>
+									<table class="table">
+										<tbody>
+											<tr>
+												<td>
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncBookmakers">Sincronizar Bookmakers <i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+												<td>
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/BettingCompeticiones">Sincronizar Torneos <i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+												<td>
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/BettingPartidos">Sincronizar Partidos <i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+												<td>
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/BettingCuota">Sincronizar Cuotas <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 											</tr>
 										</tbody>

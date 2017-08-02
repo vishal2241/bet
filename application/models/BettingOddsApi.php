@@ -24,9 +24,6 @@ class BettingOddsApi extends CI_Model
 
 
 	public function getBookmakers(){
-		$this->load->library('PHPRequests');
-
-
 		$request = Requests::get('https://bettingodds-bettingoddsapi-v1.p.mashape.com/bookmakers',
 			array(
 				"X-Mashape-Key" => $this->KEY,
@@ -34,11 +31,7 @@ class BettingOddsApi extends CI_Model
 				)
 			);
 		$request->body=json_decode($request->body);
-
-		foreach ($request->body as $key => $value) {
-			echo "string";
-			exit;
-		}		
+		return $request->body; 
 
 	}
 

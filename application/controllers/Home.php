@@ -32,11 +32,7 @@ class Home extends CI_Controller {
 		$data['partidos']= $array;
 		$this->load->view('home/index', $data);
 	}
-
-	public function prueba(){
-		$this->BettingOddsApi->getBookmakers();
-
-	}
+	
 
 }
 

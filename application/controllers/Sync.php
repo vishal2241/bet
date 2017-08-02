@@ -8,14 +8,14 @@ class Sync extends CI_Controller {
 		$this->User->check();
 	}
 
-
-
 	public function index(){
-
 		$this->load->view('sync/index');
 	}
 
 
+	/*******************************************************/
+	/*                     FOOTBALL API                    */
+	/*******************************************************/
 	public function syncPaises(){
 		$paises=$this->ApiFootball->getPaises();
 		if ($paises!=null) {
@@ -127,7 +127,7 @@ class Sync extends CI_Controller {
 		$this->ApiFootball->FROM     = $from->format('Y-m-d');
 		$this->ApiFootball->TO       = $to->format('Y-m-d');
 
- 
+
 
 		//Ciclo de partidos en la BD
 		$partidos=$this->Partido->all($from->format('Y-m-d'),$to->format('Y-m-d'), 'Todos' );
@@ -198,6 +198,35 @@ class Sync extends CI_Controller {
 		}
 		echo "Termine";
 	} // End syncCuotas
+
+
+
+	/*******************************************************/
+	/*                  BETTIN ODDS API                    */
+	/*******************************************************/
+
+
+	public function syncBookmakers(){
+		$bookmakers=$this->BettingOddsApi->getBookmakers();
+		if ($bookmakers!=null) {
+			foreach ($bookmakers as $key => $value) {
+				$this->Bookmaker->ID_BOOKMAKER = $key;
+				$this->Bookmaker->BOOKMAKER  = $value->name;
+
+				$pais=$this->Bookmaker->getBookmaker();
+				if ($pais==null) {
+					echo "<b>add</b> ".$value->name."<br>";
+					$this->Bookmaker->add();
+				} else {
+					echo "<b>update</b> ".$value->name."<br>";
+					$this->Bookmaker->update();
+				}
+			}
+		}
+		header("Location:" . base_url(). "home");
+	} // End syncPaises
+
+
 
 
 }

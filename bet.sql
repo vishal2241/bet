@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-08-2017 a las 21:46:58
+-- Tiempo de generación: 02-08-2017 a las 22:13:25
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -39,13 +39,39 @@ CREATE TABLE `apuesta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `bookmakert`
+-- Estructura de tabla para la tabla `bookmaker`
 --
 
-CREATE TABLE `bookmakert` (
-  `ID_BOOKMAKERT` int(11) NOT NULL,
-  `BOOKMAKERT` varchar(30) DEFAULT NULL
+CREATE TABLE `bookmaker` (
+  `ID_BOOKMAKER` int(11) NOT NULL,
+  `BOOKMAKER` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Solo para BettingOddsApi';
+
+--
+-- Volcado de datos para la tabla `bookmaker`
+--
+
+INSERT INTO `bookmaker` (`ID_BOOKMAKER`, `BOOKMAKER`) VALUES
+(2, 'Mybet'),
+(5, 'Interwetten'),
+(19, 'Bet365'),
+(20, 'Expekt'),
+(25, 'Pinnacle'),
+(31, '10bet'),
+(35, '1xbet'),
+(36, 'Beteast'),
+(37, 'Tipbet'),
+(38, 'William Hill'),
+(39, 'Coral'),
+(40, 'Boylesports'),
+(41, 'Marathonbet'),
+(42, 'Skybet'),
+(43, 'Betfred'),
+(44, 'Betclic'),
+(45, 'Ladbrokes'),
+(46, 'Unibet'),
+(47, 'LSBet'),
+(48, '188Bet');
 
 -- --------------------------------------------------------
 
@@ -6544,10 +6570,10 @@ ALTER TABLE `apuesta`
   ADD KEY `FK_REALIZA` (`CEDULA`);
 
 --
--- Indices de la tabla `bookmakert`
+-- Indices de la tabla `bookmaker`
 --
-ALTER TABLE `bookmakert`
-  ADD PRIMARY KEY (`ID_BOOKMAKERT`);
+ALTER TABLE `bookmaker`
+  ADD PRIMARY KEY (`ID_BOOKMAKER`);
 
 --
 -- Indices de la tabla `competencia`
@@ -6606,10 +6632,10 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de la tabla `bookmakert`
+-- AUTO_INCREMENT de la tabla `bookmaker`
 --
-ALTER TABLE `bookmakert`
-  MODIFY `ID_BOOKMAKERT` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `bookmaker`
+  MODIFY `ID_BOOKMAKER` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT de la tabla `cuota`
 --
