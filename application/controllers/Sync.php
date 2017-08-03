@@ -284,16 +284,73 @@ class Sync extends CI_Controller {
 	} // End syncTipoCuota
 
 	public function syncEventos(){ 
-		$to = new DateTime(date("Y-m-d"));
-		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
 
-		$from = new DateTime(date("Y-m-d"));
-		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
-
-		$this->BettingOddsApi->FROM = $from->format('Y-m-d');
-		$this->BettingOddsApi->TO   = $to->format('Y-m-d');
-
+		$this->BettingOddsApi->FROM = date('Y-m-d');
 		$partidos=$this->BettingOddsApi->getEventos();
+
+		if ($partidos!=null) {
+			foreach ($partidos as $key => $value) {
+
+				#Funcion Horario Colombia / Resta 5 horas UTC
+				$fecha=strtotime($value->datetime->value);
+				$fecha = date("Y-m-d H:i", $fecha);
+				$fecha = new DateTime($fecha);
+				$fecha->sub(new DateInterval('PT5H'));
+
+				$this->Partido2->ID_PARTIDO      =  $key;
+				$this->Partido2->ID_COMPETENCIA  =  $value->league->id;
+				$this->Partido2->FECHA           =  $fecha->format('Y-m-d');
+				$this->Partido2->HORARIO         =  $fecha->format('H:i');
+				$this->Partido2->LOCAL           = $value->home->name;
+				$this->Partido2->VISITANTE       = $value->away->name;
+
+
+				$partido=$this->Partido2->getPartido();
+
+				if ($partido==null) {
+					echo "<b>add  ".$fecha->format('Y-m-d')." ".$fecha->format('H:i')." </b>".$value->home->name." vs ".$value->away->name."<br>";
+
+
+					$this->Partido2->add();
+				} else {
+					echo "<b>update ".$fecha->format('Y-m-d')." ".$fecha->format('H:i')."</b> ".$value->home->name." vs ".$value->away->name."<br>";
+					$this->Partido2->update();
+
+				}
+				
+				$array = json_decode(json_encode($value->odds),true);
+				foreach ($array as $keyTipo => $tipo) {
+
+					foreach ($tipo as $keyResultado => $resultado) {
+
+
+						#print_r($resultado['20']);  //Expekt 
+						
+						if ($keyResultado!='2.50') {
+							$this->Cuota2->ID_PARTIDO=$key; 
+							$this->Cuota2->ID_RESULTADO=$keyResultado; 
+							$this->Cuota2->ID_TIPO=$keyTipo; 
+							$this->Cuota2->ID_CORREDOR="20"; 
+							$this->Cuota2->VALOR=$resultado['20']; 
+
+							$veri=$this->Cuota2->getCuota();
+							if ($veri==null) {
+								$this->Cuota2->add();
+							} else {
+								$this->Cuota2->update();
+							}
+							
+
+						}
+
+						exit();
+					}
+
+				}
+
+				exit;
+			}
+		}
 	} // End syncTipoCuota
 
 }
