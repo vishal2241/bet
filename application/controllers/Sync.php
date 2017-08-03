@@ -303,8 +303,6 @@ class Sync extends CI_Controller {
 				$this->Partido2->HORARIO         =  $fecha->format('H:i');
 				$this->Partido2->LOCAL           = $value->home->name;
 				$this->Partido2->VISITANTE       = $value->away->name;
-
-
 				$partido=$this->Partido2->getPartido();
 
 				if ($partido==null) {
@@ -320,35 +318,42 @@ class Sync extends CI_Controller {
 				
 				$array = json_decode(json_encode($value->odds),true);
 				foreach ($array as $keyTipo => $tipo) {
-
 					foreach ($tipo as $keyResultado => $resultado) {
-
-
-						#print_r($resultado['20']);  //Expekt 
-						
 						if ($keyResultado!='2.50') {
 							$this->Cuota2->ID_PARTIDO=$key; 
 							$this->Cuota2->ID_RESULTADO=$keyResultado; 
 							$this->Cuota2->ID_TIPO=$keyTipo; 
-							$this->Cuota2->ID_CORREDOR="20"; 
-							$this->Cuota2->VALOR=$resultado['20']; 
-
-							$veri=$this->Cuota2->getCuota();
-							if ($veri==null) {
-								$this->Cuota2->add();
-							} else {
-								$this->Cuota2->update();
+							foreach ($resultado as $keyCorredor => $Corredor) {
+								$this->Cuota2->ID_CORREDOR=$keyCorredor; 
+							#print_r($resultado['20']);  //Expekt 
+								$this->Cuota2->VALOR=$Corredor; 
+								$veri=$this->Cuota2->getCuota();
+								if ($veri==null) {
+									$this->Cuota2->add();
+								} else {
+									$this->Cuota2->update();
+								}
 							}
-							
-
+						} else {
+							foreach ($resultado as $keyOU => $valueOU) {
+								$this->Cuota2->ID_PARTIDO=$key; 
+								$this->Cuota2->ID_RESULTADO=$keyOU; 
+								$this->Cuota2->ID_TIPO=$keyTipo; 
+								foreach ($valueOU as $keyCorreOU => $CorredorOU) {
+									$this->Cuota2->ID_CORREDOR=$keyCorreOU; 
+									$this->Cuota2->VALOR=$CorredorOU; 
+									$veri=$this->Cuota2->getCuota(); 
+									if ($veri==null) {
+										$this->Cuota2->add();
+									} else {
+										$this->Cuota2->update();
+									}
+								}
+							}
 						}
-
-						exit();
 					}
 
 				}
-
-				exit;
 			}
 		}
 	} // End syncTipoCuota

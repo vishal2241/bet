@@ -43,7 +43,7 @@ class Cuota2 extends CI_Model
 
 
 		$query = $this->db->query('UPDATE  cuota2 
-			SET VALOR='.$this->ID_PARTIDO.'
+			SET VALOR='.$this->VALOR.'
 			WHERE ID_PARTIDO='.$this->ID_PARTIDO.' 
 			AND ID_TIPO='.$this->ID_TIPO.' 
 			AND ID_RESULTADO='.$this->ID_RESULTADO.' 
