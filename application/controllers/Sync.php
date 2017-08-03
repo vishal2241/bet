@@ -284,7 +284,12 @@ class Sync extends CI_Controller {
 	} // End syncTipoCuota
 
 	public function syncEventos(){ 
+		/*
+		"
+		SELECT p2.ID_PARTIDO, p2.LOCAL, p2.VISITANTE, tc.NOMBRE, r.NOMBRE, c2.VALOR from partido2 p2 LEFT JOIN cuota2 c2 ON (p2.ID_PARTIDO=c2.ID_PARTIDO) LEFT JOIN tipo_cuota tc ON (tc.ID_TIPO=c2.ID_TIPO) LEFT JOIN resultado r ON (r.ID_RESULTADO=c2.ID_RESULTADO) WHERE p2.ID_PARTIDO='45914946' GROUP BY r.NOMBRE ORDER BY tc.NOMBRE ASC
 
+		"
+		*/
 		$this->BettingOddsApi->FROM = date('Y-m-d');
 		$partidos=$this->BettingOddsApi->getEventos();
 
