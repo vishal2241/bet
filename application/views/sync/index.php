@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncTipos">Sincronizar Tipos Cuota <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/BettingCuota">Sincronizar Cuotas <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncEventos">Sincronizar Partidos <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 											</tr>
 										</tbody>

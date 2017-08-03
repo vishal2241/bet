@@ -204,8 +204,6 @@ class Sync extends CI_Controller {
 	/*******************************************************/
 	/*                  BETTING ODDS API                   */
 	/*******************************************************/
-
-
 	public function syncCorredores(){
 		$Corredores=$this->BettingOddsApi->getCorredores();
 		if ($Corredores!=null) {
@@ -254,6 +252,7 @@ class Sync extends CI_Controller {
 		if ($tipos!=null) {
 
 			foreach ($tipos as $key => $value) {
+
 				$this->TipoCuota->ID_TIPO = $key;
 				$this->TipoCuota->NOMBRE  = $value->name;
 
@@ -266,10 +265,36 @@ class Sync extends CI_Controller {
 					echo "<b>update</b> ".$value->name."<br>";
 					$this->TipoCuota->update();
 				}
+
+				foreach ($value->outcomes as $keyRes => $row) {
+					$this->Resultado->ID_RESULTADO = $keyRes;
+					$this->Resultado->NOMBRE  = $row->name;
+					$resultado=$this->Resultado->getResultado();
+					if ($resultado==null) {
+						echo "<b>add</b> ".$row->name."<br>";
+						$this->Resultado->add();
+					} else {
+						echo "<b>update</b> ".$row->name."<br>";
+						$this->Resultado->update();
+					}		 
+				}
 			}
 		}
 		header("Location:" . base_url(). "sync");
-	} // End syncLeagues
+	} // End syncTipoCuota
+
+	public function syncEventos(){ 
+		$to = new DateTime(date("Y-m-d"));
+		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
+
+		$from = new DateTime(date("Y-m-d"));
+		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
+
+		$this->BettingOddsApi->FROM = $from->format('Y-m-d');
+		$this->BettingOddsApi->TO   = $to->format('Y-m-d');
+
+		$partidos=$this->BettingOddsApi->getEventos();
+	} // End syncTipoCuota
 
 }
 

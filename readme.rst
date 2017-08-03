@@ -19,6 +19,7 @@ Request
 -  `totalcorner  <http://www.totalcorner.com>`_
 -  `PHPRequest <http://requests.ryanmccue.info/>`_
 -  `bettingoddsapi <https://market.mashape.com/globalsportsinteractive/bettingoddsapi>`_
+-  `Bhawlone <https://market.mashape.com/myanmarunicorn/bhawlone>`_
 
 
 $ SELECT * FROM vista_odds WHERE fecha_event > "2017-07-22 11:28:56" AND fecha_event<"2017-07-22 23:59:59" AND autorizado="1" ORDER BY prioridad DESC, name_country ASC, name_torne ASC, fecha_event ASC

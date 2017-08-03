@@ -53,5 +53,19 @@ class BettingOddsApi extends CI_Model
 		return $request->body; 
 	}
 
+	public function getEventos(){
+		$request = Requests::get('https://bettingodds-bettingoddsapi-v1.p.mashape.com/events/'. $this->FROM.'',
+			array(
+				"X-Mashape-Key" => $this->KEY,
+				"Accept" => "application/json"
+				)
+			);
+		$request->body=json_decode($request->body);
+		return $request->body; 
+	}
+
+
+
+
 }
 ?>
