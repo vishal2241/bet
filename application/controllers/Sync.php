@@ -132,6 +132,8 @@ class Sync extends CI_Controller {
 		//Ciclo de partidos en la BD
 		$partidos=$this->Partido->all($from->format('Y-m-d'),$to->format('Y-m-d'), 'Todos' );
 		$ok=0;
+		$total= count($partidos); 
+		$ini=0;
 		foreach ($partidos as $key => $row) {
 			$this->ApiFootball->MATCH_ID = $row->ID_PARTIDO;
 			$cuotas                      = $this->ApiFootball->getCuotas();
@@ -141,7 +143,6 @@ class Sync extends CI_Controller {
 				foreach ($cuotas as $key => $value) {
 					$this->Cuota->ID_PARTIDO  = $value['match_id'];
 					$this->Cuota->FECHA_CUOTA = $value['odd_date'];
-					$this->Cuota->ID_POSIBILIDAD ="1";
 					$this->Cuota->BOOKMARKER  = $value['odd_bookmakers'];
 					/*$this->Cuota->_1          = $value['_1'];
 					$this->Cuota->_X          = $value['_X'];
@@ -154,19 +155,20 @@ class Sync extends CI_Controller {
 					$this->Cuota->OVER_25     = $value['OVER_25'];
 					$this->Cuota->UNDER_25    = $value['UNDER_25'];*/
 					foreach ($value['odds'] as $keyOdd => $odd) {
-						echo key( $odd); exit;
+						$this->Cuota->ID_POSIBILIDAD = key($odd);
+						$this->Cuota->VALOR =$odd[key($odd)];
+						$this->Cuota->delete();  
+						$this->Cuota->add(); 
 					}
-
-					$this->Cuota->delete(); 
-					$this->Cuota->add(); 
 					$ok++;
-					echo $row->ID_PARTIDO.' '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:green">OK</b><br>';
+					echo '['.$row->FECHA.'] ['.$row->HORARIO .'] '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:green">OK</b><br>';
 				}
-				exit;
+		 
 			} else {
-				echo $row->ID_PARTIDO.' '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:red">No tiene cuotas</b><br>';
+				echo '['.$row->FECHA.'] ['. $row->HORARIO.'] '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:red">No tiene cuotas</b><br>';
 			} 
-
+			$ini++;
+			echo '<b>'. $ini . ' De ' . $total . '</b></br>';
 		}
 		echo "<h1>Termine [".$ok."]</h1>";
 	} // End syncCuotas

@@ -80,8 +80,8 @@ class ApiFootball extends CI_Model
 		set_time_limit(10000);
 		$request = Requests::get('https://apifootball.com/api/?action=get_odds&from='.$this->FROM.'&to='.$this->TO.'&match_id='.$this->MATCH_ID.'&APIkey='.$this->KEY.'');
 		$request->body=json_decode($request->body,true); // To array
-
-		if (!isset($request->body['error'])) {
+ 		
+		if (!isset($request->body['error']) && (is_array($request->body) || is_object($request->body))   ) {
 			$_1       = 0;
 			$_X       = 0;
 			$_2       = 0;
@@ -94,6 +94,7 @@ class ApiFootball extends CI_Model
 			$UNDER_25 = 0;
 			$n=0;
 			//sumamos todas las cuotas para luego sacar promedio
+ 
 			foreach ($request->body as $key => $value) {
 
 				if ($value['o+2.5']>0 and $value['u+2.5']>0 and $value['bts_yes']>0 and $value['bts_no']>0) {
@@ -125,7 +126,7 @@ class ApiFootball extends CI_Model
 					'7'  => round($_12/$n,2),#_12
 					'8'  => round($_2X/$n,2),#_2X
 					'9'  => round($GG/$n,2), #GG
-					'10' => round($NG/$n,2), #NG
+					'10' => round($NG/$n,2) #NG
 					);
 
 				$data[]= array(
@@ -138,11 +139,8 @@ class ApiFootball extends CI_Model
 			else {
 				$data=null;
 			}
-
-
-
 		} else {
-			$data=null;
+			$data=null; 
 		}
 
 		return $data;
