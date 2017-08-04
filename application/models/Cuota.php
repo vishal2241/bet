@@ -5,16 +5,7 @@ class Cuota extends CI_Model
 	
 	public $ID_CUOTA;
 	public $ID_PARTIDO;
-	public $_1;
-	public $_X;
-	public $_2;
-	public $_1X;
-	public $_2X;
-	public $_12;
-	public $NG;
-	public $GG;
-	public $OVER_25;
-	public $UNDER_25;
+	public $ID_POSIBILIDAD;
 	public $FECHA_CUOTA;
 	public $BOOKMARKER;
 
@@ -22,16 +13,7 @@ class Cuota extends CI_Model
 	{
 		parent::__construct();
 		$this->ID_CUOTA=null;
-		$this->_1=0;
-		$this->_X=0;
-		$this->_2=0;
-		$this->_1X=0;
-		$this->_2X=0;
-		$this->_12=0;
-		$this->NG=0;
-		$this->GG=0;
-		$this->OVER_25=0;
-		$this->UNDER_25=0;
+		$this->ID_POSIBILIDAD=null;
 		$this->ID_PARTIDO=null;
 		$this->FECHA_CUOTA=null;
 		$this->BOOKMARKER=null;
@@ -96,17 +78,7 @@ class Cuota extends CI_Model
 		$this->db->update('cuota', $this);
 	}
 
-
-	public function getTipos()
-	{
-		$query = $this->db->query('SELECT * FROM tipo_cuota  ORDER BY ID_TIPO ASC '); 
-		
-		if ($query->num_rows() > 0) {
-			return $query->result();
-		} else {
-			return null;
-		} 
-	}
+ 
 
 	public function delete()
 	{

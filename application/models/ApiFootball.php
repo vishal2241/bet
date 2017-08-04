@@ -79,7 +79,7 @@ class ApiFootball extends CI_Model
 		ini_set('memory_limit','16000M');
 		set_time_limit(10000);
 		$request = Requests::get('https://apifootball.com/api/?action=get_odds&from='.$this->FROM.'&to='.$this->TO.'&match_id='.$this->MATCH_ID.'&APIkey='.$this->KEY.'');
-		$request->body=json_decode($request->body,true);
+		$request->body=json_decode($request->body,true); // To array
 
 		if (!isset($request->body['error'])) {
 			$_1       = 0;
@@ -115,20 +115,24 @@ class ApiFootball extends CI_Model
 			}
 
 			if (isset($id)) {
+				$odds[]= array(	
+					'1'  => round($_1/$n,2), #_1
+					'2'  => round($_X/$n,2), #_X
+					'3'  => round($_2/$n,2), #_2
+					'4'  => round($OVER_25/$n,2), #OVER_25
+					'5'  => round($UNDER_25/$n,2), #UNDER_25
+					'6'  => round($_1X/$n,2),#_1X
+					'7'  => round($_12/$n,2),#_12
+					'8'  => round($_2X/$n,2),#_2X
+					'9'  => round($GG/$n,2), #GG
+					'10' => round($NG/$n,2), #NG
+					);
+
 				$data[]= array(
 					'match_id'       => $id,
 					'odd_bookmakers' => $bookmakers,
 					'odd_date'       => $date,
-					'_1'             => round($_1/$n,2),
-					'_X'             => round($_X/$n,2),
-					'_2'             => round($_2/$n,2),
-					'_1X'            => round($_1X/$n,2),
-					'_12'            => round($_12/$n,2),
-					'_2X'            => round($_2X/$n,2),
-					'NG'             => round($NG/$n,2),
-					'GG'             => round($GG/$n,2),
-					'OVER_25'        => round($OVER_25/$n,2),
-					'UNDER_25'       => round($UNDER_25/$n,2),
+					'odds'       => $odds,
 					);
 			}
 			else {
