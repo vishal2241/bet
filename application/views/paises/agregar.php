@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body class="components-page">
-  <?php $this->load->view('overall/nav'); ?>
+  <?php $this->load->view('overall/nav2'); ?>
   <div class="main main-raised">
     <div class="section">
       <div class="container">

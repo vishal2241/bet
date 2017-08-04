@@ -1,6 +1,6 @@
 <?php $this->load->view('overall/header'); ?>
 <body>
-	<?php $this->load->view('overall/nav'); ?>
+	<?php $this->load->view('overall/nav2'); ?>
 	<div class="container">
 		<h2 align="center"> <?php echo $concepto[0]->CONCEPTO;  ?> </h2>
 		<br>

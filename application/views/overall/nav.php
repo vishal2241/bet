@@ -1,4 +1,4 @@
-
+<link href="<?= base_url(); ?>public/css/material-kit.css" rel="stylesheet"/>
 <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -20,59 +20,13 @@
 					</div>
 				</a>-->
 				<a class="navbar-brand" style="font-size: 17px" href="<?= base_url(); ?>"><b>Bet</b>365  <b></b></a>
-
 			</div>
-
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navigation-doc">
-				<ul class="nav navbar-nav">
-					<li class="dropdown ">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> PARTIDOS <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="<?= base_url(); ?>partidos/index">Autorizados</a></li>
-							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>partidos/pendientes">Pendientes</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown ">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> PAISES <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="<?= base_url(); ?>paises">Listar</a></li>
-							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>paises/agregar#form">Agregar</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown ">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> TORNEOS <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="<?= base_url(); ?>competiciones">Listar</a></li>
-							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>competiciones/agregar">Agregar</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown ">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> EQUIPOS <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="<?= base_url(); ?>equipos">Listar</a></li>
-							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>equipos/agregar">Agregar</a></li>
-						</ul>
-					</li>
-				</ul>
-				
-				<ul class="nav navbar-nav">
-					<li><a href="<?= base_url(); ?>sync">Sync</a></li> 
-				</ul>
-				<ul class="nav navbar-nav">
-					<li><a href="<?= base_url(); ?>widget">Widget</a></li> 
-				</ul>
 				<ul  class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a href="<?= base_url(); ?>home/partidos">Admin</a></li> 
+					</ul>
 					<ul class="nav navbar-nav">
 						<li><a href="<?= base_url(); ?>home/deudas">Mis Apuestas</a></li> 
 					</ul>
@@ -89,12 +43,12 @@
 							<li><a href="<?= base_url(); ?>login/logout">Salir</a></li>
 						</ul>
 					</li>
-
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
-		<div class="wrapper">
-			<div class="header header-filter" style="background-image: url('<?= base_url(); ?>public/img/header.jpg');">
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="wrapper">
+		<div class="header header-filter" style="background-image: url('<?= base_url(); ?>public/img/header.jpg');">
 			<!--<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3">

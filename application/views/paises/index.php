@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/plugins/datatables/css/dataTables.bootstrap.css">
 
 <body>
-  <?php $this->load->view('overall/nav'); ?>
+  <?php $this->load->view('overall/nav2'); ?>
   <div id="container">
     <h2 align="center"></h2>
     <div class="">

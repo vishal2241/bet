@@ -3,13 +3,11 @@
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/plugins/datatables/css/dataTables.bootstrap.css">
 
 <body>
-  <?php $this->load->view('overall/nav'); ?>
+  <?php $this->load->view('overall/nav2'); ?>
   <div id="container">
-    <h2 align="center"></h2>
     <div class="">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <table class="">
+      <div class="col-md-8 col-md-offset-2" >
+        <table>
           <tr>
             <td>
               <div class="form-group">
