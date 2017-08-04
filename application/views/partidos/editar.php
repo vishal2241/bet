@@ -17,16 +17,16 @@
 							<input class="form-control" id="local" type="text" value="<?= $partido[0]->LOCAL ?>">
 						</div>
 						<div class="col-md-1">
-							<label class="control-label" for="hora">Score</label>
-							<input class="form-control" id="hora" type="text" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<label class="control-label" for="score_1">Score 1</label>
+							<input class="form-control" id="score_1" type="number" value="<?= $partido[0]->GOLES_LOCAL ?>">
 						</div>
 						<div class="col-md-3">
 							<label class="control-label" for="visitante">Visitante</label>
 							<input class="form-control" id="visitante" type="text" value="<?= $partido[0]->VISITANTE ?>">
 						</div>
 						<div class="col-md-1">
-							<label class="control-label" for="hora">Score</label>
-							<input class="form-control" id="hora" type="text" value="<?= $partido[0]->GOLES_VISITANTE ?>">
+							<label class="control-label" for="score_2">Score 2</label>
+							<input class="form-control" id="score_2" type="number" value="<?= $partido[0]->GOLES_VISITANTE ?>">
 						</div>
 						<div class="col-md-2">
 							<label class="control-label" for="fecha">Fecha</label>
@@ -39,15 +39,15 @@
 						
 					</div>
 					<div class="form-group">
-						<div class="col-md-1">
-							<label class="control-label" for="hora">HT</label>
-							<input class="form-control" id="hora" type="text" value="<?= $partido[0]->GOLES_LOCAL ?>">
-						</div>
-						<div class="col-md-1">
-							<label class="control-label" for="hora">HT</label>
-							<input class="form-control" id="hora" type="text" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						<div class="col-md-2">
+							<label class="control-label" for="score_1HT">Local HT</label>
+							<input class="form-control" id="score_1HT" type="number" value="<?= $partido[0]->GOLES_LOCAL ?>">
 						</div>
 						<div class="col-md-2">
+							<label class="control-label" for="score_2HT">Visitante HT</label>
+							<input class="form-control" id="score_2HT" type="number" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-3">
 							<label class="control-label" for="estado">Estado</label>
 							<select class="form-control" id="estado">
 								<option value="">[...]</option>
@@ -56,7 +56,7 @@
 								<option value="Postp.">Postergado</option>
 							</select>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3">
 							<label class="control-label" for="autorizado">Autorizado</label>
 							<select class="form-control" id="autorizado">
 								<option value="NO">No</option>
@@ -71,6 +71,59 @@
 							</select>
 						</div>
 					</div>
+
+					<div class="form-group">
+						<h3 class="text-center text-success">Cuotas <i class="fa fa-money" aria-hidden="true"></i></h3>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(1)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(X)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(2)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(1X)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(2X)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(1-2)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>OVER 2.5</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>UNDER 2.5</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(1-1st)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(X-1st)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						<div class="col-md-2 text-center">
+							<label class="control-label text-success" for="_1"><b>(2-1st)</b></label>
+							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+						</div>
+						
+					</div>
+
+
 				</fieldset>
 
 				<?=   form_close(); ?>
