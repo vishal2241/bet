@@ -122,7 +122,7 @@ class Sync extends CI_Controller {
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
 		$from = new DateTime(date("Y-m-d"));
-		$from->sub(new DateInterval('P2D')); // restamos un día por zona horaria
+		$from->sub(new DateInterval('P0D')); // restamos un día por zona horaria
 
 		$this->ApiFootball->FROM     = $from->format('Y-m-d');
 		$this->ApiFootball->TO       = $to->format('Y-m-d');
@@ -130,7 +130,7 @@ class Sync extends CI_Controller {
 
 
 		//Ciclo de partidos en la BD
-		$partidos=$this->Partido->all($from->format('Y-m-d'),$to->format('Y-m-d'), 'Todos' );
+		$partidos=$this->Partido->all($from->format('Y-m-d'),$to->format('Y-m-d'), 'sinCuota' );
 		$ok=0;
 		$total= count($partidos); 
 		$ini=0;

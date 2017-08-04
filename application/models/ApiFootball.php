@@ -76,8 +76,8 @@ class ApiFootball extends CI_Model
 
 
 	public function getCuotas(){
-		ini_set('memory_limit','16000M');
-		set_time_limit(10000);
+		ini_set('memory_limit','160000M');
+		set_time_limit(100000);
 		$request = Requests::get('https://apifootball.com/api/?action=get_odds&from='.$this->FROM.'&to='.$this->TO.'&match_id='.$this->MATCH_ID.'&APIkey='.$this->KEY.'');
 		$request->body=json_decode($request->body,true); // To array
  		

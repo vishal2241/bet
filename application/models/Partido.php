@@ -129,6 +129,9 @@ class Partido extends CI_Model
 			case 'Cancelados':
 			$sql.="  p.ESTADO='Canc.' AND";
 			break;
+			case 'sinCuota':
+			$sql.="  p.ID_PARTIDO NOT IN (SELECT c.ID_PARTIDO FROM cuota c) AND";
+			break;
 		}
 		$sql.="
 		p.FECHA BETWEEN '".$from."'   AND '".$to."'
