@@ -8,6 +8,7 @@ class Cuota extends CI_Model
 	public $ID_POSIBILIDAD;
 	public $FECHA_CUOTA;
 	public $BOOKMARKER;
+	public $VALOR;
 
 	public function __construct()
 	{
@@ -17,12 +18,16 @@ class Cuota extends CI_Model
 		$this->ID_PARTIDO=null;
 		$this->FECHA_CUOTA=null;
 		$this->BOOKMARKER=null;
+		$this->VALOR=0;
 	}
 
 	
 	public function getCuota()
 	{
-		$query = $this->db->query('SELECT * FROM cuota WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
+		$query = $this->db->query('SELECT * FROM cuota WHERE
+			ID_PARTIDO='.$this->ID_PARTIDO.' 
+			AND ID_POSIBILIDAD='.$this->ID_POSIBILIDAD.' 
+			'); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -74,11 +79,12 @@ class Cuota extends CI_Model
 
 	public function update()
 	{
-		$this->db->where('ID_CUOTA', $this->ID_PARTIDO); 
-		$this->db->update('cuota', $this);
+		$query = $this->db->query('UPDATE cuota 
+			SET VALOR="'.$this->VALOR.'", BOOKMARKER="'.$this->BOOKMARKER.'", FECHA_CUOTA="'.$this->FECHA_CUOTA.'"
+			WHERE ID_PARTIDO='.$this->ID_PARTIDO.'  AND ID_POSIBILIDAD='.$this->ID_POSIBILIDAD.' '); 
 	}
 
- 
+
 
 	public function delete()
 	{

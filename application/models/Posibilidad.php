@@ -7,7 +7,6 @@ class Posibilidad extends CI_Model
 	public $ID_TIPO;
 	public $NOMBRE;
 	public $DESCRIPCION;
-	public $VALOR;
 
 
 	public function __construct()
@@ -17,7 +16,6 @@ class Posibilidad extends CI_Model
 		$this->ID_TIPO=null;
 		$this->NOMBRE=null;
 		$this->DESCRIPCION=null;
-		$this->VALOR=0;
 	}
 
 

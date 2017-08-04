@@ -154,16 +154,26 @@ class Sync extends CI_Controller {
 					$this->Cuota->GG          = $value['GG'];
 					$this->Cuota->OVER_25     = $value['OVER_25'];
 					$this->Cuota->UNDER_25    = $value['UNDER_25'];*/
-					foreach ($value['odds'] as $keyOdd => $odd) {
-						$this->Cuota->ID_POSIBILIDAD = key($odd);
-						$this->Cuota->VALOR =$odd[key($odd)];
-						$this->Cuota->delete();  
-						$this->Cuota->add(); 
-					}
+
+
+
+					foreach ($value['odds'][0] as $keyOdd => $odd) {
+						$this->Cuota->ID_POSIBILIDAD = $keyOdd;
+						$this->Cuota->VALOR          = number_format($odd, 2,'.', ','); 
+						$cuota=$this->Cuota->getCuota();
+						if ($cuota!=null)
+						{ 
+							$this->Cuota->update();
+						} else {
+							$this->Cuota->add();
+						}
+						
+					} 
 					$ok++;
 					echo '['.$row->FECHA.'] ['.$row->HORARIO .'] '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:green">OK</b><br>';
+
 				}
-		 
+
 			} else {
 				echo '['.$row->FECHA.'] ['. $row->HORARIO.'] '. $row->LOCAL .' '. $row->VISITANTE . ' <b style="color:red">No tiene cuotas</b><br>';
 			} 
