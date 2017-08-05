@@ -183,8 +183,14 @@ class Home extends CI_Controller {
 				"28328532"
 				]
 			},
-			"maxResults": "200", "marketProjection": [
-			"COMPETITION", "EVENT", "EVENT_TYPE", "RUNNER_DESCRIPTION", "RUNNER_METADATA", "MARKET_START_TIME"
+			"maxResults": "200", 
+			"marketProjection": [
+				"COMPETITION",
+				"EVENT",
+				"EVENT_TYPE",
+				"RUNNER_DESCRIPTION",
+				"RUNNER_METADATA",
+				"MARKET_START_TIME"
 			]
 		},
 		"id": 1
