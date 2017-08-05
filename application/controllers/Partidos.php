@@ -19,11 +19,11 @@ class Partidos extends CI_Controller {
 		if ($_POST) {
 			$partido = $this->input->post();
 			$this->Partido->add($partido);
-			header("Location:" . base_url(). "paises");
+			header("Location:" . base_url(). "partidos");
 		} else {
 				#Vista
 			$this->load->helper('form');
-			$this->load->view('paises/agregar');
+			$this->load->view('partidos/agregar');
 		}
 		
 	}
@@ -45,7 +45,7 @@ class Partidos extends CI_Controller {
 			$data['pais']                      = $this->Pais->getPais();
 
 			$this->Cuota->ID_PARTIDO           = $this->uri->segment(3);
-			$data['cuotas']                    = $this->Cuota->getCuota();
+			#$data['cuotas']                    = $this->Cuota->getCuota();
 
 			$this->load->helper('form');
 			$this->load->view('partidos/editar', $data);

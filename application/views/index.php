@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="es">
 <head>
 	<?php $this->load->view('overall/header'); ?>
+	<link href="<?= base_url(); ?>public/css/material-kit.css" rel="stylesheet"/>
 </head>
 
 <body class="signup-page">

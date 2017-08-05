@@ -7,7 +7,7 @@
   <div id="container">
     <div class="">
       <div class="col-md-8 col-md-offset-2" >
-        <table>
+        <table  width="100%">
           <tr>
             <td>
               <div class="form-group">
@@ -26,15 +26,20 @@
                 <label for="fecha">Filtro : </label>
                 <select class="form-control" id="filtro">
                   <option value="Autorizados">Autorizados</option>
-                  <option value="NoAutorizados">No autorizados</option>
-                  <option  value="Todos" selected>Todos</option>
+                  <option value="NoAutorizados" selected>No autorizados</option>
+                  <option  value="Todos" >Todos</option>
                   <option value="Cancelados">Cancelados</option>
                 </select>
               </div>
             </td>
             <td>
-              <div class="form-group">
-                <button class="btn btn-Primary" id="go">Go</button>
+              <div class="">
+                &nbsp;<button class="btn btn-Primary" id="go">Go</button>
+              </div>
+            </td>
+            <td>
+              <div class="">
+               <a href="<?= base_url(); ?>partidos/agregar" class="btn btn-success" ><i class="fa fa-plus-square" aria-hidden="true"></i></a>
               </div>
             </td>
           </tr>
@@ -101,7 +106,7 @@
       var from = $("#from").val();
       var to   = $("#to").val();
 
-      get_partidos(from, to, 'Todos');
+      get_partidos(from, to, 'NoAutorizados');
 
 
       $( "#go" ).click(function() {

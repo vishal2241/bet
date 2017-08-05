@@ -76,49 +76,49 @@
 						<h3 class="text-center text-success">Cuotas <i class="fa fa-money" aria-hidden="true"></i></h3>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(1)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(X)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(2)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(1X)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(2X)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(1-2)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>OVER 2.5</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>UNDER 2.5</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(1-1st)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(X-1st)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
 							<label class="control-label text-success" for="_1"><b>(2-1st)</b></label>
-							<input class="form-control" id="_1" type="number" step="0.01" min="1.00" value="<?= $partido[0]->GOLES_LOCAL ?>">
+							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						
 					</div>
