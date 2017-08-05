@@ -96,20 +96,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script type="text/javascript">
-				var formData = {
-					"fecha": "0"
-				};
 
-				$.get("https://www.fullplay.com.co/update_ajax/get_table_events?fecha=2017-08-05", function(data, status){
-					console.log(data);
-				});
+				var options = {
+					hostname: 'beta-api.betfair.com',
+					port: 443,
+					path: '/json-rpc',
+					method: 'POST',
+					headers: {
+						'X-Application' : 'lkaPoxoI3tDVaQgP',
+						'Accept': 'application/json',
+						'Content-type' : 'application/json',
+						'X-Authentication' : 'hBGnhmzhUaRPMWxE+zaNyYp7XxR5f6Bg+8Hyf3wwNEU='
+					}
+				}
+
+				var requestFilters = '{"filter":{}}';
+				var jsonRequest = constructJsonRpcRequest('listEventTypes', requestFilters );
+				var req = https.request(options,function (res){
+					res.setEncoding(DEFAULT_ENCODING);
+					res.on('data', function (chunk) {
+						str += chunk;
+					}); });
 
 
 
-
-
-
-
-
-			</script>
-			</html>
+				</script>
+				</html>

@@ -34,9 +34,17 @@ class Home extends CI_Controller {
 	}
 	
 	public function prueba(){ 
-
-	$this->load->view('home/prueba');
-
+		$this->load->library('PHPRequests');
+		$url="https://api.betfair.com/exchange/betting/rest/v1.0/listEventTypes/";
+		$param='{"filter":{ }}';
+		$header=array(
+			"X-Application" =>"lkaPoxoI3tDVaQgP",
+			"X-Authentication" =>"hBGnhmzhUaRPMWxE+zaNyYp7XxR5f6Bg+8Hyf3wwNEU=",
+			"content-type" => "application/json"
+			);
+		$request = Requests::post($url, $header,  $param);
+		#$request->body=json_decode($request->body);
+		print_r($request->body); 
 	}
 
 }
