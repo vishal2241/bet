@@ -79,46 +79,46 @@
 							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>(X)</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_X"><b>(X)</b></label>
+							<input class="" id="_X" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>(2)</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_2"><b>(2)</b></label>
+							<input class="" id="_2" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>(1X)</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_1X"><b>(1X)</b></label>
+							<input class="" id="_1X" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>(2X)</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_2X"><b>(2X)</b></label>
+							<input class="" id="_2X" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>(1-2)</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_12"><b>(1-2)</b></label>
+							<input class="" id="_12" type="number" step="0.01" min="1.00" value="">
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>OVER 2.5</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_OVER"><b>OVER 2.5</b></label>
+							<input class="" id="_OVER" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>UNDER 2.5</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_UNDER"><b>UNDER 2.5</b></label>
+							<input class="" id="_UNDER" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>(1-1st)</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_1-1ST"><b>(1-1st)</b></label>
+							<input class="" id="_1-1ST" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>(X-1st)</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_X-1ST"><b>(X-1st)</b></label>
+							<input class="" id="_X-1ST" type="number" step="0.01" min="1.00" value="">
 						</div>
 						<div class="col-md-2 text-center">
-							<label class="control-label text-success" for="_1"><b>(2-1st)</b></label>
-							<input class="" id="_1" type="number" step="0.01" min="1.00" value="">
+							<label class="control-label text-success" for="_2-1ST"><b>(2-1st)</b></label>
+							<input class="" id="_2-1ST" type="number" step="0.01" min="1.00" value="">
 						</div>
 						
 					</div>

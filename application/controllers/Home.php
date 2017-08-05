@@ -33,16 +33,9 @@ class Home extends CI_Controller {
 		$this->load->view('home/index', $data);
 	}
 	
-	public function pruebas(){ 
+	public function prueba(){ 
 
-		$request = Requests::get('https://86qbtjzii8.execute-api.ap-southeast-2.amazonaws.com/shared/sports',
-			array(
-				"x-api-key" => "BZKbpVxxsE6oX9rH5vWVe7Lsk96w3D8E2af56PBI",
-				"Accept" => "application/json"
-				)
-			);
-		#$request->body=json_decode($request->body);
-		print_r( $request->body); 
+	$this->load->view('home/prueba');
 
 	}
 
