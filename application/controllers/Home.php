@@ -210,18 +210,20 @@ class Home extends CI_Controller {
 	<table width="" border="1" style="font-family:Calibri; font-size:14px"> ';
 
 		foreach ($request->body as $key => $value) {
-			print_r($value);  exit();
-			echo'	
-			<tr>
-				<td>'.$value['marketType'].'</td>
-				<td>'.$value['marketCount'].'</td>
+			if ($value['marketName']=='Double Chance') {
+				print_r($value);  
+				echo'	
+				<br><br><br>
+				';
+			}
+				# pifrint_r($value['marketName']);  
 
 
-			</tr>
-			';
+
+			
 
 		}
-		echo '</table>';
+
 	}
 
 
