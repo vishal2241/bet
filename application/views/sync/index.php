@@ -18,7 +18,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<div class="tim-row" id="tables-row">					 
 								<div class="table-responsive">
-									<h2>Api Football</h2>
+									<h2>Api BetFair</h2>
+									<table class="table">
+										<tbody>
+											<tr>
+												<td>
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncPaises">Sincronizar Paises<i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+												<td>
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncCompetencias">Sincronizar Competencias<i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+
+											</tr>
+										</tbody>
+									</table>
+									<!--<h2>Api Football</h2>
 									<table class="table">
 										<tbody>
 											<tr>
@@ -55,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</td>
 											</tr>
 										</tbody>
-									</table>
+									</table> -->
 								</div>
 								<!-- end container -->
 							</div>

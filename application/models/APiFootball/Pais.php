@@ -5,8 +5,6 @@ class Pais extends CI_Model
 	
 	public $ID_PAIS;
 	public $NOMBRE;
-	public $MARKET_COUNT;
-	public $IMG;
 
 
 	public function __construct()
@@ -14,13 +12,11 @@ class Pais extends CI_Model
 		parent::__construct();
 		$this->ID_PAIS=null;
 		$this->NOMBRE=null;
-		$this->MARKET_COUNT=null;
-		$this->IMG=null;
 	}
 
 	public function getPais()
 	{
-		$query = $this->db->query('SELECT * FROM pais WHERE ID_PAIS="'.$this->ID_PAIS.'" '); 
+		$query = $this->db->query('SELECT * FROM pais WHERE ID_PAIS='.$this->ID_PAIS.' '); 
 		
 		if ($query->num_rows() > 0) {
 			return $query->result();
@@ -41,6 +37,9 @@ class Pais extends CI_Model
 			$this->db->where('ID_PAIS', $this->ID_PAIS); 
 			$this->db->update('pais', $this);
 	}
+
+
+
 
 
 }
