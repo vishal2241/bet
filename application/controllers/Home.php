@@ -44,15 +44,15 @@ class Home extends CI_Controller {
 			],
 
 			"marketStartTime": {
-				"from": "2017-08-05T04:59:00",
-				"to": "2017-08-06T04:59:00"
+				"from": "2017-08-08T00:00:00",
+				"to": "2017-08-08T20:59:00"
 			}
 		},
 		"locale":"es"
 	}';
 	$header=array(
 		"X-Application" =>"lkaPoxoI3tDVaQgP",
-		"X-Authentication" =>"hBGnhmzhUaRPMWxE+zaNyYp7XxR5f6Bg+8Hyf3wwNEU=",
+		"X-Authentication" =>"GUCRqdJ7K+frjqLllsumjwBFA0w0IPNToJR4QRd4/OY=",
 		"content-type" => "application/json"
 		);
 	$request = Requests::post($url, $header,  $param);
@@ -100,7 +100,7 @@ class Home extends CI_Controller {
 	}';
 	$header=array(
 		"X-Application" =>"lkaPoxoI3tDVaQgP",
-		"X-Authentication" =>"hBGnhmzhUaRPMWxE+zaNyYp7XxR5f6Bg+8Hyf3wwNEU=",
+		"X-Authentication" =>"GUCRqdJ7K+frjqLllsumjwBFA0w0IPNToJR4QRd4/OY=",
 		"content-type" => "application/json"
 		);
 	$request = Requests::post($url, $header,  $param);
@@ -142,7 +142,7 @@ class Home extends CI_Controller {
 	}';
 	$header=array(
 		"X-Application" =>"lkaPoxoI3tDVaQgP",
-		"X-Authentication" =>"hBGnhmzhUaRPMWxE+zaNyYp7XxR5f6Bg+8Hyf3wwNEU=",
+		"X-Authentication" =>"GUCRqdJ7K+frjqLllsumjwBFA0w0IPNToJR4QRd4/OY=",
 		"content-type" => "application/json"
 		);
 	$request = Requests::post($url, $header,  $param);
@@ -177,60 +177,42 @@ class Home extends CI_Controller {
 # 28328532 tigres medellin
 		$this->load->library('PHPRequests');
 		$url="https://api.betfair.com/exchange/betting/rest/v1.0/listMarketCatalogue/";
-		$param='{
-			"filter": {
-				"eventIds": [
-				"28328532"
-				]
-			},
-			"maxResults": "200", 
-			"marketProjection": [
-				"COMPETITION",
-				"EVENT",
-				"EVENT_TYPE",
-				"RUNNER_DESCRIPTION",
-				"RUNNER_METADATA",
-				"MARKET_START_TIME"
-			]
-		},
-		"id": 1
-	}
-
-	';
-	$header=array(
-		"X-Application" =>"lkaPoxoI3tDVaQgP",
-		"X-Authentication" =>"hBGnhmzhUaRPMWxE+zaNyYp7XxR5f6Bg+8Hyf3wwNEU=",
-		"content-type" => "application/json"
-		);
-	$request = Requests::post($url, $header,  $param);
-	$request->body=json_decode($request->body, true);
+		$param='{"filter":{"eventIds":["28303226"],"marketBettingTypes":["ODDS","ASIAN_HANDICAP_SINGLE_LINE","ASIAN_HANDICAP_DOUBLE_LINE"]},"maxResults":"1000","marketProjection":["RUNNER_DESCRIPTION"]}, "id": 1
+		';
+		$header=array(
+			"X-Application" =>"lkaPoxoI3tDVaQgP",
+			"X-Authentication" =>"GUCRqdJ7K+frjqLllsumjwBFA0w0IPNToJR4QRd4/OY=",
+			"content-type" => "application/json"
+			);
+		$request = Requests::post($url, $header,  $param);
+		$request->body=json_decode($request->body, true);
 	#print_r($request->body);  exit();
-	echo '
-	<style type="text/css">
-		table {border-collapse:collapse}
-		td {
-			border:1px solid #D3D3D3;
-			padding-left:10px;
-		}
-	</style>
-	<table width="" border="1" style="font-family:Calibri; font-size:14px"> ';
-
-		foreach ($request->body as $key => $value) {
-			if ($value['marketName']=='Double Chance') {
-				print_r($value);  
-				echo'	
-				<br><br><br>
-				';
+		echo '
+		<style type="text/css">
+			table {border-collapse:collapse}
+			td {
+				border:1px solid #D3D3D3;
+				padding-left:10px;
 			}
+		</style>
+		<table width="" border="1" style="font-family:Calibri; font-size:14px"> ';
+
+			foreach ($request->body as $key => $value) {
+				if ($value['marketName']=='Double Chance') {
+					print_r($value);  
+					echo'	
+					<br><br><br>
+					';
+				}
 				# pifrint_r($value['marketName']);  
 
 
 
-			
+				
+
+			}
 
 		}
-
-	}
 
 
 /*
@@ -256,7 +238,7 @@ No
  
 
 
- hBGnhmzhUaRPMWxE+zaNyYp7XxR5f6Bg+8Hyf3wwNEU=
+ GUCRqdJ7K+frjqLllsumjwBFA0w0IPNToJR4QRd4/OY=
  */
 
 
