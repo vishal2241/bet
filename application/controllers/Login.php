@@ -23,11 +23,13 @@ class Login extends CI_Controller {
 		
 		if ($fila!=null) {
 			if ($fila->CLAVE == $inputPass ) {
+				$login=$this->ApiBetfair->login();
 				$data = array (
-					'id'     => $fila->CEDULA,
-					'user'   => $fila->USUARIO,
-					'name'   => $fila->P_NOMBRE . ' ' . $fila->P_APELLIDO,
-					'login'  => true
+					'id'    => $fila->CEDULA,
+					'user'  => $fila->USUARIO,
+					'name'  => $fila->P_NOMBRE . ' ' . $fila->P_APELLIDO,
+					'bet'   => $login['token'],
+					'login' => true
 					);
 
 				$this->session->set_userdata($data);

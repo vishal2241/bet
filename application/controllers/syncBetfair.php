@@ -52,6 +52,60 @@ class syncBetfair extends CI_Controller {
 		}
 	}  
 
+	public function syncEventos(){
+		$from= date("Y-m-d");
+		$to= "2017-08-10";
+		$competencias=$this->ApiBetfair->getCompetencias(); 
+		if ($competencias!=null) {
+			foreach ($competencias as $key => $rowCompe) {
+				$eventos=$this->ApiBetfair->getEventos($from, $to, $rowCompe['competition']['id']); 
+				if ($eventos!=null) {
+					print_r($eventos);
+					foreach ($eventos as $key => $rowEvent) {
+						
+						$openDate=explode("T", $rowEvent['event']['openDate']);
+						$fecha=$openDate[0];
+						$hora= substr($openDate[1], 0, 5 );
+
+						$veri=strpos($rowEvent['event']['name'], " v ");
+						if ($veri===false) {
+							$name=explode(" - ", $rowEvent['event']['name']);
+						} else {
+							$name=explode(" v ", $rowEvent['event']['name']);
+						}
+						$local= $name[0];
+						$visitante= $name[1];
+					 
+						$this->Partido->ID_PARTIDO     = $rowEvent['event']['id'];
+						$this->Partido->ID_COMPETENCIA = $rowCompe['competition']['id'];
+						$this->Partido->ID_PAIS        = $rowCompe['event']['countryCode'];
+						$this->Partido->TIMEZONE       = $rowCompe['event']['id'];
+						$this->Partido->FECHA          = $fecha;
+						$this->Partido->HORA           = $hora;
+						$this->Partido->LOCAL          = $local;
+						$this->Partido->VISITANTE      = $visitante;
+						$this->Partido->MARKET_COUNT   = $rowCompe['marketCount'];
+
+						$Partido=$this->Partido->getPartido();
+						if ($Partido==null) {
+							echo "<b>add</b> ".$rowEvent['event']['name']. " " .$rowEvent['event']['openDate']. "<br>";
+							$this->Partido->add();
+						} else {
+							echo "<b>update</b> ".$rowEvent['event']['name']." ". $rowEvent['event']['openDate']. "<br>";
+							$this->Partido->update();
+						}
+					}
+				}
+
+			}
+		} else {
+			echo "No hay competencias";
+		}
+
+
+
+
+	}  
 
 
 

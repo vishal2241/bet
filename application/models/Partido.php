@@ -5,35 +5,34 @@ class Partido extends CI_Model
 	
 	public $ID_PARTIDO;
 	public $ID_COMPETENCIA;
+	public $ID_PAIS;
+	public $TIMEZONE;
 	public $FECHA;
-	public $HORARIO;
-	public $ESTADO;
+	public $HORA;
 	public $LOCAL;
 	public $VISITANTE;
-	public $GOLES_LOCAL;
-	public $GOLES_VISITANTE;
-	public $EN_VIVO;
-	#public $FROM;
-	#public $TO;
+	public $ESTADO;
+	public $MARKET_COUNT;
+
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->ID_PARTIDO=null;
-		$this->ID_COMPETENCIA=null;
-		$this->FECHA=null;
-		$this->HORARIO=null;
-		$this->ESTADO=null;
-		$this->LOCAL=null;
-		$this->VISITANTE=null;
-		$this->GOLES_LOCAL=null;
-		$this->GOLES_VISITANTE=null;
-		$this->EN_VIVO=null;
+		$this->ID_PARTIDO     = null;
+		$this->ID_COMPETENCIA = null;
+		$this->ID_PAIS        = null;
+		$this->TIMEZONE       = null;
+		$this->FECHA          = null;
+		$this->HORA           = null;
+		$this->LOCAL          = null;
+		$this->VISITANTE      = null;
+		$this->MARKET_COUNT   = null;
+		$this->ESTADO         = null;
 	}
 
 	public function getPartido()
 	{
-		$query = $this->db->query('SELECT * FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
+		$query = $this->db->query('SELECT * FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.''); 
 
 		if ($query->num_rows() > 0) {
 			return $query->result();
