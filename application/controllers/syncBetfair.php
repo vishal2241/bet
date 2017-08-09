@@ -54,12 +54,14 @@ class syncBetfair extends CI_Controller {
 
 	public function syncEventos(){
 		$from= date("Y-m-d");
-		$to= "2017-08-10";
+		$to = new DateTime(date("Y-m-d"));
+		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
+
 		$i=0;
 		$competencias=$this->ApiBetfair->getCompetencias(); 
 		if ($competencias!=null) {
 			foreach ($competencias as $key => $rowCompe) {
-				$eventos=$this->ApiBetfair->getEventos($from, $to, $rowCompe['competition']['id']); 
+				$eventos=$this->ApiBetfair->getEventos($from, $to->format('Y-m-d'), $rowCompe['competition']['id']); 
 				if ($eventos!=null) {
 					foreach ($eventos as $key => $rowEvent) {
 						$openDate=explode("T", $rowEvent['event']['openDate']);
@@ -75,8 +77,11 @@ class syncBetfair extends CI_Controller {
 							$fecha = new DateTime($fecha);
 							$fecha->sub(new DateInterval('PT5H'));
 							break;
+							default:
+
+							break;
 						}
- 
+
 						$veri=strpos($rowEvent['event']['name'], " v ");
 						if ($veri=="") {
 							$name=explode(" - ", $rowEvent['event']['name']);
@@ -104,7 +109,7 @@ class syncBetfair extends CI_Controller {
 
 						$Partido=$this->Partido->getPartido();
 						if ($Partido==null) {
-							echo "<b>add</b> ".$rowEvent['event']['name']. " " .$fecha->format('Y-m-d H:i'). "<b$fecha->format('Y-m-d H:i')r>";
+							echo "<b>add</b> ".$rowEvent['event']['name']. " " .$fecha->format('Y-m-d H:i'). "<br>";
 							$this->Partido->add();
 						} else {
 							echo "<b>update</b> ".$rowEvent['event']['name']." ". $fecha->format('Y-m-d H:i'). "<br>";
@@ -119,14 +124,25 @@ class syncBetfair extends CI_Controller {
 		} else {
 			echo "No hay competencias";
 		}
+	}  //end Sync Events
 
 
+	public function syncTipoOdds(){
+		$from= date("Y-m-d");
+		$to = new DateTime(date("Y-m-d"));
+		$to->add(new DateInterval('P2D')); // sumamos un día por zona horaria
+		$partidos=$this->Partido->all($from, $to->format('Y-m-d'), ''); 
 
 
+		if ($partidos!=null) {
+			foreach ($partidos as $key => $rowMatch) {
+				print_r($rowMatch); exit;
+
+			}
+		} else {
+			echo "No hay partidos para las fechas indicadas.";
+		}
 	}  
-
-
-
 
 }
 

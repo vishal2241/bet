@@ -109,13 +109,11 @@ class Partido extends CI_Model
 		p.VISITANTE,
 		p.ESTADO,
 		p.FECHA,
-		p.HORARIO,
+		p.HORA,
 		p.AUTORIZADO,
-		co.NOMBRE AS TORNEO,
-		pa.NOMBRE as PAIS 
+		co.NOMBRE AS TORNEO
 		FROM partido p
 		LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
-		LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
 		WHERE ";
 
 		switch ($filtro) {
@@ -134,8 +132,8 @@ class Partido extends CI_Model
 		}
 		$sql.="
 		p.FECHA BETWEEN '".$from."'   AND '".$to."'
-		ORDER BY p.FECHA DESC, p.HORARIO ASC";
-
+		ORDER BY p.FECHA ASC, p.HORA ASC";
+		
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
 			return $query->result();

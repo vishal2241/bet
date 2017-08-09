@@ -31,6 +31,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<td>
 													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncEventos">Sincronizar Eventos<i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
+												<td>
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncTipoOdds">Sincronizar Catalogo<i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
 											</tr>
 										</tbody>
 									</table>

@@ -76,11 +76,36 @@ class ApiBetfair extends CI_Model
 					"competitionIds":["'.$compe.'"],
 					"marketBettingTypes":["ODDS"],
 					"marketStartTime":{
-						"from":"'.$from.'T05:00:00Z",
-						"to":"'.$to.'T04:59:00Z"
+						"from":"'.$from.'T00:00:00Z",
+						"to":"'.$to.'T23:59:00Z"
 					}
 				},
 				"locale":"es"
+			},
+			"id": 1
+			';
+			$header=array(
+				"X-Application"    => $this->KEY,
+				"X-Authentication" => $this->SESSION,
+				"content-type"     => "application/json"
+				);
+			$request = Requests::post($url, $header,  $param);
+			$request->body=json_decode($request->body, true);
+			return $request->body;
+		}
+
+
+
+		public function getTipoOdds($id){
+			$url="https://api.betfair.com/exchange/betting/rest/v1.0/listMarketCatalogue/";
+			$param=' {
+				"filter":
+				{"eventTypeIds":["1"],
+				"eventIds":["'.$id.'"]},
+				"locale":"es",
+				"sort":"MINIMUM_AVAILABLE",
+				"maxResults":"100",
+				"marketProjection":["RUNNER_METADATA"]
 			},
 			"id": 1
 			';
