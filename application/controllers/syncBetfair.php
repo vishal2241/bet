@@ -136,8 +136,28 @@ class syncBetfair extends CI_Controller {
 
 		if ($partidos!=null) {
 			foreach ($partidos as $key => $rowMatch) {
-				print_r($rowMatch); exit;
+				$catalogo=$this->ApiBetfair->getTipoOdds('28331659'); 
+				foreach ($catalogo as $keyCata => $rowCata) {
+					$this->Catalogo->ID_CATALOGO  = $rowCata['marketId'];
+					$this->Catalogo->NOMBRE       = $rowCata['marketName'];
+					$this->Catalogo->TOTAL_JUGADO = $rowCata['totalMatched'];
+					$getCatalogo=$this->Catalogo->getCatalogo(); 
+					if ($getCatalogo==null) {
+						$this->Catalogo->add();
+					} else {
+						$this->Catalogo->update();
+					}
+					foreach ($rowCata['runners'] as $keyRunner => $rowRunner) {
+						$odd=$this->ApiBetfair->getOdds($rowCata['marketId'], $rowRunner['selectionId']); 
+						print_r($odd);
+						exit;
+					}
 
+
+
+
+				}
+				exit;
 			}
 		} else {
 			echo "No hay partidos para las fechas indicadas.";

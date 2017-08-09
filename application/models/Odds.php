@@ -1,6 +1,6 @@
 <?php 
 
-class Posibilidad extends CI_Model
+class Odss extends CI_Model
 {
 	
 	public $ID_POSIBILIDAD;
