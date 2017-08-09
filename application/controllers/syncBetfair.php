@@ -136,7 +136,7 @@ class syncBetfair extends CI_Controller {
 
 		if ($partidos!=null) {
 			foreach ($partidos as $key => $rowMatch) {
-				$catalogo=$this->ApiBetfair->getTipoOdds('28331659'); 
+				$catalogo=$this->ApiBetfair->getTipoOdds($rowMatch->ID_PARTIDO); 
 				foreach ($catalogo as $keyCata => $rowCata) {
 					$this->Catalogo->ID_CATALOGO  = $rowCata['marketId'];
 					$this->Catalogo->NOMBRE       = $rowCata['marketName'];
