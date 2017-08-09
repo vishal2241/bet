@@ -38,8 +38,10 @@ class Odds extends CI_Model
 
 	public function update()
 	{
-		$this->db->where('ID_ODD', $this->ID_ODD); 
-		$this->db->update('odds', $this);
+		$query = $this->db->query('UPDATE odds 
+			SET VALOR="'.$this->VALOR.'",
+			DESCRIPCION="'.$this->DESCRIPCION.'"
+			WHERE ID_ODD="'.$this->ID_ODD.'" AND ID_CATALOGO="'.$this->ID_CATALOGO.'" ');
 	}
 
 
