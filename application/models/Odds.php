@@ -1,27 +1,27 @@
 <?php 
 
-class Odss extends CI_Model
+class Odds extends CI_Model
 {
 	
-	public $ID_POSIBILIDAD;
-	public $ID_TIPO;
-	public $NOMBRE;
+	public $ID_ODD;
+	public $ID_CATALOGO;
+	public $VALOR;
 	public $DESCRIPCION;
 
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->ID_POSIBILIDAD=null;
-		$this->ID_TIPO=null;
-		$this->NOMBRE=null;
+		$this->ID_ODD=null;
+		$this->ID_CATALOGO=null;
+		$this->VALOR=0;
 		$this->DESCRIPCION=null;
 	}
 
 
-	public function getPosibilidad()
+	public function getOdd()
 	{
-		$query = $this->db->query('SELECT * FROM posibilidad WHERE ID_POSIBILIDAD='.$this->ID_POSIBILIDAD.' ');
+		$query = $this->db->query('SELECT * FROM odds WHERE ID_ODD="'.$this->ID_ODD.'" AND ID_CATALOGO="'.$this->ID_CATALOGO.'" ');
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -33,13 +33,13 @@ class Odss extends CI_Model
 
 	public function add()
 	{
-		$this->db->insert('posibilidad', $this);
+		$this->db->insert('odds', $this);
 	}
 
 	public function update()
 	{
-		$this->db->where('ID_POSIBILIDAD', $this->ID_POSIBILIDAD); 
-		$this->db->update('posibilidad', $this);
+		$this->db->where('ID_ODD', $this->ID_ODD); 
+		$this->db->update('odds', $this);
 	}
 
 

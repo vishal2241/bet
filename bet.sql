@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-08-2017 a las 22:24:16
+-- Tiempo de generación: 09-08-2017 a las 22:41:01
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -245,10 +245,17 @@ INSERT INTO `competencia` (`ID_COMPETENCIA`, `NOMBRE`, `REGION`, `MARKET_COUNT`)
 
 CREATE TABLE `odds` (
   `ID_ODD` int(11) NOT NULL,
-  `ID_CATOLOGO` varchar(100) NOT NULL,
+  `ID_CATALOGO` varchar(100) NOT NULL,
   `DESCRIPCION` varchar(30) NOT NULL,
   `VALOR` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='betfair';
+
+--
+-- Volcado de datos para la tabla `odds`
+--
+
+INSERT INTO `odds` (`ID_ODD`, `ID_CATALOGO`, `DESCRIPCION`, `VALOR`) VALUES
+(47972, '1.133016942', 'Goles 1ª parte 2.5', '0');
 
 -- --------------------------------------------------------
 
