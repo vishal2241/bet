@@ -149,10 +149,9 @@ class syncBetfair extends CI_Controller {
 					}
 					foreach ($rowCata['runners'] as $keyRunner => $rowRunner) {
 						$odd=$this->ApiBetfair->getOdds($rowCata['marketId'], $rowRunner['selectionId']); 
-						
 						$this->Odds->ID_ODD      = $rowRunner['selectionId'];
 						$this->Odds->ID_CATALOGO = $rowCata['marketId'];
-						$this->Odds->DESCRIPCION = $rowCata['marketName'];
+						$this->Odds->DESCRIPCION = $rowRunner['runnerName'];
 						#$this->Odds->VALOR       = $rowRunner['totalMatched'];
 						$getOdd=$this->Odds->getOdd(); 
 						if ($getOdd==null) {
@@ -160,16 +159,7 @@ class syncBetfair extends CI_Controller {
 						} else {
 							$this->Odds->update();
 						}
-
-
-						 
-						#print_r($odd);
-						exit;
 					}
-
-
-
-
 				}
 				exit;
 			}
