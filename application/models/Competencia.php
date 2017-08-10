@@ -4,7 +4,7 @@ class Competencia extends CI_Model
 {
 	
 	public $ID_COMPETENCIA;
-	public $ID_PAIS;
+	public $REGION;
 	public $NOMBRE;
 	public $MARKET_COUNT;
 
@@ -13,7 +13,7 @@ class Competencia extends CI_Model
 	{
 		parent::__construct();
 		$this->ID_COMPETENCIA=null;
-		$this->ID_PAIS=null;
+		$this->REGION=null;
 		$this->NOMBRE=null;
 		$this->MARKET_COUNT=null;
 	}
@@ -39,7 +39,7 @@ class Competencia extends CI_Model
 		pa.IMG  
 		FROM competencia c  
 		LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
-		LEFT JOIN pais pa ON (c.ID_PAIS=pa.ID_PAIS)  
+		LEFT JOIN pais pa ON (c.REGION=pa.REGION)  
 		WHERE p.FECHA="'.$date.'" ';
 		#Si la fecha es mayor a la de hoy no se condiciona la hora
 		if (date("Y-m-d")==$date ) {

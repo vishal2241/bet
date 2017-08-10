@@ -5,6 +5,7 @@ class Odds extends CI_Model
 	
 	public $ID_ODD;
 	public $ID_CATALOGO;
+	public $ID_PARTIDO;
 	public $VALOR;
 	public $DESCRIPCION;
 
@@ -14,6 +15,7 @@ class Odds extends CI_Model
 		parent::__construct();
 		$this->ID_ODD=null;
 		$this->ID_CATALOGO=null;
+		$this->ID_PARTIDO=null;
 		$this->VALOR=0;
 		$this->DESCRIPCION=null;
 	}

@@ -37,7 +37,7 @@ class syncBetfair extends CI_Controller {
 
 				$this->Competencia->ID_COMPETENCIA = $value['competition']['id'];
 				$this->Competencia->NOMBRE = $value['competition']['name'];
-				$this->Competencia->ID_PAIS = $value['competitionRegion'];
+				$this->Competencia->REGION = $value['competitionRegion'];
 				$this->Competencia->MARKET_COUNT  = $value['marketCount'];
 
 				$competencia=$this->Competencia->getCompetencia();
@@ -53,6 +53,8 @@ class syncBetfair extends CI_Controller {
 	}  
 
 	public function syncEventos(){
+		ini_set('memory_limit','16000000M');
+		set_time_limit(100000000);
 		$from= date("Y-m-d");
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
@@ -130,11 +132,13 @@ class syncBetfair extends CI_Controller {
 	public function syncTipoOdds(){
 		$from= date("Y-m-d");
 		$to = new DateTime(date("Y-m-d"));
-		$to->add(new DateInterval('P2D')); // sumamos un día por zona horaria
+		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
 		$partidos=$this->Partido->all($from, $to->format('Y-m-d'), ''); 
-
+		ini_set('memory_limit','16000000M');
+		set_time_limit(100000000);
 
 		if ($partidos!=null) {
+
 			foreach ($partidos as $key => $rowMatch) {
 				$catalogo=$this->ApiBetfair->getTipoOdds($rowMatch->ID_PARTIDO); 
 				foreach ($catalogo as $keyCata => $rowCata) {
@@ -151,6 +155,7 @@ class syncBetfair extends CI_Controller {
 						$odd=$this->ApiBetfair->getOdds($rowCata['marketId'], $rowRunner['selectionId']); 
 						$this->Odds->ID_ODD      = $rowRunner['selectionId'];
 						$this->Odds->ID_CATALOGO = $rowCata['marketId'];
+						$this->Odds->ID_PARTIDO  = $rowMatch->ID_PARTIDO;
 						$this->Odds->DESCRIPCION = $rowRunner['runnerName'];
 						#$this->Odds->VALOR       = $rowRunner['totalMatched'];
 						$getOdd=$this->Odds->getOdd(); 
@@ -161,8 +166,11 @@ class syncBetfair extends CI_Controller {
 						}
 					}
 				}
-				exit;
+
+				echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE."<br>"; 
+				sleep(3);
 			}
+
 		} else {
 			echo "No hay partidos para las fechas indicadas.";
 		}
