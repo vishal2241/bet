@@ -143,6 +143,7 @@ class syncBetfair extends CI_Controller {
 				$catalogo=$this->ApiBetfair->getTipoOdds($rowMatch->ID_PARTIDO); 
 				foreach ($catalogo as $keyCata => $rowCata) {
 					$this->Catalogo->ID_CATALOGO  = $rowCata['marketId'];
+					$this->Catalogo->ID_PARTIDO   = $rowMatch->ID_PARTIDO;
 					$this->Catalogo->NOMBRE       = $rowCata['marketName'];
 					$this->Catalogo->TOTAL_JUGADO = $rowCata['totalMatched'];
 					$getCatalogo=$this->Catalogo->getCatalogo(); 
@@ -151,7 +152,7 @@ class syncBetfair extends CI_Controller {
 					} else {
 						$this->Catalogo->update();
 					}
-					foreach ($rowCata['runners'] as $keyRunner => $rowRunner) {
+					/*foreach ($rowCata['runners'] as $keyRunner => $rowRunner) {
 						$odd=$this->ApiBetfair->getOdds($rowCata['marketId'], $rowRunner['selectionId']); 
 						$this->Odds->ID_ODD      = $rowRunner['selectionId'];
 						$this->Odds->ID_CATALOGO = $rowCata['marketId'];
@@ -164,11 +165,11 @@ class syncBetfair extends CI_Controller {
 						} else {
 							$this->Odds->update();
 						}
-					}
+					}*/
 				}
 
 				echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE."<br>"; 
-				sleep(3);
+				
 			}
 
 		} else {

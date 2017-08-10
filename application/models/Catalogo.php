@@ -4,6 +4,7 @@ class Catalogo extends CI_Model
 {
 	
 	public $ID_CATALOGO;
+	public $ID_PARTIDO;
 	public $NOMBRE;
 	public $TOTAL_JUGADO;
 
@@ -14,6 +15,7 @@ class Catalogo extends CI_Model
 		$this->ID_CATALOGO=null;
 		$this->NOMBRE=null;
 		$this->TOTAL_JUGADO=0;
+		$this->ID_PARTIDO=0;
 	}
 
 	public function getCatalogo()
