@@ -121,11 +121,31 @@ class ApiBetfair extends CI_Model
 
 
 
-		public function getOdds($catalogo, $selection){
+		public function getMarket($market){
+			$url="https://api.betfair.com/exchange/betting/rest/v1.0/listMarketBook/";
+			$param='{
+				"locale":"es",
+				"marketIds":["'.$market.'"]
+			},
+			"id": 1
+			';
+			$header=array(
+				"X-Application"    => $this->KEY,
+				"X-Authentication" => $this->SESSION,
+				"content-type"     => "application/json"
+				);
+			$request = Requests::post($url, $header,  $param);
+			$request->body=json_decode($request->body, true);
+			return $request->body;
+		}
+
+
+
+		public function getRunner($market, $selection){
 			$url="https://api.betfair.com/exchange/betting/rest/v1.0/listRunnerBook/";
 			$param='{
 				"locale":"es",
-				"marketId":"'.$catalogo.'",
+				"marketId":"'.$market.'",
 				"selectionId":"'.$selection.'",
 				"priceProjection":
 				{

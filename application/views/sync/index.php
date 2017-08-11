@@ -23,16 +23,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<tbody>
 											<tr>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncPaises">Sincronizar Paises<i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncPaises">Sync Paises<i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncCompetencias">Sincronizar Competencias<i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncCompetencias">Sync Competencias<i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncEventos">Sincronizar Eventos<i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncEventos">Sync Eventos<i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncTipoOdds">Sincronizar Catalogo<i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncTipoOdds">Sync Catalogo<i class="fa fa-cog" aria-hidden="true"></i></a> 
+												</td>
+												<td>
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncOdds">Sync Odds<i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 											</tr>
 										</tbody>

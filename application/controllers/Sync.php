@@ -9,6 +9,7 @@ class Sync extends CI_Controller {
 	}
 
 	public function index(){
+		#echo $this->session->userdata('bet');
 		$this->load->view('sync/index');
 	}
 

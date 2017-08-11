@@ -30,6 +30,20 @@ class Catalogo extends CI_Model
 
 	} 
 
+
+	public function getCatalogoByPartido($from, $to)
+	{
+		$query = $this->db->query('SELECT * FROM catalogo_odds c LEFT JOIN partido p ON (c.ID_PARTIDO=p.ID_PARTIDO) WHERE  c.ID_PARTIDO!="0" AND p.FECHA BETWEEN "'.$from.'" and  "'.$to.'"'); 
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	} 
+
+
 	public function add()
 	{
 

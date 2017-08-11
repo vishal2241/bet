@@ -57,7 +57,7 @@ class syncBetfair extends CI_Controller {
 		set_time_limit(100000000);
 		$from= date("Y-m-d");
 		$to = new DateTime(date("Y-m-d"));
-		$to->add(new DateInterval('P3D')); // sumamos un día por zona horaria
+		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
 
 		$i=0;
 		$competencias=$this->ApiBetfair->getCompetencias(); 
@@ -136,46 +136,53 @@ class syncBetfair extends CI_Controller {
 		$partidos=$this->Partido->all($from, $to->format('Y-m-d'), ''); 
 		ini_set('memory_limit','16000000M');
 		set_time_limit(100000000);
-
+		$i=0;
 		if ($partidos!=null) {
 
 			foreach ($partidos as $key => $rowMatch) {
 				$catalogo=$this->ApiBetfair->getTipoOdds($rowMatch->ID_PARTIDO); 
-				foreach ($catalogo as $keyCata => $rowCata) {
-					$this->Catalogo->ID_CATALOGO  = $rowCata['marketId'];
-					$this->Catalogo->ID_PARTIDO   = $rowMatch->ID_PARTIDO;
-					$this->Catalogo->NOMBRE       = $rowCata['marketName'];
-					$this->Catalogo->TOTAL_JUGADO = $rowCata['totalMatched'];
-					$getCatalogo=$this->Catalogo->getCatalogo(); 
-					if ($getCatalogo==null) {
-						$this->Catalogo->add();
-					} else {
-						$this->Catalogo->update();
-					}
-					/*foreach ($rowCata['runners'] as $keyRunner => $rowRunner) {
-						$odd=$this->ApiBetfair->getOdds($rowCata['marketId'], $rowRunner['selectionId']); 
-						$this->Odds->ID_ODD      = $rowRunner['selectionId'];
-						$this->Odds->ID_CATALOGO = $rowCata['marketId'];
-						$this->Odds->ID_PARTIDO  = $rowMatch->ID_PARTIDO;
-						$this->Odds->DESCRIPCION = $rowRunner['runnerName'];
-						#$this->Odds->VALOR       = $rowRunner['totalMatched'];
-						$getOdd=$this->Odds->getOdd(); 
-						if ($getOdd==null) {
-							$this->Odds->add();
+				if (count($catalogo)>0) {
+					foreach ($catalogo as $keyCata => $rowCata) {
+						
+						$this->Catalogo->ID_CATALOGO  = $rowCata['marketId'];
+						$this->Catalogo->ID_PARTIDO   = $rowMatch->ID_PARTIDO;
+						$this->Catalogo->NOMBRE       = $rowCata['marketName'];
+						$this->Catalogo->TOTAL_JUGADO = $rowCata['totalMatched'];
+						$getCatalogo=$this->Catalogo->getCatalogo(); 
+						if ($getCatalogo==null) {
+							$this->Catalogo->add();
 						} else {
-							$this->Odds->update();
+							$this->Catalogo->update();
 						}
-					}*/
-				}
+						foreach ($rowCata['runners'] as $keyRunner => $rowRunner) {
 
-				echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE."<br>"; 
-				
+							$runner=$this->ApiBetfair->getRunner($rowCata['marketId'], $rowRunner['selectionId']); 
+							$this->Odds->ID_ODD      = $rowRunner['selectionId'];
+							$this->Odds->ID_CATALOGO = $rowCata['marketId'];
+							$this->Odds->ID_PARTIDO  = $rowMatch->ID_PARTIDO;
+							$this->Odds->DESCRIPCION = $rowRunner['runnerName'];
+							$this->Odds->VALOR       = $runner[0]['runners'][0]['lastPriceTraded'];
+							$this->Odds->ESTADO      = $runner[0]['runners'][0]['status'];
+							$getOdd=$this->Odds->getOdd(); 
+							if ($getOdd==null) {
+								$this->Odds->add();
+							} else {
+								$this->Odds->update();
+							} 
+						}
+					}
+					echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:green">OK</b> <br>'; 
+				}
+				#echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:red">No tiene cuotas</b> <br>'; 
+				$i++;
 			}
+			echo "<h1>Total: ".$i."</h1>";
 
 		} else {
 			echo "No hay partidos para las fechas indicadas.";
 		}
 	}  
+	
 
 }
 
