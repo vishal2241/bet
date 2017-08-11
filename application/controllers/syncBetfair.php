@@ -134,8 +134,8 @@ class syncBetfair extends CI_Controller {
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
 		$partidos=$this->Partido->all($from, $to->format('Y-m-d'), ''); 
-		ini_set('memory_limit','16000000M');
-		set_time_limit(100000000);
+		ini_set('memory_limit','16000000000M');
+		set_time_limit(100000000000);
 		$i=0;
 		if ($partidos!=null) {
 
@@ -161,7 +161,13 @@ class syncBetfair extends CI_Controller {
 							$this->Odds->ID_CATALOGO = $rowCata['marketId'];
 							$this->Odds->ID_PARTIDO  = $rowMatch->ID_PARTIDO;
 							$this->Odds->DESCRIPCION = $rowRunner['runnerName'];
-							$this->Odds->VALOR       = $runner[0]['runners'][0]['lastPriceTraded'];
+							if (isset( $runner[0]['runners'][0]['lastPriceTraded'])) {
+								$this->Odds->VALOR       = $runner[0]['runners'][0]['lastPriceTraded'];
+							} else {
+								$this->Odds->VALOR       = '0';
+							}
+							
+
 							$this->Odds->ESTADO      = $runner[0]['runners'][0]['status'];
 							$getOdd=$this->Odds->getOdd(); 
 							if ($getOdd==null) {
@@ -172,8 +178,9 @@ class syncBetfair extends CI_Controller {
 						}
 					}
 					echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:green">OK</b> <br>'; 
+				
 				}
-				#echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:red">No tiene cuotas</b> <br>'; 
+				echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:red">No tiene cuotas</b> <br>'; 
 				$i++;
 			}
 			echo "<h1>Total: ".$i."</h1>";
