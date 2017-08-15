@@ -96,18 +96,19 @@ class ApiBetfair extends CI_Model
 
 
 
-		public function getTipoOdds($id){
+		public function listMarketCatalogue($id){
 			$url="https://api.betfair.com/exchange/betting/rest/v1.0/listMarketCatalogue/";
-			$param=' {
+			$param='{
 				"filter":
-				{"eventTypeIds":["1"],
-				"eventIds":["'.$id.'"]},
-				"locale":"es",
-				"sort":"MINIMUM_AVAILABLE",
-				"maxResults":"100",
-				"marketProjection":["RUNNER_METADATA"]
-			},
-			"id": 1
+				{
+					"eventIds":["'.$id.'"],
+					"marketBettingTypes":["ODDS"],
+					"marketTypeCodes":["MATCH_ODDS","OVER_UNDER_25","HALF_TIME","DOUBLE_CHANCE","BOTH_TEAMS_TO_SCORE"]},
+					"locale":"es",
+					"sort":"LAST_TO_START",
+					"maxResults":"5",
+					"marketProjection":["RUNNER_METADATA"]},
+					"id": 1
 			';
 			$header=array(
 				"X-Application"    => $this->KEY,
@@ -121,7 +122,7 @@ class ApiBetfair extends CI_Model
 
 
 
-		public function getMarket($market){
+		public function listMarketBook($market){
 			$url="https://api.betfair.com/exchange/betting/rest/v1.0/listMarketBook/";
 			$param='{
 				"locale":"es",
@@ -141,7 +142,7 @@ class ApiBetfair extends CI_Model
 
 
 
-		public function getRunner($market, $selection){
+		public function listRunnerBook($market, $selection){
 			$url="https://api.betfair.com/exchange/betting/rest/v1.0/listRunnerBook/";
 			$param='{
 				"locale":"es",

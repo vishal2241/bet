@@ -20,7 +20,7 @@ class Catalogo extends CI_Model
 
 	public function getCatalogo()
 	{
-		$query = $this->db->query('SELECT * FROM catalogo_odds WHERE ID_CATALOGO='.$this->ID_CATALOGO.' '); 
+		$query = $this->db->query('SELECT * FROM catalogo_odds WHERE ID_CATALOGO='.$this->ID_CATALOGO.' AND ID_PARTIDO="'.$this->ID_PARTIDO.'"  '); 
 		
 		if ($query->num_rows() > 0) {
 			return $query->result();
@@ -52,8 +52,7 @@ class Catalogo extends CI_Model
 
 	public function update()
 	{
-		$this->db->where('ID_CATALOGO', $this->ID_CATALOGO); 
-		$this->db->update('catalogo_odds', $this);
+		$query = $this->db->query('UPDATE catalogo_odds SET NOMBRE="'.$this->NOMBRE.'", TOTAL_JUGADO="'.$this->TOTAL_JUGADO.'"  WHERE ID_CATALOGO='.$this->ID_CATALOGO.' AND ID_PARTIDO="'.$this->ID_PARTIDO.'"  '); 
 	}
 
 

@@ -23,16 +23,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<tbody>
 											<tr>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncPaises">Sync Paises<i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncPaises">Sync Paises <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncCompetencias">Sync Competencias<i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncCompetencias">Sync Competencias <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncEventos">Sync Eventos<i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncEventos">Sync Eventos <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncTipoOdds">Sync Catalogo<i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>syncBetfair/syncTipoOdds">Sync Catalogo <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												
 											</tr>
@@ -43,16 +43,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<tbody>
 											<tr>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncPaises">Sincronizar Paises <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncPaises">Sincronizar Paises  <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncCompeticiones">Sincronizar Torneos <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncCompeticiones">Sincronizar Torneos  <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncPartidos">Sincronizar Partidos <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncPartidos">Sincronizar Partidos  <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncCuota">Sincronizar Cuotas <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncCuota">Sincronizar Cuotas  <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 											</tr>
 										</tbody>
@@ -62,16 +62,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<tbody>
 											<tr>
 												<td>
-													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncCorredores">Sincronizar Corredores <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncCorredores">Sincronizar Corredores  <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncLigas">Sincronizar Ligas <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncLigas">Sincronizar Ligas  <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncTipos">Sincronizar Tipos Cuota <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncTipos">Sincronizar Tipos Cuota  <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 												<td>
-													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncEventos">Sincronizar Partidos <i class="fa fa-cog" aria-hidden="true"></i></a> 
+													<a  class="btn btn-info btn-sm" href="<?php echo base_url(); ?>sync/syncEventos">Sincronizar Partidos  <i class="fa fa-cog" aria-hidden="true"></i></a> 
 												</td>
 											</tr>
 										</tbody>

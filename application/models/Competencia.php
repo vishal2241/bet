@@ -35,21 +35,19 @@ class Competencia extends CI_Model
 		$sql='SELECT
 		c.ID_COMPETENCIA as ID,
 		c.NOMBRE AS COMPE,
-		pa.NOMBRE AS PAIS,
-		pa.IMG  
+		c.REGION AS PAIS
 		FROM competencia c  
 		LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
-		LEFT JOIN pais pa ON (c.REGION=pa.REGION)  
 		WHERE p.FECHA="'.$date.'" ';
 		#Si la fecha es mayor a la de hoy no se condiciona la hora
 		if (date("Y-m-d")==$date ) {
-			$sql.=' AND p.HORARIO > "'.$hour.'" ';
+			$sql.=' AND p.HORA > "'.$hour.'" ';
 		}
 
-		$sql.='AND p.ESTADO="" 
-		AND p.AUTORIZADO="SI"  
+		$sql.='/*AND p.ESTADO="" 
+		AND p.AUTORIZADO="SI" */
 		GROUP BY c.ID_COMPETENCIA 
-		ORDER BY pa.NOMBRE ASC, c.NOMBRE ASC';
+		ORDER BY c.REGION ASC, c.NOMBRE ASC';
 		$query = $this->db->query($sql); 
 
 		if ($query->num_rows() > 0) {

@@ -63,7 +63,7 @@ class Partido extends CI_Model
 		p.ID_COMPETENCIA AS COMPE,
 		p.FECHA,
 		p.ESTADO,
-		SUBSTR(p.HORARIO, 1, 5) AS HORARIO,
+		SUBSTR(p.HORA, 1, 5) AS HORARIO,
 		p.LOCAL,
 		p.VISITANTE,
 		c._1,
@@ -76,12 +76,12 @@ class Partido extends CI_Model
 		c.NG,
 		c.OVER_25,
 		c.UNDER_25
-		FROM partido p LEFT JOIN cuota c ON (p.ID_PARTIDO=c.ID_PARTIDO)
+		FROM partido p LEFT JOIN odds c ON (p.ID_PARTIDO=c.ID_PARTIDO)
 		WHERE
 		p.FECHA = '".$date."'";
 		#Si la fecha es mayor a la de hoy no se condiciona la hora
 		if (date("Y-m-d")==$date ) {
-			$sql.=" AND p.HORARIO > '".$hour."' ";
+			$sql.=" AND p.HORA > '".$hour."' ";
 		}
 
 		$sql.="
@@ -128,6 +128,9 @@ class Partido extends CI_Model
 			break;
 			case 'sinCuota':
 			$sql.="  p.ID_PARTIDO NOT IN (SELECT c.ID_PARTIDO FROM cuota c) AND";
+			break;
+			case 'hora':
+			$sql.="  p.HORA> '".date("H:i")."' AND ";
 			break;
 		}
 		$sql.="

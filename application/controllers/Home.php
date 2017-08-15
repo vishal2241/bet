@@ -10,21 +10,9 @@ class Home extends CI_Controller {
 	}
 
 	public function index(){
-		$ID     = "02230e2c";
-		$KEY     = "9463da7b2b921000037ae985f053024e";
-		$this->load->library('PHPRequests');
-
-		$url="http://api.odds24.com/fixtures?user=dev";
-		$header=array(
-			"X-Application"    => $KEY,
-			"Accept"     => "application/json"
-			);
-		$param='username=mhotavo&password=mil4420204';
-		$request = Requests::post($url,  $param);
-		#$request->body=json_decode($request->body, true);
-		print_r($request->body);
-		
-		/*$from = date("Y-m-d");
+		$this->load->view('home/index');
+		/*
+		$from = date("Y-m-d");
 		$to   = date("Y-m-d");
 
 		$cuotas=$this->Cuota->index($from, $to);
@@ -45,10 +33,9 @@ class Home extends CI_Controller {
 		} 
 		$data['partidos']= $array;
 		$this->load->view('home/index', $data);
+*/	} 
+
 	}
-	
-*/
-}
 
 
 
