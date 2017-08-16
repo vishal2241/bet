@@ -45,6 +45,16 @@ class Ajax extends CI_Controller {
 		} 
 	}
 
+	public function json_odds(){
+		if (isset($_GET['id']) and $_GET['id']!='') {
+			$id=$_GET['id'];
+			$data = $this->Oddds->getOddByMatch($id);
+			echo json_encode($data);
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
+
 
 	public function json_match_all(){
 		if (isset($_GET['from']) and $_GET['from']!='' and isset($_GET['to']) and $_GET['to']!='') {

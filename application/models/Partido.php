@@ -66,10 +66,10 @@ class Partido extends CI_Model
 		if (date("Y-m-d")==$date ) {
 			$sql.=" AND p.HORA > '".$hour."' ";
 		}
-	echo	$sql.="
+		$sql.="
 		AND p.ID_COMPETENCIA='".$compe."' 
 		GROUP BY p.ID_PARTIDO 
-		ORDER BY p.HORARIO DESC
+		ORDER BY p.HORA ASC
 		";
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {

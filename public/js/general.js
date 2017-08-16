@@ -35,7 +35,7 @@ function get_bets (fecha, url) {
 					$.each(match, function(a, row) {
 						$("#bets > tbody #"+compe+"").after('\
 							<tr id='+ row.ID+'>\
-							<td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
+							<td  class="text-center" width="6%" >'+ row.HORA+'</td>\
 							<td  class="text-left" width="12%" >'+ row.LOCAL+'</td>\
 							<td  class="text-left" width="12%" >'+ row.VISITANTE+'</td>\
 							<td  class="text-center" width="7%" >'+ isEmpty(row._1)+'</td>\
