@@ -58,24 +58,7 @@ class Partido extends CI_Model
 	public function getPartidoByCompe($date, $hour, $compe)
 	{
 		$sql="
-		SELECT 
-		p.ID_PARTIDO AS ID,
-		p.ID_COMPETENCIA AS COMPE,
-		p.FECHA,
-		p.ESTADO,
-		SUBSTR(p.HORA, 1, 5) AS HORARIO,
-		p.LOCAL,
-		p.VISITANTE,
-		c._1,
-		c._X,
-		c._2,
-		c._1X,
-		c._12,
-		c._2X,
-		c.GG,
-		c.NG,
-		c.OVER_25,
-		c.UNDER_25
+		SELECT *
 		FROM partido p LEFT JOIN odds c ON (p.ID_PARTIDO=c.ID_PARTIDO)
 		WHERE
 		p.FECHA = '".$date."'";
@@ -83,12 +66,8 @@ class Partido extends CI_Model
 		if (date("Y-m-d")==$date ) {
 			$sql.=" AND p.HORA > '".$hour."' ";
 		}
-
-		$sql.="
+	echo	$sql.="
 		AND p.ID_COMPETENCIA='".$compe."' 
-		AND p.ESTADO!='FT' 
-		AND p.ESTADO!='Canc.' 
-		AND p.AUTORIZADO='SI' 
 		GROUP BY p.ID_PARTIDO 
 		ORDER BY p.HORARIO DESC
 		";
@@ -101,17 +80,30 @@ class Partido extends CI_Model
 	}
 
 	//Para editar partidos y sincronizar
-	public function all($from, $to, $filtro)
+	public function all($from, $to, $filtro, $campos)
 	{
-		$sql="SELECT 
-		p.ID_PARTIDO,
-		p.LOCAL,
-		p.VISITANTE,
-		p.ESTADO,
-		p.FECHA,
-		p.HORA,
-		p.AUTORIZADO,
-		co.NOMBRE AS TORNEO
+		$sql="SELECT"; 
+		switch ($campos) {
+			case '*':
+			$sql.="
+			p.ID_PARTIDO,
+			p.LOCAL,
+			p.VISITANTE,
+			p.ESTADO,
+			p.FECHA,
+			p.HORA,
+			p.AUTORIZADO,
+			co.NOMBRE AS TORNEO";
+			break;
+			
+			default:
+			$sql.=
+			" ".$campos." ";
+			break;
+		}
+		
+		$sql.="
+
 		FROM partido p
 		LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
 		WHERE ";

@@ -95,30 +95,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
-			<script type="text/javascript">
+			<script>
 
-				var options = {
-					hostname: 'beta-api.betfair.com',
-					port: 443,
-					path: '/json-rpc',
-					method: 'POST',
+				var datos = '2017-08-16';
+				$.ajax({
+					url: 'https://www.soccerwin.com.co/update_ajax/update_table',
+					type: 'post',
+					dataType: 'json',
+					data: datos,
 					headers: {
-						'X-Application' : 'lkaPoxoI3tDVaQgP',
-						'Accept': 'application/json',
-						'Content-type' : 'application/json',
-						'X-Authentication' : 'hBGnhmzhUaRPMWxE+zaNyYp7XxR5f6Bg+8Hyf3wwNEU='
+						'Access-Control-Allow-Origin': '*'
+					},
+					
+					success: function(events){
+						console.log(events);
+					},
+					error: function(xhr, status, error){
+						console.log(xhr.responseText);
 					}
-				}
-
-				var requestFilters = '{"filter":{}}';
-				var jsonRequest = constructJsonRpcRequest('listEventTypes', requestFilters );
-				var req = https.request(options,function (res){
-					res.setEncoding(DEFAULT_ENCODING);
-					res.on('data', function (chunk) {
-						str += chunk;
-					}); });
+				});
 
 
+				
 
-				</script>
-				</html>
+			</script>
+			</html>

@@ -53,13 +53,11 @@ class syncBetfair extends CI_Controller {
 	}  
 
 	public function syncEventos(){
-
 		ini_set('memory_limit','16000000M');
 		set_time_limit(100000000);
 		$from= date("Y-m-d");
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
-
 		$i=0;
 		$competencias=$this->ApiBetfair->getCompetencias(); 
 		if ($competencias!=null) {
@@ -81,10 +79,8 @@ class syncBetfair extends CI_Controller {
 							$fecha->sub(new DateInterval('PT5H'));
 							break;
 							default:
-
 							break;
 						}
-
 						$veri=strpos($rowEvent['event']['name'], " v ");
 						if ($veri=="") {
 							$name=explode(" - ", $rowEvent['event']['name']);
@@ -133,31 +129,30 @@ class syncBetfair extends CI_Controller {
 		$from= date("Y-m-d");
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
-		$partidos=$this->Partido->all($from, $to->format('Y-m-d'), 'hora'); 
+		$partidos=$this->Partido->all($from, $to->format('Y-m-d'), 'hora', '*'); 
 		ini_set('memory_limit','16000000000M');
-		set_time_limit(100000000000);
+		set_time_limit(0);
 		$i=0;
 		if ($partidos!=null) {
 			foreach ($partidos as $key => $rowMatch) {
-				$catalogo=$this->ApiBetfair->listMarketCatalogue("28295981");
-				
+				$catalogo=$this->ApiBetfair->listMarketCatalogue($rowMatch->ID_PARTIDO);
 				if (count($catalogo)>0) {
 					foreach ($catalogo as $keyCata => $rowCata) {
-
 						$this->Catalogo->ID_CATALOGO  = $rowCata['marketId'];
 						$this->Catalogo->ID_PARTIDO   = $rowMatch->ID_PARTIDO;
 						$this->Catalogo->NOMBRE       = $rowCata['marketName'];
 						$this->Catalogo->TOTAL_JUGADO = $rowCata['totalMatched'];
 						$getCatalogo=$this->Catalogo->getCatalogo(); 
 						if ($getCatalogo==null) {
-							$this->Catalogo->add();
-							echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:green">ADD</b> <br>'; 
+							
+							if ($this->Catalogo->add()) {
+								echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:green">ADD</b> <br>'; 
+							}
 						} else {
 							$this->Catalogo->update();
 							echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:green">UPDATE</b> <br>'; 
 						}
 						foreach ($rowCata['runners'] as $keyRunner => $rowRunner) {
-
 							$runner=$this->ApiBetfair->listRunnerBook($rowCata['marketId'], $rowRunner['selectionId']); 
 							$this->Odds->ID_ODD      = $rowRunner['selectionId'];
 							$this->Odds->ID_CATALOGO = $rowCata['marketId'];
@@ -169,7 +164,6 @@ class syncBetfair extends CI_Controller {
 								$this->Odds->VALOR       = '0';
 							}
 							
-
 							$this->Odds->ESTADO      = $runner[0]['runners'][0]['status'];
 							$getOdd=$this->Odds->getOdd(); 
 							if ($getOdd==null) {
@@ -179,7 +173,6 @@ class syncBetfair extends CI_Controller {
 							} 
 						}
 					}
-
 				} else {
 					echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:red">No tiene cuotas</b> <br>'; 
 				}
