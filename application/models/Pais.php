@@ -30,16 +30,23 @@ class Pais extends CI_Model
 
 	} 
 
+	public function regiones()
+	{
+		$query = $this->db->query('INSERT INTO region (ID_REGION) 
+			SELECT c.REGION FROM competencia c WHERE 
+			c.REGION NOT IN (SELECT r.ID_REGION FROM region r) GROUP BY c.REGION'); 
+	}
+
 	public function add()
 	{
 
-			$this->db->insert('pais', $this);
+		$this->db->insert('pais', $this);
 	}
 
 	public function update()
 	{
-			$this->db->where('ID_PAIS', $this->ID_PAIS); 
-			$this->db->update('pais', $this);
+		$this->db->where('ID_PAIS', $this->ID_PAIS); 
+		$this->db->update('pais', $this);
 	}
 
 

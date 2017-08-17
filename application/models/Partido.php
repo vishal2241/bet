@@ -101,13 +101,10 @@ class Partido extends CI_Model
 			" ".$campos." ";
 			break;
 		}
-		
 		$sql.="
-
 		FROM partido p
 		LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
 		WHERE ";
-
 		switch ($filtro) {
 			case 'Autorizados':
 			$sql.="  p.AUTORIZADO='SI' AND";
@@ -125,8 +122,9 @@ class Partido extends CI_Model
 			$sql.="  p.HORA> '".date("H:i")."' AND  ";
 			break;
 		}
-		$sql.="
-		p.FECHA BETWEEN '".$from."'   AND '".$to."'
+	 	$sql.="
+		(SELECT COUNT(o.ID_PARTIDO) AS ODDS FROM odds o WHERE o.ID_PARTIDO=p.ID_PARTIDO) ='13'
+		AND p.FECHA BETWEEN '".$from."'   AND '".$to."'
 		ORDER BY p.FECHA ASC, p.HORA ASC";
 		
 		$query = $this->db->query($sql); 
