@@ -165,7 +165,7 @@ class syncBetfair extends CI_Controller {
 							if (isset( $runner[0]['runners'][0]['lastPriceTraded'])) {
 								$this->Odds->VALOR       = $runner[0]['runners'][0]['lastPriceTraded'];
 							} else {
-								$this->Odds->VALOR       = '0';
+								$this->Odds->VALOR       = '1';
 							}
 							
 							$this->Odds->ESTADO      = $runner[0]['runners'][0]['status'];

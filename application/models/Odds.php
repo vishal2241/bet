@@ -24,7 +24,8 @@ class Odds extends CI_Model
 
 	public function getOddByMatch($id)
 	{
-		$query = $this->db->query('SELECT * FROM catalogo_odds co LEFT JOIN odds o ON (co.ID_CATALOGO=o.ID_CATALOGO) WHERE co.ID_PARTIDO="'.$id.'" ORDER BY co.NOMBRE ASC');
+		$sql='SELECT * FROM catalogo_odds co LEFT JOIN odds o ON (co.ID_CATALOGO=o.ID_CATALOGO) WHERE co.ID_PARTIDO="'.$id.'" ORDER BY co.NOMBRE ASC';
+		$query = $this->db->query($sql);
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {

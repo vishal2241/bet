@@ -35,9 +35,11 @@ class Competencia extends CI_Model
 		$sql='SELECT
 		c.ID_COMPETENCIA as ID,
 		c.NOMBRE AS COMPE,
-		c.REGION AS PAIS
+		c.REGION AS PAIS,
+		r.NOMBRE AS IMG
 		FROM competencia c  
 		LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
+		LEFT JOIN region r ON (r.ID_REGION=c.REGION) 
 		WHERE p.FECHA="'.$date.'" ';
 		#Si la fecha es mayor a la de hoy no se condiciona la hora
 		if (date("Y-m-d")==$date ) {
