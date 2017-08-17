@@ -122,7 +122,7 @@ class Partido extends CI_Model
 			$sql.="  p.ID_PARTIDO NOT IN (SELECT c.ID_PARTIDO FROM cuota c) AND";
 			break;
 			case 'hora':
-			$sql.="  p.HORA> '".date("H:i")."' AND ";
+			$sql.="  p.HORA> '".date("H:i")."' AND  ";
 			break;
 		}
 		$sql.="

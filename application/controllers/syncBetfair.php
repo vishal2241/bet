@@ -146,11 +146,11 @@ class syncBetfair extends CI_Controller {
 						if ($getCatalogo==null) {
 							
 							if ($this->Catalogo->add()) {
-								echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:green">ADD</b> <br>'; 
+								echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE." ".$rowCata['marketName'].' <b style="color:green">ADD</b> <br>'; 
 							}
 						} else {
 							$this->Catalogo->update();
-							echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE.' <b style="color:green">UPDATE</b> <br>'; 
+							echo $rowMatch->LOCAL." ".$rowMatch->VISITANTE." ".$rowCata['marketName'].' <b style="color:green">UPDATE</b> <br>'; 
 						}
 						foreach ($rowCata['runners'] as $keyRunner => $rowRunner) {
 							$runner=$this->ApiBetfair->listRunnerBook($rowCata['marketId'], $rowRunner['selectionId']); 
