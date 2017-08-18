@@ -97,14 +97,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script type="text/javascript">
 
-
 				$( document ).ready(function() {
 					moment.locale('es');
 					var url= '<?= base_url(); ?>';
 					var fecha=moment().format('YYYY-MM-DD');  
 					$("#titulo").empty();
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-		 
+
 					get_bets(fecha, url);
 
 

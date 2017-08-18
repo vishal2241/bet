@@ -58,7 +58,7 @@ class Partido extends CI_Model
 	public function getPartidoByCompe($date, $hour, $compe)
 	{
 		$sql="
-		SELECT p.ID_PARTIDO, p.LOCAL, p.VISITANTE, p.HORA, p.FECHA
+		SELECT p.ID_PARTIDO, p.LOCAL, p.VISITANTE, SUBSTR(p.HORA,1,5) AS HORA, p.FECHA
 		FROM partido p LEFT JOIN odds c ON (p.ID_PARTIDO=c.ID_PARTIDO)
 		WHERE
 		p.FECHA = '".$date."'";

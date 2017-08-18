@@ -39,7 +39,7 @@ function get_bets (fecha, url) {
 								$.each(odds, function(a, rowMatch) {
 									 
 									$("#"+match+"").append('\
-										<td  class="text-center" width="5%" >'+ isEmpty(rowMatch.VALOR)+'</td>'
+										<td  class="text-center" width="5%" >'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>'
 										);
 								});
 							});

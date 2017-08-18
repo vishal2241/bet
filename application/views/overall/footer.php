@@ -76,6 +76,7 @@
 <script src="<?= base_url(); ?>public/js/moment-with-locales.min.js"></script> 	
 <script src="<?= base_url(); ?>public/js/general.js"></script> 	
 <script src="<?= base_url(); ?>public/js/loading.js"></script>
+<script src="<?= base_url(); ?>public/js/jquery.number.js"></script>
 
 <script>
 	var header_height;
