@@ -77,7 +77,7 @@ class ApiBetfair extends CI_Model
 					"marketBettingTypes":["ODDS"],
 					"marketStartTime":{
 						"from":"'.$from.'T00:00:00Z",
-						"to":"'.$to.'T23:59:00Z"
+						"to":"'.$to.'T04:59:00Z"
 					}
 				},
 				"locale":"es"

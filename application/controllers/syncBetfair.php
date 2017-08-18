@@ -57,7 +57,7 @@ class syncBetfair extends CI_Controller {
 		set_time_limit(100000000);
 		$this->syncPaises();
 		$this->syncCompetencias();
-		$this->Pais->regiones(); exit;
+		$this->Pais->regiones();  #Crea regiones a partir de competencias sincronizadas
 		$from= date("Y-m-d");
 		$to = new DateTime(date("Y-m-d"));
 		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
@@ -131,8 +131,8 @@ class syncBetfair extends CI_Controller {
 	public function syncTipoOdds(){
 		$from= date("Y-m-d");
 		$to = new DateTime(date("Y-m-d"));
-		$to->add(new DateInterval('P1D')); // sumamos un día por zona horaria
-		$partidos=$this->Partido->all($from, $to->format('Y-m-d'), 'hora', '*'); 
+		$to->add(new DateInterval('P1D'));  
+		$partidos=$this->Partido->all($from, $from, 'hora', '*'); 
 
 		ini_set('memory_limit','16000000000M');
 		set_time_limit(0);
