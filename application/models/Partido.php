@@ -122,8 +122,8 @@ class Partido extends CI_Model
 			$sql.="  p.HORA> '".date("H:i")."' AND  ";
 			break;
 		}
-	 	$sql.="
-		(SELECT COUNT(o.ID_PARTIDO) AS ODDS FROM odds o WHERE o.ID_PARTIDO=p.ID_PARTIDO) ='13'
+	 	echo $sql.="
+		(SELECT COUNT(o.ID_PARTIDO) AS ODDS FROM odds o WHERE o.ID_PARTIDO=p.ID_PARTIDO) !='13'
 		AND p.FECHA BETWEEN '".$from."'   AND '".$to."'
 		ORDER BY p.FECHA ASC, p.HORA ASC";
 		
