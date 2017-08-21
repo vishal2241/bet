@@ -100,7 +100,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				function upload_table(fecha, mode){
 					var datos = {fecha: fecha};
 					$.ajax({
-						url: 'https://www.fullplay.com.co/update_ajax/get_table_events',
+					//	url: 'https://www.fullplay.com.co/update_ajax/get_table_events',
+						url: 'https://www.soccerwin.com.co/update_ajax/update_table',
 						type: 'post',
 						dataType: 'json',
 						data: datos,
