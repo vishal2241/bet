@@ -1,0 +1,19 @@
+table {
+	font-size: 14px;
+}
+
+.tiquete   {
+
+	font-size: 13px;
+	text-align: center;
+
+}
+
+.bet {
+	font-size: 11px;
+	float: center;
+}
+
+.panel-body { 
+	padding: 0px;
+}

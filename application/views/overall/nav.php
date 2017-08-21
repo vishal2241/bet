@@ -1,190 +1,59 @@
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <a class="navbar-brand" href="<?= base_url(); ?>#">Start Bootstrap</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav navbar-sidenav">
-          <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
-            <a class="nav-link" href="<?= base_url(); ?>#">
-              <i class="fa fa-fw fa-dashboard"></i>
-              <span class="nav-link-text">
-                Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-            <a class="nav-link" href="<?= base_url(); ?>#">
-              <i class="fa fa-fw fa-area-chart"></i>
-              <span class="nav-link-text">
-                Charts</span>
-            </a>
-          </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="<?= base_url(); ?>#">
-              <i class="fa fa-fw fa-table"></i>
-              <span class="nav-link-text">
-                Tables</span>
-            </a>
-          </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="<?= base_url(); ?>#collapseComponents">
-              <i class="fa fa-fw fa-wrench"></i>
-              <span class="nav-link-text">
-                Components</span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapseComponents">
-              <li>
-                <a href="<?= base_url(); ?>#">Static Navigation</a>
-              </li>
-              <li>
-                <a href="<?= base_url(); ?>#">Custom Card Examples</a>
-              </li>
-              <li>
-                <a href="<?= base_url(); ?>#">Blank Page</a>
-              </li>
-              <li>
-                <a href="<?= base_url(); ?>#">Login Page</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="<?= base_url(); ?>#collapseMulti">
-              <i class="fa fa-fw fa-sitemap"></i>
-              <span class="nav-link-text">
-                Menu Levels</span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapseMulti">
-              <li>
-                <a href="<?= base_url(); ?>#">Second Level Item</a>
-              </li>
-              <li>
-                <a href="<?= base_url(); ?>#">Second Level Item</a>
-              </li>
-              <li>
-                <a class="nav-link-collapse collapsed" data-toggle="collapse" href="<?= base_url(); ?>#collapseMulti2">Third Level</a>
-                <ul class="sidenav-third-level collapse" id="collapseMulti2">
-                  <li>
-                    <a href="<?= base_url(); ?>#">Third Level Item</a>
-                  </li>
-                  <li>
-                    <a href="<?= base_url(); ?>#">Third Level Item</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="navbar-nav sidenav-toggler">
-          <li class="nav-item">
-            <a class="nav-link text-center" id="sidenavToggler">
-              <i class="fa fa-fw fa-angle-left"></i>
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle mr-lg-2" href="<?= base_url(); ?>#" id="messagesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-fw fa-envelope"></i>
-              <span class="d-lg-none">Messages
-                <span class="badge badge-pill badge-primary">12 New</span>
-              </span>
-              <span class="new-indicator text-primary d-none d-lg-block">
-                <i class="fa fa-fw fa-circle"></i>
-                <span class="number">12</span>
-              </span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-              <h6 class="dropdown-header">New Messages:</h6>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?= base_url(); ?>#">
-                <strong>David Miller</strong>
-                <span class="small float-right text-muted">11:21 AM</span>
-                <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?= base_url(); ?>#">
-                <strong>Jane Smith</strong>
-                <span class="small float-right text-muted">11:21 AM</span>
-                <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?= base_url(); ?>#">
-                <strong>John Doe</strong>
-                <span class="small float-right text-muted">11:21 AM</span>
-                <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item small" href="<?= base_url(); ?>#">
-                View all messages
-              </a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle mr-lg-2" href="<?= base_url(); ?>#" id="alertsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-fw fa-bell"></i>
-              <span class="d-lg-none">Alerts
-                <span class="badge badge-pill badge-warning">6 New</span>
-              </span>
-              <span class="new-indicator text-warning d-none d-lg-block">
-                <i class="fa fa-fw fa-circle"></i>
-                <span class="number">6</span>
-              </span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-              <h6 class="dropdown-header">New Alerts:</h6>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?= base_url(); ?>#">
-                <span class="text-success">
-                  <strong>
-                    <i class="fa fa-long-arrow-up"></i>
-                    Status Update</strong>
-                </span>
-                <span class="small float-right text-muted">11:21 AM</span>
-                <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?= base_url(); ?>#">
-                <span class="text-danger">
-                  <strong>
-                    <i class="fa fa-long-arrow-down"></i>
-                    Status Update</strong>
-                </span>
-                <span class="small float-right text-muted">11:21 AM</span>
-                <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?= base_url(); ?>#">
-                <span class="text-success">
-                  <strong>
-                    <i class="fa fa-long-arrow-up"></i>
-                    Status Update</strong>
-                </span>
-                <span class="small float-right text-muted">11:21 AM</span>
-                <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item small" href="<?= base_url(); ?>#">
-                View all alerts
-              </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <form class="form-inline my-2 my-lg-0 mr-lg-2">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </span>
-              </div>
-            </form>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-              <i class="fa fa-fw fa-sign-out"></i>
-              Logout</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<link href="<?= base_url(); ?>public/css/material-kit.css" rel="stylesheet"/>
+<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button id="menu-toggle" type="button" class="navbar-toggle" data-target="#navigation-doc">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar bar1"></span>
+				<span class="icon-bar bar2"></span>
+				<span class="icon-bar bar3"></span>
+			</button>
+				<!--<a href="">
+					<div class="logo-container">
+						<div class="logo">
+							 <img src="assets/img/logo.png" alt="Creative Tim Logo"> 
+						</div>
+						<div class="brand">
+							Creative Tim
+						</div>
+					</div>
+				</a>-->
+				<a class="navbar-brand" style="font-size: 17px" href="<?= base_url(); ?>"><b>Bet</b>365  <b></b></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navigation-doc">
+				<ul  class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a href="<?= base_url(); ?>home/partidos">Admin</a></li> 
+					</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="<?= base_url(); ?>home/deudas">Mis Apuestas</a></li> 
+					</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="<?= base_url(); ?>home/deudas"> <b>MI SALDO: </b>$ 3000,00</a></li> 
+					</ul>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><b><?php echo ucwords($this->session->userdata('name')); ?></b> <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Retirar</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Mi Perfil</a></li>
+							<li class="divider"></li>
+							<li><a href="<?= base_url(); ?>login/logout">Salir</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="wrapper">
+		<div class="header header-filter" style="background-image: url('<?= base_url(); ?>public/img/header.jpg');">
+			<!--<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<h1 class="title text-center">Components Documentation</h1>
+					</div>
+				</div> 
+			</div>-->
+		</div>
