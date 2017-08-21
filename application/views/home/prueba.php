@@ -97,26 +97,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script>
 
-				var datos = '2017-08-16';
-				$.ajax({
-					url: 'https://www.soccerwin.com.co/update_ajax/update_table',
-					type: 'post',
-					dataType: 'json',
-					data: datos,
-					headers: {
-						'Access-Control-Allow-Origin': '*'
-					},
-					
-					success: function(events){
-						console.log(events);
-					},
-					error: function(xhr, status, error){
-						console.log(xhr.responseText);
-					}
+				function upload_table(fecha, mode){
+					var datos = {fecha: fecha};
+					$.ajax({
+						url: 'https://www.fullplay.com.co/update_ajax/get_table_events',
+						type: 'post',
+						dataType: 'json',
+						data: datos,
+
+						success: function(events){
+							console.log(events);
+						}
+					});
+				}
+
+
+				$.post( "https://www.fullplay.com.co/update_ajax/get_table_events",{fecha:"3"}, function( data ) {
+					console.log(data);
 				});
 
-
-				
-
+				//upload_table('2017-08-22','man');
+//https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=es-419&utm_source=chrome-ntp-launcher
 			</script>
 			</html>

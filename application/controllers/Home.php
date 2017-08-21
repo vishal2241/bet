@@ -21,7 +21,7 @@ class Home extends CI_Controller {
 		#$request->body=json_decode($request->body, true);
 		print_r($request->body);
 */
-		$this->load->view('home/index');
+		$this->load->view('home/prueba');
 /*	
 		$from = date("Y-m-d");
 		$to   = date("Y-m-d");
