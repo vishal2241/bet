@@ -10,18 +10,18 @@ class Home extends CI_Controller {
 	}
 
 	public function index(){
-	/*
+	
 		$this->load->library('PHPRequests');
 		$url="https://www.soccerwin.com.co/update_ajax/update_table";
-		$param='fecha=2017-08-16';
+		$param='fecha=0';
 
 		$headers = array('Accept' => 'application/json');
-		$options = array('fecha' => '2017-08-16');
+		$options = array('fecha' => '1');
 		$request = Requests::post($url,$headers,$options);
 		#$request->body=json_decode($request->body, true);
-		print_r($request->body);
-*/
-		$this->load->view('home/prueba');
+		#print_r($request->body);
+
+		#$this->load->view('home/prueba');
 /*	
 		$from = date("Y-m-d");
 		$to   = date("Y-m-d");
