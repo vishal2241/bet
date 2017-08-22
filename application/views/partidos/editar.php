@@ -73,27 +73,29 @@
 					</div>
 					<h3 class="text-center text-success">Cuotas <i class="fa fa-money" aria-hidden="true"></i></h3>
 
-					<?php foreach ($cuotas as $key => $value): ?>
-						<form class="form-horizontal">
-							<div class="form-group">
-								<label class="control-label col-md-1" for="email">Email:</label>
-								<div class="col-md-10">
-									<input type="number" class="form-control" id="email" placeholder="0.00">
-								</div>
+					<?php foreach ($cuotas as $key => $couta):
+					#print_r($couta);
+					?>
+					<form class="form-horizontal">
+						<div class="form-group">
+						<label class="control-label col-md-3" for="<?= $couta->NOMBRE ?>"><?= $couta->DESCRIPCION ?>:</label>
+							<div class="col-md-7">
+								<input type="number" class="form-control" id="<?= $couta->NOMBRE ?>" placeholder="0.00" value="<?= $couta->VALOR ?>">
 							</div>
-						</form>
-					<?php endforeach ?>
+						</div>
+					</form>
+				<?php endforeach ?>
 
 
 
-				</div>
+			</div>
 
 
-			</fieldset>
+		</fieldset>
 
-			<?=   form_close(); ?>
-		</div>
-	</div>  
+		<?=   form_close(); ?>
+	</div>
+</div>  
 </div>
 <?php $this->load->view('overall/footer'); ?>
 

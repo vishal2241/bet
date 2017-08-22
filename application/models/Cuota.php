@@ -20,9 +20,9 @@ class Cuota extends CI_Model
 	
 	public function getCuota()
 	{
-		$sql='SELECT * FROM cuota WHERE ID_PARTIDO='.$this->ID_PARTIDO.' ';
+		$sql='SELECT * FROM cuota c LEFT JOIN tipo_cuota t ON (c.ID_TIPO=t.ID_TIPO) WHERE c.ID_PARTIDO='.$this->ID_PARTIDO.' ';
 		if ($this->ID_TIPO!=null) {
-			$sql.=' AND ID_TIPO='.$this->ID_TIPO.'';
+			$sql.=' AND c.ID_TIPO='.$this->ID_TIPO.'';
 		}
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
