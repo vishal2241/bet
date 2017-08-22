@@ -39,13 +39,12 @@ class Partidos extends CI_Controller {
 			#Vista
 			$this->Partido->ID_PARTIDO         = $this->uri->segment(3);
 			$data['partido']                   = $this->Partido->getPartido();
-			$this->Competicion->ID_COMPETENCIA = $data['partido'][0]->ID_COMPETENCIA;
-			$data['competicion']               = $this->Competicion->getCompeticion();
-			$this->Pais->ID_PAIS               = $data['competicion'][0]->ID_PAIS;
+			$this->Competencia->ID_COMPETENCIA = $data['partido'][0]->ID_COMPETENCIA;
+			$data['competencia']               = $this->Competencia->getCompe();
+			$this->Pais->ID_PAIS               = $data['competencia'][0]->ID_PAIS;
 			$data['pais']                      = $this->Pais->getPais();
-
 			$this->Cuota->ID_PARTIDO           = $this->uri->segment(3);
-			#$data['cuotas']                    = $this->Cuota->getCuota();
+			$data['cuotas']                    = $this->Cuota->getCuota();
 
 			$this->load->helper('form');
 			$this->load->view('partidos/editar', $data);

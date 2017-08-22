@@ -20,10 +20,11 @@ class Cuota extends CI_Model
 	
 	public function getCuota()
 	{
-		$query = $this->db->query('SELECT * FROM cuota WHERE
-			ID_PARTIDO='.$this->ID_PARTIDO.' 
-			AND ID_TIPO='.$this->ID_TIPO.' 
-			'); 
+		$sql='SELECT * FROM cuota WHERE ID_PARTIDO='.$this->ID_PARTIDO.' ';
+		if ($this->ID_TIPO!=null) {
+			$sql.=' AND ID_TIPO='.$this->ID_TIPO.'';
+		}
+		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
