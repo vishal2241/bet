@@ -107,7 +107,7 @@ class Partido extends CI_Model
 	}
 
 	//Para editar partidos y sincronizar
-	public function all($from, $to, $filtro)
+	public function getAllPartidos($from, $to, $filtro)
 	{
 		$sql="SELECT 
 		p.ID_PARTIDO,
@@ -132,10 +132,7 @@ class Partido extends CI_Model
 			$sql.="  p.AUTORIZADO='NO' AND";
 			break;
 			case 'Cancelados':
-			$sql.="  p.ESTADO='Canc.' AND";
-			break;
-			case 'sinCuota':
-			$sql.="  p.ID_PARTIDO NOT IN (SELECT c.ID_PARTIDO FROM cuota c) AND";
+			$sql.="  p.ESTADO='Cancelado' AND";
 			break;
 		}
 		$sql.="

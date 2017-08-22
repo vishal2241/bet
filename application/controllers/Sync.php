@@ -17,7 +17,7 @@ class Sync extends CI_Controller {
 	/*                        API                          */
 	/*******************************************************/
 	public function syncMatches(){
-		$this->Request->FECHA=1;  
+		$this->Request->FECHA=0;  
 		$matches=$this->Request->getMatches();  
 		#print_r($matches); exit();
 		if ($matches!=null) {
