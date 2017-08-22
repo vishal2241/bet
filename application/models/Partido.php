@@ -5,14 +5,17 @@ class Partido extends CI_Model
 	
 	public $ID_PARTIDO;
 	public $ID_COMPETENCIA;
-	public $ID_PAIS;
-	public $TIMEZONE;
 	public $FECHA;
-	public $HORA;
+	public $HORARIO;
+	public $ESTADO;
 	public $LOCAL;
 	public $VISITANTE;
-	public $ESTADO;
-	public $MARKET_COUNT;
+	public $SCORE_1;
+	public $SCORE_2;	
+	public $SCORE_1_HT;
+	public $SCORE_2_HT;
+	public $AUTORIZADO;
+	public $VERIFICADO;
 
 
 	public function __construct()
@@ -20,19 +23,22 @@ class Partido extends CI_Model
 		parent::__construct();
 		$this->ID_PARTIDO     = null;
 		$this->ID_COMPETENCIA = null;
-		$this->ID_PAIS        = null;
-		$this->TIMEZONE       = null;
 		$this->FECHA          = null;
-		$this->HORA           = null;
+		$this->HORARIO        = null;
+		$this->ESTADO         = null;
 		$this->LOCAL          = null;
 		$this->VISITANTE      = null;
-		$this->MARKET_COUNT   = null;
-		$this->ESTADO         = null;
+		$this->SCORE_1        = null;
+		$this->SCORE_2        = null;
+		$this->SCORE_1_HT     = null;
+		$this->SCORE_2_HT     = null;
+		$this->AUTORIZADO     = 'NO';
+		$this->VERIFICADO     = 'NO';
 	}
 
 	public function getPartido()
 	{
-		$query = $this->db->query('SELECT * FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.''); 
+		$query = $this->db->query('SELECT * FROM partido WHERE ID_PARTIDO='.$this->ID_PARTIDO.' '); 
 
 		if ($query->num_rows() > 0) {
 			return $query->result();
@@ -58,18 +64,39 @@ class Partido extends CI_Model
 	public function getPartidoByCompe($date, $hour, $compe)
 	{
 		$sql="
-		SELECT p.ID_PARTIDO, p.LOCAL, p.VISITANTE, SUBSTR(p.HORA,1,5) AS HORA, p.FECHA
-		FROM partido p LEFT JOIN odds c ON (p.ID_PARTIDO=c.ID_PARTIDO)
+		SELECT 
+		p.ID_PARTIDO AS ID,
+		p.ID_COMPETENCIA AS COMPE,
+		p.FECHA,
+		p.ESTADO,
+		SUBSTR(p.HORARIO, 1, 5) AS HORARIO,
+		p.LOCAL,
+		p.VISITANTE,
+		c._1,
+		c._X,
+		c._2,
+		c._1X,
+		c._12,
+		c._2X,
+		c.GG,
+		c.NG,
+		c.OVER_25,
+		c.UNDER_25
+		FROM partido p LEFT JOIN cuota c ON (p.ID_PARTIDO=c.ID_PARTIDO)
 		WHERE
 		p.FECHA = '".$date."'";
 		#Si la fecha es mayor a la de hoy no se condiciona la hora
 		if (date("Y-m-d")==$date ) {
-			$sql.=" AND p.HORA > '".$hour."' ";
+			$sql.=" AND p.HORARIO > '".$hour."' ";
 		}
+
 		$sql.="
 		AND p.ID_COMPETENCIA='".$compe."' 
+		AND p.ESTADO!='FT' 
+		AND p.ESTADO!='Canc.' 
+		AND p.AUTORIZADO='SI' 
 		GROUP BY p.ID_PARTIDO 
-		ORDER BY p.HORA ASC
+		ORDER BY p.HORARIO DESC
 		";
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
@@ -80,31 +107,23 @@ class Partido extends CI_Model
 	}
 
 	//Para editar partidos y sincronizar
-	public function all($from, $to, $filtro, $campos)
+	public function all($from, $to, $filtro)
 	{
-		$sql="SELECT"; 
-		switch ($campos) {
-			case '*':
-			$sql.="
-			p.ID_PARTIDO,
-			p.LOCAL,
-			p.VISITANTE,
-			p.ESTADO,
-			p.FECHA,
-			p.HORA,
-			p.AUTORIZADO,
-			co.NOMBRE AS TORNEO";
-			break;
-			
-			default:
-			$sql.=
-			" ".$campos." ";
-			break;
-		}
-		$sql.="
+		$sql="SELECT 
+		p.ID_PARTIDO,
+		p.LOCAL,
+		p.VISITANTE,
+		p.ESTADO,
+		p.FECHA,
+		p.HORARIO,
+		p.AUTORIZADO,
+		co.NOMBRE AS TORNEO,
+		pa.NOMBRE as PAIS 
 		FROM partido p
 		LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
+		LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
 		WHERE ";
+
 		switch ($filtro) {
 			case 'Autorizados':
 			$sql.="  p.AUTORIZADO='SI' AND";
@@ -118,15 +137,11 @@ class Partido extends CI_Model
 			case 'sinCuota':
 			$sql.="  p.ID_PARTIDO NOT IN (SELECT c.ID_PARTIDO FROM cuota c) AND";
 			break;
-			case 'hora':
-			$sql.="  p.HORA> '".date("H:i")."' AND  ";
-			break;
 		}
-	 	echo $sql.="
-		(SELECT COUNT(o.ID_PARTIDO) AS ODDS FROM odds o WHERE o.ID_PARTIDO=p.ID_PARTIDO) !='13'
-		AND p.FECHA BETWEEN '".$from."'   AND '".$to."'
-		ORDER BY p.FECHA ASC, p.HORA ASC";
-		
+		$sql.="
+		p.FECHA BETWEEN '".$from."'   AND '".$to."'
+		ORDER BY p.FECHA DESC, p.HORARIO ASC";
+
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
 			return $query->result();
