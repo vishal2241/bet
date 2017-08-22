@@ -10,47 +10,10 @@ class Home extends CI_Controller {
 	}
 
 	public function index(){
+		$this->load->view('home/index');
+	} 
 
-		$this->load->library('PHPRequests');
-		$url="https://www.soccerwin.com.co/update_ajax/update_table";
-		$param='fecha=0';
-
-		$headers = array('Accept' => 'application/json');
-		$options = array('fecha' => '1');
-		$request = Requests::post($url,$headers,$options);
-		$request->body=json_decode($request->body, false);
-		#print_r($request->body);
-
-		foreach ($request->body as $key => $value) {
-			print_r($value); exit();
-		}
-
-		#$this->load->view('home/prueba');
-/*	
-		$from = date("Y-m-d");
-		$to   = date("Y-m-d");
-
-		$cuotas=$this->Cuota->index($from, $to);
-		
-		foreach ($cuotas as $key => $value) {
-			$array[] = array(
-				'ID_PARTIDO' =>  $value->ID_PARTIDO, 
-				'HORARIO' =>  $value->HORARIO, 
-				'LOCAL' =>  $value->LOCAL, 
-				'VISITANTE' =>  $value->VISITANTE, 
-				'TORNEO' =>  $value->TORNEO, 
-				'PAIS' =>  $value->PAIS, 
-				'_1' =>  $value->_1, 
-				'_2' =>  $value->_2, 
-				'_X' =>  $value->_X, 
-				);
-
-		} 
-		$data['partidos']= $array;
-		$this->load->view('home/index', $data);
-*/	} 
-
-	}
+}
 
 
 

@@ -16,10 +16,13 @@ class Sync extends CI_Controller {
 	/*******************************************************/
 	/*                        API                          */
 	/*******************************************************/
-	public function syncPaises(){
-		$paises=$this->ApiFootball->getPaises();
-		if ($paises!=null) {
-			foreach ($paises as $key => $value) {
+	public function syncMatches(){
+		$this->Request->FECHA=1;  
+		$matches=$this->Request->getMatches();  
+		 
+		if ($matches!=null) {
+			foreach ($matches as $key => $row) {
+				print_r($row); exit();
 				$this->Pais->ID_PAIS = $value->country_id;
 				$this->Pais->NOMBRE  = $value->country_name;
 
@@ -33,32 +36,7 @@ class Sync extends CI_Controller {
 				}
 			}
 		}
-	} // End syncPaises
-
-
-	public function syncCompeticiones(){
-		$competiciones=$this->ApiFootball->getCompeticiones();
-		if ($competiciones!=null) {
-			foreach ($competiciones as $key => $value) {
-				$this->Competicion->ID_COMPETENCIA = $value->league_id;
-				$this->Competicion->ID_PAIS = $value->country_id;
-				$this->Competicion->NOMBRE  = $value->league_name;
-
-				$competencia=$this->Competicion->getCompeticion();
-
-				if ($competencia==null) {
-					echo "<b>add</b> ".$value->country_name.' '.$value->league_name."<br>";
-					$this->Competicion->add();
-				} else {
-					echo "<b>update</b> ".$value->country_name.' '.$value->league_name."<br>";
-					$this->Competicion->update();
-				}
-			}
-		}
-	} // End syncCompeticiones
-
-
-
+	} // End sync
 
 }
 
