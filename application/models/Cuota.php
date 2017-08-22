@@ -33,6 +33,26 @@ class Cuota extends CI_Model
 	} 
 
 
+	public function add()
+	{
+		$this->db->insert('cuota', $this);
+	}
+
+	public function update()
+	{
+		$query = $this->db->query('UPDATE cuota 
+			SET VALOR="'.$this->VALOR.'"
+			WHERE ID_PARTIDO='.$this->ID_PARTIDO.'  AND ID_TIPO='.$this->ID_TIPO.' '); 
+	}
+
+
+
+	public function delete()
+	{
+		$query = $this->db->query('DELETE FROM cuota 
+			WHERE ID_PARTIDO='.$this->ID_PARTIDO.'  AND ID_TIPO='.$this->ID_TIPO.' '); 
+	} 
+
 	public function index($from, $to)
 	{
 		$query = $this->db->query('SELECT 
@@ -66,27 +86,6 @@ class Cuota extends CI_Model
 	} 
 
 
-	
-
-	public function add()
-	{
-		$this->db->insert('cuota', $this);
-	}
-
-	public function update()
-	{
-		$query = $this->db->query('UPDATE cuota 
-			SET VALOR="'.$this->VALOR.'"
-			WHERE ID_PARTIDO='.$this->ID_PARTIDO.'  AND ID_TIPO='.$this->ID_TIPO.' '); 
-	}
-
-
-
-	public function delete()
-	{
-		$query = $this->db->query('DELETE FROM cuota 
-			WHERE ID_PARTIDO='.$this->ID_PARTIDO.'  AND ID_TIPO='.$this->ID_TIPO.' '); 
-	} 
 
 
 }
