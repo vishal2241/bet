@@ -18,90 +18,101 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<div class="tim-row" id="tables-row">					 
 								<div class="table-responsive">
-									<h2>Api BetFair</h2>
+									<h2>Partidos Sincronizados</h2>
 									<table class="table">
-										<tbody>
+										<thead>
 											<tr>
-												<td>
-													<a  class="btn btn-success btn-sm" href="<?php echo base_url(); ?>sync/syncMatches">Sync Matches <i class="fa fa-cog" aria-hidden="true"></i></a> 
-												</td>
-
-												
-											</tr>
-										</tbody>
-									</table>
-
-								</div>
-								<!-- end container -->
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="panel panel-default">
-							<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
-							<div class="panel-body">
-								<div class="col-md-12">
-									<table class="table table-condensed" >
-										<thead class="tiquete">
-											<tr>
-												<th class="text-success">Partido</th>
-												<th class="text-success" colspan="2">Cuota</th>
+												<th>#</th>
+												<th>Partido</th>
+												<th>Fecha</th>
 											</tr>
 										</thead>
 										<tbody>
+											<?php
+											$i=0;
+											foreach ($sync as $key => $value): 
+												$i++;
+											?>
 											<tr>
-												<td>
-													Tolima vs Nacional
-													<br>
-													<b><span class="text-info text-bold bet">Gana Tolima</span></b>
-												</td>
-												<td>
-													2.00
-												</td>
-												<td valign="middle">
-													<span class="text-danger">
-														<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>
-													</span>
-												</td>
+												<td><?= $i ?></td>
+												<td><?= strtoupper($value['l']).' ...vs... '. strtoupper($value['v']) ?></td>
+												<td><?= $value['fecha_event']      ?></td>
 											</tr>
+										<?php endforeach ?>
+									</tbody>
+								</table>
 
-
-
-										</tbody>
-									</table>
-								</div>	
-								<form>
-									<div class="col-md-6">
-										<div class="form-group label-floating">
-											<label class="control-label">Cantidad</label>
-											<input type="number" class="form-control">
-										</div>	
-									</div>	
-									<div class="col-md-6">
-										<div class="form-group label-floating">
-											<label class="control-label">Ganancia</label>
-											<input type="number" class="form-control" readonly>
-										</div>	
-									</div>	
-									<button class="btn btn-primary col-md-12"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
-								</form>
 							</div>
+							<!-- end container -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
+						<div class="panel-body">
+							<div class="col-md-12">
+								<table class="table table-condensed" >
+									<thead class="tiquete">
+										<tr>
+											<th class="text-success">Partido</th>
+											<th class="text-success" colspan="2">Cuota</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												Tolima vs Nacional
+												<br>
+												<b><span class="text-info text-bold bet">Gana Tolima</span></b>
+											</td>
+											<td>
+												2.00
+											</td>
+											<td valign="middle">
+												<span class="text-danger">
+													<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>
+												</span>
+											</td>
+										</tr>
+
+
+
+									</tbody>
+								</table>
+							</div>	
+							<form>
+								<div class="col-md-6">
+									<div class="form-group label-floating">
+										<label class="control-label">Cantidad</label>
+										<input type="number" class="form-control">
+									</div>	
+								</div>	
+								<div class="col-md-6">
+									<div class="form-group label-floating">
+										<label class="control-label">Ganancia</label>
+										<input type="number" class="form-control" readonly>
+									</div>	
+								</div>	
+								<button class="btn btn-primary col-md-12"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<?php $this->load->view('overall/footer'); ?>
+		<?php $this->load->view('overall/footer'); ?>
 
 
-			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
-			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$('#bets').DataTable({
-						"iDisplayLength": -1,
-					});
-				} );
+		<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#bets').DataTable({
+					"iDisplayLength": -1,
+				});
+			} );
 
 
 				/*for (var i = 0; i < 40; i++) {

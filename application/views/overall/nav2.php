@@ -47,7 +47,7 @@
 			</ul>
 
 			<ul class="nav navbar-nav">
-				<li><a href="<?= base_url(); ?>sync">Sync</a></li> 
+				<li><a href="<?= base_url(); ?>sync/syncMatches">Sync</a></li> 
 			</ul>
 			<ul class="nav navbar-nav">
 				<li><a href="<?= base_url(); ?>widget">Widget</a></li> 

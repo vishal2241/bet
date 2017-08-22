@@ -197,7 +197,7 @@ class Sync extends CI_Controller {
 				} else {
 					$this->Cuota->update();
 				}
-	 
+
 			} // end foreach
 
 			$data = array(
@@ -211,7 +211,7 @@ class Sync extends CI_Controller {
 		}
 
 
-		$this->load->view('sync/return', $data);
+		$this->load->view('sync/index', $data);
 
 
 	} // End sync
