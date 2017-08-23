@@ -61,42 +61,22 @@ class Partido extends CI_Model
 	}
 
 	//pagina principal, publico
+		//pagina principal, publico
 	public function getPartidoByCompe($date, $hour, $compe)
 	{
 		$sql="
-		SELECT 
-		p.ID_PARTIDO AS ID,
-		p.ID_COMPETENCIA AS COMPE,
-		p.FECHA,
-		p.ESTADO,
-		SUBSTR(p.HORARIO, 1, 5) AS HORARIO,
-		p.LOCAL,
-		p.VISITANTE,
-		c._1,
-		c._X,
-		c._2,
-		c._1X,
-		c._12,
-		c._2X,
-		c.GG,
-		c.NG,
-		c.OVER_25,
-		c.UNDER_25
-		FROM partido p LEFT JOIN cuota c ON (p.ID_PARTIDO=c.ID_PARTIDO)
+		SELECT p.ID_PARTIDO, SUBSTR(p.HORARIO,1,5) AS HORARIO, p.FECHA
+		FROM partido p LEFT JOIN odds c ON (p.ID_PARTIDO=c.ID_PARTIDO)
 		WHERE
 		p.FECHA = '".$date."'";
-		#Si la fecha es mayor a la de hoy no se condiciona la hora
+		#Si la fecha es mayor a la de hoy no se condiciona la HORARIO
 		if (date("Y-m-d")==$date ) {
 			$sql.=" AND p.HORARIO > '".$hour."' ";
 		}
-
-		$sql.="
+	echo	$sql.="
 		AND p.ID_COMPETENCIA='".$compe."' 
-		AND p.ESTADO!='FT' 
-		AND p.ESTADO!='Canc.' 
-		AND p.AUTORIZADO='SI' 
 		GROUP BY p.ID_PARTIDO 
-		ORDER BY p.HORARIO DESC
+		ORDER BY p.HORARIO ASC
 		";
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
@@ -105,7 +85,6 @@ class Partido extends CI_Model
 			return null;
 		} 
 	}
-
 	//Para editar partidos y sincronizar
 	public function getAllPartidos($from, $to, $filtro)
 	{

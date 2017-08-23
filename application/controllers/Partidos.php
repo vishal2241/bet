@@ -46,6 +46,11 @@ class Partidos extends CI_Controller {
 			$this->Cuota->ID_PARTIDO           = $this->uri->segment(3);
 			$data['cuotas']                    = $this->Cuota->getCuota();
 
+			$this->Equipo->ID_EQUIPO           = $data['partido'][0]->LOCAL;
+			$data['local']                     = $this->Equipo->getEquipo();
+			$this->Equipo->ID_EQUIPO           = $data['partido'][0]->VISITANTE;
+			$data['visitante']                 = $this->Equipo->getEquipo();
+
 			$this->load->helper('form');
 			$this->load->view('partidos/editar', $data);
 

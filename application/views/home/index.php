@@ -100,7 +100,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$( document ).ready(function() {
 					moment.locale('es');
 					var url= '<?= base_url(); ?>';
-					var fecha=moment().format('YYYY-MM-DD');  
+					//var fecha=moment().format('YYYY-MM-DD');  
+					var fecha=moment().add(1, 'days').format('YYYY-MM-DD'); //pruebas
 					$("#titulo").empty();
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 

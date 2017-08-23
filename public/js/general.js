@@ -10,8 +10,7 @@ function DeleteItem (url) {
 }
 
 function get_bets (fecha, url) {
-	$.getJSON(''+url+'ajax/json_compe', {fecha: fecha}, function(resp) {
-
+	$.post(url+'ajax/json_compe', {fecha: fecha}, function(resp) {
 		if (resp!=null) {
 			$.each(resp, function(i, item) {
 
@@ -26,7 +25,7 @@ function get_bets (fecha, url) {
 					</tr>\
 					');
 				var compe = item.ID;
-				$.getJSON(''+url+'ajax/json_match', {fecha: fecha, compe:compe}, function(match) {
+				$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(match) {
 					$.each(match, function(a, row) {
 						$("#bets > tbody #"+compe+"").after('\
 							<tr id='+ row.ID_PARTIDO+'>\
@@ -35,14 +34,14 @@ function get_bets (fecha, url) {
 							<td  class="text-left" width="12%" >'+ row.VISITANTE+'</td>');
 							//ODDS 
 							var match=row.ID_PARTIDO;
-							$.getJSON(''+url+'ajax/json_odds', {match: match}, function(odds) {
+							$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
 								$.each(odds, function(a, rowMatch) {
-									 
+
 									$("#"+match+"").append('\
 										<td  class="text-center" width="5%" >'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>'
 										);
 								});
-							});
+							}, "json");
 							$("#bets > tbody #"+compe+"").after('\
 								</tr>\
 								');
@@ -68,11 +67,11 @@ function get_bets (fecha, url) {
 						</tr>\
 						');
 
-				});
+				}, "json");
 
 			});
 		}
-	});
+	},"json");
 
 
 }

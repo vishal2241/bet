@@ -17,7 +17,9 @@ class Sync extends CI_Controller {
 	/*                        API                          */
 	/*******************************************************/
 	public function syncMatches(){
-		$this->Request->FECHA=0;  
+		ini_set('memory_limit','16000000M');
+		set_time_limit(0);
+		$this->Request->FECHA=1;  
 		$matches=$this->Request->getMatches();  
 		#print_r($matches); exit();
 		if ($matches!=null) {

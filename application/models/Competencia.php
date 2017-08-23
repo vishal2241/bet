@@ -44,8 +44,8 @@ class Competencia extends CI_Model
 			$sql.=' AND p.HORARIO > "'.$hour.'" ';
 		}
 
-		$sql.='AND p.ESTADO="" 
-		AND p.AUTORIZADO="SI"  
+		$sql.='/*AND p.ESTADO="" 
+		AND p.AUTORIZADO="SI"  */
 		GROUP BY c.ID_COMPETENCIA 
 		ORDER BY pa.NOMBRE ASC, c.NOMBRE ASC';
 		$query = $this->db->query($sql); 

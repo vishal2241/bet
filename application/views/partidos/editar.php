@@ -4,7 +4,7 @@
 	<div class="container">
 		<h3 align="center">
 			<img width="48" src="<?= base_url() ?>/public/img/logos/country/<?= $pais[0]->IMG ?>.png">
-			<?= $partido[0]->LOCAL .' vs. '. $partido[0]->VISITANTE ?>
+			<?= $local[0]->NOMBRE .' vs. '. $visitante[0]->NOMBRE ?>
 		</h3>
 		<br>
 		<div class="">
@@ -14,7 +14,7 @@
 					<div class="form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="local">Local</label>
-							<input class="form-control" id="local" type="text" value="<?= $partido[0]->LOCAL ?>">
+							<input class="form-control" id="local" type="text" value="<?= $local[0]->NOMBRE ?>">
 						</div>
 						<div class="col-md-1">
 							<label class="control-label" for="score_1">Score 1</label>
@@ -22,7 +22,7 @@
 						</div>
 						<div class="col-md-3">
 							<label class="control-label" for="visitante">Visitante</label>
-							<input class="form-control" id="visitante" type="text" value="<?= $partido[0]->VISITANTE ?>">
+							<input class="form-control" id="visitante" type="text" value="<?= $visitante[0]->NOMBRE ?>">
 						</div>
 						<div class="col-md-1">
 							<label class="control-label" for="score_2">Score 2</label>
