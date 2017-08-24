@@ -54,7 +54,15 @@ class Ajax extends CI_Controller {
 		} 
 	}
 
-
+	public function json_odds(){
+		if (isset($_POST['match']) and $_POST['match']!='') {
+			$match=$_POST['match'];
+			$data = $this->Cuota->getOddByMatch($match);
+			echo json_encode($data);
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
 
 
 
@@ -74,15 +82,7 @@ class Ajax extends CI_Controller {
 
 
 
-	public function json_odds(){
-		if (isset($_POST['match']) and $_POST['match']!='') {
-			$match=$_POST['match'];
-			$data = $this->Odds->getOddByMatch($match);
-			echo json_encode($data);
-		} else {
-			header("Location:" . base_url());
-		} 
-	}
+
 
 
 

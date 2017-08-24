@@ -65,15 +65,19 @@ class Partido extends CI_Model
 	public function getPartidoByCompe($date, $hour, $compe)
 	{
 		$sql="
-		SELECT p.ID_PARTIDO, SUBSTR(p.HORARIO,1,5) AS HORARIO, p.FECHA
-		FROM partido p LEFT JOIN odds c ON (p.ID_PARTIDO=c.ID_PARTIDO)
+		SELECT p.ID_PARTIDO, SUBSTR(p.HORARIO,1,5) AS HORARIO,
+		p.FECHA, l.NOMBRE  AS LOCAL,
+		v.NOMBRE  AS VISITANTE
+		FROM partido p 
+		LEFT JOIN equipo l ON (l.ID_EQUIPO=p.LOCAL) 
+		LEFT JOIN equipo v ON (v.ID_EQUIPO=p.VISITANTE)  
 		WHERE
 		p.FECHA = '".$date."'";
 		#Si la fecha es mayor a la de hoy no se condiciona la HORARIO
 		if (date("Y-m-d")==$date ) {
 			$sql.=" AND p.HORARIO > '".$hour."' ";
 		}
-	echo	$sql.="
+		$sql.="
 		AND p.ID_COMPETENCIA='".$compe."' 
 		GROUP BY p.ID_PARTIDO 
 		ORDER BY p.HORARIO ASC

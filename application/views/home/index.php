@@ -97,11 +97,77 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script type="text/javascript">
 
+				function get_bets (fecha, url) {
+					$.post(url+'ajax/json_compe', {fecha: fecha}, function(resp) {
+						if (resp!=null) {
+							$.each(resp, function(i, item) {
+
+								$("#bets > tbody").append('\
+									<tr id='+ item.ID+'>\
+										<td colspan="13" class="text-left" >\
+											<h4>\
+												<img width="40" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
+												<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
+											</h4>\
+										</td>\
+									</tr>\
+									');
+								var compe = item.ID;
+
+								$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(match) {
+									 
+									$.each(match, function(a, row) {
+										$("#bets > tbody #"+compe+"").after('\
+											<tr id='+ row.ID_PARTIDO+'>\
+												<td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
+												<td  class="text-left" width="12%" >'+ row.LOCAL+'</td>\
+												<td  class="text-left" width="12%" >'+ row.VISITANTE+'</td>');
+							//ODDS 
+							var match=row.ID_PARTIDO;
+							$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
+								$.each(odds, function(a, rowMatch) {
+									console.log(rowMatch)
+									$("#"+match+"").append('\
+										<td  class="text-center" width="5%" >'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>'
+										);
+								});
+							}, "json");
+							$("#bets > tbody #"+compe+"").after('\
+						</tr>\
+						');
+						});
+									$("#bets > tbody #"+compe+"").after('\
+										<tr>\
+											<th class="text-center">Hora</th>\
+											<th class="text-left">Local</th>\
+											<th class="text-left">Visitante</th>\
+											<th class="text-center">1</th>\
+											<th class="text-center">X</th>\
+											<th class="text-center">2</th>\
+											<th class="text-center">1HT</th>\
+											<th class="text-center">XHT</th>\
+											<th class="text-center">2HT</th>\
+											<th class="text-center">1X</th>\
+											<th class="text-center">12</th>\
+											<th class="text-center">2X</th>\
+											<th class="text-center">OVER</th>\
+											<th class="text-center">UNDER</th>\
+											<th class="text-center">GG</th>\
+											<th class="text-center">NG</th>\
+										</tr>\
+										');
+
+								}, "json");
+
+							});
+						}
+					},"json");
+				}
 				$( document ).ready(function() {
 					moment.locale('es');
 					var url= '<?= base_url(); ?>';
 					//var fecha=moment().format('YYYY-MM-DD');  
-					var fecha=moment().add(1, 'days').format('YYYY-MM-DD'); //pruebas
+					var fecha=moment().add(1, 'days').format('YYYY-MM-DD');
 					$("#titulo").empty();
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
