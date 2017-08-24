@@ -5,6 +5,7 @@ class Equipo extends CI_Model
 	
 	public $ID_EQUIPO;
 	public $NOMBRE;
+	public $ID_PAIS;
 	public $IMG;
 
 
@@ -13,6 +14,7 @@ class Equipo extends CI_Model
 		parent::__construct();
 		$this->ID_EQUIPO=null;
 		$this->NOMBRE=null;
+		$this->ID_PAIS=null;
 		$this->IMG=null;
 	}
 

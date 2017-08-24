@@ -44,12 +44,15 @@ class Sync extends CI_Controller {
 				}
 
 				# AGREGAMOS EQUIPO LOCAL-> Si no existe
-				$this->Equipo->ID_EQUIPO = 	$row['id_l'];
-				$this->Equipo->NOMBRE    =  $row['l'];
+				$this->Equipo->ID_EQUIPO = $row['id_l'];
+				$this->Equipo->NOMBRE    = $row['l'];
+				$this->Equipo->ID_PAIS   = $row['id_country'];
 				$local=$this->Equipo->getEquipo();
 				if ($local==null) {
 					#echo "<b>add</b> ".$row['l']."<br>";
 					$this->Equipo->add();
+				} else {
+					$this->Equipo->update();
 				}
 
 				# AGREGAMOS EQUIPO VISITANTE -> Si no existe
