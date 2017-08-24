@@ -14,7 +14,16 @@ class Request extends CI_Model
 
 	public function getMatches(){
 		$url="https://www.soccerwin.com.co/update_ajax/update_table";
- 
+		$headers = array('Accept' => 'application/json');
+		$options = array('fecha' => $this->FECHA);
+		$request = Requests::post($url,$headers,$options);
+		$request->body=json_decode($request->body, true);
+		return $request->body;
+	}
+
+
+	public function getOthers(){
+		$url="https://www.soccerwin.com.co/update_ajax/other_odds/2416896";
 		$headers = array('Accept' => 'application/json');
 		$options = array('fecha' => $this->FECHA);
 		$request = Requests::post($url,$headers,$options);

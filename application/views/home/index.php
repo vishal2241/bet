@@ -115,27 +115,65 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								var compe = item.ID;
 
 								$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(match) {
-									 
+									
 									$.each(match, function(a, row) {
 										$("#bets > tbody #"+compe+"").after('\
 											<tr id='+ row.ID_PARTIDO+'>\
 												<td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
 												<td  class="text-left" width="12%" >'+ row.LOCAL+'</td>\
 												<td  class="text-left" width="12%" >'+ row.VISITANTE+'</td>');
-							//ODDS 
-							var match=row.ID_PARTIDO;
-							$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
-								$.each(odds, function(a, rowMatch) {
-									console.log(rowMatch)
-									$("#"+match+"").append('\
-										<td  class="text-center" width="5%" >'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>'
-										);
-								});
-							}, "json");
-							$("#bets > tbody #"+compe+"").after('\
-						</tr>\
-						');
-						});
+
+										var match=row.ID_PARTIDO;
+										$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
+											console.log(odds)
+											$.each(odds, function(a, rowMatch) {
+												switch(rowMatch.NOMBRE) {
+													case "_1":
+													var _1='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "_X":
+													var _X='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "_2":
+													var _2='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "_1HT":
+													var _1HT='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "_XHT":
+													var _XHT='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "_2HT":
+													var _2HT='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "_1X":
+													var _1X='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "_12":
+													var _12='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "_2X":
+													var _2X='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "over":
+													var OV='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "under":
+													var UN='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "GG":
+													var GG='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+													case "NG":
+													var NG='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
+													break;
+												}
+											});
+											$("#"+match+"").append(_1+_X+_2+_1HT+_XHT+_2HT+_1X+_12+_2X+OV+UN+GG+NG);
+										}, "json");
+
+										$("#bets > tbody #"+compe+"").after('</tr>');
+									});
 									$("#bets > tbody #"+compe+"").after('\
 										<tr>\
 											<th class="text-center">Hora</th>\
@@ -150,8 +188,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<th class="text-center">1X</th>\
 											<th class="text-center">12</th>\
 											<th class="text-center">2X</th>\
-											<th class="text-center">OVER</th>\
-											<th class="text-center">UNDER</th>\
+											<th class="text-center">OV</th>\
+											<th class="text-center">UN</th>\
 											<th class="text-center">GG</th>\
 											<th class="text-center">NG</th>\
 										</tr>\
@@ -159,13 +197,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 								}, "json");
 
-							});
-						}
-					},"json");
-				}
-				$( document ).ready(function() {
-					moment.locale('es');
-					var url= '<?= base_url(); ?>';
+});
+}
+},"json");
+}
+$( document ).ready(function() {
+	moment.locale('es');
+	var url= '<?= base_url(); ?>';
 					//var fecha=moment().format('YYYY-MM-DD');  
 					var fecha=moment().add(1, 'days').format('YYYY-MM-DD');
 					$("#titulo").empty();
