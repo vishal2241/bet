@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<h2 class="text-center" id="titulo"></h2>
 							<div class="table-responsive" id="all">
-								<table class="table" id="bets">
+								<table class="table  table-hover tableOdds" id="bets">
 									<tbody>
 									</tbody>
 								</table>
@@ -104,7 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 								$("#bets > tbody").append('\
 									<tr id='+ item.ID+'>\
-										<td colspan="13" class="text-left" >\
+										<td colspan="16" class="text-left" >\
 											<h4>\
 												<img width="40" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
 												<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
@@ -120,12 +120,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										$("#bets > tbody #"+compe+"").after('\
 											<tr id='+ row.ID_PARTIDO+'>\
 												<td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
-												<td  class="text-left" width="12%" >'+ row.LOCAL+'</td>\
-												<td  class="text-left" width="12%" >'+ row.VISITANTE+'</td>');
+												<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/team/'+row.PAIS_L+'/'+row.IMG_L+'.png"><br>'+ row.LOCAL+'</td>'+
+													'<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/team/'+row.PAIS_V+'/'+row.IMG_V+'.png"><br>'+ row.VISITANTE+'</td>');
 
 										var match=row.ID_PARTIDO;
 										$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
-											console.log(odds)
+											 
 											$.each(odds, function(a, rowMatch) {
 												switch(rowMatch.NOMBRE) {
 													case "_1":
@@ -177,8 +177,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									$("#bets > tbody #"+compe+"").after('\
 										<tr>\
 											<th class="text-center">Hora</th>\
-											<th class="text-left">Local</th>\
-											<th class="text-left">Visitante</th>\
+											<th class="text-center">Local</th>\
+											<th class="text-center">Visitante</th>\
 											<th class="text-center">1</th>\
 											<th class="text-center">X</th>\
 											<th class="text-center">2</th>\
