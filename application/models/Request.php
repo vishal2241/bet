@@ -37,13 +37,13 @@ class Request extends CI_Model
 	}
 
 	public function getScores(){
-		$url="http://www.hot-odds.com/Game/GetLiveEventInfo/2234300";
+		$url="http://www.hot-odds.com/Game/GetLiveEventInfo/2623784";
 		$headers = array('Accept' => 'application/json');
 		$result=array();
 
 		$options = array('options' => '');
 		$request = Requests::get($url,$headers,$options);
-		$request->body=json_decode($request->body, true);
+		#$request->body=json_decode($request->body, true);
 		return $request->body;
 
 	}
