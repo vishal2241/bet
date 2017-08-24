@@ -168,8 +168,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													var NG='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
 													break;
 												}
+												$("#"+match+"").append(_1+_X+_2+_1HT+_XHT+_2HT+_1X+_12+_2X+OV+UN+GG+NG);
 											});
-											$("#"+match+"").append(_1+_X+_2+_1HT+_XHT+_2HT+_1X+_12+_2X+OV+UN+GG+NG);
 										}, "json");
 
 										$("#bets > tbody #"+compe+"").after('</tr>');

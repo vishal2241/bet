@@ -19,7 +19,7 @@ class Sync extends CI_Controller {
 	public function syncMatches(){
 		ini_set('memory_limit','16000000M');
 		set_time_limit(0);
-		$this->Request->FECHA=0;  
+		$this->Request->FECHA=1;  
 		$matches=$this->Request->getMatches();  
 		#print_r($matches); exit();
 		if ($matches!=null) {
@@ -192,7 +192,7 @@ class Sync extends CI_Controller {
 				}
 				// No marcan ambos
 				$this->Cuota->ID_TIPO    = 13; 
-				$this->Cuota->VALOR      = isset($row['ng']) ? $row['ng'] : 1; 
+				$this->Cuota->VALOR      = isset($row['gn']) ? $row['gn'] : 1; 
 				$gg=$this->Cuota->getCuota();
 				if ($gg==null) {
 					$this->Cuota->add();
