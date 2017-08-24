@@ -9,13 +9,21 @@ class Sync extends CI_Controller {
 	}
 
 	public function index(){
-		$this->load->view('sync/index');
+		$matches=$this->Request->getScores();  
+		print_r($matches);
+		#$this->load->view('sync/index');
 	}
 
 
 	/*******************************************************/
 	/*                        API                          */
 	/*******************************************************/
+
+	/*
+	SELECT  l.NOMBRE,l.ID_EQUIPO, c.ID_PAIS FROM partido p LEFT JOIN competencia c ON(c.ID_COMPETENCIA=p.ID_COMPETENCIA) LEFT JOIN equipo l ON (p.LOCAL=l.ID_EQUIPO) WHERE c.ID_PAIS!='248' GROUP BY l.ID_EQUIPO
+
+	SELECT e.NOMBRE, p.NOMBRE FROM equipo e LEFT JOIN pais p ON (e.ID_PAIS=p.ID_PAIS) WHERE e.ID_PAIS IS 		NOT NULL  
+	ORDER BY `p`.`NOMBRE` ASC	*/
 	public function syncMatches(){
 		ini_set('memory_limit','16000000M');
 		set_time_limit(0);
@@ -52,7 +60,10 @@ class Sync extends CI_Controller {
 					#echo "<b>add</b> ".$row['l']."<br>";
 					$this->Equipo->add();
 				} else {
-					$this->Equipo->update();
+					if ($row['id_country']!='248') {
+						$this->Equipo->update();
+					}
+
 				}
 
 				# AGREGAMOS EQUIPO VISITANTE -> Si no existe

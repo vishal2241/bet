@@ -37,8 +37,8 @@ class Equipo extends CI_Model
 
 	public function update($pais=null)
 	{
-		$this->db->where('ID_EQUIPO', $this->ID_EQUIPO); 
-		$this->db->update('equipo', $this);
+		$query = $this->db->query('UPDATE equipo set ID_PAIS='.$this->ID_PAIS.' WHERE ID_EQUIPO='.$this->ID_EQUIPO.' AND ID_PAIS IS NULL ');
+
 	}
 
 

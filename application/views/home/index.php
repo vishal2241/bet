@@ -121,11 +121,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<tr id='+ row.ID_PARTIDO+'>\
 												<td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
 												<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/team/'+row.PAIS_L+'/'+row.IMG_L+'.png"><br>'+ row.LOCAL+'</td>'+
-													'<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/team/'+row.PAIS_V+'/'+row.IMG_V+'.png"><br>'+ row.VISITANTE+'</td>');
+												'<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/team/'+row.PAIS_V+'/'+row.IMG_V+'.png"><br>'+ row.VISITANTE+'</td>');
 
 										var match=row.ID_PARTIDO;
 										$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
-											 
+											
 											$.each(odds, function(a, rowMatch) {
 												switch(rowMatch.NOMBRE) {
 													case "_1":
@@ -204,8 +204,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $( document ).ready(function() {
 	moment.locale('es');
 	var url= '<?= base_url(); ?>';
-					//var fecha=moment().format('YYYY-MM-DD');  
-					var fecha=moment().add(1, 'days').format('YYYY-MM-DD');
+	var fecha=moment().format('YYYY-MM-DD');  
+					//var fecha=moment().add(1, 'days').format('YYYY-MM-DD');
 					$("#titulo").empty();
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
