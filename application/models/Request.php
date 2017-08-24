@@ -37,7 +37,7 @@ class Request extends CI_Model
 	}
 
 	public function getScores(){
-		$url="http://www.hot-odds.com/Game/GetLiveEventInfo/699935499";
+		$url="http://www.hot-odds.com/Game/GetLiveEventInfo/2234300";
 		$headers = array('Accept' => 'application/json');
 		$result=array();
 

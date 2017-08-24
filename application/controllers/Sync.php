@@ -11,7 +11,7 @@ class Sync extends CI_Controller {
 	public function index(){
 		$matches=$this->Request->getScores();  
 		print_r($matches);
-		#$this->load->view('sync/index');
+		#$this->load->view('sync/frame');
 	}
 
 
