@@ -231,7 +231,7 @@ $( document ).ready(function() {
 	$( "#after-tomorrow" ).click(function() {
 		$("#titulo").empty();
 		$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
-		var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
+		var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
 		$("#bets > tbody").empty();
 		get_bets(fecha, url);
 	});
