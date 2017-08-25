@@ -2,6 +2,11 @@
 BET
 ###################
 
+SQL:
+```
+ 
+```
+
 *********
 Resources
 *********
@@ -24,14 +29,15 @@ Request
 -  `odds24 <https://console.odds24.com/>`_
 -  `betbtc <https://www.betbtc.co/>`_
 -  `betbtc <https://icecreamapps.com/es/Image-Resizer/>`_
+-  `Readme <https://help.github.com/articles/basic-writing-and-formatting-syntax/>`_
 
 
 $ SELECT * FROM vista_odds WHERE fecha_event > "2017-07-22 11:28:56" AND fecha_event<"2017-07-22 23:59:59" AND autorizado="1" ORDER BY prioridad DESC, name_country ASC, name_torne ASC, fecha_event ASC
 
- 
+
 
 [{"jsonrpc": "2.0", "method": "SportsAPING/v1.0/listMarketCatalogue", "params": {"filter":{"eventIds":["28303226"],"marketBettingTypes":["ODDS","ASIAN_HANDICAP_SINGLE_LINE","ASIAN_HANDICAP_DOUBLE_LINE"]},"maxResults":"100","marketProjection":["RUNNER_DESCRIPTION"]}, "id": 1}]
- 
+
 
 [{"jsonrpc": "2.0", "method": "SportsAPING/v1.0/listMarketCatalogue", "params": {"filter":{"eventIds":["28303226"],"marketBettingTypes":["ODDS","ASIAN_HANDICAP_SINGLE_LINE","ASIAN_HANDICAP_DOUBLE_LINE"]},"maxResults":"1000","marketProjection":["RUNNER_DESCRIPTION"]}, "id": 1}]
 
