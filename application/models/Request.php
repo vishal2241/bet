@@ -13,16 +13,20 @@ class Request extends CI_Model
 	}
 
 	public function getMatches(){
-		$url="https://www.soccerwin.com.co/update_ajax/update_table";
+		#$url="https://www.soccerwin.com.co/update_ajax/update_table";
+		$url="https://www.fullplay.com.co/update_ajax/get_table_events";
 		$headers = array('Accept' => 'application/json');
 		$result=array();
-		for ($i=0; $i <= $this->FECHA ; $i++) { 
-			$options = array('fecha' => $i);
+		#for ($i=0; $i < $this->FECHA ; $i++) { 
+			#$options = array('fecha' => $i);
+			$options = array('fecha' => $this->FECHA);
 			$request = Requests::post($url,$headers,$options);
 			$request->body=json_decode($request->body, true);
-			$result=$result+$request->body;
-		}
-		return $result;
+			#$result=$result+$request->body;
+
+		#}
+		#return $result;
+		return $request->body;
 
 	}
 

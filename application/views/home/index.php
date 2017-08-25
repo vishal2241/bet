@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php $this->load->view('overall/nav'); ?>
 	<div class="main main-raised">
 		<div class="section">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-9">
 						<div class="tim-container">
@@ -21,8 +21,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<button class="btn btn-info  btn-sm" id="tomorrow">
 								<i class="material-icons">event</i> Mañana
 							</button>
-							<button class="btn btn-info  btn-sm">
-								<i class="material-icons">event</i> Todos
+							<button class="btn btn-info  btn-sm" id="after-tomorrow">
+								<i class="material-icons">event</i> Pasado Mañana
 							</button>
 							<!-- tables row -->
 							<h2 class="text-center" id="titulo"></h2>
@@ -205,34 +205,41 @@ $( document ).ready(function() {
 	moment.locale('es');
 	var url= '<?= base_url(); ?>';
 	var fecha=moment().format('YYYY-MM-DD');  
-					//var fecha=moment().add(1, 'days').format('YYYY-MM-DD');
-					$("#titulo").empty();
-					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
-					get_bets(fecha, url);
+	$("#titulo").empty();
+	$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
-
-					$( "#today" ).click(function() {
-						$("#titulo").empty();
-						$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-						var fecha=moment().format('YYYY-MM-DD');  
-						$("#bets > tbody").empty();
-						get_bets(fecha, url);
-					});
-
-					$( "#tomorrow" ).click(function() {
-						$("#titulo").empty();
-						$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
-						var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
-						$("#bets > tbody").empty();
-						get_bets(fecha, url);
-					});
+	get_bets(fecha, url);
 
 
+	$( "#today" ).click(function() {
+		$("#titulo").empty();
+		$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+		var fecha=moment().format('YYYY-MM-DD');  
+		$("#bets > tbody").empty();
+		get_bets(fecha, url);
+	});
 
-				});
+	$( "#tomorrow" ).click(function() {
+		$("#titulo").empty();
+		$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+		var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
+		$("#bets > tbody").empty();
+		get_bets(fecha, url);
+	});
+
+	$( "#after-tomorrow" ).click(function() {
+		$("#titulo").empty();
+		$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+		var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
+		$("#bets > tbody").empty();
+		get_bets(fecha, url);
+	});
+
+
+});
 
 
 
-			</script>
-			</html>
+</script>
+</html>

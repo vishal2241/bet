@@ -28,17 +28,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</tr>
 										</thead>
 										<tbody>
-											<?php
-											$i=0;
-											foreach ($sync as $key => $value): 
-												$i++;
-											?>
-											<tr>
-												<td><?= $i ?></td>
-												<td><?= strtoupper($value['l']).' ...vs... '. strtoupper($value['v']) ?></td>
-												<td><?= $value['fecha_event']      ?></td>
-											</tr>
-										<?php endforeach ?>
+											<?php if ($sync>0): ?>
+												<?php
+												$i=0;
+												foreach ($sync as $key => $value): 
+													$i++;
+												?>
+												<tr>
+													<td><?= $i ?></td>
+													<td><?= strtoupper($value['l']).' ...vs... '. strtoupper($value['v']) ?></td>
+													<td><?= $value['fecha_event']      ?></td>
+												</tr>
+											<?php endforeach ?>
+										<?php endif ?>
 									</tbody>
 								</table>
 
