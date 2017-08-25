@@ -16,7 +16,7 @@ class Request extends CI_Model
 		$url="https://www.soccerwin.com.co/update_ajax/update_table";
 		$headers = array('Accept' => 'application/json');
 		$result=array();
-		for ($i=0; $i < $this->FECHA ; $i++) { 
+		for ($i=0; $i <= $this->FECHA ; $i++) { 
 			$options = array('fecha' => $i);
 			$request = Requests::post($url,$headers,$options);
 			$request->body=json_decode($request->body, true);
@@ -36,16 +36,41 @@ class Request extends CI_Model
 		return $request->body;
 	}
 
-	public function getScores(){
-		$url="http://www.hot-odds.com/Game/GetLiveEventInfo/2623784";
+	public function getScores($id){
+		$url="http://www.hot-odds.com/Game/GetLiveEventInfo/".$id."";
 		$headers = array('Accept' => 'application/json');
-		$result=array();
+
 
 		$options = array('options' => '');
 		$request = Requests::get($url,$headers,$options);
-		#$request->body=json_decode($request->body, true);
+		$request->body=json_decode($request->body, true);
 		return $request->body;
+	}
 
+	public function getStatus($id){
+		$url="http://www.hot-odds.com/Game/GetEventStatus/".$id."";
+		$headers = array('Accept' => 'application/json');
+
+		$options = array('options' => '');
+		$request = Requests::get($url,$headers,$options);
+		$request->body=json_decode($request->body, true);
+		return $request->body;
+	}
+
+	public function getResults(){
+		$url="http://ls.lsports.eu/Home/UpdateGamesResults";
+		$headers = array('Accept' => 'application/json');
+
+
+		$options = array(
+			'date' => '08/24/2017',
+			'name' => 'HotOdds',
+			'sportId' => '6046',
+			'offerTypeId' => '1'
+			);
+		$request = Requests::get($url,$headers,$options);
+	#	$request->body=json_decode($request->body, true);
+		return $request->body;
 	}
 
 
