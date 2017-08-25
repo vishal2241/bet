@@ -75,6 +75,10 @@ class Sync extends CI_Controller {
 					if ($visitante==null) {
 					#echo "<b>add</b> ".$row['v']."<br>";
 						$this->Equipo->add();
+					} else {
+						if ($row['id_country']!='248') {
+							$this->Equipo->update();
+						}
 					}
 
 				# AGREGAMOS PARTIDO
