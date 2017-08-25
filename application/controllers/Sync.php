@@ -29,6 +29,7 @@ class Sync extends CI_Controller {
 		set_time_limit(0);
 		$this->Request->FECHA=4;  
 		$matches=$this->Request->getMatches();  
+		#echo count($matches);  
 		#print_r($matches); exit();
 		if (count($matches)>0) {
 			foreach ($matches as $key => $row) {
