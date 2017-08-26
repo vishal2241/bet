@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<?php $this->load->view('overall/header'); ?>
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/plugins/datatables/css/dataTables.bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/plugins/datatables/css/buttons.dataTables.min.css">
 	<style>
 		.label {
 			display: inline-block;
@@ -23890,9 +23891,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
+
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.buttons.min.js"></script>
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/buttons.flash.min.js"></script>
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jszip.min.js"></script>
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/pdfmake.min.js"></script>
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/vfs_fonts.js"></script>
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/buttons.html5.min.js"></script>
+			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/buttons.print.min.js"></script>
 			<script>
 				$(document).ready(function() {
 					var table = 	$('.dataTable').DataTable({
+						dom: 'Bfrtip',
+						buttons: [
+						'excel'
+						],
 						"iDisplayLength": 50,
 						"lengthMenu": [[50, 80, 100, -1], [50, 80, 100, "All"]],
 						"order": [[ 2, 'asc' ], [ 0, 'asc' ]],
@@ -23907,7 +23920,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						{ "width": "5%" },
 						{ "width": "5%" },
 						{ "width": "5%" }
-						]
+						],
+
 
 					});
 
