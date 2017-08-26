@@ -9067,6 +9067,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>22.8</td>
 										</tr>
 										<tr>
+											<td id="587">Athlone Town</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1887</td>
+											<td>20.6</td>
+										</tr>
+										<tr>
+											<td id="588">Bohemians</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1890</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="1300916">Bray Wanderers</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#006030"></span> <span class="label" style="background:#101010"></span></td>
+											<td>1942</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="52076833">Cabinteely</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1967</td>
+											<td>20.2</td>
+										</tr>
+										<tr>
+											<td id="589">Cobh Ramblers</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>9,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1922</td>
+											<td>21.6</td>
+										</tr>
+										<tr>
 											<td id="590">Cork City</td>
 											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
 											<td>Premier Division</td>
@@ -9089,6 +9144,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>23.4</td>
 										</tr>
 										<tr>
+											<td id="1300922">Drogheda Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,400</td>
+											<td><span class="label" style="background:#0078F8"></span> <span class="label" style="background:#902830"></span></td>
+											<td>1919</td>
+											<td>22.0</td>
+										</tr>
+										<tr>
 											<td id="592">Dundalk</td>
 											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
 											<td>Premier Division</td>
@@ -9098,6 +9164,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
 											<td>1903</td>
 											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="1300918">Finn Harps</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>7,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1954</td>
+											<td>26.9</td>
 										</tr>
 										<tr>
 											<td id="593">Galway Utd</td>
@@ -9122,6 +9199,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>22.8</td>
 										</tr>
 										<tr>
+											<td id="5100326">Longford</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>6,850</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1924</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
 											<td id="596">Shamrock Rovers</td>
 											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
 											<td>Premier Division</td>
@@ -9131,6 +9219,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
 											<td>1901</td>
 											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="597">Shelbourne</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>9,680</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1895</td>
+											<td>23.2</td>
 										</tr>
 										<tr>
 											<td id="598">Sligo Rovers</td>
@@ -9153,6 +9252,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
 											<td>1929</td>
 											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="1300920">U.C.D.</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>1895</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="120533">Waterford Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1930</td>
+											<td>20.8</td>
+										</tr>
+										<tr>
+											<td id="156640">Wexford Youths</td>
+											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2007</td>
+											<td>25.1</td>
 										</tr>
 										<tr>
 											<td id="1079">?or</td>
