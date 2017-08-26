@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php $this->load->view('overall/nav'); ?>
 	<div class="main main-raised">
 		<div class="section">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-9">
 						<div class="tim-container">
@@ -23924,8 +23924,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script>
 				$(document).ready(function() {
 					var table = 	$('.dataTable').DataTable({
-						"iDisplayLength": -1,
-						"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+						"iDisplayLength": 50,
+						"lengthMenu": [[50, 80, 100, -1], [50, 80, 100, "All"]],
 
 					});
 
