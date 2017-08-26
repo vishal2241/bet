@@ -23926,6 +23926,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					var table = 	$('.dataTable').DataTable({
 						"iDisplayLength": 50,
 						"lengthMenu": [[50, 80, 100, -1], [50, 80, 100, "All"]],
+						"order": [[ 2, 'asc' ], [ 0, 'asc' ]],
 
 					});
 
