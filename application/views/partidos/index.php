@@ -6,7 +6,7 @@
   <?php $this->load->view('overall/nav2'); ?>
   <div id="container">
     <div class="">
-      <div class="col-md-8 col-md-offset-2" >
+      <div class="col-md-10 col-md-offset-1" >
         <table  width="100%">
           <tr>
             <td>

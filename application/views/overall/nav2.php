@@ -42,6 +42,8 @@
 						<li><a href="<?= base_url(); ?>equipos">Listar</a></li>
 						<li class="divider"></li>
 						<li><a href="<?= base_url(); ?>equipos/agregar">Agregar</a></li>
+						<li class="divider"></li>
+						<li><a href="<?= base_url(); ?>equipos/fm">Logos</a></li>
 					</ul>
 				</li>
 			</ul>
