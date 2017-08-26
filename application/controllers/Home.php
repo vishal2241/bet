@@ -13,6 +13,10 @@ class Home extends CI_Controller {
 		$this->load->view('home/index');
 	} 
 
+	public function fm(){
+		$this->load->view('home/prueba');
+	} 
+
 }
 
 
