@@ -18,12 +18,7 @@ class Sync extends CI_Controller {
 	/*******************************************************/
 	/*                        API                          */
 	/*******************************************************/
-
-	/*
-	SELECT  l.NOMBRE,l.ID_EQUIPO, c.ID_PAIS FROM partido p LEFT JOIN competencia c ON(c.ID_COMPETENCIA=p.ID_COMPETENCIA) LEFT JOIN equipo l ON (p.LOCAL=l.ID_EQUIPO) WHERE c.ID_PAIS!='248' GROUP BY l.ID_EQUIPO
-
-	SELECT e.NOMBRE, p.NOMBRE FROM equipo e LEFT JOIN pais p ON (e.ID_PAIS=p.ID_PAIS) WHERE e.ID_PAIS IS 		NOT NULL  
-	ORDER BY `p`.`NOMBRE` ASC	*/
+	
 	public function syncMatches(){
 		ini_set('memory_limit','16000000M');
 		set_time_limit(0);

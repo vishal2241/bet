@@ -4,7 +4,7 @@ BET
 
 SQL:
 ```
- 
+UPDATE equipo_fm fm, equipo e SET e.IMG=fm.ID_EQUIPO WHERE fm.NOMBRE=e.NOMBRE
 ```
 
 *********
