@@ -652,6 +652,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>23.8</td>
 										</tr>
 										<tr>
+											<td id="15055151">FFA COE</td>
+											<td><img src="modules/fmsdb/img/flags/s/AUS.gif" alt="Australia">  AUS</td>
+											<td>100000363</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1981</td>
+											<td>17.0</td>
+										</tr>
+										<tr>
 											<td id="15051934">Melbourne City</td>
 											<td><img src="modules/fmsdb/img/flags/s/AUS.gif" alt="Australia">  AUS</td>
 											<td>Hyundai A-League</td>
@@ -729,6 +740,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.8</td>
 										</tr>
 										<tr>
+											<td id="16009439">AKA Burgenland</td>
+											<td><img src="modules/fmsdb/img/flags/s/AUT.gif" alt="Austria">  AUT</td>
+											<td>100000078</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#00C030"></span></td>
+											<td>0</td>
+											<td>16.0</td>
+										</tr>
+										<tr>
+											<td id="16009435">AKA St. Polten NO</td>
+											<td><img src="modules/fmsdb/img/flags/s/AUT.gif" alt="Austria">  AUT</td>
+											<td>100000078</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#1030C0"></span> <span class="label" style="background:#1030C0"></span></td>
+											<td>2000</td>
+											<td>16.1</td>
+										</tr>
+										<tr>
+											<td id="16009432">AKA Tirol</td>
+											<td><img src="modules/fmsdb/img/flags/s/AUT.gif" alt="Austria">  AUT</td>
+											<td>100000078</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>0</td>
+											<td>16.3</td>
+										</tr>
+										<tr>
+											<td id="16009433">AKA Vorarlberg</td>
+											<td><img src="modules/fmsdb/img/flags/s/AUT.gif" alt="Austria">  AUT</td>
+											<td>100000078</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>2,800</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>2003</td>
+											<td>16.1</td>
+										</tr>
+										<tr>
+											<td id="16009431">FAL Linz</td>
+											<td><img src="modules/fmsdb/img/flags/s/AUT.gif" alt="Austria">  AUT</td>
+											<td>100000078</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#205090"></span> <span class="label" style="background:#000000"></span></td>
+											<td>0</td>
+											<td>16.3</td>
+										</tr>
+										<tr>
 											<td id="5605072">FC Admira Wacker Modling</td>
 											<td><img src="modules/fmsdb/img/flags/s/AUT.gif" alt="Austria">  AUT</td>
 											<td>Premier Division</td>
@@ -738,6 +804,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
 											<td>2008</td>
 											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="137962">FC BW Linz</td>
+											<td><img src="modules/fmsdb/img/flags/s/AUT.gif" alt="Austria">  AUT</td>
+											<td>First Division</td>
+											<td>30K</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1997</td>
+											<td>24.1</td>
 										</tr>
 										<tr>
 											<td id="16123919">FC Liefering</td>
@@ -971,6 +1048,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.3</td>
 										</tr>
 										<tr>
+											<td id="298">Beerschot-Wilrijk</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>12,296</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#503098"></span></td>
+											<td>1921</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
 											<td id="184">Cercle Brugge</td>
 											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
 											<td>Pro League B</td>
@@ -1004,6 +1092,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.2</td>
 										</tr>
 										<tr>
+											<td id="539841">Coxyde</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0078F8"></span></td>
+											<td>0</td>
+											<td>21.9</td>
+										</tr>
+										<tr>
+											<td id="228">Deinze</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>30K</td>
+											<td>Semi-Professional</td>
+											<td>7,515</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F87000"></span></td>
+											<td>1926</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="188">Dessel</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,284</td>
+											<td><span class="label" style="background:#008030"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1926</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
 											<td id="194">Eupen</td>
 											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
 											<td>Pro League</td>
@@ -1013,6 +1134,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1945</td>
 											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="199">FCV Dender</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>8,157</td>
+											<td><span class="label" style="background:#003068"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1943</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="3200585">Geel</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>10,022</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1969</td>
+											<td>21.7</td>
+										</tr>
+										<tr>
+											<td id="234">Hasselt</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>8,800</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1941</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="202">Heist</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,549</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1941</td>
+											<td>25.2</td>
 										</tr>
 										<tr>
 											<td id="258">KRC Genk</td>
@@ -1114,6 +1279,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.1</td>
 										</tr>
 										<tr>
+											<td id="18008817">Oosterzonen</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F838"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>0</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="6600093">Oudenaarde</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1911</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="248">Patro Eisden</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>4,900</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#503098"></span></td>
+											<td>1942</td>
+											<td>21.8</td>
+										</tr>
+										<tr>
 											<td id="6600032">Roeselare</td>
 											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
 											<td>Pro League B</td>
@@ -1123,6 +1321,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
 											<td>1921</td>
 											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="216">Seraing Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1922</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="3200568">Sprimont</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>14K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1921</td>
+											<td>24.5</td>
 										</tr>
 										<tr>
 											<td id="250">Standard</td>
@@ -1167,6 +1387,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
 											<td>1897</td>
 											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="292">Virton</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,087</td>
+											<td><span class="label" style="background:#00C030"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1922</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="215">VW Hamme</td>
+											<td><img src="modules/fmsdb/img/flags/s/BEL.gif" alt="Belgium">  BEL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1908</td>
+											<td>23.5</td>
 										</tr>
 										<tr>
 											<td id="539089">Waasland-Beveren</td>
@@ -3699,6 +3941,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>23.6</td>
 										</tr>
 										<tr>
+											<td id="129872">Imotski</td>
+											<td><img src="modules/fmsdb/img/flags/s/CRO.gif" alt="Croatia">  CRO</td>
+											<td>Second League</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#101010"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1991</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
 											<td id="659403">Inter Zapresic</td>
 											<td><img src="modules/fmsdb/img/flags/s/CRO.gif" alt="Croatia">  CRO</td>
 											<td>First League</td>
@@ -3743,6 +3996,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>21.7</td>
 										</tr>
 										<tr>
+											<td id="24021033">Novigrad</td>
+											<td><img src="modules/fmsdb/img/flags/s/CRO.gif" alt="Croatia">  CRO</td>
+											<td>Second League</td>
+											<td>420K</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>0</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
 											<td id="440">Osijek</td>
 											<td><img src="modules/fmsdb/img/flags/s/CRO.gif" alt="Croatia">  CRO</td>
 											<td>First League</td>
@@ -3763,6 +4027,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#20B0F0"></span> <span class="label" style="background:#F8F8F8"></span></td>
 											<td>1946</td>
 											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="658353">Rudes</td>
+											<td><img src="modules/fmsdb/img/flags/s/CRO.gif" alt="Croatia">  CRO</td>
+											<td>Second League</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#901000"></span> <span class="label" style="background:#002080"></span></td>
+											<td>1957</td>
+											<td>22.9</td>
 										</tr>
 										<tr>
 											<td id="24014012">Sesvete</td>
@@ -3796,6 +4071,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#0030A0"></span></td>
 											<td>1907</td>
 											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="126423">Solin</td>
+											<td><img src="modules/fmsdb/img/flags/s/CRO.gif" alt="Croatia">  CRO</td>
+											<td>Second League</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#D0C090"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1919</td>
+											<td>22.7</td>
 										</tr>
 										<tr>
 											<td id="126424">Split</td>
@@ -4183,6 +4469,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>23.4</td>
 										</tr>
 										<tr>
+											<td id="925050">Aarhus Fremad</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1947</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="480">AB</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>13,800</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1889</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
 											<td id="481">AC Horsens</td>
 											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
 											<td>Superliga</td>
@@ -4205,6 +4513,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.3</td>
 										</tr>
 										<tr>
+											<td id="2104">Avarta</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#009878"></span></td>
+											<td>1953</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="493">B 93</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,400</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1893</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="930105">Brabrand IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#F88000"></span> <span class="label" style="background:#005098"></span></td>
+											<td>1934</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
 											<td id="496">Brondby IF</td>
 											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
 											<td>Superliga</td>
@@ -4214,6 +4555,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F838"></span></td>
 											<td>1964</td>
 											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="497">Bronshoj</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1919</td>
+											<td>22.5</td>
+										</tr>
+										<tr>
+											<td id="499">Dalum</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1931</td>
+											<td>25.5</td>
 										</tr>
 										<tr>
 											<td id="502">Esbjerg fB</td>
@@ -4236,6 +4599,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
 											<td>1991</td>
 											<td>22.6</td>
+										</tr>
+										<tr>
+											<td id="516">FC Helsingor</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>1899</td>
+											<td>24.1</td>
 										</tr>
 										<tr>
 											<td id="505">FC Kobenhavn</td>
@@ -4271,6 +4645,105 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>21.9</td>
 										</tr>
 										<tr>
+											<td id="943835">FC Roskilde</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>First Division</td>
+											<td>29K</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1906</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="557">FC Svendborg</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>7,700</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F85000"></span></td>
+											<td>1901</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="27032607">FC Sydvest</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2005</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="933929">Fredensborg</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1908</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="507">Frem</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1886</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="508">Fremad Amager</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>First Division</td>
+											<td>6K</td>
+											<td>Semi-Professional</td>
+											<td>7,200</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1910</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="2112">Greve</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>7,000</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1935</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="27035536">HB Koge</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>First Division</td>
+											<td>6K</td>
+											<td>Semi-Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2009</td>
+											<td>21.1</td>
+										</tr>
+										<tr>
+											<td id="512">HIK</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1900</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
 											<td id="930210">Hobro IK</td>
 											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
 											<td>First Division</td>
@@ -4280,6 +4753,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#F8F000"></span></td>
 											<td>1913</td>
 											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="27017889">Holb?k</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1931</td>
+											<td>22.3</td>
+										</tr>
+										<tr>
+											<td id="524">Hvidovre IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,200</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>1925</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="2116">Jammerbugt FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#00A8E8"></span> <span class="label" style="background:#00A8E8"></span></td>
+											<td>1973</td>
+											<td>22.1</td>
+										</tr>
+										<tr>
+											<td id="27010375">Kjellerup</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#0078F8"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1907</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="2121">Kolding IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>0</td>
+											<td>23.4</td>
 										</tr>
 										<tr>
 											<td id="533">Lyngby</td>
@@ -4293,6 +4821,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>27.1</td>
 										</tr>
 										<tr>
+											<td id="930181">Marienlyst</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>1,200</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1922</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="930248">Middelfart</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0078F8"></span></td>
+											<td>1964</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="541">N?sby</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1938</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="542">N?stved</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>First Division</td>
+											<td>12K</td>
+											<td>Semi-Professional</td>
+											<td>17,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008888"></span></td>
+											<td>1939</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="539">Nykobing FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>First Division</td>
+											<td>116K</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1994</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
 											<td id="545">OB</td>
 											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
 											<td>Superliga</td>
@@ -4302,6 +4885,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#2858B0"></span> <span class="label" style="background:#F8F8F8"></span></td>
 											<td>1887</td>
 											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="930256">Odder</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1899</td>
+											<td>23.6</td>
 										</tr>
 										<tr>
 											<td id="930621">Randers FC</td>
@@ -4326,6 +4920,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>23.6</td>
 										</tr>
 										<tr>
+											<td id="552">Skive IK</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>First Division</td>
+											<td>17K</td>
+											<td>Semi-Professional</td>
+											<td>5,500</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1901</td>
+											<td>22.1</td>
+										</tr>
+										<tr>
 											<td id="926867">SonderjyskE</td>
 											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
 											<td>Superliga</td>
@@ -4335,6 +4940,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#C0D0E0"></span> <span class="label" style="background:#D0E0E8"></span></td>
 											<td>1906</td>
 											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="562">Thisted FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1904</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="2141">Vejgaard</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>1,200</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>0</td>
+											<td>23.7</td>
 										</tr>
 										<tr>
 											<td id="2142">Vejle</td>
@@ -4370,6 +4997,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.0</td>
 										</tr>
 										<tr>
+											<td id="27128372">VSK Aarhus</td>
+											<td><img src="modules/fmsdb/img/flags/s/DEN.gif" alt="Denmark">  DEN</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2016</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
 											<td id="109210">Accrington</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Sky Bet League Two</td>
@@ -4392,6 +5030,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.5</td>
 										</tr>
 										<tr>
+											<td id="8604272">AFC Telford</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2004</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
 											<td id="5110769">AFC Wimbledon</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Sky Bet League One</td>
@@ -4412,6 +5061,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#2050B0"></span> <span class="label" style="background:#B80020"></span></td>
 											<td>1992</td>
 											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="5100015">Alfreton</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>10K</td>
+											<td>Semi-Professional</td>
+											<td>3,600</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1959</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="601">Altrincham</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>6,085</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00808"></span></td>
+											<td>1891</td>
+											<td>26.2</td>
 										</tr>
 										<tr>
 											<td id="602">Arsenal</td>
@@ -4469,6 +5140,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>23.7</td>
 										</tr>
 										<tr>
+											<td id="608">Bath</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>1K</td>
+											<td>Semi-Professional</td>
+											<td>8,840</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1889</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
 											<td id="609">Birmingham</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Sky Bet Championship</td>
@@ -4478,6 +5160,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#304078"></span></td>
 											<td>1875</td>
 											<td>26.9</td>
+										</tr>
+										<tr>
+											<td id="611">Bishop's Stortford</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>1K</td>
+											<td>Semi-Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#284890"></span></td>
+											<td>1874</td>
+											<td>23.6</td>
 										</tr>
 										<tr>
 											<td id="612">Blackburn</td>
@@ -4524,6 +5217,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.1</td>
 										</tr>
 										<tr>
+											<td id="615">Boston Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>6,643</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1933</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
 											<td id="600">Bournemouth</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Premier Division</td>
@@ -4535,6 +5239,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.0</td>
 										</tr>
 										<tr>
+											<td id="5100088">Brackley</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1890</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
 											<td id="616">Bradford City</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Sky Bet League One</td>
@@ -4544,6 +5259,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8A800"></span> <span class="label" style="background:#780818"></span></td>
 											<td>1903</td>
 											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="4002013">Bradford PA</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#70E088"></span></td>
+											<td>1907</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="134732">Braintree</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama National</td>
+											<td>8K</td>
+											<td>Semi-Professional</td>
+											<td>4,222</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E87028"></span></td>
+											<td>1898</td>
+											<td>24.4</td>
 										</tr>
 										<tr>
 											<td id="617">Brentford</td>
@@ -4588,6 +5325,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0060B8"></span></td>
 											<td>1883</td>
 											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="5100153">Bromley</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama National</td>
+											<td>10K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#E8E8E8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1892</td>
+											<td>27.1</td>
 										</tr>
 										<tr>
 											<td id="622">Burnley</td>
@@ -4667,6 +5415,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.1</td>
 										</tr>
 										<tr>
+											<td id="629">Chelmsford</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,016</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#800020"></span></td>
+											<td>1938</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
 											<td id="630">Chelsea</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Premier Division</td>
@@ -4711,6 +5470,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.9</td>
 										</tr>
 										<tr>
+											<td id="635">Chorley</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,100</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1883</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
 											<td id="636">Colchester</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Sky Bet League Two</td>
@@ -4720,6 +5490,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1937</td>
 											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="8325133">Concord</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,300</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1967</td>
+											<td>24.3</td>
 										</tr>
 										<tr>
 											<td id="639">Coventry</td>
@@ -4766,6 +5547,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>27.5</td>
 										</tr>
 										<tr>
+											<td id="5103697">Curzon Ashton</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,200</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1963</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
 											<td id="643">Dag &amp; Red</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Vanarama National</td>
@@ -4775,6 +5567,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1992</td>
 											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="29130446">Darlington 1883</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>5K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2011</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="5100123">Dartford</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1888</td>
+											<td>25.0</td>
 										</tr>
 										<tr>
 											<td id="645">Derby</td>
@@ -4797,6 +5611,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
 											<td>1879</td>
 											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="647">Dover</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama National</td>
+											<td>8K</td>
+											<td>Semi-Professional</td>
+											<td>6,500</td>
+											<td><span class="label" style="background:#181818"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1983</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="5103648">East Thurrock</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F0B010"></span></td>
+											<td>1969</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="5103643">Eastbourne Boro</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>1K</td>
+											<td>Semi-Professional</td>
+											<td>4,121</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#D02028"></span></td>
+											<td>1964</td>
+											<td>24.7</td>
 										</tr>
 										<tr>
 											<td id="5103760">Eastleigh</td>
@@ -4843,6 +5690,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.7</td>
 										</tr>
 										<tr>
+											<td id="90002300">FC Halifax</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>40K</td>
+											<td>Semi-Professional</td>
+											<td>14,061</td>
+											<td><span class="label" style="background:#304078"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>2008</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="8611092">FC United</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>4,238</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>2005</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
 											<td id="5103834">Fleetwood</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Sky Bet League One</td>
@@ -4876,6 +5745,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.7</td>
 										</tr>
 										<tr>
+											<td id="4001092">Gainsborough</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,304</td>
+											<td><span class="label" style="background:#2858B0"></span> <span class="label" style="background:#2858B0"></span></td>
+											<td>1873</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
 											<td id="655">Gateshead</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Vanarama National</td>
@@ -4898,6 +5778,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.9</td>
 										</tr>
 										<tr>
+											<td id="657">Gloucester</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>7,027</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E8E010"></span></td>
+											<td>1889</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="5103761">Gosport</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,500</td>
+											<td><span class="label" style="background:#083078"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1944</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
 											<td id="658">Grimsby</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Sky Bet League Two</td>
@@ -4909,6 +5811,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.2</td>
 										</tr>
 										<tr>
+											<td id="578">Guiseley</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#D8D8D0"></span> <span class="label" style="background:#F8F8F0"></span></td>
+											<td>1909</td>
+											<td>27.4</td>
+										</tr>
+										<tr>
+											<td id="5100186">Hampton &amp; Richmond</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#003068"></span></td>
+											<td>1920</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="5100047">Harrogate</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama North</td>
+											<td>6K</td>
+											<td>Semi-Professional</td>
+											<td>3,800</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1919</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
 											<td id="661">Hartlepool</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Sky Bet League Two</td>
@@ -4918,6 +5853,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1908</td>
 											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="5100225">Hemel Hempstead</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>3,152</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1885</td>
+											<td>25.8</td>
 										</tr>
 										<tr>
 											<td id="664">Huddersfield</td>
@@ -4940,6 +5886,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8A800"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1904</td>
 											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="5103652">Hungerford</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>1K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1886</td>
+											<td>26.6</td>
 										</tr>
 										<tr>
 											<td id="667">Ipswich</td>
@@ -5041,6 +5998,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.7</td>
 										</tr>
 										<tr>
+											<td id="5100192">Maidenhead</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>1K</td>
+											<td>Semi-Professional</td>
+											<td>4,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1870</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="8325049">Maidstone</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama National</td>
+											<td>10K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8A808"></span></td>
+											<td>1992</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
 											<td id="679">Man City</td>
 											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
 											<td>Premier Division</td>
@@ -5072,6 +6051,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1897</td>
 											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="5100134">Margate</td>
+											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
+											<td>Vanarama South</td>
+											<td>5K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#3860D0"></span></td>
+											<td>1896</td>
+											<td>24.5</td>
 										</tr>
 										<tr>
 											<td id="685">Middlesbrough</td>
@@ -5118,358 +6108,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.1</td>
 										</tr>
 										<tr>
-											<td id="688">Newcastle</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet Championship</td>
-											<td>5M</td>
-											<td>Professional</td>
-											<td>52,404</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1892</td>
-											<td>25.3</td>
-										</tr>
-										<tr>
-											<td id="581">Newport Co</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League Two</td>
-											<td>20K</td>
-											<td>Professional</td>
-											<td>11,676</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8A800"></span></td>
-											<td>1989</td>
-											<td>24.0</td>
-										</tr>
-										<tr>
-											<td id="689">Northampton</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>7,798</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#702030"></span></td>
-											<td>1897</td>
-											<td>26.2</td>
-										</tr>
-										<tr>
-											<td id="691">Norwich</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet Championship</td>
-											<td>10M</td>
-											<td>Professional</td>
-											<td>27,244</td>
-											<td><span class="label" style="background:#007860"></span> <span class="label" style="background:#F8F838"></span></td>
-											<td>1902</td>
-											<td>27.7</td>
-										</tr>
-										<tr>
-											<td id="692">Nottm Forest</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet Championship</td>
-											<td>500K</td>
-											<td>Professional</td>
-											<td>30,576</td>
-											<td><span class="label" style="background:#B02030"></span> <span class="label" style="background:#C01810"></span></td>
-											<td>1865</td>
-											<td>26.8</td>
-										</tr>
-										<tr>
-											<td id="693">Notts Co</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League Two</td>
-											<td>75K</td>
-											<td>Professional</td>
-											<td>20,300</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1862</td>
-											<td>26.7</td>
-										</tr>
-										<tr>
-											<td id="94001831">Nuneaton</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Vanarama North</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>4,714</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
-											<td>2008</td>
-											<td>21.1</td>
-										</tr>
-										<tr>
-											<td id="694">Oldham</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>13,488</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#2850B0"></span></td>
-											<td>1895</td>
-											<td>24.5</td>
-										</tr>
-										<tr>
-											<td id="695">Oxford</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>12,205</td>
-											<td><span class="label" style="background:#202838"></span> <span class="label" style="background:#F8E020"></span></td>
-											<td>1893</td>
-											<td>24.0</td>
-										</tr>
-										<tr>
-											<td id="696">Peterborough</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>400K</td>
-											<td>Professional</td>
-											<td>14,084</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#2850A0"></span></td>
-											<td>1934</td>
-											<td>23.0</td>
-										</tr>
-										<tr>
-											<td id="697">Plymouth</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League Two</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>16,388</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1886</td>
-											<td>24.8</td>
-										</tr>
-										<tr>
-											<td id="698">Port Vale</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>67K</td>
-											<td>Professional</td>
-											<td>19,148</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1876</td>
-											<td>25.2</td>
-										</tr>
-										<tr>
-											<td id="699">Portsmouth</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League Two</td>
-											<td>150K</td>
-											<td>Professional</td>
-											<td>18,931</td>
-											<td><span class="label" style="background:#F0F0F0"></span> <span class="label" style="background:#003880"></span></td>
-											<td>1898</td>
-											<td>25.7</td>
-										</tr>
-										<tr>
-											<td id="700">Preston</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet Championship</td>
-											<td>500K</td>
-											<td>Professional</td>
-											<td>23,404</td>
-											<td><span class="label" style="background:#082040"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1880</td>
-											<td>26.6</td>
-										</tr>
-										<tr>
-											<td id="701">QPR</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet Championship</td>
-											<td>1M</td>
-											<td>Professional</td>
-											<td>18,224</td>
-											<td><span class="label" style="background:#0028A8"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1882</td>
-											<td>25.6</td>
-										</tr>
-										<tr>
-											<td id="702">Reading</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet Championship</td>
-											<td>3M</td>
-											<td>Professional</td>
-											<td>24,197</td>
-											<td><span class="label" style="background:#104098"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1871</td>
-											<td>25.3</td>
-										</tr>
-										<tr>
-											<td id="703">Rochdale</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>40K</td>
-											<td>Professional</td>
-											<td>10,208</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1907</td>
-											<td>24.9</td>
-										</tr>
-										<tr>
-											<td id="704">Rotherham</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet Championship</td>
-											<td>250K</td>
-											<td>Professional</td>
-											<td>12,053</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#B00810"></span></td>
-											<td>1884</td>
-											<td>25.8</td>
-										</tr>
-										<tr>
-											<td id="707">Scunthorpe</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>100K</td>
-											<td>Professional</td>
-											<td>9,144</td>
-											<td><span class="label" style="background:#A01010"></span> <span class="label" style="background:#2080C0"></span></td>
-											<td>1899</td>
-											<td>24.7</td>
-										</tr>
-										<tr>
-											<td id="708">Sheff Utd</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>300K</td>
-											<td>Professional</td>
-											<td>32,609</td>
-											<td><span class="label" style="background:#A82030"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1889</td>
-											<td>24.9</td>
-										</tr>
-										<tr>
-											<td id="709">Sheff Wed</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet Championship</td>
-											<td>2M</td>
-											<td>Professional</td>
-											<td>39,812</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
-											<td>1867</td>
-											<td>27.0</td>
-										</tr>
-										<tr>
-											<td id="710">Shrewsbury</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>20K</td>
-											<td>Professional</td>
-											<td>9,875</td>
-											<td><span class="label" style="background:#F8B030"></span> <span class="label" style="background:#0058A8"></span></td>
-											<td>1886</td>
-											<td>26.0</td>
-										</tr>
-										<tr>
-											<td id="713">Southampton</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Premier Division</td>
-											<td>31M</td>
-											<td>Professional</td>
-											<td>32,505</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#C80000"></span></td>
-											<td>1885</td>
-											<td>25.1</td>
-										</tr>
-										<tr>
-											<td id="714">Southend</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>75K</td>
-											<td>Professional</td>
-											<td>12,163</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#081030"></span></td>
-											<td>1906</td>
-											<td>26.4</td>
-										</tr>
-										<tr>
-											<td id="719">Stevenage</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League Two</td>
-											<td>10K</td>
-											<td>Professional</td>
-											<td>6,722</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1976</td>
-											<td>25.8</td>
-										</tr>
-										<tr>
-											<td id="721">Stoke</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Premier Division</td>
-											<td>10M</td>
-											<td>Professional</td>
-											<td>28,384</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1863</td>
-											<td>27.0</td>
-										</tr>
-										<tr>
-											<td id="722">Sunderland</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Premier Division</td>
-											<td>12M</td>
-											<td>Professional</td>
-											<td>48,707</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#C81018"></span></td>
-											<td>1879</td>
-											<td>25.9</td>
-										</tr>
-										<tr>
-											<td id="723">Sutton Utd</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Vanarama National</td>
-											<td>5K</td>
-											<td>Professional</td>
-											<td>5,013</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1898</td>
-											<td>28.7</td>
-										</tr>
-										<tr>
-											<td id="724">Swansea</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Premier Division</td>
-											<td>24M</td>
-											<td>Professional</td>
-											<td>20,750</td>
-											<td><span class="label" style="background:#303030"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1912</td>
-											<td>26.2</td>
-										</tr>
-										<tr>
-											<td id="725">Swindon</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Sky Bet League One</td>
-											<td>150K</td>
-											<td>Professional</td>
-											<td>15,547</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00818"></span></td>
-											<td>1879</td>
-											<td>22.0</td>
-										</tr>
-										<tr>
-											<td id="727">Torquay</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Vanarama National</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>6,200</td>
-											<td><span class="label" style="background:#2068B0"></span> <span class="label" style="background:#F0E020"></span></td>
-											<td>1899</td>
-											<td>23.8</td>
-										</tr>
-										<tr>
-											<td id="728">Tottenham</td>
-											<td><img src="modules/fmsdb/img/flags/s/ENG.gif" alt="England">  ENG</td>
-											<td>Premier Division</td>
-											<td>50M</td>
-											<td>Professional</td>
-											<td>32,241</td>
-											<td><span class="label" style="background:#001040"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1882</td>
-											<td>23.8</td>
-										</tr>
-										<tr>
 											<td id="810130">A. Baleares</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>Second Division B3</td>
@@ -5512,6 +6150,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1903</td>
 											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="67118675">A. Sagunto</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B3</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1922</td>
+											<td>25.2</td>
 										</tr>
 										<tr>
 											<td id="1688">Alaves</td>
@@ -5580,6 +6229,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.8</td>
 										</tr>
 										<tr>
+											<td id="814437">Arandina</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B1</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0078F8"></span></td>
+											<td>1987</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
 											<td id="1685">Atletico Pamplona</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>First Division</td>
@@ -5644,6 +6304,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#D02028"></span> <span class="label" style="background:#204080"></span></td>
 											<td>1970</td>
 											<td>20.1</td>
+										</tr>
+										<tr>
+											<td id="67105751">Boiro</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B1</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>0</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1966</td>
+											<td>26.1</td>
 										</tr>
 										<tr>
 											<td id="4200566">Burgos</td>
@@ -5811,6 +6482,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>19.3</td>
 										</tr>
 										<tr>
+											<td id="67096539">Extremadura</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B4</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>2007</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
 											<td id="1727">Ferrol</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>Second Division B1</td>
@@ -5833,6 +6515,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>27.0</td>
 										</tr>
 										<tr>
+											<td id="109031">Gava</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B3</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,500</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#901000"></span></td>
+											<td>1921</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="109009">Gernika</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B2</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1922</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
 											<td id="1710">Getafe</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>Second Division</td>
@@ -5842,6 +6546,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#2068B0"></span></td>
 											<td>1983</td>
 											<td>27.9</td>
+										</tr>
+										<tr>
+											<td id="102029">Getxo</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B2</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,200</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1909</td>
+											<td>27.8</td>
 										</tr>
 										<tr>
 											<td id="814089">Girona</td>
@@ -5932,6 +6647,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.6</td>
 										</tr>
 										<tr>
+											<td id="4212275">Izarra</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B1</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1924</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
 											<td id="67156328">Jumilla</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>Second Division B4</td>
@@ -5965,6 +6691,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>27.0</td>
 										</tr>
 										<tr>
+											<td id="109003">Lealtad</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B1</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1919</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
 											<td id="1678">Leganes</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>First Division</td>
@@ -5974,6 +6711,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
 											<td>1928</td>
 											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="67059945">Leioa</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B2</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#D02028"></span></td>
+											<td>1948</td>
+											<td>23.9</td>
 										</tr>
 										<tr>
 											<td id="2093">Leonesa</td>
@@ -6119,6 +6867,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>20.1</td>
 										</tr>
 										<tr>
+											<td id="7446375">Mancha Real</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B4</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#00A030"></span></td>
+											<td>1984</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
 											<td id="1684">Marbella</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>Second Division B4</td>
@@ -6139,6 +6898,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0078F8"></span></td>
 											<td>1976</td>
 											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="1697">Mensajero</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B2</td>
+											<td>7K</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F00000"></span></td>
+											<td>1922</td>
+											<td>26.8</td>
+										</tr>
+										<tr>
+											<td id="4212284">Merida</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B4</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>14,600</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1990</td>
+											<td>24.3</td>
 										</tr>
 										<tr>
 											<td id="109001">Mieres Deportivo</td>
@@ -6174,6 +6955,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.6</td>
 										</tr>
 										<tr>
+											<td id="7446432">Mutilvera</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B1</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1914</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="814350">Navalcarnero</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B2</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1953</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
 											<td id="1699">Numantia</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>Second Division</td>
@@ -6193,6 +6996,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>30,000</td>
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#0078F8"></span></td>
 											<td>1926</td>
+											<td>28.0</td>
+										</tr>
+										<tr>
+											<td id="67204085">Palencia</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B1</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>8,078</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#7868C0"></span></td>
+											<td>2011</td>
 											<td>28.0</td>
 										</tr>
 										<tr>
@@ -6216,6 +7030,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#800040"></span> <span class="label" style="background:#800040"></span></td>
 											<td>1941</td>
 											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="7442999">Prat</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B3</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1945</td>
+											<td>26.5</td>
 										</tr>
 										<tr>
 											<td id="2095">R. Jaen</td>
@@ -6249,6 +7074,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#C0C0C0"></span> <span class="label" style="background:#F8F8F8"></span></td>
 											<td>1972</td>
 											<td>19.7</td>
+										</tr>
+										<tr>
+											<td id="4212228">R. Majadahonda</td>
+											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
+											<td>Second Division B2</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,865</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1976</td>
+											<td>26.7</td>
 										</tr>
 										<tr>
 											<td id="1728">R. Santander</td>
@@ -6350,224 +7186,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.0</td>
 										</tr>
 										<tr>
-											<td id="6706369">Sestao</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division B2</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>7,000</td>
-											<td><span class="label" style="background:#209068"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1996</td>
-											<td>24.5</td>
-										</tr>
-										<tr>
-											<td id="1759">Sevilla</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>First Division</td>
-											<td>3M</td>
-											<td>Professional</td>
-											<td>45,500</td>
-											<td><span class="label" style="background:#E00808"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1890</td>
-											<td>26.2</td>
-										</tr>
-										<tr>
-											<td id="4202262">Sevilla B</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>5,100</td>
-											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1958</td>
-											<td>20.0</td>
-										</tr>
-										<tr>
-											<td id="814957">Socuellamos</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division B2</td>
-											<td>6K</td>
-											<td>Professional</td>
-											<td>2,000</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
-											<td>1940</td>
-											<td>27.3</td>
-										</tr>
-										<tr>
-											<td id="4203006">Tarragona</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>16,600</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
-											<td>1914</td>
-											<td>26.2</td>
-										</tr>
-										<tr>
-											<td id="1680">Tenerife</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division</td>
-											<td>345K</td>
-											<td>Professional</td>
-											<td>23,660</td>
-											<td><span class="label" style="background:#0078F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1922</td>
-											<td>26.0</td>
-										</tr>
-										<tr>
-											<td id="1671">Toledo</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division B2</td>
-											<td>8K</td>
-											<td>Professional</td>
-											<td>5,500</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#106840"></span></td>
-											<td>1928</td>
-											<td>25.7</td>
-										</tr>
-										<tr>
-											<td id="4212419">Tudelano</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division B1</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>11,000</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1935</td>
-											<td>28.0</td>
-										</tr>
-										<tr>
-											<td id="67152828">U. Murcia</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division</td>
-											<td>12K</td>
-											<td>Professional</td>
-											<td>16,823</td>
-											<td><span class="label" style="background:#D8B028"></span> <span class="label" style="background:#002060"></span></td>
-											<td>1999</td>
-											<td>28.2</td>
-										</tr>
-										<tr>
-											<td id="1775">Valencia</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>First Division</td>
-											<td>13M</td>
-											<td>Professional</td>
-											<td>55,000</td>
-											<td><span class="label" style="background:#E87800"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1919</td>
-											<td>25.0</td>
-										</tr>
-										<tr>
-											<td id="1776">Valencia B</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division B3</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>4,000</td>
-											<td><span class="label" style="background:#E87800"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1919</td>
-											<td>20.0</td>
-										</tr>
-										<tr>
-											<td id="1747">Valladolid</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>26,512</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1928</td>
-											<td>25.4</td>
-										</tr>
-										<tr>
-											<td id="4200575">Valladolid B</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division B1</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>500</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
-											<td>1972</td>
-											<td>20.3</td>
-										</tr>
-										<tr>
-											<td id="1729">Vallecano</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>14,708</td>
-											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1924</td>
-											<td>28.4</td>
-										</tr>
-										<tr>
-											<td id="1724">Vigo</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>First Division</td>
-											<td>3M</td>
-											<td>Professional</td>
-											<td>31,800</td>
-											<td><span class="label" style="background:#5078D8"></span> <span class="label" style="background:#98B8D0"></span></td>
-											<td>1923</td>
-											<td>25.2</td>
-										</tr>
-										<tr>
-											<td id="2092">Vigo B</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division B1</td>
-											<td>0</td>
-											<td>Professional</td>
-											<td>4,500</td>
-											<td><span class="label" style="background:#5078D8"></span> <span class="label" style="background:#98B8D8"></span></td>
-											<td>1989</td>
-											<td>20.2</td>
-										</tr>
-										<tr>
-											<td id="6706364">Villanovense</td>
+											<td id="4212406">Sanluqueno</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
 											<td>Second Division B4</td>
 											<td>0</td>
-											<td>Professional</td>
+											<td>Semi-Professional</td>
 											<td>5,000</td>
-											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#48A068"></span></td>
-											<td>1992</td>
-											<td>26.0</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#08C848"></span></td>
+											<td>1948</td>
+											<td>24.6</td>
 										</tr>
 										<tr>
-											<td id="1777">Villarreal</td>
+											<td id="4200483">Sanse</td>
 											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>First Division</td>
-											<td>3M</td>
-											<td>Professional</td>
-											<td>25,000</td>
-											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8E818"></span></td>
-											<td>1923</td>
-											<td>26.1</td>
-										</tr>
-										<tr>
-											<td id="7452072">Villarreal B</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division B3</td>
-											<td>7K</td>
-											<td>Professional</td>
-											<td>1,500</td>
-											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#F8F000"></span></td>
-											<td>1999</td>
-											<td>21.0</td>
-										</tr>
-										<tr>
-											<td id="1749">Zaragoza</td>
-											<td><img src="modules/fmsdb/img/flags/s/ESP.gif" alt="Spain">  ESP</td>
-											<td>Second Division</td>
+											<td>Second Division B2</td>
 											<td>0</td>
-											<td>Professional</td>
-											<td>34,700</td>
-											<td><span class="label" style="background:#E8E8E8"></span> <span class="label" style="background:#F8F8F8"></span></td>
-											<td>1932</td>
-											<td>25.8</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1971</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="521643">AC Oulu</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>4,392</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#002060"></span></td>
+											<td>2002</td>
+											<td>22.5</td>
+										</tr>
+										<tr>
+											<td id="514046">Ekenas IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,900</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008888"></span></td>
+											<td>1905</td>
+											<td>24.6</td>
 										</tr>
 										<tr>
 											<td id="1300378">FC Inter</td>
@@ -6581,6 +7241,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>27.4</td>
 										</tr>
 										<tr>
+											<td id="33004788">FC Jazz</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>12,300</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>2002</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
 											<td id="811">FC Lahti</td>
 											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
 											<td>Premier League</td>
@@ -6590,6 +7261,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1996</td>
 											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="513325">GrIFK</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,100</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1925</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="817">Haka</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>3,200</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1934</td>
+											<td>22.5</td>
+										</tr>
+										<tr>
+											<td id="129129">HIFK</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>Premier League</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>10,770</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1897</td>
+											<td>28.1</td>
 										</tr>
 										<tr>
 											<td id="816">HJK</td>
@@ -6625,6 +7329,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.1</td>
 										</tr>
 										<tr>
+											<td id="813">Jaro</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,611</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1965</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="129191">JJK</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>4,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#880828"></span></td>
+											<td>1992</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="129208">KPV</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1930</td>
+											<td>27.6</td>
+										</tr>
+										<tr>
+											<td id="521105">KTP</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>4,252</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1927</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
 											<td id="818">KuPS</td>
 											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
 											<td>Premier League</td>
@@ -6634,6 +7382,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
 											<td>1923</td>
 											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="510218">PK-35 Vantaa</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>Premier League</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>4,600</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1935</td>
+											<td>21.1</td>
+										</tr>
+										<tr>
+											<td id="129159">PS Kemi</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>Premier League</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>1,200</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1999</td>
+											<td>24.8</td>
 										</tr>
 										<tr>
 											<td id="821">RoPS</td>
@@ -6658,6 +7428,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.4</td>
 										</tr>
 										<tr>
+											<td id="822">TPS</td>
+											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
+											<td>First Division</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>730</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1922</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
 											<td id="1300376">VPS</td>
 											<td><img src="modules/fmsdb/img/flags/s/FIN.gif" alt="Finland">  FIN</td>
 											<td>Premier League</td>
@@ -6667,6 +7448,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1924</td>
 											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="85012713">A.S Beziers</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2007</td>
+											<td>24.8</td>
 										</tr>
 										<tr>
 											<td id="400362">AC Ajaccio</td>
@@ -6746,6 +7538,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.2</td>
 										</tr>
 										<tr>
+											<td id="8162173">ASM Belfort</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#083078"></span></td>
+											<td>1971</td>
+											<td>27.0</td>
+										</tr>
+										<tr>
 											<td id="1980">Bourg-en-Bresse 01</td>
 											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
 											<td>Domino's Ligue 2</td>
@@ -6755,6 +7558,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
 											<td>1942</td>
 											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="6201842">CA Bastia</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,300</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1920</td>
+											<td>24.6</td>
 										</tr>
 										<tr>
 											<td id="838">Chamois Niortais FC</td>
@@ -6777,6 +7591,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#003068"></span> <span class="label" style="background:#A01048"></span></td>
 											<td>1990</td>
 											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="880">CS Sedan Ardennes</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>24,389</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1919</td>
+											<td>25.3</td>
 										</tr>
 										<tr>
 											<td id="839">Dijon FCO</td>
@@ -6810,6 +7635,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#082040"></span> <span class="label" style="background:#0030A0"></span></td>
 											<td>1986</td>
 											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="85066817">FC Chambly-Oise</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>49K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#002080"></span></td>
+											<td>1989</td>
+											<td>26.9</td>
 										</tr>
 										<tr>
 											<td id="2005">FC Lorient</td>
@@ -6878,6 +7714,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.7</td>
 										</tr>
 										<tr>
+											<td id="34003361">Groupe Sportif Consolat</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,990</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1964</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
 											<td id="856">Havre Athletic Club</td>
 											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
 											<td>Domino's Ligue 2</td>
@@ -6909,6 +7756,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
 											<td>1944</td>
 											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="400984">Lyon-Duchere AS</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>5,438</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8E848"></span></td>
+											<td>1963</td>
+											<td>27.4</td>
 										</tr>
 										<tr>
 											<td id="859">Montpellier HSC</td>
@@ -6988,6 +7846,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.1</td>
 										</tr>
 										<tr>
+											<td id="2090">Pau FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>50K</td>
+											<td>Semi-Professional</td>
+											<td>14,500</td>
+											<td><span class="label" style="background:#F8F800"></span> <span class="label" style="background:#501080"></span></td>
+											<td>1959</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="50034825">Quevilly Rouen Metropole</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>11,037</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2015</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
 											<td id="871">Racing Club de Lens</td>
 											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
 											<td>Domino's Ligue 2</td>
@@ -7019,6 +7899,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#004030"></span></td>
 											<td>1897</td>
 											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="881">SAS Epinal</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>7,200</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1941</td>
+											<td>25.6</td>
 										</tr>
 										<tr>
 											<td id="876">SC Bastia</td>
@@ -7109,6 +8000,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>24.2</td>
 										</tr>
 										<tr>
+											<td id="2068">US Avranches</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1897</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="3501956">US Concarneau</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>37K</td>
+											<td>Semi-Professional</td>
+											<td>6,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1911</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
 											<td id="2069">US Creteil-Lusitanos</td>
 											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
 											<td>National</td>
@@ -7131,6 +8044,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>28.3</td>
 										</tr>
 										<tr>
+											<td id="2002">USBCO</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>15,204</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00808"></span></td>
+											<td>1898</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="2072">USL Dunkerque</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,200</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1954</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
 											<td id="888">Valenciennes FC</td>
 											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
 											<td>Domino's Ligue 2</td>
@@ -7140,6 +8075,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#A00820"></span> <span class="label" style="background:#E00000"></span></td>
 											<td>1913</td>
 											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="6201846">Vendee Herbiers Football</td>
+											<td><img src="modules/fmsdb/img/flags/s/FRA.gif" alt="France">  FRA</td>
+											<td>National</td>
+											<td>57K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1949</td>
+											<td>25.8</td>
 										</tr>
 										<tr>
 											<td id="121219">Aalen</td>
@@ -8638,6 +9584,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>27.3</td>
 										</tr>
 										<tr>
+											<td id="41005061">Persatu</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>6K</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1975</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
+											<td id="41024320">Persbul</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>25K</td>
+											<td>Semi-Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#008030"></span></td>
+											<td>0</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="41039130">Persebo</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>14K</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>0</td>
+											<td>27.4</td>
+										</tr>
+										<tr>
 											<td id="7748401">Persekam</td>
 											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
 											<td>Premier Division</td>
@@ -8647,6 +9626,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E8E060"></span></td>
 											<td>0</td>
 											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="41042736">Persekap</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>15K</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1926</td>
+											<td>26.2</td>
 										</tr>
 										<tr>
 											<td id="7741454">Persela</td>
@@ -8669,6 +9659,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
 											<td>1970</td>
 											<td>29.4</td>
+										</tr>
+										<tr>
+											<td id="5622859">Perserang</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>7K</td>
+											<td>Semi-Professional</td>
+											<td>15,800</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>1958</td>
+											<td>26.2</td>
 										</tr>
 										<tr>
 											<td id="41021353">Perseru</td>
@@ -8726,6 +9727,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>26.8</td>
 										</tr>
 										<tr>
+											<td id="41024313">Persibangga</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>12K</td>
+											<td>Semi-Professional</td>
+											<td>20,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>0</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="7746529">Persibat</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>5K</td>
+											<td>Semi-Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1974</td>
+											<td>29.2</td>
+										</tr>
+										<tr>
+											<td id="7742856">Persigo</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>8K</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#B00000"></span></td>
+											<td>0</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
 											<td id="41001020">Persigubin</td>
 											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
 											<td>Premier Division</td>
@@ -8770,6 +9804,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>31.4</td>
 										</tr>
 										<tr>
+											<td id="41001013">Persika</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>11K</td>
+											<td>Semi-Professional</td>
+											<td>25,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1951</td>
+											<td>28.4</td>
+										</tr>
+										<tr>
 											<td id="5622748">Persikabo</td>
 											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
 											<td>Premier Division</td>
@@ -8779,6 +9824,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#008030"></span></td>
 											<td>1972</td>
 											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="7740896">Persikad</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1990</td>
+											<td>28.0</td>
+										</tr>
+										<tr>
+											<td id="41042733">Persinga</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1958</td>
+											<td>27.6</td>
+										</tr>
+										<tr>
+											<td id="41024316">Persip</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>25,000</td>
+											<td><span class="label" style="background:#008030"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1972</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="7746530">Persipur</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>6K</td>
+											<td>Semi-Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1969</td>
+											<td>28.7</td>
 										</tr>
 										<tr>
 											<td id="135515">Persipura</td>
@@ -8836,6 +9925,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.2</td>
 										</tr>
 										<tr>
+											<td id="41049344">Perssu</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#00A030"></span></td>
+											<td>1977</td>
+											<td>27.4</td>
+										</tr>
+										<tr>
+											<td id="7743260">PPSM</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>3K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F86000"></span></td>
+											<td>0</td>
+											<td>28.5</td>
+										</tr>
+										<tr>
 											<td id="41021346">PS Bangka</td>
 											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
 											<td>Premier Division</td>
@@ -8845,6 +9956,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F86000"></span> <span class="label" style="background:#60C0F8"></span></td>
 											<td>1970</td>
 											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="7746746">PS Bengkulu</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>30K</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8D000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>0</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="41005036">PSBI</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>10K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#1030F0"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1928</td>
+											<td>28.2</td>
+										</tr>
+										<tr>
+											<td id="41005058">PSBK</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>2006</td>
+											<td>27.6</td>
+										</tr>
+										<tr>
+											<td id="5622872">PSBL Langsa</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>20K</td>
+											<td>Semi-Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0010D8"></span></td>
+											<td>0</td>
+											<td>28.1</td>
 										</tr>
 										<tr>
 											<td id="41010810">PSCS</td>
@@ -8878,6 +10033,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#1860F8"></span></td>
 											<td>1930</td>
 											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="7746766">PSIR</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>5K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F87000"></span></td>
+											<td>0</td>
+											<td>26.5</td>
 										</tr>
 										<tr>
 											<td id="135497">PSIS</td>
@@ -8946,6 +10112,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>25.9</td>
 										</tr>
 										<tr>
+											<td id="41001018">Sidoarjo United</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>8K</td>
+											<td>Semi-Professional</td>
+											<td>35,000</td>
+											<td><span class="label" style="background:#60C0F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1973</td>
+											<td>30.8</td>
+										</tr>
+										<tr>
 											<td id="5622744">Sriwijaya FC</td>
 											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
 											<td>Super League</td>
@@ -8955,6 +10132,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td><span class="label" style="background:#C82030"></span> <span class="label" style="background:#F0E020"></span></td>
 											<td>1976</td>
 											<td>27.8</td>
+										</tr>
+										<tr>
+											<td id="41024314">Sumbawa Barat</td>
+											<td><img src="modules/fmsdb/img/flags/s/IDN.gif" alt="Indonesia">  IDN</td>
+											<td>Premier Division</td>
+											<td>6K</td>
+											<td>Semi-Professional</td>
+											<td>45,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1976</td>
+											<td>26.7</td>
 										</tr>
 										<tr>
 											<td id="41006729">Yahukimo FC</td>
@@ -8967,6 +10155,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>2006</td>
 											<td>24.8</td>
 										</tr>
+										<tr>
+											<td class="coltop">Name</td>
+											<td class="coltop">Nation</td>
+											<td class="coltop">Division</td>
+											<td class="coltop">Transfer Budget</td>
+											<td class="coltop">Status</td>
+											<td class="coltop">Stadium Capacity</td>
+											<td class="coltop">Colors</td>
+											<td class="coltop">Founded</td>
+											<td class="coltop">Average Age</td>
+										</tr>
+									</thead>
+									<tbody>
 										<tr>
 											<td id="40024212">Bengaluru FC</td>
 											<td><img src="modules/fmsdb/img/flags/s/IND.gif" alt="India">  IND</td>
@@ -9066,6 +10267,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>1987</td>
 											<td>22.8</td>
 										</tr>
+
+
+
 										<tr>
 											<td id="587">Athlone Town</td>
 											<td><img src="modules/fmsdb/img/flags/s/IRL.gif" alt="Ireland">  IRL</td>
