@@ -10155,19 +10155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>2006</td>
 											<td>24.8</td>
 										</tr>
-										<tr>
-											<td class="coltop">Name</td>
-											<td class="coltop">Nation</td>
-											<td class="coltop">Division</td>
-											<td class="coltop">Transfer Budget</td>
-											<td class="coltop">Status</td>
-											<td class="coltop">Stadium Capacity</td>
-											<td class="coltop">Colors</td>
-											<td class="coltop">Founded</td>
-											<td class="coltop">Average Age</td>
-										</tr>
-									</thead>
-									<tbody>
+
 										<tr>
 											<td id="40024212">Bengaluru FC</td>
 											<td><img src="modules/fmsdb/img/flags/s/IND.gif" alt="India">  IND</td>
