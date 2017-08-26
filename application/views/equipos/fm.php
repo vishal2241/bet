@@ -23904,7 +23904,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					var table = 	$('.dataTable').DataTable({
 						dom: 'Bfrtip',
 						buttons: [
-						'excel'
+						'csv', 'excel', 'pdf', 'print'
 						],
 						"iDisplayLength": 50,
 						"lengthMenu": [[50, 80, 100, -1], [50, 80, 100, "All"]],

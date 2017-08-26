@@ -227,6 +227,7 @@ class Sync extends CI_Controller {
 				);
 
 		} else {
+			header("Location:" . base_url(). "paises");
 			$data = array(
 				'sync' => null
 				);

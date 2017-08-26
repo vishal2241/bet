@@ -23,8 +23,10 @@ class Request extends CI_Model
 			$request = Requests::post($url,$headers,$options);
 			$request->body=json_decode($request->body, true);
 			$result = array_merge($result, $request->body);
+			
 		}
 		return $result;
+
 		#return $request->body;
 
 	}
