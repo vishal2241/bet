@@ -13400,6 +13400,7156 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<td>1964</td>
 											<td>27.1</td>
 										</tr>
+										<tr>
+											<td id="129580">Arka</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>30K</td>
+											<td>Professional</td>
+											<td>15,139</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1929</td>
+											<td>27.1</td>
+										</tr>
+										<tr>
+											<td id="96000060">Bruk-Bet Termalica</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>60K</td>
+											<td>Professional</td>
+											<td>4,660</td>
+											<td><span class="label" style="background:#F87000"></span> <span class="label" style="background:#F87000"></span></td>
+											<td>1922</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="96023087">Bytovia</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>20K</td>
+											<td>Professional</td>
+											<td>2,043</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1946</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="96012108">Chojniczanka</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#B00000"></span></td>
+											<td>1930</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="717313">Chrobry</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>30K</td>
+											<td>Professional</td>
+											<td>2,817</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F88000"></span></td>
+											<td>1946</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="129583">Cracovia</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>401K</td>
+											<td>Professional</td>
+											<td>15,016</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1906</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="1451">GKS Katowice</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>72K</td>
+											<td>Professional</td>
+											<td>6,710</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1964</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="54003060">GKS Tychy</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>29K</td>
+											<td>Professional</td>
+											<td>15,150</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1971</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="129565">Gornik</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>20K</td>
+											<td>Professional</td>
+											<td>15,500</td>
+											<td><span class="label" style="background:#101010"></span> <span class="label" style="background:#08C848"></span></td>
+											<td>1979</td>
+											<td>28.5</td>
+										</tr>
+										<tr>
+											<td id="1452">Gornik Zabrze</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>22,400</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1948</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="96006550">Gwarek</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>100000230</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>250</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F00000"></span></td>
+											<td>1974</td>
+											<td>19.7</td>
+										</tr>
+										<tr>
+											<td id="710052">Jagiellonia</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>502K</td>
+											<td>Professional</td>
+											<td>22,386</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1920</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="1469">KGHM Zaglebie</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>401K</td>
+											<td>Professional</td>
+											<td>16,068</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F84000"></span></td>
+											<td>1946</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="129577">Korona</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>10K</td>
+											<td>Professional</td>
+											<td>15,550</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1973</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="1455">Lech</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>301K</td>
+											<td>Professional</td>
+											<td>43,269</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1922</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="715912">Lechia</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>602K</td>
+											<td>Professional</td>
+											<td>41,620</td>
+											<td><span class="label" style="background:#00A030"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1945</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="1456">Legia</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>1M</td>
+											<td>Professional</td>
+											<td>30,967</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1916</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="710017">Miedz</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>6,194</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1971</td>
+											<td>27.6</td>
+										</tr>
+										<tr>
+											<td id="54007052">MKS Kluczbork</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,586</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2003</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="54015271">Olimpia Grudziadz</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>10K</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#48A068"></span></td>
+											<td>1923</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="714209">Piast</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>201K</td>
+											<td>Professional</td>
+											<td>10,037</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1945</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="1458">Plock</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>20K</td>
+											<td>Professional</td>
+											<td>10,978</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1947</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="714200">Podbeskidzie</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>20K</td>
+											<td>Professional</td>
+											<td>15,292</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1995</td>
+											<td>27.1</td>
+										</tr>
+										<tr>
+											<td id="1459">Pogon</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>100K</td>
+											<td>Professional</td>
+											<td>18,027</td>
+											<td><span class="label" style="background:#880818"></span> <span class="label" style="background:#001040"></span></td>
+											<td>1948</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="96020194">Pogon Siedlce</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>6K</td>
+											<td>Professional</td>
+											<td>2,900</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1944</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="1462">Ruch</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>20K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0010D8"></span></td>
+											<td>1920</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="714230">Sandecja</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,472</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1910</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="1300885">Slask</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>80K</td>
+											<td>Professional</td>
+											<td>44,308</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1947</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="54007042">SMS Lodz</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>100000232</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1999</td>
+											<td>20.0</td>
+										</tr>
+										<tr>
+											<td id="715911">Stal Mielec</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>10K</td>
+											<td>Professional</td>
+											<td>6,864</td>
+											<td><span class="label" style="background:#2858B0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1939</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="96021840">Stomil</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>16,800</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1945</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="722097">Wigry</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>10K</td>
+											<td>Professional</td>
+											<td>2,910</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1947</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="1300881">Wisla</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>LOTTO Ekstraklasa</td>
+											<td>120K</td>
+											<td>Professional</td>
+											<td>33,130</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>1906</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="96023666">Wisla Pulawy</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>31K</td>
+											<td>Professional</td>
+											<td>4,418</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1923</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="129585">Zaglebie Sosnowiec</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>16K</td>
+											<td>Professional</td>
+											<td>5,750</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1906</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="714240">Znicz Pruszkow</td>
+											<td><img src="modules/fmsdb/img/flags/s/POL.gif" alt="Poland">  POL</td>
+											<td>First Division</td>
+											<td>25K</td>
+											<td>Professional</td>
+											<td>1,977</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1923</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="55001110">1? Dezembro</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1880</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="2388">Ac. Viseu</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>14,368</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1914</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="2393">Academica</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>29,744</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1876</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="736267">Academica/SF</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1887</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="55027268">AD Nogueirense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1973</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="55001078">AD Oliveirense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1952</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="2428">AD Sanjoanense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>11,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1924</td>
+											<td>22.5</td>
+										</tr>
+										<tr>
+											<td id="2462">Agueda</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#E00808"></span></td>
+											<td>1924</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="2429">Alcanenense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>3K</td>
+											<td>Semi-Professional</td>
+											<td>5,400</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1942</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="84107060">Alianca Gandra</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1946</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="55007141">Aljustrelense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1933</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="55001122">Almancilense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1935</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="109042">Amarante</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>7,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1923</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="2460">Anadia</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>7,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1926</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="729459">Angrense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#E00808"></span></td>
+											<td>1929</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="84107158">ARC Oleiros</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1976</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="84107167">Armacenenses</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#1068F8"></span> <span class="label" style="background:#1068F8"></span></td>
+											<td>1935</td>
+											<td>27.4</td>
+										</tr>
+										<tr>
+											<td id="729500">Arouca</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>151K</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1952</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="2440">Atletico CP (SAD)</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1942</td>
+											<td>21.7</td>
+										</tr>
+										<tr>
+											<td id="1472">Aves</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>65K</td>
+											<td>Professional</td>
+											<td>5,441</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1930</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="2437">Barreirense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>2,480</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1911</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="1474">Belenenses</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>19,856</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1919</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="2427">Benfica CB</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>13K</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1924</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="1471">Boavista</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>108K</td>
+											<td>Professional</td>
+											<td>30,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1903</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="1488">Braga</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>3M</td>
+											<td>Professional</td>
+											<td>30,286</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F00000"></span></td>
+											<td>1921</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="55000307">Braga B</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>26K</td>
+											<td>Professional</td>
+											<td>30,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F00000"></span></td>
+											<td>0</td>
+											<td>20.6</td>
+										</tr>
+										<tr>
+											<td id="725010">Braganca</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>7K</td>
+											<td>Semi-Professional</td>
+											<td>8,393</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1947</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="2420">Caldas</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>13,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1916</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="2435">Camacha</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0078F8"></span></td>
+											<td>1978</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="55001114">Canical</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1981</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="55065687">Carapinheirense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1959</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="2443">Casa Pia</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>13K</td>
+											<td>Semi-Professional</td>
+											<td>2,574</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1920</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="733653">Cesarense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1932</td>
+											<td>22.0</td>
+										</tr>
+										<tr>
+											<td id="1480">Chaves</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>22,600</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1949</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="729472">Cinfaes</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1931</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="55012042">Coimbroes</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1920</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="725036">Cova da Piedade</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#901000"></span> <span class="label" style="background:#901000"></span></td>
+											<td>1947</td>
+											<td>27.0</td>
+										</tr>
+										<tr>
+											<td id="2461">Estarreja</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F87000"></span></td>
+											<td>1944</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="2390">Estoril</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>215K</td>
+											<td>Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#E8E010"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1939</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="729461">Fabril do Barreiro</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>22,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1937</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="2410">Fafe</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>14,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1958</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="2397">Famalicao</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1931</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="1485">Farense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>17K</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1910</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="2469">Fatima</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>1,545</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#800020"></span></td>
+											<td>1966</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1478">FCP</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>12M</td>
+											<td>Professional</td>
+											<td>50,035</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1893</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="55000308">FCP B</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>26K</td>
+											<td>Professional</td>
+											<td>8,272</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>0</td>
+											<td>19.4</td>
+										</tr>
+										<tr>
+											<td id="2387">Feirense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>65K</td>
+											<td>Professional</td>
+											<td>6,600</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#305098"></span></td>
+											<td>1918</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="2384">Felgueiras</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>17K</td>
+											<td>Semi-Professional</td>
+											<td>14,000</td>
+											<td><span class="label" style="background:#E00808"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>2006</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="2409">Freamunde</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>3,919</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1933</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="734127">Gafanha</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1957</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="84107205">Gafetense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1979</td>
+											<td>22.5</td>
+										</tr>
+										<tr>
+											<td id="1481">Gil Vicente</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>103K</td>
+											<td>Professional</td>
+											<td>12,504</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00808"></span></td>
+											<td>1924</td>
+											<td>22.1</td>
+										</tr>
+										<tr>
+											<td id="109043">Ginasio de Alcobaca</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1946</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="2423">Gondomar</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>17K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1921</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="725038">Gouveia</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#401060"></span></td>
+											<td>1963</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="1493">Leiria</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>23,888</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1966</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="2406">Leixoes</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>8,035</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1907</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="729707">Limianos</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8D000"></span> <span class="label" style="background:#600060"></span></td>
+											<td>1953</td>
+											<td>21.4</td>
+										</tr>
+										<tr>
+											<td id="2446">Louletano</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1923</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="734132">Loures</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>13K</td>
+											<td>Semi-Professional</td>
+											<td>800</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1913</td>
+											<td>22.6</td>
+										</tr>
+										<tr>
+											<td id="55027909">Lus. Vildemoinhos</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>7,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1916</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="7000008">Lusitania Acores</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>7,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1922</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="7005001">Lusitano VRSA</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1916</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="736258">Mafra</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>13K</td>
+											<td>Semi-Professional</td>
+											<td>2,400</td>
+											<td><span class="label" style="background:#108830"></span> <span class="label" style="background:#F8D828"></span></td>
+											<td>1965</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="2430">Malveira</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1940</td>
+											<td>21.2</td>
+										</tr>
+										<tr>
+											<td id="1476">Maritimo</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>323K</td>
+											<td>Professional</td>
+											<td>7,200</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1910</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="7000097">Maritimo B</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#D02028"></span> <span class="label" style="background:#108830"></span></td>
+											<td>1910</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="734123">Merelinense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>7K</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1938</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="2455">Mirandela</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1926</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="55072751">Moimenta da Beira</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>0</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="2413">Montalegre</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>7,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1964</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="2389">Moreirense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>108K</td>
+											<td>Professional</td>
+											<td>6,153</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1938</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="8878352">Mortagua</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1937</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="55020412">Moura</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1942</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="2433">Nacional da Madeira</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>301K</td>
+											<td>Professional</td>
+											<td>5,586</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1910</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="2415">Naval</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>861</td>
+											<td>Semi-Professional</td>
+											<td>11,800</td>
+											<td><span class="label" style="background:#108830"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1893</td>
+											<td>22.0</td>
+										</tr>
+										<tr>
+											<td id="2445">Olhanense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>5,661</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1912</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="2416">Oliveirense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1922</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="109040">Operario Lagoa</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1948</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="2444">Oriental</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>8,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#901000"></span></td>
+											<td>1946</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="2386">P. Ferreira</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>151K</td>
+											<td>Professional</td>
+											<td>7,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1950</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="744319">Pampilhosa</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#A0A0A0"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1930</td>
+											<td>28.0</td>
+										</tr>
+										<tr>
+											<td id="729457">Pedras Rubras</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1941</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="55038918">Pedras Salgadas</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>5,450</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1977</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="1477">Penafiel</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>65K</td>
+											<td>Professional</td>
+											<td>5,230</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F00000"></span></td>
+											<td>1951</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="729749">Pinhalnovense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>17K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1948</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="55027801">Ponte da Barca</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1966</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="2438">Portimonense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>103K</td>
+											<td>Professional</td>
+											<td>6,240</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1914</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="2487">Praiense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F00000"></span></td>
+											<td>1947</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="741496">Real</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1951</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="2383">Rio Ave</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>215K</td>
+											<td>Professional</td>
+											<td>12,820</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1939</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="2477">Sacavenense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,100</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1910</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="1486">Salgueiros</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>7K</td>
+											<td>Semi-Professional</td>
+											<td>16,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1911</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="2448">Santa Clara</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>12,800</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1921</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="84107055">Sao Martinho</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1965</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="725060">Sertanense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1934</td>
+											<td>22.5</td>
+										</tr>
+										<tr>
+											<td id="2478">Sintrense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>2,800</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1911</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="1487">SLB</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Premier League</td>
+											<td>14M</td>
+											<td>Professional</td>
+											<td>64,642</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1904</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="55000306">SLB B</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>Second League</td>
+											<td>26K</td>
+											<td>Professional</td>
+											<td>2,720</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>0</td>
+											<td>19.9</td>
+										</tr>
+										<tr>
+											<td id="55027254">Sousense</td>
+											<td><img src="modules/fmsdb/img/flags/s/POR.gif" alt="Portugal">  POR</td>
+											<td>PT Championship</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1937</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="57141886">Academica Clinceni</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#2068B0"></span></td>
+											<td>2015</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="57036465">ACS Berceni</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>450</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1957</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="57102772">ACS Poli</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>32,972</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#402880"></span></td>
+											<td>2012</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="57110823">AFC Astra</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2012</td>
+											<td>28.6</td>
+										</tr>
+										<tr>
+											<td id="57113409">ASA Tirgu Mures</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#283850"></span></td>
+											<td>2013</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="57099588">ASU Poli</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>32,972</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#604090"></span></td>
+											<td>2002</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="7540447">Botosani</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#F0F0F0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2001</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="7540205">CFR Cluj</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>23,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#800000"></span></td>
+											<td>1907</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="57000252">Chiajna</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1957</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="57066631">Chindia</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#283850"></span> <span class="label" style="background:#58C0D8"></span></td>
+											<td>1950</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="57057243">CS Afumati</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>0</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="57057245">CS Balotesti</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>3,780</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#2068B0"></span></td>
+											<td>2006</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="57080206">CS Mioveni</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>7,400</td>
+											<td><span class="label" style="background:#00C030"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>2000</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="57111101">CS U Craiova</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>6,400</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#2858B0"></span></td>
+											<td>2013</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="57086204">CSM Poli Iasi</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,500</td>
+											<td><span class="label" style="background:#081030"></span> <span class="label" style="background:#2850A0"></span></td>
+											<td>2010</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="7547031">CSM Rm. Valcea</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>13,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>2004</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="57000258">D. Calarasi</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#1838F8"></span></td>
+											<td>1920</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="57139475">Dacia Unirea</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>23,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1922</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="1500">Dinamo Buc.</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>15,300</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1948</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="1503">FC Brasov</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1936</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="1513">FC Steaua</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>55,600</td>
+											<td><span class="label" style="background:#2858B0"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>1947</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
+											<td id="57047936">FC Viitorul</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,500</td>
+											<td><span class="label" style="background:#081030"></span> <span class="label" style="background:#2850A0"></span></td>
+											<td>2009</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="57065222">FC Voluntari</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,600</td>
+											<td><span class="label" style="background:#B00810"></span> <span class="label" style="background:#902830"></span></td>
+											<td>2010</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="57031881">Foresta Suceava</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1946</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="138153">Gaz Metan</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>7,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1945</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
+											<td id="7540450">Juventus Buc.</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1992</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="57044148">Luceafarul Or.</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>7,000</td>
+											<td><span class="label" style="background:#304078"></span> <span class="label" style="background:#C81018"></span></td>
+											<td>2010</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="57113264">Metalul Resita</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>2007</td>
+											<td>22.2</td>
+										</tr>
+										<tr>
+											<td id="57036024">Olimpia SM</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>18,000</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#2810B8"></span></td>
+											<td>1921</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="7540061">Pandurii</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga I</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>20,240</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1963</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="57110237">Sepsi OSK</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>7,000</td>
+											<td><span class="label" style="background:#C81018"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>0</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="57036012">Soimii Pancota</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F86820"></span></td>
+											<td>1923</td>
+											<td>22.6</td>
+										</tr>
+										<tr>
+											<td id="57014875">Tarlungeni</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#C80000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1983</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="57113687">UTA Batrana Doamna</td>
+											<td><img src="modules/fmsdb/img/flags/s/ROU.gif" alt="Romania">  ROU</td>
+											<td>Liga II</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>2013</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="1642">Ajax CT</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>226K</td>
+											<td>Professional</td>
+											<td>64,100</td>
+											<td><span class="label" style="background:#F84028"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1999</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="130772">Amazulu</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>480K</td>
+											<td>Professional</td>
+											<td>14,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#108830"></span></td>
+											<td>1932</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="65010405">Baroka FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>113K</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#080048"></span></td>
+											<td>2007</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="5680075">Black Leopards</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>141K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1983</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="130770">Bloem Celtic</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>254K</td>
+											<td>Professional</td>
+											<td>20,000</td>
+											<td><span class="label" style="background:#00C030"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1969</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="65010452">Cape Town All Stars</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>1M</td>
+											<td>Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008040"></span></td>
+											<td>2010</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="65035889">Cape Town City</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>226K</td>
+											<td>Professional</td>
+											<td>64,100</td>
+											<td><span class="label" style="background:#E0B840"></span> <span class="label" style="background:#2060A8"></span></td>
+											<td>2016</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="65010424">Chippa Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>424K</td>
+											<td>Professional</td>
+											<td>47,592</td>
+											<td><span class="label" style="background:#0080F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2010</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="5680142">FC Cape Town</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>28K</td>
+											<td>Professional</td>
+											<td>11,000</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#0010D8"></span></td>
+											<td>2006</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="5682513">FS Stars</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>141K</td>
+											<td>Professional</td>
+											<td>20,000</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#E00808"></span></td>
+											<td>1979</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
+											<td id="131270">Golden Arrows</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>169K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#E8F800"></span> <span class="label" style="background:#00C030"></span></td>
+											<td>1996</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="5682374">Highlands Park</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>141K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1959</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="106805">Jomo Cosmos</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>113K</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1982</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="1643">Kaizer Chiefs</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>565K</td>
+											<td>Professional</td>
+											<td>87,600</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1970</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="65025781">Magesi FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>150K</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#80F8F8"></span> <span class="label" style="background:#0000A0"></span></td>
+											<td>0</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="5682979">Maritzburg Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>198K</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#0000F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1979</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="65010493">Mbombela Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>56K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F80000"></span></td>
+											<td>2008</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="65010450">Milano Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>45K</td>
+											<td>Professional</td>
+											<td>35,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E8B810"></span></td>
+											<td>1986</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="65025796">Mthatha Bucks</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>28K</td>
+											<td>Professional</td>
+											<td>9,000</td>
+											<td><span class="label" style="background:#F0B840"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2007</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1645">Orlando Pirates</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>847K</td>
+											<td>Professional</td>
+											<td>40,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1937</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="5680087">Platinum Stars</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>254K</td>
+											<td>Professional</td>
+											<td>44,732</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000080"></span></td>
+											<td>1998</td>
+											<td>27.2</td>
+										</tr>
+										<tr>
+											<td id="65028128">Polokwane City</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>113K</td>
+											<td>Professional</td>
+											<td>45,553</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#C0C0C0"></span></td>
+											<td>2011</td>
+											<td>27.8</td>
+										</tr>
+										<tr>
+											<td id="65026405">Real Kings</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>150K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#004080"></span></td>
+											<td>2013</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="65029901">Royal Eagles</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>424K</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#F8F800"></span> <span class="label" style="background:#0068F8"></span></td>
+											<td>2014</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="130766">Santos F.C.</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>254K</td>
+											<td>Professional</td>
+											<td>35,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1982</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="65036389">Stellenbosch FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>45K</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#B06040"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2016</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="1644">Sundowns</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>51,762</td>
+											<td><span class="label" style="background:#008030"></span> <span class="label" style="background:#F8E010"></span></td>
+											<td>1970</td>
+											<td>28.0</td>
+										</tr>
+										<tr>
+											<td id="1646">SuperSport Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>565K</td>
+											<td>Professional</td>
+											<td>28,900</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0010D8"></span></td>
+											<td>1985</td>
+											<td>27.0</td>
+										</tr>
+										<tr>
+											<td id="5680099">Thanda Royal Zulu</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>141K</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2007</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="5688086">Tuks</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>226K</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#E00808"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1983</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="5682613">Witbank Spurs</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>National First Division</td>
+											<td>99K</td>
+											<td>Professional</td>
+											<td>35,000</td>
+											<td><span class="label" style="background:#60C0F8"></span> <span class="label" style="background:#F08000"></span></td>
+											<td>2000</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="130763">Wits</td>
+											<td><img src="modules/fmsdb/img/flags/s/RSA.gif" alt="South Africa">  RSA</td>
+											<td>South African Premiership</td>
+											<td>847K</td>
+											<td>Professional</td>
+											<td>5,515</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1922</td>
+											<td>27.2</td>
+										</tr>
+										<tr>
+											<td id="130500">Amkar</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>24K</td>
+											<td>Professional</td>
+											<td>16,873</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1994</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="130495">Anji</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>240K</td>
+											<td>Professional</td>
+											<td>30,000</td>
+											<td><span class="label" style="background:#081030"></span> <span class="label" style="background:#00A030"></span></td>
+											<td>1991</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="130501">Arsenal Tula</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>44K</td>
+											<td>Professional</td>
+											<td>20,048</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1984</td>
+											<td>28.0</td>
+										</tr>
+										<tr>
+											<td id="1301106">Baltika</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>14,660</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1954</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="1518">CSKA Moscow</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>1M</td>
+											<td>Professional</td>
+											<td>18,636</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1911</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="1520">Dinamo Moscow</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>115K</td>
+											<td>Professional</td>
+											<td>18,636</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0860D0"></span></td>
+											<td>1923</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
+											<td id="130496">Fakel</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>34,800</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1947</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="130525">Khimki</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>1K</td>
+											<td>Professional</td>
+											<td>5,083</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1997</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="58029064">Krasnodar</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>861K</td>
+											<td>Professional</td>
+											<td>35,200</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#004828"></span></td>
+											<td>2007</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="1523">Krylja Sovetov</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>30,251</td>
+											<td><span class="label" style="background:#60C0F8"></span> <span class="label" style="background:#60A0D0"></span></td>
+											<td>1942</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="130536">Kuban</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>35,200</td>
+											<td><span class="label" style="background:#108048"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1928</td>
+											<td>27.1</td>
+										</tr>
+										<tr>
+											<td id="1525">Lokomotiv Moscow</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>861K</td>
+											<td>Professional</td>
+											<td>28,800</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1923</td>
+											<td>28.0</td>
+										</tr>
+										<tr>
+											<td id="130558">Luch</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>10,200</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1952</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="8083031">Mordovia</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>11,613</td>
+											<td><span class="label" style="background:#082040"></span> <span class="label" style="background:#B00000"></span></td>
+											<td>1961</td>
+											<td>27.0</td>
+										</tr>
+										<tr>
+											<td id="130550">Neftekhimik</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>3,140</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1991</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="58127493">Orenburg</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,800</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1976</td>
+											<td>27.8</td>
+										</tr>
+										<tr>
+											<td id="1301104">Rostov</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>15,840</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1930</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="130509">Rubin</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>431K</td>
+											<td>Professional</td>
+											<td>27,756</td>
+											<td><span class="label" style="background:#D8B028"></span> <span class="label" style="background:#600000"></span></td>
+											<td>1958</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="130510">Shinnik</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>22,984</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#1068F8"></span></td>
+											<td>1957</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="58001661">Sibir</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1934</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="130561">SKA Khabarovsk</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>15,200</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>1946</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="130511">Sokol</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1946</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="58098003">Spartak M-2</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,700</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2013</td>
+											<td>20.6</td>
+										</tr>
+										<tr>
+											<td id="1529">Spartak Moscow</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>861K</td>
+											<td>Professional</td>
+											<td>46,990</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1922</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="130512">Spartak Nalchik</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>13,800</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1935</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="58101284">Tambov</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>6,300</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>2013</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="477632">Terek</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>30,597</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#108048"></span></td>
+											<td>1958</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="130514">Tom</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>10,028</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#40B868"></span></td>
+											<td>1957</td>
+											<td>26.8</td>
+										</tr>
+										<tr>
+											<td id="58062109">Tosno</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>3,223</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>0</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="1519">Tyumen</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1961</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="58064627">Ufa</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>15,200</td>
+											<td><span class="label" style="background:#78F800"></span> <span class="label" style="background:#288850"></span></td>
+											<td>2010</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="1533">Ural</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>86K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F07028"></span></td>
+											<td>1930</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="130515">Volgar</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>48K</td>
+											<td>Professional</td>
+											<td>17,712</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1960</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="58066512">Yenisey</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>26,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1937</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="1301108">Zenit</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>Premier Division</td>
+											<td>26M</td>
+											<td>Professional</td>
+											<td>21,110</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#0098E0"></span></td>
+											<td>1925</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="495359">Zenit-2</td>
+											<td><img src="modules/fmsdb/img/flags/s/RUS.gif" alt="Russia">  RUS</td>
+											<td>First Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>3,033</td>
+											<td><span class="label" style="background:#2850A0"></span> <span class="label" style="background:#60A0D0"></span></td>
+											<td>0</td>
+											<td>22.3</td>
+										</tr>
+										<tr>
+											<td id="1536">Aberdeen</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>200K</td>
+											<td>Professional</td>
+											<td>20,866</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#C81018"></span></td>
+											<td>1903</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="5203872">Airdrie</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>10K</td>
+											<td>Professional</td>
+											<td>10,101</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2002</td>
+											<td>21.7</td>
+										</tr>
+										<tr>
+											<td id="1538">Albion Rovers</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>20K</td>
+											<td>Semi-Professional</td>
+											<td>1,238</td>
+											<td><span class="label" style="background:#F8F838"></span> <span class="label" style="background:#F8F838"></span></td>
+											<td>1882</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="1539">Alloa</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>75K</td>
+											<td>Semi-Professional</td>
+											<td>3,100</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8A800"></span></td>
+											<td>1883</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="1540">Annan</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>15K</td>
+											<td>Semi-Professional</td>
+											<td>2,504</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1942</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="1541">Arbroath</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>20K</td>
+											<td>Semi-Professional</td>
+											<td>6,600</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#880818"></span></td>
+											<td>1878</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="1542">Ayr</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>8K</td>
+											<td>Professional</td>
+											<td>10,185</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1910</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="1543">Berwick</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>3K</td>
+											<td>Semi-Professional</td>
+											<td>4,099</td>
+											<td><span class="label" style="background:#F8D000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1881</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="1544">Brechin</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>30K</td>
+											<td>Semi-Professional</td>
+											<td>4,083</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#D02028"></span></td>
+											<td>1906</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="1569">Celtic</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>60,411</td>
+											<td><span class="label" style="background:#188848"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1888</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="1548">Clyde</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,086</td>
+											<td><span class="label" style="background:#F0F0F0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1877</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="1552">Cowdenbeath</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,309</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1881</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="1554">Dumbarton</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>2,020</td>
+											<td><span class="label" style="background:#F8D000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1872</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="1555">Dundee</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>500K</td>
+											<td>Professional</td>
+											<td>11,506</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#202030"></span></td>
+											<td>1893</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="1556">Dundee Utd</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>200K</td>
+											<td>Professional</td>
+											<td>14,223</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E07000"></span></td>
+											<td>1909</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="1557">Dunfermline</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>29K</td>
+											<td>Professional</td>
+											<td>11,904</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1885</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="1558">East Fife</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>10K</td>
+											<td>Semi-Professional</td>
+											<td>1,998</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1903</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="5201742">Edinburgh City</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1928</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="1562">Elgin City</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>20K</td>
+											<td>Semi-Professional</td>
+											<td>4,520</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1893</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="1563">Falkirk</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>7,937</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#101838"></span></td>
+											<td>1876</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="1564">Forfar</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>55K</td>
+											<td>Semi-Professional</td>
+											<td>6,777</td>
+											<td><span class="label" style="background:#6098C8"></span> <span class="label" style="background:#082858"></span></td>
+											<td>1885</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="1572">Hamilton</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>100K</td>
+											<td>Professional</td>
+											<td>5,510</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1874</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="1573">Hearts</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>200K</td>
+											<td>Professional</td>
+											<td>17,480</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#800020"></span></td>
+											<td>1874</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="1575">Hibernian</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>219K</td>
+											<td>Professional</td>
+											<td>20,421</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#006830"></span></td>
+											<td>1875</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="1577">Inverness CT</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>30K</td>
+											<td>Professional</td>
+											<td>7,512</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#3868B8"></span></td>
+											<td>1994</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="1580">Kilmarnock</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>17,891</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1869</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="1581">Livingston</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,716</td>
+											<td><span class="label" style="background:#F0E020"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1974</td>
+											<td>21.6</td>
+										</tr>
+										<tr>
+											<td id="1583">Montrose</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>4,936</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#2850A0"></span></td>
+											<td>1879</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="1571">Morton</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>20K</td>
+											<td>Professional</td>
+											<td>11,589</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1874</td>
+											<td>21.6</td>
+										</tr>
+										<tr>
+											<td id="1584">Motherwell</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>5K</td>
+											<td>Professional</td>
+											<td>13,677</td>
+											<td><span class="label" style="background:#600000"></span> <span class="label" style="background:#F89830"></span></td>
+											<td>1886</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="1586">Partick Thistle</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>50K</td>
+											<td>Professional</td>
+											<td>10,102</td>
+											<td><span class="label" style="background:#C82030"></span> <span class="label" style="background:#F0E020"></span></td>
+											<td>1876</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="1588">Peterhead</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>20K</td>
+											<td>Semi-Professional</td>
+											<td>3,150</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#304078"></span></td>
+											<td>1890</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="1590">Queen of Sth</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>75K</td>
+											<td>Professional</td>
+											<td>8,690</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#003098"></span></td>
+											<td>1919</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="1591">Queen's Park</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>51,866</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#002060"></span></td>
+											<td>1867</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="1592">Raith</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>70K</td>
+											<td>Professional</td>
+											<td>9,031</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#202030"></span></td>
+											<td>1883</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="1570">Rangers</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>1M</td>
+											<td>Professional</td>
+											<td>50,817</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0058B8"></span></td>
+											<td>1872</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="1593">Ross County</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>150K</td>
+											<td>Professional</td>
+											<td>6,541</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1929</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="1596">St. Johnstone</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Premiership</td>
+											<td>80K</td>
+											<td>Professional</td>
+											<td>10,696</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#2068B0"></span></td>
+											<td>1884</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="1597">St. Mirren</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes Championship</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>8,023</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1877</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="1598">Stenhousemuir</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>15K</td>
+											<td>Semi-Professional</td>
+											<td>4,096</td>
+											<td><span class="label" style="background:#A0C8F0"></span> <span class="label" style="background:#781828"></span></td>
+											<td>1884</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="1599">Stirling</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 2</td>
+											<td>20K</td>
+											<td>Semi-Professional</td>
+											<td>3,808</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#C80030"></span></td>
+											<td>1945</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="1600">Stranraer</td>
+											<td><img src="modules/fmsdb/img/flags/s/SCO.gif" alt="Scotland">  SCO</td>
+											<td>Ladbrokes League 1</td>
+											<td>30K</td>
+											<td>Semi-Professional</td>
+											<td>4,178</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1870</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="5743463">Backa</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>69K</td>
+											<td>Professional</td>
+											<td>14,458</td>
+											<td><span class="label" style="background:#005098"></span> <span class="label" style="background:#0078F8"></span></td>
+											<td>1945</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="5742970">Bezanija</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>69K</td>
+											<td>Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1921</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="1301381">Borac</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>198K</td>
+											<td>Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1926</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="5742971">BSK Borca</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>52K</td>
+											<td>Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1937</td>
+											<td>21.8</td>
+										</tr>
+										<tr>
+											<td id="5756755">Buducnost (D)</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>34K</td>
+											<td>Semi-Professional</td>
+											<td>700</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1920</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="5741146">CSK Pivara</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>69K</td>
+											<td>Professional</td>
+											<td>2,360</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1925</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="1301372">Cukaricki</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>775K</td>
+											<td>Professional</td>
+											<td>4,070</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F0F0F0"></span></td>
+											<td>1926</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="5744698">Dinamo (V)</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#0078F8"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1947</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="5745180">Indjija</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>69K</td>
+											<td>Professional</td>
+											<td>4,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1933</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="5743586">Jagodina</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>103K</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1918</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="5742987">Javor</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>103K</td>
+											<td>Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#904090"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1912</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="136460">Kolubara</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>52K</td>
+											<td>Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1919</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="5740640">Macva</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>1919</td>
+											<td>26.8</td>
+										</tr>
+										<tr>
+											<td id="5742993">Metalac</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>95K</td>
+											<td>Professional</td>
+											<td>4,600</td>
+											<td><span class="label" style="background:#60C0F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1961</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="1301374">Mladost</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>146K</td>
+											<td>Professional</td>
+											<td>8,050</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1952</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="1950">Napredak</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>215K</td>
+											<td>Professional</td>
+											<td>10,331</td>
+											<td><span class="label" style="background:#B00000"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>1946</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="6400020">Novi Pazar</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>95K</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1928</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="62144657">Odzaci</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>30K</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1969</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="1951">OFK Beograd</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>78K</td>
+											<td>Professional</td>
+											<td>19,100</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1911</td>
+											<td>21.2</td>
+										</tr>
+										<tr>
+											<td id="1952">Partizan</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>948K</td>
+											<td>Professional</td>
+											<td>32,710</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1945</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="62011758">Proleter</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>52K</td>
+											<td>Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1951</td>
+											<td>21.6</td>
+										</tr>
+										<tr>
+											<td id="1953">Rad</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>103K</td>
+											<td>Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#202848"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>1958</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="1954">Radnicki</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>172K</td>
+											<td>Professional</td>
+											<td>18,151</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#005098"></span></td>
+											<td>1923</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="5740714">Radnicki (P)</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>34K</td>
+											<td>Professional</td>
+											<td>10,816</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1945</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="5748006">Radnik Surdulica</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>86K</td>
+											<td>Professional</td>
+											<td>3,312</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1926</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1955">Red Star</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>948K</td>
+											<td>Professional</td>
+											<td>55,538</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1945</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="5751604">Sindjelic</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>52K</td>
+											<td>Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1937</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="62063172">Sloboda</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>9K</td>
+											<td>Professional</td>
+											<td>9,800</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>1925</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="62031842">Spartak</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>146K</td>
+											<td>Professional</td>
+											<td>14,458</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>1945</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="1957">Vojvodina</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>431K</td>
+											<td>Professional</td>
+											<td>14,458</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1914</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="5744631">Vozdovac</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>SuperLeague</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>5,200</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1912</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="1949">Zemun</td>
+											<td><img src="modules/fmsdb/img/flags/s/SRB.gif" alt="Serbia">  SRB</td>
+											<td>First League</td>
+											<td>52K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#00A030"></span> <span class="label" style="background:#002080"></span></td>
+											<td>1945</td>
+											<td>27.5</td>
+										</tr>
+										<tr>
+											<td id="1848">Aarau</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>79K</td>
+											<td>Professional</td>
+											<td>9,249</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1902</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="1849">Basel</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>39,687</td>
+											<td><span class="label" style="background:#304078"></span> <span class="label" style="background:#A82030"></span></td>
+											<td>1893</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="137936">Chiasso</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>12,160</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1905</td>
+											<td>22.6</td>
+										</tr>
+										<tr>
+											<td id="1855">Grasshoppers</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>25,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1886</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="1856">Lausanne</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>79K</td>
+											<td>Professional</td>
+											<td>15,770</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1869</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="69005058">Le Mont LS</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>6K</td>
+											<td>Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1942</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="1850">Lugano</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>317K</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2003</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="1851">Luzern</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>396K</td>
+											<td>Professional</td>
+											<td>18,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1901</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="1857">Neuchatel Xamax</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>46K</td>
+											<td>Professional</td>
+											<td>11,977</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1970</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="137917">Schaffhausen</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>7,300</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1896</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="1858">Servette FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>30,000</td>
+											<td><span class="label" style="background:#800020"></span> <span class="label" style="background:#800020"></span></td>
+											<td>1890</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="1852">Sion</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>950K</td>
+											<td>Professional</td>
+											<td>20,200</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1909</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="1853">St. Gallen</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>792K</td>
+											<td>Professional</td>
+											<td>19,694</td>
+											<td><span class="label" style="background:#40A838"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1879</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="514173">Thun</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>79K</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00808"></span></td>
+											<td>1898</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="5720002">Vaduz</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>79K</td>
+											<td>Professional</td>
+											<td>7,838</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#901000"></span></td>
+											<td>1932</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="130820">Wil</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1900</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="1200101">Winterthur</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>9,464</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1896</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="137925">Wohlen</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>40K</td>
+											<td>Professional</td>
+											<td>3,734</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1904</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="1847">Young Boys</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Super League</td>
+											<td>792K</td>
+											<td>Professional</td>
+											<td>32,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D828"></span></td>
+											<td>1895</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="1854">Zurich</td>
+											<td><img src="modules/fmsdb/img/flags/s/SUI.gif" alt="Switzerland">  SUI</td>
+											<td>Challenge League</td>
+											<td>792K</td>
+											<td>Professional</td>
+											<td>25,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1896</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="1615">Banska Bystrica</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#B00000"></span></td>
+											<td>1965</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="1612">Bardejov</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>9K</td>
+											<td>Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1922</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="1614">Dun. Streda</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>86K</td>
+											<td>Professional</td>
+											<td>3,264</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1904</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="63028408">Haniska</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1931</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="7565209">Kosice</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>4K</td>
+											<td>Professional</td>
+											<td>9,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>2005</td>
+											<td>22.6</td>
+										</tr>
+										<tr>
+											<td id="7564894">Lipany</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#108830"></span> <span class="label" style="background:#108830"></span></td>
+											<td>1925</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="63000893">Liptovsky Mikulas</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>5K</td>
+											<td>Professional</td>
+											<td>1,950</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1934</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="1618">Lokomotiva Kosice</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>10K</td>
+											<td>Professional</td>
+											<td>650</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1946</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="63023671">Martin</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>900</td>
+											<td><span class="label" style="background:#0078F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1994</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="7563783">Michalovce</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>65K</td>
+											<td>Professional</td>
+											<td>4,440</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1911</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="63010727">Myjava</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>65K</td>
+											<td>Professional</td>
+											<td>2,709</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1920</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="1301175">Nitra</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>13K</td>
+											<td>Professional</td>
+											<td>5,050</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>1909</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="63000906">Nove Mesto</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1922</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="7560016">Podbrezova</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#901000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1920</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="63011669">Pohronie</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>1,200</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#108830"></span></td>
+											<td>1966</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="63004281">Poprad</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>13K</td>
+											<td>Professional</td>
+											<td>5,700</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1912</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="1624">Presov</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>22K</td>
+											<td>Professional</td>
+											<td>5,410</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1898</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="1301171">Rim. Sobota</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>1,970</td>
+											<td><span class="label" style="background:#2838A0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1908</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="130873">Ruzomberok</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>4,876</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F87000"></span></td>
+											<td>1906</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="63011666">Samorin</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>10K</td>
+											<td>Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1914</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="7560706">Senica</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>65K</td>
+											<td>Professional</td>
+											<td>5,070</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#D02028"></span></td>
+											<td>1921</td>
+											<td>21.8</td>
+										</tr>
+										<tr>
+											<td id="63023681">Sered</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>4K</td>
+											<td>Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1914</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="63025380">Skalica</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>17K</td>
+											<td>Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#108830"></span></td>
+											<td>1920</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="1622">Slovan Bratislava</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>431K</td>
+											<td>Professional</td>
+											<td>11,591</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>1919</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="63000895">Spisska Nova Ves</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#60C0F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1910</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="63031002">Svaty Jur</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>550</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1921</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="130872">Trencin</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>258K</td>
+											<td>Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#C80000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1992</td>
+											<td>21.1</td>
+										</tr>
+										<tr>
+											<td id="1623">Trnava</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>215K</td>
+											<td>Professional</td>
+											<td>18,124</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1923</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="1620">Zilina</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>258K</td>
+											<td>Professional</td>
+											<td>11,310</td>
+											<td><span class="label" style="background:#008030"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1908</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="7560050">Zlate Moravce</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>First Division</td>
+											<td>43K</td>
+											<td>Professional</td>
+											<td>3,787</td>
+											<td><span class="label" style="background:#082040"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1995</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="63010804">Zvolen</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVK.gif" alt="Slovakia">  SVK</td>
+											<td>Second Division</td>
+											<td>4K</td>
+											<td>Professional</td>
+											<td>1,870</td>
+											<td><span class="label" style="background:#F00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1901</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="5410642">Aluminij</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>86K</td>
+											<td>Professional</td>
+											<td>600</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1946</td>
+											<td>21.1</td>
+										</tr>
+										<tr>
+											<td id="64017018">Ankaran</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F87000"></span></td>
+											<td>1966</td>
+											<td>22.2</td>
+										</tr>
+										<tr>
+											<td id="7580041">Brda</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>193</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1973</td>
+											<td>21.5</td>
+										</tr>
+										<tr>
+											<td id="64019293">Brezice</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#0078F8"></span></td>
+											<td>1919</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="1637">Celje</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>13,006</td>
+											<td><span class="label" style="background:#0078F8"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1919</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="7580966">Dob</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>287</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1926</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="128652">Domzale</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>2,813</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1921</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="7580043">Drava</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>78K</td>
+											<td>Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1933</td>
+											<td>21.3</td>
+										</tr>
+										<tr>
+											<td id="1627">Gorica</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>3,066</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>1947</td>
+											<td>21.8</td>
+										</tr>
+										<tr>
+											<td id="1632">Koper</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>4,047</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#D0F060"></span></td>
+											<td>1920</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="7586985">Kranj</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>43K</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#C80000"></span></td>
+											<td>1973</td>
+											<td>21.9</td>
+										</tr>
+										<tr>
+											<td id="5410639">Krka</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>78K</td>
+											<td>Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1922</td>
+											<td>21.8</td>
+										</tr>
+										<tr>
+											<td id="7580708">Krsko</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>129K</td>
+											<td>Professional</td>
+											<td>1,470</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1922</td>
+											<td>22.0</td>
+										</tr>
+										<tr>
+											<td id="1629">Maribor</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>775K</td>
+											<td>Professional</td>
+											<td>12,994</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#503098"></span></td>
+											<td>1960</td>
+											<td>27.0</td>
+										</tr>
+										<tr>
+											<td id="1639">Olimpija</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>861K</td>
+											<td>Professional</td>
+											<td>16,038</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1911</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="7581525">Radomlje</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>103K</td>
+											<td>Professional</td>
+											<td>2,813</td>
+											<td><span class="label" style="background:#202848"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1972</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="1638">Rudar Velenje</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>First League</td>
+											<td>103K</td>
+											<td>Professional</td>
+											<td>2,341</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1948</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="1641">Triglav</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>78K</td>
+											<td>Semi-Professional</td>
+											<td>2,029</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#901000"></span></td>
+											<td>1920</td>
+											<td>22.1</td>
+										</tr>
+										<tr>
+											<td id="64000398">Verzej</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>69K</td>
+											<td>Semi-Professional</td>
+											<td>405</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#70E088"></span></td>
+											<td>1963</td>
+											<td>21.2</td>
+										</tr>
+										<tr>
+											<td id="64000339">Zavrc</td>
+											<td><img src="modules/fmsdb/img/flags/s/SVN.gif" alt="Slovenia">  SVN</td>
+											<td>Second League</td>
+											<td>60K</td>
+											<td>Professional</td>
+											<td>962</td>
+											<td><span class="label" style="background:#00A030"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1969</td>
+											<td>19.9</td>
+										</tr>
+										<tr>
+											<td id="93052555">AFC United</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F86028"></span> <span class="label" style="background:#F86028"></span></td>
+											<td>2013</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="1780">AIK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>89K</td>
+											<td>Professional</td>
+											<td>53,000</td>
+											<td><span class="label" style="background:#F8F838"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1891</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="8106801">Akropolis IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>894</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1968</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="93038925">Ange IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1980</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="4300347">Angelholms FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#F8D830"></span></td>
+											<td>1976</td>
+											<td>22.1</td>
+										</tr>
+										<tr>
+											<td id="2505">Anundsjo IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1921</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="2506">Arameisk-Syrianska IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1980</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="4300404">Asarums IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>0</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="8100783">Assyriska BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division WG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,500</td>
+											<td><span class="label" style="background:#C80000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1985</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="2150">Assyriska FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>6,700</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1974</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="68000150">Assyriska IF i Norrkoping</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1977</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="1841">Atvidabergs FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>4K</td>
+											<td>Professional</td>
+											<td>6,100</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#4860B8"></span></td>
+											<td>1907</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="2151">BK Forward</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>894</td>
+											<td>Semi-Professional</td>
+											<td>4,700</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1934</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="1783">BK Hacken</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>716K</td>
+											<td>Professional</td>
+											<td>6,500</td>
+											<td><span class="label" style="background:#F8D820"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1940</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="2518">BK Olympic</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#188058"></span></td>
+											<td>1920</td>
+											<td>21.2</td>
+										</tr>
+										<tr>
+											<td id="2521">BKV Norrtalje</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1933</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="1784">Bodens BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>3K</td>
+											<td>Semi-Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1916</td>
+											<td>21.7</td>
+										</tr>
+										<tr>
+											<td id="1819">Boo FK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NS</td>
+											<td>894</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#680028"></span></td>
+											<td>1990</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="93030441">BW-90 IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#00F8F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1990</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="613670">Carlstad United</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1999</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="68002700">Dalkurd FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>45K</td>
+											<td>Professional</td>
+											<td>6,500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#288858"></span></td>
+											<td>2004</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="68002457">Dalstorps IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division WG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1949</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="1786">Degerfors IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>2K</td>
+											<td>Professional</td>
+											<td>7,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1907</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="1787">Djurgardens IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>224K</td>
+											<td>Professional</td>
+											<td>31,200</td>
+											<td><span class="label" style="background:#003068"></span> <span class="label" style="background:#68A8E0"></span></td>
+											<td>1891</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="4300018">Enskede IK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>894</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1914</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="68017475">Eskilsminne IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division WG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1928</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="2591">Eskilstuna City</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>7,800</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0070E8"></span></td>
+											<td>1914</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="1788">Falkenbergs FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>27K</td>
+											<td>Professional</td>
+											<td>5,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1928</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="1836">FC Gute</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,050</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1904</td>
+											<td>20.5</td>
+										</tr>
+										<tr>
+											<td id="2553">FC Hollviken</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division South</td>
+											<td>894</td>
+											<td>Semi-Professional</td>
+											<td>1,750</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1933</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="2613">FC Linkoping City</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>1K</td>
+											<td>Semi-Professional</td>
+											<td>8,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#1068F8"></span></td>
+											<td>2012</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="4300693">FC Rosengard</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1917</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="2668">FC Trollhattan</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,100</td>
+											<td><span class="label" style="background:#C80000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2001</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="93053134">FK Karlskrona</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F85000"></span> <span class="label" style="background:#F85000"></span></td>
+											<td>2012</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="4300655">Friska Viljor FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1994</td>
+											<td>21.2</td>
+										</tr>
+										<tr>
+											<td id="2153">GAIS</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>13K</td>
+											<td>Professional</td>
+											<td>18,400</td>
+											<td><span class="label" style="background:#18B050"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1894</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="1795">Gallivare Malmbergets FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,300</td>
+											<td><span class="label" style="background:#303030"></span> <span class="label" style="background:#303030"></span></td>
+											<td>2005</td>
+											<td>21.2</td>
+										</tr>
+										<tr>
+											<td id="4300022">Gamla Upsala SK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1947</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="1792">Gefle IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>45K</td>
+											<td>Professional</td>
+											<td>6,400</td>
+											<td><span class="label" style="background:#98D0F0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1882</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="1791">GIF Sundsvall</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>4K</td>
+											<td>Professional</td>
+											<td>8,500</td>
+											<td><span class="label" style="background:#2858B0"></span> <span class="label" style="background:#002060"></span></td>
+											<td>1903</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="802270">Grebbestads IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1922</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="1794">Gunnilse IS</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#B00000"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1950</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="4300049">Habo FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1996</td>
+											<td>22.0</td>
+										</tr>
+										<tr>
+											<td id="1796">Halmstads BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>4K</td>
+											<td>Professional</td>
+											<td>15,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#1078D0"></span></td>
+											<td>1914</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="1797">Hammarby</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>447K</td>
+											<td>Professional</td>
+											<td>31,200</td>
+											<td><span class="label" style="background:#008030"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1897</td>
+											<td>26.8</td>
+										</tr>
+										<tr>
+											<td id="68020049">Harnosands FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>2007</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="68002003">Hassleholms IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,800</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1922</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="1798">Helsingborgs IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>17,100</td>
+											<td><span class="label" style="background:#005098"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1907</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="2155">Hogaborgs BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division WG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1927</td>
+											<td>21.4</td>
+										</tr>
+										<tr>
+											<td id="615770">Hoganas BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division WG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1913</td>
+											<td>22.3</td>
+										</tr>
+										<tr>
+											<td id="1800">Huddinge IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1912</td>
+											<td>22.5</td>
+										</tr>
+										<tr>
+											<td id="1801">Hudiksvalls FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>894</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2011</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="2557">Husqvarna FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division South</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#20A0E0"></span> <span class="label" style="background:#002060"></span></td>
+											<td>1987</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="2157">IF Brommapojkarna</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>9K</td>
+											<td>Semi-Professional</td>
+											<td>7,500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1942</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="1802">IF Elfsborg</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>447K</td>
+											<td>Professional</td>
+											<td>18,800</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1904</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="2158">IF Sylvia</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,200</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1922</td>
+											<td>18.0</td>
+										</tr>
+										<tr>
+											<td id="93053137">IFK Aspudden-Tellus</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>0</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="68020055">IFK Berga</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1933</td>
+											<td>21.9</td>
+										</tr>
+										<tr>
+											<td id="1803">IFK Goteborg</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>45K</td>
+											<td>Professional</td>
+											<td>18,400</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1904</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1804">IFK Hassleholm</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>5,800</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1905</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="2574">IFK Kumla</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1913</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="1805">IFK Lulea</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1900</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="2159">IFK Malmo</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>27,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1899</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="1806">IFK Norrkoping</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>358K</td>
+											<td>Professional</td>
+											<td>16,700</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1897</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="2662">IFK Timra</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1978</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="2585">IFK Uddevalla</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,200</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1905</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="2588">IFK Varnamo</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#1068F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1912</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="1807">IK Brage</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>6,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#108830"></span></td>
+											<td>1925</td>
+											<td>22.1</td>
+										</tr>
+										<tr>
+											<td id="4303997">IK Franke</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1943</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="618372">IK Frej</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>5K</td>
+											<td>Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1983</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="4300353">IK Gauthiod</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,400</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1924</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="1808">IK Oddevold</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division South</td>
+											<td>4K</td>
+											<td>Semi-Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0078F8"></span></td>
+											<td>1932</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="2164">IK Sirius</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1907</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="2165">IK Sleipner</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>16,700</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1903</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="2166">IS Halmia</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division WG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>15,500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1907</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="6410547">Jonkopings Sodra IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>9K</td>
+											<td>Professional</td>
+											<td>5,200</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#108830"></span></td>
+											<td>1922</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="1809">Kalmar FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>179K</td>
+											<td>Professional</td>
+											<td>12,100</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1910</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="68012711">Karlbergs BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1912</td>
+											<td>22.0</td>
+										</tr>
+										<tr>
+											<td id="2598">Karlslunds IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>894</td>
+											<td>Semi-Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1920</td>
+											<td>20.2</td>
+										</tr>
+										<tr>
+											<td id="2168">Karlstad BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NG</td>
+											<td>894</td>
+											<td>Semi-Professional</td>
+											<td>10,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1923</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="8117093">Konyaspor KIF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#008030"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1989</td>
+											<td>20.6</td>
+										</tr>
+										<tr>
+											<td id="2601">Kortedala IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1956</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="2603">Kristianstad FC</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>6,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F88000"></span></td>
+											<td>1990</td>
+											<td>22.4</td>
+										</tr>
+										<tr>
+											<td id="68020053">Kvarnby IK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1906</td>
+											<td>21.9</td>
+										</tr>
+										<tr>
+											<td id="2608">Kvarnsvedens IK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NS</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1907</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="2609">Laholms FK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division WG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1957</td>
+											<td>20.8</td>
+										</tr>
+										<tr>
+											<td id="1811">Landskrona BoIS</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division South</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>11,900</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1915</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="2558">Lidkopings FK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division NG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>2012</td>
+											<td>22.2</td>
+										</tr>
+										<tr>
+											<td id="619816">Lindome GIF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division WG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>800</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1928</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="620928">Lindsdals IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8D000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1926</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="2175">Ljungskile SK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division Elite</td>
+											<td>894</td>
+											<td>Professional</td>
+											<td>4,250</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#48A068"></span></td>
+											<td>1926</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="2170">Lunds BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>8,560</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8F838"></span></td>
+											<td>1919</td>
+											<td>23.2</td>
+										</tr>
+										<tr>
+											<td id="1816">Malmo FF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>24,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#98D0F0"></span></td>
+											<td>1910</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="1817">Mjallby AIF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>7,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1939</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="2624">Moron BK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division N</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#008030"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1935</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="1818">Motala AIF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SS</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>8,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1907</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="2172">Norrby IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division South</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>18,800</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#1068F8"></span></td>
+											<td>1927</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="2626">Nybro IF</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Second Division SG</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>1,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1906</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td id="2627">Nykopings BIS</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>First Division North</td>
+											<td>0</td>
+											<td>Semi-Professional</td>
+											<td>3,200</td>
+											<td><span class="label" style="background:#005098"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1966</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="1842">Orebro SK</td>
+											<td><img src="modules/fmsdb/img/flags/s/SWE.gif" alt="Sweden">  SWE</td>
+											<td>Premier Division</td>
+											<td>72K</td>
+											<td>Professional</td>
+											<td>14,400</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1908</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="8490994">1461 Trabzon</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>6K</td>
+											<td>Professional</td>
+											<td>41,513</td>
+											<td><span class="label" style="background:#00A0E0"></span> <span class="label" style="background:#A80030"></span></td>
+											<td>1998</td>
+											<td>21.4</td>
+										</tr>
+										<tr>
+											<td id="70000106">A. Selcukspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>22,459</td>
+											<td><span class="label" style="background:#008888"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1955</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="450542">A. Uskudar</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,060</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1908</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="450573">Adana D.S.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>70K</td>
+											<td>Professional</td>
+											<td>16,095</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1940</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="1862">Adanaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>77K</td>
+											<td>Professional</td>
+											<td>16,095</td>
+											<td><span class="label" style="background:#F86820"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1954</td>
+											<td>24.1</td>
+										</tr>
+										<tr>
+											<td id="455778">Akhisar Bld.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>155K</td>
+											<td>Professional</td>
+											<td>16,597</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1970</td>
+											<td>28.0</td>
+										</tr>
+										<tr>
+											<td id="458718">Alanyaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>77K</td>
+											<td>Professional</td>
+											<td>10,842</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1948</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="8478376">Alt?nordu</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>20K</td>
+											<td>Professional</td>
+											<td>51,295</td>
+											<td><span class="label" style="background:#F84028"></span> <span class="label" style="background:#F84028"></span></td>
+											<td>1923</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="455675">Amed Sportif</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>1,540</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1990</td>
+											<td>27.0</td>
+										</tr>
+										<tr>
+											<td id="1864">Ankaragucu</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>19,209</td>
+											<td><span class="label" style="background:#E8E010"></span> <span class="label" style="background:#002060"></span></td>
+											<td>1910</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="1865">Antalyaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>61K</td>
+											<td>Professional</td>
+											<td>32,539</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1966</td>
+											<td>27.7</td>
+										</tr>
+										<tr>
+											<td id="70043780">Ayd?nspor 1923</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>14,094</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1993</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="130300">Bal?kesirspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>19K</td>
+											<td>Professional</td>
+											<td>13,423</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1966</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="130304">Band?rmaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,708</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#901000"></span></td>
+											<td>1965</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="130343">Basaksehir</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>387K</td>
+											<td>Professional</td>
+											<td>17,319</td>
+											<td><span class="label" style="background:#303868"></span> <span class="label" style="background:#F87000"></span></td>
+											<td>1990</td>
+											<td>28.4</td>
+										</tr>
+										<tr>
+											<td id="1866">Besiktas</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>3M</td>
+											<td>Professional</td>
+											<td>41,903</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1903</td>
+											<td>27.2</td>
+										</tr>
+										<tr>
+											<td id="130354">Boluspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>14K</td>
+											<td>Professional</td>
+											<td>8,881</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1965</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="130348">Bucaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>10,500</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#002060"></span></td>
+											<td>1928</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="8491577">BUGSASSpor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,271</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#002080"></span></td>
+											<td>1984</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="1867">Bursaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>43,331</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1963</td>
+											<td>27.3</td>
+										</tr>
+										<tr>
+											<td id="1868">Denizlispor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>5K</td>
+											<td>Professional</td>
+											<td>15,459</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1966</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="130377">Elaz?gspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>13K</td>
+											<td>Professional</td>
+											<td>14,467</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1967</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="70054558">Erzurum Bld.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>23,700</td>
+											<td><span class="label" style="background:#0078F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2010</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="1301257">Eskisehirspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>50K</td>
+											<td>Professional</td>
+											<td>34,930</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1965</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="459181">Etimesgut Bld.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1990</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="130289">Eyupspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>3,250</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#503098"></span></td>
+											<td>1919</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="458631">F. Karagumruk</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>6,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1926</td>
+											<td>22.2</td>
+										</tr>
+										<tr>
+											<td id="1870">Fenerbahce</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>50,509</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1907</td>
+											<td>26.8</td>
+										</tr>
+										<tr>
+											<td id="457419">Fethiyespor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,372</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#002060"></span></td>
+											<td>1933</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="1871">Galatasaray</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>258K</td>
+											<td>Professional</td>
+											<td>52,652</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1905</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="130341">Gaziantep Bld.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>7K</td>
+											<td>Professional</td>
+											<td>16,981</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1988</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="1872">Gaziantepspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>194K</td>
+											<td>Professional</td>
+											<td>16,981</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1969</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1873">Genclerbirligi</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>65K</td>
+											<td>Professional</td>
+											<td>19,209</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1923</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="130367">Giresunspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>14K</td>
+											<td>Professional</td>
+											<td>11,060</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1967</td>
+											<td>27.2</td>
+										</tr>
+										<tr>
+											<td id="130338">Goztepe</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>39K</td>
+											<td>Professional</td>
+											<td>6,700</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1925</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="450544">Gumushanespor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1995</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="130365">Hacettepe</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>37,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#383058"></span></td>
+											<td>1948</td>
+											<td>22.2</td>
+										</tr>
+										<tr>
+											<td id="130342">Hatayspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>6,765</td>
+											<td><span class="label" style="background:#800020"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1967</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="453682">Inegolspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,975</td>
+											<td><span class="label" style="background:#B00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1954</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1874">Istanbulspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,338</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1990</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="130298">K. Marasspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>15,050</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1969</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="450550">K?rklarelispor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1968</td>
+											<td>27.5</td>
+										</tr>
+										<tr>
+											<td id="130368">Karabukspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>77K</td>
+											<td>Professional</td>
+											<td>11,300</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1969</td>
+											<td>28.0</td>
+										</tr>
+										<tr>
+											<td id="1301256">Kars?yaka</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>53K</td>
+											<td>Professional</td>
+											<td>10,500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#007850"></span></td>
+											<td>1912</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="130360">Kas?mpasa</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>774K</td>
+											<td>Professional</td>
+											<td>14,234</td>
+											<td><span class="label" style="background:#2850A0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1921</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="70061804">Kastamonuspor 1966</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>4,033</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1942</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="8481880">Kayseri Erciyesspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>32,864</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1966</td>
+											<td>19.7</td>
+										</tr>
+										<tr>
+											<td id="1875">Kayserispor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>361K</td>
+											<td>Professional</td>
+											<td>32,864</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1966</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="454840">Keciorengucu</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,040</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#7868C0"></span></td>
+											<td>1987</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="459119">Kocaeli Birlik</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1995</td>
+											<td>27.1</td>
+										</tr>
+										<tr>
+											<td id="130344">Konyaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>258K</td>
+											<td>Professional</td>
+											<td>41,981</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1981</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="456059">Manisaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>16,597</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1965</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="70028001">Menemen Bld.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1993</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
+											<td id="130345">Mersin I.Y.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>29K</td>
+											<td>Professional</td>
+											<td>25,497</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1925</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="130351">Nazilli Bld.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1984</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="70054569">Nigde Bld.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1990</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="454646">Ofspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,303</td>
+											<td><span class="label" style="background:#C80000"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1979</td>
+											<td>22.3</td>
+										</tr>
+										<tr>
+											<td id="130355">Osmanl?spor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>774K</td>
+											<td>Professional</td>
+											<td>19,626</td>
+											<td><span class="label" style="background:#081030"></span> <span class="label" style="background:#E0D8C8"></span></td>
+											<td>1978</td>
+											<td>26.9</td>
+										</tr>
+										<tr>
+											<td id="130362">Pendikspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1950</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="130366">Rizespor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>94K</td>
+											<td>Professional</td>
+											<td>15,558</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1953</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="1878">Samsunspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>16,679</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E02818"></span></td>
+											<td>1965</td>
+											<td>23.1</td>
+										</tr>
+										<tr>
+											<td id="130380">Sanl?urfaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>65K</td>
+											<td>Professional</td>
+											<td>28,695</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1969</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1301254">Sar?yer</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1940</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="70054556">Sivas Bld.</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1949</td>
+											<td>23.7</td>
+										</tr>
+										<tr>
+											<td id="130382">Sivasspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>57K</td>
+											<td>Professional</td>
+											<td>27,532</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1967</td>
+											<td>27.7</td>
+										</tr>
+										<tr>
+											<td id="455003">Tepecikspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1988</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="456152">Tokatspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,762</td>
+											<td><span class="label" style="background:#901000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1969</td>
+											<td>27.0</td>
+										</tr>
+										<tr>
+											<td id="1879">Trabzonspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>Super League</td>
+											<td>774K</td>
+											<td>Professional</td>
+											<td>24,169</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1967</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="70078171">Tuzlaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League Red</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,200</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1954</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="453567">Umraniyespor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1938</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="130378">Y. Malatyaspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>1. League</td>
+											<td>14K</td>
+											<td>Professional</td>
+											<td>13,020</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1986</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="70061827">Zonguldak Komurspor</td>
+											<td><img src="modules/fmsdb/img/flags/s/TUR.gif" alt="Turkey">  TUR</td>
+											<td>2. League White</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>13,795</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#002060"></span></td>
+											<td>1986</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="135454">Al-Ahli (UAE)</td>
+											<td><img src="modules/fmsdb/img/flags/s/UAE.gif" alt="U.A.E.">  UAE</td>
+											<td>Pro League</td>
+											<td>3M</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1970</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="950376">Al-Ain</td>
+											<td><img src="modules/fmsdb/img/flags/s/UAE.gif" alt="U.A.E.">  UAE</td>
+											<td>Pro League</td>
+											<td>4M</td>
+											<td>Professional</td>
+											<td>25,965</td>
+											<td><span class="label" style="background:#501080"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1968</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="135450">Al-Jazira (UAE)</td>
+											<td><img src="modules/fmsdb/img/flags/s/UAE.gif" alt="U.A.E.">  UAE</td>
+											<td>Pro League</td>
+											<td>3M</td>
+											<td>Professional</td>
+											<td>42,056</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1974</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="135443">Al-Shabab (UAE)</td>
+											<td><img src="modules/fmsdb/img/flags/s/UAE.gif" alt="U.A.E.">  UAE</td>
+											<td>Pro League</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>13,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1958</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="135430">Al-Wahda (UAE)</td>
+											<td><img src="modules/fmsdb/img/flags/s/UAE.gif" alt="U.A.E.">  UAE</td>
+											<td>Pro League</td>
+											<td>4M</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#D8B028"></span> <span class="label" style="background:#781828"></span></td>
+											<td>1974</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="71089946">Arsenal-Kyiv</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>0</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2014</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="71017851">Avangard Kramatorsk</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,500</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1955</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="484458">Bukovyna</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1952</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="71047450">Cherkaskyi Dnipro</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>10,321</td>
+											<td><span class="label" style="background:#1838F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2010</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="1884">Chornomorets</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>23K</td>
+											<td>Professional</td>
+											<td>34,164</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1936</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="484484">Desna</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>45K</td>
+											<td>Professional</td>
+											<td>12,500</td>
+											<td><span class="label" style="background:#E0E0E0"></span> <span class="label" style="background:#080048"></span></td>
+											<td>1960</td>
+											<td>25.5</td>
+										</tr>
+										<tr>
+											<td id="1886">Dnipro</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>768K</td>
+											<td>Professional</td>
+											<td>31,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0860C0"></span></td>
+											<td>1918</td>
+											<td>24.0</td>
+										</tr>
+										<tr>
+											<td id="1885">Dynamo Kyiv</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>12M</td>
+											<td>Professional</td>
+											<td>70,050</td>
+											<td><span class="label" style="background:#0030A0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1927</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="5317918">Gelios</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>8K</td>
+											<td>Professional</td>
+											<td>4,924</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#88E830"></span></td>
+											<td>2002</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="485831">Girnyk-Sport</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1989</td>
+											<td>24.7</td>
+										</tr>
+										<tr>
+											<td id="130870">Illichivets</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>23K</td>
+											<td>Professional</td>
+											<td>12,673</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1938</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="71076802">Ingulets Petrove</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>50K</td>
+											<td>Professional</td>
+											<td>1,720</td>
+											<td><span class="label" style="background:#F8D000"></span> <span class="label" style="background:#00C030"></span></td>
+											<td>2013</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="1887">Karpaty</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>28,051</td>
+											<td><span class="label" style="background:#48C078"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1963</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="71063212">Kolos Kovalivka</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>0</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2012</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="1894">Mykolaiv</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>15,600</td>
+											<td><span class="label" style="background:#0040D0"></span> <span class="label" style="background:#0040D0"></span></td>
+											<td>1920</td>
+											<td>26.7</td>
+										</tr>
+										<tr>
+											<td id="485835">Naftovyk-Ukrnafta</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>50K</td>
+											<td>Professional</td>
+											<td>5,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1980</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="71075348">Obolon-Brewer</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>2013</td>
+											<td>27.2</td>
+										</tr>
+										<tr>
+											<td id="484460">Olexandriya</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>10K</td>
+											<td>Professional</td>
+											<td>5,692</td>
+											<td><span class="label" style="background:#F8F000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1991</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="5321800">Olimpik D</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2001</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="71005230">Poltava</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>768</td>
+											<td>Professional</td>
+											<td>3,700</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2007</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="1895">Shakhtar</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>23M</td>
+											<td>Professional</td>
+											<td>33,400</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F87000"></span></td>
+											<td>1936</td>
+											<td>27.2</td>
+										</tr>
+										<tr>
+											<td id="71028330">Skala Stryi</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>8,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#1068F8"></span></td>
+											<td>2004</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="5312711">Stal Kam'yans'ke</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>2,900</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#F8D000"></span></td>
+											<td>1926</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="5313097">Sumy</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>12K</td>
+											<td>Professional</td>
+											<td>25,830</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0010D8"></span></td>
+											<td>2008</td>
+											<td>22.0</td>
+										</tr>
+										<tr>
+											<td id="71024197">Ternopil</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>15,150</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2007</td>
+											<td>23.8</td>
+										</tr>
+										<tr>
+											<td id="1900">Veres</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>First League</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>25,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1957</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="1901">Volyn</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>77K</td>
+											<td>Professional</td>
+											<td>11,345</td>
+											<td><span class="label" style="background:#B00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1960</td>
+											<td>22.9</td>
+										</tr>
+										<tr>
+											<td id="1301293">Vorskla</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>15K</td>
+											<td>Professional</td>
+											<td>24,855</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1955</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="71005232">Zirka</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>1K</td>
+											<td>Professional</td>
+											<td>14,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1911</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1902">Zorya</td>
+											<td><img src="modules/fmsdb/img/flags/s/UKR.gif" alt="Ukraine">  UKR</td>
+											<td>Premier League</td>
+											<td>77K</td>
+											<td>Professional</td>
+											<td>11,756</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1923</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="8825225">Atenas de San Carlos</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>2K</td>
+											<td>Professional</td>
+											<td>4,900</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#002080"></span></td>
+											<td>1928</td>
+											<td>25.7</td>
+										</tr>
+										<tr>
+											<td id="5512793">Boston River</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>2K</td>
+											<td>Professional</td>
+											<td>4,000</td>
+											<td><span class="label" style="background:#C80000"></span> <span class="label" style="background:#006030"></span></td>
+											<td>1939</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="78046974">Canadian S.C.</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>768</td>
+											<td>Professional</td>
+											<td>1,500</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>2010</td>
+											<td>22.8</td>
+										</tr>
+										<tr>
+											<td id="1916">Central Espanol</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>691</td>
+											<td>Professional</td>
+											<td>5,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1905</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="5512780">Cerrito</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>691</td>
+											<td>Professional</td>
+											<td>4,200</td>
+											<td><span class="label" style="background:#008030"></span> <span class="label" style="background:#F8F000"></span></td>
+											<td>1929</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="1917">Cerro</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>3K</td>
+											<td>Professional</td>
+											<td>18,000</td>
+											<td><span class="label" style="background:#60C0F8"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1922</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="8825223">Cerro Largo F.C.</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>768</td>
+											<td>Professional</td>
+											<td>9,500</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0078F8"></span></td>
+											<td>2002</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="1918">Danubio</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>6K</td>
+											<td>Professional</td>
+											<td>14,401</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1932</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td id="1919">Defensor Sporting</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>7K</td>
+											<td>Professional</td>
+											<td>9,357</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#503098"></span></td>
+											<td>1913</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="116309">Deportivo Maldonado</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>3K</td>
+											<td>Professional</td>
+											<td>22,000</td>
+											<td><span class="label" style="background:#C80000"></span> <span class="label" style="background:#00A030"></span></td>
+											<td>1928</td>
+											<td>24.9</td>
+										</tr>
+										<tr>
+											<td id="5512557">El Tanque Sisley</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>768</td>
+											<td>Professional</td>
+											<td>3,700</td>
+											<td><span class="label" style="background:#00A030"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1941</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="5512337">Fenix</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>4K</td>
+											<td>Professional</td>
+											<td>5,550</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#7050B0"></span></td>
+											<td>1916</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="130848">Juventud de Las Piedras</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>3K</td>
+											<td>Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1935</td>
+											<td>24.2</td>
+										</tr>
+										<tr>
+											<td id="1920">Liverpool de Montevideo</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>3K</td>
+											<td>Professional</td>
+											<td>6,589</td>
+											<td><span class="label" style="background:#1860F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1915</td>
+											<td>25.2</td>
+										</tr>
+										<tr>
+											<td id="5512559">Miramar Misiones</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>768</td>
+											<td>Professional</td>
+											<td>6,543</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1906</td>
+											<td>23.0</td>
+										</tr>
+										<tr>
+											<td id="1921">Nacional</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>27K</td>
+											<td>Professional</td>
+											<td>24,613</td>
+											<td><span class="label" style="background:#0050D0"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1899</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="1922">Penarol</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>27K</td>
+											<td>Professional</td>
+											<td>40,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E8E010"></span></td>
+											<td>1891</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="5512779">Plaza Colonia</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>2K</td>
+											<td>Professional</td>
+											<td>6,400</td>
+											<td><span class="label" style="background:#108830"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1917</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="1923">Progreso</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>614</td>
+											<td>Professional</td>
+											<td>5,675</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#E8E010"></span></td>
+											<td>1917</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="130849">Racing de Montevideo</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>2K</td>
+											<td>Professional</td>
+											<td>5,600</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1919</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="1924">Rampla Juniors</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>1K</td>
+											<td>Professional</td>
+											<td>6,929</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#00A030"></span></td>
+											<td>1914</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="115039">Rentistas</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>2K</td>
+											<td>Professional</td>
+											<td>6,272</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1933</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="1925">River Plate de Montevideo</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>3K</td>
+											<td>Professional</td>
+											<td>6,224</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1932</td>
+											<td>23.6</td>
+										</tr>
+										<tr>
+											<td id="5512556">Sud America</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>4K</td>
+											<td>Professional</td>
+											<td>3,810</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F85000"></span></td>
+											<td>1914</td>
+											<td>25.0</td>
+										</tr>
+										<tr>
+											<td id="130852">Tacuarembo F.C.</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>768</td>
+											<td>Professional</td>
+											<td>8,600</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00808"></span></td>
+											<td>1998</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="78027478">Torque</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>768</td>
+											<td>Professional</td>
+											<td>7,320</td>
+											<td><span class="label" style="background:#002080"></span> <span class="label" style="background:#60C0F8"></span></td>
+											<td>2007</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="130851">Villa Espanola</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>691</td>
+											<td>Professional</td>
+											<td>3,700</td>
+											<td><span class="label" style="background:#E8E010"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1952</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="78012164">Villa Teresa</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>7,320</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1942</td>
+											<td>24.8</td>
+										</tr>
+										<tr>
+											<td id="1926">Wanderers</td>
+											<td><img src="modules/fmsdb/img/flags/s/URU.gif" alt="Uruguay">  URU</td>
+											<td>First Division</td>
+											<td>6K</td>
+											<td>Professional</td>
+											<td>9,064</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1902</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="72047296">Atlanta United</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>Lower Leagues</td>
+											<td>1M</td>
+											<td>Professional</td>
+											<td>60,500</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>2017</td>
+											<td>21.9</td>
+										</tr>
+										<tr>
+											<td id="108893">Chicago</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>499K</td>
+											<td>Professional</td>
+											<td>20,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#B82848"></span></td>
+											<td>1997</td>
+											<td>25.4</td>
+										</tr>
+										<tr>
+											<td id="1903">Colorado</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>307K</td>
+											<td>Professional</td>
+											<td>18,061</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#503040"></span></td>
+											<td>1996</td>
+											<td>26.4</td>
+										</tr>
+										<tr>
+											<td id="1904">Columbus</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>576K</td>
+											<td>Professional</td>
+											<td>19,968</td>
+											<td><span class="label" style="background:#F84010"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1996</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="1913">D.C. United</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>692K</td>
+											<td>Professional</td>
+											<td>45,596</td>
+											<td><span class="label" style="background:#E00000"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1996</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="1905">FC Dallas</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>15,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#B00000"></span></td>
+											<td>1996</td>
+											<td>25.3</td>
+										</tr>
+										<tr>
+											<td id="72000112">Houston</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>999K</td>
+											<td>Professional</td>
+											<td>22,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#F8A030"></span></td>
+											<td>2006</td>
+											<td>26.1</td>
+										</tr>
+										<tr>
+											<td id="1907">Los Angeles</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>3M</td>
+											<td>Professional</td>
+											<td>27,000</td>
+											<td><span class="label" style="background:#C89048"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1996</td>
+											<td>27.2</td>
+										</tr>
+										<tr>
+											<td id="20030048">Minnesota</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>Second Division</td>
+											<td>0</td>
+											<td>Professional</td>
+											<td>12,000</td>
+											<td><span class="label" style="background:#688898"></span> <span class="label" style="background:#303850"></span></td>
+											<td>0</td>
+											<td>27.8</td>
+										</tr>
+										<tr>
+											<td id="1909">New England</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>384K</td>
+											<td>Professional</td>
+											<td>66,829</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#304058"></span></td>
+											<td>1996</td>
+											<td>26.0</td>
+										</tr>
+										<tr>
+											<td id="72000160">New York</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>25,000</td>
+											<td><span class="label" style="background:#B00000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1996</td>
+											<td>25.9</td>
+										</tr>
+										<tr>
+											<td id="72041885">NYCFC</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>5M</td>
+											<td>Professional</td>
+											<td>49,638</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#98D0F0"></span></td>
+											<td>2015</td>
+											<td>26.8</td>
+										</tr>
+										<tr>
+											<td id="72014193">Orlando City</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>2M</td>
+											<td>Professional</td>
+											<td>60,700</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#5848A0"></span></td>
+											<td>2010</td>
+											<td>24.4</td>
+										</tr>
+										<tr>
+											<td id="72019000">Philadelphia</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>231K</td>
+											<td>Professional</td>
+											<td>18,500</td>
+											<td><span class="label" style="background:#988060"></span> <span class="label" style="background:#383840"></span></td>
+											<td>2010</td>
+											<td>25.6</td>
+										</tr>
+										<tr>
+											<td id="975489">Portland</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>1M</td>
+											<td>Professional</td>
+											<td>22,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#405840"></span></td>
+											<td>1975</td>
+											<td>26.3</td>
+										</tr>
+										<tr>
+											<td id="980543">Real Salt Lake</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>615K</td>
+											<td>Professional</td>
+											<td>20,213</td>
+											<td><span class="label" style="background:#283868"></span> <span class="label" style="background:#C84058"></span></td>
+											<td>2005</td>
+											<td>26.2</td>
+										</tr>
+										<tr>
+											<td id="1910">San Jose</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>461K</td>
+											<td>Professional</td>
+											<td>18,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#2850B0"></span></td>
+											<td>1974</td>
+											<td>27.1</td>
+										</tr>
+										<tr>
+											<td id="72014006">Seattle</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>768K</td>
+											<td>Professional</td>
+											<td>68,000</td>
+											<td><span class="label" style="background:#385890"></span> <span class="label" style="background:#80A858"></span></td>
+											<td>2009</td>
+											<td>27.0</td>
+										</tr>
+										<tr>
+											<td id="72023746">Sporting Kansas City</td>
+											<td><img src="modules/fmsdb/img/flags/s/USA.gif" alt="U.S.A.">  USA</td>
+											<td>MLS</td>
+											<td>999K</td>
+											<td>Professional</td>
+											<td>18,467</td>
+											<td><span class="label" style="background:#183858"></span> <span class="label" style="background:#C0D8F0"></span></td>
+											<td>1996</td>
+											<td>26.5</td>
+										</tr>
+										<tr>
+											<td id="1927">Aberystwyth</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>10K</td>
+											<td>Semi-Professional</td>
+											<td>2,502</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#108830"></span></td>
+											<td>1884</td>
+											<td>22.7</td>
+										</tr>
+										<tr>
+											<td id="350949">Airbus UK</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>3K</td>
+											<td>Semi-Professional</td>
+											<td>1,600</td>
+											<td><span class="label" style="background:#002060"></span> <span class="label" style="background:#0030A0"></span></td>
+											<td>1946</td>
+											<td>23.9</td>
+										</tr>
+										<tr>
+											<td id="358409">Bala</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>45K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1880</td>
+											<td>27.9</td>
+										</tr>
+										<tr>
+											<td id="1929">Bangor City</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>25K</td>
+											<td>Semi-Professional</td>
+											<td>3,400</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#0050D0"></span></td>
+											<td>1893</td>
+											<td>24.6</td>
+										</tr>
+										<tr>
+											<td id="1938">Cardiff Met Uni</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>0</td>
+											<td>Amateur</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#001040"></span> <span class="label" style="background:#901818"></span></td>
+											<td>2000</td>
+											<td>23.3</td>
+										</tr>
+										<tr>
+											<td id="1301340">Carmarthen</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>3K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#D8B028"></span></td>
+											<td>1948</td>
+											<td>25.8</td>
+										</tr>
+										<tr>
+											<td id="350022">Cefn Druids</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>2K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1872</td>
+											<td>25.1</td>
+										</tr>
+										<tr>
+											<td id="1932">Connah's Quay</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>50K</td>
+											<td>Semi-Professional</td>
+											<td>3,500</td>
+											<td><span class="label" style="background:#B00000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1946</td>
+											<td>27.2</td>
+										</tr>
+										<tr>
+											<td id="350239">Llandudno</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>30K</td>
+											<td>Semi-Professional</td>
+											<td>2,000</td>
+											<td><span class="label" style="background:#F8F8F8"></span> <span class="label" style="background:#000000"></span></td>
+											<td>1921</td>
+											<td>24.5</td>
+										</tr>
+										<tr>
+											<td id="1943">Newtown</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>5K</td>
+											<td>Semi-Professional</td>
+											<td>3,372</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#E00000"></span></td>
+											<td>1875</td>
+											<td>26.6</td>
+										</tr>
+										<tr>
+											<td id="1945">Rhyl</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>8K</td>
+											<td>Semi-Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#000000"></span> <span class="label" style="background:#F8F8F8"></span></td>
+											<td>1883</td>
+											<td>23.4</td>
+										</tr>
+										<tr>
+											<td id="1940">TNS</td>
+											<td><img src="modules/fmsdb/img/flags/s/WAL.gif" alt="Wales">  WAL</td>
+											<td>Welsh Premier League</td>
+											<td>55K</td>
+											<td>Professional</td>
+											<td>3,000</td>
+											<td><span class="label" style="background:#F0F0F0"></span> <span class="label" style="background:#008030"></span></td>
+											<td>1959</td>
+											<td>25.9</td>
+										</tr>
 									</tbody>
 								</table>
 							</div>
