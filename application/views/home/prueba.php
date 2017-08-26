@@ -22,10 +22,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<table class="table table-striped table-hover dataTable" id="FM">
 									<thead>
 										<tr>
-											<th class="coltop">Name</th>
-											<!--<th class="coltop">ID</th>-->
-											<th class="coltop">Nation</th>
-											<th class="coltop">Division</th>
+											<th class="coltop">Equipo</th>
+											<th class="coltop">Id</th>
+											<th class="coltop">Pais</th>
+											<th class="coltop">Torneo</th>
 											<th class="coltop">Transfer Budget</th>
 											<th class="coltop">Status</th>
 											<th class="coltop">Stadium Capacity</th>
@@ -23943,3 +23943,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=es-419&utm_source=chrome-ntp-launcher
 </script>
 </html>
+si gord
