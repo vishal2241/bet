@@ -22,7 +22,7 @@ class Sync extends CI_Controller {
 	public function syncMatches(){
 		ini_set('memory_limit','16000000M');
 		set_time_limit(0);
-		$this->Request->FECHA=4;  
+		$this->Request->FECHA=3;  
 		$matches=$this->Request->getMatches();  
 		#echo count($matches);  
 		#print_r($matches); exit();

@@ -9,6 +9,11 @@ class Equipos extends CI_Controller {
 		$this->User->check();
 	}
 
+	public function logos(){
+		$data['equipos']  = $this->Equipo->index();
+		$this->load->view('equipos/logos', $data);
+	} 
+
 	public function fm(){
 		$this->load->view('equipos/fm');
 	} 

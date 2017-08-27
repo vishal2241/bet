@@ -19,6 +19,18 @@ class Equipo extends CI_Model
 	}
 
 
+
+	public function index()
+	{
+		$query = $this->db->query('SELECT e.NOMBRE, e.IMG, p.NOMBRE AS PAIS FROM equipo e LEFT JOIN pais p ON (p.ID_PAIS=e.ID_PAIS) WHERE e.ID_PAIS IS NOT NULL ORDER BY p.NOMBRE ASC, e.NOMBRE ASC');
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	}
+
 	public function getEquipo()
 	{
 		$query = $this->db->query('SELECT * FROM equipo WHERE ID_EQUIPO='.$this->ID_EQUIPO.' ');
