@@ -71,8 +71,8 @@ class Partido extends CI_Model
 		v.NOMBRE  AS VISITANTE,
 		l.IMG AS IMG_L,
 		v.IMG AS IMG_V,
-		pl.NOMBRE AS PAIS_L,
-		pv.NOMBRE AS PAIS_V
+		pl.IMG AS PAIS_L,
+		pv.IMG AS PAIS_V
 		FROM partido p 
 		LEFT JOIN equipo l ON (l.ID_EQUIPO=p.LOCAL) 
 		LEFT JOIN equipo v ON (v.ID_EQUIPO=p.VISITANTE)  

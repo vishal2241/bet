@@ -117,11 +117,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(match) {
 									
 									$.each(match, function(a, row) {
+										if (row.IMG_L=='NO' || row.IMG_L==null ) {
+											var imL='default.png';
+										} else {
+											var imL='team/'+row.PAIS_L+'/'+row.IMG_L+'.png';
+										}
+										if (row.IMG_V=='NO') {
+											var imV='default.png';
+										} else {
+											var imV='team/'+row.PAIS_L+'/'+row.IMG_V+'.png';
+										}
+
 										$("#bets > tbody #"+compe+"").after('\
 											<tr id='+ row.ID_PARTIDO+'>\
 												<td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
-												<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/team/'+row.PAIS_L+'/'+row.IMG_L+'.png"><br>'+ row.LOCAL+'</td>'+
-												'<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/team/'+row.PAIS_V+'/'+row.IMG_V+'.png"><br>'+ row.VISITANTE+'</td>');
+												<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ row.LOCAL+'</td>'+
+												'<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ row.VISITANTE+'</td>');
 
 										var match=row.ID_PARTIDO;
 										$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
