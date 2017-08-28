@@ -101,8 +101,8 @@ class Partido extends CI_Model
 	{
 		$sql="SELECT 
 		p.ID_PARTIDO,
-		p.LOCAL,
-		p.VISITANTE,
+		l.NOMBRE AS LOCAL,
+		v.NOMBRE AS VISITANTE,
 		p.ESTADO,
 		p.FECHA,
 		p.HORARIO,
@@ -112,6 +112,8 @@ class Partido extends CI_Model
 		FROM partido p
 		LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
 		LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
+		LEFT JOIN equipo l ON (l.ID_EQUIPO=p.LOCAL) 
+		LEFT JOIN equipo v ON (v.ID_EQUIPO=p.VISITANTE) 
 		WHERE ";
 
 		switch ($filtro) {
