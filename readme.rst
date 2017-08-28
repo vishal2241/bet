@@ -31,6 +31,7 @@ Request
 -  `betbtc <https://icecreamapps.com/es/Image-Resizer/>`_
 -  `Readme <https://help.github.com/articles/basic-writing-and-formatting-syntax/>`_
 -  `tcmlogos <https://www.tcmlogos.com/download/tcm17.html>`_
+-  `FM teams <https://sortitoutsi.net/search/database?q=&game_id=8&type=team>`_
 
 
 $ SELECT * FROM vista_odds WHERE fecha_event > "2017-07-22 11:28:56" AND fecha_event<"2017-07-22 23:59:59" AND autorizado="1" ORDER BY prioridad DESC, name_country ASC, name_torne ASC, fecha_event ASC
