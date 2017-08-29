@@ -99,7 +99,7 @@ class Partido extends CI_Model
 	public function getTotalMatch($date)
 	{
 		$sql="
-		SELECT count(*)
+		SELECT count(*) AS TOTAL
 		FROM partido p 
 		WHERE
 		p.FECHA = '".$date."'

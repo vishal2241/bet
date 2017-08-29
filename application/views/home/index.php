@@ -25,7 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<i class="material-icons">event</i> Pasado Mañana
 							</button>
 							<!-- tables row -->
-							<h2 class="text-center" id="titulo"></h2>
+							<h3 class="text-center text-uppercase bold"  id="titulo"></h3>
+							<p class="text-center text-uppercase bold"  id="totalDia"></p>
 							<div class="table-responsive" id="all">
 								<table class="table table-bordered" id="bets">
 									<tbody>
@@ -98,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript">
 
 				function get_bets (fecha, url) {
-				 
+
 					$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
 						if (jsonCompe!=null) {
 							$.each(jsonCompe, function(i, item) {
@@ -171,7 +172,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							});
 						} //if Compe
 					},"json");
+				} // End get_bets()
+
+				function get_totalMatch(fecha, url) {
+					$.post(url+'ajax/json_totalMatch', {fecha: fecha}, function(data, status){
+						$.each(data, function(a, row) { 
+							$("#totalDia").empty();
+							$("#totalDia").append("Total partidos : "+row.TOTAL);
+						});
+
+					}, 'json');
 				}
+
+
 				$( document ).ready(function() {
 					moment.locale('es');
 					var url= '<?= base_url(); ?>';
@@ -181,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
 					get_bets(fecha, url);
-
+					get_totalMatch(fecha, url);
 
 					$( "#today" ).click(function() {
 						$("#titulo").empty();
@@ -189,6 +202,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						var fecha=moment().format('YYYY-MM-DD');  
 						$("#bets > tbody").empty();
 						get_bets(fecha, url);
+						get_totalMatch(fecha, url);
 					});
 
 					$( "#tomorrow" ).click(function() {
@@ -197,6 +211,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
 						$("#bets > tbody").empty();
 						get_bets(fecha, url);
+						get_totalMatch(fecha, url);
 					});
 
 					$( "#after-tomorrow" ).click(function() {
@@ -204,6 +219,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
 						var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
 						$("#bets > tbody").empty();
+						get_totalMatch(fecha, url);
 						get_bets(fecha, url);
 					});
 

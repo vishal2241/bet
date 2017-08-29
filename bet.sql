@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-08-2017 a las 15:48:01
+-- Tiempo de generación: 29-08-2017 a las 20:00:16
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -14643,7 +14643,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (10194, 'Clyde', 240, 'Escocia', '1548', '2017-08-28 15:48:38'),
 (10196, 'Partick Thistle', 240, 'Escocia', '1586', '2017-08-28 15:48:38'),
 (10198, 'Hamilton', 240, 'Escocia', '1572', '2017-08-28 15:48:38'),
-(10307, 'France', 248, 'Internacional', 'Francia', '2017-08-29 15:26:23'),
+(10307, 'France', 248, 'Internacional', '769', '2017-08-29 15:53:45'),
 (10308, 'Uruguay', 248, 'Internacional', '1657', '2017-08-29 14:22:15'),
 (10309, 'Paraguay', 248, 'Internacional', '1655', '2017-08-29 14:22:15'),
 (10310, 'Sudáfrica', 248, 'Internacional', '45', '2017-08-29 15:27:13'),
@@ -14681,7 +14681,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (14708, 'FC Wil 1900', 192, 'Suiza', '130820', '2017-08-28 15:48:38'),
 (14709, 'FC Thun', 192, 'Suiza', '514173', '2017-08-28 15:48:38'),
 (14717, 'Reims', 147, 'Francia', '2047', '2017-08-28 20:53:53'),
-(14719, 'Clermont', 147, 'Francia', 'Clermont', '2017-08-28 20:54:09'),
+(14719, 'Clermont', 147, 'Francia', '1992', '2017-08-29 15:54:01'),
 (14721, 'Toulouse', 147, 'Francia', '886', '2017-08-28 20:54:20'),
 (14727, 'FC Roskilde', NULL, NULL, '943835', '2017-08-26 23:19:35'),
 (14731, 'Jammerbugt FC', 135, 'Dinamarca', '2116', '2017-08-29 14:38:10'),
@@ -14793,7 +14793,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (75063, 'Stevenage', 243, 'Inglaterra', '719', '2017-08-28 15:48:38'),
 (75675, 'Olimpia', 221, 'Paraguay', '102924', '2017-08-28 15:48:38'),
 (75769, 'Morecambe', 243, 'Inglaterra', '687', '2017-08-28 15:48:38'),
-(76222, 'Real Union', 142, 'España', 'no', '2017-08-29 14:49:49'),
+(76222, 'Real Union', 142, 'España', 'NO', '2017-08-29 19:52:14'),
 (76233, 'SC Telstar', 122, 'Holanda', '1043', '2017-08-28 21:11:58'),
 (76234, 'ADO Den Haag', 122, 'Holanda', '986', '2017-08-28 15:48:38'),
 (76235, 'Jong Ajax', 122, 'Holanda', '992', '2017-08-28 21:08:53'),
@@ -14803,7 +14803,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (76451, 'Kazajistán', 248, 'Internacional', '119', '2017-08-29 15:36:04'),
 (76452, 'Egipto', 248, 'Internacional', '16', '2017-08-29 15:37:28'),
 (76453, 'Australia', 248, 'Internacional', '1435', '2017-08-29 14:22:15'),
-(76519, 'Bourg-en-Bresse', 147, 'Francia', 'Bourg-en-Bresse', '2017-08-28 20:57:15'),
+(76519, 'Bourg-en-Bresse', 147, 'Francia', '1980', '2017-08-29 15:54:11'),
 (76552, 'Tailandia', 248, 'Internacional', '140', '2017-08-29 15:47:29'),
 (76553, 'Qatar', 248, 'Internacional', '132', '2017-08-29 14:22:15'),
 (76600, 'FC Dallas', 4, 'Estados Unidos', '1905', '2017-08-28 15:48:38'),
@@ -14899,7 +14899,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (79493, 'Torpedo Moskva', 79, 'Rusia', '130498', '2017-08-28 16:28:53'),
 (79501, 'Debreceni VSC', 57, 'Hungría', '1052', '2017-08-28 15:48:38'),
 (80143, '1. FC Magdeburg', 161, 'Alemania', '2233', '2017-08-28 15:48:38'),
-(80376, '1. FSV Mainz 05 Am.', NULL, NULL, '879282', '2017-08-28 22:46:07'),
+(80376, '1. FSV Mainz 05 Am.', 161, NULL, '879282', '2017-08-29 15:49:48'),
 (80394, 'Konyaspor', 103, 'Turquia', '130344', '2017-08-28 15:48:38'),
 (80458, 'MTK Budapest', 57, 'Hungría', '1060', '2017-08-28 15:48:38'),
 (80514, 'Ross County', 240, 'Escocia', '1593', '2017-08-28 15:48:38'),
@@ -14949,7 +14949,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (86618, 'Berwick Rangers', 240, 'Escocia', '1543', '2017-08-28 15:48:38'),
 (86619, 'Montrose', 240, 'Escocia', '1583', '2017-08-28 15:48:38'),
 (86621, 'Airdrieonians', 240, 'Escocia', '1537', '2017-08-28 15:48:38'),
-(86712, 'Mineros de Zacatecas', 218, 'Mexico', '51045965', '2017-08-28 15:48:38'),
+(86712, 'Mineros de Zacatecas', 218, 'Mexico', '51045865', '2017-08-29 19:59:34'),
 (86713, 'Chivas Guadalajara', 218, 'Mexico', '1255', '2017-08-28 15:48:38'),
 (86717, 'Enskede IK', NULL, NULL, '4300018', '2017-08-26 23:19:35'),
 (86726, 'Palmeiras', 183, 'Brazil', '329', '2017-08-28 20:02:06'),
@@ -15581,7 +15581,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (235634, 'Correcaminos UAT', 218, 'Mexico', '136013', '2017-08-28 15:48:38'),
 (235639, 'Leon', 218, 'Mexico', '1259', '2017-08-28 15:48:38'),
 (235640, 'Lobos BUAP', 218, 'Mexico', '5666503', '2017-08-28 15:48:38'),
-(235650, 'Universidad de Guadalajara', 218, 'Mexico', '814968', '2017-08-28 15:48:38'),
+(235650, 'Universidad de Guadalajara', 218, 'Mexico', '51042170', '2017-08-29 19:58:08'),
 (236680, 'Alianza FC', 92, 'El Salvador', '102360', '2017-08-28 20:30:28'),
 (236681, 'Deportivo Aguila', 92, 'El Salvador', '102361', '2017-08-28 20:31:02'),
 (236801, 'Nacional Potosi', NULL, NULL, '86005823', '2017-08-28 22:50:56'),
@@ -15806,7 +15806,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (341656, 'FC Balkany Zoria', 229, 'Ucrania', '71047542', '2017-08-28 15:48:38'),
 (341854, 'Dep. JBL del Zulia', 231, 'Venezuela', '86037341', '2017-08-28 15:48:38'),
 (341881, 'HNK Hajduk Split II', 55, 'Croacia', '433', '2017-08-29 14:31:52'),
-(341955, 'Arcos CF', 142, 'España', '734124', '2017-08-29 14:54:20'),
+(341955, 'Arcos CF', 142, 'España', '67000082', '2017-08-29 19:51:25'),
 (342458, 'Plaza Colonia', 230, 'Uruguay', '5512779', '2017-08-28 15:48:38'),
 (343264, 'Lorca Deportiva CF', 142, 'España', '67224700', '2017-08-29 14:54:36'),
 (345693, 'Ben Guerdane', 101, 'Tunisia', '12019347', '2017-08-28 20:50:48'),
