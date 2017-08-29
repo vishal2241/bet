@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<h2 class="text-center" id="titulo"></h2>
 							<div class="table-responsive" id="all">
-								<table class="table  table-hover tableOdds" id="bets">
+								<table class="table table-bordered tableOdds" id="bets">
 									<tbody>
 									</tbody>
 								</table>
@@ -137,49 +137,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										var match=row.ID_PARTIDO;
 										$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
 											
-											$.each(odds, function(a, rowMatch) {
-												switch(rowMatch.NOMBRE) {
-													case "_1":
-													var _1='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "_X":
-													var _X='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "_2":
-													var _2='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "_1HT":
-													var _1HT='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "_XHT":
-													var _XHT='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "_2HT":
-													var _2HT='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "_1X":
-													var _1X='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "_12":
-													var _12='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "_2X":
-													var _2X='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "over":
-													var OV='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "under":
-													var UN='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "GG":
-													var GG='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-													case "NG":
-													var NG='<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>';
-													break;
-												}
-												$("#"+match+"").append(_1+_X+_2+_1HT+_XHT+_2HT+_1X+_12+_2X+OV+UN+GG+NG);
+											$.each(odds, function(a, rowMatch) { 
+												$("#"+match+"").append('<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
 											});
 										}, "json");
 
@@ -193,14 +152,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<th class="text-center">1</th>\
 											<th class="text-center">X</th>\
 											<th class="text-center">2</th>\
+											<th class="text-center">UN</th>\
+											<th class="text-center">OV</th>\
+											<th class="text-center">1X</th>\
+											<th class="text-center">2X</th>\
+											<th class="text-center">12</th>\
 											<th class="text-center">1HT</th>\
 											<th class="text-center">XHT</th>\
 											<th class="text-center">2HT</th>\
-											<th class="text-center">1X</th>\
-											<th class="text-center">12</th>\
-											<th class="text-center">2X</th>\
-											<th class="text-center">OV</th>\
-											<th class="text-center">UN</th>\
 											<th class="text-center">GG</th>\
 											<th class="text-center">NG</th>\
 										</tr>\
@@ -208,49 +167,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 								}, "json");
 
-});
-}
-},"json");
-}
-$( document ).ready(function() {
-	moment.locale('es');
-	var url= '<?= base_url(); ?>';
-	var fecha=moment().format('YYYY-MM-DD');  
+							});
+						}
+					},"json");
+				}
+				$( document ).ready(function() {
+					moment.locale('es');
+					var url= '<?= base_url(); ?>';
+					var fecha=moment().format('YYYY-MM-DD');  
 
-	$("#titulo").empty();
-	$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+					$("#titulo").empty();
+					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
-	get_bets(fecha, url);
-
-
-	$( "#today" ).click(function() {
-		$("#titulo").empty();
-		$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-		var fecha=moment().format('YYYY-MM-DD');  
-		$("#bets > tbody").empty();
-		get_bets(fecha, url);
-	});
-
-	$( "#tomorrow" ).click(function() {
-		$("#titulo").empty();
-		$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
-		var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
-		$("#bets > tbody").empty();
-		get_bets(fecha, url);
-	});
-
-	$( "#after-tomorrow" ).click(function() {
-		$("#titulo").empty();
-		$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
-		var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
-		$("#bets > tbody").empty();
-		get_bets(fecha, url);
-	});
+					get_bets(fecha, url);
 
 
-});
+					$( "#today" ).click(function() {
+						$("#titulo").empty();
+						$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+						var fecha=moment().format('YYYY-MM-DD');  
+						$("#bets > tbody").empty();
+						get_bets(fecha, url);
+					});
+
+					$( "#tomorrow" ).click(function() {
+						$("#titulo").empty();
+						$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+						var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
+						$("#bets > tbody").empty();
+						get_bets(fecha, url);
+					});
+
+					$( "#after-tomorrow" ).click(function() {
+						$("#titulo").empty();
+						$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+						var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
+						$("#bets > tbody").empty();
+						get_bets(fecha, url);
+					});
+
+
+				});
 
 
 
-</script>
-</html>
+			</script>
+			</html>
