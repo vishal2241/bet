@@ -17,3 +17,20 @@ table {
 .panel-body { 
 	padding: 0px;
 }
+
+#bets>tbody>tr>td {
+	vertical-align: middle;
+	color: #313131;
+	padding: 5px;
+
+}
+
+#bets>tbody>tr>th {
+	vertical-align: middle;
+	color: white;
+	background-color: #0ACF1D
+}
+
+.header {
+	color : red;
+}

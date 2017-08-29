@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<h2 class="text-center" id="titulo"></h2>
 							<div class="table-responsive" id="all">
-								<table class="table table-bordered tableOdds" id="bets">
+								<table class="table table-bordered" id="bets">
 									<tbody>
 									</tbody>
 								</table>
@@ -106,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<tr id='+ item.ID+'>\
 										<td colspan="16" class="text-left" >\
 											<h4>\
-												<img width="40" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
+												<img width="64" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
 												<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
 											</h4>\
 										</td>\
@@ -138,7 +138,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
 											
 											$.each(odds, function(a, rowMatch) { 
-												$("#"+match+"").append('<td  class="text-center" width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
+												$("#"+match+"").append('<td  class="odd text-center"   width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
 											});
 										}, "json");
 
@@ -179,7 +179,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$("#titulo").empty();
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
-					get_bets(fecha, url);
+					//get_bets(fecha, url);
+					get_bets("2017-08-31", url);
 
 
 					$( "#today" ).click(function() {
