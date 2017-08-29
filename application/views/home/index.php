@@ -122,7 +122,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										} else {
 											var imL='team/'+row.PAIS_L+'/'+row.IMG_L+'.png';
 										}
-										if (row.IMG_V=='NO') {
+										if (row.IMG_V=='NO' || row.IMG_L==null) {
 											var imV='default.png';
 										} else {
 											var imV='team/'+row.PAIS_L+'/'+row.IMG_V+'.png';
@@ -179,9 +179,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$("#titulo").empty();
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
-					//get_bets(fecha, url);
-					get_bets("2017-08-31", url);
-
+					get_bets(fecha, url);
+ 
 
 					$( "#today" ).click(function() {
 						$("#titulo").empty();
