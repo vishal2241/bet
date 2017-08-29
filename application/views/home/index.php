@@ -130,9 +130,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 										$("#bets > tbody #"+compe+"").after('\
 											<tr id='+ row.ID_PARTIDO+'>\
-												<td  class="text-center" width="6%" >'+ row.HORARIO+'</td>\
-												<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ row.LOCAL+'</td>'+
-												'<td  class="text-center x12" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ row.VISITANTE+'</td>');
+												<td  class="text-center bold" width="6%" >'+ row.HORARIO+'</td>\
+												<td  class="text-center x12 bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ row.LOCAL+'</td>'+
+												'<td  class="text-center x12 bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ row.VISITANTE+'</td>');
 
 										var match=row.ID_PARTIDO;
 										$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
