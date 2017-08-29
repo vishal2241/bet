@@ -102,9 +102,11 @@ class Partido extends CI_Model
 		SELECT count(*) AS TOTAL
 		FROM partido p 
 		WHERE
-		p.FECHA = '".$date."'
-		AND p.HORARIO > '".date('HH:ii')."'
-		";
+		p.FECHA = '".$date."'";
+		if (date("Y-m-d")==$date ) {
+			$sql.=" AND p.HORARIO > '".date('HH:ii')."' ";
+		}
+		 
 
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {

@@ -179,6 +179,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$.each(data, function(a, row) { 
 							$("#totalDia").empty();
 							$("#totalDia").append("Total partidos : "+row.TOTAL);
+							
 						});
 
 					}, 'json');
