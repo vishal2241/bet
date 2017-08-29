@@ -98,9 +98,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript">
 
 				function get_bets (fecha, url) {
-					$.post(url+'ajax/json_compe', {fecha: fecha}, function(resp) {
-						if (resp!=null) {
-							$.each(resp, function(i, item) {
+				 
+					$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
+						if (jsonCompe!=null) {
+							$.each(jsonCompe, function(i, item) {
 
 								$("#bets > tbody").append('\
 									<tr id='+ item.ID+'>\
@@ -114,9 +115,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									');
 								var compe = item.ID;
 
-								$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(match) {
-									
-									$.each(match, function(a, row) {
+								$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(jsonMatch) {		
+
+									$.each(jsonMatch, function(a, row) {
 										if (row.IMG_L=='NO' || row.IMG_L==null ) {
 											var imL='default.png';
 										} else {
@@ -135,9 +136,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ row.VISITANTE+'</td>');
 
 										var match=row.ID_PARTIDO;
-										$.post(''+url+'ajax/json_odds', {match: match}, function(odds) {
+										$.post(''+url+'ajax/json_odds', {match: match}, function(jsonOdds) {
 											
-											$.each(odds, function(a, rowMatch) { 
+											$.each(jsonOdds, function(a, rowMatch) { 
 												$("#"+match+"").append('<td  class="odd text-center"   width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
 											});
 										}, "json");
@@ -164,11 +165,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<th class="text-center">NG</th>\
 										</tr>\
 										');
-
+									
 								}, "json");
 
 							});
-						}
+						} //if Compe
 					},"json");
 				}
 				$( document ).ready(function() {
@@ -180,7 +181,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 
 					get_bets(fecha, url);
- 
+
 
 					$( "#today" ).click(function() {
 						$("#titulo").empty();

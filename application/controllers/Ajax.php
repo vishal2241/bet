@@ -62,6 +62,15 @@ class Ajax extends CI_Controller {
 		} 
 	}
 
+	public function json_totalMatch(){
+		if (isset($_POST['fecha']) and $_POST['fecha']!='') {
+			$fecha=$_POST['fecha'];
+			$data = $this->Partido->getTotalMatch($fecha);
+			echo json_encode($data);
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
 
 
 

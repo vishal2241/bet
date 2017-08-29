@@ -61,7 +61,6 @@ class Partido extends CI_Model
 	}
 
 	//pagina principal, publico
-		//pagina principal, publico
 	public function getPartidoByCompe($date, $hour, $compe)
 	{
 		$sql="
@@ -96,6 +95,26 @@ class Partido extends CI_Model
 			return null;
 		} 
 	}
+
+	public function getTotalMatch($date)
+	{
+		$sql="
+		SELECT count(*)
+		FROM partido p 
+		WHERE
+		p.FECHA = '".$date."'
+		AND p.HORARIO > '".date('HH:ii')."'
+		";
+
+		$query = $this->db->query($sql); 
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+	}
+
+
 	//Para editar partidos y sincronizar
 	public function getAllPartidos($from, $to, $filtro)
 	{
