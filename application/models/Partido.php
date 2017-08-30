@@ -104,10 +104,10 @@ class Partido extends CI_Model
 		WHERE
 		p.FECHA = '".$date."'";
 		if (date("Y-m-d")==$date ) {
-			$sql.=" AND p.HORARIO > '".date('HH:ii')."' ";
+			$sql.=" AND p.HORARIO > '".date('H:i')."' ";
 		}
-		 
 
+		#echo $sql;
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
 			return $query->result();

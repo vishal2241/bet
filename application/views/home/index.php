@@ -97,9 +97,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script type="text/javascript">
+				$( "#699945874").on( "click", function() {
+					console.log( "aaaaa" );
+				});
+
 
 				function get_bets (fecha, url) {
-
 					$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
 						if (jsonCompe!=null) {
 							$.each(jsonCompe, function(i, item) {
@@ -140,7 +143,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										$.post(''+url+'ajax/json_odds', {match: match}, function(jsonOdds) {
 											
 											$.each(jsonOdds, function(a, rowMatch) { 
-												$("#"+match+"").append('<td  class="odd text-center"   width="5%" id="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
+												// odds
+												$("#"+match+"").append('<td  class="odd text-center"   width="5%" type="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
 											});
 										}, "json");
 
@@ -187,15 +191,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 				$( document ).ready(function() {
+					//Hoy
 					moment.locale('es');
 					var url= '<?= base_url(); ?>';
 					var fecha=moment().format('YYYY-MM-DD');  
-
 					$("#titulo").empty();
 					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-
 					get_bets(fecha, url);
 					get_totalMatch(fecha, url);
+
+
+
 
 					$( "#today" ).click(function() {
 						$("#titulo").empty();

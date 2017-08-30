@@ -3,11 +3,10 @@ table {
 }
 
 .tiquete   {
-
 	font-size: 13px;
 	text-align: center;
-
 }
+
 
 .bet {
 	font-size: 11px;
@@ -31,10 +30,6 @@ table {
 	background-color: #0ACF1D
 }
 
-.header {
-	color : red;
-}
-
 .bold {
 	font-weight: bold;
 }
@@ -42,3 +37,13 @@ table {
 #titulo {
 	color :#FE9806;
 }
+
+.odd:hover {
+	background-color: #FBC761;
+	cursor: pointer;
+}
+
+.odd:active {
+	background-color: #FCAF18;
+}
+
