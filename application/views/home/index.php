@@ -127,10 +127,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										} else {
 											var imL='team/'+row.PAIS_L+'/'+row.IMG_L+'.png';
 										}
-										if (row.IMG_V=='NO' || row.IMG_L==null) {
+										if (row.IMG_V=='NO' || row.IMG_V==null) {
 											var imV='default.png';
 										} else {
-											var imV='team/'+row.PAIS_L+'/'+row.IMG_V+'.png';
+											var imV='team/'+row.PAIS_V+'/'+row.IMG_V+'.png';
 										}
 
 										$("#bets > tbody #"+compe+"").after('\

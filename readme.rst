@@ -7,6 +7,8 @@ SQL:
 UPDATE equipo_fm fm, equipo e SET e.IMG=fm.ID_EQUIPO WHERE fm.NOMBRE=e.NOMBRE
 
 UPDATE equipo e, pais p SET e.PAIS=p.NOMBRE WHERE e.ID_PAIS=p.ID_PAIS and e.ID_PAIS IS NOT NULL
+
+UPDATE  equipo e, pais p SET e.PAIS=p.NOMBRE  WHERE p.ID_PAIS=e.ID_PAIS AND e.ID_PAIS IS NOT NULL AND e.IMG IS NULL
 ```
 
 *********
