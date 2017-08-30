@@ -101,12 +101,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$( document ).ready(function() {
 					
 					//Clic odd
+					$('#all').on('click', '[data-type="odd"]', function(){
 
-
-					$('body').on('click', '[data-type="odd"]', function(){
-
-						$(this).addClass( "actived" );
-						console.log("por fin")
+						if ($(this).hasClass("actived")) {
+							$(this).removeClass( "actived" );
+						}	else {
+							$(this).addClass( "actived" );
+						}
+						
 					});
 
 
