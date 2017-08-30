@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-08-2017 a las 15:03:20
+-- Tiempo de generación: 30-08-2017 a las 15:06:16
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -15672,7 +15672,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (87349, 'Fenix', 230, 'Uruguay', '5512337', '2017-08-28 15:48:38'),
 (87352, 'Universidad de Concepcion', 195, 'Chile', '130789', '2017-08-28 15:48:38'),
 (87353, 'Caracas FC', 231, 'Venezuela', '109188', '2017-08-28 15:48:38'),
-(87361, 'Alianza Lima', NULL, 'Internacional', '117754', '2017-08-30 14:24:58'),
+(87361, 'Alianza Lima', 18, 'Internacional', '117754', '2017-08-30 15:05:58'),
 (87362, 'El Nacional', 138, 'Ecuador', '109178', '2017-08-28 20:26:57'),
 (87365, 'Libertad', NULL, NULL, '5280161', '2017-08-28 22:46:32'),
 (87366, 'Deportes Tolima', 197, 'Colombia', '429', '2017-08-28 15:48:38'),
@@ -18666,6 +18666,7 @@ CREATE TABLE `pais` (
 INSERT INTO `pais` (`ID_PAIS`, `NOMBRE`, `IMG`, `FOLDER`, `FECHALOG`) VALUES
 (4, 'Estados Unidos', 'USA', 'SI', '2017-08-28 19:43:34'),
 (14, 'Sudáfrica', 'Sudafrica', 'SI', '2017-08-28 19:43:34'),
+(18, 'Perú', 'Peru', 'SI', '2017-08-30 15:05:06'),
 (22, 'Polonia', 'Polonia', 'SI', '2017-08-28 19:43:34'),
 (34, 'Nicaragua', 'Nicaragua', 'SI', '2017-08-29 14:27:17'),
 (48, 'Grecia', 'Grecia', 'SI', '2017-08-28 19:43:34'),

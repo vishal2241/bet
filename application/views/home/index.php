@@ -19,10 +19,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<i class="material-icons">alarm</i> Hoy
 							</button>
 							<button class="btn btn-info  btn-sm" id="tomorrow">
-								<i class="material-icons">event</i> Mañana
+								<i class="material-icons">event</i>  
 							</button>
 							<button class="btn btn-info  btn-sm" id="after-tomorrow">
-								<i class="material-icons">event</i> Pasado Mañana
+								<i class="material-icons">event</i>  
+							</button>
+							<button class="btn btn-info  btn-sm" id="after3">
+								<i class="material-icons">event</i>  
 							</button>
 							<!-- tables row -->
 							<h3 class="text-center text-uppercase bold"  id="titulo"></h3>
@@ -97,10 +100,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script type="text/javascript">
-				$( "#699945874").on( "click", function() {
-					console.log( "aaaaa" );
-				});
-
 
 				function get_bets (fecha, url) {
 					$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
@@ -191,8 +190,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 				$( document ).ready(function() {
-					//Hoy
 					moment.locale('es');
+					//Botones
+					$("#tomorrow").empty();
+					$("#tomorrow").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+					$("#after-tomorrow").empty();
+					$("#after-tomorrow").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+					$("#after3").empty();
+					$("#after3").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
+
+					//Clic odd
+					$( "#699945874").on( "click", function() {
+						console.log( "aaaaa" );
+					});
+
+
+					//Cargados automaticamente
 					var url= '<?= base_url(); ?>';
 					var fecha=moment().format('YYYY-MM-DD');  
 					$("#titulo").empty();
@@ -200,9 +213,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					get_bets(fecha, url);
 					get_totalMatch(fecha, url);
 
-
-
-
+					//Clic today
 					$( "#today" ).click(function() {
 						$("#titulo").empty();
 						$("#titulo").append(moment().format('dddd Do [de] MMMM'));
@@ -211,7 +222,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						get_bets(fecha, url);
 						get_totalMatch(fecha, url);
 					});
-
+					//Clic tomorrow
 					$( "#tomorrow" ).click(function() {
 						$("#titulo").empty();
 						$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
@@ -220,11 +231,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						get_bets(fecha, url);
 						get_totalMatch(fecha, url);
 					});
-
+					//Clic after tomorrow
 					$( "#after-tomorrow" ).click(function() {
 						$("#titulo").empty();
 						$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
 						var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
+						$("#bets > tbody").empty();
+						get_totalMatch(fecha, url);
+						get_bets(fecha, url);
+					});
+					//Clic after 3 days
+					$( "#after3" ).click(function() {
+						$("#titulo").empty();
+						$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
+						var fecha=moment().add(3, 'days').format('YYYY-MM-DD');  
 						$("#bets > tbody").empty();
 						get_totalMatch(fecha, url);
 						get_bets(fecha, url);
