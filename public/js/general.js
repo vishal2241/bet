@@ -10,4 +10,89 @@ function DeleteItem (url) {
 }
 
 
- 
+function get_totalMatch(fecha, url) {
+	$.post(url+'ajax/json_totalMatch', {fecha: fecha}, function(data, status){
+		$.each(data, function(a, row) { 
+			$("#totalDia").empty();
+			$("#totalDia").append("Total partidos : "+row.TOTAL);
+
+		});
+
+	}, 'json');
+}
+
+function get_bets (fecha, url) {
+	$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
+		if (jsonCompe!=null) {
+			$.each(jsonCompe, function(i, item) {
+
+				$("#bets > tbody").append('\
+					<tr id='+ item.ID+'>\
+					<td colspan="16" class="text-left" >\
+					<h4>\
+					<img width="64" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
+					<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
+					</h4>\
+					</td>\
+					</tr>\
+					');
+				var compe = item.ID;
+
+				$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(jsonMatch) {		
+
+					$.each(jsonMatch, function(a, row) {
+						if (row.IMG_L=='NO' || row.IMG_L==null ) {
+							var imL='default.png';
+						} else {
+							var imL='team/'+row.PAIS_L+'/'+row.IMG_L+'.png';
+						}
+						if (row.IMG_V=='NO' || row.IMG_V==null) {
+							var imV='default.png';
+						} else {
+							var imV='team/'+row.PAIS_V+'/'+row.IMG_V+'.png';
+						}
+
+						$("#bets > tbody #"+compe+"").after('\
+							<tr id='+ row.ID_PARTIDO+'>\
+							<td  class="text-center bold" width="6%" >'+ row.HORARIO+'</td>\
+							<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ row.LOCAL+'</td>'+
+							'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ row.VISITANTE+'</td>');
+
+						var match=row.ID_PARTIDO;
+						$.post(''+url+'ajax/json_odds', {match: match}, function(jsonOdds) {
+
+							$.each(jsonOdds, function(a, rowMatch) { 
+												// odds
+												$("#"+match+"").append('<td  class="odd text-center"   width="5%" type="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
+											});
+						}, "json");
+
+						$("#bets > tbody #"+compe+"").after('</tr>');
+					});
+					$("#bets > tbody #"+compe+"").after('\
+						<tr>\
+						<th class="text-center">Hora</th>\
+						<th class="text-center">Local</th>\
+						<th class="text-center">Visitante</th>\
+						<th class="text-center">1</th>\
+						<th class="text-center">X</th>\
+						<th class="text-center">2</th>\
+						<th class="text-center">UN</th>\
+						<th class="text-center">OV</th>\
+						<th class="text-center">1X</th>\
+						<th class="text-center">2X</th>\
+						<th class="text-center">12</th>\
+						<th class="text-center">1HT</th>\
+						<th class="text-center">XHT</th>\
+						<th class="text-center">2HT</th>\
+						<th class="text-center">GG</th>\
+						<th class="text-center">NG</th>\
+						</tr>\
+						');
+
+				}, "json");
+
+			});
+						} //if Compe
+					},"json");
+} // End get_bets()
