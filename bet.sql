@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-08-2017 a las 14:50:45
+-- Tiempo de generación: 30-08-2017 a las 15:03:20
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `competencia` (
   `ID_COMPETENCIA` int(11) NOT NULL,
   `ID_PAIS` int(11) NOT NULL,
-  `NOMBRE` varchar(30) DEFAULT NULL
+  `NOMBRE` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -38,24 +38,24 @@ CREATE TABLE `competencia` (
 
 INSERT INTO `competencia` (`ID_COMPETENCIA`, `ID_PAIS`, `NOMBRE`) VALUES
 (2, 248, 'SUPER WELTERWEIGHT - MASCULINO'),
-(1983614, 248, 'FIFA World Cup - Qualification'),
-(1983615, 248, 'FIFA World Cup - Qualification'),
-(1983617, 248, 'FIFA World Cup - Qualification'),
-(1983619, 248, 'FIFA World Cup - Qualification'),
-(1983620, 248, 'FIFA World Cup - Qualification'),
-(1983622, 248, 'FIFA World Cup - Qualification'),
-(2043644, 248, 'FIFA World Cup - Qualification'),
+(1983614, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(1983615, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(1983617, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(1983619, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(1983620, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(1983622, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(2043644, 248, 'Copa Mundial de la FIFA - Clasificación'),
 (2242805, 240, 'Premiership League'),
-(2332692, 248, 'FIFA World Cup - Qualification'),
-(2332772, 248, 'FIFA World Cup - Qualification'),
+(2332692, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(2332772, 248, 'Copa Mundial de la FIFA - Clasificación'),
 (2349581, 242, 'League Cup - Round 1'),
-(2368017, 248, 'FIFA World Cup - Qualification'),
-(2368018, 248, 'FIFA World Cup - Qualification'),
-(2368019, 248, 'FIFA World Cup - Qualification'),
-(2368020, 248, 'FIFA World Cup - Qualification'),
-(2368021, 248, 'FIFA World Cup - Qualification'),
-(2383695, 248, 'FIFA World Cup - Qualification'),
-(2388616, 248, 'FIFA World Cup - Qualification'),
+(2368017, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(2368018, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(2368019, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(2368020, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(2368021, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(2383695, 248, 'Copa Mundial de la FIFA - Clasificación'),
+(2388616, 248, 'Copa Mundial de la FIFA - Clasificación'),
 (2392982, 83, 'Allsvenskan'),
 (2393019, 83, 'Superettan'),
 (2401215, 148, 'J-League Division 1'),
@@ -15951,7 +15951,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (145837, 'Wexford s Youth', 59, 'Irlanda', '156640', '2017-08-29 14:36:57'),
 (145839, 'Cobh Ramblers', 59, 'Irlanda', '589', '2017-08-29 14:36:38'),
 (145840, 'Limerick', 59, 'Irlanda', '129380', '2017-08-28 16:02:04'),
-(146416, 'Toronto FC', 4, 'Estados Unidos', '72000789', '2017-08-28 15:48:38'),
+(146416, 'Toronto FC', 73, 'Estados Unidos', '72000789', '2017-08-30 14:58:21'),
 (146858, 'Montenegro', 248, 'Internacional', '62002127', '2017-08-29 15:41:49'),
 (147876, 'Akropolis IF', 83, 'Suecia', '8106801', '2017-08-28 15:48:38'),
 (148365, 'Utsiktens BK', 83, 'Suecia', '619076', '2017-08-28 22:00:58'),
@@ -16423,7 +16423,7 @@ INSERT INTO `equipo` (`ID_EQUIPO`, `NOMBRE`, `ID_PAIS`, `PAIS`, `IMG`, `FECHALOG
 (293720, 'Western Pride', 172, 'Australia', '15042575', '2017-08-28 16:49:23'),
 (295750, 'LA Galaxy B', 4, 'Estados Unidos', '1907', '2017-08-28 15:48:38'),
 (295751, 'Seattle Sounders B', 4, 'Estados Unidos', '72043489', '2017-08-30 13:57:23'),
-(295753, 'Toronto FC B', 4, 'Estados Unidos', '145759', '2017-08-30 13:56:29'),
+(295753, 'Toronto FC B', 73, 'Estados Unidos', '72000789', '2017-08-30 14:59:02'),
 (295756, 'New York RB B', 4, 'Estados Unidos', '72000160', '2017-08-28 15:48:38'),
 (295757, 'Whitecaps B', 4, 'Estados Unidos', '72043493', '2017-08-28 15:48:38'),
 (296728, 'FC Anyang', 154, 'Corea del Sur', '66029603', '2017-08-28 20:15:04'),
@@ -18675,6 +18675,7 @@ INSERT INTO `pais` (`ID_PAIS`, `NOMBRE`, `IMG`, `FOLDER`, `FECHALOG`) VALUES
 (59, 'Irlanda', 'Irlanda', 'SI', '2017-08-28 19:43:34'),
 (60, 'Israel', 'Israel', 'SI', '2017-08-28 19:43:34'),
 (71, 'Bolivia', 'Bolivia', 'SI', '2017-08-28 19:43:34'),
+(73, 'Canada', 'Canada', 'SI', '2017-08-30 14:57:13'),
 (76, 'Portugal', 'Portugal', 'SI', '2017-08-28 19:43:34'),
 (78, 'Rumania', 'Rumania', 'SI', '2017-08-28 19:43:34'),
 (79, 'Rusia', 'Rusia', 'SI', '2017-08-28 19:43:34'),
