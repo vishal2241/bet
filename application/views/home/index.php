@@ -94,16 +94,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 
+
 			<?php $this->load->view('overall/footer'); ?>
 
 
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 			<script type="text/javascript">
-				
-
 				$( document ).ready(function() {
-					moment.locale('es');
+					
+					//Clic odd
+					$("#bets tbody tr").on( "click", function() {
+						console.log( "Por fin" );
+					});
+
+
 					//Botones
 					$("#tomorrow").empty();
 					$("#tomorrow").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
@@ -111,12 +116,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$("#after-tomorrow").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
 					$("#after3").empty();
 					$("#after3").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
-
-					//Clic odd
-					$( "#699945874").on( "click", function() {
-						console.log( "aaaaa" );
-					});
-
 
 					//Cargados automaticamente
 					var url= '<?= base_url(); ?>';

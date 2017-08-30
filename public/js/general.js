@@ -1,3 +1,4 @@
+moment.locale('es');
 function isEmpty(val){
 	return (val === undefined || val == null || val.length <= 0) ? '0' : val;
 }
@@ -27,7 +28,7 @@ function get_bets (fecha, url) {
 			$.each(jsonCompe, function(i, item) {
 
 				$("#bets > tbody").append('\
-					<tr id='+ item.ID+'>\
+					<tr data-compe='+ item.ID+' class="row-compe">\
 					<td colspan="16" class="text-left" >\
 					<h4>\
 					<img width="64" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
@@ -52,8 +53,8 @@ function get_bets (fecha, url) {
 							var imV='team/'+row.PAIS_V+'/'+row.IMG_V+'.png';
 						}
 
-						$("#bets > tbody #"+compe+"").after('\
-							<tr id='+ row.ID_PARTIDO+'>\
+						$("[data-compe="+compe+"]").after('\
+							<tr data-match='+ row.ID_PARTIDO+'>\
 							<td  class="text-center bold" width="6%" >'+ row.HORARIO+'</td>\
 							<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ row.LOCAL+'</td>'+
 							'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ row.VISITANTE+'</td>');
@@ -62,14 +63,14 @@ function get_bets (fecha, url) {
 						$.post(''+url+'ajax/json_odds', {match: match}, function(jsonOdds) {
 
 							$.each(jsonOdds, function(a, rowMatch) { 
-												// odds
-												$("#"+match+"").append('<td  class="odd text-center"   width="5%" type="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
-											});
+								//Odds
+								$("[data-match="+match+"]").append('<td  class="odd text-center"   width="5%" type="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
+							});
 						}, "json");
 
-						$("#bets > tbody #"+compe+"").after('</tr>');
+						$("[data-compe="+compe+"]").after('</tr>');
 					});
-					$("#bets > tbody #"+compe+"").after('\
+					$("[data-compe="+compe+"]").after('\
 						<tr>\
 						<th class="text-center">Hora</th>\
 						<th class="text-center">Local</th>\
