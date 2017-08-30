@@ -15,16 +15,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="row">
 					<div class="col-md-9">
 						<div class="tim-container">
-							<button class="btn btn-info  btn-sm" id="today">
+							<button class="btn btn-success  btn-sm" id="today">
 								<i class="material-icons">alarm</i> Hoy
 							</button>
-							<button class="btn btn-info  btn-sm" id="tomorrow">
+							<button class="btn btn-success  btn-sm" id="tomorrow">
 								<i class="material-icons">event</i>  
 							</button>
-							<button class="btn btn-info  btn-sm" id="after-tomorrow">
+							<button class="btn btn-success  btn-sm" id="after-tomorrow">
 								<i class="material-icons">event</i>  
 							</button>
-							<button class="btn btn-info  btn-sm" id="after3">
+							<button class="btn btn-success  btn-sm" id="after3">
 								<i class="material-icons">event</i>  
 							</button>
 							<!-- tables row -->
