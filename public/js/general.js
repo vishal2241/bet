@@ -26,19 +26,20 @@ function get_bets (fecha, url) {
 	$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
 		if (jsonCompe!=null) {
 			$.each(jsonCompe, function(i, item) {
-
-				$("#bets > tbody").append('\
+				$("#all").append('\
+					<table class="table table-bordered">\
 					<tr data-compe='+ item.ID+' class="row-compe">\
-					<td colspan="16" class="text-left" >\
+					<td colspan="16" class="text-left cabecera" >\
 					<h4>\
 					<img width="64" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
 					<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
 					</h4>\
 					</td>\
 					</tr>\
+					</tbody>\
+					</table>\
 					');
 				var compe = item.ID;
-
 				$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(jsonMatch) {		
 
 					$.each(jsonMatch, function(a, row) {
@@ -64,7 +65,7 @@ function get_bets (fecha, url) {
 
 							$.each(jsonOdds, function(a, rowMatch) { 
 								//Odds
-								$("[data-match="+match+"]").append('<td  class="odd text-center"   width="5%" type="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
+								$("[data-match="+match+"]").append('<td  class="odd text-center"  data-type="odd" width="5%" type="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
 							});
 						}, "json");
 

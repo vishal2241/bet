@@ -30,11 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<h3 class="text-center text-uppercase bold"  id="titulo"></h3>
 							<p class="text-center text-uppercase bold"  id="totalDia"></p>
-							<div class="table-responsive" id="all">
-								<table class="table table-bordered" id="bets">
-									<tbody>
-									</tbody>
-								</table>
+							<div id="all">
+								
 							</div>
 							<!-- end container -->
 						</div>
@@ -104,9 +101,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$( document ).ready(function() {
 					
 					//Clic odd
-					$("#bets tbody tr").on( "click", function() {
-						console.log( "Por fin" );
+
+
+					$('body').on('click', '[data-type="odd"]', function(){
+
+						$(this).addClass( "actived" );
+						console.log("por fin")
 					});
+
 
 
 					//Botones
