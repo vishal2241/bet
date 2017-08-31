@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="section">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-9">
+					<div class="col-md-9 content">
 						<div class="tim-container">
 							<button class="btn btn-success  btn-sm" id="today">
 								<i class="material-icons">alarm</i> Hoy
@@ -37,8 +37,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-default">
-							<div class="panel-heading text-center"><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
+						<div class="panel panel-default" id="tiquete"  >
+							<div class="panel-heading text-center "><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
 							<div class="panel-body">
 								<div class="col-md-12">
 									<table class="table table-condensed" >
@@ -71,17 +71,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 				</div>
-			</div>
 
 
-			<?php $this->load->view('overall/footer'); ?>
+				<?php $this->load->view('overall/footer'); ?>
 
 
-			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
-			<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
-			<script type="text/javascript">
-				$( document ).ready(function() {
-					
+				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
+				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
+				<script src="<?= base_url(); ?>public/js/jquery.sticky.js" type="text/javascript"></script>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+						$("#tiquete").sticky({topSpacing:100});
 					//Clic odd
 					$('#all').on('click', '[data-type="odd"]', function(){
 						
