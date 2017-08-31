@@ -1,31 +1,7 @@
 
 <footer class="footer footer-transparent">
 	<div class="container">
-		<!--<nav class="pull-left">
-			<ul>
-				<li>
-					<a href="http://www.creative-tim.com">
-						Creative Tim
-					</a>
-				</li>
-				<li>
-					<a href="http://presentation.creative-tim.com">
-						About Us
-					</a>
-				</li>
-				<li>
-					<a href="http://blog.creative-tim.com">
-						Blog
-					</a>
-				</li>
-				<li>
-					<a href="http://www.creative-tim.com/license">
-						Licenses
-					</a>
-				</li>
-			</ul>
-		</nav>-->
-		<div class="social-area pull-right">
+		<nav class="pull-left">
 			<a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/CreativeTim">
 				<i class="fa fa-twitter"></i>
 			</a>
@@ -35,10 +11,12 @@
 			<a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/+CreativetimPage">
 				<i class="fa fa-google-plus"></i>
 			</a>
-		</div>
-		<div class="copyright">
+		</nav>
+
+ 
+		<!--<div class="copyright">
 			&copy; 2017 
-		</div>
+		</div>-->
 	</div>
 </footer>
 
@@ -77,6 +55,7 @@
 <script src="<?= base_url(); ?>public/js/general.js"></script> 	
 <script src="<?= base_url(); ?>public/js/loading.js"></script>
 <script src="<?= base_url(); ?>public/js/jquery.number.js"></script>
+<script src="<?= base_url(); ?>public/js/jquery.sticky.js" type="text/javascript"></script>
 
 <script>
 	var header_height;

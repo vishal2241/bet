@@ -37,15 +37,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-default" id="tiquete"  >
+						<div class="panel panel-primary" id="tiquete"  >
 							<div class="panel-heading text-center "><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
-							<div class="panel-body">
+							<div class="panel-body" style="padding:0px">
 								<div class="col-md-12">
-									<table class="table table-condensed" >
+									<table class="table table-condensed table-striped table-bordered" >
 										<thead class="tiquete">
 											<tr>
-												<th class="text-success">Partido</th>
-												<th class="text-success" colspan="2">Cuota</th>
+												<th class="text-success text-center">PARTIDOS</th>
+												<th class="text-success text-center" colspan="2">CUOTAS</th>
 											</tr>
 										</thead>
 										<tbody id="detalle">
@@ -56,16 +56,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="col-md-6">
 										<div class="form-group label-floating">
 											<label class="control-label">Cantidad</label>
-											<input type="number" class="form-control">
+											<input type="number" class="form-control" id="cantidad" value="1000">
 										</div>	
 									</div>	
 									<div class="col-md-6">
-										<div class="form-group label-floating">
-											<label class="control-label">Ganancia</label>
-											<input type="number" class="form-control" readonly>
-										</div>	
+										<div class="form-group is-empty">
+											<div  class="ganancia">
+												<i class="fa fa-money" aria-hidden="true"></i> 
+												<span id="ganancia">0</span>
+											</div>										
+										</div>
 									</div>	
-									<button class="btn btn-primary col-md-12"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
 								</form>
 							</div>
 						</div>
@@ -78,15 +79,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
-				<script src="<?= base_url(); ?>public/js/jquery.sticky.js" type="text/javascript"></script>
 				<script type="text/javascript">
 
 					function getMoney() {
-						var points;
+						var creditos = '1.00';
 						$("#detalle").find("[value]").each(function() {
-							points=$(this).attr("value")
-							console.log(points)
+							var tmp      = $.number($(this).attr("value"),2, '.' , ',');
+							creditos     = (parseFloat(creditos) * parseFloat(tmp));
+							creditos     = $.number( creditos,2, '.' , ',');					
 						});
+						var cantidad = $("#cantidad").val();
+						var ganancia = creditos*cantidad;
+						$("#ganancia").empty()
+						$("#ganancia").append($.number( ganancia,0, '' , '.'))
+
+
 
 					}
 
@@ -115,19 +122,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							//ADD detalle
 							var row = 
 							'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
-							'<td>'+
+							'<td class="x12 bold ">'+
 							local + ' vs. '+ visitante+
 							'<br>'+
-							'<b><span class="text-info text-bold bet">'+text+'</span></b>'+
+							'<b><span class="text-info text-uppercase x11">'+text+'</span></b>'+
 							'</td>'+
-							'<td value="'+value+'">'+
+							'<td value="'+value+'" class="text-primary text-center bold">'+
 							value+
-							'</td>'+
-							'<td>'+
-							'<td valign="middle">'+
-							'<span class="text-danger">'+
-							'<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>'+
-							'</span>'+
 							'</td>'+
 							'</tr>';
 							$('#detalle').append(row);
