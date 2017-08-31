@@ -80,7 +80,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script src="<?= base_url(); ?>public/js/jquery.sticky.js" type="text/javascript"></script>
 				<script type="text/javascript">
+
+					function getMoney() {
+						var points;
+						$("#detalle").find("[value]").each(function() {
+							points=$(this).attr("value")
+							console.log(points)
+						});
+
+					}
+
 					$( document ).ready(function() {
+						//fixed tiquete
 						$("#tiquete").sticky({topSpacing:100});
 					//Clic odd
 					$('#all').on('click', '[data-type="odd"]', function(){
@@ -96,11 +107,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						if ($(this).hasClass("actived")) {
 							$(this).closest('tr').find('.actived').removeClass('actived');
 							$(this).removeClass( "actived" );
-							console.log("borrado")
+							//console.log("borrado")
 						}	else {
 							$(this).closest('tr').find('.actived').removeClass('actived');
 							$(this).addClass( "actived" );
-							console.log("add")
+							//console.log("add")
 							//ADD detalle
 							var row = 
 							'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
@@ -109,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							'<br>'+
 							'<b><span class="text-info text-bold bet">'+text+'</span></b>'+
 							'</td>'+
-							'<td>'+
+							'<td value="'+value+'">'+
 							value+
 							'</td>'+
 							'<td>'+
@@ -119,10 +130,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							'</span>'+
 							'</td>'+
 							'</tr>';
-
 							$('#detalle').append(row);
 						}
-						
+
+						getMoney();
 					});
 
 
