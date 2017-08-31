@@ -18,8 +18,8 @@ table {
 }
 
 td.actived {
-	background-color: #F0A30D;
-	color: #202020;
+	background-color: #FCAF18;
+	color: white;
 	font-weight: bold;
 	vertical-align: middle;
 }
@@ -29,7 +29,7 @@ td.actived {
 	vertical-align: middle;
 }
 .odd:hover {
-	background-color: #FBC761;
+	background-color: #FCAF18;
 	cursor: pointer;
 }
 
@@ -38,7 +38,7 @@ td.actived {
 }
 
 
-th {
+#all table tbody tr th.info {
 	vertical-align: middle;
 	color: white;
 	background-color: #0ACF1D

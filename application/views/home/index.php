@@ -48,25 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<th class="text-success" colspan="2">Cuota</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<td>
-													Tolima vs Nacional
-													<br>
-													<b><span class="text-info text-bold bet">Gana Tolima</span></b>
-												</td>
-												<td>
-													2.00
-												</td>
-												<td valign="middle">
-													<span class="text-danger">
-														<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>
-													</span>
-												</td>
-											</tr>
-
-
-
+										<tbody id="detalle">
 										</tbody>
 									</table>
 								</div>	
@@ -103,76 +85,105 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					//Clic odd
 					$('#all').on('click', '[data-type="odd"]', function(){
 						
-
+						var value = $(this).text();
+						var conse = $(this).attr('id');
+						var local = $(this).attr('local');
+						var visitante = $(this).attr('visitante');
+						var text = $(this).attr('text');
+						var match = $(this).closest('tr').attr('data-match');
+						//Borrar de detalle
+						$("#detalle").find("[id_match="+match+"]").remove();
 						if ($(this).hasClass("actived")) {
 							$(this).closest('tr').find('.actived').removeClass('actived');
 							$(this).removeClass( "actived" );
+							console.log("borrado")
 						}	else {
 							$(this).closest('tr').find('.actived').removeClass('actived');
 							$(this).addClass( "actived" );
+							console.log("add")
+							//ADD detalle
+							var row = 
+							'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
+							'<td>'+
+							local + ' vs. '+ visitante+
+							'<br>'+
+							'<b><span class="text-info text-bold bet">'+text+'</span></b>'+
+							'</td>'+
+							'<td>'+
+							value+
+							'</td>'+
+							'<td>'+
+							'<td valign="middle">'+
+							'<span class="text-danger">'+
+							'<b><i class="fa fa-window-close " aria-hidden="true"></i> </b>'+
+							'</span>'+
+							'</td>'+
+							'</tr>';
+
+							$('#detalle').append(row);
 						}
 						
 					});
 
 
 
-					//Botones
-					$("#tomorrow").empty();
-					$("#tomorrow").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
-					$("#after-tomorrow").empty();
-					$("#after-tomorrow").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
-					$("#after3").empty();
-					$("#after3").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
+		//Botones
+		$("#tomorrow").empty();
+		$("#tomorrow").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+		$("#after-tomorrow").empty();
+		$("#after-tomorrow").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+		$("#after3").empty();
+		$("#after3").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
 
-					//Cargados automaticamente
-					var url= '<?= base_url(); ?>';
-					var fecha=moment().format('YYYY-MM-DD');  
-					$("#titulo").empty();
-					$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-					get_bets(fecha, url);
-					get_totalMatch(fecha, url);
+		//Cargados automaticamente
+		var url= '<?= base_url(); ?>';
+		var fecha=moment().format('YYYY-MM-DD');  
+		$("#titulo").empty();
+		$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+		get_bets(fecha, url);
+		get_totalMatch(fecha, url);
 
-					//Clic today
-					$( "#today" ).click(function() {
-						$("#titulo").empty();
-						$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-						var fecha=moment().format('YYYY-MM-DD');  
-						$("#bets > tbody").empty();
-						get_bets(fecha, url);
-						get_totalMatch(fecha, url);
-					});
-					//Clic tomorrow
-					$( "#tomorrow" ).click(function() {
-						$("#titulo").empty();
-						$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
-						var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
-						$("#bets > tbody").empty();
-						get_bets(fecha, url);
-						get_totalMatch(fecha, url);
-					});
-					//Clic after tomorrow
-					$( "#after-tomorrow" ).click(function() {
-						$("#titulo").empty();
-						$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
-						var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
-						$("#bets > tbody").empty();
-						get_totalMatch(fecha, url);
-						get_bets(fecha, url);
-					});
-					//Clic after 3 days
-					$( "#after3" ).click(function() {
-						$("#titulo").empty();
-						$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
-						var fecha=moment().add(3, 'days').format('YYYY-MM-DD');  
-						$("#bets > tbody").empty();
-						get_totalMatch(fecha, url);
-						get_bets(fecha, url);
-					});
-
-
-				});
+		//Clic today
+		$( "#today" ).click(function() {
+			$("#titulo").empty();
+			$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+			var fecha=moment().format('YYYY-MM-DD');  
+			$("#bets > tbody").empty();
+			get_bets(fecha, url);
+			get_totalMatch(fecha, url);
+		});
+		//Clic tomorrow
+		$( "#tomorrow" ).click(function() {
+			$("#titulo").empty();
+			$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+			var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
+			$("#bets > tbody").empty();
+			get_bets(fecha, url);
+			get_totalMatch(fecha, url);
+		});
+		//Clic after tomorrow
+		$( "#after-tomorrow" ).click(function() {
+			$("#titulo").empty();
+			$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+			var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
+			$("#bets > tbody").empty();
+			get_totalMatch(fecha, url);
+			get_bets(fecha, url);
+		});
+		//Clic after 3 days
+		$( "#after3" ).click(function() {
+			$("#titulo").empty();
+			$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
+			var fecha=moment().add(3, 'days').format('YYYY-MM-DD');  
+			$("#bets > tbody").empty();
+			get_totalMatch(fecha, url);
+			get_bets(fecha, url);
+		});
 
 
+	});
 
-			</script>
-			</html>
+
+
+</script>
+</html>

@@ -56,7 +56,7 @@ class Cuota extends CI_Model
 
 	public function getOddByMatch($id)
 	{
-		$sql='SELECT c.VALOR, t.NOMBRE, t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO ="'.$id.'" ORDER BY t.ID_TIPO';
+		$sql='SELECT c.ID_CUOTA AS CONSE, c.VALOR, t.NOMBRE, t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO ="'.$id.'" ORDER BY t.ID_TIPO';
 		$query = $this->db->query($sql);
 		if ($query->num_rows() > 0) {
 			return $query->result();

@@ -65,7 +65,7 @@ function get_bets (fecha, url) {
 
 							$.each(jsonOdds, function(a, rowMatch) { 
 								//Odds
-								$("[data-match="+match+"]").append('<td  class="odd text-center"  data-type="odd" width="5%" type="'+rowMatch.NOMBRE+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
+								$("[data-match="+match+"]").append('<td  class="odd text-center"  data-type="odd" width="5%" id="'+rowMatch.CONSE+'"  local="'+ row.LOCAL+'" visitante="'+ row.VISITANTE+'" text="'+rowMatch.DESCRIPCION+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
 							});
 						}, "json");
 
@@ -73,22 +73,22 @@ function get_bets (fecha, url) {
 					});
 					$("[data-compe="+compe+"]").after('\
 						<tr>\
-						<th class="text-center">Hora</th>\
-						<th class="text-center">Local</th>\
-						<th class="text-center">Visitante</th>\
-						<th class="text-center">1</th>\
-						<th class="text-center">X</th>\
-						<th class="text-center">2</th>\
-						<th class="text-center">UN</th>\
-						<th class="text-center">OV</th>\
-						<th class="text-center">1X</th>\
-						<th class="text-center">2X</th>\
-						<th class="text-center">12</th>\
-						<th class="text-center">1HT</th>\
-						<th class="text-center">XHT</th>\
-						<th class="text-center">2HT</th>\
-						<th class="text-center">GG</th>\
-						<th class="text-center">NG</th>\
+						<th class="text-center info">Hora</th>\
+						<th class="text-center info">Local</th>\
+						<th class="text-center info">Visitante</th>\
+						<th class="text-center info">1</th>\
+						<th class="text-center info">X</th>\
+						<th class="text-center info">2</th>\
+						<th class="text-center info">UN</th>\
+						<th class="text-center info">OV</th>\
+						<th class="text-center info">1X</th>\
+						<th class="text-center info">2X</th>\
+						<th class="text-center info">12</th>\
+						<th class="text-center info">1HT</th>\
+						<th class="text-center info">XHT</th>\
+						<th class="text-center info">2HT</th>\
+						<th class="text-center info">GG</th>\
+						<th class="text-center info">NG</th>\
 						</tr>\
 						');
 
