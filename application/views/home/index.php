@@ -42,8 +42,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="panel-body" style="padding:0px">
 								<div class="col-md-12">
 									<table class="table table-condensed table-striped table-bordered" id="tiquete-table">
-									
 										<tbody id="detalle">
+											<tr class="tiquete">
+												<th class="text-success text-center">PARTIDOS</th>
+												<th class="text-success text-center">CUOTAS</th>
+											</tr>
 										</tbody>
 									</table>
 								</div>	
