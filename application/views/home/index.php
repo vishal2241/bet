@@ -78,6 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
+				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
 				<script type="text/javascript">
 					function getMoney() {
 						var creditos = '1.00';
@@ -98,10 +99,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 					$( document ).ready(function() {
+						var url= '<?= base_url(); ?>';
+						var fecha=moment().format('YYYY-MM-DD'); 
+						var timer = $.timer(function() {
+							$("#all").empty();
+							get_bets(fecha, url);
+						});
+						timer.set({ time : 5000, autostart : true });
+
 						$('#cantidad').keyup(function(){
 							getMoney();							
 						});
-
 
 						$('#jugar').click(function(){
 							console.log("jugar")							
@@ -155,9 +163,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$("#after3").empty();
 		$("#after3").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
 
-		//Cargados automaticamente
-		var url= '<?= base_url(); ?>';
-		var fecha=moment().format('YYYY-MM-DD');  
+		//Cargados automaticamente 
 		$("#titulo").empty();
 		$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 		get_bets(fecha, url);
