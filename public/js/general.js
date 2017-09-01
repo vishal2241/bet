@@ -11,6 +11,7 @@ function DeleteItem (url) {
 }
 
 
+
 function get_totalMatch(fecha, url) {
 	$.post(url+'ajax/json_totalMatch', {fecha: fecha}, function(data, status){
 		$.each(data, function(a, row) { 

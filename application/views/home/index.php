@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-primary" id="tiquete"  >
+						<div class="panel panel-default" id="tiquete"  >
 							<div class="panel-heading text-center "><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
 							<div class="panel-body" style="padding:0px">
 								<div class="col-md-12">
@@ -48,26 +48,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<th class="text-success text-center" colspan="2">CUOTAS</th>
 											</tr>
 										</thead>
-										<tbody id="detalle">
+										<tbody id="detalle" style="height: 400px">
 										</tbody>
 									</table>
 								</div>	
-								<form>
-									<div class="col-md-6">
-										<div class="form-group label-floating">
-											<label class="control-label">Cantidad</label>
-											<input type="number" class="form-control" id="cantidad" value="1000">
-										</div>	
+
+								<div class="col-md-6">
+									<div class="form-group label-floating">
+										<label class="control-label">Cantidad</label>
+										<input type="number" class="form-control" id="cantidad" value="1000">
 									</div>	
-									<div class="col-md-6">
-										<div class="form-group is-empty">
-											<div  class="ganancia">
-												<i class="fa fa-money" aria-hidden="true"></i> 
-												<span id="ganancia">0</span>
-											</div>										
-										</div>
-									</div>	
-								</form>
+								</div>		
+								<div class="col-md-6">
+									<div class="form-group is-empty">
+										<div  class="ganancia">
+											<i class="fa fa-money" aria-hidden="true"></i> 
+											<span id="ganancia">0</span>
+										</div>										
+									</div>
+								</div>	
+								<button class="btn btn-primary col-md-12" id="jugar"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
+
 							</div>
 						</div>
 					</div>
@@ -80,62 +81,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript">
-
 					function getMoney() {
 						var creditos = '1.00';
+						var counter= 0;
 						$("#detalle").find("[value]").each(function() {
 							var tmp      = $.number($(this).attr("value"),2, '.' , ',');
 							creditos     = (parseFloat(creditos) * parseFloat(tmp));
-							creditos     = $.number( creditos,2, '.' , ',');					
+							creditos     = $.number( creditos,2, '.' , ',');	
+							counter++;		
 						});
+						console.log(counter)		
 						var cantidad = $("#cantidad").val();
 						var ganancia = creditos*cantidad;
 						$("#ganancia").empty()
 						$("#ganancia").append($.number( ganancia,0, '' , '.'))
-
-
-
 					}
 
-					$( document ).ready(function() {
-						//fixed tiquete
-						$("#tiquete").sticky({topSpacing:100});
-					//Clic odd
-					$('#all').on('click', '[data-type="odd"]', function(){
-						
-						var value = $(this).text();
-						var conse = $(this).attr('id');
-						var local = $(this).attr('local');
-						var visitante = $(this).attr('visitante');
-						var text = $(this).attr('text');
-						var match = $(this).closest('tr').attr('data-match');
-						//Borrar de detalle
-						$("#detalle").find("[id_match="+match+"]").remove();
-						if ($(this).hasClass("actived")) {
-							$(this).closest('tr').find('.actived').removeClass('actived');
-							$(this).removeClass( "actived" );
-							//console.log("borrado")
-						}	else {
-							$(this).closest('tr').find('.actived').removeClass('actived');
-							$(this).addClass( "actived" );
-							//console.log("add")
-							//ADD detalle
-							var row = 
-							'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
-							'<td class="x12 bold ">'+
-							local + ' vs. '+ visitante+
-							'<br>'+
-							'<b><span class="text-info text-uppercase x11">'+text+'</span></b>'+
-							'</td>'+
-							'<td value="'+value+'" class="text-primary text-center bold">'+
-							value+
-							'</td>'+
-							'</tr>';
-							$('#detalle').append(row);
-						}
 
-						getMoney();
-					});
+					$( document ).ready(function() {
+						$('#cantidad').keyup(function(){
+							getMoney();							
+						});
+
+
+						$('#jugar').click(function(){
+							console.log("jugar")							
+						});
+
+						$("#tiquete").sticky({topSpacing:100});
+
+						$('#all').on('click', '[data-type="odd"]', function(){
+
+							var value = $(this).text();
+							var conse = $(this).attr('id');
+							var local = $(this).attr('local');
+							var visitante = $(this).attr('visitante');
+							var text = $(this).attr('text');
+							var match = $(this).closest('tr').attr('data-match');
+
+							$("#detalle").find("[id_match="+match+"]").remove();
+							if ($(this).hasClass("actived")) {
+								$(this).closest('tr').find('.actived').removeClass('actived');
+								$(this).removeClass( "actived" );
+
+							}	else {
+								$(this).closest('tr').find('.actived').removeClass('actived');
+								$(this).addClass( "actived" );
+
+
+								var row = 
+								'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
+								'<td class="x12 bold ">'+
+								local + ' vs. '+ visitante+
+								'<br>'+
+								'<b><span class="text-info text-uppercase x11">'+text+'</span></b>'+
+								'</td>'+
+								'<td value="'+value+'" class="text-primary text-center bold">'+
+								value+
+								'</td>'+
+								'</tr>';
+								$('#detalle').append(row);
+							}
+
+							getMoney();
+						});
 
 
 
@@ -169,7 +178,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$("#titulo").empty();
 			$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
 			var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
-			$("#bets > tbody").empty();
+			$("#all").empty();
 			get_bets(fecha, url);
 			get_totalMatch(fecha, url);
 		});
@@ -178,7 +187,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$("#titulo").empty();
 			$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
 			var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
-			$("#bets > tbody").empty();
+			$("#all").empty();
 			get_totalMatch(fecha, url);
 			get_bets(fecha, url);
 		});
@@ -187,7 +196,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$("#titulo").empty();
 			$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
 			var fecha=moment().add(3, 'days').format('YYYY-MM-DD');  
-			$("#bets > tbody").empty();
+			$("#all").empty();
 			get_totalMatch(fecha, url);
 			get_bets(fecha, url);
 		});
