@@ -12,7 +12,7 @@ class Sync extends CI_Controller {
 
 	public function index(){
 		$scores = array();
-		$pendientes=$this->Partido->getAllPartidos('','','Score');
+		$pendientes=$this->Partido->getAllPartidos(date("Y-m-d"),'','Score');
 		foreach ($pendientes as $key => $row) {
 			$getScore                     = $this->Request->getScores($row->ID_PARTIDO);
 			$status                    = $this->Request->getStatus($row->ID_PARTIDO);
@@ -23,7 +23,6 @@ class Sync extends CI_Controller {
 				$this->Partido->SCORE_2    = $score[1];
 				$this->Partido->ESTADO     = $status['result'];
 				$this->Partido->setScore();
-
 				array_push($scores,  
 					array(
 						'PARTIDO' => $row->LOCAL.' vs... '.$row->VISITANTE ,
@@ -33,9 +32,7 @@ class Sync extends CI_Controller {
 						'MARCADOR' => $getScore['EventScore'] ,
 						));
 			}
-			
 		}
-
 		$data = array(
 			'scores' => $scores
 			);

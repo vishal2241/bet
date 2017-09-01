@@ -158,7 +158,7 @@ class Partido extends CI_Model
 			$hora->sub(new DateInterval('PT2H30M')); // partidos iniciados hace dos horas y media (evita en vivo)
 			$sql.="  p.ESTADO='NSY'  ";
 			if (date("Y-m-d")==$from ) {
-				$sql.="  AND p.HORARIO<'".$hora->format('H:i')."'  ";
+				$sql.="  AND p.HORARIO<'".$hora->format('H:i')."'  AND FECHA<='".date("Y-m-d")."' ";
 			}
 			
 			break;
