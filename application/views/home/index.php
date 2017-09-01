@@ -41,14 +41,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="panel-heading text-center "><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
 							<div class="panel-body" style="padding:0px">
 								<div class="col-md-12">
-									<table class="table table-condensed table-striped table-bordered" >
-										<thead class="tiquete">
-											<tr>
-												<th class="text-success text-center">PARTIDOS</th>
-												<th class="text-success text-center" colspan="2">CUOTAS</th>
-											</tr>
-										</thead>
-										<tbody id="detalle" style="height: 400px">
+									<table class="table table-condensed table-striped table-bordered" id="tiquete-table">
+									
+										<tbody id="detalle">
 										</tbody>
 									</table>
 								</div>	
