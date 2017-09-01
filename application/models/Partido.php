@@ -48,6 +48,12 @@ class Partido extends CI_Model
 
 	} 
 
+	public function setScore()
+	{
+		$sql='UPDATE partido SET SCORE_1="'.$this->SCORE_1.'", SCORE_2="'.$this->SCORE_2.'", ESTADO="'.$this->ESTADO.'"   WHERE ID_PARTIDO='.$this->ID_PARTIDO.' ';
+		$query = $this->db->query($sql); 
+	} 
+
 	public function add()
 	{
 
@@ -147,11 +153,22 @@ class Partido extends CI_Model
 			case 'Cancelados':
 			$sql.="  p.ESTADO='Cancelado' AND";
 			break;
+			case 'Score':
+			$hora = new DateTime(date('H:i'));
+			$hora->sub(new DateInterval('PT2H30M')); // partidos iniciados hace dos horas y media (evita en vivo)
+			$sql.="  p.ESTADO='NSY'  ";
+			if (date("Y-m-d")==$from ) {
+				$sql.="  AND p.HORARIO<'".$hora->format('H:i')."'  ";
+			}
+			
+			break;
+		}
+		if ($filtro!='Score') {
+			$sql.=" p.FECHA BETWEEN '".$from."'   AND '".$to."' ";
 		}
 		$sql.="
-		p.FECHA BETWEEN '".$from."'   AND '".$to."'
-		ORDER BY p.FECHA DESC, p.HORARIO ASC";
-
+		ORDER BY p.FECHA DESC, p.HORARIO ASC"; 
+		
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
 			return $query->result();

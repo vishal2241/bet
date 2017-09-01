@@ -6,12 +6,40 @@ class Sync extends CI_Controller {
 	{
 		parent::__construct();
 		$this->User->check();
+		ini_set('memory_limit','16000000M');
+		set_time_limit(0);
 	}
 
 	public function index(){
-		$matches=$this->Request->getResults();  
-		print_r($matches);
-		#$this->load->view('sync/frame');
+		$scores = array();
+		$pendientes=$this->Partido->getAllPartidos('','','Score');
+		foreach ($pendientes as $key => $row) {
+			$getScore                     = $this->Request->getScores($row->ID_PARTIDO);
+			$status                    = $this->Request->getStatus($row->ID_PARTIDO);
+			if ($getScore!=null and $status!=null) {
+				$score                     = explode(':', $getScore['EventScore']);
+				$this->Partido->ID_PARTIDO = $row->ID_PARTIDO;
+				$this->Partido->SCORE_1    = $score[0];
+				$this->Partido->SCORE_2    = $score[1];
+				$this->Partido->ESTADO     = $status['result'];
+				$this->Partido->setScore();
+
+				array_push($scores,  
+					array(
+						'PARTIDO' => $row->LOCAL.' vs... '.$row->VISITANTE ,
+						'FECHA' => $row->FECHA ,
+						'HORARIO' => $row->HORARIO ,
+						'ESTADO' => $status['result'] ,
+						'MARCADOR' => $getScore['EventScore'] ,
+						));
+			}
+			
+		}
+
+		$data = array(
+			'scores' => $scores
+			);
+		$this->load->view('sync/index', $data);
 	}
 
 
@@ -20,8 +48,6 @@ class Sync extends CI_Controller {
 	/*******************************************************/
 	
 	public function syncMatches(){
-		ini_set('memory_limit','16000000M');
-		set_time_limit(0);
 		$this->Request->FECHA=5;  
 		$matches=$this->Request->getMatches();  
 		#echo count($matches);  
