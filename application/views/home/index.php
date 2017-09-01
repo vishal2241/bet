@@ -90,9 +90,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						});
 						console.log(counter)		
 						var cantidad = $("#cantidad").val();
-						var ganancia = creditos*cantidad;
+						var ganancia = Math.round(creditos*cantidad);
 						$("#ganancia").empty()
-						$("#ganancia").append($.number( ganancia,0, '' , '.'))
+						console.log(ganancia)
+						$("#ganancia").append($.number( ganancia,0, '' , ' '))
 					}
 
 

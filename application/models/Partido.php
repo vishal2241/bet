@@ -86,7 +86,7 @@ class Partido extends CI_Model
 		$sql.="
 		AND p.ID_COMPETENCIA='".$compe."' 
 		GROUP BY p.ID_PARTIDO 
-		ORDER BY p.HORARIO ASC
+		ORDER BY p.HORARIO DESC
 		";
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {
