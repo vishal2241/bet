@@ -32,7 +32,7 @@ class Ajax extends CI_Controller {
 		if (isset($_POST['fecha']) and $_POST['fecha']!='') {
 			$date=$_POST['fecha'];
 			$hour=date("H:i");
-			$data = $this->Competencia->getByDate($date, $hour);
+			$data = $this->Competencia->getByDate($date, $hour, 'FAV');
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());

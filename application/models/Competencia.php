@@ -28,7 +28,7 @@ class Competencia extends CI_Model
 
 	}
 
-	public function getByDate($date, $hour)
+	public function getByDate($date, $hour, $filter)
 	{
 		$sql='SELECT
 		c.ID_COMPETENCIA as ID,
@@ -42,6 +42,19 @@ class Competencia extends CI_Model
 		#Si la fecha es mayor a la de hoy no se condiciona la hora
 		if (date("Y-m-d")==$date ) {
 			$sql.=' AND p.HORARIO > "'.$hour.'" ';
+		}
+
+		switch ($filter) {
+			case 'FAV':
+			$sql.=' AND c.FAVORITA LIKE "1" ';
+			break;
+			case 'FAV2':
+			$sql.=' AND c.FAVORITA LIKE "2" ';
+			break;
+			case 'FAV3':
+			$sql.=' AND c.FAVORITA LIKE "2" ';
+			break;
+			
 		}
 
 		$sql.='/*AND p.ESTADO="" 
