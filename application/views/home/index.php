@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-2" style="padding-left: 5px; padding-right: 5px;">
-						<div id="ligas">
+						<div id="ligas" align="center">
 							<h4 class="text-success text-center bold">Fecha</h4>
 							<select class="select-box" id="dia">
 								<option id="today">Hoy</option>
