@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<button class="btn btn-success  btn-sm" id="tomorrow">
 								<i class="material-icons">event</i>  
 							</button>
-							<button class="btn btn-success  btn-sm" id="after-tomorrow">
+							<button class="btn btn-success  btn-sm" id="after2">
 								<i class="material-icons">event</i>  
 							</button>
 							<button class="btn btn-success  btn-sm" id="after3">
@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="col-md-6">
 									<div class="form-group is-empty">
 										<div  class="ganancia">
-											<i class="fa fa-money" aria-hidden="true"></i> 
+											<!--	<i class="fa fa-money" aria-hidden="true"></i> -->
 											<span id="ganancia">0</span>
 										</div>										
 									</div>
@@ -80,33 +80,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
 				<script type="text/javascript">
-					function getMoney() {
-						var creditos = '1.00';
-						var counter= 0;
-						$("#detalle").find("[value]").each(function() {
-							var tmp      = $.number($(this).attr("value"),2, '.' , ',');
-							creditos     = (parseFloat(creditos) * parseFloat(tmp));
-							creditos     = $.number( creditos,2, '.' , ',');	
-							counter++;		
-						});
-						console.log(counter)		
-						var cantidad = $("#cantidad").val();
-						var ganancia = Math.round(creditos*cantidad);
-						$("#ganancia").empty()
-						console.log(ganancia)
-						$("#ganancia").append($.number( ganancia,0, '' , ' '))
-					}
+					
 
 
 					$( document ).ready(function() {
 						var url= '<?= base_url(); ?>';
-						var fecha=moment().format('YYYY-MM-DD'); 
-						var timer = $.timer(function() {
-							$("#all").empty();
-							get_bets(fecha, url);
-						});
-						timer.set({ time : 5000, autostart : true });
-
+						var fecha=moment().format('YYYY-MM-DD');
+						
 						$('#cantidad').keyup(function(){
 							getMoney();							
 						});
@@ -155,61 +135,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-		//Botones
-		$("#tomorrow").empty();
-		$("#tomorrow").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
-		$("#after-tomorrow").empty();
-		$("#after-tomorrow").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
-		$("#after3").empty();
-		$("#after3").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
+						//Botones
+						$("#tomorrow").empty();
+						$("#tomorrow").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+						$("#after2").empty();
+						$("#after2").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+						$("#after3").empty();
+						$("#after3").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
 
-		//Cargados automaticamente 
-		$("#titulo").empty();
-		$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-		get_bets(fecha, url);
-		get_totalMatch(fecha, url);
+						//Cargados automaticamente 
+						$("#titulo").empty();
+						$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+						get_bets(fecha, url);
+						get_totalMatch(fecha, url);
 
-		//Clic today
-		$( "#today" ).click(function() {
-			$("#titulo").empty();
-			$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-			var fecha=moment().format('YYYY-MM-DD');  
-			$("#bets > tbody").empty();
-			get_bets(fecha, url);
-			get_totalMatch(fecha, url);
-		});
-		//Clic tomorrow
-		$( "#tomorrow" ).click(function() {
-			$("#titulo").empty();
-			$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
-			var fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
-			$("#all").empty();
-			get_bets(fecha, url);
-			get_totalMatch(fecha, url);
-		});
-		//Clic after tomorrow
-		$( "#after-tomorrow" ).click(function() {
-			$("#titulo").empty();
-			$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
-			var fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
-			$("#all").empty();
-			get_totalMatch(fecha, url);
-			get_bets(fecha, url);
-		});
-		//Clic after 3 days
-		$( "#after3" ).click(function() {
-			$("#titulo").empty();
-			$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
-			var fecha=moment().add(3, 'days').format('YYYY-MM-DD');  
-			$("#all").empty();
-			get_totalMatch(fecha, url);
-			get_bets(fecha, url);
-		});
-
-
-	});
+						//Clic today
+						$( "#today" ).click(function() {
+							$("#titulo").empty();
+							$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+							fecha=moment().format('YYYY-MM-DD');  
+							$("#all").empty();
+							get_bets(fecha, url);
+							get_totalMatch(fecha, url);
+						});
+						//Clic tomorrow
+						$( "#tomorrow" ).click(function() {
+							$("#titulo").empty();
+							$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+							fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
+							$("#all").empty();
+							get_bets(fecha, url);
+							get_totalMatch(fecha, url);
+						});
+						//Clic after tomorrow
+						$( "#after2" ).click(function() {
+							$("#titulo").empty();
+							$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+							fecha=moment().add(2, 'days').format('YYYY-MM-DD');
+							$("#all").empty();
+							get_totalMatch(fecha, url);
+							get_bets(fecha, url);
+						});
+						//Clic after 3 days
+						$( "#after3" ).click(function() {
+							$("#titulo").empty();
+							$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
+							fecha=moment().add(3, 'days').format('YYYY-MM-DD');  
+							$("#all").empty();
+							get_totalMatch(fecha, url);
+							get_bets(fecha, url);
+						});
 
 
+				 
+						var timer = $.timer(function() {
+							$("#all").empty();
+							get_bets(fecha, url);
+							console.log("actualizado: "+fecha)
 
-</script>
-</html>
+						});
+						//timer.set({ time : 40000, autostart : true });
+
+					});
+
+
+
+				</script>
+				</html>
