@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 							<table class="table table-bordered" id="ligas">
 								<tbody>
-									<tr id="colombia">
+									<tr class="pais" id="colombia">
 										<th class="bold" style="background-color: #EEEDED; cursor: pointer;">
 											<input type="checkbox" name="optionsCheckboxes">
 											Colombia
@@ -56,6 +56,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<td class="" style="background-color: white">
 											<input type="checkbox" name="optionsCheckboxes">
 											Colombia
+										</td>
+									</tr>
+
+
+
+									<tr class="pais" id="argentina">
+										<th class="bold" style="background-color: #EEEDED; cursor: pointer;">
+											<input type="checkbox" name="optionsCheckboxes">
+											Argentina
+										</th>
+									</tr>
+									<tr pais="argentina" class="hidden">
+										<td class="" style="background-color: white">
+											<input type="checkbox" name="optionsCheckboxes">
+											argentina
+										</td>
+									</tr>
+									<tr pais="argentina" class="hidden">
+										<td class="" style="background-color: white">
+											<input type="checkbox" name="optionsCheckboxes">
+											argentina
+										</td>
+									</tr>
+									<tr pais="argentina" class="hidden">
+										<td class="" style="background-color: white">
+											<input type="checkbox" name="optionsCheckboxes">
+											argentina
+										</td>
+									</tr>
+									<tr pais="argentina" class="hidden">
+										<td class="" style="background-color: white">
+											<input type="checkbox" name="optionsCheckboxes">
+											argentina
 										</td>
 									</tr>
 
@@ -120,14 +153,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					$( document ).ready(function() {
 
-						$('#colombia').click(function(){
-							$("#ligas").find("[pais]").each(function() { 
+						$('.pais').click(function(){
+							var pais = $(this).attr('id');
+
+							$("#ligas").find("[pais="+pais+"]").each(function() { 
 
 								if ($(this).hasClass("hidden")) {
-									console.log("existe")
 									$(this).removeClass( "hidden" );
 								} else {
-									console.log("no existe")
 									$(this).addClass("hidden")
 								}
 								
