@@ -146,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						get_totalMatch(fecha, url);
 
 						//Clic today
-						$( "#today" ).click(function() {
+						$( "#dia #today" ).change(function() {
 							$("#titulo").empty();
 							$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 							fecha=moment().format('YYYY-MM-DD');  
@@ -155,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							get_totalMatch(fecha, url);
 						});
 						//Clic tomorrow
-						$( "#tomorrow" ).click(function() {
+						$( "#dia #tomorrow" ).change(function() {
 							$("#titulo").empty();
 							$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
 							fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
@@ -164,7 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							get_totalMatch(fecha, url);
 						});
 						//Clic after tomorrow
-						$( "#after2" ).click(function() {
+						$( "#dia #after2" ).change(function() {
 							$("#titulo").empty();
 							$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
 							fecha=moment().add(2, 'days').format('YYYY-MM-DD');
@@ -173,7 +173,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							get_bets(fecha, url);
 						});
 						//Clic after 3 days
-						$( "#after3" ).click(function() {
+						$( "#dia #after3" ).change(function() {
 							$("#titulo").empty();
 							$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
 							fecha=moment().add(3, 'days').format('YYYY-MM-DD');  
