@@ -13,7 +13,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="section">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-9 content">
+					<div class="col-md-2" style="padding-left: 5px; padding-right: 5px;">
+						<div id="ligas" align="center">
+							<h4 class="text-success text-center bold">Fecha</h4>
+							<select>
+								<option>HOY</option>
+								<option>HOY</option>
+								<option>HOY</option>
+								<option>HOY</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-7 content" style="padding-left: 5px; padding-right: 5px;">
 						<div class="tim-container">
 							<button class="btn btn-success  btn-sm" id="today">
 								<i class="material-icons">alarm</i> Hoy
@@ -36,20 +47,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- end container -->
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3" style="padding-left: 5px; padding-right: 8px;">
 						<div class="panel panel-default" id="tiquete"  >
 							<div class="panel-heading text-center "><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
 							<div class="panel-body" style="padding:0px">
-								<div class="col-md-12">
-									<table class="table table-condensed table-striped table-bordered" id="tiquete-table">
-										<tbody id="detalle">
-											<tr class="tiquete">
-												<th class="text-success text-center">PARTIDOS</th>
-												<th class="text-success text-center">CUOTAS</th>
-											</tr>
-										</tbody>
-									</table>
-								</div>	
+
+								<table class="table table-condensed table-striped table-bordered" id="tiquete-table" width="100%">
+									<tbody id="detalle">
+										<tr class="tiquete">
+											<th class="text-success text-center">PARTIDOS</th>
+											<th class="text-success text-center">CUOTAS</th>
+										</tr>
+									</tbody>
+								</table>
+
 
 								<div class="col-md-6">
 									<div class="form-group label-floating">
@@ -95,8 +106,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							console.log("jugar")							
 						});
 
+						//$("#ligas").sticky({topSpacing:100});
 						$("#tiquete").sticky({topSpacing:100});
 
+						
 						$('#all').on('click', '[data-type="odd"]', function(){
 
 							var value = $(this).text();
@@ -132,6 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 							getMoney();
 						});
+
 
 
 
@@ -187,7 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						});
 
 
-				 
+
 						var timer = $.timer(function() {
 							$("#all").empty();
 							get_bets(fecha, url);

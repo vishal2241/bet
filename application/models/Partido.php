@@ -156,9 +156,9 @@ class Partido extends CI_Model
 			case 'Score':
 			$hora = new DateTime(date('H:i'));
 			$hora->sub(new DateInterval('PT2H30M')); // partidos iniciados hace dos horas y media (evita en vivo)
-			$sql.="  p.ESTADO='NSY'  ";
+			$sql.="  p.ESTADO='NSY' AND FECHA<='".date("Y-m-d")."'  ";
 			if (date("Y-m-d")==$from ) {
-				$sql.="  AND p.HORARIO<'".$hora->format('H:i')."'  AND FECHA<='".date("Y-m-d")."' ";
+				$sql.="  AND p.HORARIO<'".$hora->format('H:i')."'   ";
 			}
 			
 			break;

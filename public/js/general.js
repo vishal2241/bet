@@ -90,9 +90,6 @@ function get_bets (fecha, url) {
 							<th class="text-center info">1X</th>\
 							<th class="text-center info">2X</th>\
 							<th class="text-center info">12</th>\
-							<th class="text-center info">1HT</th>\
-							<th class="text-center info">XHT</th>\
-							<th class="text-center info">2HT</th>\
 							<th class="text-center info">GG</th>\
 							<th class="text-center info">NG</th>\
 							</tr>\
@@ -123,41 +120,7 @@ function getMoney() {
 	$("#ganancia").append($.number( ganancia,0, '' , ''))
 }
 
-$('#all').on('click', '[data-type="odd"]', function(){
 
-	var value = $(this).text();
-	var conse = $(this).attr('id');
-	var local = $(this).attr('local');
-	var visitante = $(this).attr('visitante');
-	var text = $(this).attr('text');
-	var match = $(this).closest('tr').attr('data-match');
-
-	$("#detalle").find("[id_match="+match+"]").remove();
-	if ($(this).hasClass("actived")) {
-		$(this).closest('tr').find('.actived').removeClass('actived');
-		$(this).removeClass( "actived" );
-
-	}	else {
-		$(this).closest('tr').find('.actived').removeClass('actived');
-		$(this).addClass( "actived" );
-
-
-		var row = 
-		'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
-		'<td class="x12 bold ">'+
-		local + ' vs. '+ visitante+
-		'<br>'+
-		'<b><span class="text-info text-uppercase x11">'+text+'</span></b>'+
-		'</td>'+
-		'<td value="'+value+'" class="text-primary text-center bold">'+
-		value+
-		'</td>'+
-		'</tr>';
-		$('#detalle').append(row);
-	}
-
-	getMoney();
-});
 
 
 

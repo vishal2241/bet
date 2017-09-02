@@ -78,7 +78,7 @@ td.actived {
 
 
 #detalle {
-	display: block;
+	/*display: block;*/
 	height: 250px;       
 	overflow-y: auto;   
 	overflow-x: hidden; 
