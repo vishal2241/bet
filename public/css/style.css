@@ -84,7 +84,17 @@ td.actived {
 	overflow-x: hidden; 
 }
 
+.select-box{
+	color:red;
+	padding:4px;
+	width: 100%;
+	text-align: center;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
 
+/**************************************/
+/***************Scroll*****************/
+/**************************************/
 ::-webkit-scrollbar {
 	width: 6px;
 	height: 6px;

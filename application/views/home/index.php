@@ -14,37 +14,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-2" style="padding-left: 5px; padding-right: 5px;">
-						<div id="ligas" align="center">
+						<div id="ligas">
 							<h4 class="text-success text-center bold">Fecha</h4>
-							<select>
-								<option>HOY</option>
-								<option>HOY</option>
-								<option>HOY</option>
-								<option>HOY</option>
+							<select class="select-box" id="dia">
+								<option id="today">Hoy</option>
+								<option id="tomorrow"></option>
+								<option id="after2"></option>
+								<option id="after3"></option>
 							</select>
 						</div>
 					</div>
-					<div class="col-md-7 content" style="padding-left: 5px; padding-right: 5px;">
-						<div class="tim-container">
-							<button class="btn btn-success  btn-sm" id="today">
-								<i class="material-icons">alarm</i> Hoy
-							</button>
-							<button class="btn btn-success  btn-sm" id="tomorrow">
-								<i class="material-icons">event</i>  
-							</button>
-							<button class="btn btn-success  btn-sm" id="after2">
-								<i class="material-icons">event</i>  
-							</button>
-							<button class="btn btn-success  btn-sm" id="after3">
-								<i class="material-icons">event</i>  
-							</button>
-							<!-- tables row -->
-							<h3 class="text-center text-uppercase bold"  id="titulo"></h3>
-							<p class="text-center text-uppercase bold"  id="totalDia"></p>
-							<div id="all">
-								
-							</div>
-							<!-- end container -->
+					<div class="col-md-7 content" style="padding-left: 5px; padding-right: 5px;">											
+						<!-- tables row -->
+						<h3 class="text-center text-uppercase bold"  id="titulo"></h3>
+						<p class="text-center text-uppercase bold"  id="totalDia"></p>
+						<div id="all">
+
 						</div>
 					</div>
 					<div class="col-md-3" style="padding-left: 5px; padding-right: 8px;">
@@ -147,15 +132,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						});
 
 
+						//SELECT DAY'S
 
+						$('#tomorrow').text(moment().add(1, 'days').format('dddd Do [de] MMMM'))
+						$('#after2').text(moment().add(2, 'days').format('dddd Do [de] MMMM'))
+						$('#after3').text(moment().add(3, 'days').format('dddd Do [de] MMMM'))
 
-						//Botones
-						$("#tomorrow").empty();
-						$("#tomorrow").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
-						$("#after2").empty();
-						$("#after2").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
-						$("#after3").empty();
-						$("#after3").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
 
 						//Cargados automaticamente 
 						$("#titulo").empty();
