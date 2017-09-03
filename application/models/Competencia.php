@@ -28,7 +28,7 @@ class Competencia extends CI_Model
 
 	}
 
-	public function getByDate($date, $hour, $filter)
+	public function getByDate($date, $hour, $filter, $pais)
 	{
 		$sql='SELECT
 		c.ID_COMPETENCIA as ID,
@@ -53,6 +53,9 @@ class Competencia extends CI_Model
 			break;
 			case 'FAV3':
 			$sql.=' AND c.FAVORITA LIKE "2" ';
+			break;
+			case 'PAIS':
+			$sql.=' AND c.ID_PAIS ="'.$pais.'" ';
 			break;
 			
 		}

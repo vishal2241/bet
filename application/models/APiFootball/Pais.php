@@ -29,13 +29,13 @@ class Pais extends CI_Model
 	public function add()
 	{
 
-			$this->db->insert('pais', $this);
+		$this->db->insert('pais', $this);
 	}
 
 	public function update()
 	{
-			$this->db->where('ID_PAIS', $this->ID_PAIS); 
-			$this->db->update('pais', $this);
+		$this->db->where('ID_PAIS', $this->ID_PAIS); 
+		$this->db->update('pais', $this);
 	}
 
 

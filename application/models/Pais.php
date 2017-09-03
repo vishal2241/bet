@@ -27,16 +27,40 @@ class Pais extends CI_Model
 
 	} 
 
+	public function getPaisByDate($date)
+	{
+		$sql="SELECT p.ID_PAIS AS ID, p.NOMBRE 
+		FROM partido pa 
+		LEFT JOIN competencia c ON (pa.ID_COMPETENCIA=c.ID_COMPETENCIA) 
+		LEFT JOIN pais p ON (c.ID_PAIS=p.ID_PAIS) 
+		WHERE pa.FECHA='".$date."' ";
+		if (date("Y-m-d")==$date ) {
+			$sql.=" AND pa.HORARIO > '".date("H:i")."' ";
+		}
+		$sql.=" GROUP BY p.ID_PAIS ORDER BY p.NOMBRE ";
+
+
+		$query = $this->db->query($sql); 
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	} 
+
+
 	public function add()
 	{
 
-			$this->db->insert('pais', $this);
+		$this->db->insert('pais', $this);
 	}
 
 	public function update()
 	{
-			$this->db->where('ID_PAIS', $this->ID_PAIS); 
-			$this->db->update('pais', $this);
+		$this->db->where('ID_PAIS', $this->ID_PAIS); 
+		$this->db->update('pais', $this);
 	}
 
 

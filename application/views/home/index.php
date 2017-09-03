@@ -26,9 +26,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div id="liga">
 							<h4 class="text-info text-center bold">Ligas disponibles</h4>
 
-							<table class="table table-bordered" id="ligas">
-								<tbody>
-									<tr class="pais" id="colombia">
+							<table class="table table-bordered" >
+								<tbody id="ligas">
+									<!--<tr class="pais" id="colombia">
 										<th class="bold" style="background-color: #EEEDED; cursor: pointer;">
 											<input type="checkbox" name="optionsCheckboxes">
 											Colombia
@@ -39,59 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<input type="checkbox" name="optionsCheckboxes">
 											Colombia
 										</td>
-									</tr>
-									<tr pais="colombia" class="hidden">
-										<td class="" style="background-color: white">
-											<input type="checkbox" name="optionsCheckboxes">
-											Colombia
-										</td>
-									</tr>
-									<tr pais="colombia" class="hidden">
-										<td class="" style="background-color: white">
-											<input type="checkbox" name="optionsCheckboxes">
-											Colombia
-										</td>
-									</tr>
-									<tr pais="colombia" class="hidden">
-										<td class="" style="background-color: white">
-											<input type="checkbox" name="optionsCheckboxes">
-											Colombia
-										</td>
-									</tr>
-
-
-
-									<tr class="pais" id="argentina">
-										<th class="bold" style="background-color: #EEEDED; cursor: pointer;">
-											<input type="checkbox" name="optionsCheckboxes">
-											Argentina
-										</th>
-									</tr>
-									<tr pais="argentina" class="hidden">
-										<td class="" style="background-color: white">
-											<input type="checkbox" name="optionsCheckboxes">
-											argentina
-										</td>
-									</tr>
-									<tr pais="argentina" class="hidden">
-										<td class="" style="background-color: white">
-											<input type="checkbox" name="optionsCheckboxes">
-											argentina
-										</td>
-									</tr>
-									<tr pais="argentina" class="hidden">
-										<td class="" style="background-color: white">
-											<input type="checkbox" name="optionsCheckboxes">
-											argentina
-										</td>
-									</tr>
-									<tr pais="argentina" class="hidden">
-										<td class="" style="background-color: white">
-											<input type="checkbox" name="optionsCheckboxes">
-											argentina
-										</td>
-									</tr>
-
+									</tr>-->
 								</tbody>
 							</table>
 						</div>
@@ -149,9 +97,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
 				<script type="text/javascript">
 
+					function getCountries (fecha, url) {
 
+						$.post(url+'ajax/json_countries', {fecha: fecha}, function(pais, status){
+							$.each(pais, function(a, row) { 
+								var	pais=
+								'<tr class="pais" id="'+row.ID+'">'+
+								'<th class="bold" style="background-color: #EEEDED; cursor: pointer;">'+
+								/*'<input type="checkbox" name="optionsCheckboxes"> '+*/
+								row.NOMBRE+
+								'</th>'+
+								'</tr>';
+								$("#ligas").append(pais);
+								$.post(url+'ajax/jsonCompeByCountry', {fecha: fecha, pais:row.ID}, function(compe, status){
+									$.each(compe, function(a, rowCompe) { 
+										var ligas=	'<tr pais="colombia" class="">'+
+										'<td class="" style="background-color: white">'+
+										'<input type="checkbox" name="optionsCheckboxes"> '+
+										rowCompe.COMPE+
+										'</td>'+
+										'</tr>';
+										$("#"+row.ID).after(ligas);
+									});
+
+								}, 'json');
+								
+							});
+
+							
+						}, 'json');
+					}
 
 					$( document ).ready(function() {
+						var url= '<?= base_url(); ?>';
+						var fecha=moment().format('YYYY-MM-DD');
+						getCountries(fecha,url);
 
 						$('.pais').click(function(){
 							var pais = $(this).attr('id');

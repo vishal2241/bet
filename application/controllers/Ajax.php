@@ -32,7 +32,7 @@ class Ajax extends CI_Controller {
 		if (isset($_POST['fecha']) and $_POST['fecha']!='') {
 			$date=$_POST['fecha'];
 			$hour=date("H:i");
-			$data = $this->Competencia->getByDate($date, $hour, 'FAV');
+			$data = $this->Competencia->getByDate($date, $hour, 'FAV', '');
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());
@@ -46,6 +46,27 @@ class Ajax extends CI_Controller {
 			$compe=$_POST['compe'];
 			$hour=date("H:i");
 			$data = $this->Partido->getPartidoByCompe($date, $hour, $compe);
+			echo json_encode($data);
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
+
+	public function json_countries(){
+		if (isset($_POST['fecha']) and $_POST['fecha']!='') {
+			$date=$_POST['fecha'];
+			$data = $this->Pais->getPaisByDate($date);
+			echo json_encode($data);
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
+
+	public function jsonCompeByCountry(){
+		if (isset($_POST['fecha']) and $_POST['fecha']!='' and isset($_POST['pais']) and $_POST['pais']!='') {
+			$date=$_POST['fecha'];
+			$pais=$_POST['pais'];
+			$data = $this->Competencia->getByDate($date, date("H:i"), 'PAIS', $pais);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());
