@@ -98,33 +98,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript">
 
 					function getCountries (fecha, url) {
-
+						
 						$.post(url+'ajax/json_countries', {fecha: fecha}, function(pais, status){
+							var	html='';
 							$.each(pais, function(a, row) { 
-								var	pais=
+								html+=
 								'<tr class="pais" id="'+row.ID+'">'+
-								'<th class="bold" style="background-color: #EEEDED; cursor: pointer;">'+
+								'<td class="bold" style="background-color: #EEEDED; cursor: pointer;">'+
 								/*'<input type="checkbox" name="optionsCheckboxes"> '+*/
 								row.NOMBRE+
-								'</th>'+
-								'</tr>';
-								$("#ligas").append(pais);
+								'</td>'+
+								'</tr>'
 								$.post(url+'ajax/jsonCompeByCountry', {fecha: fecha, pais:row.ID}, function(compe, status){
 									$.each(compe, function(a, rowCompe) { 
-										var ligas=	'<tr pais="colombia" class="">'+
+										a+=
+										'<tr pais="'+row.ID+'" class="">'+
 										'<td class="" style="background-color: white">'+
 										'<input type="checkbox" name="optionsCheckboxes"> '+
 										rowCompe.COMPE+
 										'</td>'+
 										'</tr>';
-										$("#"+row.ID).after(ligas);
 									});
-
 								}, 'json');
-								
+								console.log(a)
 							});
-
 							
+							$("#ligas").html(html)
 						}, 'json');
 					}
 
