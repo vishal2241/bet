@@ -97,35 +97,62 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
 				<script type="text/javascript">
 
+
+
+
 					function getCountries (fecha, url) {
-						
-						$.post(url+'ajax/json_countries', {fecha: fecha}, function(pais, status){
-							var	html='';
-							$.each(pais, function(a, row) { 
-								html+=
-								'<tr class="pais" id="'+row.ID+'">'+
-								'<td class="bold" style="background-color: #EEEDED; cursor: pointer;">'+
-								/*'<input type="checkbox" name="optionsCheckboxes"> '+*/
-								row.NOMBRE+
-								'</td>'+
-								'</tr>'
-								$.post(url+'ajax/jsonCompeByCountry', {fecha: fecha, pais:row.ID}, function(compe, status){
-									$.each(compe, function(a, rowCompe) { 
-										a+=
-										'<tr pais="'+row.ID+'" class="">'+
-										'<td class="" style="background-color: white">'+
-										'<input type="checkbox" name="optionsCheckboxes"> '+
-										rowCompe.COMPE+
-										'</td>'+
-										'</tr>';
+						var	html='';
+						$.ajax({
+							dataType: 'json',
+							async: false,
+							url: url+'ajax/json_countries',
+							type: 'post',
+							data: {fecha: fecha},
+							success: function(pais){
+
+								$.each(pais, function(a, row) { 
+									html+=
+									'<tr class="pais" id="'+row.ID+'">'+
+									'<td class="bold" style="background-color: #EEEDED; cursor: pointer;">'+
+									/*'<input type="checkbox" name="optionsCheckboxes"> '+*/
+									row.NOMBRE+
+									'</td>'+
+									'</tr>'
+
+									$.ajax({
+										dataType: 'json',
+										async: false,
+										url: url+'ajax/jsonCompeByCountry',
+										type: 'post',
+										data: {fecha: fecha, pais:row.ID},
+										success: function(compe){
+											$.each(compe, function(b, rowCompe) { 
+
+												html+=
+												'<tr pais="'+row.ID+'" class="">'+
+												'<td class="" style="background-color: white">'+
+												'<input type="checkbox" name="optionsCheckboxes"> '+
+												rowCompe.COMPE+
+												'</td>'+
+												'</tr>';
+
+											});
+										},
+										error: function(e){
+											console.log(e);
+										}
 									});
-								}, 'json');
-								console.log(a)
-							});
-							
-							$("#ligas").html(html)
-						}, 'json');
-					}
+
+								});
+
+							},
+							error: function(e){
+								console.log(e);
+							}
+						});
+
+						$("#ligas").html(html)
+					} //end func
 
 					$( document ).ready(function() {
 						var url= '<?= base_url(); ?>';
