@@ -1,27 +1,144 @@
 moment.locale('es');
 
+function getCountries (fecha, url) {
+	var	html='';
+	$.ajax({
+		dataType: 'json',
+		async: false,
+		url: url+'ajax/json_countries',
+		type: 'post',
+		data: {fecha: fecha},
+		success: function(pais){
 
-function isEmpty(val){
-	return (val === undefined || val == null || val.length <= 0) ? '0' : val;
+			$.each(pais, function(a, row) { 
+				html+=
+				'<tr class="pais" id="'+row.ID+'">'+
+				'<td class="bold" style="background-color: #EEEDED; cursor: pointer;">'+
+				/*'<input type="checkbox" name="optionsCheckboxes"> '+*/
+				row.NOMBRE+
+				'</td>'+
+				'</tr>'
+
+				$.ajax({
+					dataType: 'json',
+					async: false,
+					url: url+'ajax/jsonCompeByCountry',
+					type: 'post',
+					data: {fecha: fecha, pais:row.ID},
+					success: function(compe){
+						$.each(compe, function(b, rowCompe) { 
+							html+=
+							'<tr pais="'+row.ID+'" class="x12 hidden">'+
+							'<td class="" style="background-color: white">'+
+							'<input type="checkbox" name="optionsCheckboxes"> '+
+							rowCompe.COMPE+
+							'</td>'+
+							'</tr>';
+
+						});
+					},
+					error: function(e){
+						console.log(e);
+					}
+				});
+
+			});
+
+		},
+		error: function(e){
+			console.log(e);
+		}
+	});
+
+	$("#ligas").html(html)
+} 
+
+function showLiga(){
+	$('.pais').click(function(){
+		var pais = $(this).attr('id');
+
+		$("#ligas").find("[pais="+pais+"]").each(function() { 
+
+			if ($(this).hasClass("hidden")) {
+				$(this).removeClass( "hidden" );
+			} else {
+				$(this).addClass("hidden")
+			}
+
+		});							
+	});
 }
 
-function DeleteItem (url) {
-	var action = window.confirm('Desea eliminar este elemento?');
-	if (action) {
-		window.location = url;
-	}
+function selectBox(fecha, url){
+
+	$("#titulo").empty();
+	$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+	get_bets(fecha, url);
+	get_totalMatch(fecha, url);
+
+	$( "#dia" ).change(function() {
+		$("#titulo").empty();
+		switch($(this).val()){
+			case "today":
+			$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+			fecha=moment().format('YYYY-MM-DD');  
+			break;
+			case "tomorrow":
+			$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+			fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
+			break;
+			case "after2":
+			$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+			fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
+			break;
+			case "after3":
+			$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
+			fecha=moment().add(3, 'days').format('YYYY-MM-DD'); 
+			break;
+		}
+
+		$("#all").empty();
+		get_bets(fecha, url);
+		get_totalMatch(fecha, url);
+
+	});
 }
 
 
-function get_totalMatch(fecha, url) {
-	$.post(url+'ajax/json_totalMatch', {fecha: fecha}, function(data, status){
-		$.each(data, function(a, row) { 
-			$("#totalDia").empty();
-			$("#totalDia").append("Total partidos : "+row.TOTAL);
+function addDetalle(){
+	$('#all').on('click', '[data-type="odd"]', function(){
 
-		});
+		var value = $(this).text();
+		var conse = $(this).attr('id');
+		var local = $(this).attr('local');
+		var visitante = $(this).attr('visitante');
+		var text = $(this).attr('text');
+		var match = $(this).closest('tr').attr('data-match');
 
-	}, 'json');
+		$("#detalle").find("[id_match="+match+"]").remove();
+		if ($(this).hasClass("actived")) {
+			$(this).closest('tr').find('.actived').removeClass('actived');
+			$(this).removeClass( "actived" );
+		}	else {
+			$(this).closest('tr').find('.actived').removeClass('actived');
+			$(this).addClass( "actived" );
+
+			var row = 
+			'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
+			'<td class="x12 bold ">'+
+			local + ' vs. '+ visitante+
+			'<br>'+
+			'<b><span class="text-info text-uppercase x11">'+text+'</span></b>'+
+			'</td>'+
+			'<td value="'+value+'" class="text-primary text-center bold">'+
+			value+
+			'</td>'+
+			'</tr>';
+			$('#detalle').append(row);
+		}
+
+		getMoney();
+	});
 }
 
 function get_bets (fecha, url) {
@@ -103,6 +220,17 @@ function get_bets (fecha, url) {
 	},"json");
 }  
 
+function get_totalMatch(fecha, url) {
+	$.post(url+'ajax/json_totalMatch', {fecha: fecha}, function(data, status){
+		$.each(data, function(a, row) { 
+			$("#totalDia").empty();
+			$("#totalDia").append("Total partidos : "+row.TOTAL);
+
+		});
+
+	}, 'json');
+}
+
 function getMoney() {
 	var creditos = '1.00';
 	var counter= 0;
@@ -119,6 +247,19 @@ function getMoney() {
 	console.log(ganancia)
 	$("#ganancia").append($.number( ganancia,0, '' , ''))
 }
+
+function isEmpty(val){
+	return (val === undefined || val == null || val.length <= 0) ? '0' : val;
+}
+
+function DeleteItem (url) {
+	var action = window.confirm('Desea eliminar este elemento?');
+	if (action) {
+		window.location = url;
+	}
+}
+
+
 
 
 
