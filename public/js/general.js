@@ -1,6 +1,7 @@
 moment.locale('es');
 
 function getCountries (fecha, url) {
+	console.log("entre")
 	var	html='';
 	$.ajax({
 		dataType: 'json',
@@ -73,7 +74,7 @@ function selectBox(fecha, url){
 
 	$("#titulo").empty();
 	$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-	get_bets(fecha, url);
+	//get_bets(fecha, url);
 	get_totalMatch(fecha, url);
 
 	$( "#dia" ).change(function() {
@@ -98,6 +99,8 @@ function selectBox(fecha, url){
 		}
 
 		$("#all").empty();
+		$("#ligas").empty();
+		getCountries(fecha,url);
 		get_bets(fecha, url);
 		get_totalMatch(fecha, url);
 

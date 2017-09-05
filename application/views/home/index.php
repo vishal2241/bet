@@ -105,6 +105,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						selectBox(fecha, url);
 						addDetalle();
 
+						$('.checkCompe').click(function(){
+							 console.log("hola")				
+						});
+
 						$('#cantidad').keyup(function(){
 							getMoney();							
 						});
