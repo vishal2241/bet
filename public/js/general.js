@@ -30,7 +30,7 @@ function getCountries (fecha, url) {
 							html+=
 							'<tr pais="'+row.ID+'" class="x12 hidden">'+
 							'<td class="" style="background-color: white">'+
-							'<input type="checkbox" name="optionsCheckboxes"> '+
+							'<input type="checkbox" class="checkCompe" id="'+rowCompe.ID+'"> '+
 							rowCompe.COMPE+
 							'</td>'+
 							'</tr>';
