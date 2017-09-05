@@ -106,7 +106,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						addDetalle();
 
 						$('.checkCompe').click(function(){
-							 console.log("hola")				
+							var idCompe = $(this).attr('check-id');
+							
+							if ($(this).is(':checked') ) {
+
+								if ($('#'+idCompe).length == 0 ) {
+									console.log("add")
+									addCompe(url,fecha, idCompe);
+								} else {
+									
+								}
+								
+							} else {
+								$("#all").find("[id="+idCompe+"]").each(function() { 
+									$(this).remove();
+								});
+							}
+
+
+
 						});
 
 						$('#cantidad').keyup(function(){
