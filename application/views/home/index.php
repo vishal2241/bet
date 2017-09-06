@@ -104,48 +104,57 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
 						var fecha="2017-09-06";
+						var compeTmp='';
 						$.post(url+'ajax/json_matchByCompe', {fecha: fecha}, function(jsonCompe) {
 							if (jsonCompe!=null) {
+								var row='';
 								$.each(jsonCompe, function(i, item) {
-									if (item.IMG_L=='NO' || item.IMG_L==null ) {
-										var imL='default.png';
-									} else {
-										var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
-									}
-									if (item.IMG_V=='NO' || item.IMG_V==null) {
-										var imV='default.png';
-									} else {
-										var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
-									}
-									var table= '\
-									<table class="table table-bordered" id='+item.ID+'>\
-										<tr data-compe='+ item.ID+' class="row-compe">\
-											<td colspan="16" class="text-left cabecera" >\
-												<h4>\
-													<img width="64" src="'+url+'public/img/logos/country/'+item.IMG_PA+'.png"> \
-													<b>'+ item.PAIS_CO+': </b> '+ item.COMPE+'  \
-												</h4>\
-											</td>\
-										</tr>\
-										<tr>\
-											<th class="text-center info">Hora</th>\
-											<th class="text-center info">Local</th>\
-											<th class="text-center info">Visitante</th>\
-											<th class="text-center info">1</th>\
-											<th class="text-center info">X</th>\
-											<th class="text-center info">2</th>\
-											<th class="text-center info">UN</th>\
-											<th class="text-center info">OV</th>\
-											<th class="text-center info">1X</th>\
-											<th class="text-center info">2X</th>\
-											<th class="text-center info">12</th>\
-											<th class="text-center info">GG</th>\
-											<th class="text-center info">NG</th>\
-										</tr>\
-									</tbody>\
-								</table>';
-								$("#all").append(table);
-							});
+									if (compeTmp!=item.ID_COMPE) {
+										console.log("no existo bb")
+										if (item.IMG_L=='NO' || item.IMG_L==null ) {
+											var imL='default.png';
+										} else {
+											var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
+										}
+										if (item.IMG_V=='NO' || item.IMG_V==null) {
+											var imV='default.png';
+										} else {
+											var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
+										}
+										row+= '\
+										<table class="table table-bordered" id='+item.ID_COMPE+'>\
+											<tr data-compe='+ item.ID+' class="row-compe">\
+												<td colspan="16" class="text-left cabecera" >\
+													<h4>\
+														<img width="64" src="'+url+'public/img/logos/country/'+item.IMG_PA+'.png"> \
+														<b>'+ item.PAIS_CO+': </b> '+ item.COMPE+'  \
+													</h4>\
+												</td>\
+											</tr>\
+											<tr>\
+												<th class="text-center info">Hora</th>\
+												<th class="text-center info">Local</th>\
+												<th class="text-center info">Visitante</th>\
+												<th class="text-center info">1</th>\
+												<th class="text-center info">X</th>\
+												<th class="text-center info">2</th>\
+												<th class="text-center info">UN</th>\
+												<th class="text-center info">OV</th>\
+												<th class="text-center info">1X</th>\
+												<th class="text-center info">2X</th>\
+												<th class="text-center info">12</th>\
+												<th class="text-center info">GG</th>\
+												<th class="text-center info">NG</th>\
+											</tr>';
+											compeTmp=item.ID_COMPE;
+										} else {
+
+										}	
+										row+='</tbody>\
+									</table>';	
+								});
+
+								$("#all").append(row);
 							} 
 						},"json");
 
