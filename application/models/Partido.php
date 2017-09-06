@@ -113,6 +113,11 @@ class Partido extends CI_Model
 		v.IMG AS IMG_V,
 		pl.IMG AS PAIS_L,
 		pv.IMG AS PAIS_V,
+		co.NOMBRE AS COMPE,
+		co.ID_COMPETENCIA AS ID_COMPE,
+		pa.NOMBRE AS PAIS_CO,
+		pa.ID_PAIS AS ID_PAIS_CO,
+		pa.IMG AS IMG_PA,
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='1' 
 		) as '1',
@@ -179,7 +184,9 @@ class Partido extends CI_Model
 		LEFT JOIN equipo l ON (l.ID_EQUIPO=p.LOCAL) 
 		LEFT JOIN equipo v ON (v.ID_EQUIPO=p.VISITANTE)  
 		LEFT JOIN pais pl ON (pl.ID_PAIS=l.ID_PAIS)  
-		LEFT JOIN pais pv ON (pv.ID_PAIS=v.ID_PAIS)  
+		LEFT JOIN pais pv ON (pv.ID_PAIS=v.ID_PAIS) 
+		LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA) 
+		LEFT JOIN pais pa ON (pa.ID_PAIS=co.ID_PAIS)
 		WHERE
 		p.FECHA = '".$date."'";
 		#Si la fecha es mayor a la de hoy no se condiciona la HORARIO
@@ -187,7 +194,7 @@ class Partido extends CI_Model
 			$sql.=" AND p.HORARIO > '".$hour."' ";
 		}
 		$sql.="
-		AND p.ID_COMPETENCIA='".$compe."' 
+		/*AND p.ID_COMPETENCIA='".$compe."' */
 		GROUP BY p.ID_PARTIDO 
 		ORDER BY p.HORARIO DESC
 		";

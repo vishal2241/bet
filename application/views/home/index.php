@@ -104,16 +104,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
 						var fecha="2017-09-06";
-						$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
+						$.post(url+'ajax/json_matchByCompe', {fecha: fecha}, function(jsonCompe) {
 							if (jsonCompe!=null) {
 								$.each(jsonCompe, function(i, item) {
+									if (item.IMG_L=='NO' || item.IMG_L==null ) {
+										var imL='default.png';
+									} else {
+										var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
+									}
+									if (item.IMG_V=='NO' || item.IMG_V==null) {
+										var imV='default.png';
+									} else {
+										var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
+									}
 									var table= '\
 									<table class="table table-bordered" id='+item.ID+'>\
 										<tr data-compe='+ item.ID+' class="row-compe">\
 											<td colspan="16" class="text-left cabecera" >\
 												<h4>\
-													<img width="64" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
-													<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
+													<img width="64" src="'+url+'public/img/logos/country/'+item.IMG_PA+'.png"> \
+													<b>'+ item.PAIS_CO+': </b> '+ item.COMPE+'  \
 												</h4>\
 											</td>\
 										</tr>\
