@@ -109,18 +109,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							if (jsonCompe!=null) {
 								var row='';
 								$.each(jsonCompe, function(i, item) {
+									if (item.IMG_L=='NO' || item.IMG_L==null ) {
+										var imL='default.png';
+									} else {
+										var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
+									}
+									if (item.IMG_V=='NO' || item.IMG_V==null) {
+										var imV='default.png';
+									} else {
+										var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
+									}
+
 									if (compeTmp!=item.ID_COMPE) {
-										console.log("no existo bb")
-										if (item.IMG_L=='NO' || item.IMG_L==null ) {
-											var imL='default.png';
-										} else {
-											var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
-										}
-										if (item.IMG_V=='NO' || item.IMG_V==null) {
-											var imV='default.png';
-										} else {
-											var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
-										}
 										row+= '\
 										<table class="table table-bordered" id='+item.ID_COMPE+'>\
 											<tr data-compe='+ item.ID+' class="row-compe">\
@@ -147,14 +147,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<th class="text-center info">NG</th>\
 											</tr>';
 											compeTmp=item.ID_COMPE;
-										} else {
+										}
 
-										}	
+										row+= '\
+										<tr>\
+											<th class="text-center info">Hora</th>\
+											<th class="text-center info">Local</th>\
+											<th class="text-center info">Visitante</th>\
+											<th class="text-center info">1</th>\
+											<th class="text-center info">X</th>\
+											<th class="text-center info">2</th>\
+											<th class="text-center info">UN</th>\
+											<th class="text-center info">OV</th>\
+											<th class="text-center info">1X</th>\
+											<th class="text-center info">2X</th>\
+											<th class="text-center info">12</th>\
+											<th class="text-center info">GG</th>\
+											<th class="text-center info">NG</th>\
+										</tr>';
+
 										row+='</tbody>\
 									</table>';	
 								});
 
-								$("#all").append(row);
+								$("#all").html(row);
 							} 
 						},"json");
 

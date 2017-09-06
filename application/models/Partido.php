@@ -106,7 +106,8 @@ class Partido extends CI_Model
 	{
 		$sql="
 		SELECT 
-		p.ID_PARTIDO, SUBSTR(p.HORARIO,1,5) AS HORARIO,
+		p.ID_PARTIDO,
+		SUBSTR(p.HORARIO,1,5) AS HORARIO,
 		p.FECHA, l.NOMBRE  AS LOCAL,
 		v.NOMBRE  AS VISITANTE,
 		l.IMG AS IMG_L,
