@@ -151,28 +151,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 										row+= '\
 										<tr>\
-											<th class="text-center info">Hora</th>\
-											<th class="text-center info">Local</th>\
-											<th class="text-center info">Visitante</th>\
-											<th class="text-center info">1</th>\
-											<th class="text-center info">X</th>\
-											<th class="text-center info">2</th>\
-											<th class="text-center info">UN</th>\
-											<th class="text-center info">OV</th>\
-											<th class="text-center info">1X</th>\
-											<th class="text-center info">2X</th>\
-											<th class="text-center info">12</th>\
-											<th class="text-center info">GG</th>\
-											<th class="text-center info">NG</th>\
+											<td class="text-center info">Hora</td>\
+											<td class="text-center info">Local</td>\
+											<td class="text-center info">Visitante</td>\
+											<td class="text-center info">1</td>\
+											<td class="text-center info">X</td>\
+											<td class="text-center info">2</td>\
+											<td class="text-center info">UN</td>\
+											<td class="text-center info">OV</td>\
+											<td class="text-center info">1X</td>\
+											<td class="text-center info">2X</td>\
+											<td class="text-center info">12</td>\
+											<td class="text-center info">GG</td>\
+											<td class="text-center info">NG</td>\
 										</tr>';
 
-										row+='</tbody>\
-									</table>';	
-								});
-
-								$("#all").html(row);
-							} 
-						},"json");
+										
+									});
+								row+='</tbody>\
+							</table>';	
+							$("#all").html(row);
+						} 
+					},"json");
 
 
 
