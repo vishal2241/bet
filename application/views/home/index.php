@@ -96,14 +96,58 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
 				<script type="text/javascript">
+					function addCompe2(url,fecha, compe){
+
+					}
 
 					$( document ).ready(function() {
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
-						getCountries(fecha,url);
-						showLiga();
-						selectBox(fecha, url);
-						addDetalle();
+						var fecha="2017-09-06";
+						$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
+							if (jsonCompe!=null) {
+								$.each(jsonCompe, function(i, item) {
+									var table= '\
+									<table class="table table-bordered" id='+item.ID+'>\
+										<tr data-compe='+ item.ID+' class="row-compe">\
+											<td colspan="16" class="text-left cabecera" >\
+												<h4>\
+													<img width="64" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
+													<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
+												</h4>\
+											</td>\
+										</tr>\
+										<tr>\
+											<th class="text-center info">Hora</th>\
+											<th class="text-center info">Local</th>\
+											<th class="text-center info">Visitante</th>\
+											<th class="text-center info">1</th>\
+											<th class="text-center info">X</th>\
+											<th class="text-center info">2</th>\
+											<th class="text-center info">UN</th>\
+											<th class="text-center info">OV</th>\
+											<th class="text-center info">1X</th>\
+											<th class="text-center info">2X</th>\
+											<th class="text-center info">12</th>\
+											<th class="text-center info">GG</th>\
+											<th class="text-center info">NG</th>\
+										</tr>\
+									</tbody>\
+								</table>';
+								$("#all").append(table);
+							});
+							} 
+						},"json");
+
+
+
+
+
+
+						//getCountries(fecha,url);
+						//showLiga();
+						/*						selectBox(fecha, url); */
+						//addDetalle();
 
 						$('.checkCompe').click(function(){
 							var idCompe = $(this).attr('check-id');
@@ -112,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 								if ($('#'+idCompe).length == 0 ) {
 									console.log("add")
-									addCompe(url,fecha, idCompe);
+									addCompe2(url,fecha, idCompe);
 								} else {
 									
 								}
@@ -142,12 +186,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$('#after3').text(moment().add(3, 'days').format('dddd Do [de] MMMM'))
 
 
-						var timer = $.timer(function() {
+					/*	var timer = $.timer(function() {
 							$("#all").empty();
 							get_bets(fecha, url);
 							console.log("actualizado: "+fecha)
 
-						});
+						}); */
 						//timer.set({ time : 40000, autostart : true });
 
 					});

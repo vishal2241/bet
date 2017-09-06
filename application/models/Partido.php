@@ -67,7 +67,7 @@ class Partido extends CI_Model
 	}
 
 	//pagina principal, publico
-	public function getPartidoByCompe($date, $hour, $compe)
+	public function getPartidoByCompe2($date, $hour, $compe)
 	{
 		$sql="
 		SELECT 
@@ -78,6 +78,103 @@ class Partido extends CI_Model
 		v.IMG AS IMG_V,
 		pl.IMG AS PAIS_L,
 		pv.IMG AS PAIS_V
+		FROM partido p 
+		LEFT JOIN equipo l ON (l.ID_EQUIPO=p.LOCAL) 
+		LEFT JOIN equipo v ON (v.ID_EQUIPO=p.VISITANTE)  
+		LEFT JOIN pais pl ON (pl.ID_PAIS=l.ID_PAIS)  
+		LEFT JOIN pais pv ON (pv.ID_PAIS=v.ID_PAIS)  
+		WHERE
+		p.FECHA = '".$date."'";
+		#Si la fecha es mayor a la de hoy no se condiciona la HORARIO
+		if (date("Y-m-d")==$date ) {
+			$sql.=" AND p.HORARIO > '".$hour."' ";
+		}
+		$sql.="
+		AND p.ID_COMPETENCIA='".$compe."' 
+		GROUP BY p.ID_PARTIDO 
+		ORDER BY p.HORARIO DESC
+		";
+		$query = $this->db->query($sql); 
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+	}
+
+	public function getPartidoByCompe($date, $hour, $compe)
+	{
+		$sql="
+		SELECT 
+		p.ID_PARTIDO, SUBSTR(p.HORARIO,1,5) AS HORARIO,
+		p.FECHA, l.NOMBRE  AS LOCAL,
+		v.NOMBRE  AS VISITANTE,
+		l.IMG AS IMG_L,
+		v.IMG AS IMG_V,
+		pl.IMG AS PAIS_L,
+		pv.IMG AS PAIS_V,
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='1' 
+		) as '1',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='2' 
+		) as '2',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='3' 
+		) as '3',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='4' 
+		) as '4',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='5' 
+		) as '5',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='6' 
+		) as '6',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='7' 
+		) as '7',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='8' 
+		) as '8',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='12' 
+		) as '12',
+		(
+		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='13' 
+		) as '13',
+
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='1' 
+		) as 'DESC_1',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='2' 
+		) as 'DESC_2',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='3' 
+		) as 'DESC_3',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='4' 
+		) as 'DESC_4',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='5' 
+		) as 'DESC_5',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='6' 
+		) as 'DESC_6',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='7' 
+		) as 'DESC_7',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='8' 
+		) as 'DESC_8',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='12' 
+		) as 'DESC_12',
+		(
+		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='13' 
+		) as 'DESC_13'
+
 		FROM partido p 
 		LEFT JOIN equipo l ON (l.ID_EQUIPO=p.LOCAL) 
 		LEFT JOIN equipo v ON (v.ID_EQUIPO=p.VISITANTE)  
