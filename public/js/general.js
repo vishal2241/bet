@@ -9,7 +9,7 @@ function getCountries (fecha, url) {
 		type: 'post',
 		data: {fecha: fecha},
 		success: function(pais){
-
+			
 			$.each(pais, function(a, row) { 
 				html+=
 				'<tr class="pais" id="'+row.ID+'">'+
@@ -36,6 +36,7 @@ function getCountries (fecha, url) {
 							'</tr>';
 
 						});
+						
 					},
 					error: function(e){
 						console.log(e);
@@ -43,7 +44,7 @@ function getCountries (fecha, url) {
 				});
 
 			});
-
+			
 		},
 		error: function(e){
 			console.log(e);
