@@ -17,6 +17,13 @@ th.pais {
 	position: fixed;
 }
 
+.cabecera{
+	font-size: 18px;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+
 .ganancia {
 	padding: 10px;
 	font-weight:bold;
@@ -51,10 +58,9 @@ td.actived {
 }
 
 
-#all table tbody tr th.info {
+#all table tbody tr th {
 	vertical-align: middle;
 	color: white;
-	background-color: #0EB81E
 }
 
 .bold {

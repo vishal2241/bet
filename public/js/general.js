@@ -143,88 +143,73 @@ function addDetalle(){
 	});
 }
 
-function addCompe(url,fecha, compe){
-	$.post(url+'ajax/json_matchByCompe', {fecha: fecha, compe:compe}, function(jsonMatch) {		
-
-		$.each(jsonMatch, function(a, row) {
-			if (row.IMG_L=='NO' || row.IMG_L==null ) {
-				var imL='default.png';
-			} else {
-				var imL='team/'+row.PAIS_L+'/'+row.IMG_L+'.png';
-			}
-			if (row.IMG_V=='NO' || row.IMG_V==null) {
-				var imV='default.png';
-			} else {
-				var imV='team/'+row.PAIS_V+'/'+row.IMG_V+'.png';
-			}
-
-			$("[data-compe="+compe+"]").after('\
-				<tr data-match='+ row.ID_PARTIDO+'>\
-				<td  class="text-center bold" width="6%" >'+ row.HORARIO+'</td>\
-				<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ row.LOCAL+'</td>'+
-				'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ row.VISITANTE+'</td>');
-
-			var match=row.ID_PARTIDO;
-			$.post(''+url+'ajax/json_odds', {match: match}, function(jsonOdds) {
-
-				$.each(jsonOdds, function(a, rowMatch) { 
-								//Odds
-								$("[data-match="+match+"]").append('<td  class="odd text-center"  data-type="odd" width="5%" id="'+rowMatch.CONSE+'"  local="'+ row.LOCAL+'" visitante="'+ row.VISITANTE+'" text="'+rowMatch.DESCRIPCION+'">'+ isEmpty($.number(rowMatch.VALOR, 2, '.', ' '))+'</td>');
-							});
-			}, "json");
-
-			$("[data-compe="+compe+"]").after('</tr>');
-		});
-		$("[data-compe="+compe+"]").after('\
-			<tr>\
-			<th class="text-center info">Hora</th>\
-			<th class="text-center info">Local</th>\
-			<th class="text-center info">Visitante</th>\
-			<th class="text-center info">1</th>\
-			<th class="text-center info">X</th>\
-			<th class="text-center info">2</th>\
-			<th class="text-center info">UN</th>\
-			<th class="text-center info">OV</th>\
-			<th class="text-center info">1X</th>\
-			<th class="text-center info">2X</th>\
-			<th class="text-center info">12</th>\
-			<th class="text-center info">GG</th>\
-			<th class="text-center info">NG</th>\
-			</tr>\
-			');
-
-	}, "json");
-}
-
-
 function get_bets (fecha, url) {
-	$.post(url+'ajax/json_compe', {fecha: fecha}, function(jsonCompe) {
-		$('#all').fadeIn("150",function(){
+	var compeTmp='';
+	$.post(url+'ajax/json_match', {fecha: fecha}, function(jsonCompe) {
+		if (jsonCompe!=null) {
+			var row='';
+			$.each(jsonCompe, function(i, item) {
+				if (compeTmp!=item.ID_COMPE) {
+					row+= '\
+					<table class="table table-bordered" id='+item.ID_COMPE+'>\
+					<tr data-compe='+ item.ID+' class="row-compe">\
+					<td colspan="13" class="text-left cabecera" style="padding:0px" >\
+					\
+					<img width="74" src="'+url+'public/img/logos/country/'+item.IMG_PA+'.png"> \
+					<b>'+ item.PAIS_CO+': </b> '+ item.COMPE+'  \
+					\
+					</td>\
+					</tr>\
+					<tr>\
+					<th class="text-center success">Hora</th>\
+					<th class="text-center success">Local</th>\
+					<th class="text-center success">Visitante</th>\
+					<th class="text-center success">1</th>\
+					<th class="text-center success">X</th>\
+					<th class="text-center success">2</th>\
+					<th class="text-center success">1X</th>\
+					<th class="text-center success">2X</th>\
+					<th class="text-center success">12</th>\
+					<th class="text-center success">UN</th>\
+					<th class="text-center success">OV</th>\
+					<th class="text-center success">GG</th>\
+					<th class="text-center success">NG</th>\
+					</tr>';
+					compeTmp=item.ID_COMPE;
+				}
+				if (item.IMG_L=='NO' || item.IMG_L==null ) {
+					var imL='default.png';
+				} else {
+					var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
+				}
+				if (item.IMG_V=='NO' || item.IMG_V==null) {
+					var imV='default.png';
+				} else {
+					var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
+				}
+				row+= '\
+				<tr data-match='+ item.ID_PARTIDO+'>\
+				<td  class="text-center bold" width="6%" >'+ item.HORARIO+'</td>\
+				<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ item.LOCAL+'</td>'+
+				'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ item.VISITANTE+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_1+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_1+'">'+ isEmpty($.number(item.VALOR_1, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_2+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_2+'">'+ isEmpty($.number(item.VALOR_2, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_3+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_3+'">'+ isEmpty($.number(item.VALOR_3, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_6+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_6+'">'+ isEmpty($.number(item.VALOR_6, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_7+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_7+'">'+ isEmpty($.number(item.VALOR_7, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_8+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_8+'">'+ isEmpty($.number(item.VALOR_8, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_4+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_4+'">'+ isEmpty($.number(item.VALOR_4, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_5+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_5+'">'+ isEmpty($.number(item.VALOR_5, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_12+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_12+'">'+ isEmpty($.number(item.VALOR_12, 2, '.', ' '))+'</td>\
+				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_13+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_13+'">'+ isEmpty($.number(item.VALOR_13, 2, '.', ' '))+'</td>\
+				</tr>';
+			});
 
-
-
-			if (jsonCompe!=null) {
-				$.each(jsonCompe, function(i, item) {
-					$("#all").append('\
-						<table class="table table-bordered" id='+item.ID+'>\
-						<tr data-compe='+ item.ID+' class="row-compe">\
-						<td colspan="16" class="text-left cabecera" >\
-						<h4>\
-						<img width="64" src="'+url+'public/img/logos/country/'+item.IMG+'.png"> \
-						<b>'+ item.PAIS+': </b> '+ item.COMPE+'  \
-						</h4>\
-						</td>\
-						</tr>\
-						</tbody>\
-						</table>\
-						');
-					var compe = item.ID;
-					addCompe(url,fecha, compe);
-
-				});
-		} //if
-	});
-	},"json");
+row+='</tbody>\
+</table>';	
+$("#all").html(row);
+} 
+},"json");
 }  
 
 function get_totalMatch(fecha, url) {

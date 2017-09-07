@@ -40,7 +40,7 @@ class Ajax extends CI_Controller {
 	}
 
 
-	public function json_matchByCompe(){
+	public function json_match(){
 		//if (isset($_POST['fecha']) and $_POST['fecha']!='' and isset($_POST['compe']) and $_POST['compe']!='') {
 		if (isset($_POST['fecha']) and $_POST['fecha']!='') {
 			$date=$_POST['fecha'];
