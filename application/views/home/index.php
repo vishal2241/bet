@@ -96,16 +96,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
 				<script type="text/javascript">
-					function addCompe2(url,fecha, compe){
-
-					}
 
 					$( document ).ready(function() {
+
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
-						var fecha="2017-09-04";
 						getCountries(fecha,url);
-						showLiga();
 						selectBox(fecha, url); 
 						addDetalle();
 

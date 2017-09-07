@@ -1,5 +1,43 @@
 moment.locale('es');
 
+
+function showLiga(){
+	console.log("gola")
+	$('.pais').click(function(){
+		var pais = $(this).attr('id');
+
+		$("#ligas").find("[pais="+pais+"]").each(function() { 
+
+			if ($(this).hasClass("hidden")) {
+				$(this).removeClass( "hidden" );
+			} else {
+				$(this).addClass("hidden")
+			}
+
+		});							
+	});
+	
+	$('.checkCompe').click(function(){
+		var idCompe = $(this).attr('check-id');
+		
+		if ($(this).is(':checked') ) {
+
+			if ($('#'+idCompe).length == 0 ) {
+				console.log("add")
+				addCompe2(url,fecha, idCompe);
+			} else {
+				
+			}
+			
+		} else {
+			$("#all").find("[id="+idCompe+"]").each(function() { 
+				$(this).remove();
+			});
+		}
+
+	});
+}
+
 function getCountries (fecha, url) {
 	var	html='';
 	$.ajax({
@@ -52,23 +90,9 @@ function getCountries (fecha, url) {
 	});
 
 	$("#ligas").html(html)
+	showLiga();
 } 
 
-function showLiga(){
-	$('.pais').click(function(){
-		var pais = $(this).attr('id');
-
-		$("#ligas").find("[pais="+pais+"]").each(function() { 
-
-			if ($(this).hasClass("hidden")) {
-				$(this).removeClass( "hidden" );
-			} else {
-				$(this).addClass("hidden")
-			}
-
-		});							
-	});
-}
 
 function selectBox(fecha, url){
 
