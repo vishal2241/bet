@@ -102,7 +102,7 @@ class Partido extends CI_Model
 		} 
 	}
 
-	public function getPartidoByCompe($date, $hour, $compe)
+	public function getTablePartidos($date, $hour, $compe)
 	{
 		$sql="
 		SELECT 
@@ -119,6 +119,7 @@ class Partido extends CI_Model
 		pa.NOMBRE AS PAIS_CO,
 		pa.ID_PAIS AS ID_PAIS_CO,
 		pa.IMG AS IMG_PA,
+		co.FAVORITA AS FAV,
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='1' 
 		) as 'VALOR_1',

@@ -34,7 +34,8 @@ class Competencia extends CI_Model
 		c.ID_COMPETENCIA as ID,
 		c.NOMBRE AS COMPE,
 		pa.NOMBRE AS PAIS,
-		pa.IMG  
+		pa.IMG, 
+		c.FAVORITA AS FAV
 		FROM competencia c  
 		LEFT JOIN partido p ON (c.ID_COMPETENCIA=p.ID_COMPETENCIA) 
 		LEFT JOIN pais pa ON (c.ID_PAIS=pa.ID_PAIS)  

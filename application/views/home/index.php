@@ -96,36 +96,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
 				<script type="text/javascript">
-
+					$("#tiquete").sticky({topSpacing:100});
 					$( document ).ready(function() {
 
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
+						var fecha="2017-08-27"
 						getCountries(fecha,url);
 						selectBox(fecha, url); 
 						addDetalle();
 
-						$('.checkCompe').click(function(){
-							var idCompe = $(this).attr('check-id');
-							
-							if ($(this).is(':checked') ) {
-
-								if ($('#'+idCompe).length == 0 ) {
-									console.log("add")
-									addCompe2(url,fecha, idCompe);
-								} else {
-									
-								}
-								
-							} else {
-								$("#all").find("[id="+idCompe+"]").each(function() { 
-									$(this).remove();
-								});
-							}
-
-
-
-						});
 
 						$('#cantidad').keyup(function(){
 							getMoney();							
@@ -133,7 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$('#jugar').click(function(){
 							console.log("jugar")							
 						});
-						$("#tiquete").sticky({topSpacing:100});
+						
 
 						
 						//Option select box

@@ -40,13 +40,13 @@ class Ajax extends CI_Controller {
 	}
 
 
-	public function json_match(){
+	public function json_table(){
 		//if (isset($_POST['fecha']) and $_POST['fecha']!='' and isset($_POST['compe']) and $_POST['compe']!='') {
 		if (isset($_POST['fecha']) and $_POST['fecha']!='') {
 			$date=$_POST['fecha'];
 			//$compe=$_POST['compe'];
 			$hour=date("H:i");
-			$data = $this->Partido->getPartidoByCompe($date, $hour, '');
+			$data = $this->Partido->getTablePartidos($date, $hour, '');
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());

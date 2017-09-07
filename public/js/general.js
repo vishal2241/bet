@@ -1,13 +1,9 @@
 moment.locale('es');
 
-
 function showLiga(){
-	console.log("gola")
 	$('.pais').click(function(){
 		var pais = $(this).attr('id');
-
 		$("#ligas").find("[pais="+pais+"]").each(function() { 
-
 			if ($(this).hasClass("hidden")) {
 				$(this).removeClass( "hidden" );
 			} else {
@@ -16,22 +12,14 @@ function showLiga(){
 
 		});							
 	});
-	
+
 	$('.checkCompe').click(function(){
 		var idCompe = $(this).attr('check-id');
-		
 		if ($(this).is(':checked') ) {
-
-			if ($('#'+idCompe).length == 0 ) {
-				console.log("add")
-				addCompe2(url,fecha, idCompe);
-			} else {
-				
-			}
-			
+			$('#'+idCompe).removeClass( "hidden" );
 		} else {
 			$("#all").find("[id="+idCompe+"]").each(function() { 
-				$(this).remove();
+				$(this).addClass("hidden");
 			});
 		}
 
@@ -51,7 +39,7 @@ function getCountries (fecha, url) {
 			$.each(pais, function(a, row) { 
 				html+=
 				'<tr class="pais" id="'+row.ID+'">'+
-				'<td class="bold" style="background-color: #EEEDED; cursor: pointer;">'+
+				'<td class="bold" style="background-color: #D7D7D7; cursor: pointer;">'+
 				/*'<input type="checkbox" name="optionsCheckboxes"> '+*/
 				row.NOMBRE+
 				'</td>'+
@@ -66,10 +54,15 @@ function getCountries (fecha, url) {
 					success: function(compe){
 						$.each(compe, function(b, rowCompe) { 
 							html+=
-							'<tr pais="'+row.ID+'" class="x12 hidden">'+
-							'<td class="" style="background-color: white">'+
-							'<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'"> '+
-							rowCompe.COMPE+
+							'<tr pais="'+row.ID+'" class="">'+
+							'<td class="" style="background-color: white">';
+							if (rowCompe.FAV=='1') {
+								html+= '<input type="checkbox" style="width:17px; height:17px;" class="checkCompe" check-id="'+rowCompe.ID+'" checked> ';
+							} else{ 
+								html+= '<input type="checkbox" style="width:17px; height:17px;" class="checkCompe" check-id="'+rowCompe.ID+'">';
+							}
+
+							html+= ' '+rowCompe.COMPE+
 							'</td>'+
 							'</tr>';
 
@@ -92,7 +85,6 @@ function getCountries (fecha, url) {
 	$("#ligas").html(html)
 	showLiga();
 } 
-
 
 function selectBox(fecha, url){
 
@@ -131,7 +123,6 @@ function selectBox(fecha, url){
 	});
 }
 
-
 function addDetalle(){
 	$('#all').on('click', '[data-type="odd"]', function(){
 
@@ -169,14 +160,19 @@ function addDetalle(){
 }
 
 function get_bets (fecha, url) {
-	var compeTmp='';
-	$.post(url+'ajax/json_match', {fecha: fecha}, function(jsonCompe) {
+	
+	$.post(url+'ajax/json_table', {fecha: fecha}, function(jsonCompe) {
+		var compeTmp='';
 		if (jsonCompe!=null) {
 			var row='';
 			$.each(jsonCompe, function(i, item) {
 				if (compeTmp!=item.ID_COMPE) {
-					row+= '\
-					<table class="table table-bordered" id='+item.ID_COMPE+'>\
+					if (item.FAV=='1') {
+						row+='<table class="table table-bordered" id='+item.ID_COMPE+'>';
+					} else {
+						row+='<table class="table table-bordered hidden" id='+item.ID_COMPE+'>';
+					}
+					row+='\
 					<tr data-compe='+ item.ID+' class="row-compe">\
 					<td colspan="13" class="text-left cabecera" style="padding:0px" >\
 					\

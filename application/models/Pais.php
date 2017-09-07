@@ -37,7 +37,7 @@ class Pais extends CI_Model
 		if (date("Y-m-d")==$date ) {
 			$sql.=" AND pa.HORARIO > '".date("H:i")."' ";
 		}
-		$sql.=" GROUP BY p.ID_PAIS ORDER BY p.NOMBRE ";
+		$sql.=" GROUP BY p.ID_PAIS ORDER BY p.FAVORITO ASC, p.NOMBRE ASC";
 
 
 		$query = $this->db->query($sql); 
