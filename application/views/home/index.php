@@ -14,32 +14,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-2" style="padding-left: 5px; padding-right: 5px;">
-						<div id="fecha" align="center">
-							<h4 class="text-info text-center bold">Fecha</h4>
-							<select class="select-box" id="dia">
-								<option id="today" value="today">Hoy</option>
-								<option id="tomorrow" value="tomorrow"></option>
-								<option id="after2" value="after2"></option>
-								<option id="after3" value="after3"></option>
-							</select>
-						</div>
-						<div id="liga">
-							<h4 class="text-info text-center bold">Ligas disponibles</h4>
-
+						<div>
 							<table class="table table-bordered" >
-								<tbody id="ligas">
-									<!--<tr class="pais" id="colombia">
-										<th class="bold" style="background-color: #EEEDED; cursor: pointer;">
-											<input type="checkbox" name="optionsCheckboxes">
-											Colombia
+								<thead>
+									<tr>
+										<th class="text-center">FECHA</th>
+									</tr>
+									<tr>
+										<th class="text-center">
+											<select class="select-box" id="dia">
+												<option id="today" value="today">Hoy</option>
+												<option id="tomorrow" value="tomorrow"></option>
+												<option id="after2" value="after2"></option>
+												<option id="after3" value="after3"></option>
+											</select>
 										</th>
 									</tr>
-									<tr pais="colombia" class="hidden">
-										<td class="" style="background-color: white">
-											<input type="checkbox" name="optionsCheckboxes">
-											Colombia
-										</td>
-									</tr>-->
+									<tr>
+										<th class="text-center">&nbsp;</th>
+									</tr>
+									<tr>
+										<th class="text-center">LIGAS DISPONIBLES</th>
+									</tr>							
+								</thead>
+								<tbody id="ligas">
 								</tbody>
 							</table>
 						</div>

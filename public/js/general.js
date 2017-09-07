@@ -57,9 +57,9 @@ function getCountries (fecha, url) {
 							'<tr pais="'+row.ID+'" class="">'+
 							'<td class="" style="background-color: white">';
 							if (rowCompe.FAV=='1') {
-								html+= '<input type="checkbox" style="width:17px; height:17px;" class="checkCompe" check-id="'+rowCompe.ID+'" checked> ';
+								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'" checked> ';
 							} else{ 
-								html+= '<input type="checkbox" style="width:17px; height:17px;" class="checkCompe" check-id="'+rowCompe.ID+'">';
+								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'">';
 							}
 
 							html+= ' '+rowCompe.COMPE+

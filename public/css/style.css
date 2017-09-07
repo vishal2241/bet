@@ -33,6 +33,10 @@ th.pais {
 	font-size: 18px;
 }
 
+.checkCompe{
+	width:17px; height:17px;
+}
+
 .panel-body { 
 	padding: 0px;
 }
