@@ -121,34 +121,34 @@ class Partido extends CI_Model
 		pa.IMG AS IMG_PA,
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='1' 
-		) as '1',
+		) as 'VALOR_1',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='2' 
-		) as '2',
+		) as 'VALOR_2',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='3' 
-		) as '3',
+		) as 'VALOR_3',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='4' 
-		) as '4',
+		) as 'VALOR_4',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='5' 
-		) as '5',
+		) as 'VALOR_5',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='6' 
-		) as '6',
+		) as 'VALOR_6',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='7' 
-		) as '7',
+		) as 'VALOR_7',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='8' 
-		) as '8',
+		) as 'VALOR_8',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='12' 
-		) as '12',
+		) as 'VALOR_12',
 		(
 		SELECT  c.VALOR  FROM cuota c WHERE c.ID_PARTIDO = p.ID_PARTIDO AND c.ID_TIPO ='13' 
-		) as '13',
+		) as 'VALOR_13',
 
 		(
 		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='1' 
@@ -179,7 +179,39 @@ class Partido extends CI_Model
 		) as 'DESC_12',
 		(
 		SELECT t.DESCRIPCION  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='13' 
-		) as 'DESC_13'
+		) as 'DESC_13',
+
+
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='1' 
+		) as 'CONSE_1',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='2' 
+		) as 'CONSE_2',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='3' 
+		) as 'CONSE_3',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='4' 
+		) as 'CONSE_4',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='5' 
+		) as 'CONSE_5',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='6' 
+		) as 'CONSE_6',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='7' 
+		) as 'CONSE_7',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='8' 
+		) as 'CONSE_8',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='12' 
+		) as 'CONSE_12',
+		(
+		SELECT c.ID_CUOTA  FROM cuota c LEFT JOIN tipo_cuota t ON (t.ID_TIPO=c.ID_TIPO) WHERE c.ID_PARTIDO = p.ID_PARTIDO AND t.ID_TIPO ='13' 
+		) as 'CONSE_13'
 
 		FROM partido p 
 		LEFT JOIN equipo l ON (l.ID_EQUIPO=p.LOCAL) 

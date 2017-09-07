@@ -103,23 +103,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$( document ).ready(function() {
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
-						var fecha="2017-09-06";
+						var fecha="2017-09-07";
 						var compeTmp='';
 						$.post(url+'ajax/json_matchByCompe', {fecha: fecha}, function(jsonCompe) {
 							if (jsonCompe!=null) {
 								var row='';
 								$.each(jsonCompe, function(i, item) {
-									if (item.IMG_L=='NO' || item.IMG_L==null ) {
-										var imL='default.png';
-									} else {
-										var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
-									}
-									if (item.IMG_V=='NO' || item.IMG_V==null) {
-										var imV='default.png';
-									} else {
-										var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
-									}
-
 									if (compeTmp!=item.ID_COMPE) {
 										row+= '\
 										<table class="table table-bordered" id='+item.ID_COMPE+'>\
@@ -138,32 +127,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<th class="text-center info">1</th>\
 												<th class="text-center info">X</th>\
 												<th class="text-center info">2</th>\
-												<th class="text-center info">UN</th>\
-												<th class="text-center info">OV</th>\
 												<th class="text-center info">1X</th>\
 												<th class="text-center info">2X</th>\
 												<th class="text-center info">12</th>\
+												<th class="text-center info">UN</th>\
+												<th class="text-center info">OV</th>\
 												<th class="text-center info">GG</th>\
 												<th class="text-center info">NG</th>\
 											</tr>';
 											compeTmp=item.ID_COMPE;
 										}
-
+										if (item.IMG_L=='NO' || item.IMG_L==null ) {
+											var imL='default.png';
+										} else {
+											var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
+										}
+										if (item.IMG_V=='NO' || item.IMG_V==null) {
+											var imV='default.png';
+										} else {
+											var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
+										}
 										row+= '\
-										<tr>\
-											<td class="text-center info">Hora</td>\
-											<td class="text-center info">Local</td>\
-											<td class="text-center info">Visitante</td>\
-											<td class="text-center info">1</td>\
-											<td class="text-center info">X</td>\
-											<td class="text-center info">2</td>\
-											<td class="text-center info">UN</td>\
-											<td class="text-center info">OV</td>\
-											<td class="text-center info">1X</td>\
-											<td class="text-center info">2X</td>\
-											<td class="text-center info">12</td>\
-											<td class="text-center info">GG</td>\
-											<td class="text-center info">NG</td>\
+										<tr data-match='+ item.ID_PARTIDO+'>\
+											<td  class="text-center bold" width="6%" >'+ item.HORARIO+'</td>\
+											<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ item.LOCAL+'</td>'+
+											'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ item.VISITANTE+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_1+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_1+'">'+ isEmpty($.number(item.VALOR_1, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_2+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_2+'">'+ isEmpty($.number(item.VALOR_2, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_3+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_3+'">'+ isEmpty($.number(item.VALOR_3, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_6+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_6+'">'+ isEmpty($.number(item.VALOR_6, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_7+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_7+'">'+ isEmpty($.number(item.VALOR_7, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_8+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_8+'">'+ isEmpty($.number(item.VALOR_8, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_4+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_4+'">'+ isEmpty($.number(item.VALOR_4, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_5+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_5+'">'+ isEmpty($.number(item.VALOR_5, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_12+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_12+'">'+ isEmpty($.number(item.VALOR_12, 2, '.', ' '))+'</td>\
+											<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_13+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_13+'">'+ isEmpty($.number(item.VALOR_13, 2, '.', ' '))+'</td>\
 										</tr>';
 
 										
