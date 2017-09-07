@@ -17,12 +17,14 @@ function showLiga(){
 		var idCompe = $(this).attr('check-id');
 		if ($(this).is(':checked') ) {
 			$('#'+idCompe).removeClass( "hidden" );
+			$("body").scrollTo('#'+idCompe);
 		} else {
 			$("#all").find("[id="+idCompe+"]").each(function() { 
 				$(this).addClass("hidden");
 			});
 		}
-
+		
+	 
 	});
 }
 

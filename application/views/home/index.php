@@ -93,6 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
+				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.scrollTo.js"></script>
 				<script type="text/javascript">
 					$("#tiquete").sticky({topSpacing:100});
 					$( document ).ready(function() {
