@@ -31,7 +31,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</th>
 									</tr>
 									<tr>
-										<th class="text-center">&nbsp;</th>
+										<th class="text-center">
+											<div class="form-group label-floating">
+											<label class="control-label">Buscar Partido</label>
+												<input type="text" class="form-control" id="search">
+											</div>	
+										</th>
 									</tr>
 									<tr>
 										<th class="text-center">LIGAS DISPONIBLES</th>

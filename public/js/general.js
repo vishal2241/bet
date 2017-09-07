@@ -17,14 +17,14 @@ function showLiga(){
 		var idCompe = $(this).attr('check-id');
 		if ($(this).is(':checked') ) {
 			$('#'+idCompe).removeClass( "hidden" );
-			$("body").scrollTo('#'+idCompe);
+			//$("body").scrollTo('#'+idCompe);
 		} else {
 			$("#all").find("[id="+idCompe+"]").each(function() { 
 				$(this).addClass("hidden");
 			});
 		}
 		
-	 
+
 	});
 }
 
@@ -163,76 +163,85 @@ function addDetalle(){
 
 function get_bets (fecha, url) {
 	
-	$.post(url+'ajax/json_table', {fecha: fecha}, function(jsonCompe) {
-		var compeTmp='';
-		if (jsonCompe!=null) {
-			var row='';
-			$.each(jsonCompe, function(i, item) {
-				if (compeTmp!=item.ID_COMPE) {
-					if (item.FAV=='1') {
-						row+='<table class="table table-bordered" id='+item.ID_COMPE+'>';
-					} else {
-						row+='<table class="table table-bordered hidden" id='+item.ID_COMPE+'>';
+	$.ajax({
+		dataType: 'json',
+		async: false,
+		url: url+'ajax/json_table',
+		type: 'post',
+		data: {fecha: fecha},
+		success: function(jsonCompe){
+			var compeTmp='';
+			if (jsonCompe!=null) {
+				var row='';
+				$.each(jsonCompe, function(i, item) {
+					if (compeTmp!=item.ID_COMPE) {
+						if (item.FAV=='1') {
+							row+='<table class="table table-bordered" id='+item.ID_COMPE+'>';
+						} else {
+							row+='<table class="table table-bordered hidden" id='+item.ID_COMPE+'>';
+						}
+						row+='\
+						<tr data-compe='+ item.ID+' class="row-compe">\
+						<td colspan="13" class="text-left cabecera" style="padding:0px" >\
+						\
+						<img width="74" src="'+url+'public/img/logos/country/'+item.IMG_PA+'.png"> \
+						<b>'+ item.PAIS_CO+': </b> '+ item.COMPE+'  \
+						\
+						</td>\
+						</tr>\
+						<tr>\
+						<th class="text-center success">Hora</th>\
+						<th class="text-center success">Local</th>\
+						<th class="text-center success">Visitante</th>\
+						<th class="text-center success">1</th>\
+						<th class="text-center success">X</th>\
+						<th class="text-center success">2</th>\
+						<th class="text-center success">1X</th>\
+						<th class="text-center success">2X</th>\
+						<th class="text-center success">12</th>\
+						<th class="text-center success">UN</th>\
+						<th class="text-center success">OV</th>\
+						<th class="text-center success">GG</th>\
+						<th class="text-center success">NG</th>\
+						</tr>';
+						compeTmp=item.ID_COMPE;
 					}
-					row+='\
-					<tr data-compe='+ item.ID+' class="row-compe">\
-					<td colspan="13" class="text-left cabecera" style="padding:0px" >\
-					\
-					<img width="74" src="'+url+'public/img/logos/country/'+item.IMG_PA+'.png"> \
-					<b>'+ item.PAIS_CO+': </b> '+ item.COMPE+'  \
-					\
-					</td>\
-					</tr>\
-					<tr>\
-					<th class="text-center success">Hora</th>\
-					<th class="text-center success">Local</th>\
-					<th class="text-center success">Visitante</th>\
-					<th class="text-center success">1</th>\
-					<th class="text-center success">X</th>\
-					<th class="text-center success">2</th>\
-					<th class="text-center success">1X</th>\
-					<th class="text-center success">2X</th>\
-					<th class="text-center success">12</th>\
-					<th class="text-center success">UN</th>\
-					<th class="text-center success">OV</th>\
-					<th class="text-center success">GG</th>\
-					<th class="text-center success">NG</th>\
+					if (item.IMG_L=='NO' || item.IMG_L==null ) {
+						var imL='default.png';
+					} else {
+						var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
+					}
+					if (item.IMG_V=='NO' || item.IMG_V==null) {
+						var imV='default.png';
+					} else {
+						var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
+					}
+					row+= '\
+					<tr data-match='+ item.ID_PARTIDO+'>\
+					<td  class="text-center bold" width="6%" >'+ item.HORARIO+'</td>\
+					<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ item.LOCAL+'</td>'+
+					'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ item.VISITANTE+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_1+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_1+'">'+ isEmpty($.number(item.VALOR_1, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_2+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_2+'">'+ isEmpty($.number(item.VALOR_2, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_3+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_3+'">'+ isEmpty($.number(item.VALOR_3, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_6+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_6+'">'+ isEmpty($.number(item.VALOR_6, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_7+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_7+'">'+ isEmpty($.number(item.VALOR_7, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_8+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_8+'">'+ isEmpty($.number(item.VALOR_8, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_4+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_4+'">'+ isEmpty($.number(item.VALOR_4, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_5+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_5+'">'+ isEmpty($.number(item.VALOR_5, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_12+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_12+'">'+ isEmpty($.number(item.VALOR_12, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_13+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_13+'">'+ isEmpty($.number(item.VALOR_13, 2, '.', ' '))+'</td>\
 					</tr>';
-					compeTmp=item.ID_COMPE;
-				}
-				if (item.IMG_L=='NO' || item.IMG_L==null ) {
-					var imL='default.png';
-				} else {
-					var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
-				}
-				if (item.IMG_V=='NO' || item.IMG_V==null) {
-					var imV='default.png';
-				} else {
-					var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
-				}
-				row+= '\
-				<tr data-match='+ item.ID_PARTIDO+'>\
-				<td  class="text-center bold" width="6%" >'+ item.HORARIO+'</td>\
-				<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ item.LOCAL+'</td>'+
-				'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ item.VISITANTE+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_1+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_1+'">'+ isEmpty($.number(item.VALOR_1, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_2+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_2+'">'+ isEmpty($.number(item.VALOR_2, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_3+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_3+'">'+ isEmpty($.number(item.VALOR_3, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_6+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_6+'">'+ isEmpty($.number(item.VALOR_6, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_7+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_7+'">'+ isEmpty($.number(item.VALOR_7, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_8+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_8+'">'+ isEmpty($.number(item.VALOR_8, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_4+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_4+'">'+ isEmpty($.number(item.VALOR_4, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_5+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_5+'">'+ isEmpty($.number(item.VALOR_5, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_12+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_12+'">'+ isEmpty($.number(item.VALOR_12, 2, '.', ' '))+'</td>\
-				<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_13+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_13+'">'+ isEmpty($.number(item.VALOR_13, 2, '.', ' '))+'</td>\
-				</tr>';
-			});
-
+				});
 row+='</tbody>\
 </table>';	
 $("#all").html(row);
 } 
-},"json");
+},
+error: function(e){
+	console.log(e);
+}
+});
 }  
 
 function get_totalMatch(fecha, url) {
