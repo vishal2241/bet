@@ -18,5 +18,5 @@
 
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/plugins/datatables/css/dataTables.bootstrap.css">
 <link href="<?= base_url(); ?>public/css/template.css" rel="stylesheet" />
-<link href="<?= base_url(); ?>public/css/loading.css" rel="stylesheet" />
+
 

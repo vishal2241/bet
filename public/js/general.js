@@ -28,7 +28,7 @@ function showLiga(){
 	});
 }
 
-function getCountries (fecha, url) {
+function getCountries(fecha, url) {
 	var	html='';
 	$.ajax({
 		dataType: 'json',
@@ -51,13 +51,10 @@ function getCountries (fecha, url) {
 					url: url+'ajax/jsonCompeByCountry',
 					type: 'post',
 					data: {fecha: fecha, pais:row.ID},
-					beforeSend: function( xhr ) {
-						console.log(xhr)
-					},
 					success: function(compe){
 						$.each(compe, function(b, rowCompe) { 
 							html+=
-							'<tr pais="'+row.ID+'" class="">'+
+							'<tr pais="'+row.ID+'" class="hidden">'+
 							'<td class="" style="background-color: white">';
 							if (rowCompe.FAV=='1') {
 								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'" checked> ';
@@ -89,13 +86,23 @@ function getCountries (fecha, url) {
 	showLiga();
 } 
 
+function reload(fecha, url){
+	var timer = $.timer(function() {
+		$("#all").empty();
+		get_bets(fecha, url);
+		console.log("actualizado: "+fecha)
+
+	}); 
+	timer.set({ time : 8000, autostart : true });
+}
+
 function selectBox(fecha, url){
 
 	$("#titulo").empty();
 	$("#titulo").append(moment().format('dddd Do [de] MMMM'));
 	get_bets(fecha, url);
 	get_totalMatch(fecha, url);
-
+	//reload(fecha, url);
 	$( "#dia" ).change(function() {
 		$("#titulo").empty();
 		switch($(this).val()){
@@ -122,7 +129,6 @@ function selectBox(fecha, url){
 		getCountries(fecha,url);
 		get_bets(fecha, url);
 		get_totalMatch(fecha, url);
-
 	});
 }
 
@@ -169,6 +175,8 @@ function get_bets(fecha, url) {
 		url: url+'ajax/json_table',
 		type: 'post',
 		data: {fecha: fecha},
+		beforeSend: function( xhr ) {
+		},
 		success: function(jsonCompe){
 			var compeTmp='';
 			var i='0';

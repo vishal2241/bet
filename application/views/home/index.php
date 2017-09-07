@@ -33,13 +33,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<tr>
 										<th class="text-center">
 											<div class="form-group label-floating">
-											<label class="control-label">Buscar Partido</label>
+												<label class="control-label">Buscar Partido</label>
 												<input type="text" class="form-control" id="search">
 											</div>	
 										</th>
 									</tr>
 									<tr>
-										<th class="text-center">LIGAS DISPONIBLES</th>
+										<th class="text-center">
+											LIGAS DISPONIBLES
+										</th>
+										
 									</tr>							
 								</thead>
 								<tbody id="ligas">
@@ -90,11 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 				</div>
-
-
 				<?php $this->load->view('overall/footer'); ?>
-
-
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
@@ -102,10 +101,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript">
 					$("#tiquete").sticky({topSpacing:100});
 					$( document ).ready(function() {
-
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
-						var fecha="2017-08-27"
 						getCountries(fecha,url);
 						selectBox(fecha, url); 
 						addDetalle();
