@@ -37,7 +37,6 @@ function getCountries (fecha, url) {
 		type: 'post',
 		data: {fecha: fecha},
 		success: function(pais){
-			
 			$.each(pais, function(a, row) { 
 				html+=
 				'<tr class="pais" id="'+row.ID+'">'+
@@ -46,13 +45,15 @@ function getCountries (fecha, url) {
 				row.NOMBRE+
 				'</td>'+
 				'</tr>'
-
 				$.ajax({
 					dataType: 'json',
 					async: false,
 					url: url+'ajax/jsonCompeByCountry',
 					type: 'post',
 					data: {fecha: fecha, pais:row.ID},
+					beforeSend: function( xhr ) {
+						console.log(xhr)
+					},
 					success: function(compe){
 						$.each(compe, function(b, rowCompe) { 
 							html+=
@@ -161,8 +162,7 @@ function addDetalle(){
 	});
 }
 
-function get_bets (fecha, url) {
-	
+function get_bets(fecha, url) {
 	$.ajax({
 		dataType: 'json',
 		async: false,
@@ -171,14 +171,18 @@ function get_bets (fecha, url) {
 		data: {fecha: fecha},
 		success: function(jsonCompe){
 			var compeTmp='';
+			var i='0';
 			if (jsonCompe!=null) {
 				var row='';
 				$.each(jsonCompe, function(i, item) {
+					i++;
 					if (compeTmp!=item.ID_COMPE) {
 						if (item.FAV=='1') {
-							row+='<table class="table table-bordered" id='+item.ID_COMPE+'>';
+							row+='\
+							<table class="table table-bordered" id='+item.ID_COMPE+'>';
 						} else {
-							row+='<table class="table table-bordered hidden" id='+item.ID_COMPE+'>';
+							row+='\
+							<table class="table table-bordered hidden" id='+item.ID_COMPE+'>';
 						}
 						row+='\
 						<tr data-compe='+ item.ID+' class="row-compe">\
@@ -219,8 +223,8 @@ function get_bets (fecha, url) {
 					row+= '\
 					<tr data-match='+ item.ID_PARTIDO+'>\
 					<td  class="text-center bold" width="6%" >'+ item.HORARIO+'</td>\
-					<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ item.LOCAL+'</td>'+
-					'<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ item.VISITANTE+'</td>\
+					<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ item.LOCAL+'</td>\
+					<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ item.VISITANTE+'</td>\
 					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_1+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_1+'">'+ isEmpty($.number(item.VALOR_1, 2, '.', ' '))+'</td>\
 					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_2+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_2+'">'+ isEmpty($.number(item.VALOR_2, 2, '.', ' '))+'</td>\
 					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_3+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_3+'">'+ isEmpty($.number(item.VALOR_3, 2, '.', ' '))+'</td>\
@@ -233,10 +237,10 @@ function get_bets (fecha, url) {
 					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_13+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_13+'">'+ isEmpty($.number(item.VALOR_13, 2, '.', ' '))+'</td>\
 					</tr>';
 				});
-row+='</tbody>\
+row+='\
 </table>';	
 $("#all").html(row);
-} 
+}
 },
 error: function(e){
 	console.log(e);
@@ -248,7 +252,7 @@ function get_totalMatch(fecha, url) {
 	$.post(url+'ajax/json_totalMatch', {fecha: fecha}, function(data, status){
 		$.each(data, function(a, row) { 
 			$("#totalDia").empty();
-			$("#totalDia").append("Total partidos : "+row.TOTAL);
+			$("#totalDia").append("Total partidos del día: "+row.TOTAL);
 
 		});
 
