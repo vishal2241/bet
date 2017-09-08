@@ -150,7 +150,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							console.log("actualizado: "+fecha)
 
 						});  
-						timer.set({ time : 5000, autostart : true });
+						timer.set({ time : 50000, autostart : true });
 
 
 

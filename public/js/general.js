@@ -25,7 +25,6 @@ function showLiga(){
 			$(this).attr('value', 'false');
 		}
 
-		$('#checkbox-value').text($('#checkbox1').val());
 	});
 
 }
@@ -55,7 +54,7 @@ function getCountries(fecha, url) {
 					success: function(compe){
 						$.each(compe, function(b, rowCompe) { 
 							html+=
-							'<tr pais="'+row.ID+'" class="">'+
+							'<tr pais="'+row.ID+'" class="hidden">'+
 							'<td class="" style="background-color: white">';
 							if (rowCompe.FAV=='1') {
 								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'" checked value="true"> ';
