@@ -101,12 +101,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript">
 					$("#tiquete").sticky({topSpacing:100});
 					$( document ).ready(function() {
-
 						function actives(){
 							$("#detalle").find("[id_trans]").each(function() {  
-								 
-									console.log("hola")
-								
+								var odd = $(this).attr('id_trans');
+								$("#all").find("[data-type=odd]").each(function() { 
+									var oddTmp = $(this).attr('id');
+									if (odd==oddTmp) {
+										$(this).addClass( "actived" );
+										console.log(oddTmp)
+									}  
+								});
 							});
 						}
 
