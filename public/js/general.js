@@ -205,7 +205,7 @@ function get_bets(fecha, url) {
 					<td  class="text-center bold" width="6%" >'+ item.HORARIO+'</td>\
 					<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ item.LOCAL+'</td>\
 					<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ item.VISITANTE+'</td>\
-					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_1+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_1+'">'+ isEmpty($.number(item.VALOR_1, 2, '.', ' '))+'</td>\
+					<td  class="odd text-center actived"  data-type="odd" width="5%" id="'+item.CONSE_1+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_1+'">'+ isEmpty($.number(item.VALOR_1, 2, '.', ' '))+'</td>\
 					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_2+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_2+'">'+ isEmpty($.number(item.VALOR_2, 2, '.', ' '))+'</td>\
 					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_3+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_3+'">'+ isEmpty($.number(item.VALOR_3, 2, '.', ' '))+'</td>\
 					<td  class="odd text-center"  data-type="odd" width="5%" id="'+item.CONSE_6+'"  local="'+ item.LOCAL+'" visitante="'+ item.VISITANTE+'" text="'+item.DESC_6+'">'+ isEmpty($.number(item.VALOR_6, 2, '.', ' '))+'</td>\

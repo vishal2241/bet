@@ -101,6 +101,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript">
 					$("#tiquete").sticky({topSpacing:100});
 					$( document ).ready(function() {
+
+						function actives(){
+							$("#detalle").find("[id_trans]").each(function() {  
+								 
+									console.log("hola")
+								
+							});
+						}
+
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
 						getCountries(fecha,url); //Primero para filtrar ligas checked en get bets
@@ -141,16 +150,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							getCountries(fecha,url);
 							get_bets(fecha, url);
 							get_totalMatch(fecha, url);
-							console.log(fecha)
 						});
 
 						var timer = $.timer(function() {
 							$("#all").empty();
 							get_bets(fecha, url);
+							actives();
 							console.log("actualizado: "+fecha)
 
 						});  
-						timer.set({ time : 50000, autostart : true });
+						timer.set({ time : 9000, autostart : true });
 
 
 
