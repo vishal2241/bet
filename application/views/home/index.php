@@ -64,10 +64,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="panel-body" style="padding:0px">
 
 								<table class="table table-condensed table-striped table-bordered" id="tiquete-table" width="100%">
-									<tbody id="detalle">
+									<tbody id="detalle" >
 										<tr class="tiquete">
-											<th class="text-success text-center">PARTIDOS</th>
-											<th class="text-success text-center">CUOTAS</th>
+											<th class="text-success text-center" width="75%">PARTIDOS</th>
+											<th class="text-success text-center" width="25%">CUOTAS</th>
 										</tr>
 									</tbody>
 								</table>
@@ -103,12 +103,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$( document ).ready(function() {
 						function actives(){
 							$("#detalle").find("[id_trans]").each(function() {  
+								//function remove, ya inicio
 								var odd = $(this).attr('id_trans');
 								$("#all").find("[data-type=odd]").each(function() { 
 									var oddTmp = $(this).attr('id');
 									if (odd==oddTmp) {
 										$(this).addClass( "actived" );
-										console.log(oddTmp)
 									}  
 								});
 							});
@@ -160,10 +160,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							$("#all").empty();
 							get_bets(fecha, url);
 							actives();
-							console.log("actualizado: "+fecha)
+							console.log("Actualizado: "+moment().format('h:mm:ss a'))
 
 						});  
-						timer.set({ time : 9000, autostart : true });
+						timer.set({ time : 40000, autostart : true });
 
 
 
