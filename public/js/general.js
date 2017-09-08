@@ -13,19 +13,21 @@ function showLiga(){
 		});							
 	});
 
-	$('.checkCompe').click(function(){
-		var idCompe = $(this).attr('check-id');
-		if ($(this).is(':checked') ) {
-			$('#'+idCompe).removeClass( "hidden" );
-			//$("body").scrollTo('#'+idCompe);
-		} else {
-			$("#all").find("[id="+idCompe+"]").each(function() { 
-				$(this).addClass("hidden");
-			});
-		}
-		
 
+
+	$(".checkCompe").on('change', function() {
+		var idCompe = $(this).attr('check-id');
+		if ($(this).is(':checked')) {
+			$('#'+idCompe).removeClass( "hidden" );
+			$(this).attr('value', 'true');
+		} else {
+			$('#'+idCompe).addClass("hidden");
+			$(this).attr('value', 'false');
+		}
+
+		$('#checkbox-value').text($('#checkbox1').val());
 	});
+
 }
 
 function getCountries(fecha, url) {
@@ -41,7 +43,6 @@ function getCountries(fecha, url) {
 				html+=
 				'<tr class="pais" id="'+row.ID+'">'+
 				'<td class="bold" style="background-color: #D7D7D7; cursor: pointer;">'+
-				/*'<input type="checkbox" name="optionsCheckboxes"> '+*/
 				row.NOMBRE+
 				'</td>'+
 				'</tr>'
@@ -54,12 +55,12 @@ function getCountries(fecha, url) {
 					success: function(compe){
 						$.each(compe, function(b, rowCompe) { 
 							html+=
-							'<tr pais="'+row.ID+'" class="hidden">'+
+							'<tr pais="'+row.ID+'" class="">'+
 							'<td class="" style="background-color: white">';
 							if (rowCompe.FAV=='1') {
-								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'" checked> ';
+								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'" checked value="true"> ';
 							} else{ 
-								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'">';
+								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'"  value="false">';
 							}
 
 							html+= ' '+rowCompe.COMPE+
@@ -98,38 +99,6 @@ function reload(fecha, url){
 
 function selectBox(fecha, url){
 
-	$("#titulo").empty();
-	$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-	get_bets(fecha, url);
-	get_totalMatch(fecha, url);
-	//reload(fecha, url);
-	$( "#dia" ).change(function() {
-		$("#titulo").empty();
-		switch($(this).val()){
-			case "today":
-			$("#titulo").append(moment().format('dddd Do [de] MMMM'));
-			fecha=moment().format('YYYY-MM-DD');  
-			break;
-			case "tomorrow":
-			$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
-			fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
-			break;
-			case "after2":
-			$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
-			fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
-			break;
-			case "after3":
-			$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
-			fecha=moment().add(3, 'days').format('YYYY-MM-DD'); 
-			break;
-		}
-
-		$("#all").empty();
-		$("#ligas").empty();
-		getCountries(fecha,url);
-		get_bets(fecha, url);
-		get_totalMatch(fecha, url);
-	});
 }
 
 function addDetalle(){
@@ -176,6 +145,7 @@ function get_bets(fecha, url) {
 		type: 'post',
 		data: {fecha: fecha},
 		beforeSend: function( xhr ) {
+			//efecto
 		},
 		success: function(jsonCompe){
 			var compeTmp='';
@@ -184,14 +154,17 @@ function get_bets(fecha, url) {
 				var row='';
 				$.each(jsonCompe, function(i, item) {
 					i++;
+
 					if (compeTmp!=item.ID_COMPE) {
-						if (item.FAV=='1') {
-							row+='\
-							<table class="table table-bordered" id='+item.ID_COMPE+'>';
-						} else {
-							row+='\
-							<table class="table table-bordered hidden" id='+item.ID_COMPE+'>';
-						}
+						$("#ligas").find("[check-id="+item.ID_COMPE+"]").each(function() { //si esta check se visualiza table(competencia)
+							if ($(this).attr("value")=="true") {
+								row+='\
+								<table class="table table-bordered" id='+item.ID_COMPE+'>';
+							} else {
+								row+='\
+								<table class="table table-bordered hidden" id='+item.ID_COMPE+'>';
+							}
+						});
 						row+='\
 						<tr data-compe='+ item.ID+' class="row-compe">\
 						<td colspan="13" class="text-left cabecera" style="padding:0px" >\
@@ -218,12 +191,12 @@ function get_bets(fecha, url) {
 						</tr>';
 						compeTmp=item.ID_COMPE;
 					}
-					if (item.IMG_L=='NO' || item.IMG_L==null ) {
+					if (item.IMG_L=="NO" || item.IMG_L==null ) {
 						var imL='default.png';
 					} else {
 						var imL='team/'+item.PAIS_L+'/'+item.IMG_L+'.png';
 					}
-					if (item.IMG_V=='NO' || item.IMG_V==null) {
+					if (item.IMG_V=="NO" || item.IMG_V==null) {
 						var imV='default.png';
 					} else {
 						var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';

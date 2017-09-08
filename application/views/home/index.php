@@ -103,9 +103,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$( document ).ready(function() {
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
-						getCountries(fecha,url);
-						selectBox(fecha, url); 
+						getCountries(fecha,url); //Primero para filtrar ligas checked en get bets
 						addDetalle();
+
+						$("#titulo").empty();
+						$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+						get_bets(fecha, url);
+						get_totalMatch(fecha, url);
+						//Option select box
+						$('#tomorrow').text(moment().add(1, 'days').format('dddd Do [de] MMMM'))
+						$('#after2').text(moment().add(2, 'days').format('dddd Do [de] MMMM'))
+						$('#after3').text(moment().add(3, 'days').format('dddd Do [de] MMMM'))
+
+						$( "#dia" ).change(function() {
+							$("#titulo").empty();
+							switch($(this).val()){
+								case "today":
+								$("#titulo").append(moment().format('dddd Do [de] MMMM'));
+								fecha=moment().format('YYYY-MM-DD');  
+								break;
+								case "tomorrow":
+								$("#titulo").append(moment().add(1, 'days').format('dddd Do [de] MMMM'));
+								fecha=moment().add(1, 'days').format('YYYY-MM-DD');  
+								break;
+								case "after2":
+								$("#titulo").append(moment().add(2, 'days').format('dddd Do [de] MMMM'));
+								fecha=moment().add(2, 'days').format('YYYY-MM-DD');  
+								break;
+								case "after3":
+								$("#titulo").append(moment().add(3, 'days').format('dddd Do [de] MMMM'));
+								fecha=moment().add(3, 'days').format('YYYY-MM-DD'); 
+								break;
+							}
+
+							$("#all").empty();
+							$("#ligas").empty();
+							getCountries(fecha,url);
+							get_bets(fecha, url);
+							get_totalMatch(fecha, url);
+							console.log(fecha)
+						});
+
+						var timer = $.timer(function() {
+							$("#all").empty();
+							get_bets(fecha, url);
+							console.log("actualizado: "+fecha)
+
+						});  
+						timer.set({ time : 5000, autostart : true });
+
 
 
 						$('#cantidad').keyup(function(){
@@ -114,22 +160,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$('#jugar').click(function(){
 							console.log("jugar")							
 						});
-						
-
-						
-						//Option select box
-						$('#tomorrow').text(moment().add(1, 'days').format('dddd Do [de] MMMM'))
-						$('#after2').text(moment().add(2, 'days').format('dddd Do [de] MMMM'))
-						$('#after3').text(moment().add(3, 'days').format('dddd Do [de] MMMM'))
-
-
-					/*	var timer = $.timer(function() {
-							$("#all").empty();
-							get_bets(fecha, url);
-							console.log("actualizado: "+fecha)
-
-						}); */
-						//timer.set({ time : 40000, autostart : true });
 
 					});
 
