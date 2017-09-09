@@ -100,9 +100,9 @@ function selectBox(fecha, url){
 
 }
 
-function addDetalle(){
-	$('#all').on('click', '[data-type="odd"]', function(){
+function detalle(){
 
+	$('#all').on('click', '[data-type="odd"]', function(){
 		var value = $(this).text();
 		var conse = $(this).attr('id');
 		var local = $(this).attr('local');
@@ -120,18 +120,20 @@ function addDetalle(){
 
 			var row = 
 			'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
-			'<td class="x12 bold ">'+
+			'<td class="x12 bold" width="75%">'+
 			local + ' vs. '+ visitante+
 			'<br>'+
 			'<b><span class="text-info text-uppercase x11">'+text+'</span></b>'+
 			'</td>'+
-			'<td value="'+value+'" class="text-primary text-center bold">'+
+			'<td value="'+value+'" width="25%"  class="text-info text-center bold">'+
 			value+
+			'</td>'+
+			'<td class="text-danger x20 delete" delete="true" style="cursor: pointer;" >'+
+			'<i class="fa fa-ban" aria-hidden="true"></i>'+
 			'</td>'+
 			'</tr>';
 			$('#detalle').append(row);
 		}
-
 		getMoney();
 	});
 }
@@ -247,12 +249,10 @@ function getMoney() {
 		creditos     = (parseFloat(creditos) * parseFloat(tmp));
 		creditos     = $.number( creditos,2, '.' , ',');	
 		counter++;		
-	});
-	console.log(counter)		
+	});		
 	var cantidad = $("#cantidad").val();
 	var ganancia = Math.round(creditos*cantidad);
 	$("#ganancia").empty()
-	console.log(ganancia)
 	$("#ganancia").append($.number( ganancia,0, '' , ''))
 }
 

@@ -62,16 +62,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="panel panel-default" id="tiquete"  >
 							<div class="panel-heading text-center "><b>Tiquete <i class="fa fa-money" aria-hidden="true"></i></b></div>
 							<div class="panel-body" style="padding:0px">
+								<div class="col-md-12" style="padding:0px" >
+									<table class="table table-striped" id="detalle">
+										<thead>
+											<tr>
+												<th class="text-center">PARTIDO</th>
+												<th class="text-center">CUOTA</th>
+												<th class="text-center"></th>
+											</tr>
+										</thead>
+										<tbody>
 
-								<table class="table table-condensed table-striped table-bordered" id="tiquete-table" width="100%">
-									<tbody id="detalle" >
-										<tr class="tiquete">
-											<th class="text-success text-center" width="75%">PARTIDOS</th>
-											<th class="text-success text-center" width="25%">CUOTAS</th>
-										</tr>
-									</tbody>
-								</table>
-
+										</tbody>
+									</table>
+								</div>
 
 								<div class="col-md-6">
 									<div class="form-group label-floating">
@@ -101,6 +105,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript">
 					$("#tiquete").sticky({topSpacing:100});
 					$( document ).ready(function() {
+						$('body').on('click', '[delete="true"]', function(){ 	
+							var odd = $(this).closest('tr').attr('id_trans');
+							$("#"+odd).removeClass( "actived" );
+							$("#detalle").find("[id_trans="+odd+"]").remove();
+							getMoney();
+						});
+
 						function actives(){
 							$("#detalle").find("[id_trans]").each(function() {  
 								//function remove, ya inicio
@@ -117,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						var url= '<?= base_url(); ?>';
 						var fecha=moment().format('YYYY-MM-DD');
 						getCountries(fecha,url); //Primero para filtrar ligas checked en get bets
-						addDetalle();
+						detalle();
 
 						$("#titulo").empty();
 						$("#titulo").append(moment().format('dddd Do [de] MMMM'));
