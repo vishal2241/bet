@@ -30,14 +30,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</select>
 										</th>
 									</tr>
-									<tr>
+									<!--<tr>
 										<th class="text-center">
 											<div class="form-group label-floating">
 												<label class="control-label">Buscar Partido</label>
 												<input type="text" class="form-control" id="search">
 											</div>	
 										</th>
-									</tr>
+									</tr>-->
 									<tr>
 										<th class="text-center">
 											LIGAS DISPONIBLES
@@ -117,13 +117,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						function actives(){
 							$("#detalle").find("[id_trans]").each(function() {  
 								//function remove, ya inicio
+								var match = $(this).attr('id_match');
 								var odd = $(this).attr('id_trans');
-								$("#all").find("[data-type=odd]").each(function() { 
-									var oddTmp = $(this).attr('id');
-									if (odd==oddTmp) {
-										$(this).addClass( "actived" );
-									}  
-								});
+								$.post(url+'ajax/json_checkMatch', {fecha: fecha, id:match}, function(data, status){
+									$.each(data, function(a, row) { 
+										if (row.TOTAL=='0') {
+											$("#detalle").find("[id_trans="+odd+"]").remove();
+											getMoney();
+										}
+										else {
+											//si aun no inicia se bus activar odd 
+											$("#all").find("[data-type=odd]").each(function() { 
+												var oddTmp = $(this).attr('id');
+												if (odd==oddTmp) {
+													$(this).addClass( "actived" );
+												}  
+											});
+										}
+
+									});
+
+								}, 'json');
+
+								
 							});
 						}
 
@@ -176,7 +192,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							console.log("Actualizado: "+moment().format('h:mm:ss a'))
 
 						});  
-						timer.set({ time : 40000, autostart : true });
+						timer.set({ time : 4000, autostart : true });
 
 
 						

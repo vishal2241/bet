@@ -240,7 +240,7 @@ class Partido extends CI_Model
 		} 
 	}
 
-	public function getTotalMatch($date)
+	public function getTotalMatch($date, $id)
 	{
 		$sql="
 		SELECT count(*) AS TOTAL
@@ -249,6 +249,9 @@ class Partido extends CI_Model
 		p.FECHA = '".$date."'";
 		if (date("Y-m-d")==$date ) {
 			$sql.=" AND p.HORARIO > '".date('H:i')."' ";
+		}
+		if ($id!='') {
+			$sql.=" AND p.ID_PARTIDO = '".$id."' ";
 		}
 
 		#echo $sql;
