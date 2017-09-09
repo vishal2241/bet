@@ -44,7 +44,7 @@ function getCountries(fecha, url) {
 				$.each(pais, function(a, row) { 
 					html+=
 					'<tr class="pais" id="'+row.ID+'">'+
-					'<td class="bold" style="background-color: #E2E2E2; cursor: pointer;">'+
+					'<td class="bold" style="background-color: #D7D7D7; cursor: pointer; color:rgba(0,0,0, 0.87);">'+
 					row.NOMBRE+
 					'</td>'+
 					'</tr>'

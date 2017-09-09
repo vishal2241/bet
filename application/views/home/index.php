@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<table class="table table-bordered" >
 								<thead>
 									<tr>
-										<th class="text-center">FECHA</th>
+										<th class="text-center text-primary">FECHA</th>
 									</tr>
 									<tr>
 										<th class="text-center">
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</th>
 									</tr>-->
 									<tr>
-										<th class="text-center">
+										<th class="text-center text-primary">
 											LIGAS DISPONIBLES
 										</th>
 										
