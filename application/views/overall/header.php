@@ -13,7 +13,7 @@
 
 <!-- CSS Files -->
 <link href="<?= base_url(); ?>public/css/style.css" rel="stylesheet" />
-<link href="<?= base_url(); ?>public/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="<?= base_url(); ?>public/bootstrap/css/bootstrap.css" rel="stylesheet" />
 <!--<link href="<?= base_url(); ?>public/css/material-kit.css" rel="stylesheet"/>-->
 
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/plugins/datatables/css/dataTables.bootstrap.css">

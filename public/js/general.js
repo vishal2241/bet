@@ -128,13 +128,13 @@ function detalle(){
 
 			var row = 
 			'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
-			'<td class="x12 text-primary" width="75%">'+
+			'<td class="x12" width="75%">'+
 			'<b>'+local + ' vs. '+ visitante+'</b>'+
 			'<br>'+
 			'   <span class="x12">Hora: '+hour+'</span></b>  '+
-			'  <span class="text-success x12"> [ '+text+' ]</span>'+
+			'  <span class=" x12"> [ '+text+' ]</span>'+
 			'</td>'+
-			'<td value="'+value+'" width="25%"  class="text-info text-center bold">'+
+			'<td value="'+value+'" width="25%"  class="text-center bold">'+
 			value+
 			'</td>'+
 			'<td class="text-danger x20 delete" delete="true" style="cursor: pointer;" >'+
