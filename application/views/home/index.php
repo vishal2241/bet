@@ -80,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="col-md-6">
 									<div class="form-group label-floating">
 										<label class="control-label">Cantidad</label>
-										<input type="number" class="form-control" id="cantidad" value="1000">
+										<input type="text" class="form-control" id="cantidad" value="0">
 									</div>	
 								</div>		
 								<div class="col-md-6">
@@ -106,6 +106,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript">
 
 					$( document ).ready(function() {
+
+
+						$('#cantidad').number( true,0, ',' , '.');
+
+
+
 						$("#tiquete").sticky({topSpacing:100});
 						$('body').on('click', '[delete="true"]', function(){ 	
 							var odd = $(this).closest('tr').attr('id_trans');

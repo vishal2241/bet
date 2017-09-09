@@ -252,10 +252,10 @@ function get_totalMatch(fecha, url) {
 
 function getMoney() {
 	var creditos = '1.00';
-	var counter= 0;
+	var counter  = 0;
 	$("#detalle").find("[value]").each(function() {
-		var tmp      = $.number($(this).attr("value"),2, '.' , ',');
-		creditos     = (parseFloat(creditos) * parseFloat(tmp));
+	tmp          = $(this).attr("value");
+	creditos     = (parseFloat(creditos) * parseFloat(tmp));
 		counter++;		
 	});		
 	var cantidad = $("#cantidad").val();
