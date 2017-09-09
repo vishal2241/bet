@@ -192,7 +192,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							console.log("Actualizado: "+moment().format('h:mm:ss a'))
 
 						});  
-						timer.set({ time : 4000, autostart : true });
+						timer.set({ time : 40000, autostart : true });
 
 
 						

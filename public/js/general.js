@@ -253,13 +253,11 @@ function getMoney() {
 	$("#detalle").find("[value]").each(function() {
 		var tmp      = $.number($(this).attr("value"),2, '.' , ',');
 		creditos     = (parseFloat(creditos) * parseFloat(tmp));
-		creditos     = $.number( creditos,2, '.' , ',');	
 		counter++;		
 	});		
 	var cantidad = $("#cantidad").val();
 	var ganancia = Math.round(creditos*cantidad);
 	$("#ganancia").empty()
-
 	$("#ganancia").append("$ "+ $.number(ganancia, 0, ',', '.' ))
 	//$("#ganancia").append(numeral(ganancia).format('$ 0,0'))
 }
