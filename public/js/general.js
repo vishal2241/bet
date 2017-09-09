@@ -113,8 +113,10 @@ function detalle(){
 		var conse = $(this).attr('id');
 		var local = $(this).attr('local');
 		var visitante = $(this).attr('visitante');
+		var visitante = $(this).attr('visitante');
 		var text = $(this).attr('text');
 		var match = $(this).closest('tr').attr('data-match');
+		var hour = $(this).closest('tr').attr('hour');
 
 		$("#detalle").find("[id_match="+match+"]").remove();
 		if ($(this).hasClass("actived")) {
@@ -126,10 +128,11 @@ function detalle(){
 
 			var row = 
 			'<tr id_trans="'+conse+'"  id_match="'+match+'">'+
-			'<td class="x12 bold" width="75%">'+
-			local + ' vs. '+ visitante+
+			'<td class="x12 text-primary" width="75%">'+
+			'<b>'+local + ' vs. '+ visitante+'</b>'+
 			'<br>'+
-			'<b><span class="text-info text-uppercase x11">'+text+'</span></b>'+
+			'   <span class="x12">Hora: '+hour+'</span></b>  '+
+			'  <span class="text-success x12"> [ '+text+' ]</span>'+
 			'</td>'+
 			'<td value="'+value+'" width="25%"  class="text-info text-center bold">'+
 			value+
@@ -209,7 +212,7 @@ function get_bets(fecha, url) {
 						var imV='team/'+item.PAIS_V+'/'+item.IMG_V+'.png';
 					}
 					row+= '\
-					<tr data-match='+ item.ID_PARTIDO+'>\
+					<tr data-match='+ item.ID_PARTIDO+'  hour='+ item.HORARIO+'>\
 					<td  class="text-center bold" width="6%" >'+ item.HORARIO+'</td>\
 					<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imL+'"><br>'+ item.LOCAL+'</td>\
 					<td  class="text-center bold" width="12%" ><img width="35" src="'+url+'public/img/logos/'+imV+'"><br>'+ item.VISITANTE+'</td>\
