@@ -29,6 +29,7 @@ function showLiga(){
 
 }
 
+
 function getCountries(fecha, url) {
 	var	html='';
 	$.ajax({
@@ -38,44 +39,49 @@ function getCountries(fecha, url) {
 		type: 'post',
 		data: {fecha: fecha},
 		success: function(pais){
-			$.each(pais, function(a, row) { 
-				html+=
-				'<tr class="pais" id="'+row.ID+'">'+
-				'<td class="bold" style="background-color: #D7D7D7; cursor: pointer;">'+
-				row.NOMBRE+
-				'</td>'+
-				'</tr>'
-				$.ajax({
-					dataType: 'json',
-					async: false,
-					url: url+'ajax/jsonCompeByCountry',
-					type: 'post',
-					data: {fecha: fecha, pais:row.ID},
-					success: function(compe){
-						$.each(compe, function(b, rowCompe) { 
-							html+=
-							'<tr pais="'+row.ID+'" class="hidden">'+
-							'<td class="" style="background-color: white">';
-							if (rowCompe.FAV=='1') {
-								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'" checked value="true"> ';
-							} else{ 
-								html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'"  value="false">';
-							}
+			if (pais.length>0) {
 
-							html+= ' '+rowCompe.COMPE+
-							'</td>'+
-							'</tr>';
+				$.each(pais, function(a, row) { 
+					html+=
+					'<tr class="pais" id="'+row.ID+'">'+
+					'<td class="bold" style="background-color: #D7D7D7; cursor: pointer;">'+
+					row.NOMBRE+
+					'</td>'+
+					'</tr>'
+					$.ajax({
+						dataType: 'json',
+						async: false,
+						url: url+'ajax/jsonCompeByCountry',
+						type: 'post',
+						data: {fecha: fecha, pais:row.ID},
+						success: function(compe){
+							$.each(compe, function(b, rowCompe) { 
+								html+=
+								'<tr pais="'+row.ID+'" class="hidden">'+
+								'<td class="" style="background-color: white">';
+								if (rowCompe.FAV=='1') {
+									html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'" checked value="true"> ';
+								} else{ 
+									html+= '<input type="checkbox" class="checkCompe" check-id="'+rowCompe.ID+'"  value="false">';
+								}
 
-						});
-						
-					},
-					error: function(e){
-						console.log(e);
-					}
+								html+= ' '+rowCompe.COMPE+
+								'</td>'+
+								'</tr>';
+
+							});
+
+						},
+						error: function(e){
+							console.log(e);
+						}
+					});
+
 				});
 
-			});
-			
+
+
+			}
 		},
 		error: function(e){
 			console.log(e);
@@ -253,7 +259,9 @@ function getMoney() {
 	var cantidad = $("#cantidad").val();
 	var ganancia = Math.round(creditos*cantidad);
 	$("#ganancia").empty()
-	$("#ganancia").append($.number( ganancia,0, '' , ''))
+
+	$("#ganancia").append("$ "+ $.number(ganancia, 0, ',', '.' ))
+	//$("#ganancia").append(numeral(ganancia).format('$ 0,0'))
 }
 
 function isEmpty(val){

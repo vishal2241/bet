@@ -102,9 +102,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.timer.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/js/jquery.scrollTo.js"></script>
+				<script type="text/javascript" src="<?= base_url(); ?>public/js/numeral.js"></script>
 				<script type="text/javascript">
-					$("#tiquete").sticky({topSpacing:100});
+
 					$( document ).ready(function() {
+						$("#tiquete").sticky({topSpacing:100});
 						$('body').on('click', '[delete="true"]', function(){ 	
 							var odd = $(this).closest('tr').attr('id_trans');
 							$("#"+odd).removeClass( "actived" );
@@ -177,7 +179,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						timer.set({ time : 40000, autostart : true });
 
 
-
+						
 						$('#cantidad').keyup(function(){
 							getMoney();							
 						});

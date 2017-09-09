@@ -4,7 +4,7 @@ table {
 
 #detalle {
 	display: block;
-	height: 250px;       
+	height: 220px;       
 	overflow-y: auto;   
 	overflow-x: hidden; 
 }
@@ -31,13 +31,18 @@ th.pais {
 	line-height: 1.5em;
 }
 
+#cantidad {
+	font-size: 16px;
+}
+
 .ganancia {
-	padding: 10px;
+	padding: 7px;
 	font-weight:bold;
-	background-color:  #0EB81E;
+	background-color:  #32CE41;
 	color : white;
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
+	border-radius: 3px;
 }
 
 .checkCompe{
