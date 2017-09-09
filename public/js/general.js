@@ -44,7 +44,7 @@ function getCountries(fecha, url) {
 				$.each(pais, function(a, row) { 
 					html+=
 					'<tr class="pais" id="'+row.ID+'">'+
-					'<td class="bold" style="background-color: #D7D7D7; cursor: pointer;">'+
+					'<td class="bold" style="background-color: #E2E2E2; cursor: pointer;">'+
 					row.NOMBRE+
 					'</td>'+
 					'</tr>'
@@ -166,17 +166,17 @@ function get_bets(fecha, url) {
 						$("#ligas").find("[check-id="+item.ID_COMPE+"]").each(function() { //si esta check se visualiza table(competencia)
 							if ($(this).attr("value")=="true") {
 								row+='\
-								<table class="table table-bordered" id='+item.ID_COMPE+'>';
+								<table class="table table-bordered table-striped " id='+item.ID_COMPE+'>';
 							} else {
 								row+='\
-								<table class="table table-bordered hidden" id='+item.ID_COMPE+'>';
+								<table class="table table-bordered table-striped  hidden" id='+item.ID_COMPE+'>';
 							}
 						});
 						row+='\
-						<tr data-compe='+ item.ID+' class="row-compe">\
+						<tr data-compe='+ item.ID_COMPE+' class="row-compe">\
 						<td colspan="13" class="text-left cabecera" style="padding:0px" >\
 						\
-						<img width="74" src="'+url+'public/img/logos/country/'+item.IMG_PA+'.png"> \
+						<img width="74" src="'+url+'public/img/logos/country/'+item.IMG_PA+'.png" style="border: 1px solid #C9C9C9;  border-radius: 4px;  padding: 1px;"> \
 						<b>'+ item.PAIS_CO+': </b> '+ item.COMPE+'  \
 						\
 						</td>\
