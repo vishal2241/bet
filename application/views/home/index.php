@@ -106,12 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript">
 
 					$( document ).ready(function() {
-
-
 						$('#cantidad').number( true,0, ',' , '.');
-
-
-
 						$("#tiquete").sticky({topSpacing:100});
 						$('body').on('click', '[delete="true"]', function(){ 	
 							var odd = $(this).closest('tr').attr('id_trans');
@@ -200,13 +195,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						});  
 						timer.set({ time : 40000, autostart : true });
 
-
-						
 						$('#cantidad').keyup(function(){
 							getMoney();							
 						});
 						$('#jugar').click(function(){
-							console.log("jugar")							
+							var detalle = [];
+							$("#detalle").find("[id_trans]").each(function() {  
+								detalle.push($(this).attr('id_match'));								
+							});
+							if (detalle) {
+								$.ajax({
+									dataType: 'json',
+									async: true,
+									url: url+'ajax/json_game',
+									type: 'post',
+									data: {detalle: detalle},
+									success: function(data){
+										console.log(data)
+									},
+									error: function(e){
+										console.log(e);
+									}
+								}); 
+							}
+
 						});
 
 					});

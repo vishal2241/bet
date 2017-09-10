@@ -104,6 +104,21 @@ class Ajax extends CI_Controller {
 			header("Location:" . base_url());
 		} 
 	}
+	public function json_game(){
+		if (isset($_POST['detalle']) and $_POST['detalle']!='') {
+			foreach ($_POST['detalle'] as $key => $value) {
+				
+			}
+			/*$id=$_POST['id'];
+			$fecha=$_POST['fecha'];
+			$data = $this->Partido->getTotalMatch($fecha, $id);
+			echo json_encode($data);/*/
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
+
+
 
 
 
