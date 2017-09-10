@@ -106,8 +106,9 @@ class Ajax extends CI_Controller {
 	}
 	public function json_game(){
 		if (isset($_POST['detalle']) and $_POST['detalle']!='') {
+			print_r($_POST['detalle']);
 			foreach ($_POST['detalle'] as $key => $value) {
-				
+
 			}
 			/*$id=$_POST['id'];
 			$fecha=$_POST['fecha'];

@@ -201,7 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$('#jugar').click(function(){
 							var detalle = [];
 							$("#detalle").find("[id_trans]").each(function() {  
-								detalle.push($(this).attr('id_match'));								
+								detalle.push($(this).attr('id_trans'));								
 							});
 							if (detalle) {
 								$.ajax({
