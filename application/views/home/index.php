@@ -22,22 +22,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<tr>
 								<th class="text-right" width="20%">Fecha </th>
 								<td width="5%">&nbsp;</td>
-								<td width="45%">2017-09-02 08:00</td>
+								<td width="45%" id="modalFecha"></td>
 							</tr>
 							<tr>
 								<th class="text-right">Nro. Tiquete</th>
 								<td>&nbsp;</td>
-								<td>123456 </td>
+								<td id="modalNroTiquete"></td>
 							</tr>
 							<tr>
 								<th class="text-right">Total Eventos</th>
 								<td>&nbsp;</td>
-								<td>4</td>
+								<td id="modalNroEventos"></td>
 							</tr>
 							<tr>
 								<th class="text-right">Ganancia</th>
 								<td>&nbsp;</td>
-								<td>$ 40.000</td>
+								<td id="modalGanancia"></td>
 							</tr>
 						</thead>
 					</table>
@@ -268,7 +268,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													type: 'post',
 													data: {detalle: detalle, cantidad:cantidad},
 													success: function(data){
-														console.log(data);
+														$('#modalGanancia').html('changed value');
+														$('#modalNroTiquete').html('changed value');
+														$('#modalFecha').html('changed value');
+														$('#modalNroEventos').html('changed value');
 
 														$("#modalImprimir").modal({
 															backdrop: 'static',

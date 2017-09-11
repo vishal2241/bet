@@ -156,7 +156,10 @@ class Ajax extends CI_Controller {
 				$nuevoSaldo =$saldo->SALDO-$cantidad;
 				$this->User->updateSaldo($nuevoSaldo);
 
-				echo json_encode("Hola");
+				$a = array(
+					array('foo' => 'bar'),
+					array('foo' => 'baz'));
+				echo json_encode($a);
 
 
 			} else {
