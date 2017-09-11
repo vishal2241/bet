@@ -123,7 +123,7 @@ class Sync extends CI_Controller {
 					$this->Cuota->ID_PARTIDO = $row['id_match'];
 					$this->Cuota->ID_TIPO    = 1; 
 					$this->Cuota->VALOR      = isset($row['_1e']) ? $row['_1e'] : 1;  
-					$_1=$this->Cuota->getCuota();
+					$_1=$this->Cuota->getCuota("sync");
 					if ($_1==null) {
 						$this->Cuota->add();
 					} else {
@@ -132,7 +132,7 @@ class Sync extends CI_Controller {
 				// Empata
 					$this->Cuota->ID_TIPO    = 2; 
 					$this->Cuota->VALOR      = isset($row['_xe']) ? $row['_xe'] : 1;  
-					$_X=$this->Cuota->getCuota();
+					$_X=$this->Cuota->getCuota("sync");
 					if ($_X==null) {
 						$this->Cuota->add();
 					} else {
@@ -141,7 +141,7 @@ class Sync extends CI_Controller {
 				// Gana visitante
 					$this->Cuota->ID_TIPO    = 3; 
 					$this->Cuota->VALOR      = isset($row['_2e']) ? $row['_2e'] : 1; 
-					$_2=$this->Cuota->getCuota();
+					$_2=$this->Cuota->getCuota("sync");
 					if ($_2==null) {
 						$this->Cuota->add();
 					} else {
@@ -150,7 +150,7 @@ class Sync extends CI_Controller {
 				// Under
 					$this->Cuota->ID_TIPO    = 4; 
 					$this->Cuota->VALOR      = isset($row['undere']) ? $row['undere'] : 1; 
-					$under=$this->Cuota->getCuota();
+					$under=$this->Cuota->getCuota("sync");
 					if ($under==null) {
 						$this->Cuota->add();
 					} else {
@@ -159,7 +159,7 @@ class Sync extends CI_Controller {
 				// Over
 					$this->Cuota->ID_TIPO    = 5; 
 					$this->Cuota->VALOR      = isset($row['overe']) ? $row['overe'] : 1; 
-					$over=$this->Cuota->getCuota();
+					$over=$this->Cuota->getCuota("sync");
 					if ($over==null) {
 						$this->Cuota->add();
 					} else {
@@ -168,7 +168,7 @@ class Sync extends CI_Controller {
 				// Gana empata local
 					$this->Cuota->ID_TIPO    = 6; 
 					$this->Cuota->VALOR      = isset($row['_1xe']) ? $row['_1xe'] : 1; 
-					$_1X=$this->Cuota->getCuota();
+					$_1X=$this->Cuota->getCuota("sync");
 					if ($_1X==null) {
 						$this->Cuota->add();
 					} else {
@@ -177,7 +177,7 @@ class Sync extends CI_Controller {
 				// Gana empata visitante
 					$this->Cuota->ID_TIPO    = 7; 
 					$this->Cuota->VALOR      = isset($row['_2xe']) ? $row['_2xe'] : 1; 
-					$_2X=$this->Cuota->getCuota();
+					$_2X=$this->Cuota->getCuota("sync");
 					if ($_2X==null) {
 						$this->Cuota->add();
 					} else {
@@ -186,7 +186,7 @@ class Sync extends CI_Controller {
 				// Sin empate
 					$this->Cuota->ID_TIPO    = 8; 
 					$this->Cuota->VALOR      = isset($row['_12e']) ? $row['_12e'] : 1; 
-					$_12=$this->Cuota->getCuota();
+					$_12=$this->Cuota->getCuota("sync");
 					if ($_12==null) {
 						$this->Cuota->add();
 					} else {
@@ -195,7 +195,7 @@ class Sync extends CI_Controller {
 				// Gana 1 primer tiempo
 					$this->Cuota->ID_TIPO    = 9; 
 					$this->Cuota->VALOR      = isset($row['1ste']) ? $row['1ste'] : 1; 
-					$_1ht=$this->Cuota->getCuota();
+					$_1ht=$this->Cuota->getCuota("sync");
 					if ($_1ht==null) {
 						$this->Cuota->add();
 					} else {
@@ -204,7 +204,7 @@ class Sync extends CI_Controller {
 				// Empate  primer tiempo
 					$this->Cuota->ID_TIPO    = 10; 
 					$this->Cuota->VALOR      = isset($row['xste']) ? $row['xste'] : 1; 
-					$Xht=$this->Cuota->getCuota();
+					$Xht=$this->Cuota->getCuota("sync");
 					if ($Xht==null) {
 						$this->Cuota->add();
 					} else {
@@ -213,7 +213,7 @@ class Sync extends CI_Controller {
 				// Gana 2 primer tiempo
 					$this->Cuota->ID_TIPO    = 11; 
 					$this->Cuota->VALOR      =isset($row['2ste']) ? $row['2ste'] : 1; 
-					$_2ht=$this->Cuota->getCuota();
+					$_2ht=$this->Cuota->getCuota("sync");
 					if ($_2ht==null) {
 						$this->Cuota->add();
 					} else {
@@ -222,7 +222,7 @@ class Sync extends CI_Controller {
 				// Ambos marcan
 					$this->Cuota->ID_TIPO    = 12; 
 					$this->Cuota->VALOR      = isset($row['gg']) ? $row['gg'] : 1; 
-					$ng=$this->Cuota->getCuota();
+					$ng=$this->Cuota->getCuota("sync");
 					if ($ng==null) {
 						$this->Cuota->add();
 					} else {
@@ -231,7 +231,7 @@ class Sync extends CI_Controller {
 				// No marcan ambos
 					$this->Cuota->ID_TIPO    = 13; 
 					$this->Cuota->VALOR      = isset($row['gn']) ? $row['gn'] : 1; 
-					$gg=$this->Cuota->getCuota();
+					$gg=$this->Cuota->getCuota("sync");
 					if ($gg==null) {
 						$this->Cuota->add();
 					} else {
