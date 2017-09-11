@@ -14,31 +14,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title bold" align="center">Transacción Exitosa</h5>
+					<h5 class="modal-title bold text-success" align="center">Transacción Exitosa</h5>
 				</div>
 				<div class="modal-body">
 					<table width="70%">
 						<thead>
 							<tr>
-								<th class="">Fecha </th>
-								<td>2017-09-02 08:00</td>
+								<th class="text-right" width="20%">Fecha </th>
+								<td width="5%">&nbsp;</td>
+								<td width="45%">2017-09-02 08:00</td>
 							</tr>
 							<tr>
-								<th class="">Nro. Tiquete</th>
+								<th class="text-right">Nro. Tiquete</th>
+								<td>&nbsp;</td>
 								<td>123456 </td>
 							</tr>
 							<tr>
-								<th class="">Total Eventos</th>
+								<th class="text-right">Total Eventos</th>
+								<td>&nbsp;</td>
 								<td>4</td>
 							</tr>
 							<tr>
-								<th class="">Ganancia</th>
+								<th class="text-right">Ganancia</th>
+								<td>&nbsp;</td>
 								<td>$ 40.000</td>
 							</tr>
 						</thead>
 					</table>
 				</div>
 				<div class="modal-footer">
+					<button type="button" class="btn btn-info">Mis Apuestas</button>
 					<button type="button" class="btn btn-success">Imprimir Tiquete</button>
 					<button type="button" id="cerrar" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 				</div>
