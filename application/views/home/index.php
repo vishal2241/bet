@@ -14,25 +14,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Transacción Exitosa</h5>
+					<h5 class="modal-title bold" align="center">Transacción Exitosa</h5>
 				</div>
 				<div class="modal-body">
 					<table width="70%">
 						<thead>
 							<tr>
-								<th>FECHA </th>
-								<td>2017-09-02 </td>
+								<th class="">Fecha </th>
+								<td>2017-09-02 08:00</td>
 							</tr>
 							<tr>
-								<th>NRO. TIQUETE </th>
+								<th class="">Nro. Tiquete</th>
 								<td>123456 </td>
 							</tr>
 							<tr>
-								<th>TOTAL EVENTOS </th>
+								<th class="">Total Eventos</th>
 								<td>4</td>
 							</tr>
 							<tr>
-								<th>GANANCIA </th>
+								<th class="">Ganancia</th>
 								<td>$ 40.000</td>
 							</tr>
 						</thead>
