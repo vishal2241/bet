@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2017 a las 16:27:22
+-- Tiempo de generación: 11-09-2017 a las 16:37:36
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -32,6 +32,7 @@ CREATE TABLE `apuesta` (
   `NRO_EVENTOS` int(11) NOT NULL,
   `ID_USER` varchar(20) NOT NULL,
   `VALOR` int(11) DEFAULT NULL,
+  `TOTAL_CREDITOS` varchar(10) DEFAULT NULL,
   `GANANCIA` int(11) NOT NULL,
   `ESTADO` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -40,12 +41,8 @@ CREATE TABLE `apuesta` (
 -- Volcado de datos para la tabla `apuesta`
 --
 
-INSERT INTO `apuesta` (`ID_APUESTA`, `FECHA`, `NRO_EVENTOS`, `ID_USER`, `VALOR`, `GANANCIA`, `ESTADO`) VALUES
-(8, '2017-09-11 16:23:00', 1, '1110540682', 0, 0, 'PLAYING'),
-(9, '2017-09-11 16:24:00', 1, '1110540682', 0, 0, 'PLAYING'),
-(10, '2017-09-11 16:24:00', 1, '1110540682', 0, 0, 'PLAYING'),
-(11, '2017-09-11 16:25:00', 1, '1110540682', 0, 0, 'PLAYING'),
-(12, '2017-09-11 16:25:00', 1, '1110540682', 0, 0, 'PLAYING');
+INSERT INTO `apuesta` (`ID_APUESTA`, `FECHA`, `NRO_EVENTOS`, `ID_USER`, `VALOR`, `TOTAL_CREDITOS`, `GANANCIA`, `ESTADO`) VALUES
+(20, '2017-09-11 16:37:00', 4, '1110540682', 10000, '40.425', 404250, 'PLAYING');
 
 -- --------------------------------------------------------
 
@@ -32065,7 +32062,10 @@ CREATE TABLE `detalle_apuesta` (
 --
 
 INSERT INTO `detalle_apuesta` (`ID_DETALLE`, `ID_APUESTA`, `ID_CUOTA`, `VALOR`) VALUES
-(1, 12, 29656, '2.45');
+(12, 20, 29656, '2.45'),
+(13, 20, 29632, '3.75'),
+(14, 20, 29617, '2.20'),
+(15, 20, 29695, '2.00');
 
 -- --------------------------------------------------------
 
@@ -38942,7 +38942,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `apuesta`
 --
 ALTER TABLE `apuesta`
-  MODIFY `ID_APUESTA` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID_APUESTA` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT de la tabla `cuota`
 --
@@ -38952,7 +38952,7 @@ ALTER TABLE `cuota`
 -- AUTO_INCREMENT de la tabla `detalle_apuesta`
 --
 ALTER TABLE `detalle_apuesta`
-  MODIFY `ID_DETALLE` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID_DETALLE` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `equipo`
 --

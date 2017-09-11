@@ -10,6 +10,7 @@ class Apuesta extends CI_Model
 	public $VALOR;
 	public $GANANCIA;
 	public $ESTADO;
+	public $TOTAL_CREDITOS;
 
 	public function __construct()
 	{
@@ -20,6 +21,7 @@ class Apuesta extends CI_Model
 		$this->ID_USER     = null;
 		$this->VALOR       = 0;
 		$this->GANANCIA    = 0;
+		$this->TOTAL_CREDITOS      = 1;
 		$this->ESTADO      = null;
 	}
 

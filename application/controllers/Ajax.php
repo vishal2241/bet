@@ -106,29 +106,36 @@ class Ajax extends CI_Controller {
 	}
 	public function json_game(){
 		if (isset($_POST['detalle']) and $_POST['detalle']!='' and isset($_POST['cantidad']) and $_POST['cantidad']!='') {
-
+			//saldo user veri
 
 			$this->Apuesta->NRO_EVENTOS = count($_POST['detalle']);
 			$this->Apuesta->ID_USER     = $this->session->userdata('id');
 			$this->Apuesta->VALOR       = $_POST['cantidad'];
-			$this->Apuesta->GANANCIA    = 0;
 			$this->Apuesta->ESTADO      = "PLAYING";
 			$this->Apuesta->add();
 
-			$this->DetalleApuesta->ID_APUESTA= $this->db->insert_id(); 
+			$id_apuesta=$this->db->insert_id();
+			$this->DetalleApuesta->ID_APUESTA=  $id_apuesta;
 
+			$totalCreditos=1;
 			foreach ($_POST['detalle'] as $key => $value) {
 				//Consultamos cuota en el momento de guardar
 				$this->Cuota->ID_CUOTA=$value;
 				$cuota=$this->Cuota->getCuota('');
 
 				//Guardamos detalle apuesta
-				
+				$totalCreditos=$totalCreditos*$cuota[0]->VALOR;
 				$this->DetalleApuesta->ID_CUOTA=$cuota[0]->ID_CUOTA;
 				$this->DetalleApuesta->VALOR=$cuota[0]->VALOR;
 				$this->DetalleApuesta->add();
-				exit;
+
 			}
+			$ganancia=$totalCreditos*$_POST['cantidad'];
+
+			$this->Apuesta->ID_APUESTA    = $id_apuesta;
+			$this->Apuesta->GANANCIA    = $ganancia;
+			$this->Apuesta->TOTAL_CREDITOS    = $totalCreditos;
+			$this->Apuesta->update();
 			/*$id=$_POST['id'];
 			$fecha=$_POST['fecha'];
 			$data = $this->Partido->getTotalMatch($fecha, $id);
