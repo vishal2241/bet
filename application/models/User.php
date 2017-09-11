@@ -24,7 +24,7 @@ class User extends CI_Model
 		} 
 	}
 
-	public function getSaldo ()
+	public function getSaldo()
 	{
 		$result=$this->db->query("SELECT SALDO FROM usuario WHERE  CEDULA ='".$this->CEDULA."' ");
 		if ($result->num_rows() > 0) {
@@ -32,6 +32,12 @@ class User extends CI_Model
 		} else {
 			return null;
 		} 
+	}
+
+
+	public function updateSaldo($valor)
+	{
+		$result=$this->db->query("UPDATE usuario SET SALDO='".$valor."' WHERE  CEDULA ='".$this->CEDULA."' ");
 	}
 
 	public function check()

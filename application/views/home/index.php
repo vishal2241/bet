@@ -9,6 +9,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body class="components-page">
 	<?php $this->load->view('overall/nav'); ?>
+
+	<div class="modal fade" id="modalImprimir">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Transacción Exitosa</h5>
+				</div>
+				<div class="modal-body">
+					<table width="70%">
+						<thead>
+							<tr>
+								<th>FECHA </th>
+								<td>2017-09-02 </td>
+							</tr>
+							<tr>
+								<th>NRO. TIQUETE </th>
+								<td>123456 </td>
+							</tr>
+							<tr>
+								<th>TOTAL EVENTOS </th>
+								<td>4</td>
+							</tr>
+							<tr>
+								<th>GANANCIA </th>
+								<td>$ 40.000</td>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success">Imprimir Tiquete</button>
+					<button type="button" id="cerrar" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="main main-raised">
 		<div class="section">
 			<div class="container-fluid">
@@ -195,33 +232,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						});  
 						timer.set({ time : 40000, autostart : true });
 
+						$('#cerrar').click(function(){
+							location.reload();						
+						});
+
 						$('#cantidad').keyup(function(){
 							getMoney();							
 						});
 
 						$('#jugar').click(function(){
+
 							var detalle = [];
 							var cantidad= $("#cantidad").val();
 							$("#detalle").find("[id_trans]").each(function() {  
 								detalle.push($(this).attr('id_trans'));								
 							});
-							if (detalle) {
+							if (cantidad!=0 && cantidad>=2000 && detalle.length>0) {
 								$.ajax({
 									dataType: 'json',
 									async: true,
-									url: url+'ajax/json_game',
+									url: url+'ajax/json_saldo',
 									type: 'post',
-									data: {detalle: detalle, cantidad:cantidad},
-									success: function(data){
-										console.log(data)
+									success: function(saldo){
+										if (saldo>=cantidad) {
+											if (detalle) {
+												$.ajax({
+													dataType: 'json',
+													async: true,
+													url: url+'ajax/json_game',
+													type: 'post',
+													data: {detalle: detalle, cantidad:cantidad},
+													success: function(data){
+														console.log(data);
+
+														$("#modalImprimir").modal({
+															backdrop: 'static',
+															keyboard: false
+														})
+
+													},
+													error: function(e){
+														console.log(e);
+													}
+												}); 
+											}
+										}	
 									},
 									error: function(e){
 										console.log(e);
 									}
-								}); 
+								});
+
+							} else {
+								console.log("No puede apostar ese valor o no ha selecionado")
 							}
 
 						});
+
 
 					});
 
