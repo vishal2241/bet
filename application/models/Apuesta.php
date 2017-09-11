@@ -15,16 +15,16 @@ class Apuesta extends CI_Model
 	{
 		parent::__construct();
 		$this->ID_APUESTA  = null;
-		$this->FECHA       = null;
+		$this->FECHA       = date("Y-m-d H:i");
 		$this->NRO_EVENTOS = null;
 		$this->ID_USER     = null;
 		$this->VALOR       = 0;
-		$this->GANANCIA    = null;
+		$this->GANANCIA    = 0;
 		$this->ESTADO      = null;
 	}
 
 
-	public function getEquipo()
+	public function getApuesta()
 	{
 		$query = $this->db->query('SELECT * FROM apuesta WHERE ID_APUESTA='.$this->ID_APUESTA.' ');
 		if ($query->num_rows() > 0) {
@@ -39,6 +39,7 @@ class Apuesta extends CI_Model
 	{
 		$this->db->insert('apuesta', $this);
 	}
+
 
 	public function update()
 	{

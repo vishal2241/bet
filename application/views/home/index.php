@@ -198,8 +198,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$('#cantidad').keyup(function(){
 							getMoney();							
 						});
+
 						$('#jugar').click(function(){
 							var detalle = [];
+							var cantidad= $("#cantidad").val();
 							$("#detalle").find("[id_trans]").each(function() {  
 								detalle.push($(this).attr('id_trans'));								
 							});
@@ -209,7 +211,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									async: true,
 									url: url+'ajax/json_game',
 									type: 'post',
-									data: {detalle: detalle},
+									data: {detalle: detalle, cantidad:cantidad},
 									success: function(data){
 										console.log(data)
 									},

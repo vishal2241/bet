@@ -105,12 +105,28 @@ class Ajax extends CI_Controller {
 		} 
 	}
 	public function json_game(){
-		if (isset($_POST['detalle']) and $_POST['detalle']!='') {
+		if (isset($_POST['detalle']) and $_POST['detalle']!='' and isset($_POST['cantidad']) and $_POST['cantidad']!='') {
+
+
+			$this->Apuesta->NRO_EVENTOS = count($_POST['detalle']);
+			$this->Apuesta->ID_USER     = $this->session->userdata('id');
+			$this->Apuesta->VALOR       = $_POST['cantidad'];
+			$this->Apuesta->GANANCIA    = 0;
+			$this->Apuesta->ESTADO      = "PLAYING";
+			$this->Apuesta->add();
+
+			$this->DetalleApuesta->ID_APUESTA= $this->db->insert_id(); 
 
 			foreach ($_POST['detalle'] as $key => $value) {
+				//Consultamos cuota en el momento de guardar
 				$this->Cuota->ID_CUOTA=$value;
 				$cuota=$this->Cuota->getCuota('');
-				$cuota[0]->VALOR;
+
+				//Guardamos detalle apuesta
+				
+				$this->DetalleApuesta->ID_CUOTA=$cuota[0]->ID_CUOTA;
+				$this->DetalleApuesta->VALOR=$cuota[0]->VALOR;
+				$this->DetalleApuesta->add();
 				exit;
 			}
 			/*$id=$_POST['id'];
