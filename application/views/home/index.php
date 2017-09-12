@@ -20,14 +20,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<table width="70%">
 						<thead>
 							<tr>
-								<th class="text-right" width="20%">Fecha </th>
-								<td width="5%">&nbsp;</td>
-								<td width="45%" id="modalFecha"></td>
-							</tr>
-							<tr>
-								<th class="text-right">Nro. Tiquete</th>
+								<th class="text-right ">Nro. Tiquete</th>
 								<td>&nbsp;</td>
 								<td id="modalNroTiquete"></td>
+							</tr>
+							<tr>
+								<th class="text-right" width="40%">Fecha </th>
+								<td width="5%">&nbsp;</td>
+								<td width="54%" id="modalFecha"></td>
+							</tr>
+							<tr>
+								<th class="text-right">Cantidad Apostada</th>
+								<td>&nbsp;</td>
+								<td id="modalApostado"></td>
 							</tr>
 							<tr>
 								<th class="text-right">Total Eventos</th>
@@ -44,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-info">Mis Apuestas</button>
-					<button type="button" class="btn btn-success">Imprimir Tiquete</button>
+					<button type="button" class="btn btn-success" id="printTiquete">Imprimir Tiquete</button>
 					<button type="button" id="cerrar" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 				</div>
 			</div>
@@ -122,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="col-md-6">
 									<div class="form-group label-floating">
 										<label class="control-label">Cantidad</label>
-										<input type="text" class="form-control" id="cantidad" value="0">
+										<input type="text" class="form-control" id="cantidad" value="3000">
 									</div>	
 								</div>		
 								<div class="col-md-6">
@@ -246,7 +251,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						});
 
 						$('#jugar').click(function(){
-
 							var detalle = [];
 							var cantidad= $("#cantidad").val();
 							$("#detalle").find("[id_trans]").each(function() {  
@@ -268,10 +272,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													type: 'post',
 													data: {detalle: detalle, cantidad:cantidad},
 													success: function(data){
-														$('#modalGanancia').html('changed value');
-														$('#modalNroTiquete').html('changed value');
-														$('#modalFecha').html('changed value');
-														$('#modalNroEventos').html('changed value');
+														console.log()
+														$('#modalGanancia').html("$ " + $.number(data[0].ganancia, 0, ',', '.' ));
+														$('#modalNroTiquete').html(data[0].tiquete);
+														$('#modalFecha').html(moment().format('dddd Do [de] MMMM'));
+														$('#modalApostado').html("$ "+$.number(cantidad, 0, ',', '.' ));
+														$('#modalNroEventos').html(data[0].eventos);
 
 														$("#modalImprimir").modal({
 															backdrop: 'static',
@@ -296,6 +302,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							}
 
 						});
+
+						$('#printTiquete').click(function(){
+							var tiquete= $("#modalNroTiquete").text();
+							window.open(url+'home/print_tiquete/'+tiquete, '_blank');
+							location.reload();
+						});
+
 
 
 					});
