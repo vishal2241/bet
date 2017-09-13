@@ -18,7 +18,7 @@ class Home extends CI_Controller {
 	} 
 
 	public function misapuestas(){
-		echo "string";
+			$this->load->view('home/apuestas');
 	} 
 
 }
