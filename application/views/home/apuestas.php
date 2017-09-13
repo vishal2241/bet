@@ -62,5 +62,58 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<?php $this->load->view('overall/footer'); ?>
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
+				<script type="text/javascript">
+					$(document).ready(function() {
 
+						var table =   $('.dataTable').DataTable({
+							"bPaginate": true,
+							"bLengthChange": false,
+							"bFilter": true,
+							"bInfo": true,
+							"bAutoWidth": false,
+							"order": [[ 0, 'desc' ], [ 1, 'asc' ]],
+							"lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
+							"iDisplayLength": 100
+						});
+
+						function get_partidos (from, to, filtro) {
+							$.post('<?= base_url(); ?>ajax/json_apuestas', {from: from, to:to, filtro:filtro}, function(match) {
+								if (match!=null) {
+									$.each(match, function(a, row) {
+										var rowNode=   table.row.add( [ 
+											''+row.FECHA+'' , 
+											''+row.HORARIO+'' , 
+											row.LOCAL+' VS. '+row.VISITANTE+'<br><small>'+row.PAIS + ' - ' + row.TORNEO + '</small>', 
+											''+row.ESTADO+'' , 
+											'<a  class="btn btn-warning btn-sm" href="<?=  base_url() ?>partidos/editar/'+row.ID_PARTIDO+'"><i class="fa fa-cog" aria-hidden="true"></i></a> \
+											<a  class="btn btn-danger btn-sm" onclick="DeleteItem(\'<?= base_url() ?>partidos/editar/'+row.ID_PARTIDO+'\')" >\
+												<i class="fa fa-trash" aria-hidden="true"></i>\
+											</a> ' 
+											] )
+										.draw()
+										.node();
+									});
+								}
+							}, "json");
+
+						}
+						var from = $("#from").val();
+						var to   = $("#to").val();
+
+						//get_partidos(from, to, 'NoAutorizados');
+
+
+						$( "#go" ).click(function() {
+							table
+							.clear()
+							.draw();
+							get_partidos($('#from').val(), $('#to').val(), $( "#filtro option:selected" ).text());
+						});
+
+
+
+
+
+					} );
+				</script>
 				</html>

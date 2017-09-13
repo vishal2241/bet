@@ -201,6 +201,24 @@ class Ajax extends CI_Controller {
 	}
 
 
+	/******************************/
+	/*********	APUESTAS  *********/
+	/******************************/
+
+	public function json_apuestas(){
+		#if (isset($_POST['from']) and $_POST['from']!='' and isset($_POST['to']) and $_POST['to']!='' and !empty($this->session->userdata('id'))) {
+			$from=$_POST['from'];
+			$to=$_POST['to'];
+			$user=$this->session->userdata('id');
+			$data = $this->Apuesta->getApuestasByUser($from, $to, $user);
+			echo json_encode($data);
+		#} else {
+		#	header("Location:" . base_url());
+		#} 
+	}
+
+
+
 
 
 
