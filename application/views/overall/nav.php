@@ -23,7 +23,7 @@
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navigation-doc">
-				<ul  class="nav navbar-nav navbar-right">
+				<ul  class="nav navbar-nav navbar-right" >
 					<ul class="nav navbar-nav">
 						<li><a href="<?= base_url(); ?>/partidos">Admin</a></li> 
 					</ul>
@@ -31,7 +31,11 @@
 						<li><a href="<?= base_url(); ?>home/deudas">Mis Apuestas</a></li> 
 					</ul>
 					<ul class="nav navbar-nav">
-						<li><a href="<?= base_url(); ?>home/deudas"> <b>MI SALDO: </b>$ 3000,00</a></li> 
+						<li>
+							<a> 
+								<b>MI SALDO: </b> $ <span id="saldo"></span> 
+							</a>
+						</li> 
 					</ul>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><b><?php echo ucwords($this->session->userdata('name')); ?></b> <span class="caret"></span></a>

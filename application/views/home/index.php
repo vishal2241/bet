@@ -290,6 +290,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												data: {detalle: detalle, cantidad:cantidad},
 												success: function(data){
 													if (data[0].resp==null) {
+														$('#mensaje').empty();
 														$('#modalGanancia').html("$ " + $.number(data[0].ganancia, 0, ',', '.' ));
 														$('#modalNroTiquete').html(data[0].tiquete);
 														$('#modalFecha').html(moment().format('dddd Do [de] MMMM'));
@@ -325,10 +326,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									console.log(e);
 								}
 							});
-
-							
-
 						});
+						//Saldo nav
+						$.ajax({
+							dataType: 'json',
+							async: true,
+							url: url+'ajax/json_saldo',
+							type: 'post',
+							success: function(saldo){
+								$("#saldo").text(saldo.SALDO);
+							},
+							error: function(e){
+								console.log(e);
+							}
+						});
+
+
 
 						$('#printTiquete').click(function(){
 							var tiquete= $("#modalNroTiquete").text();
