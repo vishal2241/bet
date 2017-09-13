@@ -20,13 +20,15 @@ class Login extends CI_Controller {
 
 		$this->load->model('user');
 		$fila=$this->user->getUser($inputUser);
+		$nombre = $fila->P_NOMBRE . " " . $fila->P_APELIIDO;
+		
 		
 		if ($fila!=null) {
 			if ($fila->CLAVE == $inputPass ) {
 				$data = array (
 					'id'    => $fila->CEDULA,
 					'user'  => $fila->USUARIO,
-					'name'  => $fila->P_NOMBRE . ' ' . $fila->P_APELLIDO,
+					'name'  => $nombre,
 					'login' => true
 					);
 
