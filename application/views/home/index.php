@@ -55,6 +55,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</div>
+	<!--<div class="modal fade" id="modalInfo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title bold danger" align="center" id="ModalTitulo"></h5>
+				</div>
+				<div class="modal-body" id="modalBody">
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button"  class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>-->
 
 	<div class="main main-raised">
 		<div class="section">
@@ -138,8 +153,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</div>										
 									</div>
 								</div>	
-								<button class="btn btn-primary col-md-12" id="jugar"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>
-
+								<button class="btn btn-primary col-md-12" id="jugar"><b>JUGAR </b> <i class="fa fa-futbol-o" aria-hidden="true"></i></button>								
+							</div>
+							<div class="alert alert-danger alert-dismissable fade in hidden text-center bold" id="alert">
+								<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+								<p id="mensaje"></p>
 							</div>
 						</div>
 					</div>
@@ -256,23 +274,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							$("#detalle").find("[id_trans]").each(function() {  
 								detalle.push($(this).attr('id_trans'));								
 							});
-							if (cantidad!=0 && cantidad>=2000 && detalle.length>0) {
-								$.ajax({
-									dataType: 'json',
-									async: true,
-									url: url+'ajax/json_saldo',
-									type: 'post',
-									success: function(saldo){
-										if (saldo>=cantidad) {
-											if (detalle) {
-												$.ajax({
-													dataType: 'json',
-													async: true,
-													url: url+'ajax/json_game',
-													type: 'post',
-													data: {detalle: detalle, cantidad:cantidad},
-													success: function(data){
-														console.log()
+							$.ajax({
+								dataType: 'json',
+								async: true,
+								url: url+'ajax/json_saldo',
+								type: 'post',
+								success: function(saldo){
+									if (saldo>=cantidad) {
+										if (detalle) {
+											$.ajax({
+												dataType: 'json',
+												async: true,
+												url: url+'ajax/json_game',
+												type: 'post',
+												data: {detalle: detalle, cantidad:cantidad},
+												success: function(data){
+													if (data[0].resp==null) {
 														$('#modalGanancia').html("$ " + $.number(data[0].ganancia, 0, ',', '.' ));
 														$('#modalNroTiquete').html(data[0].tiquete);
 														$('#modalFecha').html(moment().format('dddd Do [de] MMMM'));
@@ -282,24 +299,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 														$("#modalImprimir").modal({
 															backdrop: 'static',
 															keyboard: false
-														})
+														})		
+													} else {
+														console.log(data[0].resp)
+														if ($("#alert").hasClass("hidden")) {
+															$("#alert").removeClass( "hidden" );
+															$('#mensaje').empty();
+															$('#mensaje').html(data[0].resp);
+														} else {
+															$('#mensaje').empty();
+															$('#mensaje').html(data[0].resp);
+														}
 
-													},
-													error: function(e){
-														console.log(e);
 													}
-												}); 
-											}
-										}	
-									},
-									error: function(e){
-										console.log(e);
-									}
-								});
 
-							} else {
-								console.log("No puede apostar ese valor o no ha selecionado")
-							}
+												},
+												error: function(e){
+													console.log(e);
+												}
+											}); 
+										}
+									}	
+								},
+								error: function(e){
+									console.log(e);
+								}
+							});
+
+							
 
 						});
 

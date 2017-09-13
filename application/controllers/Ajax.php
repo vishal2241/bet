@@ -116,60 +116,82 @@ class Ajax extends CI_Controller {
 	}
 
 	public function json_game(){
-		if (isset($_POST['detalle']) and $_POST['detalle']!='' and isset($_POST['cantidad']) and $_POST['cantidad']!='') {
+		$totalPartidos=count($_POST['detalle']);
+		$cantidad=$_POST['cantidad'];
 
-			//saldo user veri
-			$cantidad=$_POST['cantidad'];
+		if (isset($totalPartidos) and $totalPartidos>0 and isset($cantidad) and $cantidad>2000) {
 			$this->User->CEDULA = $this->session->userdata('id');
-			$saldo = $this->User->getSaldo();
+			$saldo = $this->User->getSaldo()->SALDO;
 
-			if ($saldo>=$cantidad) {
-				$this->Apuesta->NRO_EVENTOS = count($_POST['detalle']);
-				$this->Apuesta->ID_USER     = $this->session->userdata('id');
-				$this->Apuesta->VALOR       = $cantidad;
-				$this->Apuesta->ESTADO      = "PLAYING";
-				$this->Apuesta->add();
+			if ($totalPartidos<=16) {
+				if ($totalPartidos>=4 and ) {
+					if ($cantidad<=$saldo) {
 
-				$id_apuesta=$this->db->insert_id();
-				$this->DetalleApuesta->ID_APUESTA=  $id_apuesta;
+						$this->Apuesta->NRO_EVENTOS = $totalPartidos;
+						$this->Apuesta->ID_USER     = $this->session->userdata('id');
+						$this->Apuesta->VALOR       = $cantidad;
+						$this->Apuesta->ESTADO      = "PLAYING";
+						$this->Apuesta->add();
 
-				$totalCreditos=1;
-				foreach ($_POST['detalle'] as $key => $value) {
-					//Consultamos cuota en el momento de guardar
-					$this->Cuota->ID_CUOTA=$value;
-					$cuota=$this->Cuota->getCuota('');
+						$id_apuesta=$this->db->insert_id();
+						$this->DetalleApuesta->ID_APUESTA=  $id_apuesta;
 
-					//Guardamos detalle apuesta
-					$totalCreditos=$totalCreditos*$cuota[0]->VALOR;
-					$this->DetalleApuesta->ID_CUOTA=$cuota[0]->ID_CUOTA;
-					$this->DetalleApuesta->VALOR=$cuota[0]->VALOR;
-					$this->DetalleApuesta->add();
+						$totalCreditos=1;
+						foreach ($_POST['detalle'] as $key => $value) {
+							//Consultamos cuota en el momento de guardar
+							$this->Cuota->ID_CUOTA=$value;
+							$cuota=$this->Cuota->getCuota('');
+
+							//Guardamos detalle apuesta
+							$totalCreditos=$totalCreditos*$cuota[0]->VALOR;
+							$this->DetalleApuesta->ID_CUOTA=$cuota[0]->ID_CUOTA;
+							$this->DetalleApuesta->VALOR=$cuota[0]->VALOR;
+							$this->DetalleApuesta->add();
+						}
+
+						$ganancia=$totalCreditos*$cantidad;
+						$this->Apuesta->ID_APUESTA     = $id_apuesta;
+						$this->Apuesta->GANANCIA       = $ganancia;
+						$this->Apuesta->TOTAL_CREDITOS = $totalCreditos;
+						$this->Apuesta->update();
+
+
+						$nuevoSaldo =$saldo->SALDO-$cantidad;
+						$this->User->updateSaldo($nuevoSaldo);
+						$error=null;
+
+					} else {
+						$error="Saldo insuficiente";
+					}
+				} else {
+					$error="Se pueden apostar mínimo (4) partidos";
 				}
+			} else {
+				$error="Excedió el número de eventos permitidos (16)";
+			}
 
-				$ganancia=$totalCreditos*$cantidad;
-				$this->Apuesta->ID_APUESTA     = $id_apuesta;
-				$this->Apuesta->GANANCIA       = $ganancia;
-				$this->Apuesta->TOTAL_CREDITOS = $totalCreditos;
-				$this->Apuesta->update();
-
-
-				$nuevoSaldo =$saldo->SALDO-$cantidad;
-				$this->User->updateSaldo($nuevoSaldo);
-
-				$a = array(
+			if ($error==null) {
+				$data = array(
 					array(
+						'resp' => $error,
 						'saldo' => $nuevoSaldo,
 						'ganancia' => $ganancia,
 						'tiquete' => $id_apuesta,
-						'eventos' => count($_POST['detalle'])
+						'eventos' => $totalPartidos
 						),
 					);
-				echo json_encode($a);
-
-
 			} else {
-				echo 'Saldo insuficiente';
+				$data = array(
+					array(
+						'resp' => $error
+						),
+					);
 			}
+			
+			echo json_encode($data);
+
+
+
 		} else {
 			header("Location:" . base_url());
 		} 
