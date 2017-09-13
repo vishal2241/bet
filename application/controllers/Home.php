@@ -17,6 +17,10 @@ class Home extends CI_Controller {
 		echo "string";
 	} 
 
+	public function misapuestas(){
+		echo "string";
+	} 
+
 }
 
 

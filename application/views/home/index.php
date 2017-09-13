@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</table>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-info">Mis Apuestas</button>
+					<button type="button" class="btn btn-info" id="misApuestas">Mis Apuestas</button>
 					<button type="button" class="btn btn-success" id="printTiquete">Imprimir Tiquete</button>
 					<button type="button" id="cerrar" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 				</div>
@@ -341,14 +341,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							}
 						});
 
-
-
 						$('#printTiquete').click(function(){
 							var tiquete= $("#modalNroTiquete").text();
 							window.open(url+'home/print_tiquete/'+tiquete, '_blank');
 							location.reload();
 						});
 
+						$('#misApuestas').click(function(){
+							window.open(url+'home/misapuestas/', '');
+						});
 
 
 					});
