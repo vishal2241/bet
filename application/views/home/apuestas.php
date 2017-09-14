@@ -81,6 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						});
 
 						function get_apuestas (from, to) {
+<<<<<<< HEAD
 							$.ajax({
 								dataType: 'json',
 								async: true,
@@ -88,6 +89,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								type: 'post',
 								data: {from: from, to:to},
 								success: function(data){
+=======
+							$.post('<?= base_url(); ?>ajax/json_apuestas', {from: from, to:to}, function(data) {
+								console.log(data)
+								if (data!=null) {
+									$.each(data, function(a, row) {
+										var rowNode=   table.row.add( [ 
+											''+row.FECHA+'' , 
+											] )
+										.draw()
+										.node();
+									});
+								}
+							}, "json");
+>>>>>>> bd8501c881560443a29b946186341872f97cb03d
 
 									if (data!=null) {
 										$.each(data, function(a, row) {
@@ -116,7 +131,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						var from = $("#from").val();
 						var to   = $("#to").val();
 
+<<<<<<< HEAD
 						get_apuestas(from, to);
+=======
+						get_apuestas(from, to, 'NoAutorizados');
+>>>>>>> bd8501c881560443a29b946186341872f97cb03d
 
 
 						$( "#go" ).click(function() {
