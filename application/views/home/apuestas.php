@@ -76,19 +76,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							"iDisplayLength": 100
 						});
 
-						function get_partidos (from, to, filtro) {
-							$.post('<?= base_url(); ?>ajax/json_apuestas', {from: from, to:to, filtro:filtro}, function(match) {
-								if (match!=null) {
-									$.each(match, function(a, row) {
+						function get_apuestas (from, to) {
+							$.post('<?= base_url(); ?>ajax/json_apuestas', {from: from, to:to}, function(data) {
+								console.log(data)
+								if (data!=null) {
+									$.each(data, function(a, row) {
 										var rowNode=   table.row.add( [ 
 											''+row.FECHA+'' , 
-											''+row.HORARIO+'' , 
-											row.LOCAL+' VS. '+row.VISITANTE+'<br><small>'+row.PAIS + ' - ' + row.TORNEO + '</small>', 
-											''+row.ESTADO+'' , 
-											'<a  class="btn btn-warning btn-sm" href="<?=  base_url() ?>partidos/editar/'+row.ID_PARTIDO+'"><i class="fa fa-cog" aria-hidden="true"></i></a> \
-											<a  class="btn btn-danger btn-sm" onclick="DeleteItem(\'<?= base_url() ?>partidos/editar/'+row.ID_PARTIDO+'\')" >\
-												<i class="fa fa-trash" aria-hidden="true"></i>\
-											</a> ' 
 											] )
 										.draw()
 										.node();
@@ -100,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						var from = $("#from").val();
 						var to   = $("#to").val();
 
-						//get_partidos(from, to, 'NoAutorizados');
+						get_apuestas(from, to, 'NoAutorizados');
 
 
 						$( "#go" ).click(function() {
