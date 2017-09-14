@@ -39,7 +39,6 @@ class Apuesta extends CI_Model
 
 	public function getApuestasByUser($from, $to, $user)
 	{
-<<<<<<< HEAD
 		$sql='SELECT * FROM apuesta WHERE ID_USER="'.$user.'" AND FECHA BETWEEN "'.$from.' 00:00:00" AND "'.$to.' 23:59:59"  ORDER BY FECHA DESC ';
 		$query = $this->db->query($sql);
 		if ($query->num_rows() > 0) {
@@ -47,10 +46,6 @@ class Apuesta extends CI_Model
 		} else {
 			return null;
 		} 
-=======
-		return $sql='SELECT * FROM apuesta WHERE ID_USER="'.$user.'" AND FECHA BETWEEN "'.$from.'" AND "'.$from.'"';
-
->>>>>>> bd8501c881560443a29b946186341872f97cb03d
 
 	}
 
