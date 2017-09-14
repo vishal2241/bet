@@ -21,13 +21,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<td>
 									<div class="form-group">
 										<label for="fecha">Inicio : </label>
-										<input type="date" class="form-control" id="from" value="<?= date ('Y-m-d')?>">
+										<input type="date" class="form-control" id="from" >
 									</div>
 								</td>
 								<td>
 									<div class="form-group">
 										<label for="fecha">Fin : </label>
-										<input type="date" class="form-control" id="to" value="<?= date ('Y-m-d')?>">
+										<input type="date" class="form-control" id="to">
 									</div>
 								</td>
 								<td>
@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th width="">Ganancia</th>
 									<th width="">Estado</th>
 									<th width="">Resultado</th>
-									<th width=""> <i class="fa fa-print" aria-hidden="true"></i></th>
+									<th width="">&nbsp;</i></th>
 								</tr>
 							</thead>
 							<tbody> 
@@ -64,6 +64,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript">
 					$(document).ready(function() {
+						var url= '<?= base_url(); ?>';
+						$("#from").val(moment().subtract(3, 'days').format('YYYY-MM-DD'));
+						$("#to").val(moment().format('YYYY-MM-DD'));
+
 
 						var table =   $('.dataTable').DataTable({
 							"bPaginate": true,
@@ -71,43 +75,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							"bFilter": true,
 							"bInfo": true,
 							"bAutoWidth": false,
-							"order": [[ 0, 'desc' ], [ 1, 'asc' ]],
+							"order": [[ 2, 'desc' ], [ 5, 'asc' ]],
 							"lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
 							"iDisplayLength": 100
 						});
 
-						function get_partidos (from, to, filtro) {
-							$.post('<?= base_url(); ?>ajax/json_apuestas', {from: from, to:to, filtro:filtro}, function(match) {
-								if (match!=null) {
-									$.each(match, function(a, row) {
-										var rowNode=   table.row.add( [ 
-											''+row.FECHA+'' , 
-											''+row.HORARIO+'' , 
-											row.LOCAL+' VS. '+row.VISITANTE+'<br><small>'+row.PAIS + ' - ' + row.TORNEO + '</small>', 
-											''+row.ESTADO+'' , 
-											'<a  class="btn btn-warning btn-sm" href="<?=  base_url() ?>partidos/editar/'+row.ID_PARTIDO+'"><i class="fa fa-cog" aria-hidden="true"></i></a> \
-											<a  class="btn btn-danger btn-sm" onclick="DeleteItem(\'<?= base_url() ?>partidos/editar/'+row.ID_PARTIDO+'\')" >\
-												<i class="fa fa-trash" aria-hidden="true"></i>\
-											</a> ' 
-											] )
-										.draw()
-										.node();
-									});
-								}
-							}, "json");
+						function get_apuestas (from, to) {
+							$.ajax({
+								dataType: 'json',
+								async: true,
+								url: url+'ajax/json_apuestas',
+								type: 'post',
+								data: {from: from, to:to},
+								success: function(data){
 
+									if (data!=null) {
+										$.each(data, function(a, row) {
+											var rowNode=   table.row.add( [ 
+												''+row.ID_APUESTA+'',
+												''+row.NRO_EVENTOS+'',
+												''+row.FECHA+'',
+												''+$.number(row.VALOR, 0, ',', '.' )+'',
+												''+$.number(row.GANANCIA, 0, ',', '.' )+'',
+												'<span class="label label-primary ">'+row.ESTADO+'</span>',
+												'<span class="label label-warning ">'+row.RESULTADO+'</span>',
+												'<a   href="'+url+'home/print_tiquete/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-print" aria-hidden="true"></i></a>' 
+												] )
+											.draw()
+											.node();
+										});
+									}
+									
+								},
+								error: function(e){
+									console.log(e);
+								}
+							});
 						}
+
 						var from = $("#from").val();
 						var to   = $("#to").val();
 
-						//get_partidos(from, to, 'NoAutorizados');
+						get_apuestas(from, to);
 
 
 						$( "#go" ).click(function() {
 							table
 							.clear()
 							.draw();
-							get_partidos($('#from').val(), $('#to').val(), $( "#filtro option:selected" ).text());
+							get_apuestas($('#from').val(), $('#to').val(), $( "#filtro option:selected" ).text());
 						});
 
 

@@ -129,7 +129,7 @@ class Ajax extends CI_Controller {
 							$this->Apuesta->NRO_EVENTOS = $totalPartidos;
 							$this->Apuesta->ID_USER     = $this->session->userdata('id');
 							$this->Apuesta->VALOR       = $cantidad;
-							$this->Apuesta->ESTADO      = "PLAYING";
+							$this->Apuesta->ESTADO      = "JUGANDO";
 							$this->Apuesta->add();
 
 							$id_apuesta=$this->db->insert_id();
