@@ -39,8 +39,7 @@ function getCountries(fecha, url) {
 		type: 'post',
 		data: {fecha: fecha},
 		success: function(pais){
-			if (pais.length>0) {
-
+			if (pais!=null) {
 				$.each(pais, function(a, row) { 
 					html+=
 					'<tr class="pais" id="'+row.ID+'">'+

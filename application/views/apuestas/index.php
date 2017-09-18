@@ -99,8 +99,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												''+$.number(row.GANANCIA, 0, ',', '.' )+'',
 												'<span class="label label-warning ">'+row.ESTADO+'</span>',
 												'<span class="label label-warning ">'+row.RESULTADO+'</span>',
-												''+row.RESULTADO+'',
-												'<a   href="'+url+'home/print_tiquete/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-print" aria-hidden="true"></i></a>' 
+												'<a   href="'+url+'apuestas/ver/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-eye" aria-hidden="true"></i></a>\
+												&nbsp; <a   href="'+url+'apuestas/print/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-print" aria-hidden="true"></i></a>' 
 												] )
 											.draw()
 											.node();

@@ -28,6 +28,7 @@ class Cuota extends CI_Model
 				$sql.=' AND c.ID_TIPO='.$this->ID_TIPO.'';
 			}
 			break;
+
 			default:
 			$sql.=' c.ID_CUOTA='.$this->ID_CUOTA.' ';
 			break;

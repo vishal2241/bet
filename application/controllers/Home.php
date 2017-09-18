@@ -13,13 +13,9 @@ class Home extends CI_Controller {
 		$this->load->view('home/index');
 	} 
 
-	public function print_tiquete(){
-		echo "string";
-	} 
+ 
 
-	public function apuestas(){
-			$this->load->view('home/apuestas');
-	} 
+ 
 
 }
 

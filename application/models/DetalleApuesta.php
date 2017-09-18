@@ -32,6 +32,20 @@ class DetalleApuesta extends CI_Model
 
 	}
 
+
+	public function getDetalleByApuesta()
+	{
+		$sql='SELECT * FROM detalle_apuesta WHERE ID_APUESTA='.$this->ID_APUESTA.' '; 
+		$query = $this->db->query($sql);
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	}
+
+
 	public function add()
 	{
 		$this->db->insert('detalle_apuesta', $this);

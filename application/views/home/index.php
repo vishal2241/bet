@@ -343,12 +343,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						$('#printTiquete').click(function(){
 							var tiquete= $("#modalNroTiquete").text();
-							window.open(url+'home/print_tiquete/'+tiquete, '_blank');
+							window.open(url+'apuestas/print/'+tiquete, '_blank');
 							location.reload();
 						});
 
 						$('#misApuestas').click(function(){
-							window.open(url+'home/misapuestas/', '');
+							window.open(url+'apuestas', '');
 						});
 
 
