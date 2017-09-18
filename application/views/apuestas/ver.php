@@ -22,9 +22,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th class="text-center success" colspan="7">Tiquete # <?= $tiquete ?> </th>
 								</tr>
 								<tr>
+									<th colspan="2" class="text-center ">APOSTADO: $<?= number_format($apostado, 0, '.', '.') ?></th>
+									<th colspan="1" class="text-center ">GANANCIA: $<?= number_format($ganancia, 0, '.', '.') ?></th>
 									<th colspan="3" class="text-center ">FECHA APUESTA: <?= $fecha ?></th>
-									<th colspan="1" class="text-center ">APOSTADO: $<?= number_format($apostado, 0, '.', '.') ?></th>
-									<th colspan="3" class="text-center ">GANANCIA: $<?= number_format($ganancia, 0, '.', '.') ?></th>
+
 								</tr>
 								<tr>
 									<th width="">Fecha</th>
@@ -41,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<td><?= $row['FECHA'] ?></td>
 										<td><?= $row['HORARIO'] ?></td>
 										<td>
-										<?= $row['PARTIDO'] ?>
+											<?= $row['PARTIDO'] ?>
 											<br><small><?= $row['LIGA'] ?></small>
 										</td>
 										<td><?= strtoupper($row['CUOTA']) ?></td>
