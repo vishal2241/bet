@@ -274,9 +274,13 @@ class Partido extends CI_Model
 		p.ESTADO,
 		p.FECHA,
 		p.HORARIO,
+		p.SCORE_1,
+		p.SCORE_2,
+		p.HORARIO,
 		p.AUTORIZADO,
 		co.NOMBRE AS TORNEO,
-		pa.NOMBRE as PAIS 
+		pa.NOMBRE as PAIS,
+		CONCAT(p.FECHA, ' ', p.HORARIO) AS FECHA_TIME
 		FROM partido p
 		LEFT JOIN competencia co ON (co.ID_COMPETENCIA=p.ID_COMPETENCIA)  
 		LEFT JOIN pais pa ON (co.ID_PAIS=pa.ID_PAIS) 
@@ -297,18 +301,17 @@ class Partido extends CI_Model
 			case 'Score':
 			$hora = new DateTime(date('H:i'));
 			$hora->sub(new DateInterval('PT2H30M')); // partidos iniciados hace dos horas y media (evita en vivo)
-			$sql.="  p.ESTADO='NSY' AND FECHA<='".date("Y-m-d")."'  ";
-			if (date("Y-m-d")==$from ) {
-				$sql.="  AND p.HORARIO<'".$hora->format('H:i')."'   ";
-			}
-			
+			$sql.="  p.ESTADO IN ('NSY','inprogress', 'Interrupted', 'Postponed', 'Abandoned', 'AboutToStart' )  AND CONCAT(p.FECHA, ' ', p.HORARIO)<='".date("Y-m-d").' '.$hora->format('H:i')."'  ";
 			break;
 		}
+
 		if ($filtro!='Score') {
 			$sql.=" p.FECHA BETWEEN '".$from."'   AND '".$to."' ";
 		}
+
 		$sql.="
-		ORDER BY p.FECHA DESC, p.HORARIO ASC"; 
+		ORDER BY p.FECHA ASC, p.HORARIO ASC"; 
+
 		
 		$query = $this->db->query($sql); 
 		if ($query->num_rows() > 0) {

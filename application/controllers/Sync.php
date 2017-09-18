@@ -12,7 +12,7 @@ class Sync extends CI_Controller {
 
 	public function index(){
 		$scores = array();
-		$pendientes=$this->Partido->getAllPartidos(date("Y-m-d"),'','Score');
+		$pendientes=$this->Partido->getAllPartidos('','','Score');
 		foreach ($pendientes as $key => $row) {
 			$getScore                     = $this->Request->getScores($row->ID_PARTIDO);
 			$status                    = $this->Request->getStatus($row->ID_PARTIDO);
