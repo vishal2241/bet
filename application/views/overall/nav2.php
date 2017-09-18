@@ -62,10 +62,10 @@
 			</ul>
 			<ul  class="nav navbar-nav navbar-right">
 				<ul class="nav navbar-nav">
-					<li><a href="<?= base_url(); ?>home/deudas">Mis Apuestas</a></li> 
+					<li><a href="<?= base_url(); ?>apuestas">Mis Apuestas</a></li> 
 				</ul>
 				<ul class="nav navbar-nav">
-					<li><a href="<?= base_url(); ?>home/deudas"> <b>MI SALDO: </b>$ 3000,00</a></li> 
+					<li><a> <b>MI SALDO: </b>$ 3000,00</a></li> 
 				</ul>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><b><?php echo ucwords($this->session->userdata('name')); ?></b> <span class="caret"></span></a>

@@ -60,6 +60,7 @@ class Apuestas extends CI_Controller {
 		}
 
 		$data = array(
+			'tiquete' => $this->uri->segment(3),
 			'fecha' => $apuesta[0]->FECHA,
 			'ganancia' => $apuesta[0]->GANANCIA,
 			'apostado' => $apuesta[0]->VALOR,

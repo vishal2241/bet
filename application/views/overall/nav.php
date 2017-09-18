@@ -25,10 +25,10 @@
 			<div class="collapse navbar-collapse" id="navigation-doc">
 				<ul  class="nav navbar-nav navbar-right" >
 					<ul class="nav navbar-nav">
-						<li><a href="<?= base_url(); ?>/partidos">Admin</a></li> 
+						<li><a href="<?= base_url(); ?>partidos">Admin</a></li> 
 					</ul>
 					<ul class="nav navbar-nav">
-						<li><a href="<?= base_url(); ?>home/deudas">Mis Apuestas</a></li> 
+						<li><a href="<?= base_url(); ?>apuestas">Mis Apuestas</a></li> 
 					</ul>
 					<ul class="nav navbar-nav">
 						<li>

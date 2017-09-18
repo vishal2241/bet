@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<table class="table table-striped table-hover dataTable" id="match">
 							<thead>
 								<tr>
-									<th class="text-center success" colspan="7">Apuesta </th>
+									<th class="text-center success" colspan="7">Tiquete # <?= $tiquete ?> </th>
 								</tr>
 								<tr>
 									<th colspan="3" class="text-center ">FECHA APUESTA: <?= $fecha ?></th>
