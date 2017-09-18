@@ -13,7 +13,7 @@ class Apuestas extends CI_Controller {
 		$this->load->view('apuestas/index');
 	} 
 
-	public function print(){
+	public function print_(){
 		$this->load->view('apuestas/index');
 	} 
 

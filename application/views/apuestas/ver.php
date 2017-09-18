@@ -29,7 +29,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<tr>
 									<th width="">Fecha</th>
 									<th width="">Hora</th>
-									<th width="">Liga</th>
 									<th width="">Partido</th>
 									<th width="">Selección</th>
 									<th width="">Cuota</th>
@@ -41,8 +40,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<tr>
 										<td><?= $row['FECHA'] ?></td>
 										<td><?= $row['HORARIO'] ?></td>
-										<td><?= $row['LIGA'] ?></td>
-										<td><?= $row['PARTIDO'] ?></td>
+										<td>
+										<?= $row['PARTIDO'] ?>
+											<br><small><?= $row['LIGA'] ?></small>
+										</td>
 										<td><?= strtoupper($row['CUOTA']) ?></td>
 										<td><?= $row['VALOR'] ?></td>
 										<td class="text-success text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -69,7 +70,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							"bAutoWidth": false,
 							"order": [[ 0, 'asc' ], [ 1, 'asc' ]],
 							//"lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
-							"iDisplayLength": 100
+							"iDisplayLength": 100,
+							"columns": [
+							{ "width": "10%" },
+							{ "width": "10%" },
+							{ "width": "45%" },
+							{ "width": "15%" },
+							{ "width": "5%" },
+							{ "width": "5%" },
+
+							]
 						});
 					});
 				</script>
