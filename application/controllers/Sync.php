@@ -39,6 +39,72 @@ class Sync extends CI_Controller {
 		$this->load->view('sync/index', $data);
 	}
 
+	public function syncBets(){
+		$apuestas=$this->Apuesta->index();
+
+		foreach ($apuestas as $key => $rowApuesta) {
+			$id_apuesta=$rowApuesta->ID_APUESTA;
+			$this->DetalleApuesta->ID_APUESTA=$id_apuesta;
+
+			$detalle=$this->DetalleApuesta->getDetalleByApuesta();
+			foreach ($detalle as $key => $rowDetalle) {
+				#Cuota
+				$id_cuota= $rowDetalle->ID_CUOTA;
+				$this->Cuota->ID_CUOTA=$id_cuota;
+				$cuota=$this->Cuota->getCuota('');
+
+				#Partido
+				$id_partido = $cuota[0]->ID_PARTIDO;
+				$this->Partido->ID_PARTIDO=$id_partido;
+				$partido=$this->Partido->getPartido();
+
+				$estado_partido=$partido[0]->ESTADO;
+				$score_1=$partido[0]->SCORE_1;
+				$score_2=$partido[0]->SCORE_2;
+
+				if ($estado_partido=="Finished") {
+					 
+				}
+				
+
+				print_r($rowDetalle);
+				exit;
+			}
+
+
+		}
+
+	}
+
+
+	public function syncDetalles(){
+		$scores = array();
+		$pendientes=$this->Partido->getAllPartidos('','','Score');
+		foreach ($pendientes as $key => $row) {
+			$getScore                     = $this->Request->getScores($row->ID_PARTIDO);
+			$status                    = $this->Request->getStatus($row->ID_PARTIDO);
+			if ($getScore!=null and $status!=null) {
+				$score                     = explode(':', $getScore['EventScore']);
+				$this->Partido->ID_PARTIDO = $row->ID_PARTIDO;
+				$this->Partido->SCORE_1    = $score[0];
+				$this->Partido->SCORE_2    = $score[1];
+				$this->Partido->ESTADO     = $status['result'];
+				$this->Partido->setScore();
+				array_push($scores,  
+					array(
+						'PARTIDO' => $row->LOCAL.' vs... '.$row->VISITANTE ,
+						'FECHA' => $row->FECHA ,
+						'HORARIO' => $row->HORARIO ,
+						'ESTADO' => $status['result'] ,
+						'MARCADOR' => $getScore['EventScore'] ,
+						));
+			}
+		}
+		$data = array(
+			'scores' => $scores
+			);
+		$this->load->view('sync/index', $data);
+	}
 
 	/*******************************************************/
 	/*                        API                          */

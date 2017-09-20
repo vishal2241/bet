@@ -26,6 +26,14 @@ class Apuesta extends CI_Model
 	}
 
 
+	public function index()
+	{
+		$query = $this->db->get('apuesta');
+		return $query->result();
+	} 
+
+
+
 	public function getApuesta()
 	{
 		$query = $this->db->query('SELECT * FROM apuesta WHERE ID_APUESTA='.$this->ID_APUESTA.' ');

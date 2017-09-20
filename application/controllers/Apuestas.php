@@ -49,6 +49,7 @@ class Apuestas extends CI_Controller {
 				array(
 					'PARTIDO' => $local[0]->NOMBRE.' vs. '.$visitante[0]->NOMBRE ,
 					'LIGA' => $competencia[0]->NOMBRE.' - '.$pais[0]->NOMBRE ,
+					'CUOTA_NOMBRE' => $cuota[0]->NOMBRE,
 					'CUOTA' => $cuota[0]->DESCRIPCION,
 					'ESTADO_PARTIDO' => $partido[0]->ESTADO,
 					'SCORE_1' => $partido[0]->SCORE_1,

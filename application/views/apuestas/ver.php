@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-8 content col-md-offset-2">		
-						<table class="table table-striped table-hover dataTable" id="match">
+						<table class="table table-striped dataTable" id="match">
 							<thead>
 								<tr>
 									<th class="text-center success" colspan="7">Tiquete # <?= $tiquete ?> </th>
@@ -25,7 +25,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th colspan="2" class="text-center ">APOSTADO: $<?= number_format($apostado, 0, '.', '.') ?></th>
 									<th colspan="1" class="text-center ">GANANCIA: $<?= number_format($ganancia, 0, '.', '.') ?></th>
 									<th colspan="3" class="text-center ">FECHA APUESTA: <?= $fecha ?></th>
-
 								</tr>
 								<tr>
 									<th width="">Fecha</th>
@@ -41,11 +40,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<tr>
 										<td><?= $row['FECHA'] ?></td>
 										<td><?= $row['HORARIO'] ?></td>
-										<td>
-											<?= $row['PARTIDO'] ?>
+										<td >
+											<b><?= $row['PARTIDO'] ?></b>
 											<br><small><?= $row['LIGA'] ?></small>
 										</td>
-										<td><?= strtoupper($row['CUOTA']) ?></td>
+										<td><span class="label label-info "><?= $row['CUOTA'] ?></span></td>
 										<td><?= $row['VALOR'] ?></td>
 										<td class="text-success text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
 									</tr>
