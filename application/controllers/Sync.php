@@ -52,6 +52,7 @@ class Sync extends CI_Controller {
 				$id_cuota= $rowDetalle->ID_CUOTA;
 				$this->Cuota->ID_CUOTA=$id_cuota;
 				$cuota=$this->Cuota->getCuota('');
+				$cuota_seleccionada = $cuota[0]->ID_PARTIDO;
 
 				#Partido
 				$id_partido = $cuota[0]->ID_PARTIDO;
@@ -59,250 +60,268 @@ class Sync extends CI_Controller {
 				$partido=$this->Partido->getPartido();
 
 				$estado_partido=$partido[0]->ESTADO;
-				$score_1=$partido[0]->SCORE_1;
-				$score_2=$partido[0]->SCORE_2;
+				echo $score_1=$partido[0]->SCORE_1;
+				echo $score_2=$partido[0]->SCORE_2;
 
 				if ($estado_partido=="Finished") {
-					 
+					# 1 X 2
+					if ($score_1>$score_2) { //gano local
+						#echo "local";
+					} else if ($score_1<$score_2) { //gano visita
+						#echo "visita";
+					} else {//empate
+						#echo "empate";
+					}
+
+					# GANA-EMPATE
+					if ($score_1>$score_2 || $score_1==$score_2) { //gano empata-local
+						echo "GE local";
+					}
+					 else if ($score_1<$score_2  || $score_1==$score_2) { //gano-empata visita
+					 	echo "GE visita";
+					 }
+					 if ($score_1!=$score_2) { //Sin empate
+					 	echo "NO empate";
+					 }
+
+
+					}
+
+					exit;
 				}
-				
 
-				print_r($rowDetalle);
-				exit;
+
 			}
-
 
 		}
 
-	}
 
-
-	public function syncDetalles(){
-		$scores = array();
-		$pendientes=$this->Partido->getAllPartidos('','','Score');
-		foreach ($pendientes as $key => $row) {
-			$getScore                     = $this->Request->getScores($row->ID_PARTIDO);
-			$status                    = $this->Request->getStatus($row->ID_PARTIDO);
-			if ($getScore!=null and $status!=null) {
-				$score                     = explode(':', $getScore['EventScore']);
-				$this->Partido->ID_PARTIDO = $row->ID_PARTIDO;
-				$this->Partido->SCORE_1    = $score[0];
-				$this->Partido->SCORE_2    = $score[1];
-				$this->Partido->ESTADO     = $status['result'];
-				$this->Partido->setScore();
-				array_push($scores,  
-					array(
-						'PARTIDO' => $row->LOCAL.' vs... '.$row->VISITANTE ,
-						'FECHA' => $row->FECHA ,
-						'HORARIO' => $row->HORARIO ,
-						'ESTADO' => $status['result'] ,
-						'MARCADOR' => $getScore['EventScore'] ,
-						));
+		public function syncDetalles(){
+			$scores = array();
+			$pendientes=$this->Partido->getAllPartidos('','','Score');
+			foreach ($pendientes as $key => $row) {
+				$getScore                     = $this->Request->getScores($row->ID_PARTIDO);
+				$status                    = $this->Request->getStatus($row->ID_PARTIDO);
+				if ($getScore!=null and $status!=null) {
+					$score                     = explode(':', $getScore['EventScore']);
+					$this->Partido->ID_PARTIDO = $row->ID_PARTIDO;
+					$this->Partido->SCORE_1    = $score[0];
+					$this->Partido->SCORE_2    = $score[1];
+					$this->Partido->ESTADO     = $status['result'];
+					$this->Partido->setScore();
+					array_push($scores,  
+						array(
+							'PARTIDO' => $row->LOCAL.' vs... '.$row->VISITANTE ,
+							'FECHA' => $row->FECHA ,
+							'HORARIO' => $row->HORARIO ,
+							'ESTADO' => $status['result'] ,
+							'MARCADOR' => $getScore['EventScore'] ,
+							));
+				}
 			}
+			$data = array(
+				'scores' => $scores
+				);
+			$this->load->view('sync/index', $data);
 		}
-		$data = array(
-			'scores' => $scores
-			);
-		$this->load->view('sync/index', $data);
-	}
 
-	/*******************************************************/
-	/*                        API                          */
-	/*******************************************************/
-	
-	public function syncMatches(){
-		$this->Request->FECHA=5;  
-		$matches=$this->Request->getMatches();  
+		/*******************************************************/
+		/*                        API                          */
+		/*******************************************************/
+
+		public function syncMatches(){
+			$this->Request->FECHA=5;  
+			$matches=$this->Request->getMatches();  
 		#echo count($matches);  
 		#print_r($matches); exit();
-		if (count($matches)>0) {
-			foreach ($matches as $key => $row) {
-				if (isset($row['id_torneo']) or $row['id_torneo']!='') {
+			if (count($matches)>0) {
+				foreach ($matches as $key => $row) {
+					if (isset($row['id_torneo']) or $row['id_torneo']!='') {
 				//print_r($row); exit();
 				# AGREGAMOS PAISES
-					$this->Pais->ID_PAIS = $row['id_country'];
-					$this->Pais->NOMBRE  = $row['name_country'];
-					$pais=$this->Pais->getPais();
-					if ($pais==null) {
+						$this->Pais->ID_PAIS = $row['id_country'];
+						$this->Pais->NOMBRE  = $row['name_country'];
+						$pais=$this->Pais->getPais();
+						if ($pais==null) {
 					#echo "<b>add</b> ".$row['name_country']."<br>";
-						$this->Pais->add();
-					} 
+							$this->Pais->add();
+						} 
 				# AGREGAMOS COMPETENCIA-> Si no existe
-					$this->Competencia->ID_COMPETENCIA  = $row['id_torneo'];
-					$this->Competencia->ID_PAIS         = $row['id_country'];
-					$this->Competencia->NOMBRE          = $row['name_torne'];
-					$pais=$this->Competencia->getCompe();
-					if ($pais==null) {
+						$this->Competencia->ID_COMPETENCIA  = $row['id_torneo'];
+						$this->Competencia->ID_PAIS         = $row['id_country'];
+						$this->Competencia->NOMBRE          = $row['name_torne'];
+						$pais=$this->Competencia->getCompe();
+						if ($pais==null) {
 					#echo "<b>add</b> ".$row['name_torne']."<br>";
-						$this->Competencia->add();
-					}
+							$this->Competencia->add();
+						}
 
 				# AGREGAMOS EQUIPO LOCAL-> Si no existe
-					$this->Equipo->ID_EQUIPO = $row['id_l'];
-					$this->Equipo->NOMBRE    = $row['l'];
-					$this->Equipo->ID_PAIS   = $row['id_country'];
-					$local=$this->Equipo->getEquipo();
-					if ($local==null) {
+						$this->Equipo->ID_EQUIPO = $row['id_l'];
+						$this->Equipo->NOMBRE    = $row['l'];
+						$this->Equipo->ID_PAIS   = $row['id_country'];
+						$local=$this->Equipo->getEquipo();
+						if ($local==null) {
 					#echo "<b>add</b> ".$row['l']."<br>";
-						$this->Equipo->add();
-					} else {
-						if ($row['id_country']!='248') {
-							$this->Equipo->update();
-						}
+							$this->Equipo->add();
+						} else {
+							if ($row['id_country']!='248') {
+								$this->Equipo->update();
+							}
 
-					}
+						}
 
 				# AGREGAMOS EQUIPO VISITANTE -> Si no existe
-					$this->Equipo->ID_EQUIPO = 	$row['id_v'];
-					$this->Equipo->NOMBRE    =  $row['v'];
-					$visitante=$this->Equipo->getEquipo();
-					if ($visitante==null) {
+						$this->Equipo->ID_EQUIPO = 	$row['id_v'];
+						$this->Equipo->NOMBRE    =  $row['v'];
+						$visitante=$this->Equipo->getEquipo();
+						if ($visitante==null) {
 					#echo "<b>add</b> ".$row['v']."<br>";
-						$this->Equipo->add();
-					} else {
-						if ($row['id_country']!='248') {
-							$this->Equipo->update();
+							$this->Equipo->add();
+						} else {
+							if ($row['id_country']!='248') {
+								$this->Equipo->update();
+							}
 						}
-					}
 
 				# AGREGAMOS PARTIDO
-					$fecha = new DateTime($row['fecha_event']);
-					$this->Partido->ID_PARTIDO     = $row['id_match'];
-					$this->Partido->ID_COMPETENCIA = $row['id_torneo'];
-					$this->Partido->FECHA          = $fecha->format('Y-m-d');
-					$this->Partido->HORARIO        = $fecha->format('H:i');
-					$this->Partido->ESTADO         = $row['status'];
-					$this->Partido->LOCAL          = $row['id_l'];
-					$this->Partido->VISITANTE      = $row['id_v'];
+						$fecha = new DateTime($row['fecha_event']);
+						$this->Partido->ID_PARTIDO     = $row['id_match'];
+						$this->Partido->ID_COMPETENCIA = $row['id_torneo'];
+						$this->Partido->FECHA          = $fecha->format('Y-m-d');
+						$this->Partido->HORARIO        = $fecha->format('H:i');
+						$this->Partido->ESTADO         = $row['status'];
+						$this->Partido->LOCAL          = $row['id_l'];
+						$this->Partido->VISITANTE      = $row['id_v'];
 
-					$partido=$this->Partido->getPartido();
-					if ($partido==null) {
+						$partido=$this->Partido->getPartido();
+						if ($partido==null) {
 					#echo "<b>add Partido</b> ".$row['l']." ".$row['v']."<br>";
-						$this->Partido->add();
-					} else {
+							$this->Partido->add();
+						} else {
 					#echo "<b>Update Partido</b> ".$row['l']." ".$row['v']."<br>";
-						$this->Partido->update();
-					}
+							$this->Partido->update();
+						}
 
 				# AGREGAMOS CUOTAS DEL PARTIDO
 				// Gana local
-					$this->Cuota->ID_PARTIDO = $row['id_match'];
-					$this->Cuota->ID_TIPO    = 1; 
-					$this->Cuota->VALOR      = isset($row['_1e']) ? $row['_1e'] : 1;  
-					$_1=$this->Cuota->getCuota("sync");
-					if ($_1==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_PARTIDO = $row['id_match'];
+						$this->Cuota->ID_TIPO    = 1; 
+						$this->Cuota->VALOR      = isset($row['_1e']) ? $row['_1e'] : 1;  
+						$_1=$this->Cuota->getCuota("sync");
+						if ($_1==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Empata
-					$this->Cuota->ID_TIPO    = 2; 
-					$this->Cuota->VALOR      = isset($row['_xe']) ? $row['_xe'] : 1;  
-					$_X=$this->Cuota->getCuota("sync");
-					if ($_X==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 2; 
+						$this->Cuota->VALOR      = isset($row['_xe']) ? $row['_xe'] : 1;  
+						$_X=$this->Cuota->getCuota("sync");
+						if ($_X==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Gana visitante
-					$this->Cuota->ID_TIPO    = 3; 
-					$this->Cuota->VALOR      = isset($row['_2e']) ? $row['_2e'] : 1; 
-					$_2=$this->Cuota->getCuota("sync");
-					if ($_2==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 3; 
+						$this->Cuota->VALOR      = isset($row['_2e']) ? $row['_2e'] : 1; 
+						$_2=$this->Cuota->getCuota("sync");
+						if ($_2==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Under
-					$this->Cuota->ID_TIPO    = 4; 
-					$this->Cuota->VALOR      = isset($row['undere']) ? $row['undere'] : 1; 
-					$under=$this->Cuota->getCuota("sync");
-					if ($under==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 4; 
+						$this->Cuota->VALOR      = isset($row['undere']) ? $row['undere'] : 1; 
+						$under=$this->Cuota->getCuota("sync");
+						if ($under==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Over
-					$this->Cuota->ID_TIPO    = 5; 
-					$this->Cuota->VALOR      = isset($row['overe']) ? $row['overe'] : 1; 
-					$over=$this->Cuota->getCuota("sync");
-					if ($over==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 5; 
+						$this->Cuota->VALOR      = isset($row['overe']) ? $row['overe'] : 1; 
+						$over=$this->Cuota->getCuota("sync");
+						if ($over==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Gana empata local
-					$this->Cuota->ID_TIPO    = 6; 
-					$this->Cuota->VALOR      = isset($row['_1xe']) ? $row['_1xe'] : 1; 
-					$_1X=$this->Cuota->getCuota("sync");
-					if ($_1X==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 6; 
+						$this->Cuota->VALOR      = isset($row['_1xe']) ? $row['_1xe'] : 1; 
+						$_1X=$this->Cuota->getCuota("sync");
+						if ($_1X==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Gana empata visitante
-					$this->Cuota->ID_TIPO    = 7; 
-					$this->Cuota->VALOR      = isset($row['_2xe']) ? $row['_2xe'] : 1; 
-					$_2X=$this->Cuota->getCuota("sync");
-					if ($_2X==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 7; 
+						$this->Cuota->VALOR      = isset($row['_2xe']) ? $row['_2xe'] : 1; 
+						$_2X=$this->Cuota->getCuota("sync");
+						if ($_2X==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Sin empate
-					$this->Cuota->ID_TIPO    = 8; 
-					$this->Cuota->VALOR      = isset($row['_12e']) ? $row['_12e'] : 1; 
-					$_12=$this->Cuota->getCuota("sync");
-					if ($_12==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 8; 
+						$this->Cuota->VALOR      = isset($row['_12e']) ? $row['_12e'] : 1; 
+						$_12=$this->Cuota->getCuota("sync");
+						if ($_12==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Gana 1 primer tiempo
-					$this->Cuota->ID_TIPO    = 9; 
-					$this->Cuota->VALOR      = isset($row['1ste']) ? $row['1ste'] : 1; 
-					$_1ht=$this->Cuota->getCuota("sync");
-					if ($_1ht==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 9; 
+						$this->Cuota->VALOR      = isset($row['1ste']) ? $row['1ste'] : 1; 
+						$_1ht=$this->Cuota->getCuota("sync");
+						if ($_1ht==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Empate  primer tiempo
-					$this->Cuota->ID_TIPO    = 10; 
-					$this->Cuota->VALOR      = isset($row['xste']) ? $row['xste'] : 1; 
-					$Xht=$this->Cuota->getCuota("sync");
-					if ($Xht==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 10; 
+						$this->Cuota->VALOR      = isset($row['xste']) ? $row['xste'] : 1; 
+						$Xht=$this->Cuota->getCuota("sync");
+						if ($Xht==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Gana 2 primer tiempo
-					$this->Cuota->ID_TIPO    = 11; 
-					$this->Cuota->VALOR      =isset($row['2ste']) ? $row['2ste'] : 1; 
-					$_2ht=$this->Cuota->getCuota("sync");
-					if ($_2ht==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 11; 
+						$this->Cuota->VALOR      =isset($row['2ste']) ? $row['2ste'] : 1; 
+						$_2ht=$this->Cuota->getCuota("sync");
+						if ($_2ht==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// Ambos marcan
-					$this->Cuota->ID_TIPO    = 12; 
-					$this->Cuota->VALOR      = isset($row['gg']) ? $row['gg'] : 1; 
-					$ng=$this->Cuota->getCuota("sync");
-					if ($ng==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 12; 
+						$this->Cuota->VALOR      = isset($row['gg']) ? $row['gg'] : 1; 
+						$ng=$this->Cuota->getCuota("sync");
+						if ($ng==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 				// No marcan ambos
-					$this->Cuota->ID_TIPO    = 13; 
-					$this->Cuota->VALOR      = isset($row['gn']) ? $row['gn'] : 1; 
-					$gg=$this->Cuota->getCuota("sync");
-					if ($gg==null) {
-						$this->Cuota->add();
-					} else {
-						$this->Cuota->update();
-					}
+						$this->Cuota->ID_TIPO    = 13; 
+						$this->Cuota->VALOR      = isset($row['gn']) ? $row['gn'] : 1; 
+						$gg=$this->Cuota->getCuota("sync");
+						if ($gg==null) {
+							$this->Cuota->add();
+						} else {
+							$this->Cuota->update();
+						}
 }// if compe
 			} // end foreach
 
