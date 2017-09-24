@@ -60,8 +60,8 @@ class Sync extends CI_Controller {
 				$partido=$this->Partido->getPartido();
 
 				$estado_partido=$partido[0]->ESTADO;
-				echo $score_1=$partido[0]->SCORE_1;
-				echo $score_2=$partido[0]->SCORE_2;
+				$score_1=$partido[0]->SCORE_1;
+				$score_2=$partido[0]->SCORE_2;
 
 				if ($estado_partido=="Finished") {
 					# 1 X 2
@@ -82,6 +82,26 @@ class Sync extends CI_Controller {
 					 }
 					 if ($score_1!=$score_2) { //Sin empate
 					 	echo "NO empate";
+					 }
+
+					# OVER/UNDER 2.5
+					 echo $totalGoles=$score_1+$score_2;
+
+					 if ($totalGoles<=2) { 
+					 	echo "under";
+					 }
+					 else {
+					 	echo "over";
+					 }
+
+					 # GG // NG
+					
+
+					 if ($score_1> 0 && $score_2>0) { 
+					 	echo "gg";
+					 }
+					 else {
+					 	echo "ng";
 					 }
 
 
