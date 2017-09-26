@@ -348,7 +348,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						});
 
 						$('#misApuestas').click(function(){
-							window.open(url+'apuestas', '');
+							location.href =url+'apuestas';
 						});
 
 
