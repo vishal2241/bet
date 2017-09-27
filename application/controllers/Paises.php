@@ -7,19 +7,24 @@ class Paises extends CI_Controller {
 	{
 		parent::__construct();
 		$this->User->check();
+		$this->User->is_admin();
 	}
 
 	public function index()
 	{
-		$data['paises']  = $this->Concepto->index();
+		$data['paises']  = $this->Pais->index();
 		$this->load->view('paises/index', $data);	 
 	}
 
 	public function agregar()
 	{
 		if ($_POST) {
-			$Concepto = $this->input->post();
-			$this->Concepto->add($Concepto);
+			$pais = $this->input->post();
+			$this->Pais->NOMBRE=$post['NOMBRE'];
+			$this->Pais->FAVORITO=$post['FAVORITO'];
+			$this->Pais->IMG=$post['IMG'];
+			$this->Pais->FOLDER=$post['FOLDER'];
+			$this->Pais->add();
 			header("Location:" . base_url(). "paises");
 		} else {
 				#Vista
@@ -32,14 +37,19 @@ class Paises extends CI_Controller {
 	public function editar()
 	{
 		if ($_POST) {
-			$concepto = $this->input->post();
-			$concepto['ID_CONCEPTO']=  $this->uri->segment(3);
-			$this->Concepto->update($concepto);
+			$post=$this->input->post();
+			$this->Pais->ID_PAIS=$this->uri->segment(3);
+			$this->Pais->NOMBRE=$post['NOMBRE'];
+			$this->Pais->FAVORITO=$post['FAVORITO'];
+			$this->Pais->IMG=$post['IMG'];
+			$this->Pais->FOLDER=$post['FOLDER'];
+			$this->Pais->update();
+			
 			header("Location:" . base_url(). "paises");
 		} else {
-				#Vista
-			$id = $this->uri->segment(3);
-			$data['concepto'] = $this->Concepto->ver($id);
+
+			$this->Pais->ID_PAIS=$this->uri->segment(3);
+			$data['pais'] = $this->Pais->getPais();
 			$this->load->helper('form');
 			$this->load->view('paises/editar', $data);
 
@@ -50,7 +60,8 @@ class Paises extends CI_Controller {
 	{
 		$id = $this->uri->segment(3);
 		if ($id!='') {
-			$this->Concepto->delete($id);
+			$this->Pais->ID_PAIS=$id;
+			$this->Pais->delete();
 			header("Location:" . base_url(). "paises");
 
 		} else {
@@ -58,14 +69,7 @@ class Paises extends CI_Controller {
 		}
 	}
 
-	public function ver()
-	{
-		#Vista
-		$id             = $this->uri->segment(3);
-		$data['log'] = $this->Log->get_log($id);
-		$this->load->helper('form');
-		$this->load->view('paises/ver', $data);
-	}
+
 
 }
 

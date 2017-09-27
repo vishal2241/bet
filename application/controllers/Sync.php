@@ -6,6 +6,7 @@ class Sync extends CI_Controller {
 	{
 		parent::__construct();
 		$this->User->check();
+		$this->User->is_admin();
 		ini_set('memory_limit','16000000M');
 		set_time_limit(0);
 	}

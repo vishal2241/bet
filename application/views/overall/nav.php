@@ -24,9 +24,11 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navigation-doc">
 				<ul  class="nav navbar-nav navbar-right" >
-					<ul class="nav navbar-nav">
-						<li><a href="<?= base_url(); ?>partidos">Admin</a></li> 
-					</ul>
+					<?php if ($this->session->userdata('type')==1 ): ?>
+						<ul class="nav navbar-nav">
+							<li><a href="<?= base_url(); ?>partidos">Admin</a></li> 
+						</ul>
+					<?php endif ?>
 					<ul class="nav navbar-nav">
 						<li><a href="<?= base_url(); ?>apuestas">Mis Apuestas</a></li> 
 					</ul>

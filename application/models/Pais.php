@@ -5,6 +5,9 @@ class Pais extends CI_Model
 	
 	public $ID_PAIS;
 	public $NOMBRE;
+	public $FOLDER;
+	public $FAVORITO;
+	public $IMG;
 
 
 	public function __construct()
@@ -14,11 +17,25 @@ class Pais extends CI_Model
 		$this->NOMBRE=null;
 	}
 
+
+	public function index()
+	{
+		$sql='SELECT * FROM pais  ORDER BY NOMBRE ASC ';
+		$query = $this->db->query($sql); 
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+	}
+
+
 	public function getPais()
 	{
 		$sql='SELECT * FROM pais WHERE ID_PAIS='.$this->ID_PAIS.' ';
 		$query = $this->db->query($sql); 
-		
+
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -41,7 +58,7 @@ class Pais extends CI_Model
 
 
 		$query = $this->db->query($sql); 
-		
+
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -49,7 +66,6 @@ class Pais extends CI_Model
 		} 
 
 	} 
-
 
 	public function add()
 	{
@@ -64,7 +80,11 @@ class Pais extends CI_Model
 	}
 
 
-
+	public function delete()
+	{
+		$this->db->where('ID_PAIS', $this->ID_PAIS); 
+		$this->db->delete('pais', $this);
+	}
 
 
 }

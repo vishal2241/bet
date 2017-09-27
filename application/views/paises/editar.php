@@ -2,40 +2,44 @@
 <body>
 	<?php $this->load->view('overall/nav2'); ?>
 	<div class="container">
-		<h2 align="center"> <?php echo $concepto[0]->CONCEPTO;  ?> </h2>
+		<h2 align="center"> 
+			<?php echo $pais[0]->NOMBRE;  ?>
+			<img width="64" src="<?= base_url(); ?>public/img/logos/country/<?= $pais[0]->IMG ?>">
+		</h2>
 		<br>
-		<div class="">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
-				<?=  form_open_multipart('conceptos/editar/'.$concepto[0]->ID_CONCEPTO.' ', 'class="form-horizontal"');  ?>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<?=  form_open_multipart('paises/editar/'.$pais[0]->ID_PAIS.' ', 'class="form-horizontal"');  ?>
 				<fieldset>
 					<div class="form-group">
 						<label for="" class="col-md-3 control-label">Nombre</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control" name="NOMBRE" id="NOMBRE" value="<?php echo $concepto[0]->CONCEPTO;  ?>">
+							<input type="text" class="form-control" name="NOMBRE" id="NOMBRE" value="<?php echo $pais[0]->NOMBRE;  ?>">
+						</div>
+					</div> 
+					<div class="form-group">
+						<label for="" class="col-md-3 control-label">Imagen</label>
+						<div class="col-md-9">
+							<input type="text" class="form-control" name="IMG" id="IMG" value="<?php echo $pais[0]->IMG;  ?>">
 						</div>
 					</div>   
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Tipo</label>
+						<label for="" class="col-md-3 control-label">Favorito</label>
 						<div class="col-md-9">
-							<select  class="form-control" name="TIPO" id="TIPO">
-								<option value="G">Gasto</option>
-								<option value="I">Ingreso</option>
+							<select  class="form-control" name="FAVORITO" id="FAVORITO">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
 							</select>
 						</div>
 					</div>
+
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Día Vencimiento</label>
-						<div class="col-md-9">
-							<input type="number" maxlength="2" class="form-control" name="FECHA_VEN" id="FECHA_VEN" value="<?php echo $concepto[0]->FECHA_VEN;  ?>">
-						</div>
-					</div>       
-					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Mensual</label>
+						<label for="" class="col-md-3 control-label">Folder</label>
 						<div class="col-md-9">
 							<div class="radio">
-								<label><input type="radio" name="MENSUAL" value="S" <?php echo ($concepto[0]->MENSUAL=='S' ? 'checked': null ) ?> >SI</label>
-								<label><input type="radio" name="MENSUAL" value="N" <?php echo ($concepto[0]->MENSUAL=='N' ? 'checked': null ) ?>>NO</label>
+								<label><input type="radio" name="FOLDER" value="SI" <?php echo ($pais[0]->FOLDER=='SI' ? 'checked': null ) ?> >SI</label>
+								<label><input type="radio" name="FOLDER" value="NO" <?php echo ($pais[0]->FOLDER=='NO' ? 'checked': null ) ?>>NO</label>
 							</div>
 						</div>
 					</div>   
@@ -53,7 +57,7 @@
 	<?php $this->load->view('overall/footer'); ?>
 
 	<script>
-		$("#TIPO").val("<?php echo $concepto[0]->TIPO;  ?>");
+		$("#TIPO").val("<?php echo $pais[0]->TIPO;  ?>");
 	</script>
 
 

@@ -62,17 +62,20 @@ class User extends CI_Model
 
 	public function is_admin()
 	{
-		if ( !empty($this->session->userdata('id')) ) {
-			$this->CEDULA= $this->session->userdata('id');
-			$tipo = $this->getByCedula();
-			if ($tipo!=null and $tipo->ID_TIPO!=1 ) {
+		$cedula=$this->session->userdata('id');
+		$rol=$this->session->userdata('type');
+
+		if ( !empty($cedula) and  !empty($rol)  ) {
+			$this->CEDULA = $cedula;
+			$veri_rol = $this->getByCedula()->ID_TIPO;
+			
+			if ($veri_rol==null or $rol!=1 or $rol!=$veri_rol ) {
 				header("Location:" . base_url());
 			}
-
-
 		} else {
 			header("Location:" . base_url());
 		}
+
 	}
 
 

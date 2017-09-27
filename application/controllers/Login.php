@@ -22,15 +22,15 @@ class Login extends CI_Controller {
 		$fila=$this->user->getUser($inputUser);
 		$nombre = $fila->P_NOMBRE . " " . $fila->P_APELIIDO;
 		
-		
 		if ($fila!=null) {
 			if ($fila->CLAVE == $inputPass ) {
 				$data = array (
 					'id'    => $fila->CEDULA,
 					'user'  => $fila->USUARIO,
 					'name'  => $nombre,
+					'type'  =>  $fila->ID_TIPO,
 					'login' => true
-					);
+				);
 
 				$this->session->set_userdata($data);
 				header("Location:" . base_url() );

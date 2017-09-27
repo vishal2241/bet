@@ -1,24 +1,4 @@
-/* 
-body.inverse {
-  background: #333333;
-}
-body.inverse, body.inverse .form-control {
-  color: #ffffff;
-}
-body.inverse .modal,
-body.inverse .modal .form-control,
-body.inverse .panel-default,
-body.inverse .panel-default .form-control,
-body.inverse .card,
-body.inverse .card .form-control {
-  background-color: initial;
-  color: initial;
-}
 
-.life-of-material-kit {
-  background: #FFFFFF;
-}
-*/
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 300;

@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</td>
 							</tr>
 						</table>	
-						<table class="table table-striped table-hover dataTable" id="match">
+						<table class="table table-striped table-hover dataTable" id="match" >
 							<thead>
 								<tr>
 									<th colspan="9" class="text-center success">Mis Apuestas</th>

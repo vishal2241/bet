@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -16,14 +16,7 @@
 				<li><a href="<?= base_url(); ?>Partidos">PARTIDOS</a></li> 
 			</ul>
 			<ul class="nav navbar-nav">
-				<li class="dropdown ">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> PAISES <span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="<?= base_url(); ?>paises">Listar</a></li>
-						<li class="divider"></li>
-						<li><a href="<?= base_url(); ?>paises/agregar#form">Agregar</a></li>
-					</ul>
-				</li>
+				<li><a href="<?= base_url(); ?>Paises">PAISES</a></li> 
 			</ul>
 			<ul class="nav navbar-nav">
 				<li class="dropdown ">
@@ -57,16 +50,7 @@
 					</ul>
 				</li>
 			</ul>
-			<ul class="nav navbar-nav">
-				<li><a href="<?= base_url(); ?>widget">Widget</a></li> 
-			</ul>
 			<ul  class="nav navbar-nav navbar-right">
-				<ul class="nav navbar-nav">
-					<li><a href="<?= base_url(); ?>apuestas">Mis Apuestas</a></li> 
-				</ul>
-				<ul class="nav navbar-nav">
-					<li><a> <b>MI SALDO: </b>$ 3000,00</a></li> 
-				</ul>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><b><?php echo ucwords($this->session->userdata('name')); ?></b> <span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
