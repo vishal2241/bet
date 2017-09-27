@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-09-2017 a las 14:56:52
+-- Tiempo de generación: 27-09-2017 a las 20:21:58
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -51855,7 +51855,7 @@ INSERT INTO `pais` (`ID_PAIS`, `NOMBRE`, `IMG`, `FOLDER`, `FAVORITO`, `FECHALOG`
 (147, 'Francia', 'Francia', 'SI', '1', '2017-09-07 15:59:10'),
 (148, 'Japon', 'Japon', 'SI', '1', '2017-09-07 15:59:08'),
 (154, 'Corea del Sur', 'Corea del Sur', 'SI', '2', '2017-09-07 16:01:04'),
-(161, 'Alemania', 'Alemania', 'SI', '1', '2017-09-07 15:59:07'),
+(161, 'Alemania', 'Alemania', 'SI', '1', '2017-09-27 20:13:07'),
 (163, 'Emiratos Árabes Unidos', 'EmiratosArabes', 'SI', '2', '2017-09-15 17:41:08'),
 (171, 'Austria', 'Austria', 'SI', '2', '2017-09-07 16:01:07'),
 (172, 'Australia', 'Australia', 'SI', '2', '2017-09-07 16:01:06'),
@@ -55617,7 +55617,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`CEDULA`, `ID_TIPO`, `P_NOMBRE`, `S_NOMBRE`, `P_APELIIDO`, `S_APELLIDO`, `EMAIL`, `CLAVE`, `USUARIO`, `FECHA_NAC`, `DIRECCION`, `TELEFONO`, `SALDO`) VALUES
-('1110540682', 2, 'Milton', NULL, 'Otavo', NULL, 'milton.otavo@gmail.com', 'admin', 'admin', NULL, NULL, NULL, '0');
+('1110540682', 1, 'Milton', NULL, 'Otavo', NULL, 'milton.otavo@gmail.com', 'admin', 'admin', NULL, NULL, NULL, '0');
 
 --
 -- Índices para tablas volcadas
