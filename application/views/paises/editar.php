@@ -12,19 +12,19 @@
 				<?=  form_open_multipart('paises/editar/'.$pais[0]->ID_PAIS.' ', 'class="form-horizontal"');  ?>
 				<fieldset>
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Nombre</label>
+						<label for="" class="col-md-3 control-label bold">Nombre</label>
 						<div class="col-md-9">
 							<input type="text" class="form-control" name="NOMBRE" id="NOMBRE" value="<?php echo $pais[0]->NOMBRE;  ?>">
 						</div>
 					</div> 
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Imagen</label>
+						<label for="" class="col-md-3 control-label bold">Imagen</label>
 						<div class="col-md-9">
 							<input type="text" class="form-control" name="IMG" id="IMG" value="<?php echo $pais[0]->IMG;  ?>">
 						</div>
 					</div>   
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Favorito</label>
+						<label for="" class="col-md-3 control-label bold">Favorito</label>
 						<div class="col-md-9">
 							<select  class="form-control" name="FAVORITO" id="FAVORITO">
 								<option value="1">1</option>
@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label">Folder</label>
+						<label for="" class="col-md-3 control-label bold">Folder</label>
 						<div class="col-md-9">
 							<div class="radio">
 								<label><input type="radio" name="FOLDER" value="SI" <?php echo ($pais[0]->FOLDER=='SI' ? 'checked': null ) ?> >SI</label>
@@ -55,11 +55,6 @@
 		</div>  
 	</div>
 	<?php $this->load->view('overall/footer'); ?>
-
-	<script>
-		$("#TIPO").val("<?php echo $pais[0]->TIPO;  ?>");
-	</script>
-
 
 </body>
 </html>   

@@ -22,7 +22,7 @@ class Equipo extends CI_Model
 
 	public function index()
 	{
-		$query = $this->db->query('SELECT e.NOMBRE, e.IMG, p.NOMBRE AS PAIS FROM equipo e LEFT JOIN pais p ON (p.ID_PAIS=e.ID_PAIS) WHERE e.ID_PAIS IS NOT NULL ORDER BY p.NOMBRE ASC, e.NOMBRE ASC');
+		$query = $this->db->query('SELECT e.*, p.NOMBRE AS PAIS, p.IMG AS IMG_PAIS  FROM equipo e LEFT JOIN pais p ON (p.ID_PAIS=e.ID_PAIS) WHERE e.ID_PAIS IS NOT NULL ORDER BY p.NOMBRE ASC, e.NOMBRE ASC');
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -33,7 +33,8 @@ class Equipo extends CI_Model
 
 	public function getEquipo()
 	{
-		$query = $this->db->query('SELECT * FROM equipo WHERE ID_EQUIPO='.$this->ID_EQUIPO.' ');
+		$sql='SELECT e.*, p.NOMBRE AS PAIS, p.IMG AS IMG_PAIS  FROM equipo e LEFT JOIN pais p ON (p.ID_PAIS=e.ID_PAIS)   WHERE ID_EQUIPO='.$this->ID_EQUIPO.' ';
+		$query = $this->db->query($sql);
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
@@ -47,10 +48,17 @@ class Equipo extends CI_Model
 		$this->db->insert('equipo', $this);
 	}
 
-	public function update($pais=null)
+	public function update()
 	{
-		$query = $this->db->query('UPDATE equipo set ID_PAIS='.$this->ID_PAIS.' WHERE ID_EQUIPO='.$this->ID_EQUIPO.' AND ID_PAIS IS NULL ');
+		$this->db->where('ID_EQUIPO', $this->ID_EQUIPO); 
+		$this->db->update('equipo', $this);
+	}
 
+
+	public function delete()
+	{
+		$this->db->where('ID_EQUIPO', $this->ID_EQUIPO); 
+		$this->db->delete('equipo', $this);
 	}
 
 

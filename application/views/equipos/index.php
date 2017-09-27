@@ -11,28 +11,31 @@
        <table class="table table-striped table-hover dataTable" id="match">
         <thead>
           <tr>
-            <th colspan="5" class="text-center success">EQUIPOS</th>
+            <th colspan="5" class="text-center success">PAISES</th>
           </tr>
           <tr>
             <th width="">Bandera</th>
             <th width="">Nombre</th>
-            <th width="">Capeta</th>
+            <th width="">Logo</th>
             <th width="">Editar/Eliminar <i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($paises as $key => $value): ?>
+          <?php foreach ($equipos as $key => $value): ?>
            <tr>
              <td>
-               <img width="24" src="<?= base_url(); ?>public/img/logos/country/<?= $value->IMG ?>">
+               <img width="24" src="<?= base_url(); ?>public/img/logos/country/<?= $value->IMG_PAIS ?>">
+             </td>
+             <td>
+               <img width="24" src="<?= base_url(); ?>public/img/logos/team/<?= $value->IMG_PAIS  ?>/<?= $value->IMG ?>">
              </td>
              <td>
               <?= strtoupper($value->NOMBRE)  ?> 
             </td>
-            <td><?= $value->FOLDER  ?></td>
+
             <td>
-              <a  class="btn btn-warning" href="<?php echo base_url(); ?>paises/editar/<?= $value->ID_PAIS  ?>"><i class="fa fa-cog" aria-hidden="true"></i></a> 
-              <a  class="btn btn-danger" onclick="DeleteItem('<?php echo base_url(); ?>paises/eliminar/<?= $value->ID_PAIS  ?>')" >
+              <a  class="btn btn-warning" href="<?php echo base_url(); ?>equipos/editar/<?= $value->ID_EQUIPO  ?>"><i class="fa fa-cog" aria-hidden="true"></i></a> 
+              <a  class="btn btn-danger" onclick="DeleteItem('<?php echo base_url(); ?>equipos/eliminar/<?= $value->ID_EQUIPO  ?>')" >
                 <i class="fa fa-trash" aria-hidden="true"></i>
               </a> 
 
