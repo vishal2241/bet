@@ -7,6 +7,7 @@ class Partidos extends CI_Controller {
 	{
 		parent::__construct();
 		$this->User->check();
+		$this->User->is_admin();
 	}
 
 	public function index()

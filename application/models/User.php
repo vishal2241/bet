@@ -14,7 +14,18 @@ class User extends CI_Model
 
 
 
-	public function getUser ($user ='')
+	public function getByCedula()
+	{
+		$sql="SELECT ID_TIPO FROM usuario WHERE CEDULA='".$this->CEDULA."'  ";
+		$result=$this->db->query($sql);
+		if ($result->num_rows() > 0) {
+			return $result->row();
+		} else {
+			return null;
+		} 
+	}
+
+	public function getUser($user)
 	{
 		$result=$this->db->query("SELECT * FROM usuario WHERE (USUARIO='{$user}' OR EMAIL='{$user}')  ");
 		if ($result->num_rows() > 0) {
@@ -43,6 +54,23 @@ class User extends CI_Model
 	public function check()
 	{
 		if (!$this->session->userdata('login')) {
+			header("Location:" . base_url());
+		}
+	}
+
+
+
+	public function is_admin()
+	{
+		if ( !empty($this->session->userdata('id')) ) {
+			$this->CEDULA= $this->session->userdata('id');
+			$tipo = $this->getByCedula();
+			if ($tipo!=null and $tipo->ID_TIPO!=1 ) {
+				header("Location:" . base_url());
+			}
+
+
+		} else {
 			header("Location:" . base_url());
 		}
 	}
