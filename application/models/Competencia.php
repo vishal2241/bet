@@ -16,6 +16,18 @@ class Competencia extends CI_Model
 		$this->NOMBRE=null;
 	}
 
+	public function index()
+	{
+		$sql='SELECT * FROM competencia  ORDER BY NOMBRE ASC ';
+		$query = $this->db->query($sql); 
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+	}
+
 
 	public function getCompe()
 	{

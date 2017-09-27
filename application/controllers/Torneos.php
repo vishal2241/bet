@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Equipos extends CI_Controller {
+class Torneos extends CI_Controller {
 
 	public function __construct()
 	{
@@ -9,20 +9,11 @@ class Equipos extends CI_Controller {
 		$this->User->check();
 		$this->User->is_admin();
 	}
-
-	public function logos(){
-		$data['equipos']  = $this->Equipo->index();
-		$this->load->view('equipos/logos', $data);
-	} 
-
-	public function fm(){
-		$this->load->view('equipos/fm');
-	} 
 	
 	public function index()
 	{
-		$data['equipos']  = $this->Equipo->index();
-		$this->load->view('equipos/index', $data);	 
+		$data['torneos']  = $this->Competencia->index();
+		$this->load->view('torneos/index', $data);	 
 	}
 
 	public function agregar()
@@ -38,7 +29,7 @@ class Equipos extends CI_Controller {
 		} else {
 				#Vista
 			$this->load->helper('form');
-			$this->load->view('equipos/agregar');
+			$this->load->view('torneos/agregar');
 		}
 		
 	}
@@ -61,7 +52,7 @@ class Equipos extends CI_Controller {
 			$data['equipo'] = $this->Equipo->getEquipo();
 			$data['paises'] = $this->Pais->index();
 			$this->load->helper('form');
-			$this->load->view('equipos/editar', $data);
+			$this->load->view('torneos/editar', $data);
 
 		}
 	}

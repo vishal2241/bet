@@ -19,14 +19,7 @@
 				<li><a href="<?= base_url(); ?>Paises">PAISES</a></li> 
 			</ul>
 			<ul class="nav navbar-nav">
-				<li class="dropdown ">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> TORNEOS <span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="<?= base_url(); ?>competiciones">Listar</a></li>
-						<li class="divider"></li>
-						<li><a href="<?= base_url(); ?>competiciones/agregar">Agregar</a></li>
-					</ul>
-				</li>
+				<li><a href="<?= base_url(); ?>Torneos">TORNEOS</a></li> 
 			</ul>
 			<ul class="nav navbar-nav">
 				<li class="dropdown ">
