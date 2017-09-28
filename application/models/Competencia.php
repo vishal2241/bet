@@ -31,7 +31,7 @@ class Competencia extends CI_Model
 
 	public function getCompe()
 	{
-		$query = $this->db->query('SELECT * FROM competencia WHERE ID_COMPETENCIA='.$this->ID_COMPETENCIA.' ');
+		$query = $this->db->query('SELECT  c.*, p.IMG AS IMG_PAIS FROM competencia c LEFT JOIN pais p ON (p.ID_PAIS=c.ID_PAIS) WHERE c.ID_COMPETENCIA='.$this->ID_COMPETENCIA.' ');
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
