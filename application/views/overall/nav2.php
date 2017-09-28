@@ -34,7 +34,7 @@
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="<?= base_url(); ?>sync/syncMatches">Odds</a></li> 
 							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>sync/index">Scores</a></li> 
+							<li><a href="<?= base_url(); ?>sync/syncScores">Scores</a></li> 
 						</ul>
 					</li>
 				</ul>

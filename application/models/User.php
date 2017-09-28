@@ -5,6 +5,20 @@ class User extends CI_Model
 {
 	public $SALDO;
 	public $CEDULA;
+	public $ID_TIPO;
+	public $P_NOMBRE;
+	public $S_NOMBRE;
+	public $P_APELLIDO;
+	public $S_APELLIDO;
+	public $EMAIL;
+	public $CLAVE;
+	public $USUARIO;
+	public $FECHA_NAC;
+	public $DIRECCION;
+	public $TELEFONO;
+
+
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -15,7 +29,7 @@ class User extends CI_Model
 
 	public function index()
 	{
-		$sql='SELECT CEDULA, CONCAT(P_NOMBRE, " ", S_NOMBRE, " ", P_APELLIDO) AS NOMBRE, EMAIL, USUARIO, FECHA_NAC, DIRECCION, TELEFONO, SALDO FROM usuario  ORDER BY NOMBRE ASC ';
+		$sql='SELECT CEDULA, CONCAT(P_NOMBRE, " ", P_APELLIDO) AS NOMBRE, EMAIL, USUARIO, FECHA_NAC, DIRECCION, TELEFONO, SALDO FROM usuario  ORDER BY NOMBRE ASC ';
 		$query = $this->db->query($sql); 
 
 		if ($query->num_rows() > 0) {
@@ -29,7 +43,7 @@ class User extends CI_Model
 
 	public function getByCedula()
 	{
-		$sql="SELECT ID_TIPO FROM usuario WHERE CEDULA='".$this->CEDULA."'  ";
+		$sql="SELECT * FROM usuario WHERE CEDULA='".$this->CEDULA."' LIMIT 1 ";
 		$result=$this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->row();
@@ -74,20 +88,29 @@ class User extends CI_Model
 
 	public function is_admin()
 	{
-		$cedula=$this->session->userdata('id');
-		$rol=$this->session->userdata('type');
-
-		if ( !empty($cedula) and  !empty($rol)  ) {
-			$this->CEDULA = $cedula;
-			$veri_rol = $this->getByCedula()->ID_TIPO;
-			
-			if ($veri_rol==null or $rol!=1 or $rol!=$veri_rol ) {
-				header("Location:" . base_url());
-			}
-		} else {
+		if ($this->session->userdata('type')!=1 OR empty($this->session->userdata('type')) ) {
 			header("Location:" . base_url());
 		}
 
+	}
+
+	public function add()
+	{
+
+		$this->db->insert('usuario', $this);
+	}
+
+	public function update()
+	{
+		$this->db->where('CEDULA', $this->CEDULA); 
+		$this->db->update('usuario', $this);
+	}
+
+
+	public function delete()
+	{
+		$this->db->where('CEDULA', $this->CEDULA); 
+		$this->db->delete('usuario', $this);
 	}
 
 

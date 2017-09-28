@@ -1,44 +1,103 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-<html lang="es">
-<head>
-  <?php $this->load->view('overall/header'); ?>
-</head>
-
-<body class="components-page">
+<?php $this->load->view('overall/header'); ?>
+<body>
   <?php $this->load->view('overall/nav2'); ?>
-  <div class="main main-raised">
-    <div class="section">
-      <div class="container">
-        <div class="row" id="form">
-          <div class="col-md-8 col-md-offset-2">
-            <h2 align="center">Agregar País</h2>
-            <?=  form_open_multipart('conceptos/agregar/', 'class="form-horizontal"');  ?>
-            <fieldset>
-              <div class="form-group">
-                <label for="" class="col-md-2 control-label">Nombre</label>
-                <div class="col-md-10">
-                  <input type="text" class="form-control" name="NOMBRE" id="NOMBRE" value="">
-                </div>
-              </div>    
-              <div class="form-group">
-              <label for="" class="col-md-2 control-label">Bandera</label>
-                <div class="col-md-10">
-                  <input type="text" class="form-control" name="BANDERA" id="BANDERA" value="">
-                </div>
-              </div>  
-              <div class="form-group" align="center">
-                <div class="col-md-10 col-lg-offset-2">
-                  <button type="submit" class="btn btn-success">Guardar</button>
-                </div>
-              </div>
-            </fieldset>
-            <?=   form_close(); ?>
-          </div>
-
+  <div class="container">
+    <h2 align="center"> 
+      Nuevo Usuario
+    </h2>
+    <br>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-danger alert-dismissable fade in hidden">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Error!</strong>  <?=   validation_errors(); ?>
         </div>
+        <?=  form_open('usuarios/agregar', 'class="form-horizontal"');  ?>
+        <fieldset>
+          <?php if ($this->session->userdata('type')==1): ?>
+            <div class="form-group">
+              <label for="" class="col-md-3 control-label bold">Tipo Usuario</label>
+              <div class="col-md-9">
+                <select  class="form-control" name="ID_TIPO" id="ID_TIPO" required>
+                  <option value="1">Administrador</option>
+                  <option value="2">Estación </option>
+                  <option value="3">Casa de Apuestas</option>
+                  <option value="4">Usuario</option>
+                </select>
+              </div>
+            </div>
+          <?php endif ?>
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Cedula</label>
+            <div class="col-md-9">
+              <input type="number" class="form-control" name="CEDULA" id="CEDULA" required>
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Primer Nombre</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="P_NOMBRE" id="P_NOMBRE" required>
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Segundo Nombre</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="S_NOMBRE" id="S_NOMBRE"  >
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Primer Apellido</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="P_APELLIDO" id="P_APELLIDO"  required >
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Segundo Apellido</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="S_APELLIDO" id="S_APELLIDO" >
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Correo Electrónico</label>
+            <div class="col-md-9">
+              <input type="mail" class="form-control" name="EMAIL" id="EMAIL" required >
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Nick Usuario</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="USUARIO" id="USUARIO" required >
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Contraseña</label>
+            <div class="col-md-9">
+              <input type="password" class="form-control" name="CLAVE" id="CLAVE" required >
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Dirección</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="DIRECCION" id="DIRECCION" >
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="" class="col-md-3 control-label bold">Celular</label>
+            <div class="col-md-9">
+              <input type="number" class="form-control" name="TELEFONO" id="TELEFONO"  >
+            </div>
+          </div>   
+          <div class="form-group" align="center">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="submit" class="btn btn-default">Regresar</button>
+              <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+          </div>
+        </fieldset>
+        <?=   form_close(); ?>
       </div>
-
-      <?php $this->load->view('overall/footer'); ?>
-      </html>
+      <div class="col-md-2"></div>
+    </div>  
+  </div>
+</body>
+</html>   

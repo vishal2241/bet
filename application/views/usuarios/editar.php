@@ -3,44 +3,78 @@
 	<?php $this->load->view('overall/nav2'); ?>
 	<div class="container">
 		<h2 align="center"> 
-			<?php echo $pais[0]->NOMBRE;  ?>
-			<img width="64" src="<?= base_url(); ?>public/img/logos/country/<?= $pais[0]->IMG ?>">
+			<?= $usuario->P_NOMBRE .' '. $usuario->P_APELLIDO  ?>
 		</h2>
 		<br>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<?=  form_open_multipart('paises/editar/'.$pais[0]->ID_PAIS.' ', 'class="form-horizontal"');  ?>
+				<?=  form_open_multipart('usuarios/editar/'.$usuario->CEDULA.' ', 'class="form-horizontal"');  ?>
 				<fieldset>
+					<?php if ($this->session->userdata('type')==1): ?>
+						<div class="form-group">
+							<label for="" class="col-md-3 control-label bold">Tipo Usuario</label>
+							<div class="col-md-9">
+								<select  class="form-control" name="ID_TIPO" id="ID_TIPO">
+									<option value="1">Administrador</option>
+									<option value="2">Estación </option>
+									<option value="3">Casa de Apuestas</option>
+									<option value="4">Usuario</option>
+								</select>
+							</div>
+						</div>
+					<?php endif ?>
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label bold">Nombre</label>
+						<label for="" class="col-md-3 control-label bold">Primer Nombre</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control" name="NOMBRE" id="NOMBRE" value="<?php echo $pais[0]->NOMBRE;  ?>">
+							<input type="text" class="form-control" name="P_NOMBRE" id="P_NOMBRE" value="<?php echo $usuario->P_NOMBRE;  ?>">
 						</div>
 					</div> 
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label bold">Imagen</label>
+						<label for="" class="col-md-3 control-label bold">Segundo Nombre</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control" name="IMG" id="IMG" value="<?php echo $pais[0]->IMG;  ?>">
+							<input type="text" class="form-control" name="S_NOMBRE" id="S_NOMBRE" value="<?php echo $usuario->S_NOMBRE;  ?>">
 						</div>
-					</div>   
+					</div> 
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label bold">Favorito</label>
+						<label for="" class="col-md-3 control-label bold">Primer Apellido</label>
 						<div class="col-md-9">
-							<select  class="form-control" name="FAVORITO" id="FAVORITO">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-							</select>
+							<input type="text" class="form-control" name="P_APELLIDO" id="P_APELLIDO" value="<?php echo $usuario->P_APELLIDO;  ?>">
 						</div>
-					</div>
-
+					</div> 
 					<div class="form-group">
-						<label for="" class="col-md-3 control-label bold">Folder</label>
+						<label for="" class="col-md-3 control-label bold">Segundo Apellido</label>
 						<div class="col-md-9">
-							<div class="radio">
-								<label><input type="radio" name="FOLDER" value="SI" <?php echo ($pais[0]->FOLDER=='SI' ? 'checked': null ) ?> >SI</label>
-								<label><input type="radio" name="FOLDER" value="NO" <?php echo ($pais[0]->FOLDER=='NO' ? 'checked': null ) ?>>NO</label>
-							</div>
+							<input type="text" class="form-control" name="S_APELLIDO" id="S_APELLIDO" value="<?php echo $usuario->S_APELLIDO;  ?>">
+						</div>
+					</div> 
+					<div class="form-group">
+						<label for="" class="col-md-3 control-label bold">Correo Electrónico</label>
+						<div class="col-md-9">
+							<input type="mail" class="form-control" name="EMAIL" id="EMAIL" value="<?php echo $usuario->EMAIL;  ?>">
+						</div>
+					</div> 
+					<div class="form-group">
+						<label for="" class="col-md-3 control-label bold">Nick Usuario</label>
+						<div class="col-md-9">
+							<input type="text" class="form-control" name="USUARIO" id="USUARIO" value="<?php echo $usuario->USUARIO;  ?>">
+						</div>
+					</div> 
+					<div class="form-group">
+						<label for="" class="col-md-3 control-label bold">Contraseña</label>
+						<div class="col-md-9">
+							<input type="password" class="form-control" name="CLAVE" id="CLAVE" value="<?php echo $usuario->CLAVE;  ?>">
+						</div>
+					</div> 
+					<div class="form-group">
+						<label for="" class="col-md-3 control-label bold">Dirección</label>
+						<div class="col-md-9">
+							<input type="text" class="form-control" name="DIRECCION" id="DIRECCION" value="<?php echo $usuario->DIRECCION;  ?>">
+						</div>
+					</div> 
+					<div class="form-group">
+						<label for="" class="col-md-3 control-label bold">Celular</label>
+						<div class="col-md-9">
+							<input type="number" class="form-control" name="TELEFONO" id="TELEFONO" value="<?php echo $usuario->TELEFONO;  ?>">
 						</div>
 					</div>   
 					<div class="form-group" align="center">
@@ -55,6 +89,11 @@
 		</div>  
 	</div>
 	<?php $this->load->view('overall/footer'); ?>
+	<?php if ($this->session->userdata('type')==1): ?>
+		<script>
+			$("#ID_TIPO").val("<?php echo $usuario->ID_TIPO;  ?>");
+		</script>
+	<?php endif ?>
 
 </body>
 </html>   

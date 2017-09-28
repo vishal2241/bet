@@ -11,7 +11,8 @@ class Sync extends CI_Controller {
 		set_time_limit(0);
 	}
 
-	public function index(){
+	public function syncScores(){
+ 
 		$scores = array();
 		$pendientes=$this->Partido->getAllPartidos('','','Score');
 		foreach ($pendientes as $key => $row) {
