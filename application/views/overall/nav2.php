@@ -13,15 +13,6 @@
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href="<?= base_url(); ?>Partidos">PARTIDOS</a></li> 
-			</ul>
-			<ul class="nav navbar-nav">
-				<li><a href="<?= base_url(); ?>Paises">PAISES</a></li> 
-			</ul>
-			<ul class="nav navbar-nav">
-				<li><a href="<?= base_url(); ?>Torneos">TORNEOS</a></li> 
-			</ul>
-			<ul class="nav navbar-nav">
 				<li class="dropdown ">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> EQUIPOS <span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
@@ -32,12 +23,33 @@
 				</li>
 			</ul>
 			<ul class="nav navbar-nav">
+				<li><a href="<?= base_url(); ?>Paises">PAISES</a></li> 
+			</ul>
+			<ul class="nav navbar-nav">
+				<li><a href="<?= base_url(); ?>Partidos">PARTIDOS</a></li> 
+			</ul>
+			<ul class="nav navbar-nav">
 				<li class="dropdown ">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> SYNC <span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="<?= base_url(); ?>sync/syncMatches">Odds</a></li> 
 						<li class="divider"></li>
 						<li><a href="<?= base_url(); ?>sync/index">Scores</a></li> 
+					</ul>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav">
+				<li><a href="<?= base_url(); ?>Partidos">USUARIOS</a></li> 
+			</ul>
+			<ul class="nav navbar-nav">
+				<li class="dropdown ">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> TRANSACCIONES <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="<?= base_url(); ?>equipos">Informe</a></li>
+						<li class="divider"></li>
+						<li><a href="<?= base_url(); ?>equipos/fm">Recargar</a></li>
+						<li class="divider"></li>
+						<li><a href="<?= base_url(); ?>equipos/fm">Retirar</a></li>
 					</ul>
 				</li>
 			</ul>
