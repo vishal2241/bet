@@ -13,6 +13,19 @@ class User extends CI_Model
 	}
 
 
+	public function index()
+	{
+		$sql='SELECT CEDULA, CONCAT(P_NOMBRE, " ", S_NOMBRE, " ", P_APELLIDO) AS NOMBRE, EMAIL, USUARIO, FECHA_NAC, DIRECCION, TELEFONO, SALDO FROM usuario  ORDER BY NOMBRE ASC ';
+		$query = $this->db->query($sql); 
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+	}
+
+
 
 	public function getByCedula()
 	{
@@ -57,7 +70,6 @@ class User extends CI_Model
 			header("Location:" . base_url());
 		}
 	}
-
 
 
 	public function is_admin()
