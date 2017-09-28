@@ -11,31 +11,31 @@
        <table class="table table-striped table-hover dataTable" id="match">
         <thead>
           <tr>
-            <th colspan="5" class="text-center success">PAISES</th>
+            <th colspan="5" class="text-center success">TORNEOS</th>
           </tr>
           <tr>
             <th width="">Bandera</th>
+            <th width="">País</th>
             <th width="">Nombre</th>
-            <th width="">Logo</th>
             <th width="">Editar/Eliminar <i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($equipos as $key => $value): ?>
+          <?php foreach ($torneos as $key => $value): ?>
            <tr>
              <td>
                <img width="24" src="<?= base_url(); ?>public/img/logos/country/<?= $value->IMG_PAIS ?>">
              </td>
              <td>
-               <img width="24" src="<?= base_url(); ?>public/img/logos/team/<?= $value->IMG_PAIS  ?>/<?= $value->IMG ?>">
-             </td>
-             <td>
+              <?= strtoupper($value->PAIS)  ?> 
+            </td>
+            <td>
               <?= strtoupper($value->NOMBRE)  ?> 
             </td>
 
             <td>
-              <a  class="btn btn-warning" href="<?php echo base_url(); ?>equipos/editar/<?= $value->ID_EQUIPO  ?>"><i class="fa fa-cog" aria-hidden="true"></i></a> 
-              <a  class="btn btn-danger" onclick="DeleteItem('<?php echo base_url(); ?>equipos/eliminar/<?= $value->ID_EQUIPO  ?>')" >
+              <a  class="btn btn-warning" href="<?php echo base_url(); ?>torneos/editar/<?= $value->ID_COMPETENCIA  ?>"><i class="fa fa-cog" aria-hidden="true"></i></a> 
+              <a  class="btn btn-danger" onclick="DeleteItem('<?php echo base_url(); ?>torneos/eliminar/<?= $value->ID_COMPETENCIA  ?>')" >
                 <i class="fa fa-trash" aria-hidden="true"></i>
               </a> 
 
@@ -60,7 +60,7 @@
       "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
       "autoWidth": true,           
       "sPaginationType": "full_numbers",
-      //"order": [[ 1, 'desc' ], [ 0, 'asc' ]]
+      "order": [[ 1, 'asc' ], [ 2, 'asc' ]]
     });
   } );
 </script>

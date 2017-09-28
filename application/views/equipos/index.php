@@ -11,12 +11,12 @@
        <table class="table table-striped table-hover dataTable" id="match">
         <thead>
           <tr>
-            <th colspan="5" class="text-center success">PAISES</th>
+            <th colspan="5" class="text-center success">EQUIPOS</th>
           </tr>
           <tr>
-            <th width="">Bandera</th>
-            <th width="">Nombre</th>
+            <th width="">País</th>
             <th width="">Logo</th>
+            <th width="">Nombre</th>
             <th width="">Editar/Eliminar <i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>
           </tr>
         </thead>

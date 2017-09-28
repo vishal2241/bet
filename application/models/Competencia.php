@@ -18,7 +18,7 @@ class Competencia extends CI_Model
 
 	public function index()
 	{
-		$sql='SELECT * FROM competencia  ORDER BY NOMBRE ASC ';
+		$sql='SELECT c.*, p.IMG AS IMG_PAIS, p.NOMBRE AS PAIS FROM competencia c LEFT JOIN pais p ON (p.ID_PAIS=c.ID_PAIS)  ORDER BY NOMBRE ASC ';
 		$query = $this->db->query($sql); 
 
 		if ($query->num_rows() > 0) {
