@@ -5,14 +5,20 @@
     <h2 align="center"> 
       Nuevo Usuario
     </h2>
+    <h5 align="center">
+      La cedula es la clave por defecto.
+    </h5>
     <br>
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <div class="alert alert-danger alert-dismissable fade in hidden">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Error!</strong>  <?=   validation_errors(); ?>
-        </div>
-        <?=  form_open('usuarios/agregar', 'class="form-horizontal"');  ?>
+        <?php if (validation_errors()): ?>
+          <div class="alert alert-danger alert-dismissable fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Error!</strong>  <?=   validation_errors(); ?>
+          </div>
+        <?php endif ?>
+        
+        <?=  form_open('usuarios/agregar',  array('id'=>"formUsuario", 'class'=>"form-horizontal" ) );  ?>
         <fieldset>
           <?php if ($this->session->userdata('type')==1): ?>
             <div class="form-group">
@@ -30,7 +36,7 @@
           <div class="form-group">
             <label for="" class="col-md-3 control-label bold">Cedula</label>
             <div class="col-md-9">
-              <input type="number" class="form-control" name="CEDULA" id="CEDULA" required>
+              <input type="number" class="form-control" name="CEDULA" id="CEDULA" required >
             </div>
           </div> 
           <div class="form-group">
@@ -69,12 +75,12 @@
               <input type="text" class="form-control" name="USUARIO" id="USUARIO" required >
             </div>
           </div> 
-          <div class="form-group">
+         <!-- <div class="form-group">
             <label for="" class="col-md-3 control-label bold">Contraseña</label>
             <div class="col-md-9">
               <input type="password" class="form-control" name="CLAVE" id="CLAVE" required >
             </div>
-          </div> 
+          </div> -->
           <div class="form-group">
             <label for="" class="col-md-3 control-label bold">Dirección</label>
             <div class="col-md-9">
@@ -100,4 +106,5 @@
     </div>  
   </div>
 </body>
+ 
 </html>   

@@ -7,8 +7,8 @@ class Usuarios extends CI_Controller {
 	{
 		parent::__construct();
 		$this->User->check();
-		$this->User->is_admin();
 		$this->load->helper('form', 'url');
+		$this->load->library('form_validation');
 	}
 
 	public function index()
@@ -20,16 +20,15 @@ class Usuarios extends CI_Controller {
 	public function agregar()
 	{
 		if ($_POST) {
-			$this->load->library('form_validation');
+
 			$this->form_validation->set_rules('CEDULA', 'CEDULA', 'required');
-			$this->form_validation->set_rules('CLAVE', 'CLAVE', 'required',
-				array('required' => 'You must provide a %s.')
-			);
-			$this->form_validation->set_rules('CLAVE', 'CLAVE', 'required');
+		//	$this->form_validation->set_rules('CLAVE', 'CLAVE', 'required');
+			$this->form_validation->set_rules('EMAIL', 'EMAIL', 'required');
+			$this->form_validation->set_rules('P_NOMBRE', 'P_NOMBRE', 'required');
+			$this->form_validation->set_rules('P_APELLIDO', 'P_APELLIDO', 'required');
 
 
 			if($this->form_validation->run()!=false){  
-				$this->load->library('form_validation');
 				$post=$this->input->post();
 				$this->User->CEDULA=$post['CEDULA'];
 				$this->User->P_NOMBRE=$post['P_NOMBRE'];
@@ -37,7 +36,7 @@ class Usuarios extends CI_Controller {
 				$this->User->P_APELLIDO=$post['P_APELLIDO'];
 				$this->User->S_APELLIDO=$post['S_APELLIDO'];
 				$this->User->EMAIL=$post['EMAIL'];
-				$this->User->CLAVE=$post['CLAVE'];
+				$this->User->CLAVE=$post['CEDULA'];
 				$this->User->USUARIO=$post['USUARIO'];
 				$this->User->DIRECCION=$post['DIRECCION'];
 				$this->User->TELEFONO=$post['TELEFONO'];
@@ -47,24 +46,14 @@ class Usuarios extends CI_Controller {
 				} else {
 					$this->User->ID_TIPO=4;
 				}
-				//$this->User->add(); 
-
-				$datos["mensaje"]="Validación correcta";
+				$this->User->add(); 
+				header("Location:" . base_url(). "usuarios");
 			}else{
-				$datos["mensaje"]="Validación incorrecta";
+				$this->load->view("usuarios/agregar");
 			}
-			
-			$this->load->view("usuarios/agregar",$datos);
-
-
-			
-			//header("Location:" . base_url(). "usuarios");
 
 		} else {
-				#Vista
-			
-
-
+			#Vista
 			$this->load->view('usuarios/agregar');
 		}
 
@@ -72,7 +61,9 @@ class Usuarios extends CI_Controller {
 
 	public function editar()
 	{
+		$this->User->is_admin();
 		if ($_POST) {
+
 			$post=$this->input->post();
 			$this->User->CEDULA=$this->uri->segment(3);
 			$this->User->P_NOMBRE=$post['P_NOMBRE'];
@@ -102,8 +93,26 @@ class Usuarios extends CI_Controller {
 		}
 	}
 
+	public function recargar()
+	{
+ 
+		if ($_POST) {
+			$post=$this->input->post();
+			$this->User->CEDULA=$this->uri->segment(3);
+			$recarga=$post['SALDO'];
+			$this->User->updateSaldo($recarga);
+			header("Location:" . base_url(). "usuarios");
+		} else {
+			$this->User->CEDULA=$this->uri->segment(3);
+			$data['usuario'] = $this->User->getByCedula();
+			$this->load->view('usuarios/recargar', $data);
+
+		}
+	}
+
 	public function eliminar()
 	{
+		$this->User->is_admin();
 		$id = $this->uri->segment(3);
 		if ($id!='') {
 			$this->User->CEDULA=$id;

@@ -75,7 +75,8 @@ class User extends CI_Model
 
 	public function updateSaldo($valor)
 	{
-		$result=$this->db->query("UPDATE usuario SET SALDO='".$valor."' WHERE  CEDULA ='".$this->CEDULA."' ");
+		$sql="UPDATE usuario SET SALDO= (SALDO+".$valor.") WHERE  CEDULA ='".$this->CEDULA."' ";
+		$result=$this->db->query($sql);
 	}
 
 	public function check()

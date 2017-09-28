@@ -55,6 +55,7 @@
 <script src="<?= base_url(); ?>public/js/general.js"></script> 	
 <script src="<?= base_url(); ?>public/js/jquery.number.js"></script>
 <script src="<?= base_url(); ?>public/js/jquery.sticky.js" type="text/javascript"></script>
+<script src="<?= base_url(); ?>public/js/jquery.validate.js" type="text/javascript"></script>
 
 <script>
 	var header_height;

@@ -49,7 +49,7 @@
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="<?= base_url(); ?>equipos">Informe</a></li>
 							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>equipos/fm">Recargar</a></li>
+							<li><a href="<?= base_url(); ?>usuarios/recargar">Recargar</a></li>
 							<li class="divider"></li>
 							<li><a href="<?= base_url(); ?>equipos/fm">Retirar</a></li>
 						</ul>
