@@ -41,22 +41,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<table class="table table-striped table-hover dataTable" id="match" >
 							<thead>
 								<tr>
-									<th colspan="9" class="text-center success">Mis Apuestas</th>
+									<th colspan="9" class="text-center success">Apuestas</th>
 								</tr>
 								<tr>
 									<th width=""># Tiquete</th>
 									<th width="">Eventos</th>
 									<th width="">Fecha</th>
-									<th width="">Jugado</th>
-									<th width="">Ganancia</th>
+									<th width="">Recaudos</th>
+									<th width="">Premios</th>
 									<th width="">Estado</th>
 									<th width="">Resultado</th>
 								</tr>
 							</thead>
 							<tfoot>
 								<tr>
-									<th colspan="3" style="text-align:right">Recaudo:</th>
-									<th  colspan="3"></th>
+									<th colspan="3" style="text-align:right"></th>
+									<th></th>
+									<th  colspan="2"></th>
 								</tr>
 							</tfoot>
 							<tbody> 
@@ -87,37 +88,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							"footerCallback": function ( row, data, start, end, display ) {
 								var api = this.api(), data;
 
-            
-            var intVal = function ( i ) {
-            	return typeof i === 'string' ?
-            	i.replace(/[\$.]/g, '')*1 :
-            	typeof i === 'number' ?
-            	i : 0;
-            };
 
-         
-            total = api
-            .column( 3 )
-            .data()
-            .reduce( function (a, b) {
-            	return intVal(a) + intVal(b);
-            }, 0 );
+								var intVal = function ( i ) {
+									return typeof i === 'string' ?
+									i.replace(/[\$.]/g, '')*1 :
+									typeof i === 'number' ?
+									i : 0;
+								};
 
-  
-            pageTotal = api
-            .column( 3, { page: 'current'} )
-            .data()
-            .reduce( function (a, b) {
-            	return intVal(a) + intVal(b);
-            }, 0 );
 
-            
-            $( api.column( 3 ).footer() ).html(
-            	//'$'+$.number(pageTotal, 0, ',', '.' ) +' ( $'+ $.number(total, 0, ',', '.' )  +' total)'
-            	'$'+ $.number(total, 0, ',', '.' )  
-            	);
-        }
-    });
+								totalRecaudos = api
+								.column( 3 )
+								.data()
+								.reduce( function (a, b) {
+									return intVal(a) + intVal(b);
+								}, 0 );
+
+								totalPerdidas = api
+								.column( 4 )
+								.data()
+								.reduce( function (a, b) {
+									return intVal(a) + intVal(b);
+								}, 0 );
+
+								pageTotalRecaudos = api
+								.column( 3, { page: 'current'} )
+								.data()
+								.reduce( function (a, b) {
+									return intVal(a) + intVal(b);
+								}, 0 );
+
+
+								$( api.column( 3 ).footer() ).html(
+            						//'$'+$.number(pageTotalRecaudos, 0, ',', '.' ) +' ( $'+ $.number(totalRecaudos, 0, ',', '.' )  +' total)'
+            						'$'+ $.number(totalRecaudos, 0, ',', '.' )  
+            						);
+								$( api.column( 4 ).footer() ).html(
+									'$'+ $.number(totalPerdidas, 0, ',', '.' )  
+									);
+							}
+						});
 
 						function get_apuestas (from, to) {
 							$.ajax({
