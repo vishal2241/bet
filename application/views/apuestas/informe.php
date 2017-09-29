@@ -51,9 +51,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th width="">Ganancia</th>
 									<th width="">Estado</th>
 									<th width="">Resultado</th>
-									<th width="">&nbsp;</i></th>
 								</tr>
 							</thead>
+							<tfoot>
+								<tr>
+									<th colspan="3" style="text-align:right">Recaudo:</th>
+									<th  colspan="3"></th>
+								</tr>
+							</tfoot>
 							<tbody> 
 							</tbody>
 						</table>									
@@ -78,8 +83,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							"bAutoWidth": false,
 							"order": [[ 2, 'desc' ], [ 5, 'asc' ]],
 							"lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
-							"iDisplayLength": 100
-						});
+							"iDisplayLength": 100,
+							"footerCallback": function ( row, data, start, end, display ) {
+								var api = this.api(), data;
+
+            
+            var intVal = function ( i ) {
+            	return typeof i === 'string' ?
+            	i.replace(/[\$.]/g, '')*1 :
+            	typeof i === 'number' ?
+            	i : 0;
+            };
+
+         
+            total = api
+            .column( 3 )
+            .data()
+            .reduce( function (a, b) {
+            	return intVal(a) + intVal(b);
+            }, 0 );
+
+  
+            pageTotal = api
+            .column( 3, { page: 'current'} )
+            .data()
+            .reduce( function (a, b) {
+            	return intVal(a) + intVal(b);
+            }, 0 );
+
+            
+            $( api.column( 3 ).footer() ).html(
+            	//'$'+$.number(pageTotal, 0, ',', '.' ) +' ( $'+ $.number(total, 0, ',', '.' )  +' total)'
+            	'$'+ $.number(total, 0, ',', '.' )  
+            	);
+        }
+    });
 
 						function get_apuestas (from, to) {
 							$.ajax({
@@ -93,15 +131,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									if (data!=null) {
 										$.each(data, function(a, row) {
 											var rowNode=   table.row.add( [ 
-												''+row.ID_APUESTA+'',
-												''+row.NRO_EVENTOS+'',
+												''+row.FECHA+'',
+												''+row.P_NOMBRE+' '+row.P_APELLIDO+'',
 												''+row.FECHA+'',
 												''+$.number(row.VALOR, 0, ',', '.' )+'',
 												''+$.number(row.GANANCIA, 0, ',', '.' )+'',
 												'<span class="label label-warning ">'+row.ESTADO+'</span>',
 												'<span class="label label-warning ">'+row.RESULTADO+'</span>',
-												'<a   href="'+url+'apuestas/ver/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-eye" aria-hidden="true"></i></a>\
-												&nbsp; <a   href="'+url+'apuestas/print/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-print" aria-hidden="true"></i></a>' 
+												
 												] )
 											.draw()
 											.node();

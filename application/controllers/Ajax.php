@@ -222,7 +222,7 @@ class Ajax extends CI_Controller {
 			$from=$_POST['from'];
 			$to=$_POST['to'];
 			$user=$this->session->userdata('id');
-			$data = $this->Apuesta->index();
+			$data = $this->Apuesta->getApuestasByDate($from, $to);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());
