@@ -49,7 +49,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th width="">Fecha</th>
 									<th width="">Recaudos</th>
 									<th width="">Premios</th>
-									<th width="">Estado</th>
 									<th width="">Resultado</th>
 								</tr>
 							</thead>
@@ -119,6 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								}, 0 );
 
 
+
 								$( api.column( 3 ).footer() ).html(
             						//'$'+$.number(pageTotalRecaudos, 0, ',', '.' ) +' ( $'+ $.number(totalRecaudos, 0, ',', '.' )  +' total)'
             						'$'+ $.number(totalRecaudos, 0, ',', '.' )  
@@ -126,6 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								$( api.column( 4 ).footer() ).html(
 									'$'+ $.number(totalPerdidas, 0, ',', '.' )  
 									);
+
 							}
 						});
 
@@ -140,15 +141,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 									if (data!=null) {
 										$.each(data, function(a, row) {
+											if (row.RESULTADO=="PERDEDOR") {
+												row.GANANCIA=0;
+												var label="success";
+											} else {
+												var label="danger";
+											}
+
 											var rowNode=   table.row.add( [ 
 												''+row.FECHA+'',
 												''+row.P_NOMBRE+' '+row.P_APELLIDO+'',
 												''+row.FECHA+'',
 												''+$.number(row.VALOR, 0, ',', '.' )+'',
 												''+$.number(row.GANANCIA, 0, ',', '.' )+'',
-												'<span class="label label-warning ">'+row.ESTADO+'</span>',
-												'<span class="label label-warning ">'+row.RESULTADO+'</span>',
-												
+												'<span class="label label-'+label+' ">'+row.RESULTADO+'</span>',
+
 												] )
 											.draw()
 											.node();
