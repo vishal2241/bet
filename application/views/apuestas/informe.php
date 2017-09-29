@@ -44,9 +44,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th colspan="9" class="text-center success">Apuestas</th>
 								</tr>
 								<tr>
-									<th width=""># Tiquete</th>
-									<th width="">Eventos</th>
 									<th width="">Fecha</th>
+									<th width="">Usuario</th>
+									<th width="">Eventos</th>
 									<th width="">Recaudos</th>
 									<th width="">Premios</th>
 									<th width="">Resultado</th>
@@ -56,7 +56,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<tr>
 									<th colspan="3" style="text-align:right"></th>
 									<th></th>
-									<th  colspan="2"></th>
+									<th></th>
+									<th></th>
+
 								</tr>
 							</tfoot>
 							<tbody> 
@@ -81,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							"bFilter": true,
 							"bInfo": true,
 							"bAutoWidth": false,
-							"order": [[ 2, 'desc' ], [ 5, 'asc' ]],
+							"order": [[ 0, 'desc' ]],
 							"lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
 							"iDisplayLength": 100,
 							"footerCallback": function ( row, data, start, end, display ) {
@@ -127,6 +129,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									'$'+ $.number(totalPerdidas, 0, ',', '.' )  
 									);
 
+
+								$( api.column( 5 ).footer() ).html(
+									'$'+ $.number((totalRecaudos-totalPerdidas), 0, ',', '.' )  
+									);
+
+
+
 							}
 						});
 
@@ -151,7 +160,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											var rowNode=   table.row.add( [ 
 												''+row.FECHA+'',
 												''+row.P_NOMBRE+' '+row.P_APELLIDO+'',
-												''+row.FECHA+'',
+												''+row.NRO_EVENTOS+'',
 												''+$.number(row.VALOR, 0, ',', '.' )+'',
 												''+$.number(row.GANANCIA, 0, ',', '.' )+'',
 												'<span class="label label-'+label+' ">'+row.RESULTADO+'</span>',
@@ -161,7 +170,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											.node();
 										});
 									}
-									
+
 								},
 								error: function(e){
 									console.log(e);
