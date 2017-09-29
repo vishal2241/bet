@@ -13,6 +13,11 @@ class Apuestas extends CI_Controller {
 		$this->load->view('apuestas/index');
 	} 
 
+	public function informe(){
+		$this->User->is_admin();
+		$this->load->view('apuestas/informe');
+	} 
+
 	public function print_(){
 		$this->load->view('apuestas/index');
 	} 
@@ -57,7 +62,7 @@ class Apuestas extends CI_Controller {
 					'FECHA' => $partido[0]->FECHA,
 					'HORARIO' => $partido[0]->HORARIO,
 					'VALOR' => $row->VALOR
-					));
+				));
 		}
 
 		$data = array(
@@ -66,7 +71,7 @@ class Apuestas extends CI_Controller {
 			'ganancia' => $apuesta[0]->GANANCIA,
 			'apostado' => $apuesta[0]->VALOR,
 			'detalle' => $detalle,
-			);
+		);
 
 		$this->load->view('apuestas/ver', $data);
 	} 

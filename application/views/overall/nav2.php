@@ -45,13 +45,9 @@
 				</ul>
 				<ul class="nav navbar-nav">
 					<li class="dropdown ">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> TRANSACCIONES <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> INFORMES <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="<?= base_url(); ?>equipos">Informe</a></li>
-							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>usuarios/recargar">Recargar</a></li>
-							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>equipos/fm">Retirar</a></li>
+							<li><a href="<?= base_url(); ?>apuestas/informe">Apuestas</a></li>
 						</ul>
 					</li>
 				</ul>
