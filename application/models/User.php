@@ -54,7 +54,7 @@ class User extends CI_Model
 
 	public function getUser($user)
 	{
-		$result=$this->db->query("SELECT * FROM usuario WHERE (USUARIO='{$user}' OR EMAIL='{$user}')  ");
+		$result=$this->db->query("SELECT * FROM usuario WHERE (USUARIO='{$user}' OR EMAIL='{$user}')  LIMIT 1");
 		if ($result->num_rows() > 0) {
 			return $result->row();
 		} else {

@@ -221,10 +221,19 @@ class Ajax extends CI_Controller {
 	/*********	USUARIO  *********/
 	/******************************/
 
-	public function json_getUsuario(){
+	public function json_cedula(){
 		if (isset($_POST['valor']) and $_POST['valor']!='' and !empty($this->session->userdata('id'))) {
 			$this->User->CEDULA=$_POST['valor'];
 			$data = $this->User->getByCedula();
+			echo count($data);
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
+
+	public function json_nick(){
+		if (isset($_POST['valor']) and $_POST['valor']!='' and !empty($this->session->userdata('id'))) {
+			$data = $this->User->getUser($_POST['valor']);
 			echo count($data);
 		} else {
 			header("Location:" . base_url());

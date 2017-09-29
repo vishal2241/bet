@@ -73,10 +73,14 @@
               <input type="mail" class="form-control" name="EMAIL" id="EMAIL" required >
             </div>
           </div> 
-          <div class="form-group">
+          <div class="form-group" id="inputNick">
             <label for="" class="col-md-3 control-label bold">Nick Usuario</label>
             <div class="col-md-9">
               <input type="text" class="form-control" name="USUARIO" id="USUARIO" required >
+              <small id="ErrorNick" class="form-text text-danger hidden">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                El nombre de usuario ingresado ya fue registrado en el sistema.
+              </small>
             </div>
           </div> 
          <!-- <div class="form-group">
@@ -99,16 +103,17 @@
           </div>   
           <div class="form-group" align="center">
             <div class="col-lg-10 col-lg-offset-2">
-              <button type="submit" class="btn btn-default">Regresar</button>
-              <button type="submit" class="btn btn-success" id="btnGuardar">Guardar</button>
-            </div>
-          </div>
-        </fieldset>
-        <?=   form_close(); ?>
-      </div>
-      <div class="col-md-2"></div>
-    </div>  
-  </div>
+             <a  class="btn btn-default" href="<?php echo base_url(); ?>usuarios"><i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</a> 
+  
+             <button type="submit" class="btn btn-success" id="btnGuardar">Guardar</button>
+           </div>
+         </div>
+       </fieldset>
+       <?=   form_close(); ?>
+     </div>
+     <div class="col-md-2"></div>
+   </div>  
+ </div>
 </body>
 <?php $this->load->view('overall/footer'); ?>
 <script>
@@ -119,7 +124,7 @@
     var valor = $(this).val();
     $.ajax({
       dataType: 'text',
-      url: url+'ajax/json_getUsuario',
+      url: url+'ajax/json_cedula',
       type: 'post',
       data: {valor: valor},
       success: function(data){
@@ -133,8 +138,33 @@
          $( "#ErrorCedula" ).addClass( "hidden" );
          $( "#btnGuardar" ).removeClass( "hidden" );
        }
+     },
+     error: function(e){
+      console.log(e);
+    }
+  });
 
+  });
 
+  $("#USUARIO").on("keyup", function() {
+    var url= '<?= base_url(); ?>';
+    var valor = $(this).val();
+    $.ajax({
+      dataType: 'text',
+      url: url+'ajax/json_nick',
+      type: 'post',
+      data: {valor: valor},
+      success: function(data){
+        if (data==1) {
+          console.log(data)
+          $( "#inputNick" ).addClass( "has-error" );
+          $( "#ErrorNick" ).removeClass( "hidden" );
+          $( "#btnGuardar" ).addClass( "hidden" );
+        } else {
+         $( "#inputNick" ).removeClass( "has-error" );
+         $( "#ErrorNick" ).addClass( "hidden" );
+         $( "#btnGuardar" ).removeClass( "hidden" );
+       }
      },
      error: function(e){
       console.log(e);
