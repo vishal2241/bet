@@ -181,14 +181,14 @@ class Ajax extends CI_Controller {
 						'ganancia' => $ganancia,
 						'tiquete' => $id_apuesta,
 						'eventos' => $totalPartidos
-						),
-					);
+					),
+				);
 			} else {
 				$data = array(
 					array(
 						'resp' => $error
-						),
-					);
+					),
+				);
 			}
 			
 			echo json_encode($data);
@@ -217,10 +217,21 @@ class Ajax extends CI_Controller {
 		} 
 	}
 
+	/******************************/
+	/*********	USUARIO  *********/
+	/******************************/
 
+	public function json_getUsuario(){
+		if (isset($_POST['valor']) and $_POST['valor']!='' and !empty($this->session->userdata('id'))) {
+			$this->User->CEDULA=$_POST['valor'];
+			$data = $this->User->getByCedula();
+			echo count($data);
+		} else {
+			header("Location:" . base_url());
+		} 
+	}
 
-
-
+/*
 
 	public function json_all_match(){
 		if ($_POST) {
@@ -234,7 +245,7 @@ class Ajax extends CI_Controller {
 		} 
 	}
 
-
+*/
 
 
 

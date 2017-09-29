@@ -33,10 +33,14 @@
               </div>
             </div>
           <?php endif ?>
-          <div class="form-group">
+          <div class="form-group" id="inputCedula">
             <label for="" class="col-md-3 control-label bold">Cedula</label>
             <div class="col-md-9">
-              <input type="number" class="form-control" name="CEDULA" id="CEDULA" required >
+              <input type="number" class="form-control " name="CEDULA" id="CEDULA" required >
+              <small id="ErrorCedula" class="form-text text-danger hidden">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                El número de identificación ingresado ya fue registrado en el sistema.
+              </small>
             </div>
           </div> 
           <div class="form-group">
@@ -96,7 +100,7 @@
           <div class="form-group" align="center">
             <div class="col-lg-10 col-lg-offset-2">
               <button type="submit" class="btn btn-default">Regresar</button>
-              <button type="submit" class="btn btn-success">Guardar</button>
+              <button type="submit" class="btn btn-success" id="btnGuardar">Guardar</button>
             </div>
           </div>
         </fieldset>
@@ -106,5 +110,40 @@
     </div>  
   </div>
 </body>
- 
+<?php $this->load->view('overall/footer'); ?>
+<script>
+ $( document ).ready(function() {
+
+  $("#CEDULA").on("keyup", function() {
+    var url= '<?= base_url(); ?>';
+    var valor = $(this).val();
+    $.ajax({
+      dataType: 'text',
+      url: url+'ajax/json_getUsuario',
+      type: 'post',
+      data: {valor: valor},
+      success: function(data){
+        if (data==1) {
+          console.log(data)
+          $( "#inputCedula" ).addClass( "has-error" );
+          $( "#ErrorCedula" ).removeClass( "hidden" );
+          $( "#btnGuardar" ).addClass( "hidden" );
+        } else {
+         $( "#inputCedula" ).removeClass( "has-error" );
+         $( "#ErrorCedula" ).addClass( "hidden" );
+         $( "#btnGuardar" ).removeClass( "hidden" );
+       }
+
+
+     },
+     error: function(e){
+      console.log(e);
+    }
+  });
+
+  });
+
+
+});
+</script>
 </html>   
