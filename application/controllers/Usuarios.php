@@ -9,6 +9,7 @@ class Usuarios extends CI_Controller {
 		$this->User->check();
 		$this->load->helper('form', 'url');
 		$this->load->library('form_validation');
+		$this->User->is_admin();
 	}
 
 	public function index()
