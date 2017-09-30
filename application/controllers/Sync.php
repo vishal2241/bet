@@ -65,7 +65,7 @@ class Sync extends CI_Controller {
 					$totalGoles=$score_1+$score_2;
 
 					$estadoApuesta="FINALIZADA";
-
+					$resultadoApuesta="GANADOR";
 
 					switch ($estado_partido) {
 						case 'Finished':
@@ -161,6 +161,10 @@ class Sync extends CI_Controller {
 						$resultadoApuesta='PENDIENTE';
 						$estadoApuesta="JUGANDO";
 						break;
+					}
+
+					if ($resultadoCuota=="PERDEDOR") {
+						$resultadoApuesta="PERDEDOR";
 					}
 
 
