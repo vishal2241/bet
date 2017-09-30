@@ -15,7 +15,6 @@ class Equipo extends CI_Model
 		$this->ID_EQUIPO=null;
 		$this->NOMBRE=null;
 		$this->ID_PAIS=null;
-		$this->IMG=null;
 	}
 
 
@@ -50,6 +49,7 @@ class Equipo extends CI_Model
 
 	public function update()
 	{
+		//	$query = $this->db->query('UPDATE equipo set ID_PAIS='.$this->ID_PAIS.' WHERE ID_EQUIPO='.$this->ID_EQUIPO.' AND ID_PAIS IS NULL ');
 		$this->db->where('ID_EQUIPO', $this->ID_EQUIPO); 
 		$this->db->update('equipo', $this);
 	}

@@ -27,7 +27,15 @@ class Apuesta extends CI_Model
 
 
 
-
+	public function index()
+	{
+		$query = $this->db->query('SELECT * FROM apuesta  ');
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+	}
 
 
 	public function getApuesta()

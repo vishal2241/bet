@@ -57,6 +57,12 @@ class DetalleApuesta extends CI_Model
 		$this->db->update('detalle_apuesta', $this);
 	}
 
+	public function setResultado($resultado)
+	{
+		$sql='UPDATE detalle_apuesta SET RESULTADO="'.$resultado.'" WHERE ID_DETALLE='.$this->ID_DETALLE.' '; 
+		$query = $this->db->query($sql);
+	}
+
 	public function delete()
 	{
 		$this->db->where('ID_DETALLE', $this->ID_DETALLE); 

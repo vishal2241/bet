@@ -12,7 +12,7 @@ class Sync extends CI_Controller {
 	}
 
 	public function syncScores(){
- 
+
 		$scores = array();
 		$pendientes=$this->Partido->getAllPartidos('','','Score');
 		foreach ($pendientes as $key => $row) {
@@ -32,12 +32,12 @@ class Sync extends CI_Controller {
 						'HORARIO' => $row->HORARIO ,
 						'ESTADO' => $status['result'] ,
 						'MARCADOR' => $getScore['EventScore'] ,
-					));
+						));
 			}
 		}
 		$data = array(
 			'scores' => $scores
-		);
+			);
 		$this->load->view('sync/index', $data);
 	}
 
@@ -67,65 +67,65 @@ class Sync extends CI_Controller {
 				$score_1=$partido[0]->SCORE_1;
 				$score_2=$partido[0]->SCORE_2;
 				$totalGoles=$score_1+$score_2;
-				$odd='loser';
+				$odd='PERDEDOR';
 
 				if ($estado_partido=="Finished") {
 
 					switch ($cuota_seleccionada) {
 						case '_1':
 						if ($score_1>$score_2) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case '_X':
 						if ($score_1==$score_2) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case '_2':
 						if ($score_1<$score_2) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case 'under':
 						if ($totalGoles<=2) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case 'over':
 						if ($totalGoles>2) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case '_1X':
 						if ($score_1>$score_2 || $score_1==$score_2) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case '_2X':
 						if ($score_1<$score_2  || $score_1==$score_2) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case '_12':
 						if ($score_1!=$score_2) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case '_1HT':
@@ -139,22 +139,26 @@ class Sync extends CI_Controller {
 						break;
 						case 'GG':
 						if ($score_1> 0 && $score_2>0) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 						case 'NG':
 						if ($score_1== 0 || $score_2==0) {  
-							$odd='winner';
+							$odd='GANADOR';
 						} else {
-							$odd='loser';
+							$odd='PERDEDOR';
 						}
 						break;
 
 					}
 				}
-				echo $odd;
+
+				// SE ACTUALIZA DETALLE DE CADA APUESTA POR QUE SON MENOS QUE TODAS LAS OODS DEL SISTEMA
+				$this->DetalleApuesta->ID_DETALLE=$rowDetalle->ID_DETALLE;
+				$this->DetalleApuesta->setResultado($odd);
+				$odd;
 				exit;
 			}
 
@@ -184,12 +188,12 @@ class Sync extends CI_Controller {
 						'HORARIO' => $row->HORARIO ,
 						'ESTADO' => $status['result'] ,
 						'MARCADOR' => $getScore['EventScore'] ,
-					));
+						));
 			}
 		}
 		$data = array(
 			'scores' => $scores
-		);
+			);
 		$this->load->view('sync/index', $data);
 	}
 
@@ -218,8 +222,8 @@ class Sync extends CI_Controller {
 					$this->Competencia->ID_COMPETENCIA  = $row['id_torneo'];
 					$this->Competencia->ID_PAIS         = $row['id_country'];
 					$this->Competencia->NOMBRE          = $row['name_torne'];
-					$pais=$this->Competencia->getCompe();
-					if ($pais==null) {
+					$compe=$this->Competencia->getCompe();
+					if ($compe==null) {
 					#echo "<b>add</b> ".$row['name_torne']."<br>";
 						$this->Competencia->add();
 					}
@@ -234,7 +238,7 @@ class Sync extends CI_Controller {
 						$this->Equipo->add();
 					} else {
 						if ($row['id_country']!='248') {
-							$this->Equipo->update();
+						//	$this->Equipo->update();
 						}
 
 					}
@@ -248,7 +252,7 @@ class Sync extends CI_Controller {
 						$this->Equipo->add();
 					} else {
 						if ($row['id_country']!='248') {
-							$this->Equipo->update();
+						//	$this->Equipo->update();
 						}
 					}
 
@@ -395,13 +399,13 @@ class Sync extends CI_Controller {
 
 			$data = array(
 				'sync' => $matches
-			);
+				);
 
 		} else {
 			
 			$data = array(
 				'sync' => null
-			);
+				);
 		}
 
 
