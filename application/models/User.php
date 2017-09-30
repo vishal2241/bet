@@ -79,21 +79,37 @@ class User extends CI_Model
 		$result=$this->db->query($sql);
 	}
 
-	public function check()
+	public function check($privilegio) 
 	{
-		if (!$this->session->userdata('login')) {
-			header("Location:" . base_url());
+		$tipo=$this->session->userdata('type');
+		if ($this->session->userdata('login')) {// Verifica inicio de sesión
+			$sql="SELECT ACCESO FROM permisos WHERE  ID_TIPO ='".$tipo."' AND ID_PRIVILEGIO='".$privilegio."' LIMIT 1";
+			$query=$this->db->query($sql);
+			if ($query->num_rows() > 0) {
+				$permiso=$query->result();
+				$acceso=$permiso[0]->ACCESO;
+				if ($acceso=='FALSE') {
+					$this->session->sess_destroy();
+					header("Location:" . base_url());
+				}
+			} else {
+				$this->session->sess_destroy();
+				header("Location:" . base_url());
+			} 
+
+		} else {
+			header("Location:" . base_url());	
 		}
 	}
 
 
-	public function is_admin()
+	/*public function is_admin()
 	{
 		if ($this->session->userdata('type')!=1 OR empty($this->session->userdata('type')) ) {
 			header("Location:" . base_url());
 		}
 
-	}
+	}*/
 
 	public function add()
 	{
