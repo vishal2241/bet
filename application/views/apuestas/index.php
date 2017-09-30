@@ -91,21 +91,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 									if (data!=null) {
 										$.each(data, function(a, row) {
-											switch (row.RESULTADO){
-												case "GANADOR":
-												var resultado="success";
-												break;
-												case "PERDEDOR":
-												var resultado="danger";
-												break;
-											}
+
 											switch (row.ESTADO){
 												case "FINALIZADA":
+												switch (row.RESULTADO){
+													case "GANADOR":
+													var resultado='<span class="label label-success ">'+row.RESULTADO+'</span>'
+													break;
+													case "PERDEDOR":
+													var resultado='<span class="label label-danger ">'+row.RESULTADO+'</span>'
+													break;
+												}
 												var estado="info";
 												break;
 												case "JUGANDO":
-												var resultado="warning";
 												var estado="warning";
+												var resultado='<span class="label label-warning ">PENDIENTE</span>'
 												break;
 											}
 											var rowNode=   table.row.add( [ 
@@ -115,7 +116,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												''+$.number(row.VALOR, 0, ',', '.' )+'',
 												''+$.number(row.GANANCIA, 0, ',', '.' )+'',
 												'<span class="label label-'+estado+' ">'+row.ESTADO+'</span>',
-												'<span class="label label-'+resultado+' ">'+row.RESULTADO+'</span>',
+												resultado,
 												'<a   href="'+url+'apuestas/ver/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-eye" aria-hidden="true"></i></a>\
 												&nbsp; <a   href="'+url+'apuestas/print/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-print" aria-hidden="true"></i></a>' 
 												] )
