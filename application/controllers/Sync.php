@@ -42,16 +42,15 @@ class Sync extends CI_Controller {
 	}
 
 	public function syncBets(){
+		$arrayApuestas = array();
 		$apuestas=$this->Apuesta->index();
 
 		foreach ($apuestas as $key => $rowApuesta) {
 			$id_apuesta=$rowApuesta->ID_APUESTA;
 			$this->DetalleApuesta->ID_APUESTA=$id_apuesta;
-
+			$estadoApuesta="GANADOR";
 			$detalle=$this->DetalleApuesta->getDetalleByApuesta();
 			foreach ($detalle as $key => $rowDetalle) {
-				
-
 				#Cuota
 				$id_cuota= $rowDetalle->ID_CUOTA;
 				$this->Cuota->ID_CUOTA=$id_cuota;
@@ -158,12 +157,31 @@ class Sync extends CI_Controller {
 				// SE ACTUALIZA DETALLE DE CADA APUESTA POR QUE SON MENOS QUE TODAS LAS OODS DEL SISTEMA
 				$this->DetalleApuesta->ID_DETALLE=$rowDetalle->ID_DETALLE;
 				$this->DetalleApuesta->setResultado($odd);
-				$odd;
-				exit;
+
+				if ($odd=="PERDEDOR") {
+					$estadoApuesta="PERDEDOR";
+				}
+				
 			}
+			$this->Apuesta->ID_APUESTA=$rowApuesta->ID_APUESTA; 
+			$this->Apuesta->setResultado($estadoApuesta);
 
+			array_push($arrayApuestas,  
+				array(
+					'RESULTADO' => $estadoApuesta ,
+					'FECHA' => $rowApuesta->FECHA ,
+					'NRO_EVENTOS' => $rowApuesta->NRO_EVENTOS ,
+					'GANANCIA' => $rowApuesta->GANANCIA ,
+					'VALOR' => $rowApuesta->VALOR ,
+					'ESTADO' => $rowApuesta->ESTADO ,
+					));
+			//print_r($arrayApuestas); exit();
+		} //if apuestas
 
-		}
+		$data = array(
+			'apuestas' => $arrayApuestas
+			);
+		$this->load->view('sync/apuestas', $data);
 
 	}
 

@@ -37,6 +37,12 @@ class Apuesta extends CI_Model
 		} 
 	}
 
+	public function setResultado($resultado)
+	{
+		$sql='UPDATE apuesta SET RESULTADO="'.$resultado.'" WHERE ID_APUESTA='.$this->ID_APUESTA.' '; 
+		$query = $this->db->query($sql);
+	}
+
 
 	public function getApuesta()
 	{
