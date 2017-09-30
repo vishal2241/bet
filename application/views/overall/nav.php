@@ -26,7 +26,7 @@
 				<ul  class="nav navbar-nav navbar-right" >
 					<?php if ($this->session->userdata('type')==1 || $this->session->userdata('type')==3 ): ?>
 						<ul class="nav navbar-nav">
-							<li><a href="<?= base_url(); ?>partidos">Admin</a></li> 
+							<li><a href="<?= base_url(); ?>apuestas/informe">Admin</a></li> 
 						</ul>
 					<?php endif ?>
 					<ul class="nav navbar-nav">
