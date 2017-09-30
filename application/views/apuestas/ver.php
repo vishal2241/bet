@@ -27,26 +27,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th colspan="3" class="text-center ">FECHA APUESTA: <?= $fecha ?></th>
 								</tr>
 								<tr>
-									<th width="">Fecha</th>
-									<th width="">Hora</th>
-									<th width="">Partido</th>
-									<th width="">Selección</th>
-									<th width="">Cuota</th>
-									<th width="">Estado</th>
+									<th>Fecha</th>
+									<th>Hora</th>
+									<th>Partido</th>
+									<th>Selección</th>
+									<th>Cuota</th>
+									<th>Estado</th>
 								</tr>
 							</thead>
 							<tbody> 
 								<?php foreach ($detalle as $key => $row): ?>
-									<tr>
+									<tr class="text-<?= $row['COLOR'] ?>">
 										<td><?= $row['FECHA'] ?></td>
 										<td><?= $row['HORARIO'] ?></td>
 										<td >
 											<b><?= $row['PARTIDO'] ?></b>
 											<br><small><?= $row['LIGA'] ?></small>
 										</td>
-										<td><span class="label label-info "><?= $row['CUOTA'] ?></span></td>
+										<td><span class="label label-primary "><?= $row['CUOTA'] ?></span></td>
 										<td><?= $row['VALOR'] ?></td>
-										<td class="text-success text-center"><?= $row['RESULTADO_CUOTA'] ?><i class="fa fa-check" aria-hidden="true"></i></td>
+										<?php  ?>
+										<td class="text-<?= $row['COLOR'] ?> text-center"><?= $row['RESULTADO_DETALLE'] ?> <i class="fa <?= $row['ICON'] ?>" aria-hidden="true"></i></td>
 									</tr>
 								<?php endforeach ?>
 							</tbody>
@@ -74,10 +75,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							"columns": [
 							{ "width": "10%" },
 							{ "width": "10%" },
-							{ "width": "45%" },
+							{ "width": "40%" },
 							{ "width": "15%" },
 							{ "width": "5%" },
-							{ "width": "5%" },
+							{ "width": "15%" },
 
 							]
 						});

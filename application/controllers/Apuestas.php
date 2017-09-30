@@ -50,6 +50,21 @@ class Apuestas extends CI_Controller {
 			$this->Pais->ID_PAIS =  $competencia[0]->ID_PAIS; 
 			$pais = $this->Pais->getPais(); 
 
+			switch ($row->RESULTADO) {
+				case 'GANADOR':
+				$color="success";
+				$i="fa-check";
+				break;
+				case 'PERDEDOR':
+				$color="danger";
+				$i="fa-times";
+				break;
+				case 'PENDIENTE':
+				$color="info";
+				$i="";
+				break;
+
+			}
 			array_push($detalle,  
 				array(
 					'PARTIDO' => $local[0]->NOMBRE.' vs. '.$visitante[0]->NOMBRE ,
@@ -57,13 +72,17 @@ class Apuestas extends CI_Controller {
 					'CUOTA_NOMBRE' => $cuota[0]->NOMBRE,
 					'CUOTA' => $cuota[0]->DESCRIPCION,
 					'ESTADO_PARTIDO' => $partido[0]->ESTADO,
-					'RESULTADO_CUOTA' => $cuota[0]->RESULTADO,
+					'RESULTADO_DETALLE' => $row->RESULTADO,
+					'COLOR' => $color,
+					'ICON' => $i,
 					'SCORE_1' => $partido[0]->SCORE_1,
 					'SCORE_2' => $partido[0]->SCORE_2,
 					'FECHA' => $partido[0]->FECHA,
 					'HORARIO' => $partido[0]->HORARIO,
 					'VALOR' => $row->VALOR
 				));
+
+
 		}
 
 		$data = array(
@@ -71,6 +90,8 @@ class Apuestas extends CI_Controller {
 			'fecha' => $apuesta[0]->FECHA,
 			'ganancia' => $apuesta[0]->GANANCIA,
 			'apostado' => $apuesta[0]->VALOR,
+			'estado' => $apuesta[0]->ESTADO,
+			'resultado' => $apuesta[0]->RESULTADO,
 			'detalle' => $detalle,
 		);
 

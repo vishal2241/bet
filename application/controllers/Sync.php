@@ -168,16 +168,16 @@ class Sync extends CI_Controller {
 					}
 
 
-				// SE ACTUALIZA DETALLE DE CADA APUESTA POR QUE SON MENOS QUE TODAS LAS OODS DEL SISTEMA
+					// SE ACTUALIZA DETALLE DE CADA APUESTA POR QUE SON MENOS QUE TODAS LAS OODS DEL SISTEMA
 					$this->DetalleApuesta->ID_DETALLE=$rowDetalle->ID_DETALLE;
 					$this->DetalleApuesta->setResultado($resultadoCuota);
 
 				}
-				echo $resultadoApuesta;exit;
-			//Actualizamos resultado de la apuesta
+
+				//Actualizamos resultado de la apuesta
 				$this->Apuesta->ID_APUESTA=$rowApuesta->ID_APUESTA; 
 				$this->Apuesta->setResultado($resultadoApuesta);
-			//Actualizamos estado de la apuesta
+				//Actualizamos estado de la apuesta
 				$this->Apuesta->setEstado($estadoApuesta);
 
 				array_push($arrayApuestas,  
