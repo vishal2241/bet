@@ -4,7 +4,7 @@
 	<div class="container">
 		<h2 align="center"> 
 			<?php echo $equipo[0]->NOMBRE;  ?>
-			<img width="64" src="<?= base_url(); ?>public/img/logos/team/<?= $equipo[0]->IMG_PAIS ?>/<?= $equipo[0]->IMG ?>">
+			<img width="64" src="<?= base_url(); ?>public/img/logos/team/<?= $equipo[0]->IMG_PAIS ?>/<?= $equipo[0]->IMG ?>.png">
 		</h2>
 		<br>
 		<div class="row">

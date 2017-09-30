@@ -24,10 +24,10 @@
           <?php foreach ($equipos as $key => $value): ?>
            <tr>
              <td>
-               <img width="24" src="<?= base_url(); ?>public/img/logos/country/<?= $value->IMG_PAIS ?>">
+               <img width="24" src="<?= base_url(); ?>public/img/logos/country/<?= $value->IMG_PAIS ?>.png">
              </td>
              <td>
-               <img width="24" src="<?= base_url(); ?>public/img/logos/team/<?= $value->IMG_PAIS  ?>/<?= $value->IMG ?>">
+               <img width="24" src="<?= base_url(); ?>public/img/logos/team/<?= $value->IMG_PAIS  ?>/<?= $value->IMG ?>.png">
              </td>
              <td>
               <?= strtoupper($value->NOMBRE)  ?> 

@@ -24,7 +24,7 @@
           <?php foreach ($paises as $key => $value): ?>
            <tr>
              <td>
-               <img width="24" src="<?= base_url(); ?>public/img/logos/country/<?= $value->IMG ?>">
+               <img width="24" src="<?= base_url(); ?>public/img/logos/country/<?= $value->IMG ?>.png">
              </td>
              <td>
               <?= strtoupper($value->NOMBRE)  ?> 

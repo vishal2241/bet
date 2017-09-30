@@ -60,7 +60,7 @@ class Apuestas extends CI_Controller {
 				$i="fa-times";
 				break;
 				case 'PENDIENTE':
-				$color="info";
+				$color="";
 				$i="";
 				break;
 

@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<b><?= $row['PARTIDO'] ?></b>
 											<br><small><?= $row['LIGA'] ?></small>
 										</td>
-										<td><span class="label label-primary"><?= $row['CUOTA'] ?></span></td>
+										<td class="bold"><?= strtoupper($row['CUOTA']) ?></td>
 										<td><?= $row['VALOR'] ?></td>
 										<?php  ?>
 										<td class="text-<?= $row['COLOR'] ?> text-center"><?= $row['RESULTADO_DETALLE'] ?> <i class="fa <?= $row['ICON'] ?>" aria-hidden="true"></i></td>
