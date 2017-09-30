@@ -22,6 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<table class="table">
 										<thead>
 											<tr>
+												<th>#</th>
 												<th>Fecha</th>
 												<th>Nro. Eventos</th>
 												<th>Valor</th>

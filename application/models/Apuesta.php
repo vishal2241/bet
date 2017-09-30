@@ -37,6 +37,12 @@ class Apuesta extends CI_Model
 		} 
 	}
 
+	public function setEstado($estado)
+	{
+		$sql='UPDATE apuesta SET ESTADO="'.$estado.'" WHERE ID_APUESTA='.$this->ID_APUESTA.' '; 
+		$query = $this->db->query($sql);
+	}
+
 	public function setResultado($resultado)
 	{
 		$sql='UPDATE apuesta SET RESULTADO="'.$resultado.'" WHERE ID_APUESTA='.$this->ID_APUESTA.' '; 
@@ -47,6 +53,18 @@ class Apuesta extends CI_Model
 	public function getApuesta()
 	{
 		$query = $this->db->query('SELECT * FROM apuesta WHERE ID_APUESTA='.$this->ID_APUESTA.' ');
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		} 
+
+	}
+
+	public function getApuestasByEstado($estado)
+	{
+		$sql='SELECT * FROM apuesta WHERE ESTADO="'.$estado.'"   ORDER BY FECHA DESC ';
+		$query = $this->db->query($sql);
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
