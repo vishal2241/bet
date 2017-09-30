@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<!-- tables row -->
 							<div class="tim-row" id="tables-row">					 
 								<div class="table-responsive">
-									<h2>Partidos Sincronizados</h2>
+									<h2>Finalizar Apuesta</h2>s
 									<table class="table">
 										<thead>
 											<tr>

@@ -32,9 +32,11 @@
 					<li class="dropdown ">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"> SYNC <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="<?= base_url(); ?>sync/syncMatches">Odds</a></li> 
+							<li><a href="<?= base_url(); ?>sync/syncMatches">Partidos</a></li> 
 							<li class="divider"></li>
-							<li><a href="<?= base_url(); ?>sync/syncScores">Scores</a></li> 
+							<li><a href="<?= base_url(); ?>sync/syncScores">Resultados</a></li> 
+							<li class="divider"></li>
+							<li><a href="<?= base_url(); ?>sync/syncBets">Apuestas</a></li> 
 						</ul>
 					</li>
 				</ul>
