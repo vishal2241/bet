@@ -54,6 +54,11 @@ class Equipo extends CI_Model
 		$this->db->update('equipo', $this);
 	}
 
+	public function updateCounty()
+	{
+		$query = $this->db->query('UPDATE equipo set ID_PAIS='.$this->ID_PAIS.' WHERE ID_EQUIPO='.$this->ID_EQUIPO.' AND ID_PAIS IS NULL ');
+		
+	}
 
 	public function delete()
 	{

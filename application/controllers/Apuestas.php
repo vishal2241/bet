@@ -57,6 +57,7 @@ class Apuestas extends CI_Controller {
 					'CUOTA_NOMBRE' => $cuota[0]->NOMBRE,
 					'CUOTA' => $cuota[0]->DESCRIPCION,
 					'ESTADO_PARTIDO' => $partido[0]->ESTADO,
+					'RESULTADO_CUOTA' => $cuota[0]->RESULTADO,
 					'SCORE_1' => $partido[0]->SCORE_1,
 					'SCORE_2' => $partido[0]->SCORE_2,
 					'FECHA' => $partido[0]->FECHA,

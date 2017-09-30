@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</td>
 										<td><span class="label label-info "><?= $row['CUOTA'] ?></span></td>
 										<td><?= $row['VALOR'] ?></td>
-										<td class="text-success text-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+										<td class="text-success text-center"><?= $row['RESULTADO_CUOTA'] ?><i class="fa fa-check" aria-hidden="true"></i></td>
 									</tr>
 								<?php endforeach ?>
 							</tbody>

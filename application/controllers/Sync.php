@@ -32,12 +32,12 @@ class Sync extends CI_Controller {
 						'HORARIO' => $row->HORARIO ,
 						'ESTADO' => $status['result'] ,
 						'MARCADOR' => $getScore['EventScore'] ,
-						));
+					));
 			}
 		}
 		$data = array(
 			'scores' => $scores
-			);
+		);
 		$this->load->view('sync/index', $data);
 	}
 
@@ -46,85 +46,84 @@ class Sync extends CI_Controller {
 		$apuestas=$this->Apuesta->getApuestasByEstado("JUGANDO");
 		if (count($apuestas)>0) {
 			foreach ($apuestas as $key => $rowApuesta) {
-				$id_apuesta=$rowApuesta->ID_APUESTA;
-				$this->DetalleApuesta->ID_APUESTA=$id_apuesta;
-				$resultadoApuesta="GANADOR";
-				$estadoApuesta="FINALIZADA";
+				$this->DetalleApuesta->ID_APUESTA=$rowApuesta->ID_APUESTA;
 				$detalle=$this->DetalleApuesta->getDetalleByApuesta();
+
 				foreach ($detalle as $key => $rowDetalle) {
-				#Cuota
+					#Cuota
 					$id_cuota= $rowDetalle->ID_CUOTA;
 					$this->Cuota->ID_CUOTA=$id_cuota;
 					$cuota=$this->Cuota->getCuota('');
 					$cuota_seleccionada = $cuota[0]->NOMBRE;
-
-				#Partido
-					$id_partido = $cuota[0]->ID_PARTIDO;
-					$this->Partido->ID_PARTIDO=$id_partido;
+					#Partido
+					$this->Partido->ID_PARTIDO=$cuota[0]->ID_PARTIDO;
 					$partido=$this->Partido->getPartido();
 
-					$estado_partido=$partido[0]->ESTADO;
+					ECHO $estado_partido=$partido[0]->ESTADO;
 					$score_1=$partido[0]->SCORE_1;
 					$score_2=$partido[0]->SCORE_2;
 					$totalGoles=$score_1+$score_2;
-					$odd='PERDEDOR';
 
-					if ($estado_partido=="Finished") {
+					$estadoApuesta="FINALIZADA";
+
+
+					switch ($estado_partido) {
+						case 'Finished':
 						switch ($cuota_seleccionada) {
 							case '_1':
 							if ($score_1>$score_2) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case '_X':
 							if ($score_1==$score_2) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case '_2':
 							if ($score_1<$score_2) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case 'under':
 							if ($totalGoles<=2) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case 'over':
 							if ($totalGoles>2) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case '_1X':
 							if ($score_1>$score_2 || $score_1==$score_2) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case '_2X':
 							if ($score_1<$score_2  || $score_1==$score_2) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case '_12':
 							if ($score_1!=$score_2) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case '_1HT':
@@ -138,33 +137,39 @@ class Sync extends CI_Controller {
 							break;
 							case 'GG':
 							if ($score_1> 0 && $score_2>0) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
 							case 'NG':
 							if ($score_1== 0 || $score_2==0) {  
-								$odd='GANADOR';
+								$resultadoCuota='GANADOR';
 							} else {
-								$odd='PERDEDOR';
+								$resultadoCuota='PERDEDOR';
 							}
 							break;
-
 						}
-					} else {
+						break;
+						#case 'NSY':
+						#$resultadoCuota='PENDIENTE';
+						#$resultadoApuesta='PENDIENTE';
+						#$estadoApuesta="JUGANDO";
+						#break;
+						default:
+						$resultadoCuota='PENDIENTE';
+						$resultadoApuesta='PENDIENTE';
 						$estadoApuesta="JUGANDO";
+						break;
 					}
+
 
 				// SE ACTUALIZA DETALLE DE CADA APUESTA POR QUE SON MENOS QUE TODAS LAS OODS DEL SISTEMA
 					$this->DetalleApuesta->ID_DETALLE=$rowDetalle->ID_DETALLE;
-					$this->DetalleApuesta->setResultado($odd);
-
-					if ($odd=="PERDEDOR") {
-						$resultadoApuesta="PERDEDOR";
-					}
+					$this->DetalleApuesta->setResultado($resultadoCuota);
 
 				}
+				echo $resultadoApuesta;exit;
 			//Actualizamos resultado de la apuesta
 				$this->Apuesta->ID_APUESTA=$rowApuesta->ID_APUESTA; 
 				$this->Apuesta->setResultado($resultadoApuesta);
@@ -179,13 +184,14 @@ class Sync extends CI_Controller {
 						'GANANCIA' => $rowApuesta->GANANCIA ,
 						'VALOR' => $rowApuesta->VALOR ,
 						'ESTADO' => $estadoApuesta ,
-						));
+					));
+				
 			//print_r($arrayApuestas); exit();
 		} //if apuestas
 	}
 	$data = array(
 		'apuestas' => $arrayApuestas
-		);
+	);
 	$this->load->view('sync/apuestas', $data);
 
 }
@@ -211,12 +217,12 @@ public function syncDetalles(){
 					'HORARIO' => $row->HORARIO ,
 					'ESTADO' => $status['result'] ,
 					'MARCADOR' => $getScore['EventScore'] ,
-					));
+				));
 		}
 	}
 	$data = array(
 		'scores' => $scores
-		);
+	);
 	$this->load->view('sync/index', $data);
 }
 
@@ -261,7 +267,7 @@ public function syncMatches(){
 					$this->Equipo->add();
 				} else {
 					if ($row['id_country']!='248') {
-						//	$this->Equipo->update();
+						$this->Equipo->updateCounty();
 					}
 
 				}
@@ -275,7 +281,7 @@ public function syncMatches(){
 					$this->Equipo->add();
 				} else {
 					if ($row['id_country']!='248') {
-						//	$this->Equipo->update();
+						$this->Equipo->updateCounty();
 					}
 				}
 
@@ -422,13 +428,13 @@ public function syncMatches(){
 
 			$data = array(
 				'sync' => $matches
-				);
+			);
 
 		} else {
 			
 			$data = array(
 				'sync' => null
-				);
+			);
 		}
 
 
