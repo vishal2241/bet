@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="section">
 			<div class="container-fluid">
 				<div class="row">
+					<h2 class="text-center">Mis Apuestas</h2>
 					<div class="col-md-8 content col-md-offset-2">	
 						<table  width="100%">
 							<tr>
@@ -63,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 				<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
 				<script type="text/javascript">
+
 					$(document).ready(function() {
 						var url= '<?= base_url(); ?>';
 						$("#from").val(moment().subtract(3, 'days').format('YYYY-MM-DD'));
@@ -117,8 +119,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												''+$.number(row.GANANCIA, 0, ',', '.' )+'',
 												'<span class="label label-'+estado+' ">'+row.ESTADO+'</span>',
 												resultado,
-												'<a   href="'+url+'apuestas/ver/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-eye" aria-hidden="true"></i></a>\
-												&nbsp; <a   href="'+url+'apuestas/print/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-print" aria-hidden="true"></i></a>' 
+												'<a   href="'+url+'apuestas/ver/'+row.ID_APUESTA+'"  target="_blank"><i style="font-size:20px" class="fa fa-eye" aria-hidden="true"></i></a>' 
+												//<&nbsp; <a   href="'+url+'apuestas/print/'+row.ID_APUESTA+'"  target=""><i style="font-size:20px" class="fa fa-print" aria-hidden="true"></i></a>
 												] )
 											.draw()
 											.node();

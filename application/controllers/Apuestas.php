@@ -80,9 +80,20 @@ class Apuestas extends CI_Controller {
 					'FECHA' => $partido[0]->FECHA,
 					'HORARIO' => $partido[0]->HORARIO,
 					'VALOR' => $row->VALOR
-				));
+					));
 
 
+		}
+		switch ($apuesta[0]->RESULTADO) {
+			case 'GANADOR':
+			$color_a="success";
+			break;
+			case 'PERDEDOR':
+			$color_a="danger";
+			break;
+			case 'PENDIENTE':
+			$color_a="info";
+			break;
 		}
 
 		$data = array(
@@ -91,9 +102,10 @@ class Apuestas extends CI_Controller {
 			'ganancia' => $apuesta[0]->GANANCIA,
 			'apostado' => $apuesta[0]->VALOR,
 			'estado' => $apuesta[0]->ESTADO,
+			'color_a' => $color_a,
 			'resultado' => $apuesta[0]->RESULTADO,
 			'detalle' => $detalle,
-		);
+			);
 
 		$this->load->view('apuestas/ver', $data);
 	} 

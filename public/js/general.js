@@ -253,8 +253,8 @@ function getMoney() {
 	var creditos = '1.00';
 	var counter  = 0;
 	$("#detalle").find("[value]").each(function() {
-	tmp          = $(this).attr("value");
-	creditos     = (parseFloat(creditos) * parseFloat(tmp));
+		tmp          = $(this).attr("value");
+		creditos     = (parseFloat(creditos) * parseFloat(tmp));
 		counter++;		
 	});		
 	var cantidad = $("#cantidad").val();
@@ -274,6 +274,7 @@ function DeleteItem (url) {
 		window.location = url;
 	}
 }
+
 
 
 

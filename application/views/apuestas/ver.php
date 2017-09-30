@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body class="components-page">
-	<?php $this->load->view('overall/nav'); ?>
+ 
 
 
 	<div class="main main-raised">
@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<table class="table table-striped dataTable" id="match">
 							<thead>
 								<tr>
-									<th class="text-center success" colspan="7">Tiquete # <?= $tiquete ?> </th>
+									<th class="text-center <?= $color_a ?>" colspan="7"><?= $resultado ?></th>
 								</tr>
 								<tr>
 									<th colspan="2" class="text-center ">APOSTADO: $<?= number_format($apostado, 0, '.', '.') ?></th>
@@ -32,9 +32,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th>Partido</th>
 									<th>Selección</th>
 									<th>Cuota</th>
-									<th>Estado</th>
+									<th>Resultado</th>
 								</tr>
 							</thead>
+							<tfoot>
+								<th colspan="6" class="text-center bg-faded"> Apuesta: <?= $estado ?></th>
+							</tfoot>	
 							<tbody> 
 								<?php foreach ($detalle as $key => $row): ?>
 									<tr class="text-<?= $row['COLOR'] ?>">
@@ -44,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<b><?= $row['PARTIDO'] ?></b>
 											<br><small><?= $row['LIGA'] ?></small>
 										</td>
-										<td><span class="label label-primary "><?= $row['CUOTA'] ?></span></td>
+										<td><span class="label label-primary"><?= $row['CUOTA'] ?></span></td>
 										<td><?= $row['VALOR'] ?></td>
 										<?php  ?>
 										<td class="text-<?= $row['COLOR'] ?> text-center"><?= $row['RESULTADO_DETALLE'] ?> <i class="fa <?= $row['ICON'] ?>" aria-hidden="true"></i></td>
