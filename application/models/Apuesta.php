@@ -85,9 +85,9 @@ class Apuesta extends CI_Model
 
 	}
 
-	public function getApuestasByDate($from, $to)
+	public function getApuestasByDate($from, $to, $estado)
 	{
-		$sql='SELECT * FROM apuesta a LEFT JOIN usuario u ON (a.ID_USER=u.CEDULA) WHERE a.ESTADO="FINISHED" AND a.FECHA BETWEEN "'.$from.' 00:00:00" AND "'.$to.' 23:59:59"  ORDER BY a.FECHA DESC ';
+		$sql='SELECT * FROM apuesta a LEFT JOIN usuario u ON (a.ID_USER=u.CEDULA) WHERE a.ESTADO="'.$estado.'" AND a.FECHA BETWEEN "'.$from.' 00:00:00" AND "'.$to.' 23:59:59"  ORDER BY a.FECHA DESC ';
 		$query = $this->db->query($sql);
 		if ($query->num_rows() > 0) {
 			return $query->result();

@@ -32,8 +32,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</div>
 								</td>
 								<td>
+									<div class="form-group">
+										<label for="fecha">Estado : </label>
+										<select class="form-control" id="estado">
+											<option value="FINALIZADA" selected>Finalizadas</option>
+											<option value="JUGANDO" >Jugando</option>
+										</select>
+									</div>
+								</td>
+								<td>
 									<div>
-										&nbsp;<button class="btn btn-Primary" id="go">Go</button>
+										&nbsp;<button class="btn btn-Primary" id="go">BUSCAR</button>
 									</div>
 								</td>
 							</tr>
@@ -41,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<table class="table table-striped table-hover dataTable" id="match" >
 							<thead>
 								<tr>
-									<th colspan="9" class="text-center success">Apuestas</th>
+									<th colspan="10" class="text-center success">Apuestas</th>
 								</tr>
 								<tr>
 									<th width="">Fecha</th>
@@ -49,6 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th width="">Eventos</th>
 									<th width="">Recaudos</th>
 									<th width="">Premios</th>
+									<th width="">Estado</th>
 									<th width="">Resultado</th>
 								</tr>
 							</thead>
@@ -73,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script type="text/javascript">
 					$(document).ready(function() {
 						var url= '<?= base_url(); ?>';
-						$("#from").val(moment().subtract(3, 'days').format('YYYY-MM-DD'));
+						$("#from").val(moment().subtract(30, 'days').format('YYYY-MM-DD'));
 						$("#to").val(moment().format('YYYY-MM-DD'));
 
 
@@ -139,13 +149,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							}
 						});
 
-						function get_apuestas (from, to) {
+						function get_apuestas (from, to, estado) {
 							$.ajax({
 								dataType: 'json',
 								async: true,
 								url: url+'ajax/json_informe',
 								type: 'post',
-								data: {from: from, to:to},
+								data: {from: from, to:to, estado:estado},
 								success: function(data){
 
 									if (data!=null) {
@@ -163,6 +173,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												''+row.NRO_EVENTOS+'',
 												''+$.number(row.VALOR, 0, ',', '.' )+'',
 												''+$.number(row.GANANCIA, 0, ',', '.' )+'',
+												'<span class="label label-primary ">'+row.ESTADO+'</span>',
 												'<span class="label label-'+label+' ">'+row.RESULTADO+'</span>',
 
 												] )
@@ -180,15 +191,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						var from = $("#from").val();
 						var to   = $("#to").val();
-
-						get_apuestas(from, to);
+						var estado   = $("#estado").val();
+						
+						get_apuestas(from, to, estado);
 
 
 						$( "#go" ).click(function() {
 							table
 							.clear()
 							.draw();
-							get_apuestas($('#from').val(), $('#to').val(), $( "#filtro option:selected" ).text());
+							get_apuestas($('#from').val(), $('#to').val(), $( "#estado" ).val());
 						});
 
 

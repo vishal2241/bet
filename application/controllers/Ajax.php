@@ -221,8 +221,9 @@ class Ajax extends CI_Controller {
 		if (isset($_POST['from']) and $_POST['from']!='' and isset($_POST['to']) and $_POST['to']!='' and !empty($this->session->userdata('id'))) {
 			$from=$_POST['from'];
 			$to=$_POST['to'];
+			$estado=$_POST['estado'];
 			$user=$this->session->userdata('id');
-			$data = $this->Apuesta->getApuestasByDate($from, $to);
+			$data = $this->Apuesta->getApuestasByDate($from, $to, $estado);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());
