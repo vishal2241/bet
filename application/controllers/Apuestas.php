@@ -6,7 +6,7 @@ class Apuestas extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->User->check();
+		$this->User->check('15');
 	}
 
 	public function index(){
@@ -14,7 +14,7 @@ class Apuestas extends CI_Controller {
 	} 
 
 	public function informe(){
-		$this->User->is_admin();
+		$this->User->check('14');
 		$this->load->view('apuestas/informe');
 	} 
 

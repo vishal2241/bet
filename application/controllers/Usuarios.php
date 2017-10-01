@@ -6,22 +6,21 @@ class Usuarios extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->User->check();
 		$this->load->helper('form', 'url');
 		$this->load->library('form_validation');
-		$this->User->is_admin();
 	}
 
 	public function index()
 	{
+		$this->User->check('13');
 		$data['usuarios']  = $this->User->index();
 		$this->load->view('usuarios/index', $data);	 
 	}
 
 	public function agregar()
 	{
+		$this->User->check('6');
 		if ($_POST) {
-
 			$this->form_validation->set_rules('CEDULA', 'CEDULA', 'required');
 		//	$this->form_validation->set_rules('CLAVE', 'CLAVE', 'required');
 			$this->form_validation->set_rules('EMAIL', 'EMAIL', 'required');
@@ -62,7 +61,7 @@ class Usuarios extends CI_Controller {
 
 	public function editar()
 	{
-		$this->User->is_admin();
+		$this->User->check('7');
 		if ($_POST) {
 
 			$post=$this->input->post();
@@ -96,7 +95,7 @@ class Usuarios extends CI_Controller {
 
 	public function recargar()
 	{
- 
+		$this->User->check('9');
 		if ($_POST) {
 			$post=$this->input->post();
 			$this->User->CEDULA=$this->uri->segment(3);
@@ -113,7 +112,7 @@ class Usuarios extends CI_Controller {
 
 	public function eliminar()
 	{
-		$this->User->is_admin();
+		$this->User->check('8');
 		$id = $this->uri->segment(3);
 		if ($id!='') {
 			$this->User->CEDULA=$id;

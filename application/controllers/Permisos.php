@@ -1,18 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Paises extends CI_Controller {
+class Permisos extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->User->check('3');
+		//$this->User->check('3');
 	}
 
 	public function index()
 	{
-		$data['paises']  = $this->Pais->index();
-		$this->load->view('paises/index', $data);	 
+		$data['roles']  = $this->Rol->index();
+		$data['privilegios']  = $this->Privilegio->index();
+		$this->load->view('permisos/index', $data);	 
 	}
 
 	public function agregar()

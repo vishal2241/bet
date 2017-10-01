@@ -6,8 +6,7 @@ class Equipos extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->User->check();
-		$this->User->is_admin();
+		$this->User->check('2');
 	}
 
 	public function logos(){

@@ -54,6 +54,12 @@
 					</li>
 				</ul>
 			<?php endif ?>
+			<?php if ($this->session->userdata('type')==1): ?>
+				<ul class="nav navbar-nav">
+					<li><a href="<?= base_url(); ?>permisos">PERMISOS</a></li> 
+				</ul>
+			<?php endif ?>
+			
 			<ul  class="nav navbar-nav navbar-right">
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><b><?php echo ucwords($this->session->userdata('name')); ?></b> <span class="caret"></span></a>

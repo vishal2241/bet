@@ -6,6 +6,7 @@ class Ajax extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		//$roles= array('1','2','3','4');
 		$this->User->check('1');
 	}
 
@@ -13,6 +14,7 @@ class Ajax extends CI_Controller {
 	/*********	ADMIN *************/
 	/******************************/
 	public function json_partidos(){
+		$this->User->check('4');
 		if (isset($_POST['from']) and $_POST['from']!='' and isset($_POST['to']) and $_POST['to']!='') {
 			$from=$_POST['from'];
 			$to=$_POST['to'];
@@ -181,14 +183,14 @@ class Ajax extends CI_Controller {
 						'ganancia' => $ganancia,
 						'tiquete' => $id_apuesta,
 						'eventos' => $totalPartidos
-					),
-				);
+						),
+					);
 			} else {
 				$data = array(
 					array(
 						'resp' => $error
-					),
-				);
+						),
+					);
 			}
 			
 			echo json_encode($data);
@@ -205,7 +207,7 @@ class Ajax extends CI_Controller {
 	/*********	APUESTAS  *********/
 	/******************************/
 
-	public function json_apuestas(){
+	public function json_apuestas(){ //apuestas del usuario
 		if (isset($_POST['from']) and $_POST['from']!='' and isset($_POST['to']) and $_POST['to']!='' and !empty($this->session->userdata('id'))) {
 			$from=$_POST['from'];
 			$to=$_POST['to'];
