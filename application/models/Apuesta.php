@@ -63,7 +63,7 @@ class Apuesta extends CI_Model
 
 	public function getApuestasByEstado($estado)
 	{
-		$sql='SELECT * FROM apuesta WHERE ESTADO="'.$estado.'"  AND ID_APUESTA="124"  ORDER BY FECHA DESC ';
+		$sql='SELECT * FROM apuesta WHERE ESTADO="'.$estado.'"   ORDER BY FECHA DESC ';
 		$query = $this->db->query($sql);
 		if ($query->num_rows() > 0) {
 			return $query->result();

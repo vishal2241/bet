@@ -42,16 +42,17 @@ class Sync extends CI_Controller {
 
 	public function syncBets(){
 		$arrayApuestas = array();
+		$estadoApuesta="FINALIZADA";
+		$resultadoApuesta="GANADOR";
 		$apuestas=$this->Apuesta->getApuestasByEstado("JUGANDO");
+
 		if (count($apuestas)>0) {
-			$estadoApuesta="FINALIZADA";
-			$resultadoApuesta="GANADOR";
 			foreach ($apuestas as $key => $rowApuesta) {
 				$this->DetalleApuesta->ID_APUESTA=$rowApuesta->ID_APUESTA;
 				$detalle=$this->DetalleApuesta->getDetalleByApuesta();
 
 				foreach ($detalle as $key => $rowDetalle) {
-					#Cuota
+					#CuotaMA
 					$id_cuota= $rowDetalle->ID_CUOTA;
 					$this->Cuota->ID_CUOTA=$id_cuota;
 					$cuota=$this->Cuota->getCuota('');
@@ -175,15 +176,25 @@ class Sync extends CI_Controller {
 
 				}
 
-				
+
+				if ($estadoApuesta=="FINALIZADA" and $resultadoApuesta=="PERDEDOR") {
+					$this->User->CEDULA=$rowApuesta->ID_USER;
+					$usuario=$this->User->getByCedula();
+					//liquidar apues
+					//notificar
+					ini_set( 'smtp_port', 25 );
+					$this->load->library('email');
+					$this->email->from('info@miltonotavo.co', 'Soccer Stars');
+					$this->email->to($usuario->EMAIL);
+					
+					$this->email->subject('Premio');
+					$this->email->message('Testing the email class.');
+
+					$this->email->send();
+				}
 				//Actualizamos estado de la apuesta
 				$this->Apuesta->ID_APUESTA=$rowApuesta->ID_APUESTA;
 				$this->Apuesta->setEstado($estadoApuesta);
-
-				if ($estadoApuesta=="FINALIZADA" and $resultadoApuesta="GANADOR") {
-					//liquidar apues
-					//notificar
-				}
 
 				array_push($arrayApuestas,  
 					array(
@@ -196,7 +207,7 @@ class Sync extends CI_Controller {
 						));
 
 		} //if apuestas
-		
+
 	}
 	$data = array(
 		'apuestas' => $arrayApuestas
