@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body class="components-page">
- 
+
 
 
 	<div class="main main-raised">
@@ -30,6 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th>Fecha</th>
 									<th>Hora</th>
 									<th>Partido</th>
+									<th>Marcador</th>
 									<th>Selección</th>
 									<th>Cuota</th>
 									<th>Resultado</th>
@@ -44,10 +45,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<td><?= $row['FECHA'] ?></td>
 										<td><?= $row['HORARIO'] ?></td>
 										<td >
-											<b><?= $row['PARTIDO'] ?></b>
+											<b><?= $row['PARTIDO'] ?></b> 
 											<br><small><?= $row['LIGA'] ?></small>
 										</td>
-										<td class="bold"><?= strtoupper($row['CUOTA']) ?></td>
+										<td >
+											<b>[<?= $row['SCORE_1'] ?>-<?= $row['SCORE_2'] ?>]</b> 
+										</td>
+										<td class="bold"><?= strtoupper($row['CUOTA_NOMBRE']) ?></td>
 										<td><?= $row['VALOR'] ?></td>
 										<?php  ?>
 										<td class="text-<?= $row['COLOR'] ?> text-center"><?= $row['RESULTADO_DETALLE'] ?> <i class="fa <?= $row['ICON'] ?>" aria-hidden="true"></i></td>

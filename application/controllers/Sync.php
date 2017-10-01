@@ -31,12 +31,12 @@ class Sync extends CI_Controller {
 						'HORARIO' => $row->HORARIO ,
 						'ESTADO' => $status['result'] ,
 						'MARCADOR' => $getScore['EventScore'] ,
-					));
+						));
 			}
 		}
 		$data = array(
 			'scores' => $scores
-		);
+			);
 		$this->load->view('sync/index', $data);
 	}
 
@@ -44,6 +44,8 @@ class Sync extends CI_Controller {
 		$arrayApuestas = array();
 		$apuestas=$this->Apuesta->getApuestasByEstado("JUGANDO");
 		if (count($apuestas)>0) {
+			$estadoApuesta="FINALIZADA";
+			$resultadoApuesta="GANADOR";
 			foreach ($apuestas as $key => $rowApuesta) {
 				$this->DetalleApuesta->ID_APUESTA=$rowApuesta->ID_APUESTA;
 				$detalle=$this->DetalleApuesta->getDetalleByApuesta();
@@ -58,13 +60,10 @@ class Sync extends CI_Controller {
 					$this->Partido->ID_PARTIDO=$cuota[0]->ID_PARTIDO;
 					$partido=$this->Partido->getPartido();
 
-					ECHO $estado_partido=$partido[0]->ESTADO;
+					$estado_partido=$partido[0]->ESTADO;
 					$score_1=$partido[0]->SCORE_1;
 					$score_2=$partido[0]->SCORE_2;
 					$totalGoles=$score_1+$score_2;
-
-					$estadoApuesta="FINALIZADA";
-					$resultadoApuesta="GANADOR";
 
 					switch ($estado_partido) {
 						case 'Finished':
@@ -164,6 +163,9 @@ class Sync extends CI_Controller {
 
 					if ($resultadoCuota=="PERDEDOR") {
 						$resultadoApuesta="PERDEDOR";
+						//Actualizamos resultado de la apuesta
+						$this->Apuesta->ID_APUESTA=$rowApuesta->ID_APUESTA; 
+						$this->Apuesta->setResultado($resultadoApuesta);
 					}
 
 
@@ -173,11 +175,15 @@ class Sync extends CI_Controller {
 
 				}
 
-				//Actualizamos resultado de la apuesta
-				$this->Apuesta->ID_APUESTA=$rowApuesta->ID_APUESTA; 
-				$this->Apuesta->setResultado($resultadoApuesta);
+				
 				//Actualizamos estado de la apuesta
+				$this->Apuesta->ID_APUESTA=$rowApuesta->ID_APUESTA;
 				$this->Apuesta->setEstado($estadoApuesta);
+
+				if ($estadoApuesta=="FINALIZADA" and $resultadoApuesta="GANADOR") {
+					//liquidar apues
+					//notificar
+				}
 
 				array_push($arrayApuestas,  
 					array(
@@ -187,14 +193,14 @@ class Sync extends CI_Controller {
 						'GANANCIA' => $rowApuesta->GANANCIA ,
 						'VALOR' => $rowApuesta->VALOR ,
 						'ESTADO' => $estadoApuesta ,
-					));
-				
-			//print_r($arrayApuestas); exit();
+						));
+
 		} //if apuestas
+		
 	}
 	$data = array(
 		'apuestas' => $arrayApuestas
-	);
+		);
 	$this->load->view('sync/apuestas', $data);
 
 }
@@ -220,12 +226,12 @@ public function syncDetalles(){
 					'HORARIO' => $row->HORARIO ,
 					'ESTADO' => $status['result'] ,
 					'MARCADOR' => $getScore['EventScore'] ,
-				));
+					));
 		}
 	}
 	$data = array(
 		'scores' => $scores
-	);
+		);
 	$this->load->view('sync/index', $data);
 }
 
@@ -431,13 +437,13 @@ public function syncMatches(){
 
 			$data = array(
 				'sync' => $matches
-			);
+				);
 
 		} else {
 			
 			$data = array(
 				'sync' => null
-			);
+				);
 		}
 
 
