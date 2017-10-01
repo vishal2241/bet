@@ -55,9 +55,9 @@
 				</ul>
 			<?php endif ?>
 			<?php if ($this->session->userdata('type')==1): ?>
-				<ul class="nav navbar-nav">
+			<!--	<ul class="nav navbar-nav">
 					<li><a href="<?= base_url(); ?>permisos">PERMISOS</a></li> 
-				</ul>
+				</ul>-->
 			<?php endif ?>
 			
 			<ul  class="nav navbar-nav navbar-right">

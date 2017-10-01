@@ -17,6 +17,7 @@ class Rol extends CI_Model
 	public function index()
 	{
 		$query = $this->db->get('tipo_usuario');   
+		return $query->result();
 	}
 
 

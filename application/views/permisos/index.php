@@ -14,13 +14,17 @@
             <th colspan="5" class="text-center success">EQUIPOS</th>
           </tr>
           <tr>
-            <th width="">Bandera</th>
-            <th width="">Nombre</th>
-            <th width="">Capeta</th>
-            <th width="">Editar/Eliminar <i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>
+            <th width="">#</th>
+            <th width="">Privilegio</th>
           </tr>
         </thead>
         <tbody>
+          <?php foreach ($privilegios as $key => $row): ?>
+            <tr>
+              <td><?= $row->ID_PRIVILEGIO ?></td>
+              <td><?= $row->NOMBRE?></td>
+            </tr>
+          <?php endforeach ?>
         </tbody>
       </table>
 
@@ -31,16 +35,6 @@
 <?php $this->load->view('overall/footer'); ?>
 <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.dataTable').DataTable({
-      "iDisplayLength": 20,
-      "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
-      "autoWidth": true,           
-      "sPaginationType": "full_numbers",
-      //"order": [[ 1, 'desc' ], [ 0, 'asc' ]]
-    });
-  } );
-</script>
+
 </body>
 </html>   

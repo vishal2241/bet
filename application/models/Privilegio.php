@@ -17,6 +17,7 @@ class Privilegio extends CI_Model
 	public function index()
 	{
 		$query = $this->db->get('privilegio');   
+		return $query->result();
 	}
 
 
