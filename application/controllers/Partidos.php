@@ -31,10 +31,11 @@ class Partidos extends CI_Controller {
 	public function editar()
 	{
 		if ($_POST) {
+			exit();
 			$partido = $this->input->post();
-			$partido['ID_CONCEPTO']=  $this->uri->segment(3);
+			$partido['ID_PARTIDO']=  $this->uri->segment(3);
 			$this->Partido->update($partido);
-			header("Location:" . base_url(). "paises");
+			//header("Location:" . base_url(). "paises");
 		} else {
 			#Vista
 			$this->Partido->ID_PARTIDO         = $this->uri->segment(3);
@@ -44,7 +45,7 @@ class Partidos extends CI_Controller {
 			$this->Pais->ID_PAIS               = $data['competencia'][0]->ID_PAIS;
 			$data['pais']                      = $this->Pais->getPais();
 			$this->Cuota->ID_PARTIDO           = $this->uri->segment(3);
-			$data['cuotas']                    = $this->Cuota->getCuota();
+			$data['cuotas']                    = $this->Cuota->getCuota('sync');
 
 			$this->Equipo->ID_EQUIPO           = $data['partido'][0]->LOCAL;
 			$data['local']                     = $this->Equipo->getEquipo();
