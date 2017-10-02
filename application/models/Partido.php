@@ -265,7 +265,7 @@ class Partido extends CI_Model
 
 
 	//Para editar partidos y sincronizar
-	public function getAllPartidos($from, $to, $filtro)
+	public function getAllPartidos($from, $to, $filtro, $value) // get partidos index
 	{
 		$sql="SELECT 
 		p.ID_PARTIDO,
@@ -289,18 +289,18 @@ class Partido extends CI_Model
 		WHERE ";
 
 		switch ($filtro) {
-			case 'Autorizados':
-			$sql.="  p.AUTORIZADO='SI' AND";
+			case 'autorizado':
+			$sql.="  p.AUTORIZADO='".$value."' AND";
 			break;
-			case 'NoAutorizados':
-			$sql.="  p.AUTORIZADO='NO' AND";
+			case 'verificado':
+			$sql.="  p.VERIFICADO='".$value."' AND";
 			break;
-			case 'Cancelados':
-			$sql.="  p.ESTADO='Cancelado' AND";
+			case 'estado':
+			$sql.="  p.ESTADO='".$value."' AND";
 			break;
 			case 'Score':
 			$hora = new DateTime(date('H:i'));
-			$hora->sub(new DateInterval('PT2H30M')); // partidos iniciados hace dos horas y media (evita en vivo)
+			$hora->sub(new DateInterval('PT2H00M')); // partidos iniciados hace dos horas y media (evita en vivo)
 			$sql.="  p.ESTADO IN ('NSY','inprogress', 'Interrupted', 'Postponed', 'Abandoned', 'AboutToStart' )  AND CONCAT(p.FECHA, ' ', p.HORARIO)<='".date("Y-m-d").' '.$hora->format('H:i')."'  ";
 			break;
 		}

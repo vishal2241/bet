@@ -19,7 +19,8 @@ class Ajax extends CI_Controller {
 			$from=$_POST['from'];
 			$to=$_POST['to'];
 			$filtro=$_POST['filtro'];
-			$data = $this->Partido->getAllPartidos($from, $to, $filtro);
+			$estado=$_POST['estado'];
+			$data = $this->Partido->getAllPartidos($from, $to, $filtro, $estado);
 			echo json_encode($data);
 		} else {
 			header("Location:" . base_url());

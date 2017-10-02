@@ -23,15 +23,30 @@
             </td>
             <td>
               <div class="form-group">
+                <label for="fecha">Estado : </label>
+                <select class="form-control" id="estado">
+                  <option value="">Todos</option>
+                  <option value="Abandoned">Abandonado</option>
+                  <option value="Cancelled">Cancelados</option>
+                  <option value="inprogress">En juego</option>
+                  <option value="Finished">Finalizados</option>
+                  <option value="Interrupted">Interrumpido</option>
+                  <option value="NSY">Sin Iniciar</option>
+                  <option value="Postponed">Pospuesto</option>
+                </select>
+              </div>
+            </td>
+           <!-- <td>
+              <div class="form-group">
                 <label for="fecha">Filtro : </label>
                 <select class="form-control" id="filtro">
                   <option value="Autorizados">Autorizados</option>
                   <option value="NoAutorizados" selected>No autorizados</option>
-                  <option  value="Todos" >Todos</option>
-                  <option value="Cancelados">Cancelados</option>
+                  <option  value="Todos" >Verificados</option>
+                  <option value="Cancelados">No Verificados</option>
                 </select>
               </div>
-            </td>
+            </td>-->
             <td>
               <div class="">
                 &nbsp;<button class="btn btn-Primary" id="go">Go</button>
@@ -79,41 +94,60 @@
       "bAutoWidth": false,
       "order": [[ 0, 'desc' ], [ 1, 'asc' ]],
       "lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
-      "iDisplayLength": 100
+      "iDisplayLength": 50
     });
 
-    function get_partidos (from, to, filtro) {
-      $.post('<?= base_url(); ?>ajax/json_partidos', {from: from, to:to, filtro:filtro}, function(match) {
-       if (match!=null) {
-         $.each(match, function(a, row) {
-          var rowNode=   table.row.add( [ 
-            ''+row.FECHA+'' , 
-            ''+row.HORARIO+'' , 
-            row.LOCAL+' VS. '+row.VISITANTE+'<br><small>'+row.PAIS + ' - ' + row.TORNEO + '</small>', 
-            ''+row.ESTADO+'' , 
-            '<a  class="btn btn-warning btn-sm" href="<?=  base_url() ?>partidos/editar/'+row.ID_PARTIDO+'"><i class="fa fa-cog" aria-hidden="true"></i></a> \
-            <a  class="btn btn-danger btn-sm" onclick="DeleteItem(\'<?= base_url() ?>partidos/editar/'+row.ID_PARTIDO+'\')" >\
-              <i class="fa fa-trash" aria-hidden="true"></i>\
-            </a> ' 
-            ] )
-          .draw()
-          .node();
-        });
-       }
-     }, "json");
+    function get_partidos (from, to, filtro, estado) {
+
+      $.ajax({
+        dataType: 'json',
+        url: '<?= base_url(); ?>ajax/json_partidos',
+        type: 'post',
+        data: {from: from, to:to, filtro:filtro, estado:estado },
+        success: function(match){
+         if (match!=null) {
+           $.each(match, function(a, row) {
+            var rowNode=   table.row.add( [ 
+              ''+row.FECHA+'' , 
+              ''+row.HORARIO+'' , 
+              row.LOCAL+' VS. '+row.VISITANTE+'<br><small>'+row.PAIS + ' - ' + row.TORNEO + '</small>', 
+              ''+row.ESTADO+'' , 
+              '<a  class="btn btn-warning btn-sm" href="<?=  base_url() ?>partidos/editar/'+row.ID_PARTIDO+'"><i class="fa fa-cog" aria-hidden="true"></i></a> \
+              <a  class="btn btn-danger btn-sm" onclick="DeleteItem(\'<?= base_url() ?>partidos/editar/'+row.ID_PARTIDO+'\')" >\
+                <i class="fa fa-trash" aria-hidden="true"></i>\
+              </a> ' 
+              ] )
+            .draw()
+            .node();
+          });
+         }
+
+       },
+       error: function(e){
+        console.log(e);
+      }
+    });
 
     }
+
     var from = $("#from").val();
     var to   = $("#to").val();
 
-    get_partidos(from, to, 'NoAutorizados');
+    get_partidos(from, to, '' , $( "#estado option:selected" ).val());
 
 
     $( "#go" ).click(function() {
       table
       .clear()
       .draw();
-      get_partidos($('#from').val(), $('#to').val(), $( "#filtro option:selected" ).text());
+      var estado = $( "#estado option:selected" ).val();
+      if (estado=="") {
+        var filtro="";
+      } else {
+        var filtro="estado";
+      }
+
+      get_partidos($('#from').val(), $('#to').val(), filtro,estado );
     });
 
 
