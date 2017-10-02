@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<tr>
 												<th>#</th>
 												<th>Partido</th>
+												<th>Estado</th>
 												<th>Fecha</th>
 											</tr>
 										</thead>
@@ -37,6 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<tr>
 													<td><?= $i ?></td>
 													<td><?= strtoupper($value['l']).' ...vs... '. strtoupper($value['v']) ?></td>
+													<td><?= $value['status'] ?></td>
 													<td><?= $value['fecha_event']      ?></td>
 												</tr>
 											<?php endforeach ?>
@@ -50,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<tr>
 												<td class="bold  info text-center"><?= strtoupper($value['MARCADOR']) ?></td>
 												<td><?= strtoupper($value['PARTIDO']) ?></td>
+												<td><?=  $value['ESTADO'] ?></td>
 												<td><?= strtoupper($value['FECHA']).' '.strtoupper($value['HORARIO'])  ?></td>
 											</tr>
 										<?php endforeach ?>

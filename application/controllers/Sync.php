@@ -219,7 +219,7 @@ class Sync extends CI_Controller {
 
 public function syncDetalles(){
 	$scores = array();
-	$pendientes=$this->Partido->getAllPartidos('','','Score');
+	$pendientes=$this->Partido->getAllPartidos('','','Score','');
 	foreach ($pendientes as $key => $row) {
 		$getScore                     = $this->Request->getScores($row->ID_PARTIDO);
 		$status                    = $this->Request->getStatus($row->ID_PARTIDO);
