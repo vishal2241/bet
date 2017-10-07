@@ -7,7 +7,7 @@ class Sync extends CI_Controller {
 		parent::__construct();
 		$this->User->check('5');
 		ini_set('memory_limit','16000000M');
-		set_time_limit(0);
+		@set_time_limit(0);
 	}
 
 	public function syncScores(){
